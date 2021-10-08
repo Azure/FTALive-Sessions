@@ -7,12 +7,13 @@ In this session you will learn about the different offerings available in the Mi
 ### Agenda
 
 - Overview of identity offerings
-- Organizational identities
-  - Azure AD single-tenant applications
-  - Azure AD multi-tenant applications
-- External identities
-  - Azure AD B2B guest user access
+  - Azure AD
+  - Azure AD B2B Guest User Access
+  - Azure AD Multi-Tenant Apps
   - Azure AD B2C
+- Choosing the appropriate offering
+- Real-world scenario with external identities
+- Customer Identity Access Management with Azure AD B2C
 
 ### Audience
 
@@ -22,6 +23,7 @@ This session is mostly useful for identity architects and developers who want to
 
 In this session you will learn how to:
 
+- Compare the different identity offerings.
 - Choose which identity offering is most appropriate for your requirements.
 - Integrate your applications with Azure AD and Azure AD B2C.
 
