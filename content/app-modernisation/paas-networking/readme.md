@@ -14,11 +14,6 @@ In this session you will learn about Azure Platform as a Service networking, the
 
 This session is most useful for developers, IT Pros and architects who want to utilise the benefits of PaaS service whilst still having control over communication channels. Network admins would also benefit from this session to learn how PaaS networking differs from Infrastructure networking.
 
-In this session you will learn about:
-
-- The requirements gathering and decision tree
-- The options available with some examples
-
 ### Goals
 
 In this session you will learn about:
