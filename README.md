@@ -1,10 +1,32 @@
 # Overview
 
 > Hello! This repo has been created to share our FastTrack for Azure Live session content that Engineers and Program Managers present to customers each week.
+>
 > It is a dynamic and regularly updated repository so please bookmark and keep an eye on it.
 > Note that the information contained is publically available and as such is maintained by Azure Engineers regardless of timezone.
 
-## Contributing
+# Contributing towards FTALive
+
+In order to fully facilitate your content to present in an FTALive session; regardless of the type or timezone or customer audience there is an agreed process you must follow.
+This is summarized in the below simple process flow:
+
+
+Further information along with a detailed guide on creating content and steps is located in the FTALive Wiki Page (Internal Only).
+
+If you have any questions on this, please reachout to your timezone session lead below:
+
+1. **Asia** - Alex Gonzalez
+3. **EMEA** - Jelle Druyts, Vanessa Bruwer
+4. **Americas** - Jason Beck, Everett Yang
+5. **Hub** - Calum McLeod, Matt Lavery
+
+# Folder Structure
+You will notice that the layout of this repository is nested by Azure Solution area; this is to make finding information and storing easier for all parties.
+
+However when updating your content you can search by the session title itself.
+Additionally there is a series of shortlink names "aka.ms/ftalive-name" to ensure the githup folder appears on the https://aka.ms/ftalive customer website.
+
+## Process
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
