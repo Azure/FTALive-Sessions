@@ -10,6 +10,7 @@
 In order to fully facilitate your content to present in an FTALive session; regardless of the type or timezone or customer audience there is an agreed process you must follow.
 This is summarized in the below simple process flow:
 
+![FTALiveSessions](/images/ftalivesessions.png)
 
 Further information along with a detailed guide on creating content and steps is located in the FTALive Wiki Page (Internal Only).
 
