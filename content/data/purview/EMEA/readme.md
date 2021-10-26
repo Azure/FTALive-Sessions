@@ -9,10 +9,10 @@ This call will not be recorded due to the wide audience and to encourage questio
 Please give us your feedback on https://aka.ms/ftalive-feedback
 
 
-## Azure Purview 1/2 
+# Azure Purview 1/2 
 This first part of the two session series will give you the opportunity to learn fundaments of Azure Purview. The demo heavy session is focused on the key features of Azure Purview which enables you to achieve unified data governance. Microsoft FastTrack for Azure engineers will present this session.
 
-# Agenda
+## Agenda
 * Introduction to Azure Purview
 * Deployment options
 * Pricing
@@ -21,10 +21,10 @@ This first part of the two session series will give you the opportunity to learn
 * Security (roles)
 * QA
 
-## Azure Purview 2/2 
+# Azure Purview 2/2 
 This second part of the two session series will give you the opportunity to expand your knowledge on Azure Purview. The demo heavy session is focused on the advanced aspects of this service. Microsoft FastTrack for Azure engineers will present this session.
 
-# Agenda 
+## Agenda 
 * Business glossary
 * Data lineage
 * Metadata insights
@@ -32,6 +32,8 @@ This second part of the two session series will give you the opportunity to expa
 * Integration with Azure Synapse
 * Sensitivity labels
 * QA
+
+
 
 You will need:
 * Microsoft Teams desktop client or Teams web client to view presentation.
