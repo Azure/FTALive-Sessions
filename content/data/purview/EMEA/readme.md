@@ -1,5 +1,5 @@
 # Welcome to the FastTrack for Azure Live Azure Purview
-# These sessions
+
 ## We will start 1-2 minutes after the scheduled time to accommodate those still connecting
 
 This call will not be recorded due to the wide audience and to encourage questions.
