@@ -1,8 +1,13 @@
 # Welcome to FastTrack for Azure Live
 
-## We will start 3-4 minutes after the scheduled time to accommodate those still connecting
+## We will start in 5 minutes so feel free to grab a drink or a snack before we begin
 
-### Housekeeping...
+
+
+![fta](/images/fta.png)
+![fta](/images/paths.png)
+
+
 
 > **Slideless** 
 > 
@@ -25,7 +30,6 @@
 1. https://aka.ms/ftalive - sign up for other topics - they are open to everyone.
 2. https://aka.ms/ftalive-feedback - tell us what you think - it will help us improve.
 3. *(GitHub Content Shortlink)*
-
 
 
 
