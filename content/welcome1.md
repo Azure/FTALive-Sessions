@@ -3,11 +3,13 @@
 ## We will start in 5 minutes so feel free to grab a drink or a snack before we begin
 
 
+### What is FastTrack for Azure?
+...a technical enablement program for organizations with cloud projects that enables the rapid, effective activation of solutions. It includes tailored guidance from Azure engineers that leverages proven practices and architectural guides.
 
-![fta](/images/fta.png)
-![fta](/images/paths.png)
+### What is FastTrack for Azure Live?
+...a series of multi-customer Teams-hosted sessions delivered by FastTrack for Azure Program Managers and Azure Engineers in an interactive format, enabling direct engagement and informal forum for demos and questions to be answered.
 
-
+### Housekeeping
 
 > **Slideless** 
 > 
