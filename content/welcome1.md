@@ -28,15 +28,7 @@
 > We suggest using the "raise your hand" feature to help the instructor and support get to you efficiently. The chat window will also be monitored so please make use of that function.
 
 
-### Hyperlinks
+### Bookmarks to Know
 1. https://aka.ms/ftalive - sign up for other topics - they are open to everyone.
 2. https://aka.ms/ftalive-feedback - tell us what you think - it will help us improve.
 3. *(GitHub Content Shortlink)*
-
-
-
-### Agenda
-*(type in agenda here with bullet points)*
-
-### Additional Resources
-*(add in any other useful materials related to the session topic here)*
