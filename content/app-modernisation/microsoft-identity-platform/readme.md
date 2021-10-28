@@ -6,14 +6,14 @@ In this session you will learn about the different offerings available in the Mi
 
 ### Agenda
 
-- Overview of identity offerings
-  - Azure AD
-  - Azure AD B2B Guest User Access
-  - Azure AD Multi-Tenant Apps
-  - Azure AD B2C
-- Choosing the appropriate offering
-- Real-world scenario with external identities
-- Customer Identity Access Management with Azure AD B2C
+- [Overview of identity offerings](01-identity-offerings-overview.md)
+  - [Azure AD](02-azuread.md)
+  - [Azure AD B2B Guest User Access](04-azuread-b2b.md)
+  - [Azure AD Multi-Tenant Apps](05-azuread-multitenant.md)
+  - [Azure AD B2C](06-azuread-b2c.md)
+- [Choosing the appropriate offering](10-identity-offerings-choice.md)
+- [Real-world scenario with external identities](11-external-identities-scenario.md)
+- [Customer Identity Access Management with Azure AD B2C](12-ciam-b2c.md)
 
 ### Audience
 
