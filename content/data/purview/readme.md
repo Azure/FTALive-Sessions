@@ -15,19 +15,19 @@ Azure Purview is a unified data governance service that helps you manage and gov
 
 ## Agenda
 * Overview
-    * [Purview studio](https://docs.microsoft.com/en-us/azure/purview/use-purview-studio)
+    * [Purview studio](https://docs.microsoft.com/en-us/azure/purview/create-catalog-portal)
     *	[Collection Architecture](https://docs.microsoft.com/en-us/azure/purview/concept-best-practices-collections)
+    *	[Permission Management](https://docs.microsoft.com/en-us/azure/purview/catalog-permissions)
 * Data Map
-    *	[Scans data sources](https://docs.microsoft.com/en-us/azure/purview/register-scan-azure-multiple-sources)
+    *	[Scans data sources](https://docs.microsoft.com/en-us/azure/purview/purview-connector-overview)
+    *	[System Classification](https://docs.microsoft.com/en-us/azure/purview/apply-classifications) and [Custom Classification](https://docs.microsoft.com/en-us/azure/purview/create-a-custom-classification-and-classification-rule)
     *	[Lineage](https://docs.microsoft.com/en-us/azure/purview/catalog-lineage-user-guide)
-    *	[Classification](https://docs.microsoft.com/en-us/azure/purview/apply-classifications)
 * Data Catalog
     *	[Catalog search](https://docs.microsoft.com/en-us/azure/purview/concept-search)
     *	[Business Glossary](https://docs.microsoft.com/en-us/azure/purview/concept-business-glossary)
 * Data Insights and Management
     *	[Insight reports](https://docs.microsoft.com/en-us/azure/purview/asset-insights)
     *	[Private endpoint](https://docs.microsoft.com/en-us/azure/purview/catalog-private-link)
-    *	[Monitor](https://docs.microsoft.com/en-us/azure/purview/catalog-private-link)
 * Q&A
 
 
