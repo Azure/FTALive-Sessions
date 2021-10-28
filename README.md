@@ -12,6 +12,13 @@ You will notice that the layout of this repository is nested by Azure Solution a
 However when updating your content you can search by the session title itself.
 Additionally if you visit https://aka.ms/ftalive you will see a github icon link for each session that goes directly the folders here.
 
+# FTA Live Sessions
+
+Category | Title | Description | Language | Materials |
+--|--|--|--|--|
+
+
+
 ## Process
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
