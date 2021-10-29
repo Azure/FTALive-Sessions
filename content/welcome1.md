@@ -32,5 +32,5 @@ FTA Live is a series of multi-customer live sessions delivered by FastTrack for 
 
 Where can you go next?
 
-- **Tell us what you think at [https://aka.ms/ftalive-feedback](https://aka.ms/ftalive-feedback)** - help us improve this delivery format and let us know if this has been useful.
-- **Visit [https://aka.ms/ftalive](https://aka.ms/ftalive) to sign up for other topics** - they are open to everyone.
+- **Tell us what you think at [aka.ms/ftalive-feedback](https://aka.ms/ftalive-feedback)** - help us improve this delivery format and let us know if this has been useful.
+- **Visit [aka.ms/ftalive](https://aka.ms/ftalive) to sign up for other topics** - they are open to everyone.
