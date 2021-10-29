@@ -22,7 +22,7 @@ FTA Live is a series of multi-customer live sessions delivered by FastTrack for 
 
 > **Use Teams features**
 >
-> We suggest using the "raise your hand" feature to help the moderator get to you efficiently. The chat window will also be monitored so feel free to ask your questions there at any time (note that questions you post will be visible to all attendees).
+> We suggest using the "raise your hand" button to help the presenter and moderators get to you efficiently. The chat window will also be monitored so feel free to ask your questions there at any time (note that questions you post will be visible to all attendees).
 
 > **Save before leaving**
 >
