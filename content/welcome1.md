@@ -1,33 +1,36 @@
 # Welcome to FastTrack for Azure Live
 
-## We will start in 5 minutes so feel free to grab a drink or a snack before we begin
+**We will start in a few minutes so feel free to grab a drink or a snack before we begin.**
 
+## What is FastTrack for Azure?
 
-### What is FastTrack for Azure?
-...a technical enablement program for organizations with cloud projects that enables the rapid, effective activation of solutions. It includes tailored guidance from Azure engineers that leverages proven practices and architectural guides.
+FTA is a technical enablement program for organizations with cloud projects that enables the rapid, effective activation of solutions. It includes tailored guidance from Azure engineers that leverages proven practices and architectural guidance.
 
-### What is FastTrack for Azure Live?
-...a series of multi-customer Teams-hosted sessions delivered by FastTrack for Azure Program Managers and Azure Engineers in an interactive format, enabling direct engagement and informal forum for demos and questions to be answered.
+## What is FastTrack for Azure Live?
 
-### Housekeeping
+FTA Live is a series of multi-customer live sessions delivered by FastTrack for Azure Program Managers and Engineers in an interactive format, enabling direct engagement and an informal forum for demos and questions to be answered.
 
-> **Slideless** 
-> 
-> No PowerPoint, we promise! As we update this content you will get the changes straight away. The majority of this session will be driven through the Azure portal and demos to aid your learning.
+## Ground rules
 
-> **Recording** 
-> 
-> This is an open, informal discussion for multiple customers; so please dont share any confidential information (this is also why we dont record).
+> **Open forum**
+>
+> This is an informal discussion forum for multiple customers - please don't share any confidential information here. This is also why we don't record these sessions, as we want this to be a safe space.
 
-> **Questions** 
-> 
-> Feel free to type them in the chat window at any time. Note that questions you post will be public. Anything on topic or Azure related is fair game. If we can't answer everything in this session then please attend our regular Q&A timeslot!
+> **Stay on topic**
+>
+> Any question on today's topic or more broadly related to Azure is fair game. If we can't answer everything in this session then please attend our regular FTA Live Q&A sessions!
 
-> **Teams** 
-> 
-> We suggest using the "raise your hand" feature to help the instructor and support get to you efficiently. The chat window will also be monitored so please make use of that function.
+> **Use Teams features**
+>
+> We suggest using the "raise your hand" feature to help the moderator get to you efficiently. The chat window will also be monitored so feel free to ask your questions there at any time (note that questions you post will be visible to all attendees).
 
+> **Save before leaving**
+>
+> You likely only have access to the chat window during the session, please open or copy any links you want to keep before leaving!
 
-### Bookmarks to Know
-1. https://aka.ms/ftalive - sign up for other topics - they are open to everyone.
-2. https://aka.ms/ftalive-feedback - tell us what you think - it will help us improve.
+## Thank you for your time today
+
+Where can you go next?
+
+- **Tell us what you think at [https://aka.ms/ftalive-feedback](https://aka.ms/ftalive-feedback)** - help us improve this delivery format and let us know if this has been useful.
+- **Visit [https://aka.ms/ftalive](https://aka.ms/ftalive) to sign up for other topics** - they are open to everyone.
