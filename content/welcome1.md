@@ -31,4 +31,3 @@
 ### Bookmarks to Know
 1. https://aka.ms/ftalive - sign up for other topics - they are open to everyone.
 2. https://aka.ms/ftalive-feedback - tell us what you think - it will help us improve.
-3. *(GitHub Content Shortlink)*
