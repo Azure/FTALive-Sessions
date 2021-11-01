@@ -70,9 +70,11 @@ Management and Governance	| Gobernanza de Azure | Únase a nosotros en vivo para
   |  |  |  |  |
 Management and Governance	| Azure Monitoring | In this session, you will learn about the different components around Azure Monitor and how you can utilize for end-to-end monitoring across your Cloud Solution. We will discuss Cloud Management including Azure Resource Graph capabilities and how to best use the Insights for gaining visibility of your environment, and much more. | English | https://aka.ms/ftalive-mon |
   |  |  |  |  |
+Management and Governance	| Azure Application Monitoring | In this session, you will learn how to use Azure Monitor Application Insights for end-to-end application monitoring. Intended audience for this session is application developers. | English | https://aka.ms/ftalive-mon |
+  |  |  |  |  |
 Management and Governance	| Azure Cost Management | Learn how to use the cost optimization pillar of the Microsoft Azure Well-Architected Framework to design a cloud-based architecture that is efficient, eliminates waste, and gives you full visibility into where your money is spent on cloud resources. | English | https://aka.ms/ftalive-cost
   |  |  |  |  |
-Management and Governance	| Kusto Query Language | In this session, learn how to write queries in in Kusto Query Language (KQL) in the context of Azure Monitor and Azure Sentinel. We will cover best practices, design, how to create queries in the interface and leveraging scalar/aggregation functions along with much more. | English | https://aka.ms/ftalive-kusto |
+Management and Governance	| Kusto Query Language | In this session, learn how to write queries in Kusto Query Language (KQL) in the context of Azure Monitor and Azure Sentinel. We will cover best practices, design, how to create queries in the interface and leveraging scalar/aggregation functions along with much more. | English | https://aka.ms/ftalive-kusto |
   |  |  |  |  |
 Networking	| Azure Networking Part 1 | This is Part One in a Two-Part Series. There are several critical design areas surrounding networking and connectivity to, from, and within Microsoft Azure. You will need to make networking design decisions to properly support the workloads and services that will be hosted in the cloud. The goal of this series is to provide you with an understanding of Azure's core networking services, how they interact with one another, and their respective best practices to aid with your deployments.  | English | https://aka.ms/ftalive-net1 |
   |  |  |  |  |
