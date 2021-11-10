@@ -18,11 +18,16 @@ _This handout was prepared in advance and generic. Actual session content may di
 
 ### DevSecOps
 
+- [DevSecOps controls](https://docs.microsoft.com/azure/cloud-adoption-framework/secure/devsecops-controls)
 - [OWASP - Static code Analysis](https://owasp.org/www-community/Source_Code_Analysis_Tools)
 - Security and Credential Scanning ([GitHub Advance Security](https://docs.github.com/en/get-started/learning-about-github/about-github-advanced-security))
 - Dependency Management & Scanning ([OWASP Dependency-Check Project | OWASP](https://owasp.org/www-project-dependency-check/), [WhiteSource](https://www.whitesourcesoftware.com/))
 - Dynamic Analysis ([BinSkim](https://github.com/microsoft/binskim), [OWASP ZAP](https://owasp.org/www-project-zap/), [Anchore Container Scanning](https://anchore.com/))
 - [Azure Docs - Securing Azure Pipelines ](https://docs.microsoft.com/azure/devops/pipelines/security/overview?view=azure-devops)
+- Comprehensive guidance and references:
+  - [Security In DevOps](https://docs.microsoft.com/devops/operate/security-in-devops)
+  - [Security Engineering Portal](https://www.microsoft.com/securityengineering)
+
 ## Git 
 
 ### Git Branching
