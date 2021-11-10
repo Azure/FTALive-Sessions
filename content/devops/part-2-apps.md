@@ -22,7 +22,7 @@ _This handout was prepared in advance and generic. Actual session content may di
 - Security and Credential Scanning ([GitHub Advance Security](https://docs.github.com/en/get-started/learning-about-github/about-github-advanced-security))
 - Dependency Management & Scanning ([OWASP Dependency-Check Project | OWASP](https://owasp.org/www-project-dependency-check/), [WhiteSource](https://www.whitesourcesoftware.com/))
 - Dynamic Analysis ([BinSkim](https://github.com/microsoft/binskim), [OWASP ZAP](https://owasp.org/www-project-zap/), [Anchore Container Scanning](https://anchore.com/))
-- [Azure Docs - Securing Azure Pipelines ](https://docs.microsoft.com/en-us/azure/devops/pipelines/security/overview?view=azure-devops)
+- [Azure Docs - Securing Azure Pipelines ](https://docs.microsoft.com/azure/devops/pipelines/security/overview?view=azure-devops)
 ## Git 
 
 ### Git Branching
@@ -31,28 +31,28 @@ _This handout was prepared in advance and generic. Actual session content may di
 - [GitHub Flow (2011)](https://guides.github.com/introduction/flow/) - start simple
 - [Gitlab Flow (2014)](https://docs.gitlab.com/ee/topics/gitlab_flow.html) - building on simple
 - [Patterns for Managing Source Code Branches (2020)](https://martinfowler.com/articles/branching-patterns.html) - team experiences and what happens when you apply _all_ the Best Practices
-- [Azure Docs - Adopt a Git branching strategy](https://docs.microsoft.com/en-us/azure/devops/repos/git/git-branching-guidance?view=azure-devops)
+- [Azure Docs - Adopt a Git branching strategy](https://docs.microsoft.com/azure/devops/repos/git/git-branching-guidance?view=azure-devops)
 
 
 ### Git Workflows
 
-- [Branch policies](https://docs.microsoft.com/en-us/azure/devops/repos/git/branch-policies?view=azure-devops)
+- [Branch policies](https://docs.microsoft.com/azure/devops/repos/git/branch-policies?view=azure-devops)
 
 
 ## Azure Pipelines
 
 ### Concepts, Classic vs YAML
 
-- [Key concepts for new Azure Pipelines users](https://docs.microsoft.com/en-us/azure/devops/pipelines/get-started/key-pipelines-concepts?view=azure-devops)
-- [YAML and Classic pipelines](https://docs.microsoft.com/en-us/azure/devops/pipelines/get-started/pipelines-get-started?view=azure-devops)
+- [Key concepts for new Azure Pipelines users](https://docs.microsoft.com/azure/devops/pipelines/get-started/key-pipelines-concepts?view=azure-devops)
+- [YAML and Classic pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-get-started?view=azure-devops)
   - [Define your Classic pipeline](https://docs.microsoft.com/azure/devops/pipelines/release/define-multistage-release-process?view=azure-devops) - for reference, comparison
 - [Feature Availability – YAML vs Classic Pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-get-started?view=azure-devops#feature-availability)
 
 ### Anatomy of DevOps Pipelines
 
-- [Add stages, dependencies, & conditions](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/stages?view=azure-devops&tabs=yaml)
-- [Azure Pipelines ecosystem support](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/ecosystems?view=azure-devops)
-- [Add & use variable groups](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups?view=azure-devops&tabs=yaml)
+- [Add stages, dependencies, & conditions](https://docs.microsoft.com/azure/devops/pipelines/process/stages?view=azure-devops&tabs=yaml)
+- [Azure Pipelines ecosystem support](https://docs.microsoft.com/azure/devops/pipelines/ecosystems/ecosystems?view=azure-devops)
+- [Add & use variable groups](https://docs.microsoft.com/azure/devops/pipelines/library/variable-groups?view=azure-devops&tabs=yaml)
 
 
 ### Example Pipelines
