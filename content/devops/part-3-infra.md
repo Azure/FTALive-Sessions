@@ -102,3 +102,8 @@ Please note both code projects are based on [Secure AKS Baseline Reference Archi
   - has multiple files, e.g. [`./network.bicep`](https://github.com/Azure/Aks-Construction/blob/main/bicep/network.bicep) with local directory requirement.
   - [`main.bicep`](https://github.com/Azure/Aks-Construction/blob/main/bicep/main.bicep) - note parameters/variables
 
+# Resources
+
+Additional resources to bookmark
+
+- [Bicep Examples on GitHub.com](https://github.com/Azure/bicep/tree/main/docs/examples) sorted by level (100, 200, etc.) and great for learning by example.  
