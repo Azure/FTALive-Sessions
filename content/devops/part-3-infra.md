@@ -58,6 +58,7 @@ _** preview feature as of 10 Nov 2021_
 - Azure Architecture Center: E2E Governance and [what access do security principals need?](https://docs.microsoft.com/en-us/azure/architecture/example-scenario/governance/end-to-end-governance-in-azure#2-what-access-do-security-principals-need) 
 - Azure Docs: [Principle of Least Privilege](https://docs.microsoft.com/en-us/azure/role-based-access-control/best-practices#only-grant-the-access-users-need)
 - Azure Docs: [Lock resources to prevent unexpected changes](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources?tabs=json)
+- Cloud Adoption Framework: [Standard enterprise governance guide](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/govern/guides/standard/)
 
 ### Use Custom Roles
 
@@ -106,4 +107,5 @@ Please note both code projects are based on [Secure AKS Baseline Reference Archi
 
 Additional resources to bookmark
 
-- [Bicep Examples on GitHub.com](https://github.com/Azure/bicep/tree/main/docs/examples) sorted by level (100, 200, etc.) and great for learning by example.  
+- [Bicep Examples on GitHub.com](https://github.com/Azure/bicep/tree/main/docs/examples) sorted by level (100, 200, etc.) and great for learning by example. 
+- [Azure Policy Samples on GitHub.com](https://github.com/Azure/azure-policy) built-in and reference examples for you to learn, extend and use.
