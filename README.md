@@ -68,7 +68,7 @@ Management and Governance	| Modern Service Operations | In this session we will 
   |  |  |  |  |
 Management and Governance	| Gobernanza de Azure | Únase a nosotros en vivo para escuchar a los ingenieros de Microsoft FastTrack para Azure (FTA) y hacer sus preguntas sobre la gobernanza de Azure. Acerca de este evento. Esta sesión le brindará la oportunidad de expandir su conocimiento de los temas de Azure Governance. | English | https://aka.ms/ftalive-govesp |
   |  |  |  |  |
-Management and Governance	| Azure Monitoring | In this session, you will learn about the different components around Azure Monitor and how you can utilize for end-to-end monitoring across your Cloud Solution. We will discuss Cloud Management including Azure Resource Graph capabilities and how to best use the Insights for gaining visibility of your environment, and much more. | English | https://aka.ms/ftalive-mon |
+Management and Governance	| Azure Monitoring | In this session, you will learn about the different components of Azure Monitor and how you can utilize for end-to-end monitoring across your Cloud Solution. We will discuss Cloud Management capabilities and how to best use the Insights for gaining visibility of your environment, and much more. | English | https://aka.ms/ftalive-mon |
   |  |  |  |  |
 Management and Governance	| Azure Application Monitoring | In this session, you will learn how to use Azure Monitor Application Insights for end-to-end application monitoring. Intended audience for this session is application developers. | English | https://aka.ms/ftalive-mon |
   |  |  |  |  |

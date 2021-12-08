@@ -1,13 +1,24 @@
 # Azure Arc-enabled Servers
 
-Thank you for joining our session on [Azure Arc-enabled servers](https://docs.microsoft.com/en-us/azure/azure-arc/servers/overview). Herewith some resources to get you started:
+## Overview
+
+In this session, learn about [Azure Arc-enabled servers](https://docs.microsoft.com/en-us/azure/azure-arc/servers/overview) including Deployment Approaches and how to leverage Azure Management capbilities for you non-Azure estate.
+
+## Agenda
+
+* What is Azure Arc-enabled Servers?
+* Agent onboarding
+* How to use Azure Management and Security capabilities with Arc-enabled servers
+
+
+## Learning Resources and Session Summary
 
 *   Azure Arc enabled servers enables you to use the Azure Management capabilities, such as Azure Policy, Change Tracking and Inventory, etc on your servers hosted outside of Azure in the same way that you use for Azure-hosted machines
 *   You need to deploy [an agent](https://docs.microsoft.com/en-us/azure/azure-arc/servers/agent-overview) to the servers to be managed
     *   The agent communicates outbound over TCP port 443, but can be configured to use a proxy for outbound communication, review [network configuration](https://docs.microsoft.com/en-us/azure/azure-arc/servers/agent-overview#networking-configuration) requirements
     *   For testing purposes, you can onboard one or two servers using an interactive script, which can be generated using the portal: [Connect hybrid machines to Azure from the Azure portal - Azure Arc | Microsoft Docs](https://docs.microsoft.com/en-us/azure/azure-arc/servers/onboard-portal)
     *   For larger scale deployments, you will need to create a Service Principal account, and then use this in the at-scale script you can generate in the portal: [Connect hybrid machines to Azure at scale - Azure Arc | Microsoft Docs](https://docs.microsoft.com/en-us/azure/azure-arc/servers/onboard-service-principal)
-*   These at-scale scripts can be used in your standard deployment methods, such as SCCM, Ansible, etc
+*   These at-scale scripts can be used in your standard deployment methods, such as Microsoft Endpoint Configuration Manager, Ansible, etc
 
 Additional learning resources:
 

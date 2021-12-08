@@ -1,4 +1,19 @@
-# Getting started with KQL
+# Getting started with Kusto Query Language (KQL)
+
+## Overview
+
+In this session, learn how to write queries in Kusto Query Language (KQL) in the context of Azure Monitor and Azure Sentinel. We will cover best practices, design, how to create queries in the interface and leveraging scalar/aggregation functions along with much more.
+
+## Agenda
+
+* Query writing tips and tricks
+* Navigating the query interface
+* Filtering and sorting
+* Aggregation and scalar functions
+* Rendering graphs
+* Parsing text
+
+## Session Summary and additional resources
 
 We took some time to explore constructing KQL queries, herewith more about the basic operators you may use:
 
@@ -11,7 +26,7 @@ We took some time to explore constructing KQL queries, herewith more about the b
 *   [The datetime data type - Azure Data Explorer | Microsoft Docs](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/scalar-data-types/datetime)
 *   [join operator - Azure Data Explorer | Microsoft Docs](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/joinoperator?pivots=azuremonitor)
 
-## Sample queries
+### Sample queries
 
 List a table
 
@@ -80,7 +95,7 @@ Performance data with chart:
 
 
 
-## Additional learning resources:
+### Additional learning resources:
 
 *   [Log Analytics tutorial - Azure Monitor | Microsoft Docs](https://docs.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-tutorial)
 *   [Query best practices - Azure Data Explorer | Microsoft Docs](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/best-practices)

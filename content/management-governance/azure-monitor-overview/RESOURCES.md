@@ -1,6 +1,24 @@
-#### [home](README.md)
+# Azure Monitor
 
-# Resources
+## Overview
+
+In this session, you will learn about the different components of Azure Monitor and how you can utilize for end-to-end monitoring across your Cloud Solution. We will discuss Cloud Management capabilities and how to best use the Insights for gaining visibility of your environment, and much more.
+
+## Agenda
+
+* Introduction to Azure Monitor
+* Activity Log and Azure Service Health
+* Insights covering:
+    * Application Insights
+    * Virtual Machine Insights
+    * Container Insights
+    * Other Insights
+* Log Analytics workspace design considerations
+* Analysing data with log queries and metrics
+* Notifications and Visualisations
+
+
+## Resources and session summary
 
 **Getting Started:**
 
