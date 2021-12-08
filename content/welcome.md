@@ -4,7 +4,7 @@
 
 ## What is FastTrack for Azure?
 
-FTA is a technical enablement program for organizations with cloud projects that enables the rapid, effective activation of solutions. It includes tailored guidance from Azure engineers that leverages proven practices and architectural guidance.
+[FastTrack for Azure](https://aka.ms/fta) (FTA) is a technical enablement program for organizations with cloud projects that enables the rapid, effective activation of solutions. It includes tailored guidance from Azure engineers that leverages proven practices and architectural guidance.
 
 ## What is FastTrack for Azure Live?
 
