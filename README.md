@@ -14,7 +14,7 @@ However when looking for a specific topic you can search by the session title it
 
 Category | Title | Description | URL |
 :------|:------|:------|:------|
-Application Modernization	| Infrastructure as Code | In this session we will discuss how to create an ARM Template using Bicep and deploy using Azure Pipelines. We will cover key areas such as CI/CD Pipelines and Authoring Tools. | [aka.ms/ftalive-appmod](https://aka.ms/ftalive-appmod)
+Application Modernization	| Infrastructure as Code | In this session we will discuss how to create an ARM Template using Bicep and deploy using Azure Pipelines. We will cover key areas such as CI/CD Pipelines and Authoring Tools. | [aka.ms/ftalive-iac](https://aka.ms/ftalive-iac)
   |  |  |  |  |
 Application Modernization	| App Service Networking | In this session you will learn about the different ways you can secure Azure App Service from a networking perspective. The main focus of the session will be Azure App Service, but you will also be able to apply a lot of the concepts we cover to other Azure PaaS services.  | [aka.ms/ftalive-appservnet](https://aka.ms/ftalive-appservnet)
   |  |  |  |  |
