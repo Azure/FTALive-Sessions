@@ -4,7 +4,7 @@
 
 This section presents a common strategy that is a bottoms-up approach starting from infrastructure up through applications. Each layer has distinct monitoring requirements.
 
-These layers are illustrated in [Monitor AKS with Azure Monitor for container insight](https://docs.microsoft.com/azure/aks/monitor-aks)
+These layers are illustrated in [Monitor AKS with Azure Monitor for container insight](https://docs.microsoft.com/azure/aks/monitor-aks#monitor-layers-of-aks-with-container-insights)
 
 - Cluster level components
 - Managed AKS components
@@ -41,8 +41,8 @@ Enable alerting with right monitor and threshold to act proactively.
 |:-----|:------------------------|:------------------------|
 | Monitor Node conditions - [Not ready status](https://docs.microsoft.com/azure/azure-monitor/containers/container-insights-metric-alerts)| Monitor the node conditions for health status. Not Ready or Unknown| Metric and resource logs |
 | Nodes under resource pressure - [Node conditions](https://kubernetes.io/docs/concepts/architecture/nodes/#condition) | Monitor the nodes under resource pressure like CPU, memory, PID and disk pressures.| Resource logs |
-| Node level CPU utilization - [CPU & Memory](https://docs.microsoft.com/azure/azure-monitor/containers/container-insights-metric-alerts)| CPU utilization for individual nodes and aggregated at node pools.| Metric |
-| Node level memory utilization	| Monitor memory utilization for individual nodes and aggregated at node pools.| Metric |
+| Node level CPU utilization - [CPU Utilization](https://docs.microsoft.com/azure/azure-monitor/containers/container-insights-metric-alerts)| CPU utilization for individual nodes and aggregated at node pools.| Metric |
+| Node level memory utilization - [Memory Utilization](https://docs.microsoft.com/azure/azure-monitor/containers/container-insights-metric-alerts)	| Monitor memory utilization for individual nodes and aggregated at node pools.| Metric |
 | Active nodes and scale out %	| Monitor the scale out % of node pools	| Resource log |
 
 ## Monitor Managed AKS components:
