@@ -112,3 +112,9 @@ CPU and memory usage at controller level|	Monitor the applications CPU and memor
 | Monitor failed outbound connections.|If SNAT Connection Count filtered to Connection State = Failed is greater than zero, then fire alert| Metric
 
 ## Monitor Azure Firewall
+- [Monitor Firewall health state](https://docs.microsoft.com/en-us/azure/firewall/logs-and-metrics#metrics)
+
+- Possible status are "Healthy", "Degraded" & "Unhealthy"
+
+- SNAT port utilization - The percentage of SNAT port that has been utilized
+
