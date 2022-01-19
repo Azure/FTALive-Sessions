@@ -9,18 +9,18 @@ We spoke about [Microsoft Defender for Cloud](https://docs.microsoft.com/en-gb/a
     *   [Determine causes of non-compliance](https://docs.microsoft.com/en-gb/azure/governance/policy/how-to/determine-non-compliance)
     *   Tutorial: [Create and manage policies to enforce compliance](https://docs.microsoft.com/en-gb/azure/governance/policy/tutorials/create-and-manage)
     *   Tutorial: [Working with Security Policies](https://docs.microsoft.com/en-gb/azure/security-center/tutorial-security-policy)
-    *   [Azure security policies monitored by Security Center](https://docs.microsoft.com/en-gb/azure/security-center/security-center-policy-definitions)
+    *   [Azure Policy built-in definitions for Microsoft Defender for Cloud](https://docs.microsoft.com/en-gb/azure/security-center/security-center-policy-definitions)
     * [Excepting your resources and recommendations from your secure score](https://docs.microsoft.com/en-us/azure/security-center/exempt-resource)
 *   We spoke about your [Secure Score and how to improve it](https://docs.microsoft.com/en-us/azure/security-center/security-center-secure-score).
     * [Security Recommendations Reference Guide](https://docs.microsoft.com/en-us/azure/security-center/recommendations-reference)
-*   We mentioned the capabilities of [Azure Defender for Servers](https://docs.microsoft.com/en-us/azure/security-center/defender-for-servers-introduction), you can read more about them here:
+*   We mentioned the capabilities of [Microsoft Defender for Servers](https://docs.microsoft.com/en-us/azure/security-center/defender-for-servers-introduction), you can read more about them here:
     *   [Just in Time Access](https://docs.microsoft.com/en-us/azure/security-center/security-center-just-in-time)
     *   [Adaptive Application Controls](https://docs.microsoft.com/en-us/azure/security-center/security-center-adaptive-application)
     *   [File Integrity Monitoring](https://docs.microsoft.com/en-us/azure/security-center/security-center-file-integrity-monitoring)
     *   [Adaptive Network Hardening](https://docs.microsoft.com/en-us/azure/security-center/security-center-adaptive-network-hardening)
 *   We also looked at [Azure Defender for SQL](https://docs.microsoft.com/en-us/azure/azure-sql/database/azure-defender-for-sql)
-*   We also mentioned that you can integrate ASC with [Defender for Endpoint](https://docs.microsoft.com/en-us/azure/security-center/security-center-wdatp)  for advanced threat protection detection and response capabilities.
-*   For downstream integration into other tools, you can use [the continuous export capability](https://docs.microsoft.com/en-us/azure/security-center/continuous-export?tabs=azure-portal) in Security Center, and stream the events, alerts and recommendations to an Event Hub or to a Log Analytics workspace.
+*   We also mentioned that you can integrate with [Defender for Endpoint](https://docs.microsoft.com/en-us/azure/security-center/security-center-wdatp)  for advanced threat protection detection and response capabilities.
+*   For downstream integration into other tools, you can use [the continuous export capability](https://docs.microsoft.com/en-us/azure/security-center/continuous-export?tabs=azure-portal), and stream the events, alerts and recommendations to an Event Hub or to a Log Analytics workspace.
 
 ## Additional Learning resources:
 
