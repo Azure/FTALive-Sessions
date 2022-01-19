@@ -1,5 +1,18 @@
 # Microsoft Defender for Cloud
 
+## Overview
+
+This is a fundamentals session into Cloud Security intended for beginners or users looking for a refresher in the essential guidelines in setting up your Cloud Security design. We will cover Microsoft Defender for Cloud along with the enhanced protection services offered by enhanced Defender capabilities, guidance on using the tools and tips to improve your Secure Score.
+
+## Agenda
+
+* Overview of Defender for Cloud enablement
+* Secure Score, Recommendations and how to improve your score
+* Defender for Cloud Policy Management
+* Defender for Cloud advanced features
+
+## Resources and session summary
+
 We spoke about [Microsoft Defender for Cloud](https://docs.microsoft.com/en-gb/azure/security-center/security-center-intro).
 
 *   Microsoft Defender for Cloud (previously known as Azure Security Center) provides capabilities around managing your Cloud Security posture, leveraging off policies to detect potential vulnerabilities and areas of improvement. It also provides some capabilities around workload protection.
