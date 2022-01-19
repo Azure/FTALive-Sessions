@@ -1,9 +1,9 @@
-# Azure Security Center
+# Microsoft Defender for Cloud
 
-We spoke about [Azure Security Center and Azure Defender](https://docs.microsoft.com/en-gb/azure/security-center/security-center-intro).
+We spoke about [Microsoft Defender for Cloud](https://docs.microsoft.com/en-gb/azure/security-center/security-center-intro).
 
-*   Azure Security Center provides capabilities around managing your Cloud Security posture, leveraging off policies to detect potential vulnerabilities and areas of improvement. It also provides some capabilities around workload protection.
-*   Azure Security Center relies on [Azure Policies](https://docs.microsoft.com/en-gb/azure/governance/policy/overview), which allows you to create rules and effects for your resources in Azure and report on compliance to those rules. We have a gallery of [sample policy definitions](https://docs.microsoft.com/en-gb/azure/governance/policy/samples/). Recommended reading:
+*   Microsoft Defender for Cloud (previously known as Azure Security Center) provides capabilities around managing your Cloud Security posture, leveraging off policies to detect potential vulnerabilities and areas of improvement. It also provides some capabilities around workload protection.
+*   Microsoft Defender for Cloud relies on [Azure Policies](https://docs.microsoft.com/en-gb/azure/governance/policy/overview), which allows you to create rules and effects for your resources in Azure and report on compliance to those rules. We have a gallery of [sample policy definitions](https://docs.microsoft.com/en-gb/azure/governance/policy/samples/). Recommended reading:
     *   [Understanding Azure Policy Effects](https://docs.microsoft.com/en-gb/azure/governance/policy/concepts/effects)
     *   [Azure Policy definition structure](https://docs.microsoft.com/en-gb/azure/governance/policy/concepts/definition-structure)
     *   [Determine causes of non-compliance](https://docs.microsoft.com/en-gb/azure/governance/policy/how-to/determine-non-compliance)
@@ -24,7 +24,7 @@ We spoke about [Azure Security Center and Azure Defender](https://docs.microsoft
 
 ## Additional Learning resources:
 
-*   [Identify security threats with Azure Security Center](https://docs.microsoft.com/en-us/learn/modules/identify-threats-with-azure-security-center/)
-*   [Protect your servers and VMs from brute-force and malware attacks with Azure Security Center](https://docs.microsoft.com/en-us/learn/modules/secure-vms-with-azure-security-center/)
+*   [Identify security threats with Microsoft Defender for Cloud](https://docs.microsoft.com/en-us/learn/modules/identify-threats-with-azure-security-center/)
+*   [Protect your servers and VMs from brute-force and malware attacks with Microsoft Defender for Cloud](https://docs.microsoft.com/en-us/learn/modules/secure-vms-with-azure-security-center/)
 *   Video: [Azure Power Lunch: Azure Security Center](https://www.youtube.com/watch?v=0-DV3DFeHWc)
 *   Video: [Securing the hybrid cloud | Azure Security Center Part 1](https://www.youtube.com/watch?v=3Ddli1q3CcQ)
