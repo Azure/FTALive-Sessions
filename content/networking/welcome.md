@@ -30,7 +30,7 @@ Agenda
 Annex
 
 [Configure Route Tables for Hub and Spoke
-Topology](./configure-route-tables-for-hub-and-spoke-topology/01.md)
+Topology](./configure-route-tables-for-hub-and-spoke-topology/rt-hub-spoke.md)
 
 [Configure NVAs for Hub and Spoke
 Topology](./configure-nva-for-hub-and-spoke-topology/01.md)
