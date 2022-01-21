@@ -67,6 +67,9 @@ Best practice is to use ingress resources and controllers to distribute HTTP or 
 
 AGIC leverages the AKS’ advanced networking, which allocates an IP address for each pod from the subnet shared with Application Gateway. Application Gateway Ingress Controller has direct access to all Kubernetes pods. This eliminates the need for data to pass through kubenet.
 
+![image](https://user-images.githubusercontent.com/83619402/150572133-6e213053-41b3-4d4f-b77c-60295289b14d.png)
+
+
 
 - [Benefits of Application Gateway Ingress Controller](https://docs.microsoft.com/azure/azure-monitor/containers/container-insights-log-query)
 
