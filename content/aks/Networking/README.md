@@ -12,6 +12,7 @@
     - [Use a static public IP address and DNS label with the AKS load balancer](https://docs.microsoft.com/en-us/azure/aks/static-ip)
 - External DNS
   
+  
 
 ## Network Policies
 
@@ -34,6 +35,8 @@ There are two ways to implement Network Policies in AKS:
 - [Deploy AKS clusters with network policy using Infrastructure as a code(IAC)](https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.NetworkPolicy/)
   
 Best practice is to use network policies to allow or deny traffic to pods. By default, all traffic is allowed between pods within a cluster. For improved security, define rules that limit pod communication.
+
+
 
 ## Ingress
 
