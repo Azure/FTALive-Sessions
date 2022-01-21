@@ -1,6 +1,4 @@
-# AKS Monitoring content will be included here
-...
-#
+# AKS Monitoring 
 
 This section presents a common strategy that is a bottoms-up approach starting from infrastructure up through applications. Each layer has distinct monitoring requirements.
 
