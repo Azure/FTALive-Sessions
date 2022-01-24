@@ -54,7 +54,7 @@ Best practice is to use network policies to allow or deny traffic to pods. By de
       - [How to create an ingress controller to an internal virtual network in AKS](https://docs.microsoft.com/en-us/azure/aks/ingress-internal-ip?tabs=azure-cli)
            - [How client source IP preservation works for loadbalancer services in AKS](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/how-client-source-ip-preservation-works-for-loadbalancer/ba-p/3033722)
            - [How to restrict application access to AKS cluster within VNET ](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/restrict-application-access-in-aks-cluster/ba-p/3017826#)
-      - [How to create an ingress controller in Azure Kubernetes Service](https://docs.microsoft.com/en-us/azure/aks/ingress-basic?tabs=azure-cli)
+   
 
 Best practice is to use ingress resources and controllers to distribute HTTP or HTTPS traffic to your application as it is a layer 7 loadbalancer.
 
@@ -65,7 +65,10 @@ Best practice is to use ingress resources and controllers to distribute HTTP or 
 
 [Application Gateway Ingress Controller (AGIC)](https://docs.microsoft.com/en-us/azure/application-gateway/ingress-controller-overview) allows Azure Application Gateway to be used as the ingress for an Azure Kubernetes Service. It runs in its own pod on the customer’s AKS.
 
-AGUC leverages the AKS’ advanced networking, which allocates an IP address for each pod from the subnet shared with Application Gateway. Application Gateway Ingress Controller has direct access to all Kubernetes pods. This eliminates the need for data to pass through kubenet.
+AGIC leverages the AKS’ advanced networking, which allocates an IP address for each pod from the subnet shared with Application Gateway. Application Gateway Ingress Controller has direct access to all Kubernetes pods. This eliminates the need for data to pass through kubenet.
+
+![image](https://user-images.githubusercontent.com/83619402/150572133-6e213053-41b3-4d4f-b77c-60295289b14d.png)
+
 
 
 - [Benefits of Application Gateway Ingress Controller](https://docs.microsoft.com/azure/azure-monitor/containers/container-insights-log-query)
