@@ -30,8 +30,7 @@ Source : [Wikipedia](https://en.wikipedia.org/wiki/Open-source_software_security
 
 The following are tools that you may considered:
 
-- [CodeQL](https://codeql.github.com/) - You can write your own custom query to detect vulnerabilities in your code.
-- GitHub build-in [code scanning](https://docs.github.com/en/free-pro-team@latest/github/finding-security-vulnerabilities-and-errors-in-your-code/automatically-scanning-your-code-for-vulnerabilities-and-errors) features.
+- GitHub [code scanning](https://docs.github.com/en/free-pro-team@latest/github/finding-security-vulnerabilities-and-errors-in-your-code/automatically-scanning-your-code-for-vulnerabilities-and-errors) with [CodeQL](https://codeql.github.com/). This allows you to write your own custom query to detect vulnerabilities in your code. [Demo](https://github.com/github/code-scanning-javascript-demo).
 - [Dependabot](https://github.com/dependabot/dependabot-core#dependabot) - dependency review and alerts in GitHub.
 - [Securing software supply chain](https://docs.github.com/en/free-pro-team@latest/github/managing-security-vulnerabilities) in GitHub.
 - [DevSkim](https://github.com/Microsoft/DevSkim#devskim) - a framework of IDE extensions and language analyzers that provide inline security analysis in the dev environment as the developer writes code.
