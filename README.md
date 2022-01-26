@@ -38,6 +38,8 @@ Application Modernization	| Microsoft Identity Platform | In this session you wi
   |  |  |  |  |
 Hybrid Management	| Azure Arc for Servers | In this session, learn about Azure Arc capabilities including Deployment Approaches and how to leverage Azure Management capbilities for you non-Azure estate. | [aka.ms/ftalive-arcservers](https://aka.ms/ftalive-arcservers)
   |  |  |  |  |
+Hybrid Management	| Azure Arc for Kubernetes | In this session, learn about Azure Arc-enabled Kubernetes. We will discuss how to connect Kubernetes clusters to Arc, deploy cluster extensions (monitoring, defender, policy manager) and how to configure cluster for GitOps. | [aka.ms/ftalive-arcservers](https://aka.ms/ftalive-arckubernetes)
+  |  |  |  |  |
 Hybrid Management	| Azure Arc Services | In this session, learn about Azure Arc services from definition, to planning and implementation. We will cover Arc-enabled servers, Arc-enabled data services and Arc-enabled Kubernetes with a focus on supporting your deployment scenarios. | [aka.ms/ftalive-arcservices](https://aka.ms/ftalive-arcservices)
   |  |  |  |  |
 Data | SQL API for Cosmos DB | In this session you will learn how to design and develop for Cosmos DB SQL API. We will take you through an end-to-end scenario and share recommended practices along the way. Specific topics will range from archiecture design to configuration to how to use the Client SDK and optimizing your monitoring setup. | [aka.ms/ftalive-cosmosdb](https://aka.ms/ftalive-cosmosdb)
