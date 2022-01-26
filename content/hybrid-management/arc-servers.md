@@ -25,6 +25,7 @@ Additional learning resources:
 *   [Introduction to Azure Arc enabled servers - Learn | Microsoft Docs](https://docs.microsoft.com/en-us/learn/modules/intro-to-arc-for-servers/)
 *   [Overview | Azure Arc Jumpstart](https://azurearcjumpstart.io/overview/)
 *   [Overview of Azure Arc enabled servers - YouTube](https://www.youtube.com/watch?v=2KbILoO3rqc)
+*   [Azure Arc MVP](https://github.com/alsanch/azurearcmvp)
 
 Interactive Demos:
 
