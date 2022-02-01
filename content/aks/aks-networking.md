@@ -4,20 +4,17 @@
 
 [Basic Concepts of Kubernetes Services](https://kubernetes.io/docs/concepts/services-networking/service/)
 
-- ClusterIP : default Kubernetes service accessible inside the Kubernetes cluster - no external access.
-- NodePort : most primitive way to get external traffic directly to your service. It opens a specific port on all the Nodes  and any traffic sent to this port is forwarded to the service.
-- LoadBalancer : standard way to expose a service to the internet. In Azure, this will spin up an Azure Load Balancer (L4) that gives us a single public IP address that forwards all traffic to your service.
+- `ClusterIP` : default Kubernetes service accessible inside the Kubernetes cluster - no external access.
+- `NodePort` : most primitive way to get external traffic directly to your service. It opens a specific port on all the Nodes  and any traffic sent to this port is forwarded to the service.
+- `LoadBalancer` : standard way to expose a service to the internet. In Azure, this will spin up an Azure Load Balancer (L4) that gives us a single public IP address that forwards all traffic to your service.
     - [How to create an internal LoadBalancer](https://docs.microsoft.com/en-us/azure/aks/internal-lb)
     - [How to create a Standard LoadBalancer](https://docs.microsoft.com/en-us/azure/aks/load-balancer-standard)
     - [Use a static public IP address and DNS label with the AKS load balancer](https://docs.microsoft.com/en-us/azure/aks/static-ip)
-- External DNS
+- `ExternalName`: external DNS
   
-  
-
 ## Network Policies
 
 [Kubernetes Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/) are used to secure traffic only between the pods.
-
 
 There are two ways to implement Network Policies in AKS:
 
@@ -28,15 +25,11 @@ There are two ways to implement Network Policies in AKS:
     - [Calico Network Policies with AKS](https://cloudblogs.microsoft.com/opensource/2019/10/17/tutorial-calico-network-policies-with-azure-kubernetes-service/)
     - [Calico Open Source Github Repo](https://github.com/projectcalico/calico)  
 
-
-
 - [Difference between Azure and Calico network policies](https://docs.microsoft.com/en-us/azure/aks/use-network-policies#differences-between-azure-and-calico-policies-and-their-capabilities)
 - [How to secure traffic between pods using network policies](https://docs.microsoft.com/en-us/azure/aks/use-network-policies)
 - [Deploy AKS clusters with network policy using Infrastructure as a code(IAC)](https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.NetworkPolicy/)
   
 Best practice is to use network policies to allow or deny traffic to pods. By default, all traffic is allowed between pods within a cluster. For improved security, define rules that limit pod communication.
-
-
 
 ## Ingress
 
@@ -55,11 +48,7 @@ Best practice is to use network policies to allow or deny traffic to pods. By de
            - [How client source IP preservation works for loadbalancer services in AKS](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/how-client-source-ip-preservation-works-for-loadbalancer/ba-p/3033722)
            - [How to restrict application access to AKS cluster within VNET ](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/restrict-application-access-in-aks-cluster/ba-p/3017826#)
    
-
-Best practice is to use ingress resources and controllers to distribute HTTP or HTTPS traffic to your application as it is a layer 7 loadbalancer.
-
-
-
+Best practice is to use ingress resources and controllers to distribute HTTP or HTTPS traffic to your application as it is a layer 7 load balancer.
 
 ## Application Gateway Ingress Controller(AGIC)
 
@@ -69,14 +58,9 @@ AGIC leverages the AKS’ advanced networking, which allocates an IP address for
 
 ![image](https://user-images.githubusercontent.com/83619402/150572133-6e213053-41b3-4d4f-b77c-60295289b14d.png)
 
-
-
 - [Benefits of Application Gateway Ingress Controller](https://docs.microsoft.com/azure/azure-monitor/containers/container-insights-log-query)
-
 - [Application Gateway Ingress Controller Github Repo](https://github.com/Azure/application-gateway-kubernetes-ingress?WT.mc_id=docs-azuredevtips-azureappsdev)
-
 - [Use private IP for internal routing for an Ingress endpoint](https://docs.microsoft.com/en-us/azure/application-gateway/ingress-controller-private-ip)
-
 - [Enable multiple Namespace support in an AKS cluster with Application Gateway Ingress Controller](https://docs.microsoft.com/en-us/azure/application-gateway/ingress-controller-multiple-namespace-support)
 - [What Does It Mean for the Application Gateway Ingress Controller (AGIC) to Assume “Full Ownership”?](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/what-does-it-mean-for-the-application-gateway-ingress-controller/ba-p/2839051)
 
@@ -90,7 +74,3 @@ Helm
 Add-On
 - [Enable the Ingress Controller add-on for a new AKS cluster with a new Application Gateway instance](https://docs.microsoft.com/en-us/azure/application-gateway/tutorial-ingress-controller-add-on-new)
 - [Enable Application Gateway Ingress Controller add-on for an existing AKS cluster with an existing Application Gateway](https://docs.microsoft.com/en-us/azure/application-gateway/tutorial-ingress-controller-add-on-existing)
-
-
-
-

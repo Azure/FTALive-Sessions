@@ -1,6 +1,4 @@
-# AKS Monitoring content will be included here
-...
-#
+# AKS Monitoring 
 
 This section presents a common strategy that is a bottoms-up approach starting from infrastructure up through applications. Each layer has distinct monitoring requirements.
 
@@ -11,7 +9,6 @@ These layers are illustrated in [Monitor AKS with Azure Monitor for container in
 - Kubernetes objects and workloads
 - Applications / hosted workloads
 - Resources external to AKS
-
 
 ## References for log query examples and how to create alert out of them
 - [How to query logs from Container insights](https://docs.microsoft.com/azure/azure-monitor/containers/container-insights-log-query)
