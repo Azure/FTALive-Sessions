@@ -2,20 +2,20 @@
 
 AKS support two [network models](https://docs.microsoft.com/azure/aks/concepts-network#azure-virtual-networks)
 
-1. [Kubenet](https://github.com/aarunraaj/aksmonitoring/blob/main/Networking.md#kubenet) (basic) networking
-2. [Azure CNI](https://github.com/aarunraaj/aksmonitoring/blob/main/Networking.md#azure-cni-advanced) (advanced) networking
+1. Kubenet (basic) networking
+2. Azure CNI (advanced) networking
 
 # Kubenet
 [Kubenet](https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/#kubenet) networking is the default configuration option for AKS cluster creation.
 
-[Kubenet networking model](https://docs.microsoft.com/en-us/azure/aks/concepts-network#kubenet-basic-networking)
+[Kubenet networking model](https://docs.microsoft.com/azure/aks/concepts-network#kubenet-basic-networking)
 
 - Nodes receive IP address from Azure Virtual network.
 - Pods receive an IP address from logically differentiated address space.
 - NATting for pods to reach resources on virtual network.
 - Kubenet network supports only Linux node pools.
 
-[Use kubenet with you own IP address ranges in Azure Kubernetes Service](https://docs.microsoft.com/en-us/azure/aks/configure-kubenet)
+[Use kubenet with you own IP address ranges in Azure Kubernetes Service](https://docs.microsoft.com/azure/aks/configure-kubenet)
 - By default, UDRs and IP configuration is created and maintained by AKS.
 - AKS supports to bring your own subnet and route table. 
 - If route table does not exist, AKS creates one and adds rules to it.
@@ -42,7 +42,7 @@ With Kubenet you can use a smaller IP address range and support large clusters.
 For more details:
 - [IP address availability for kubenet](https://docs.microsoft.com/azure/aks/configure-kubenet#ip-address-availability-and-exhaustion)
 
-- [Limitations and considerations for kubenet](https://docs.microsoft.com/en-us/azure/aks/configure-kubenet#limitations--considerations-for-kubenet)
+- [Limitations and considerations for kubenet](https://docs.microsoft.com/azure/aks/configure-kubenet#limitations--considerations-for-kubenet)
 
 # Azure CNI (advanced)
 
@@ -96,7 +96,7 @@ When creating an AKS private cluster the control plane has an internal IP addres
 
 Private endpoint allows the VNET to communicate with Private cluster. To connect with private endpoint, you need a DNS record.
 
-- [Configure Private DNS zone](https://docs.microsoft.com/en-us/azure/aks/private-clusters#configure-private-dns-zone )
+- [Configure Private DNS zone](https://docs.microsoft.com/azure/aks/private-clusters#configure-private-dns-zone )
 
 - If custom DNS resolver used in Hub and Spoke model, the custom DNS resolver VNET should also be linked with private DNS zone.
 
@@ -129,12 +129,12 @@ If `outboundType` is set as `userDefinedRouting`, then AKS won't perform any con
 ## If outbound type set as userDefinedRouting and sending egress to Azure Firewall
 Azure Firewall provides an Azure Kubernetes Service (AzureKubernetesService) FQDN Tag to simplify this configuration.
 
-How to [restrict egress traffic using Azure Firewall?](https://docs.microsoft.com/en-us/azure/aks/limit-egress-traffic#restrict-egress-traffic-using-azure-firewall)
+How to [restrict egress traffic using Azure Firewall?](https://docs.microsoft.com/azure/aks/limit-egress-traffic#restrict-egress-traffic-using-azure-firewall)
 
 - Minimum 20 Frontend IPs on Azure Firewall for production scenario to avoid port exhaustion.
     -  [Create Azure Firewall with multiple public IP address](https://docs.microsoft.com/azure/firewall/quick-create-multiple-ip-template)
 - Azure Firewall provides `AzureKubernetesService` FQDN tag.
-- If `outboundType` as UDR, load balancer deployed when first services with type as `loadbalancer`. https://docs.microsoft.com/en-us/azure/aks/egress-outboundtype#load-balancer-creation-with-userdefinedrouting
+- If `outboundType` as UDR, load balancer deployed when first services with type as `loadbalancer`. https://docs.microsoft.com/azure/aks/egress-outboundtype#load-balancer-creation-with-userdefinedrouting
 - Load blajacer with public IP is for inbound requests, rules are configured by Azure.
 - No outbound public IP address or oubtound rules
 
@@ -148,9 +148,9 @@ How to [restrict egress traffic using Azure Firewall?](https://docs.microsoft.co
 - ClusterIP : Default Kubernetes service accessible inside the Kubernetes cluster - no external access.
 - NodePort : Most primitive way to get external traffic directly to your service. It opens a specific port on all the Nodes and any traffic sent to this port is forwarded to the service.
 - LoadBalancer : Standard way to expose a service to the internet. In Azure, this will spin up an Azure Load Balancer (L4) that gives us a single public IP address that forwards all traffic to your service.
-    - [How to create an internal LoadBalancer](https://docs.microsoft.com/en-us/azure/aks/internal-lb)
-    - [How to create a Standard LoadBalancer](https://docs.microsoft.com/en-us/azure/aks/load-balancer-standard)
-    - [Use a static public IP address and DNS label with the AKS load balancer](https://docs.microsoft.com/en-us/azure/aks/static-ip)
+    - [How to create an internal LoadBalancer](https://docs.microsoft.com/azure/aks/internal-lb)
+    - [How to create a Standard LoadBalancer](https://docs.microsoft.com/azure/aks/load-balancer-standard)
+    - [Use a static public IP address and DNS label with the AKS load balancer](https://docs.microsoft.com/azure/aks/static-ip)
 - External DNS : Creates a specific DNS entry for easier application access.
 
 ## Network Policies
@@ -164,8 +164,8 @@ There are two ways to implement Network Policies in AKS:
 - Calico Network Policies, an open source network.
     - [Calico Network Policies with AKS](https://cloudblogs.microsoft.com/opensource/2019/10/17/tutorial-calico-network-policies-with-azure-kubernetes-service/)
     - [Calico Open Source Github Repo](https://github.com/projectcalico/calico)  
-- [Difference between Azure and Calico network policies](https://docs.microsoft.com/en-us/azure/aks/use-network-policies#differences-between-azure-and-calico-policies-and-their-capabilities)
-- [How to secure traffic between pods using network policies](https://docs.microsoft.com/en-us/azure/aks/use-network-policies)
+- [Difference between Azure and Calico network policies](https://docs.microsoft.com/azure/aks/use-network-policies#differences-between-azure-and-calico-policies-and-their-capabilities)
+- [How to secure traffic between pods using network policies](https://docs.microsoft.com/azure/aks/use-network-policies)
 - [Deploy AKS clusters with network policy using Infrastructure as a code(IAC)](https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.NetworkPolicy/)
   
 The best practice is to use network policies to allow or deny traffic to pods. By default, all traffic is allowed between pods within a cluster. For improved security, define rules that limit pod communication.
@@ -179,11 +179,11 @@ The best practice is to use network policies to allow or deny traffic to pods. B
 ![aks-ingress](https://user-images.githubusercontent.com/83619402/151653201-005f9fbb-fdff-4362-a0b0-b879b6bc6d18.png)
 
  There are two ingress components:
- - [Ingress resources](https://docs.microsoft.com/en-us/azure/aks/operator-best-practices-network#ingress-resource)
+ - [Ingress resources](https://docs.microsoft.com/azure/aks/operator-best-practices-network#ingress-resource)
  - [Ingress Controllers](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/)
-      - [How to create an ingress controller in Azure Kubernetes Service](https://docs.microsoft.com/en-us/azure/aks/ingress-basic?tabs=azure-cli)
-      - [How to enable HTTP application routing](https://docs.microsoft.com/en-us/azure/aks/http-application-routing)
-      - [How to create an ingress controller to an internal virtual network in AKS](https://docs.microsoft.com/en-us/azure/aks/ingress-internal-ip?tabs=azure-cli)
+      - [How to create an ingress controller in Azure Kubernetes Service](https://docs.microsoft.com/azure/aks/ingress-basic?tabs=azure-cli)
+      - [How to enable HTTP application routing](https://docs.microsoft.com/azure/aks/http-application-routing)
+      - [How to create an ingress controller to an internal virtual network in AKS](https://docs.microsoft.com/azure/aks/ingress-internal-ip?tabs=azure-cli)
            - [How client source IP preservation works for loadbalancer services in AKS](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/how-client-source-ip-preservation-works-for-loadbalancer/ba-p/3033722)
            - [How to restrict application access to AKS cluster within VNET ](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/restrict-application-access-in-aks-cluster/ba-p/3017826#)
 
@@ -193,18 +193,18 @@ Best practice is to use ingress resources and controllers to distribute HTTP or 
 There are many options for ingress controllers that are maintained and supported by different companies and communities such as nginx, Traefik, HaProxy, Envoy, etc. You can find the list of these controllers in the [official Kubernetes website](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/). The most common one is the nginx ingress controller.
 
 ## NGINX Ingress controllers
-- [How to create an ingress controller in Azure Kubernetes Service](https://docs.microsoft.com/en-us/azure/aks/ingress-basic?tabs=azure-cli)
-- [How to enable HTTP application routing](https://docs.microsoft.com/en-us/azure/aks/http-application-routing)
-- [How to create an ingress controller to an internal virtual network in AKS](https://docs.microsoft.com/en-us/azure/aks/ingress-internal-ip?tabs=azure-cli)
+- [How to create an ingress controller in Azure Kubernetes Service](https://docs.microsoft.com/azure/aks/ingress-basic?tabs=azure-cli)
+- [How to enable HTTP application routing](https://docs.microsoft.com/azure/aks/http-application-routing)
+- [How to create an ingress controller to an internal virtual network in AKS](https://docs.microsoft.com/azure/aks/ingress-internal-ip?tabs=azure-cli)
       - [How client source IP preservation works for loadbalancer services in AKS](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/how-client-source-ip-preservation-works-for-loadbalancer/ba-p/3033722)
       - [How to restrict application access to AKS cluster within VNET ](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/restrict-application-access-in-aks-cluster/ba-p/3017826#)
-- [How to create an HTTPS ingress controller and use your own TLS certificates on AKS](https://docs.microsoft.com/en-us/azure/aks/ingress-own-tls?tabs=azure-cli)
-- [How to create an ingress controller that uses Let's Encrypt to automatically generate TLS certificates with a static public IP address in AKS](https://docs.microsoft.com/en-us/azure/aks/ingress-static-ip?tabs=azure-cli)
-- [How to create an ingress controller that uses Let's Encrypt to automatically generate TLS certificates with a dynamic public IP address in AKS](https://docs.microsoft.com/en-us/azure/aks/ingress-tls?tabs=azure-cli)
+- [How to create an HTTPS ingress controller and use your own TLS certificates on AKS](https://docs.microsoft.com/azure/aks/ingress-own-tls?tabs=azure-cli)
+- [How to create an ingress controller that uses Let's Encrypt to automatically generate TLS certificates with a static public IP address in AKS](https://docs.microsoft.com/azure/aks/ingress-static-ip?tabs=azure-cli)
+- [How to create an ingress controller that uses Let's Encrypt to automatically generate TLS certificates with a dynamic public IP address in AKS](https://docs.microsoft.com/azure/aks/ingress-tls?tabs=azure-cli)
 
 ## HTTP application routing
 
-[HTTP application routing solution](https://docs.microsoft.com/en-us/azure/aks/http-application-routing) is an add-on available for AKS which when enabled ,creates an ingress controller along with an external DNS controller.
+[HTTP application routing solution](https://docs.microsoft.com/azure/aks/http-application-routing) is an add-on available for AKS which when enabled ,creates an ingress controller along with an external DNS controller.
 
 It creates two components within a cluster:
 
@@ -212,7 +212,7 @@ It creates two components within a cluster:
  - External-DNS controller: Watches for Kubernetes Ingress resources and creates DNS A records in the cluster-specific DNS zone.
 
 ## Application Gateway Ingress Controller(AGIC)
-[Application Gateway Ingress Controller (AGIC)](https://docs.microsoft.com/en-us/azure/application-gateway/ingress-controller-overview) allows Azure Application Gateway to be used as the ingress for an Azure Kubernetes Service. It runs in its own pod on the customer’s AKS.
+[Application Gateway Ingress Controller (AGIC)](https://docs.microsoft.com/azure/application-gateway/ingress-controller-overview) allows Azure Application Gateway to be used as the ingress for an Azure Kubernetes Service. It runs in its own pod on the customer’s AKS.
 
 AGIC leverages the AKS’ advanced networking, which allocates an IP address for each pod from the subnet shared with Application Gateway. Application Gateway Ingress Controller has direct access to all Kubernetes pods. This eliminates the need for data to pass through kubenet.
 
@@ -222,21 +222,21 @@ AGIC leverages the AKS’ advanced networking, which allocates an IP address for
 
 - [Application Gateway Ingress Controller Github Repo](https://github.com/Azure/application-gateway-kubernetes-ingress?WT.mc_id=docs-azuredevtips-azureappsdev)
 
-- [Use private IP for internal routing for an Ingress endpoint](https://docs.microsoft.com/en-us/azure/application-gateway/ingress-controller-private-ip)
+- [Use private IP for internal routing for an Ingress endpoint](https://docs.microsoft.com/azure/application-gateway/ingress-controller-private-ip)
 
-- [Enable multiple Namespace support in an AKS cluster with Application Gateway Ingress Controller](https://docs.microsoft.com/en-us/azure/application-gateway/ingress-controller-multiple-namespace-support)
+- [Enable multiple Namespace support in an AKS cluster with Application Gateway Ingress Controller](https://docs.microsoft.com/azure/application-gateway/ingress-controller-multiple-namespace-support)
 - [What Does It Mean for the Application Gateway Ingress Controller (AGIC) to Assume “Full Ownership”?](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/what-does-it-mean-for-the-application-gateway-ingress-controller/ba-p/2839051)
 
 
 It can be deployed in two ways:
 
 Helm
-- [How to Install an Application Gateway Ingress Controller (AGIC) Using a New Application Gateway](https://docs.microsoft.com/en-us/azure/application-gateway/ingress-controller-install-new)
-- [Install an Application Gateway Ingress Controller (AGIC) using an existing Application Gateway](https://docs.microsoft.com/en-us/azure/application-gateway/ingress-controller-install-existing)
+- [How to Install an Application Gateway Ingress Controller (AGIC) Using a New Application Gateway](https://docs.microsoft.com/azure/application-gateway/ingress-controller-install-new)
+- [Install an Application Gateway Ingress Controller (AGIC) using an existing Application Gateway](https://docs.microsoft.com/azure/application-gateway/ingress-controller-install-existing)
 
 Add-On
-- [Enable the Ingress Controller add-on for a new AKS cluster with a new Application Gateway instance](https://docs.microsoft.com/en-us/azure/application-gateway/tutorial-ingress-controller-add-on-new)
-- [Enable Application Gateway Ingress Controller add-on for an existing AKS cluster with an existing Application Gateway](https://docs.microsoft.com/en-us/azure/application-gateway/tutorial-ingress-controller-add-on-existing)
+- [Enable the Ingress Controller add-on for a new AKS cluster with a new Application Gateway instance](https://docs.microsoft.com/azure/application-gateway/tutorial-ingress-controller-add-on-new)
+- [Enable Application Gateway Ingress Controller add-on for an existing AKS cluster with an existing Application Gateway](https://docs.microsoft.com/azure/application-gateway/tutorial-ingress-controller-add-on-existing)
 
 ## HAProxy Ingress controllers
 
@@ -261,7 +261,7 @@ Istio is an open source service mesh that layers transparently onto existing dis
 
 **Kiali Dashboard:**
 
-![Istio](../../../images/istio.png)
+![Istio](/images/istio.png)
 
 [**Getting Started with Istio**](https://istio.io/latest/docs/setup/getting-started/)
 
@@ -285,7 +285,7 @@ OSM runs an Envoy-based control plane on Kubernetes and can be configured with S
 
 The OSM project was originated by Microsoft and has since been donated and is governed by the Cloud Native Computing Foundation (CNCF).
 
-OSM can be integrated with [Azure Monitor and Azure Application insights](https://docs.microsoft.com/en-us/azure/aks/open-service-mesh-azure-monitor):
+OSM can be integrated with [Azure Monitor and Azure Application insights](https://docs.microsoft.com/azure/aks/open-service-mesh-azure-monitor):
 
 ![OSM Azure Monitor](/images/osm-azure-monitor-1.jpg)
 
@@ -295,7 +295,7 @@ OSM can also be integrated with [Prometheus and Grafana](https://release-v0-11.d
 
 ![OSM Prometheus and Grafana](/images/osm.png)
 
-[**Getting Started with Open Service Mesh**](https://docs.microsoft.com/en-us/azure/aks/open-service-mesh-about)
+[**Getting Started with Open Service Mesh**](https://docs.microsoft.com/azure/aks/open-service-mesh-about)
 
 # External Components Access
 
@@ -333,9 +333,9 @@ az aks update -n myAKSCluster -g myResourceGroup --attach-acr $MYACR
 
 **Reference:**
 
-[Authenticate with Azure Container Registry from Azure Kubernetes Service](https://docs.microsoft.com/en-us/azure/aks/cluster-container-registry-integration?tabs=azure-cli)
+[Authenticate with Azure Container Registry from Azure Kubernetes Service](https://docs.microsoft.com/azure/aks/cluster-container-registry-integration?tabs=azure-cli)
 
-[Connect privately to an Azure container registry using Azure Private Link](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-private-link)
+[Connect privately to an Azure container registry using Azure Private Link](https://docs.microsoft.com/azure/container-registry/container-registry-private-link)
 
 ## Key Vault
 
@@ -350,9 +350,9 @@ Accessing Azure Key-vault:
 
 **Reference:**
 
-[Use the Azure Key Vault Provider for Secrets Store CSI Driver in an AKS cluster](https://docs.microsoft.com/en-us/azure/aks/csi-secrets-store-driver)
+[Use the Azure Key Vault Provider for Secrets Store CSI Driver in an AKS cluster](https://docs.microsoft.com/azure/aks/csi-secrets-store-driver)
 
-[Provide an identity to access the Azure Key Vault Provider for Secrets Store CSI Driver](https://docs.microsoft.com/en-us/azure/aks/csi-secrets-store-identity-access)
+[Provide an identity to access the Azure Key Vault Provider for Secrets Store CSI Driver](https://docs.microsoft.com/azure/aks/csi-secrets-store-identity-access)
 
 ## Application Gateway (AGIC)
 
@@ -364,11 +364,11 @@ You can setup to use End-to-end TLS or TLS offloading.
 
 **Reference:**
 
-[What is Application Gateway Ingress Controller?](https://docs.microsoft.com/en-us/azure/application-gateway/ingress-controller-overview)
+[What is Application Gateway Ingress Controller?](https://docs.microsoft.com/azure/application-gateway/ingress-controller-overview)
 
-[Enable Application Gateway Ingress Controller add-on for an existing AKS cluster with an existing Application Gateway](https://docs.microsoft.com/en-us/azure/application-gateway/tutorial-ingress-controller-add-on-existing)
+[Enable Application Gateway Ingress Controller add-on for an existing AKS cluster with an existing Application Gateway](https://docs.microsoft.com/azure/application-gateway/tutorial-ingress-controller-add-on-existing)
 
-[AKS Add-On Greenfield Deployment](https://docs.microsoft.com/en-us/azure/application-gateway/tutorial-ingress-controller-add-on-new)
-[AKS Add-On Brownfield Deployment](https://docs.microsoft.com/en-us/azure/application-gateway/tutorial-ingress-controller-add-on-existing)
-[Helm Greenfield Deployment](https://docs.microsoft.com/en-us/azure/application-gateway/ingress-controller-install-new)
-[Helm Brownfield Deployment](https://docs.microsoft.com/en-us/azure/application-gateway/ingress-controller-install-existing)
+[AKS Add-On Greenfield Deployment](https://docs.microsoft.com/azure/application-gateway/tutorial-ingress-controller-add-on-new)
+[AKS Add-On Brownfield Deployment](https://docs.microsoft.com/azure/application-gateway/tutorial-ingress-controller-add-on-existing)
+[Helm Greenfield Deployment](https://docs.microsoft.com/azure/application-gateway/ingress-controller-install-new)
+[Helm Brownfield Deployment](https://docs.microsoft.com/azure/application-gateway/ingress-controller-install-existing)
