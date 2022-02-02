@@ -24,7 +24,7 @@ AKS support two [network models](https://docs.microsoft.com/azure/aks/concepts-n
 
 Azure supports a maximum of _**400 routes**_ in a UDR. If you are using Kubenet network model, you cannot have a cluster larger than _**400 nodes**_ in it.
 
-> For every node scale out, AKS add its respective route in the route table. _Walk through the Azure portal to show the UDR samples._
+> For every node scale out, AKS adds its respective route in the route table. _Walk through the Azure portal to show the UDR samples._
 
 ![Routing table sample](/png/udr_sample.png)
 
@@ -50,7 +50,7 @@ With [Azure CNI](https://docs.microsoft.com/azure/aks/concepts-network#azure-cni
 
 [Configure Azure CNI in Azure Kubernetes Service](https://docs.microsoft.com/azure/aks/configure-azure-cni)
 - It requires additional planning while designing the IP address space.
-- IP address should be planned according to the number of node pools, nodes and maximum number of pods per node.
+- IP address should be planned according to the number of node pools, nodes, and maximum number of pods per node.
 - If Internal load balancers are deployed, front IPs are allocated from the cluster subnet
 
 ## Planning IP address
@@ -67,9 +67,9 @@ With [Azure CNI](https://docs.microsoft.com/azure/aks/concepts-network#azure-cni
 
 ![rules](/png/srv.png)
 
-IP tables for Azure CNI uses one additional rule chain "MASQUERADE" which called by post routing chain. It is one of the last steps if the packets are leaving cluster. This sets the source IP to the node IP.
+IP tables for Azure CNI use one additional rule chain "MASQUERADE" which is called by post routing chain. It is one of the last steps if the packets are leaving cluster. This sets the source IP to the node IP.
 
-The two ways that Azure provide for network policies use Linux IP tables to control the traffic between pods.
+The two ways that Azure provides network policies use Linux IP tables to control the traffic between pods.
 [Create an AKS cluster with network policies](https://docs.microsoft.com/azure/aks/use-network-policies#network-policy-options-in-aks).
 
 > Walkthrough the customer on the rules and rule chains and how the routing decision has been made.
@@ -84,7 +84,7 @@ Two things to consider when setting up networking between Application gateway an
     - If Azure CNI is used, you are good to go. All the PODs receive routable IP.
 
 2. Application gateway deployed in different VNETs.
-    - If deployed in different VNETs, peering between the VNETs required to enable the communication. If CNI used, Azure adds the route once the peering enabled between the VNETs.
+    - If deployed in different VNETs, peering between the VNETs is required to enable the communication. If CNI is used, Azure adds the route once the peering enabled between the VNETs.
 
 In either cases if Kubenet used, need to [associate route table](https://azure.github.io/application-gateway-kubernetes-ingress/how-tos/networking/#with-kubenet) created by AKS with application gateway subnet for the routing as pods don't receive routable IPs from the cluster subnet.
         
@@ -94,7 +94,7 @@ When creating an AKS private cluster the control plane has an internal IP addres
 
 - [Create a private Azure Kubernetes Service cluster](https://docs.microsoft.com/azure/aks/private-clusters)
 
-Private endpoint allows the VNET to communicate with Private cluster. To connect with private endpoint you need a DNS record.
+Private endpoint allows the VNET to communicate with Private cluster. To connect with private endpoint, you need a DNS record.
 
 - [Configure Private DNS zone](https://docs.microsoft.com/en-us/azure/aks/private-clusters#configure-private-dns-zone )
 
@@ -168,7 +168,7 @@ There are two ways to implement Network Policies in AKS:
 - [How to secure traffic between pods using network policies](https://docs.microsoft.com/en-us/azure/aks/use-network-policies)
 - [Deploy AKS clusters with network policy using Infrastructure as a code(IAC)](https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.NetworkPolicy/)
   
-Best practice is to use network policies to allow or deny traffic to pods. By default, all traffic is allowed between pods within a cluster. For improved security, define rules that limit pod communication.
+The best practice is to use network policies to allow or deny traffic to pods. By default, all traffic is allowed between pods within a cluster. For improved security, define rules that limit pod communication.
 
 ## Ingress
 [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) is to expose HTTP and HTTPS routes from outside of the cluster to the services within the cluster.
@@ -339,9 +339,9 @@ az aks update -n myAKSCluster -g myResourceGroup --attach-acr $MYACR
 
 ## Key Vault
 
-The Azure Key Vault Provider for Secrets Store CSI Driver allows for the integration of an Azure key vault as a secrets store with an Azure Kubernetes Service (AKS) cluster via a CSI volume.
+The Azure Key Vault Provider for Secrets Store CSI Driver allows for the integration of an Azure key vault as secrets store with an Azure Kubernetes Service (AKS) cluster via a CSI volume.
 
-AKS will privately communicate with Azure Key-vault to access certs, keys and secrets.
+AKS will privately communicate with Azure Key-vault to access certs, keys, and secrets.
 
 Accessing Azure Key-vault:
 
