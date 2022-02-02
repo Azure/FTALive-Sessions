@@ -69,7 +69,6 @@ You can find a full demo walkthrough similar to the walkthrough of the session i
 - [Compare Private Endpoints and Service Endpoints](https://docs.microsoft.com/en-us/azure/virtual-network/vnet-integration-for-azure-services#compare-private-endpoints-and-service-endpoints)
 - [Azure Private Endpoint DNS configuration](https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-dns)
 - [Virtual Network NAT gateway integration](https://docs.microsoft.com/en-us/azure/app-service/networking/nat-gateway-integration)
-- [NAT Gateway and app integration](https://azure.github.io/AppService/2020/11/15/web-app-nat-gateway.html)
 - [Secure your Origin with Private Link in Azure Front Door Standard/Premium (Preview)](https://docs.microsoft.com/en-us/azure/frontdoor/standard-premium/concept-private-link)
 
 ### Managed Identity
