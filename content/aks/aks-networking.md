@@ -26,7 +26,7 @@ Azure supports a maximum of _**400 routes**_ in a UDR. If you are using Kubenet 
 
 > For every node scale out, AKS adds its respective route in the route table. _Walk through the Azure portal to show the UDR samples._
 
-![Routing table sample](/png/udr_sample.png)
+![Routing table sample](/images/udr_sample.png)
 
 The Pods cannot communicate with each other directly. The UDR and IP forwarding has been used for connectivity between pods across nodes. The routing and Ip forwarding are created and maintained by AKS.
 
@@ -65,7 +65,7 @@ With [Azure CNI](https://docs.microsoft.com/azure/aks/concepts-network#azure-cni
 - Cluster level rules for each service.
 - Talk about KUBE-MARK-MASQ, KUBE-SVC-xyz, and KUBE-SEP-xyz rules and what it does.
 
-![rules](/png/srv.png)
+![rules](/images/srv.png)
 
 IP tables for Azure CNI use one additional rule chain "MASQUERADE" which is called by post routing chain. It is one of the last steps if the packets are leaving cluster. This sets the source IP to the node IP.
 
@@ -257,7 +257,7 @@ Most common use cases:
 ## Istio
 Istio is an open source service mesh that layers transparently onto existing distributed applications. Istio’s powerful features provide a uniform and more efficient way to secure, connect, and monitor services. Istio is the path to load balancing, service-to-service authentication, and monitoring – with few or no service code changes.
 
-![Istio How it Works](../../../images/istio-hiw.svg)
+![Istio How it Works](/images/istio-hiw.svg)
 
 **Kiali Dashboard:**
 
@@ -270,11 +270,11 @@ Linkerd is a service mesh. It adds observability, reliability, and security to K
 
 Linkerd is significantly lighter and simpler than Istio. Linkerd is built for security from the ground up, ranging from features like on-by-default mTLS, a data plane that is built in a Rust, memory-safe language, and regular security audits. Finally, Linkerd has publicly committed to open governance and is hosted by the CNCF.
 
-![Linkerd Control Plane](../../../images/linkerd-control-plane.png)
+![Linkerd Control Plane](/images/linkerd-control-plane.png)
 
 **Linkerd Dashboard:**
 
-![Linkerd Dashboard](../../../images/linkerd.png)
+![Linkerd Dashboard](/images/linkerd.png)
 
 [**Getting Started with Linkerd**](https://linkerd.io/2.11/getting-started/)
 
@@ -287,13 +287,13 @@ The OSM project was originated by Microsoft and has since been donated and is go
 
 OSM can be integrated with [Azure Monitor and Azure Application insights](https://docs.microsoft.com/en-us/azure/aks/open-service-mesh-azure-monitor):
 
-![OSM Azure Monitor](../../../images/osm-azure-monitor-1.jpg)
+![OSM Azure Monitor](/images/osm-azure-monitor-1.jpg)
 
-![OSM Azure App Insights](../../../images/osm-azure-monitor-2.png)
+![OSM Azure App Insights](/images/osm-azure-monitor-2.png)
 
 OSM can also be integrated with [Prometheus and Grafana](https://release-v0-11.docs.openservicemesh.io/docs/demos/prometheus_grafana/):
 
-![OSM Prometheus and Grafana](../../../images/osm.png)
+![OSM Prometheus and Grafana](/images/osm.png)
 
 [**Getting Started with Open Service Mesh**](https://docs.microsoft.com/en-us/azure/aks/open-service-mesh-about)
 
