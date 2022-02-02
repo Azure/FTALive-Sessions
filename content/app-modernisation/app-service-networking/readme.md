@@ -27,6 +27,10 @@ In this session you will learn how to:
 
 Please find the most relevant resources below to continue your learning after this session.
 
+### Demo walkthrough
+
+You can find a full demo walkthrough similar to the walkthrough of the session in the [Azure Samples - App Service Networking Samples](https://github.com/Azure-Samples/app-service-networking-samples) repository.
+
 ### Azure Architecture Center
 
 - [Web app with private connectivity to Azure SQL database](https://docs.microsoft.com/azure/architecture/example-scenario/private-web-app/private-web-app)
