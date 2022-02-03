@@ -33,7 +33,6 @@ It will be delivered by Microsoft FastTrack for Azure engineers. Bring your ques
     *	Best practices and suggested guidance
     *   [Migration Checklist](https://github.com/Azure/adlsgen1togen2migration/blob/main/2-Plan/ADLSMigrationWeekendChecklist.md)
 * Supporting Documentation
-    *   [Mind Map](https://mm.tt/2020056330?t=RavfcdPct7)
     *	[Important content, docs, and reference material you should review.](https://mm.tt/2020056330?t=RavfcdPct7)
 * FAQs
 * Who to turn to for support?
