@@ -46,6 +46,8 @@ Data | SQL API for Cosmos DB | In this session you will learn how to design and 
   |  |  |  |  |
 Data | SQL Migration | In this session, you will learn how to migrate your data to Azure and different deployment options in Azure. Specifically SQL IaaS vs PaaS, understanding High Availability concepts, leveraging Data Migration Assistant and various Services available in your Migration. | [aka.ms/ftalive-sqlmig](https://aka.ms/ftalive-sqlmig)
   |  |  |  |  |
+Data | ADLS Gen1 to Gen2 Migrations | In this session, you will learn about the *ADLS Gen1 to Gen2 Migration Initiative*, the available options for migrating from ADLS Gen1 to ADLS Gen2, and the best practices for conducting a successful migration. We will look at the migration life cycle and examine migrations using Azure Data Factory and the M3 Tool Portal Experience. | [aka.ms/ftalive-adlsmig](https://aka.ms/ftalive-adlsmig)
+  |  |  |  |  |
 Data | Azure Purview Fundamentals | This is a demo-heavy session covering the core fundamentals of Azure Purview. We will cover the key features of Azure Purview which enables you to achieve unified data governance including deployment options, asset scanning, custom/default classifications and security principles. | [aka.ms/ftalive-purvfund](https://aka.ms/ftalive-purvfund)
   |  |  |  |  |
 Data	| Azure Data Factory Security | Learn and review how to implement secure Azure Data Factory pipelines using VNET integration and managed private endpoints. We'll cover data exfiltration prevention in the most common scenarios including on prem to Azure data transfer. | [aka.ms/ftalive-datfacsec](https://aka.ms/ftalive-datfacsec)
