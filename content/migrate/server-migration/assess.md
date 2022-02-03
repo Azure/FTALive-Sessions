@@ -1,6 +1,6 @@
 # Milestone: Assess and Select Migration Wave
 
-#### [prev](./scan.md) | [home](./welcome.md)  | [next](./landingzone.md)
+#### [prev](./scan.md) | [home](./readme.md)  | [next](./landingzone.md)
 
 The following content can be used as a checklist to incorporate within your migration project plan to ensure best practices.
 
