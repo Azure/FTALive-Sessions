@@ -1,6 +1,6 @@
 # Milestone: Replication of Migration Waves
 
-#### [prev](./landingzone.md) | [home](./welcome.md)  | [next](./testing.md)
+#### [prev](./landingzone.md) | [home](./readme.md)  | [next](./testing.md)
 
 The following content can be used as a checklist to incorporate within your migration project plan to ensure best practices.
 
@@ -13,7 +13,7 @@ The following content can be used as a checklist to incorporate within your migr
 ## **2 Replication Tools Planning and Implementation** 
 ### &nbsp;&nbsp;&nbsp;&nbsp;2.1\.  Plan for replication agents/appliances that will be needed to replicate the migration waves. 
 
-![Concept Diagram](../png/replication-workflow.PNG)
+![Concept Diagram](./png/replication-workflow.PNG)
 
 - &nbsp;&nbsp;&nbsp;&nbsp;Reference Link A: https://docs.microsoft.com/en-us/azure/migrate/migrate-support-matrix-vmware-migration#vm-requirements-agentless
 - &nbsp;&nbsp;&nbsp;&nbsp;Reference Link B: https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-vmware-agent

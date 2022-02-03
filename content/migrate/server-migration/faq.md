@@ -1,6 +1,6 @@
 # Frequently Asked Questions
 
-#### [prev](./training.md) | [home](./welcome.md)  | [next](./resources.md)
+#### [prev](./training.md) | [home](./readme.md)  | [next](./resources.md)
 
 - [General](https://docs.microsoft.com/en-us/azure/migrate/resources-faq)
 - [Azure Migrate Assessments, Dependency Mapping and App Discovery](https://docs.microsoft.com/en-us/azure/migrate/common-questions-discovery-assessment)

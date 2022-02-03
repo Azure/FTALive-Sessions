@@ -1,6 +1,6 @@
 # Milestone: Wave Migration and Post Go-Live
 
-#### [prev](./testing.md) | [home](./welcome.md)  | [next](./faq.md)
+#### [prev](./testing.md) | [home](./readme.md)  | [next](./faq.md)
 
 The following content can be used as a checklist to incorporate within your migration project plan to ensure best practices.
 

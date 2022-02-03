@@ -1,6 +1,6 @@
 # Milestone: Design and Build Landing Zone
 
-#### [prev](./assess.md) | [home](./welcome.md)  | [next](./replication.md)
+#### [prev](./assess.md) | [home](./readme.md)  | [next](./replication.md)
 
 The Landing Zone architecture and implementation will be defined by your specific company requirements. There is no Landing Zone architecture which is one-size fits all. The following content can be used as a checklist to incorporate within your migration project plan to ensure best practices.
 
