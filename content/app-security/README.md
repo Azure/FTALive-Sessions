@@ -30,3 +30,4 @@ This document doesn't discuss any specific framework out of the above but genera
 |4|[Code Analysis](./CodeAnalysis.md)
 |5|[Securing the CI/CD workflow](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/secure/best-practices/secure-devops)
 |6|[Penetration Testing](https://docs.microsoft.com/en-us/azure/security/fundamentals/pen-testing)
+|7|[Continuous Monitoring](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction)
