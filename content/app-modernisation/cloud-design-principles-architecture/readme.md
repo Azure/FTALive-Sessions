@@ -8,11 +8,10 @@ In this session you will learn about the cloud native design principles and appr
 
 * Cloud maturity model
 * 5R's of rationalization
-* design principles for cloud native applications
-* 12 factor apps
-* Cloud Adoption Framework/Well-Architected framework
+* design principles for cloud native applications - 12 factor apps
 * Cloud-native approaches - Microservices / Serverless / Containers
 * Role of automation & DevOps
+* Cloud Adoption Framework/Well-Architected framework
 
 ### Audience
 
