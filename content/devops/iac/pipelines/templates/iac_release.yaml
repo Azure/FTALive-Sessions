@@ -1,0 +1,74 @@
+parameters:
+  location: 'AustraliaEast'
+  environment: 'nonprod'
+  name: 'toylaunch'
+  fileName: 'main.json'
+
+stages:
+  - stage: 'Validate_${{ parameters.environment }}_${{ parameters.name }}_infrastructure'
+    jobs: 
+    - job: Validate_Deployment
+      steps:
+      - task: DownloadBuildArtifacts@0
+        displayName: 'Download compiled ARM template'
+        inputs:
+          buildType: 'specific'
+          project: '$(project_name)' # Azure DevOps Project Name
+          # this PipelineId will need to be updated based on the ID of your CI pipeline. This wouldnt be a problem if you use a single Build & Deploy YAML pipeline...
+          pipeline: '$(pipeline_id)' # Pipeline ID
+          specificBuildWithTriggering: true
+          buildVersionToDownload: 'latest'
+          downloadType: 'specific'
+          downloadPath: '$(Pipeline.Workspace)'
+          artifactName: 'templates'
+
+      - task: AzureCLI@2
+        name: 'what_if'
+        displayName: 'What-If'
+        inputs:
+          azureSubscription: 'azure_service_connection'
+          scriptType: bash
+          scriptLocation: inlineScript
+          inlineScript: |
+            az group create -l ${{ parameters.location }} -n ${{ parameters.environment }}-${{ parameters.name }}-rg
+            az deployment group what-if \
+            --resource-group ${{ parameters.environment }}-${{ parameters.name }}-rg \
+            --name validate-${{ parameters.environment }}-${{ parameters.name }}-rg \
+            --template-file $(Pipeline.Workspace)/templates/${{ parameters.fileName }} \
+            --parameters appServiceAppName=${{ parameters.environment }}${{ parameters.name }} environmentType=${{ parameters.environment }}
+
+  - stage: 'Deploy_${{ parameters.environment }}_${{ parameters.name }}_infrastructure'
+    dependsOn: 'Validate_${{ parameters.environment }}_${{ parameters.name }}_infrastructure'
+    jobs:
+    - deployment: '${{ parameters.environment }}_deployment'
+      environment: '${{ parameters.environment }}_${{ parameters.name }}_infra' #for a parent template, you need to specifically name the environment, otherwise the environment will be dynamically generated as "$(environment_name)" in the Pipelines > Environments. However for a child template, you can parameterise this.
+      strategy:
+        runOnce:
+          deploy:
+            steps:
+            - task: DownloadBuildArtifacts@0
+              displayName: 'Download compiled ARM template'
+              inputs:
+                buildType: 'specific'
+                project: '$(project_name)' # Azure DevOps Project Name
+                # this PipelineId will need to be updated based on the ID of your CI pipeline. This wouldnt be a problem if you use a single Build & Deploy YAML pipeline...
+                pipeline: '$(pipeline_id)' # Pipeline ID
+                specificBuildWithTriggering: true
+                buildVersionToDownload: 'latest'
+                downloadType: 'specific'
+                downloadPath: '$(Pipeline.Workspace)'
+                artifactName: 'templates'
+                
+            - task: AzureResourceManagerTemplateDeployment@3
+              inputs:
+                deploymentScope: 'Resource Group'
+                azureResourceManagerConnection: 'azure_service_connection'
+                subscriptionId: '$(subscription_id)'
+                action: 'Create Or Update Resource Group'
+                resourceGroupName: '${{ parameters.environment }}-${{ parameters.name }}-rg'
+                location: '${{ parameters.location }}'
+                templateLocation: 'Linked artifact'
+                # these next 2 lines need to be updated based on your template file name, and template file parameters
+                csmFile: '$(Pipeline.Workspace)/templates/${{ parameters.fileName }}'
+                overrideParameters: -appServiceAppName ${{ parameters.environment }}${{ parameters.name }} -environmentType ${{ parameters.environment }}
+                deploymentMode: 'Incremental'
