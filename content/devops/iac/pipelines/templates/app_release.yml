@@ -1,0 +1,33 @@
+parameters:
+  environment: 'nonprod'
+  name: 'toylaunch'
+
+stages:
+  - stage: 'Deploy_${{ parameters.environment }}_${{ parameters.name }}_application'
+    jobs: 
+    - deployment: '${{ parameters.environment }}_deployment'
+      environment: '${{ parameters.environment }}_${{ parameters.name }}_app' #for a parent template, you need to specifically name the environment, otherwise the environment will be dynamically generated as "$(environment_name)" in the Pipelines > Environments. However for a child template, you can parameterise this.
+      strategy:
+        runOnce:
+          deploy:
+            steps:
+              - task: DownloadBuildArtifacts@0
+                displayName: 'Download compiled ARM template'
+                inputs:
+                  buildType: 'specific'
+                  project: '$(project_name)' # Azure DevOps Project Name
+                  # this PipelineId will need to be updated based on the ID of your CI pipeline. This wouldnt be a problem if you use a single Build & Deploy YAML pipeline...
+                  pipeline: '$(pipeline_id)' # Pipeline ID
+                  specificBuildWithTriggering: true
+                  buildVersionToDownload: 'latest'
+                  downloadType: 'specific'
+                  downloadPath: '$(Pipeline.Workspace)'
+                  artifactName: 'app'
+
+              - task: AzureWebApp@1
+                inputs:
+                  azureSubscription: 'azure_service_connection'
+                  appName: '${{ parameters.environment }}${{ parameters.name }}'
+                  ResourceGroupName: '${{ parameters.environment }}-${{ parameters.name }}-rg'
+                  package: '$(Pipeline.Workspace)/app/**/*.zip'
+                  deploymentMethod: 'auto'
