@@ -101,6 +101,8 @@ Performance data with chart:
 *   [Query best practices - Azure Data Explorer | Microsoft Docs](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/best-practices)
 *   [Keyboard shortcuts in the Azure portal for Azure Resource Graph Explorer - Azure Resource Graph | Microsoft Docs](https://docs.microsoft.com/en-us/azure/governance/resource-graph/reference/keyboard-shortcuts) < this works in the Log Analytics query interface as well
 *   [Log Analytics in Azure Monitor offers sets of example queries that you can run on their own or use as a starting point for your own queries. - Azure Monitor | Microsoft Docs](https://docs.microsoft.com/en-us/azure/azure-monitor/logs/example-queries)
+*   [Azure Monitor Logs table reference organized by category](https://docs.microsoft.com/en-us/azure/azure-monitor/reference/tables/tables-category)
 *   [Starter query samples - Azure Resource Graph | Microsoft Docs](https://docs.microsoft.com/en-us/azure/governance/resource-graph/samples/starter?tabs=azure-cli)
 *   [Advanced query samples - Azure Resource Graph | Microsoft Docs](https://docs.microsoft.com/en-us/azure/governance/resource-graph/samples/advanced?tabs=azure-cli)
 *   [Query across resources with Azure Monitor - Azure Monitor | Microsoft Docs](https://docs.microsoft.com/en-us/azure/azure-monitor/logs/cross-workspace-query)
+* [Get Hands-On KQL Practice with this Microsoft Sentinel Workbook](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/get-hands-on-kql-practice-with-this-microsoft-sentinel-workbook/ba-p/3055600)

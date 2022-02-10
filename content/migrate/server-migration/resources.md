@@ -1,6 +1,6 @@
 # Resources
 
-#### [prev](./postgolive.md) | [home](./welcome.md)  | [next](./welcome.md)
+#### [prev](./postgolive.md) | [home](./readme.md)  | [next](./readme.md)
 
 - Tailwind Traders Migration Series
   - [Assessment and migration planning with Azure Migrate for servers](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/migrate/azure-best-practices/tailwind-migration-assess-servers)
