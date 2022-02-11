@@ -1,10 +1,10 @@
-# Azure Kubernetes Networking
+# Azure Kubernetes Services Networking
 
 ## Overview
-In this session you will learn about Azure Kubernetes Services networking and the core concepts that provide networking to the application in AKS. Additionally you will also learn about service mesh and its capabilities.
+In this session you will learn about Azure Kubernetes Services networking and the core concepts that provide networking to the application in AKS. Additionally, you will also learn about service mesh and its capabilities.
 
 ## Agenda
-- Overview of AKS networking models, IP address planning and its limiations.
+- Overview of AKS networking models, IP address planning and its limitations.
 - AKS Private cluster and Egress control.
 - Overview of services in Kubernetes and Ingress controllers.
 - Overview about different network policies and control traffic between pods.
