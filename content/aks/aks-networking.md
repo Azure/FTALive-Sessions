@@ -1,11 +1,22 @@
-# Networking Models
+# Azure Kubernetes Networking
 
+## Overview
+In this session you will learn about Azure Kubernetes Services networking and the core concepts that provide networking to the application in AKS. Additionally you will also learn about service mesh and its capabilities.
+
+## Agenda
+- Overview of AKS networking models, IP address planning and its limiations.
+- AKS Private cluster and Egress control.
+- Overview of services in Kubernetes and Ingress controllers.
+- Overview about different network policies and control traffic between pods.
+- Overview about Service Mesh and different open source products.
+
+## Networking Models
 AKS support two [network models](https://docs.microsoft.com/azure/aks/concepts-network#azure-virtual-networks)
 
-1. Kubenet (basic) networking
-2. Azure CNI (advanced) networking
+- Kubenet (basic) networking
+- Azure CNI (advanced) networking
 
-# Kubenet
+## Kubenet
 [Kubenet](https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/#kubenet) networking is the default configuration option for AKS cluster creation.
 
 [Kubenet networking model](https://docs.microsoft.com/azure/aks/concepts-network#kubenet-basic-networking)
