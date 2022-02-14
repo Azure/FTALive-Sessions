@@ -50,6 +50,8 @@ Data | SQL Migration | In this session, you will learn how to migrate your data 
   |  |  |  |
 Data | Azure Purview Fundamentals | This is a demo-heavy session covering the core fundamentals of Azure Purview. We will cover the key features of Azure Purview which enables you to achieve unified data governance including deployment options, asset scanning, custom/default classifications and security principles. |
   |  |  |  |
+Data | Azure Synapse | This is a demo based session covering the core fundamentals of Azure Synapse. We will cover the key features of Azure Synapse along with the Architecture & Use cases.The session would help you setup the core features of Synapse. The session would cover various key features like Identity, Managed Virtual Network & Private end point setup in Synapse. |
+  |  |  |  |
 Data	| Azure Data Factory Security | Learn and review how to implement secure Azure Data Factory pipelines using VNET integration and managed private endpoints. We'll cover data exfiltration prevention in the most common scenarios including on prem to Azure data transfer. |
   |  |  |  |
 AI & ML	| Azure Machine Learning Fundamentals | In this session you will gain an understanding of the overall Azure Machine Learning (AzureML) components and how you can start using the AzureML studio web portal to accelerate you AI journey in the cloud. |
