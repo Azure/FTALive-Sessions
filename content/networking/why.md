@@ -1,6 +1,6 @@
 # Why should we talk about networking?
 
-#### [prev](./welcome.md) | [home](./welcome.md)  | [next](./concepts.md)
+#### [prev](./readme.md) | [home](./readme.md)  | [next](./concepts.md)
 
 ## Networking in Azure is defined virtually (what is this "Fabric" I keep hearing about)
 
