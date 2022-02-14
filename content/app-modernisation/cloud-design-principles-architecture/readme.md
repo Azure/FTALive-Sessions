@@ -62,3 +62,5 @@ Please find the most relevant resources below to continue your learning after th
 - [Cloud Adoption Framework](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/)
 - [Well-Architected Framework](https://docs.microsoft.com/en-us/azure/architecture/framework/)
 
+### Sample to be used for Hands On
+- https://github.com/dotnet-architecture/eShopModernizing
