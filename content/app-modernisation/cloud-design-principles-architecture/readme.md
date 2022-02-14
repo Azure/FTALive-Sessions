@@ -44,9 +44,10 @@ Please find the most relevant resources below to continue your learning after th
 
 ### Cloud Native Approaches 
 
+- [Containers](https://azure.microsoft.com/en-in/product-categories/containers/)
 - [Microservices]( https://azure.microsoft.com/en-in/solutions/microservice-applications/)
 - [Serverless](https://azure.microsoft.com/en-in/solutions/serverless/)
-- [Containers](https://azure.microsoft.com/en-in/product-categories/containers/)
+
 
 ### Role of Automation 
 
