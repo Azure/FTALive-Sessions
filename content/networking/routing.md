@@ -1,6 +1,6 @@
 # Routing
 
-#### [prev](./connectivity.md) | [home](./welcome.md)  | [next](./topology.md)
+#### [prev](./connectivity.md) | [home](./readme.md)  | [next](./topology.md)
 
 ## Route types in Azure
 * [System Routes](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-udr-overview)

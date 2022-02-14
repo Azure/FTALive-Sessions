@@ -1,6 +1,6 @@
 # VNet Basics
 
-#### [prev](./concepts.md) | [home](./welcome.md)  | [next](./topology-overview.md)
+#### [prev](./concepts.md) | [home](./readme.md)  | [next](./topology-overview.md)
 
 ## How does a virtual machine connect to the network?
 
