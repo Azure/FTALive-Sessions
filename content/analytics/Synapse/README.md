@@ -5,7 +5,7 @@ This call will not be recorded due to the wide audience and to encourage questio
 
 **Questions?** Feel free to type them in the chat window at any time. Note that questions you post will be public.
 
-**Slideless** No PowerPoint, we promise! As we update this content (http://aka.ms/fta-azuresynpase) you will get the changes straight away.
+**Slideless** No PowerPoint, we promise! As we update this content (https://docs.microsoft.com/en-us/azure/synapse-analytics/overview-what-is) you will get the changes straight away.
 
 Please give us your feedback on https://aka.ms/ftalive-feedback
 
