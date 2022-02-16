@@ -11,7 +11,7 @@
 
 **Slideless** No PowerPoint, we promise! As we update this content you will get the changes straight away.
 
-Please give us your feedback at https://aka.ms/ftalive-americas-identityforappsaad-feedback
+Please give us your feedback at https://aka.ms/ftalive-feedback
 
 Agenda
 
