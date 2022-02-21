@@ -11,4 +11,5 @@ Reference: [Wikipedia](https://en.wikipedia.org/wiki/Threat_model)
 1. [Getting started with the threat modelling tool](https://docs.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-getting-started).
 
 Additional resources:
-[Cloud Security Alliance - Cloud Threat Modelling](https://cloudsecurityalliance.org/artifacts/cloud-threat-modeling/)
+- [Cloud Security Alliance - Cloud Threat Modelling](https://cloudsecurityalliance.org/artifacts/cloud-threat-modeling/)
+- [A Guide to Threat Modelling for Developers](https://martinfowler.com/articles/agile-threat-modelling.html)

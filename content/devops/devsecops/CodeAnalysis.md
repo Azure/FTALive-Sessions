@@ -5,6 +5,8 @@ So, your team is developing a software and likely your code depends on external 
 ## IDE Security plugins
 
 - [DevSkim](https://github.com/Microsoft/DevSkim#devskim) - a framework of IDE extensions and language analyzers that provide inline security analysis in the dev environment as the developer writes code.
+- [Tools from Visual Studio marketplace](https://marketplace.visualstudio.com/search?term=tag%3ASecurity&target=VS&category=All%20categories&vsVersion=vs15&sortBy=Relevance)
+- [Tools from Visual Studio Code marketplace](https://marketplace.visualstudio.com/search?term=tag%3Asecurity&target=VSCode&category=All%20categories&sortBy=Relevance)
 
 ## Static code analysis
 
@@ -16,7 +18,6 @@ The following are tools that you may considered:
 - [SonarQube](https://docs.sonarqube.org/latest/)
 - [CredScan](https://secdevtools.azurewebsites.net/helpcredscan.html)
 - [Additional tools](https://www.microsoft.com/en-us/securityengineering/sdl/resources)
-- [Tools from Visual Studio marketplace](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
 
 ## Dependency management
 
@@ -40,9 +41,13 @@ Quite a bit of technical effort is required to write a tool that can undertake t
 
 ## Container Scanning
 
+When creating containerized workloads, you can be susceptible to additional security threads. There are additional security tools you can use to protect your workloads:
+
 - [Microsoft Defender for Containers](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-introduction?tabs=defender-for-container-arch-aks#architecture-overview)
 - [Identify vulnerable container images in your CI/CD workflows](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-container-registries-cicd)
 - [Enhance your CI/CD deployment by using Vulnerability Assessments from Microsoft Defender for ACR](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/enhance-your-ci-cd-deployment-by-using-vulnerability-assessments/ba-p/2102516)
+
+Also take a look at the [end to end setups](EndToEnd.md), which contains extra info for AKS workloads. 
 
 ## Open Source Security
 
