@@ -24,10 +24,10 @@ This document doesn't discuss any specific framework out of the above but genera
 
 | Plan and Develop | Commit the Code | Build and Test | Go to Production | Operate |  
 |---|---|---|---|---|
-|[Threat Modelling](./ThreatModelling.md)| [Static application security testing](./CodeAnalysis.md)| [Dynamic application security testing](./CodeAnalysis.md) | Security smoke tests | [Continuous monitoring](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction)
-|[IDE Security plugins](https://github.com/Microsoft/DevSkim#devskim)| Security Unit and Functional tests | Cloud configuration validation | Configuration checks | Threat intelligence
-|[Pre commit hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)| [Dependency management](./CodeAnalysis.md) | Infrastructure scanning | [Live Site Penetration testing](https://docs.microsoft.com/en-us/azure/security/fundamentals/pen-testing) | [Penetration testing](https://docs.microsoft.com/en-us/azure/security/fundamentals/pen-testing)
-|[Secure coding standards](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/migrated_content) | [Securing the CI/CD workflow](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/secure/best-practices/secure-devops) | Security acceptance testing | Blameless postmortems
+|[Threat Modelling](./ThreatModelling.md)| [Static application security testing](./CodeAnalysis.md)| [Dynamic application security testing](./CodeAnalysis.md) | Security smoke tests | [Continuous monitoring](Operate.md)
+|[IDE Security plugins](https://github.com/Microsoft/DevSkim#devskim)| Security Unit and Functional tests | [Cloud configuration validation](CloudConfigValidation.md) | [Configuration checks](CloudConfigValidation.md) | [Threat intelligence](Operate.md)
+|[Pre commit hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)| [Dependency management](./CodeAnalysis.md) | [Infrastructure scanning](CloudConfigValidation.md) | [Live Site Penetration testing](https://docs.microsoft.com/en-us/azure/security/fundamentals/pen-testing) | [Penetration testing](https://docs.microsoft.com/en-us/azure/security/fundamentals/pen-testing)
+|[Secure coding standards](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/migrated_content) | [Securing the CI/CD workflow](./securingCICD.md) | Security acceptance testing | Blameless postmortems
 |[Peer review](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)||||
 
 ## Additional Resources
