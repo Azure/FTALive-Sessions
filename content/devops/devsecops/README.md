@@ -30,6 +30,22 @@ This document doesn't discuss any specific framework out of the above but genera
 |[Secure coding standards](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/migrated_content) | [Securing the CI/CD workflow](./securingCICD.md) | Security acceptance testing | Blameless postmortems
 |[Peer review](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)||||
 
+## End to End DevSecOps
+
+How do you bring all of the above together in a pipeline or workflow for your team. Find out [here](EndToEnd.md).
+
 ## Additional Resources
 
 - [Cryptography Strategy](./CryptographyStrategy.md)
+- [Overview of the Azure Security Benchmark (v3)](https://docs.microsoft.com/en-us/security/benchmark/azure/overview)
+  - [Security Control v3: DevOps Security](https://docs.microsoft.com/en-us/security/benchmark/azure/security-controls-v3-devops-security)
+- [Security in DevOps (DevSecOps)](https://docs.microsoft.com/en-us/devops/operate/security-in-devops)
+- [Awesome DevSecOps - An authoritative list of awesome devsecops tools with the help from community experiments and contributions](https://github.com/devsecops/awesome-devsecops)
+- [Security Baseline tools in Azure](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/govern/security-baseline/toolchain)
+- [DevSecOps tools and Services](https://azure.microsoft.com/en-us/solutions/devsecops/#overview)
+- [Microsoft OSS Security](https://www.microsoft.com/en-us/securityengineering/opensource/?activetab=security+analysis%3aprimaryr3)
+- [Microsoft SDL practices](https://www.microsoft.com/en-us/securityengineering/sdl/practices)
+- [Build secure apps with collaborative DevSecOps practices](https://myignite.microsoft.com/sessions/0c2b0490-1e47-4144-a569-20632ea53661?source=sessions)
+- [Ask the Experts: Build secure apps with collaborative DevSecOps practices](https://myignite.microsoft.com/sessions/114eeb34-9bb8-4798-bc3c-f179ec2d05e2?source=sessions)
+- [6 tips to integrate security into your DevOps practice](https://azure.microsoft.com/mediahandler/files/resourcefiles/6-tips-to-integrate-security-into-your-devops-practices/DevSecOps_Report_Tips_D6_fm.pdf)
+- [DevSecOps: bringing security into your DevOps practice on Azure](https://docs.microsoft.com/en-us/shows/Azure-Enablement/DevSecOps-bringing-security-into-your-DevOps-practice-on-Azure)

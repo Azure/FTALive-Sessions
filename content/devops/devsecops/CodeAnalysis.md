@@ -2,6 +2,48 @@
 
 So, your team is developing a software and likely your code depends on external libraries or open-source software (dependencies). Any vulnerability in these dependencies can translate to security risk in your solution. Even if you develop software with 100% 1st party components, an insecure software design and implementation can still happen.  By continuously run code/dependency/security analysis in your repository and CI/CD process, you can greatly reduce security risk and prevent bugs from ever appearing in your solution.
 
+## IDE Security plugins
+
+- [DevSkim](https://github.com/Microsoft/DevSkim#devskim) - a framework of IDE extensions and language analyzers that provide inline security analysis in the dev environment as the developer writes code.
+
+## Static code analysis
+
+The following are tools that you may considered:
+
+- GitHub [code scanning](https://docs.github.com/en/free-pro-team@latest/github/finding-security-vulnerabilities-and-errors-in-your-code/automatically-scanning-your-code-for-vulnerabilities-and-errors) with [CodeQL](https://codeql.github.com/). This allows you to write your own custom query to detect vulnerabilities in your code. [Demo](https://github.com/github/code-scanning-javascript-demo).
+- [BinSkim](https://github.com/microsoft/binskim/blob/main/docs/UserGuide.md) - a checker that examines Portable Executable (PE) files and their associated Program Database File Formats (PDB) to identify various security problems.
+- [Security Code Scan for .NET](https://security-code-scan.github.io/)
+- [SonarQube](https://docs.sonarqube.org/latest/)
+- [CredScan](https://secdevtools.azurewebsites.net/helpcredscan.html)
+- [Additional tools](https://www.microsoft.com/en-us/securityengineering/sdl/resources)
+- [Tools from Visual Studio marketplace](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
+
+## Dependency management
+
+Checking the security on any dependencies you may use in your project:
+
+- [Dependabot](https://github.com/dependabot/dependabot-core#dependabot) - dependency review and alerts in GitHub.
+- [OWASP Dependency-check project](https://owasp.org/www-project-dependency-check/)
+- [Securing software supply chain](https://docs.github.com/en/free-pro-team@latest/github/managing-security-vulnerabilities) in GitHub.
+
+## OWASP Scanning
+
+- **What is OWASP Scanning?**
+This is a way of scanning your deployed application with an engine which will test the application endpoint effectiveness by launching simulated attacks. A report is generated afterwards which can be assessed.
+
+- **How does this fit into DevOps?**
+Usually Penetration Testing (or Pen Testing) is carried out at the latter stages of development against the completed web site (and may continue at a regular cadence thereafter). However it doesn't have to be this way. Scanning/Pen testing can be undertaken during development against the deployed website, during release as an extension of integration testing steps. The advantage is that you learn about any potential new vulnerabilities quickly (shift left). These could be issues created by new code/features or issues introduced by regression.
+
+- **What exists that can help me here?**
+Quite a bit of technical effort is required to write a tool that can undertake this kind of synthetic testing/scanning and keep it up to date. For the vast majority of teams writing and maintaining their own tools is not going to be a good use of time and in most cases would not be recommended (mistakes here could lead to a false sense of security).
+[OWASP themselves maintain an open source product called Zap](https://owasp.org/www-project-zap/), this tool is regularly maintained and free to use with good online usage instruction and documentation. [An extension of this tool can be obtained from the VS marketplace. The extension can be utilised to run in a Build or Release Pipeline. Full instructions provided in this link.](https://marketplace.visualstudio.com/items?itemName=CSE-DevOps.zap-scanner)
+
+## Container Scanning
+
+- [Microsoft Defender for Containers](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-introduction?tabs=defender-for-container-arch-aks#architecture-overview)
+- [Identify vulnerable container images in your CI/CD workflows](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-container-registries-cicd)
+- [Enhance your CI/CD deployment by using Vulnerability Assessments from Microsoft Defender for ACR](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/enhance-your-ci-cd-deployment-by-using-vulnerability-assessments/ba-p/2102516)
+
 ## Open Source Security
 
 Open-source software security is the measure of assurance or guarantee in the freedom from danger and risk inherent to an open-source software system.
@@ -25,39 +67,6 @@ Source : [Wikipedia](https://en.wikipedia.org/wiki/Open-source_software_security
 - Evaluate open source components regularly.
 - Maintain an 'approved software' list and share it within your organization.
 - Update libraries that have disclosed vulnerabilities.
-
-## Static code analysis
-
-The following are tools that you may considered:
-
-- GitHub [code scanning](https://docs.github.com/en/free-pro-team@latest/github/finding-security-vulnerabilities-and-errors-in-your-code/automatically-scanning-your-code-for-vulnerabilities-and-errors) with [CodeQL](https://codeql.github.com/). This allows you to write your own custom query to detect vulnerabilities in your code. [Demo](https://github.com/github/code-scanning-javascript-demo).
-- [Dependabot](https://github.com/dependabot/dependabot-core#dependabot) - dependency review and alerts in GitHub.
-- [OWASP Dependency-check project](https://owasp.org/www-project-dependency-check/)
-- [Securing software supply chain](https://docs.github.com/en/free-pro-team@latest/github/managing-security-vulnerabilities) in GitHub.
-- [DevSkim](https://github.com/Microsoft/DevSkim#devskim) - a framework of IDE extensions and language analyzers that provide inline security analysis in the dev environment as the developer writes code.
-- [BinSkim](https://github.com/microsoft/binskim/blob/main/docs/UserGuide.md) - a checker that examines Portable Executable (PE) files and their associated Program Database File Formats (PDB) to identify various security problems.
-- [Security Code Scan for .NET](https://security-code-scan.github.io/)
-- [SonarQube](https://docs.sonarqube.org/latest/)
-- [CredScan](https://secdevtools.azurewebsites.net/helpcredscan.html)
-- [Additional tools](https://www.microsoft.com/en-us/securityengineering/sdl/resources)
-- [Tools from Visual Studio marketplace](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
-
-## OWASP Scanning
-
-- **What is OWASP Scanning?**
-This is a way of scanning your deployed application with an engine which will test the application endpoint effectiveness by launching simulated attacks. A report is generated afterwards which can be assessed.
-
-- **How does this fit into DevOps?**
-Usually Penetration Testing (or Pen Testing) is carried out at the latter stages of development against the completed web site (and may continue at a regular cadence thereafter). However it doesn't have to be this way. Scanning/Pen testing can be undertaken during development against the deployed website, during release as an extension of integration testing steps. The advantage is that you learn about any potential new vulnerabilities quickly (shift left). These could be issues created by new code/features or issues introduced by regression.
-
-- **What exists that can help me here?**
-Quite a bit of technical effort is required to write a tool that can undertake this kind of synthetic testing/scanning and keep it up to date. For the vast majority of teams writing and maintaining their own tools is not going to be a good use of time and in most cases would not be recommended (mistakes here could lead to a false sense of security).
-[OWASP themselves maintain an open source product called Zap](https://owasp.org/www-project-zap/), this tool is regularly maintained and free to use with good online usage instruction and documentation. [An extension of this tool can be obtained from the VS marketplace. The extension can be utilised to run in a Build or Release Pipeline. Full instructions provided in this link.](https://marketplace.visualstudio.com/items?itemName=CSE-DevOps.zap-scanner)
-
-## Container Scanning
-
-- [Microsoft Defender for Containers](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-introduction?tabs=defender-for-container-arch-aks#architecture-overview)
-- Code scanning in a container using [CodeQL](https://docs.github.com/en/free-pro-team@latest/github/finding-security-vulnerabilities-and-errors-in-your-code/running-codeql-code-scanning-in-a-container)
 
 ## A different way of designing your code
 
