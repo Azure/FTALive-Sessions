@@ -32,12 +32,15 @@ The following are tools that you may considered:
 
 - GitHub [code scanning](https://docs.github.com/en/free-pro-team@latest/github/finding-security-vulnerabilities-and-errors-in-your-code/automatically-scanning-your-code-for-vulnerabilities-and-errors) with [CodeQL](https://codeql.github.com/). This allows you to write your own custom query to detect vulnerabilities in your code. [Demo](https://github.com/github/code-scanning-javascript-demo).
 - [Dependabot](https://github.com/dependabot/dependabot-core#dependabot) - dependency review and alerts in GitHub.
+- [OWASP Dependency-check project](https://owasp.org/www-project-dependency-check/)
 - [Securing software supply chain](https://docs.github.com/en/free-pro-team@latest/github/managing-security-vulnerabilities) in GitHub.
 - [DevSkim](https://github.com/Microsoft/DevSkim#devskim) - a framework of IDE extensions and language analyzers that provide inline security analysis in the dev environment as the developer writes code.
 - [BinSkim](https://github.com/microsoft/binskim/blob/main/docs/UserGuide.md) - a checker that examines Portable Executable (PE) files and their associated Program Database File Formats (PDB) to identify various security problems.
 - [Security Code Scan for .NET](https://security-code-scan.github.io/)
 - [SonarQube](https://docs.sonarqube.org/latest/)
+- [CredScan](https://secdevtools.azurewebsites.net/helpcredscan.html)
 - [Additional tools](https://www.microsoft.com/en-us/securityengineering/sdl/resources)
+- [Tools from Visual Studio marketplace](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
 
 ## OWASP Scanning
 
@@ -55,6 +58,16 @@ Quite a bit of technical effort is required to write a tool that can undertake t
 
 - [Microsoft Defender for Containers](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-introduction?tabs=defender-for-container-arch-aks#architecture-overview)
 - Code scanning in a container using [CodeQL](https://docs.github.com/en/free-pro-team@latest/github/finding-security-vulnerabilities-and-errors-in-your-code/running-codeql-code-scanning-in-a-container)
+
+## A different way of designing your code
+
+Some of the above tools are also targetted at scanning your code for credentials. These should indeed not leak into your source code. By utilizing a different way of designing your applications, you can avoid needing to store credentials in your source code altogether. For Azure workloads, you want to consider: 
+
+- [Azure Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/general/overview)
+- [Add Key Vault to your web application](https://docs.microsoft.com/en-us/azure/key-vault/general/vs-key-vault-add-connected-service)
+- [Use Key Vault references for App Service and Azure Functions](https://docs.microsoft.com/en-us/azure/app-service/app-service-key-vault-references)
+- [Managed Identity](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview)
+- [How to use managed identities for App Service and Azure Functions](https://docs.microsoft.com/en-us/azure/app-service/overview-managed-identity?tabs=portal%2Chttp)
 
 ## Useful Links
 

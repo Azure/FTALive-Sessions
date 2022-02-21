@@ -20,14 +20,16 @@ There are many secure software development frameworks being used out in the worl
 1. [Microsoft Secure Development Lifecycle](https://www.microsoft.com/en-us/securityengineering/sdl/practices).
 1. [SafeCode fundamental practices for Secure Software Development](https://safecode.org/fundamental-practices-secure-software-development-2/).
 
-This document doesn't discuss any specific framework out of the above but general practices involved in developing a Secure Software Development Lifecycle.
+This document doesn't discuss any specific framework out of the above but general practices involved in developing a Secure Software Development Lifecycle, based on the [Cloud Adoption Framework](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/secure/devsecops-controls).
 
-| ID | Topic |  
-|----|-------|
-|1|[DevSecops](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/secure/devsecops-controls)
-|2|[Threat Modelling](./ThreatModelling.md)
-|3|[Cryptography Strategy](./CryptographyStrategy.md)
-|4|[Code Analysis](./CodeAnalysis.md)
-|5|[Securing the CI/CD workflow](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/secure/best-practices/secure-devops)
-|6|[Penetration Testing](https://docs.microsoft.com/en-us/azure/security/fundamentals/pen-testing)
-|7|[Continuous Monitoring](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction)
+| Plan and Develop | Commit the Code | Build and Test | Go to Production | Operate |  
+|---|---|---|---|---|
+|[Threat Modelling](./ThreatModelling.md)| [Static application security testing](./CodeAnalysis.md)| [Dynamic application security testing](./CodeAnalysis.md) | Security smoke tests | [Continuous monitoring](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction)
+|[IDE Security plugins](https://github.com/Microsoft/DevSkim#devskim)| Security Unit and Functional tests | Cloud configuration validation | Configuration checks | Threat intelligence
+|[Pre commit hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)| [Dependency management](./CodeAnalysis.md) | Infrastructure scanning | [Live Site Penetration testing](https://docs.microsoft.com/en-us/azure/security/fundamentals/pen-testing) | [Penetration testing](https://docs.microsoft.com/en-us/azure/security/fundamentals/pen-testing)
+|[Secure coding standards](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/migrated_content) | [Securing the CI/CD workflow](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/secure/best-practices/secure-devops) | Security acceptance testing | Blameless postmortems
+|[Peer review](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)||||
+
+## Additional Resources
+
+- [Cryptography Strategy](./CryptographyStrategy.md)
