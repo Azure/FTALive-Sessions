@@ -29,8 +29,9 @@ In this session you will learn about using Azure Machine Learning for vision rel
     - [Action Recognition](#Action-Recognition)
 4. [Vision Tasks in Azure](#Vision-Tasks-in-Azure) 
 5. [Machine Learning Pipelines](#Machine-Learning-Pipelines)
-6. [QnA](#frequently-asked-questions)
-7. [Resources & Training](#resources)
+6. [Fun with Vision AI](#Fun-with-Vision-AI)
+7. [QnA](#frequently-asked-questions)
+8. [Resources & Training](#resources)
  
 
 ## Explore Vision AI with Azure
@@ -192,6 +193,7 @@ recurring_schedule = Schedule.create(ws, name="MyRecurringSchedule",
  
 Azure Cognitive Services are a set of cloud-based services that allow you to add features like speech recognition, facial recognition, and sentiment analysis to your applications without having any AI or data science skills. These services are divided into different categories, like vision, speech, and language, which each have their own set of APIs and SDKs.
 
+
 ## Frequently asked questions
 
 Check for the questions that came up during live sessions.
@@ -206,6 +208,16 @@ A list of curated AzureML samples:
 - [Official AzureML notebook samples](https://github.com/Azure/MachineLearningNotebooks/)
 - [MLOps starter](https://aka.ms/mlops) 
 - [Applied Machine Learning for Health and Fitness](https://github.com/kevinash/ai-in-sports)
+- 
+
+### Fun with Vision AI
+
+- [Sketching](https://github.com/kevinash/awesome-ai/#project-41-explore-sketching)
+- [Colorization](https://github.com/kevinash/awesome-ai/#project-42-colorize-your-sketch)
+- [Faces and Facial Expressions](https://github.com/kevinash/awesome-ai/#chapter-5-faces-and-expressions)
+- [Body and Pose](https://github.com/kevinash/awesome-ai/#chapter-6-body-and-poses)
+- [Animation with AI](https://github.com/kevinash/awesome-ai/#chapter-7-animation)
+- [Style and Creativity](https://github.com/kevinash/awesome-ai/#chapter-9-style-and-creativity)
 
 ### Books 
 
