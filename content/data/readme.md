@@ -9,7 +9,7 @@ This call will not be recorded due to the wide audience and to encourage questio
 
 Please give us your feedback on https://aka.ms/ftalive-feedback
 
-# SQL Migrations
+# SQL Migrations (WIP)
 ## Agenda
 * Introduction 
     * So much information out there, why this session?
