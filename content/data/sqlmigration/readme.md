@@ -24,7 +24,7 @@ Please give us your feedback on https://aka.ms/ftalive-feedback
   * [Azure Data Studio (ADS) with Migraition Extension](https://docs.microsoft.com/en-us/sql/azure-data-studio/extensions/azure-sql-migration-extension)  (Preview)
 * Remediation
   * Fixing common issues / blockers
-  * SQL Flight Simulator (Preview) - TBD
+  * SFS (Preview) - TBD
 * Migration Planning
   * Create a migration plan and rollback plan
   * Offline, Online and downtime planning
