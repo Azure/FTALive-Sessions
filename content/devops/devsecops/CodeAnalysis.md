@@ -17,7 +17,7 @@ The following are tools that you may considered:
 - [Security Code Scan for .NET](https://security-code-scan.github.io/)
 - [SonarQube](https://docs.sonarqube.org/latest/)
 - [CredScan](https://secdevtools.azurewebsites.net/helpcredscan.html)
-- [Additional tools](https://www.microsoft.com/en-us/securityengineering/sdl/resources)
+- [Additional tools](https://www.microsoft.com/securityengineering/sdl/resources)
 
 ## Dependency management
 
@@ -43,8 +43,8 @@ Quite a bit of technical effort is required to write a tool that can undertake t
 
 When creating containerized workloads, you can be susceptible to additional security threads. There are additional security tools you can use to protect your workloads:
 
-- [Microsoft Defender for Containers](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-introduction?tabs=defender-for-container-arch-aks#architecture-overview)
-- [Identify vulnerable container images in your CI/CD workflows](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-container-registries-cicd)
+- [Microsoft Defender for Containers](https://docs.microsoft.com/azure/defender-for-cloud/defender-for-containers-introduction?tabs=defender-for-container-arch-aks#architecture-overview)
+- [Identify vulnerable container images in your CI/CD workflows](https://docs.microsoft.com/azure/defender-for-cloud/defender-for-container-registries-cicd)
 - [Enhance your CI/CD deployment by using Vulnerability Assessments from Microsoft Defender for ACR](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/enhance-your-ci-cd-deployment-by-using-vulnerability-assessments/ba-p/2102516)
 
 Also take a look at the [end to end setups](EndToEnd.md), which contains extra info for AKS workloads. 
@@ -77,11 +77,11 @@ Source : [Wikipedia](https://en.wikipedia.org/wiki/Open-source_software_security
 
 Some of the above tools are also targetted at scanning your code for credentials. These should indeed not leak into your source code. By utilizing a different way of designing your applications, you can avoid needing to store credentials in your source code altogether. For Azure workloads, you want to consider: 
 
-- [Azure Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/general/overview)
-- [Add Key Vault to your web application](https://docs.microsoft.com/en-us/azure/key-vault/general/vs-key-vault-add-connected-service)
-- [Use Key Vault references for App Service and Azure Functions](https://docs.microsoft.com/en-us/azure/app-service/app-service-key-vault-references)
-- [Managed Identity](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview)
-- [How to use managed identities for App Service and Azure Functions](https://docs.microsoft.com/en-us/azure/app-service/overview-managed-identity?tabs=portal%2Chttp)
+- [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/general/overview)
+- [Add Key Vault to your web application](https://docs.microsoft.com/azure/key-vault/general/vs-key-vault-add-connected-service)
+- [Use Key Vault references for App Service and Azure Functions](https://docs.microsoft.com/azure/app-service/app-service-key-vault-references)
+- [Managed Identity](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)
+- [How to use managed identities for App Service and Azure Functions](https://docs.microsoft.com/azure/app-service/overview-managed-identity?tabs=portal%2Chttp)
 
 ## Useful Links
 

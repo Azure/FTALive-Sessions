@@ -14,9 +14,9 @@ In case you want to learn more about IaC and how to build a secure process, we a
 
 ### ARM and Bicep
 
-For both JSon and Bicep ARM templates, you can add template scanning by using the [arm-ttk](https://github.com/Azure/arm-ttk) toolkit. The [Bicep Linter](https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/linter) is the more up to date version of arm-ttk for Bicep templates. 
+For both JSon and Bicep ARM templates, you can add template scanning by using the [arm-ttk](https://github.com/Azure/arm-ttk) toolkit. The [Bicep Linter](https://docs.microsoft.com/azure/azure-resource-manager/bicep/linter) is the more up to date version of arm-ttk for Bicep templates. 
 
-A full run-through of how to test Bicep code can be found in this [learn module for Azure Pipelines](https://docs.microsoft.com/en-us/learn/modules/test-bicep-code-using-azure-pipelines/) and this one for [GitHub Actions](https://docs.microsoft.com/en-us/learn/modules/test-bicep-code-using-github-actions/). It also covers steps like validating, linting, previewing changes and approving deployment. Both modules are part of a larger set of [learn paths on Bicep](https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/learn-bicep)
+A full run-through of how to test Bicep code can be found in this [learn module for Azure Pipelines](https://docs.microsoft.com/learn/modules/test-bicep-code-using-azure-pipelines/) and this one for [GitHub Actions](https://docs.microsoft.com/learn/modules/test-bicep-code-using-github-actions/). It also covers steps like validating, linting, previewing changes and approving deployment. Both modules are part of a larger set of [learn paths on Bicep](https://docs.microsoft.com/azure/azure-resource-manager/bicep/learn-bicep)
 
 ### Terraform
 
@@ -26,11 +26,11 @@ Even though testing IaC templates before deployment is an option, a better way o
 
 ## Build-in governance controls
 
-The [Cloud Adoption Framework](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/) defines cloud security as a journey where you work towards a [secure end state](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/secure/). 
+The [Cloud Adoption Framework](https://docs.microsoft.com/azure/cloud-adoption-framework/) defines cloud security as a journey where you work towards a [secure end state](https://docs.microsoft.com/azure/cloud-adoption-framework/secure/). 
 
 ![Envision a security end state](media/secure-methodology.png)
 
-This end state can be enforced by utilizing [Azure Policies](https://docs.microsoft.com/en-us/azure/governance/policy/overview). We provide multiple [build-in Azure Policy initiatives](https://docs.microsoft.com/en-us/azure/governance/policy/samples/built-in-initiatives) and [landing zones](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/implementation-options) that utilize these built-in Azure Policy definitions to enforce governance controls. [Enterprise scale landing zone (ESLZ)](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/enterprise-scale/) is one of these predefined landing zone setups.
+This end state can be enforced by utilizing [Azure Policies](https://docs.microsoft.com/azure/governance/policy/overview). We provide multiple [build-in Azure Policy initiatives](https://docs.microsoft.com/azure/governance/policy/samples/built-in-initiatives) and [landing zones](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/implementation-options) that utilize these built-in Azure Policy definitions to enforce governance controls. [Enterprise scale landing zone (ESLZ)](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/) is one of these predefined landing zone setups.
 
 ![enterprise scale hub and spoke](media/es-hubspoke.png)
 
@@ -42,4 +42,4 @@ We provide an [FTA Live session on Azure Governance](https://github.com/Azure/FT
 
 You could also utilize checks post-deployment. These are less common, but we mention these for completeness.
 
-In an Azure environment, you can use the [resource graph](https://docs.microsoft.com/en-us/azure/governance/resource-graph/samples/advanced?tabs=azure-cli) to test what has been deployed and how.
+In an Azure environment, you can use the [resource graph](https://docs.microsoft.com/azure/governance/resource-graph/samples/advanced?tabs=azure-cli) to test what has been deployed and how.
