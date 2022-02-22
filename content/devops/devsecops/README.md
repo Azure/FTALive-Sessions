@@ -18,7 +18,7 @@ As mentioned within [innovation security](https://docs.microsoft.com/en-us/azure
 
 There are many secure software development frameworks being used out in the world but two of them are most popular:
 1. [Microsoft Secure Development Lifecycle](https://www.microsoft.com/en-us/securityengineering/sdl/practices).
-1. [SafeCode fundamental practices for Secure Software Development](https://safecode.org/fundamental-practices-secure-software-development-2/).
+1. [SafeCode fundamental practices for Secure Software Development](https://safecode.org/uncategorized/fundamental-practices-secure-software-development).
 
 This document doesn't discuss any specific framework out of the above but general practices involved in developing a Secure Software Development Lifecycle, based on the [Cloud Adoption Framework](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/secure/devsecops-controls).
 
