@@ -57,6 +57,8 @@ Data	| Azure Data Factory Security | Learn and review how to implement secure Az
 AI & ML	| Azure Machine Learning Fundamentals | In this session you will gain an understanding of the overall Azure Machine Learning (AzureML) components and how you can start using the AzureML studio web portal to accelerate you AI journey in the cloud. |
   |  |  |  |
 AI & ML	| Azure ML Enterprise Deployment | In this session you will learn how to design and implement Azure Machine Learning using enterprise deployment features, so you can create a secure configuration that is compliant with your companies policies, enjoys tighter security and satisfies your enteprise governance requirements. We will discuss vNets, Endpoints, RBAC, AKS and much more! |
+|  |  |  |
+AI & ML	| Vision AI | In this session you will learn about using Azure Machine Learning for vision related tasks. You will learn about deep computer vision and vision related tasks, including classification, segmentation, 2D, 3D pose estimation, video action recognition and more. We then discuss how to use Azure automation and cloud deployment and processing of your machine learning tasks.  |
   |  |  |  |
 Intro	| FastTrack for Azure Introduction | In this session you will hear from our Program Managers who will walk through what FastTrack for Azure is and how it can support you in your Cloud Journey. |
   |  |  |  |
