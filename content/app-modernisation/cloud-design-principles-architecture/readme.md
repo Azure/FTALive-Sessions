@@ -52,6 +52,7 @@ Please find the most relevant resources below to continue your learning after th
   * [Containerize Your Existing Application](https://docs.microsoft.com/en-us/azure/migrate/tutorial-app-containerization-aspnet-app-service)
 - [Microservices]( https://azure.microsoft.com/en-in/solutions/microservice-applications/)
   * [Architecture for Containerized .NET Microservices](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/?WT.mc_id=dotnet-35129-website)
+  * [DotNet Microservice Architecture Sample](https://github.com/dotnet-architecture/eShopOnContainers)
 - [Serverless](https://azure.microsoft.com/en-in/solutions/serverless/)
   * [Serverless Apps eBook](https://docs.microsoft.com/en-us/dotnet/architecture/serverless/?WT.mc_id=dotnet-35129-website)
 
