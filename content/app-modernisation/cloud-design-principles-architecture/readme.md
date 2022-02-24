@@ -53,7 +53,7 @@ Please find the most relevant resources below to continue your learning after th
 - [Microservices]( https://azure.microsoft.com/en-in/solutions/microservice-applications/)
   * [Architecture for Containerized .NET Microservices](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/?WT.mc_id=dotnet-35129-website)
 - [Serverless](https://azure.microsoft.com/en-in/solutions/serverless/)
-  * [Serverless Apss eBook](https://docs.microsoft.com/en-us/dotnet/architecture/serverless/?WT.mc_id=dotnet-35129-website)
+  * [Serverless Apps eBook](https://docs.microsoft.com/en-us/dotnet/architecture/serverless/?WT.mc_id=dotnet-35129-website)
 
 
 ### Role of Automation 
