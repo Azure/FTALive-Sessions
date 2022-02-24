@@ -41,11 +41,12 @@ Please find the most relevant resources below to continue your learning after th
 ### Cloud design principles
 
 - [12Factor apps](https://12factor.net/)
+- [Architecting Cloud Native Apps for Azure](https://dotnet.microsoft.com/en-us/learn/azure/architecture#ebook-cloud-native-azure-swimlane)
 
 ### Cloud Native Approaches 
 
 - [Containers](https://azure.microsoft.com/en-in/product-categories/containers/)
-  * https://docs.microsoft.com/en-us/azure/migrate/tutorial-app-containerization-aspnet-app-service
+  * [Containerize Your Existing Application](https://docs.microsoft.com/en-us/azure/migrate/tutorial-app-containerization-aspnet-app-service)
 - [Microservices]( https://azure.microsoft.com/en-in/solutions/microservice-applications/)
 - [Serverless](https://azure.microsoft.com/en-in/solutions/serverless/)
 
