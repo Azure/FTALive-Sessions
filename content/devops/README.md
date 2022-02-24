@@ -1,4 +1,4 @@
-# FastTrack for Azure Live - DevOps Series
+# FastTrack for Azure Live - DevOps Sessions
 
 Welcome to the 3 part FTA Live series designed to get your started with Best Practices for Azure DevOps and CI/CD. It is recommended to attend all 3 to build upon knowledge of each session.
 
