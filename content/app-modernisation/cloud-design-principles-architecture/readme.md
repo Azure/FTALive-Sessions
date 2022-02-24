@@ -42,13 +42,18 @@ Please find the most relevant resources below to continue your learning after th
 
 - [12Factor apps](https://12factor.net/)
    - [Architecting Cloud Native Apps for Azure](https://dotnet.microsoft.com/en-us/learn/azure/architecture#ebook-cloud-native-azure-swimlane)
+   - [Cloud Design Patterns](https://docs.microsoft.com/en-us/azure/architecture/patterns/?WT.mc_id=dotnet-35129-website)
+   - [Azure Reference Architectures](https://docs.microsoft.com/en-us/azure/architecture/browse/?WT.mc_id=dotnet-35129-website)
+
 
 ### Cloud Native Approaches 
 
 - [Containers](https://azure.microsoft.com/en-in/product-categories/containers/)
   * [Containerize Your Existing Application](https://docs.microsoft.com/en-us/azure/migrate/tutorial-app-containerization-aspnet-app-service)
 - [Microservices]( https://azure.microsoft.com/en-in/solutions/microservice-applications/)
+  * [Architecture for Containerized .NET Microservices](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/?WT.mc_id=dotnet-35129-website)
 - [Serverless](https://azure.microsoft.com/en-in/solutions/serverless/)
+  * [Serverless Apss eBook](https://docs.microsoft.com/en-us/dotnet/architecture/serverless/?WT.mc_id=dotnet-35129-website)
 
 
 ### Role of Automation 
