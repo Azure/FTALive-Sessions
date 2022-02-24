@@ -27,7 +27,7 @@ In this session you will learn how to:
 
 ## Resources
 
-Please find the most relevant resources below to continue your learning after this session.
+Please find the most relevant resources below to continue your learning after this session:
 
 
 ### Cloud maturity model
@@ -59,6 +59,9 @@ Please find the most relevant resources below to continue your learning after th
 ### Role of Automation 
 
 - [DevOps](https://azure.microsoft.com/en-in/overview/devops-tutorial/)
+  * [CI/CD for Day 2 Operations](https://docs.microsoft.com/en-us/azure/migrate/tutorial-app-containerization-azure-pipeline)
+  * [Deploy a Docker based application to Azure App Service](https://www.azuredevopslabs.com/labs/vstsextend/docker/)
+  * [Deploy Multi-Container Application to AKS](https://www.azuredevopslabs.com/labs/vstsextend/kubernetes/)
 
 
 ### CAF/WAF approaches to cloud
