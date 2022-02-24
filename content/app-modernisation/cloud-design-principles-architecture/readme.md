@@ -45,6 +45,7 @@ Please find the most relevant resources below to continue your learning after th
 ### Cloud Native Approaches 
 
 - [Containers](https://azure.microsoft.com/en-in/product-categories/containers/)
+  * https://docs.microsoft.com/en-us/azure/migrate/tutorial-app-containerization-aspnet-kubernetes
 - [Microservices]( https://azure.microsoft.com/en-in/solutions/microservice-applications/)
 - [Serverless](https://azure.microsoft.com/en-in/solutions/serverless/)
 
@@ -61,6 +62,3 @@ Please find the most relevant resources below to continue your learning after th
 
 - [Cloud Adoption Framework](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/)
 - [Well-Architected Framework](https://docs.microsoft.com/en-us/azure/architecture/framework/)
-
-### Sample to be used for Hands On
-- https://github.com/dotnet-architecture/eShopModernizing
