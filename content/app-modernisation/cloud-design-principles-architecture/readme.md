@@ -41,7 +41,7 @@ Please find the most relevant resources below to continue your learning after th
 ### Cloud design principles
 
 - [12Factor apps](https://12factor.net/)
-- [Architecting Cloud Native Apps for Azure](https://dotnet.microsoft.com/en-us/learn/azure/architecture#ebook-cloud-native-azure-swimlane)
+   - [Architecting Cloud Native Apps for Azure](https://dotnet.microsoft.com/en-us/learn/azure/architecture#ebook-cloud-native-azure-swimlane)
 
 ### Cloud Native Approaches 
 
