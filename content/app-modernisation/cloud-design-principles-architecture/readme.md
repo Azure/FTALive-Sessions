@@ -45,7 +45,7 @@ Please find the most relevant resources below to continue your learning after th
 ### Cloud Native Approaches 
 
 - [Containers](https://azure.microsoft.com/en-in/product-categories/containers/)
-  * https://docs.microsoft.com/en-us/azure/migrate/tutorial-app-containerization-aspnet-kubernetes
+  * https://docs.microsoft.com/en-us/azure/migrate/tutorial-app-containerization-aspnet-app-service
 - [Microservices]( https://azure.microsoft.com/en-in/solutions/microservice-applications/)
 - [Serverless](https://azure.microsoft.com/en-in/solutions/serverless/)
 
