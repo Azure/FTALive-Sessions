@@ -66,9 +66,10 @@ Please find the most relevant resources below to continue your learning after th
 
 
 ### CAF/WAF approaches to cloud
+   
+   - [Cloud Adoption Framework](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/)
+   - [Well-Architected Framework](https://docs.microsoft.com/en-us/azure/architecture/framework/)
 
 ![image](https://user-images.githubusercontent.com/47940750/153807793-677469c7-4454-45a2-9f92-3a6ddf566c48.png)
 
 
-- [Cloud Adoption Framework](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/)
-- [Well-Architected Framework](https://docs.microsoft.com/en-us/azure/architecture/framework/)
