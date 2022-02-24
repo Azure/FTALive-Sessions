@@ -2,6 +2,7 @@
 
 ## Upgrade Kubernetes versions in AKS
 
+- Kubernetes versions follow the [Semantic Versioning](https://semver.org/) terminology and are expressed in the format of `major.minor.patch`. For example, in the version `1.23.3`, `1` is the major version, `23` is the minor version, and `3` is the patch version.
 - AKS supports 3 GA Kubernetes minor versions (N - 2), and supports 2 stable patch versions for each minor version.
   - To see all supported versions in an Azure region, use `az aks get-versions --location <location> --output table`.
   - To see which version your cluster can upgrade to, use `az aks get-upgrades --resource-group <resource group> --name <cluster name>`.
