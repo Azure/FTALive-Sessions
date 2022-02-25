@@ -70,7 +70,12 @@ With [Azure CNI](https://docs.microsoft.com/azure/aks/concepts-network#azure-cni
 - [Maximum pods per node](https://docs.microsoft.com/azure/aks/configure-azure-cni#maximum-pods-per-node)
 - The minimum value that can be set per node is 10 - [Refer for mandatory node requirement in this case](https://docs.microsoft.com/azure/aks/configure-azure-cni#configure-maximum---new-clusters)
 
-> While planning the IP addresses, leave some additional room for upgrade operations which generally surge the node percentage to 25% or with 1 additional node.
+> While planning the IP addresses, leave some additional room for upgrade operations. By default, AKS configures upgrades to surge with 1 extra node.
+
+## Dynamic allocation of IPs and enhanced subnet support (preview)
+A drawback with the traditional CNI is the exhaustion of pod IP addresses as the AKS cluster grows, resulting in the need to rebuild the entire cluster in a bigger subnet.
+
+The new [dynamic IP](https://docs.microsoft.com/en-us/azure/aks/configure-azure-cni#dynamic-allocation-of-ips-and-enhanced-subnet-support-preview) allocation capability in Azure CNI solves this problem by allotting pod IPs from a subnet separate from the subnet hosting the AKS cluster.
 
 ## The IP tables in Azure Kubernetes Service
 - Cluster level rules for each service.
