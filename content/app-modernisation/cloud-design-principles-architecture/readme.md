@@ -38,6 +38,8 @@ Please find the most relevant resources below to continue your learning after th
 
 ![image](https://user-images.githubusercontent.com/47940750/153807706-f7d89603-487b-4145-ad39-e7a96ee50fb9.png)
 
+-[Azure Migrate](https://docs.microsoft.com/en-us/azure/migrate/migrate-services-overview)
+
 ### Cloud design principles
 
 - [12Factor apps](https://12factor.net/)
