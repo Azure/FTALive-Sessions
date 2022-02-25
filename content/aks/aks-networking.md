@@ -79,7 +79,7 @@ The new [dynamic IP](https://docs.microsoft.com/en-us/azure/aks/configure-azure-
 
 ## The IP tables in Azure Kubernetes Service
 - Cluster level rules for each service.
-- Talk about KUBE-MARK-MASQ, KUBE-SVC-xyz, and KUBE-SEP-xyz rules and what it does.
+- KUBE-MARK-MASQ, KUBE-SVC-xyz, and KUBE-SEP-xyz rules.
 
 ![rules](/images/srv.png)
 
