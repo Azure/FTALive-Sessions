@@ -157,6 +157,10 @@ How to [restrict egress traffic using Azure Firewall?](https://docs.microsoft.co
 ### Additional information
 [Using SNAT for outbound connections](https://docs.microsoft.com/azure/load-balancer/load-balancer-outbound-connections)
 
+## Managed NAT Gateway (preview)
+Whilst AKS customers are able to route egress traffic through an Azure Load Balancer, there are limitations on the amount of outbound flows of traffic that is possible.
+
+[Cluster egress with Managed NAT Gateway](https://docs.microsoft.com/en-us/azure/aks/nat-gateway)
 
 # Different Types of Services in Kubernetes
 [Basic Concepts of Kubernetes Services](https://kubernetes.io/docs/concepts/services-networking/service/)
