@@ -22,7 +22,13 @@ VNet mistakes
 - Nesting VNets.
 - Forgetting to use NSGs.
 - Asking too much from NSGs.
-- Trying to put PaaS services "into" a VNet.
+- Trying to put PaaS services "into" a VNet when there is no requirement to do so.
+
+Security mistakes
+- Low segmentation/high trust design.
+- Not leveraging Identity as the primary security layer.
+- Not considering logging requirements in network design.
+
 
 Troubleshoot difficulties
 - Using ICMP.
