@@ -10,15 +10,16 @@
 **Feeback** We would like to hear your thoughts, please provide us your feedback [https://aka.ms/ftalive-feedback](https://aka.ms/ftalive-feedback).
 
 ### Agenda
-1. [Setup guide overview](https://portal.azure.com/#blade/Microsoft_Azure_Resources/QuickstartPlaybookBlade/guideId/intro-azure-setup)
-1. Organize resources
+1. [Why talk about governance?](./why.md)
+2. [Setup guide overview](https://portal.azure.com/#blade/Microsoft_Azure_Resources/QuickstartPlaybookBlade/guideId/intro-azure-setup)
+3. Organize resources
     1. [Azure Resource Manager Overview](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/overview)
     1. [Management Groups Overview](https://docs.microsoft.com/en-us/azure/governance/management-groups/overview)
     1. [Define Naming Conventions](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming)
     1. [Developing Naming and Tagging Strategy](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging)
-1. Manage access
+4. Manage access
     1. [Role Based Access Control](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/considerations/roles)
-1. Manage costs and billing
+5. Manage costs and billing
     1. [Cost Management + Billing Overview](https://docs.microsoft.com/en-us/azure/cost-management-billing/cost-management-billing-overview)
     1. [Start Analyzing Costs](https://docs.microsoft.com/en-us/azure/cost-management-billing/costs/quick-acm-cost-analysis?tabs=azure-portal)
     1. [Create and Manage Budgets](https://docs.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-acm-create-budgets)
