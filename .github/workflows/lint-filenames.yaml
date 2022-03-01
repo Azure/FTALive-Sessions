@@ -1,0 +1,24 @@
+ name: lint-filenames
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches: ['main']
+
+jobs:
+  lint-filenames:
+    runs-on: ubuntu-latest
+    name: Lint filenames
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Lint filenames
+        uses: julie-ng/lowercase-linter@v1
+        id: linter
+        with:
+          path: 'content/'
+          pr-comment: true
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
