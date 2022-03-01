@@ -1,4 +1,4 @@
- name: lint-filenames
+name: lint-filenames
 
 on:
   push:
