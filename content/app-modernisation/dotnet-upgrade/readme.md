@@ -33,8 +33,12 @@ Please find the most relevant resources below to continue your learning after th
 ### DotNet Upgrade
 
 - [Upgrade Assistant](https://dotnet.microsoft.com/en-us/platform/upgrade-assistant)
+   * [Upgrade ASP.NET MVC app to .NET 6](https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-aspnetmvc)
+   * [DotNet Conference](https://www.youtube.com/watch?v=cOHXt_0VDRI)
 
-- [Manual Upgrade](![image](https://user-images.githubusercontent.com/47940750/156418133-0e988d79-588e-467c-b059-b9ca4a8645c1.png))
+- [Manual Upgrade](https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/)
+   * ![image](https://user-images.githubusercontent.com/47940750/156418789-a2a0cb26-8fde-401b-b9f5-95cab424bf5f.png)
+
 
 ### Cloud design principles
 
