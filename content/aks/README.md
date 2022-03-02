@@ -9,3 +9,4 @@ Click on the links below to view the material shared to attendees for each sessi
 1. [AKS Networking](./aks-networking.md)
 1. [AKS Monitoring Patterns and Practices](./aks-monitoring.md)
 1. [AKS Operations](./aks-operations/README.md)
+1. [AKS Security](./aks-security.md)
