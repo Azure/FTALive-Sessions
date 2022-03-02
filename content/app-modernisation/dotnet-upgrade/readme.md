@@ -59,17 +59,11 @@ Please find the most relevant resources below to continue your learning after th
   * [Serverless Apps eBook](https://docs.microsoft.com/en-us/dotnet/architecture/serverless/?WT.mc_id=dotnet-35129-website)
 
 
-### Role of Automation 
+### Azure Functions
 
 - [DevOps](https://azure.microsoft.com/en-in/overview/devops-tutorial/)
   * [CI/CD for Day 2 Operations](https://docs.microsoft.com/en-us/azure/migrate/tutorial-app-containerization-azure-pipeline)
   * [Deploy a Docker based application to Azure App Service](https://www.azuredevopslabs.com/labs/vstsextend/docker/)
-  * [Deploy Multi-Container Application to AKS](https://www.azuredevopslabs.com/labs/vstsextend/kubernetes/)
-
-
-### CAF/WAF approaches to cloud
+  
+### Service Fabric
    
-   - [Cloud Adoption Framework](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/)
-   - [Well-Architected Framework](https://docs.microsoft.com/en-us/azure/architecture/framework/)
-
-![image](https://user-images.githubusercontent.com/47940750/153807793-677469c7-4454-45a2-9f92-3a6ddf566c48.png)
