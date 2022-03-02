@@ -148,7 +148,7 @@ NOTE: There is a 30 min downtime for manually invoked certificate rotation opera
 
 **Network Security**
   - Do not add NSGs to the NICs of the nodes hosting the cluster (not supported for AKS).   
-  - For subnet NSGs, ensure that management traffic is not blocked. Follow guidance here: https://docs.microsoft.com/en-us/azure/aks/concepts-security#azure-network-security
+  - For subnet NSGs, ensure that management traffic is not blocked. Follow guidance here: https://docs.microsoft.com/en-us/azure/aks/concepts-security#azure-network-security-groups
   - Use Kubernetes network policy to control flow (east-west) within the cluster between applications/pods.  
 
 **Private Link**
