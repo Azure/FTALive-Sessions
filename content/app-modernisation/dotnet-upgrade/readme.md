@@ -40,15 +40,15 @@ Please find the most relevant resources below to continue your learning after th
     ![image](https://user-images.githubusercontent.com/47940750/156418789-a2a0cb26-8fde-401b-b9f5-95cab424bf5f.png)
 
 
-### Cloud design principles
+### Azure PaaS Services
 
-- [12Factor apps](https://12factor.net/)
-   - [Architecting Cloud Native Apps for Azure](https://dotnet.microsoft.com/en-us/learn/azure/architecture#ebook-cloud-native-azure-swimlane)
-   - [Cloud Design Patterns](https://docs.microsoft.com/en-us/azure/architecture/patterns/?WT.mc_id=dotnet-35129-website)
-   - [Azure Reference Architectures](https://docs.microsoft.com/en-us/azure/architecture/browse/?WT.mc_id=dotnet-35129-website)
+- [Azure App Service](https://azure.microsoft.com/en-in/services/app-service/)
+   - [Migration to Azure App Service](https://azure.microsoft.com/en-in/services/app-service/migration-tools/)
+   - [Containers on App Service](https://docs.microsoft.com/en-us/azure/architecture/patterns/?WT.mc_id=dotnet-35129-website)
+   - [Deploy Containerzied Application to Azure App Service](https://docs.microsoft.com/en-us/learn/modules/deploy-run-container-app-service/)
 
 
-### Cloud Native Approaches 
+### Azure Kubernetes Services
 
 - [Containers](https://azure.microsoft.com/en-in/product-categories/containers/)
   * [Containerize Your Existing Application](https://docs.microsoft.com/en-us/azure/migrate/tutorial-app-containerization-aspnet-app-service)
