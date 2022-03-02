@@ -1,18 +1,19 @@
-# DotNet Upgrade 
+# Migrating Legacy DotNet Apps into Azure 
 
 ## Overview
 
-In this session you will learn about the cloud native design principles and approaches for migrating existing applications to cloud.
+In this session you will learn about upgrading the DotNet framework of your application to cross-platform and scalable .NET 6. We also dive into deploying our DotNet application to modern PaaS Services such as Azure App Services and Azure Kubernetes Services. 
 
 ### Agenda
 
-* Cloud maturity model
-* 5R's of rationalization
-* Design principles for cloud native applications - 12 factor apps
-* Cloud-native approaches - Microservices / Serverless / Containers
-* Role of automation & DevOps
-* Cloud Adoption Framework/Well-Architected framework
-
+* Introduction to .NET 6
+* Upgrade to .NET 6
+* Azure PaaS Services for Web Applications
+    * Azure App Service
+    * Azure Kubernetes Service
+    * Azure Functions
+    * Service Fabric
+   
 ### Audience
 
 This session is most useful for application developers and architects who want to design cloud native applications or migrate existing applications to the cloud
@@ -20,9 +21,9 @@ This session is most useful for application developers and architects who want t
 ### Goals
 
 In this session you will learn how to:
-* Approach cloud native application design
-* Evaluate changes required for migrating existing applications to cloud
-* Understand how CAF/WAF will help design and migrate applications to cloud
+* Upgrade and leverage modern .NET 6 framework
+* Understand different PaaS Services available to deploy applications and their use case
+* Hands-On Deployment to Azure App Service and Azure Kubernetes Service
 
 
 ## Resources
