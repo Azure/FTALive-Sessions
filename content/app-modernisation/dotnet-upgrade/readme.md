@@ -34,8 +34,7 @@ Please find the most relevant resources below to continue your learning after th
 
 - [Upgrade Assistant](https://dotnet.microsoft.com/en-us/platform/upgrade-assistant)
 
-- [Manual Upgrade](![image](https://user-images.githubusercontent.com/47940750/156417945-7890e616-b168-4d48-95cb-16223a3fdca2.png)
-)
+- [Manual Upgrade](![image](https://user-images.githubusercontent.com/47940750/156418133-0e988d79-588e-467c-b059-b9ca4a8645c1.png))
 
 ### Cloud design principles
 
