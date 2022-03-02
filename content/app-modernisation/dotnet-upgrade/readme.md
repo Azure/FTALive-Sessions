@@ -37,7 +37,7 @@ Please find the most relevant resources below to continue your learning after th
    * [DotNet Conference](https://www.youtube.com/watch?v=cOHXt_0VDRI)
 
 - [Manual Upgrade](https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/)
-   * ![image](https://user-images.githubusercontent.com/47940750/156418789-a2a0cb26-8fde-401b-b9f5-95cab424bf5f.png)
+    ![image](https://user-images.githubusercontent.com/47940750/156418789-a2a0cb26-8fde-401b-b9f5-95cab424bf5f.png)
 
 
 ### Cloud design principles
