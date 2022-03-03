@@ -109,13 +109,9 @@ Please find the most relevant resources below to continue your learning after th
 - [Azure Container Apps](https://azure.microsoft.com/en-in/services/container-apps/)
   - [Deploying container in ACA](https://docs.microsoft.com/en-us/azure/container-apps/get-started-existing-container-image-portal?pivots=container-apps-private-registry)
 
-
-- [Azure Functions](https://azure.microsoft.com/en-in/services/functions/)
-  * [Architecture for Containerized .NET Microservices](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/?WT.mc_id=dotnet-35129-website)
-  * [DotNet Microservice Architecture Sample](https://github.com/dotnet-architecture/eShopOnContainers)
-  
+ 
 - [Azure Service Fabric](https://azure.microsoft.com/en-in/services/service-fabric/)
-  * [Serverless Apps eBook](https://docs.microsoft.com/en-us/dotnet/architecture/serverless/?WT.mc_id=dotnet-35129-website)
+  * 
 
 
 
