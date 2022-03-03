@@ -13,7 +13,7 @@ In this session you will learn about upgrading the DotNet framework of your appl
     * Azure Kubernetes Service
     * Azure Functions
     * Service Fabric
-   
+
 ### Audience
 
 This session is most useful for application developers and architects who want to design cloud native applications or migrate existing applications to the cloud
@@ -22,7 +22,7 @@ This session is most useful for application developers and architects who want t
 
 In this session you will learn how to:
 * Upgrade and leverage modern .NET 6 framework
-* Understand different PaaS Services available to deploy applications and their use case
+* Understand different PaaS Services available to deploy modernized applications and their use case
 * Hands-On Deployment to Azure App Service and Azure Kubernetes Service
 
 
@@ -32,30 +32,80 @@ Please find the most relevant resources below to continue your learning after th
 ****
 ### DotNet Upgrade
 
-   ![image](https://user-images.githubusercontent.com/47940750/156492543-8a64e59d-1f41-469e-9f36-830d4875fd90.png)
+####    Typical workflow
+
+1. **Preparation:** Review dependencies
+   - NuGet packages, loose binaries, front-end dependencies, .NET Framework APIs used
+   - Tools: .NET Upgrade Assistant analyze, API Portability Analyzer
+2. **Upgrade:** Run the .NET upgrade assistant upgrade command with your solution / project
+3. **Fix code and build:** Head back to Visual Studio and attempt to build your code
+   - Look for warnings in the Error list, check any NuGet packages that were updated and expect to make additional changes to your code.
+4. **Run and test:** There might be changes that aren't apparent until runtime. Test that everything works as expected.
+
+
 
 
 - [Upgrade Assistant](https://dotnet.microsoft.com/en-us/platform/upgrade-assistant)
    * [Upgrade ASP.NET MVC app to .NET 6](https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-aspnetmvc)
    * [DotNet Conference](https://www.youtube.com/watch?v=cOHXt_0VDRI)
 
-   ![image](https://user-images.githubusercontent.com/47940750/156492611-f938d8b1-b9a5-4f8c-b4c5-9046bd813bf4.png)
+   
 
-- [Manual Upgrade](https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/)
-    ![image](https://user-images.githubusercontent.com/47940750/156418789-a2a0cb26-8fde-401b-b9f5-95cab424bf5f.png)
+   #### Rewrite or Reuse?
+   
+   ###### Reuse
+   
+   - Business logic
+   - Identity data
+   - Dependency injection container configuration
+   - Third party dependencies
+   - ASP.NET Controllers, Views and Models
+   
+   ###### Rewrite
+   
+   - ASP.NET Startup code
+     - Routing
+     - MVC configuration
+     - Authentication
+     - Error Handling, etc..
+   - Configuration
+   - Bundling/minification
+   - HTTP modules
+   - ASP.NET web Forms
+   - Server WCF
+   
+   
+
+#### [Manual Upgrade Process](https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/)
+
+- Check database connectivity
+- Authentication
+- Assemblies in the GAC
+- IIS settings
+- COM and COM+ components
+- Physical Directories
+- HTTPS bindings and SSL
+- Website size
+- Monitoring and diagnostics, etc..
 
 
-### Azure PaaS Services
+
+### Azure PaaS Services for DotNet apps
 
 - [Azure App Service](https://azure.microsoft.com/en-in/services/app-service/)
    - [Migration to Azure App Service](https://azure.microsoft.com/en-in/services/app-service/migration-tools/)
-   - [Containers on App Service](https://docs.microsoft.com/en-us/azure/architecture/patterns/?WT.mc_id=dotnet-35129-website)
-   - [Deploy Containerzied Application to Azure App Service](https://docs.microsoft.com/en-us/learn/modules/deploy-run-container-app-service/)
+   - [Containers on App Service](https://azure.microsoft.com/en-us/services/app-service/containers/)
+   - [Deploy Containerized Application to Azure App Service](https://docs.microsoft.com/en-us/learn/modules/deploy-run-container-app-service/)
 
 
 - [Azure Kubernetes Service](https://azure.microsoft.com/en-in/services/kubernetes-service/)
   * [Run Your Application on Kubernetes](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-prepare-app)
   * [DevOps with Kubernetes](https://www.azuredevopslabs.com/labs/vstsextend/kubernetes/)
+
+- [Azure Container Instances](https://azure.microsoft.com/en-in/services/container-instances/)
+  * [Deploying container in ACI](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-quickstart-portal)
+- [Azure Container Apps](https://azure.microsoft.com/en-in/services/container-apps/)
+  - [Deploying container in ACA](https://docs.microsoft.com/en-us/azure/container-apps/get-started-existing-container-image-portal?pivots=container-apps-private-registry)
 
 
 - [Azure Functions](https://azure.microsoft.com/en-in/services/functions/)
@@ -66,4 +116,4 @@ Please find the most relevant resources below to continue your learning after th
   * [Serverless Apps eBook](https://docs.microsoft.com/en-us/dotnet/architecture/serverless/?WT.mc_id=dotnet-35129-website)
 
 
-   
+
