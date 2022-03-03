@@ -32,9 +32,14 @@ Please find the most relevant resources below to continue your learning after th
 ****
 ### DotNet Upgrade
 
+   ![image](https://user-images.githubusercontent.com/47940750/156492543-8a64e59d-1f41-469e-9f36-830d4875fd90.png)
+
+
 - [Upgrade Assistant](https://dotnet.microsoft.com/en-us/platform/upgrade-assistant)
    * [Upgrade ASP.NET MVC app to .NET 6](https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-aspnetmvc)
    * [DotNet Conference](https://www.youtube.com/watch?v=cOHXt_0VDRI)
+
+   ![image](https://user-images.githubusercontent.com/47940750/156492611-f938d8b1-b9a5-4f8c-b4c5-9046bd813bf4.png)
 
 - [Manual Upgrade](https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/)
     ![image](https://user-images.githubusercontent.com/47940750/156418789-a2a0cb26-8fde-401b-b9f5-95cab424bf5f.png)
