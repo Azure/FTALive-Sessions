@@ -53,22 +53,17 @@ Please find the most relevant resources below to continue your learning after th
    - [Deploy Containerzied Application to Azure App Service](https://docs.microsoft.com/en-us/learn/modules/deploy-run-container-app-service/)
 
 
-### Azure Kubernetes Services
+- [Azure Kubernetes Service](https://azure.microsoft.com/en-in/services/kubernetes-service/)
+  * [Run Your Application on Kubernetes](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-prepare-app)
+  * 
 
-- [Containers](https://azure.microsoft.com/en-in/product-categories/containers/)
-  * [Containerize Your Existing Application](https://docs.microsoft.com/en-us/azure/migrate/tutorial-app-containerization-aspnet-app-service)
-- [Microservices]( https://azure.microsoft.com/en-in/solutions/microservice-applications/)
+
+- [Azure Functions](https://azure.microsoft.com/en-in/services/functions/)
   * [Architecture for Containerized .NET Microservices](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/?WT.mc_id=dotnet-35129-website)
   * [DotNet Microservice Architecture Sample](https://github.com/dotnet-architecture/eShopOnContainers)
-- [Serverless](https://azure.microsoft.com/en-in/solutions/serverless/)
+  
+- [Azure Service Fabric](https://azure.microsoft.com/en-in/services/service-fabric/)
   * [Serverless Apps eBook](https://docs.microsoft.com/en-us/dotnet/architecture/serverless/?WT.mc_id=dotnet-35129-website)
 
 
-### Azure Functions
-
-- [DevOps](https://azure.microsoft.com/en-in/overview/devops-tutorial/)
-  * [CI/CD for Day 2 Operations](https://docs.microsoft.com/en-us/azure/migrate/tutorial-app-containerization-azure-pipeline)
-  * [Deploy a Docker based application to Azure App Service](https://www.azuredevopslabs.com/labs/vstsextend/docker/)
-  
-### Service Fabric
    
