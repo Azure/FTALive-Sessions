@@ -2,4 +2,4 @@
 
 This table of contents links to the materials for the respective FTA Live session.
 
-- [Azure Synapse](./Synapse/readme.md)
+- [Azure Synapse](./synapse/readme.md)
