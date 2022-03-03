@@ -13,7 +13,6 @@ In this session you will learn about upgrading the DotNet framework of your appl
     * Azure Kubernetes Service
     * Azure Container Instance
     * Azure Container Apps
-    * Azure Functions
     * Service Fabric
 
 ### Audience
