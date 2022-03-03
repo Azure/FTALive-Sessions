@@ -1,6 +1,6 @@
 # Topology Overview
 
-#### [prev](./basics.md) | [home](./welcome.md)  | [next](./connectivity.md)
+#### [prev](./basics.md) | [home](./readme.md)  | [next](./connectivity.md)
 
 ## Hub and spoke 
 

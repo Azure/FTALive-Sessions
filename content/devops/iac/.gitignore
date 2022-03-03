@@ -1,0 +1,10 @@
+**/*copy.*
+**/bin
+**/obj
+**/publish
+**/.vscode
+**/appsettings.*.json
+**/*.azcli
+**/demo
+**script.**
+**/schemas 

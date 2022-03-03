@@ -1,10 +1,10 @@
 # Topology
 
-#### [prev](./routing.md) | [home](./welcome.md)  | [next](./security.md)
+#### [prev](./routing.md) | [home](./readme.md)  | [next](./security.md)
 
 ## Hub and spoke 
 
-A working example for a hub and spoke topology is available for you to [try out](/deploy/).
+A working example for a hub and spoke topology.
 
 ![Topology Diagram](png/topology-210726.png)
 

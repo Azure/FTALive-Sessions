@@ -1,0 +1,78 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+# For your production deployments, you probably want to run CI on ALL branches.
+# You may have separate CI (lighter-weight) processes for your Dev/* builds...
+
+trigger:
+- main
+
+variables:
+- name: _filePath
+  value: '$(Build.SourcesDirectory)/deploy/'
+- name: _fileName
+  value: 'main'
+
+pool:
+  vmImage: 'windows-latest'
+
+stages:
+- stage: Build
+  jobs:
+  - job: Build_Bicep
+    steps:
+
+    - task: PowerShell@2
+      displayName: 'Build the ARM Template from the BICEP file'
+      inputs:
+        targetType: 'inline'
+        script: 'az bicep build --file ${{ variables._filePath }}${{ variables._fileName }}.bicep'
+
+    - task: CopyFiles@2
+      displayName: 'Copy ARM Template files to Staging directory'
+      inputs:
+        SourceFolder: '${{ variables._filePath }}'
+        Contents: '${{ variables._fileName }}.json'
+        TargetFolder: '$(Build.ArtifactStagingDirectory)/templates'
+
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish ARM Templates'
+      inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)/templates'
+        ArtifactName: 'templates'
+
+  - job: Build_App
+    steps:
+      - task: UseDotNet@2
+        displayName: 'Use .NET Core sdk'
+        inputs:
+          packageType: sdk
+          version: '5.0.x'
+
+      - task: DotNetCoreCLI@2
+        displayName: Restore
+        inputs:
+          command: restore
+          projects: '**/*.csproj'
+
+      - task: DotNetCoreCLI@2
+        displayName: dotnet build
+        inputs:
+          command: 'build'
+          projects: '**/*.csproj'
+
+      - task: DotNetCoreCLI@2
+        displayName: dotnet publish
+        inputs:
+          command: publish
+          publishWebProjects: True
+          arguments: '--output $(Build.ArtifactStagingDirectory)/app'
+          zipAfterPublish: True
+
+      - task: PublishBuildArtifacts@1
+        displayName: Publish artifacts
+        inputs:
+          pathtoPublish: '$(Build.ArtifactStagingDirectory)/app' 
+          artifactName: 'app'

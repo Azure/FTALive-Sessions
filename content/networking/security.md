@@ -1,6 +1,6 @@
 # Security
 
-#### [prev](./topology.md) | [home](./welcome.md)  | [next](./mgmt.md)
+#### [prev](./topology.md) | [home](./readme.md)  | [next](./mgmt.md)
 
 ## Network Security Groups (NSG)
 A network security group contains security rules that allow or deny inbound network traffic to, or outbound network traffic from, several types of Azure resources.

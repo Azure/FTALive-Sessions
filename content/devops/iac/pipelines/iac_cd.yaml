@@ -1,0 +1,59 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+parameters:
+  - name: location
+    type: string
+    displayName: 'Azure Region'
+    default: 'AustraliaEast'
+    values:
+      - 'AustraliaEast'
+      - 'AustraliaSouthEast'
+
+  - name: solutionName
+    type: string
+    displayName: 'Solution Name'
+    default: 'toylaunch'
+
+  - name: fileName
+    type: string
+    displayName: 'ARM Template File Name'
+    default: 'main.json'
+
+resources:
+  pipelines:
+    - pipeline: ci
+      source: fta-live-iac-ci
+      trigger: true
+
+trigger: none
+
+pool:
+  vmImage: 'ubuntu-latest'
+      
+stages:
+  - template: templates/iac_release.yaml
+    parameters:
+      location: '${{ parameters.location }}'
+      environment: 'nonprod'
+      name: '${{ parameters.solutionName }}'
+      fileName: '${{ parameters.fileName }}'
+
+  - template: templates/app_release.yml
+    parameters:
+      environment: 'nonprod'
+      name: '${{ parameters.solutionName }}'
+
+  - template: templates/iac_release.yaml
+    parameters:
+      location: '${{ parameters.location }}'
+      environment: 'prod'
+      name: '${{ parameters.solutionName }}'
+      fileName: '${{ parameters.fileName }}'
+      
+  - template: templates/app_release.yml
+    parameters:
+      environment: 'prod'
+      name: '${{ parameters.solutionName }}'
+
