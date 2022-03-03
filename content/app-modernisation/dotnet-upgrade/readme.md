@@ -55,7 +55,7 @@ Please find the most relevant resources below to continue your learning after th
 
 - [Azure Kubernetes Service](https://azure.microsoft.com/en-in/services/kubernetes-service/)
   * [Run Your Application on Kubernetes](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-prepare-app)
-  * 
+  * [DevOps with Kubernetes](https://www.azuredevopslabs.com/labs/vstsextend/kubernetes/)
 
 
 - [Azure Functions](https://azure.microsoft.com/en-in/services/functions/)
