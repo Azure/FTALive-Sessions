@@ -82,20 +82,6 @@ Please find the most relevant resources below to continue your learning after th
    - HTTP modules
    - ASP.NET web Forms
    - Server WCF
-   
-   
-
-#### [Manual Upgrade Process](https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/)
-
-- Check database connectivity
-- Authentication
-- Assemblies in the GAC
-- IIS settings
-- COM and COM+ components
-- Physical Directories
-- HTTPS bindings and SSL
-- Website size
-- Monitoring and diagnostics, etc..
 
 
 
