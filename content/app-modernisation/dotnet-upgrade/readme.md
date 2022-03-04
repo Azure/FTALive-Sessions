@@ -31,6 +31,13 @@ In this session you will learn how to:
 
 Please find the most relevant resources below to continue your learning after this session:
 ****
+### DotNet 6
+
+- [Introduction](https://dotnet.microsoft.com)
+- [Why to migrate?](https://devblogs.microsoft.com/dotnet/announcing-net-6/)
+
+
+
 ### DotNet Upgrade
 
 ####    Typical workflow
@@ -109,7 +116,7 @@ Please find the most relevant resources below to continue your learning after th
 - [Azure Container Apps](https://azure.microsoft.com/en-in/services/container-apps/)
   - [Deploying container in ACA](https://docs.microsoft.com/en-us/azure/container-apps/get-started-existing-container-image-portal?pivots=container-apps-private-registry)
 
- 
+
 - [Azure Service Fabric](https://azure.microsoft.com/en-in/services/service-fabric/)
   * 
 
