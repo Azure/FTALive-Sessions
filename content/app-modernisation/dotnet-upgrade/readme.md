@@ -48,7 +48,7 @@ Please find the most relevant resources below to continue your learning after th
 
 - [Upgrade Assistant](https://dotnet.microsoft.com/en-us/platform/upgrade-assistant)
    * [Upgrade ASP.NET MVC app to .NET 6](https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-aspnetmvc)
-   * [DotNet Conference](https://www.youtube.com/watch?v=cOHXt_0VDRI)
+   * [DotNet Conference video link](https://www.youtube.com/watch?v=cOHXt_0VDRI)
    * [DotNet upgrade eBook](https://docs.microsoft.com/en-us/dotnet/architecture/porting-existing-aspnet-apps/?WT.mc_id=dotnet-35129-website)
 
    
