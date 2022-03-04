@@ -1,4 +1,4 @@
-#### [prev](./Pre-requisites.md) | [home](./welcome.md) 
+#### [prev](./Pre-requisites.md) | [home](./readme.md) 
 
 # What Now?
 

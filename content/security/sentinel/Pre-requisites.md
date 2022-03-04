@@ -1,4 +1,4 @@
-#### [prev](./welcome.md) | [home](./welcome.md)  | [next](./take-aways.md)
+#### [prev](./readme.md) | [home](./readme.md)  | [next](./take-aways.md)
 
 # Getting started
 
@@ -103,4 +103,4 @@ Now that you have made the decisions around Log Analytics and RBAC you need to s
 
 [Azure Sentinel Custom Connectors](https://techcommunity.microsoft.com/t5/azure-sentinel/azure-sentinel-creating-custom-connectors/ba-p/864060)
 
-#### [prev](./welcome.md) | [home](./welcome.md)  | [next](./take-aways.md)
+#### [prev](./readme.md) | [home](./readme.md)  | [next](./take-aways.md)
