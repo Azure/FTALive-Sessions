@@ -34,9 +34,12 @@ Please find the most relevant resources below to continue your learning after th
 ### DotNet 6
 
 - [Introduction](https://dotnet.microsoft.com)
+
 - [Why to migrate?](https://devblogs.microsoft.com/dotnet/announcing-net-6/)
 
+- Considerations before migration
 
+  
 
 ### DotNet Upgrade
 
