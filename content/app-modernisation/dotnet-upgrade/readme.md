@@ -66,7 +66,7 @@ Please find the most relevant resources below to continue your learning after th
   ###### What is not Supported? 
   
   -[ASP.NET Web Forms]
-    ** Consider Blazor or Razor pages
+    **Consider Blazor or Razor pages
    -[Server-side WCF]
     ** Consider WebAPI, gRPC or core WCF
    -[Remoting]
