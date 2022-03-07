@@ -61,16 +61,15 @@ Please find the most relevant resources below to continue your learning after th
    * [DotNet Conference video link](https://www.youtube.com/watch?v=cOHXt_0VDRI)
    * [DotNet upgrade eBook](https://docs.microsoft.com/en-us/dotnet/architecture/porting-existing-aspnet-apps/?WT.mc_id=dotnet-35129-website)
 
-   
-
+    
+ ###### What is not Supported? 
  
-  
   **ASP.NET Web Forms**
-    - Consider Blazor or Razor pages
+    * Consider Blazor or Razor pages
    **Server-side WCF**
-    - Consider WebAPI, gRPC or core WCF
+    * Consider WebAPI, gRPC or core WCF
    **Remoting**
-    - Consider StreamJsonRPC, gRPC, or WebAPI
+    * Consider StreamJsonRPC, gRPC, or WebAPI
    
 
 
