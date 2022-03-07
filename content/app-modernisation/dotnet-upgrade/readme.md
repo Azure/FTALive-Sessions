@@ -69,7 +69,7 @@ Please find the most relevant resources below to continue your learning after th
     - Consider Blazor or Razor pages
    **Server-side WCF**
     - Consider WebAPI, gRPC or core WCF
-   3. **Remoting**
+   **Remoting**
     - Consider StreamJsonRPC, gRPC, or WebAPI
    
 
