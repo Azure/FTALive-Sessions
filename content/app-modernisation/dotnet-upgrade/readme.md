@@ -63,29 +63,15 @@ Please find the most relevant resources below to continue your learning after th
 
    
 
-   #### Rewrite or Reuse?
+  ###### What is not Supported? 
+  
+  -[ASP.NET Web Forms]
+    ** Consider Blazor or Razor pages
+   -[Server-side WCF]
+    ** Consider WebAPI, gRPC or core WCF
+   -[Remoting]
+    ** Consider StreamJsonRPC, gRPC, or WebAPI
    
-   ###### Reuse
-   
-   - Business logic
-   - Identity data
-   - Dependency injection container configuration
-   - Third party dependencies
-   - ASP.NET Controllers, Views and Models
-   
-   ###### Rewrite
-   
-   - ASP.NET Startup code
-     - Routing
-     - MVC configuration
-     - Authentication
-     - Error Handling, etc..
-   - Configuration
-   - Bundling/minification
-   - HTTP modules
-   - ASP.NET web Forms
-   - Server WCF
-
 
 
 ### Azure PaaS Services for DotNet apps
