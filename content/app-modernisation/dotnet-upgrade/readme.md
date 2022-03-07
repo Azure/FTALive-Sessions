@@ -63,7 +63,7 @@ Please find the most relevant resources below to continue your learning after th
 
    
 
-  ###### What is not Supported? 
+ 
   
   **ASP.NET Web Forms**
     - Consider Blazor or Razor pages
