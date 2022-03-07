@@ -61,30 +61,20 @@ Please find the most relevant resources below to continue your learning after th
    * [DotNet Conference video link](https://www.youtube.com/watch?v=cOHXt_0VDRI)
    * [DotNet upgrade eBook](https://docs.microsoft.com/en-us/dotnet/architecture/porting-existing-aspnet-apps/?WT.mc_id=dotnet-35129-website)
 
-   
+    
+ #### What is not Supported? 
 
-   #### Rewrite or Reuse?
-   
-   ###### Reuse
-   
-   - Business logic
-   - Identity data
-   - Dependency injection container configuration
-   - Third party dependencies
-   - ASP.NET Controllers, Views and Models
-   
-   ###### Rewrite
-   
-   - ASP.NET Startup code
-     - Routing
-     - MVC configuration
-     - Authentication
-     - Error Handling, etc..
-   - Configuration
-   - Bundling/minification
-   - HTTP modules
-   - ASP.NET web Forms
-   - Server WCF
+  **ASP.NET Web Forms** 
+
+- Consider Blazor or Razor pages
+
+   **Server-side WCF**
+
+- Consider WebAPI, gRPC or core WCF
+
+   **Remoting**
+
+- Consider StreamJsonRPC, gRPC, or WebAPI
 
 
 
