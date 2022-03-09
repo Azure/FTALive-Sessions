@@ -9,8 +9,8 @@ In this session you will learn about Azure platform services which can help desi
 * Introduction to Azure Platform Services
 * Compute Services
 * Integration Services
-* Database Services
 * Networking Services
+* Database Services
 
 ### Audience
 
