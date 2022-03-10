@@ -22,18 +22,20 @@ Please give us your feedback on https://aka.ms/ftalive-feedback
   * [Data Migration Assistant (DMA)](https://docs.microsoft.com/en-us/sql/dma/) (Demo 1a)
   * [Azure Migrate](https://docs.microsoft.com/en-us/azure/migrate/concepts-azure-sql-assessment-calculation)
   * [Azure Data Studio (ADS) with Migraition Extension](https://docs.microsoft.com/en-us/sql/azure-data-studio/extensions/azure-sql-migration-extension)  (Preview)
+  * [Right sizing](https://docs.microsoft.com/en-us/sql/dma/dma-sku-recommend-sql-db?view=sql-server-ver15)
+  * SFS (Preview) - TBD
 * Remediation
   * Fixing common issues / blockers
-  * SFS (Preview) - TBD
 * Migration Planning
-  * Create a migration plan and rollback plan
   * Offline, Online and downtime planning
+  * Create a migration plan and rollback plan
   * Pre-migration tidy up
-  * Capture performance baselines
+  * Capture a performance baseline [Link 1](https://docs.microsoft.com/en-us/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-collect-baseline) [Link 2](https://docs.microsoft.com/en-us/sql/relational-databases/performance/performance-monitoring-and-tuning-tools?view=sql-server-ver15) [Link 3](https://docs.microsoft.com/en-us/sql/relational-databases/performance/establish-a-performance-baseline?view=sql-server-2017) [Link 4](https://docs.microsoft.com/en-us/azure/azure-sql/migration-guides/managed-instance/sql-server-to-managed-instance-performance-baseline)
   * System level objects
 * Migration
   * [Data Migration Service (DMS)](https://docs.microsoft.com/en-us/azure/dms/) (Demo 1b)
   * [Data Migration Assistant (DMA)](https://docs.microsoft.com/en-us/sql/dma/)
+  * [Backup and restore](https://docs.microsoft.com/en-us/azure/azure-sql/managed-instance/restore-sample-database-quickstart)
   * [Log Replay Service (LRS)](https://docs.microsoft.com/en-us/azure/azure-sql/managed-instance/log-replay-service-migrate)
   * [.bacpac](https://docs.microsoft.com/en-us/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-ver15#bacpac)
   * [.dacpac](https://docs.microsoft.com/en-us/sql/relational-databases/data-tier-applications/data-tier-applications) + [Bulk Copy Protcol (BCP)](https://docs.microsoft.com/en-us/sql/tools/bcp-utility)
