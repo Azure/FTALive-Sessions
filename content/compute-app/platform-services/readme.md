@@ -57,6 +57,7 @@ Please find the most relevant resources below to continue your learning after th
   - [Internal Mode APIM Architecture](https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-internal-vnet?tabs=stv2)
   - [External mode API Architecture](https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-vnet?tabs=stv2)
   - [Publish Internal APIM externally](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/apis/protect-apis) - [Reference](https://docs.microsoft.com/en-us/azure/architecture/example-scenario/apps/publish-internal-apis-externally)
+  - [API Design eBook](https://aka.ms/api-design-ebook)
 - [Logic App](https://azure.microsoft.com/en-us/services/logic-apps/)
 
   - [Enterprise integration Architecture](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/enterprise-integration/basic-enterprise-integration)
