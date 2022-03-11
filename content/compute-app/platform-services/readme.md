@@ -10,7 +10,6 @@ In this session you will learn about Azure platform services which can help desi
 * Compute Services
 * Integration Services
 * Networking Services
-* Database Services
 
 ### Audience
 
@@ -80,7 +79,7 @@ Please find the most relevant resources below to continue your learning after th
 - [Azure DNS](https://azure.microsoft.com/en-us/services/dns/)
 - [Front Door](https://azure.microsoft.com/en-us/services/frontdoor/) / [Traffic Manager](https://azure.microsoft.com/en-us/services/traffic-manager/)
 
-
+## Additional Platform services
 
 ### Database Services
 
