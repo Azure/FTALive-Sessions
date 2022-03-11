@@ -14,12 +14,12 @@ Please give us your feedback on https://aka.ms/ftalive-feedback
 * Introduction 
     * So much information out there, why this session?
     * [Data Migration landing page](https://docs.microsoft.com/en-us/data-migration/)
-* Choosing an [Azure SQL](https://docs.microsoft.com/en-us/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview) target (Features -> Performamnce -> Other)
+* Choosing an [Azure SQL](https://docs.microsoft.com/en-us/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview) target (Vendor Support -> Compatibility -> Features -> Performance -> Other)
   * [Azure SQL DB](https://docs.microsoft.com/en-us/azure/azure-sql/database/)
   * [SQL Server on Azure VMs](https://docs.microsoft.com/en-us/azure/azure-sql/virtual-machines/)
   * [SQL Managed Instance](https://docs.microsoft.com/en-us/azure/azure-sql/managed-instance/)
   * [Comparison](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/feature-comparison-of-azure-sql-database-azure-sql-managed/ba-p/3154789)
-* Assessment
+* Discover & Assess
   * [Data Migration Assistant (DMA)](https://docs.microsoft.com/en-us/sql/dma/) (Demo 1a)
   * Azure Migrate [Link 1](https://docs.microsoft.com/en-us/azure/migrate/concepts-azure-sql-assessment-calculation) | [Link 2](https://docs.microsoft.com/en-us/azure/migrate/how-to-create-azure-sql-assessment#:~:text=%20Run%20an%20assessment%20as%20follows%3A%20%201,to%20which%20you%20want%20to%20migrate.%20See%20More.)
   * [Azure Data Studio (ADS) with Migraition Extension](https://docs.microsoft.com/en-us/sql/azure-data-studio/extensions/azure-sql-migration-extension)  (Preview)
@@ -27,6 +27,7 @@ Please give us your feedback on https://aka.ms/ftalive-feedback
   * [DEA](https://docs.microsoft.com/en-us/sql/dea/database-experimentation-assistant-overview?view=sql-server-ver15) & SFS (Preview) - TBD
 * Remediation
   * Fixing common issues / blockers
+  * To do: List 5 common issues
 * Migration Planning
   * Offline, Online and downtime planning
   * Create a migration plan and rollback plan
@@ -42,7 +43,11 @@ Please give us your feedback on https://aka.ms/ftalive-feedback
   * [.dacpac](https://docs.microsoft.com/en-us/sql/relational-databases/data-tier-applications/data-tier-applications) + [Bulk Copy Protcol (BCP)](https://docs.microsoft.com/en-us/sql/tools/bcp-utility)
   * [Smart Bulk Copy Tool](https://docs.microsoft.com/en-us/samples/azure-samples/smartbulkcopy/smart-bulk-copy/) (Demo 2)
   * [Managed Instance Link](https://docs.microsoft.com/en-us/azure/azure-sql/managed-instance/link-feature) (Demo coming soon)
-  * Azure Migrate
+  * Azure Migrate (ASR)
+* Post Migration
+  * Optimization
+  * Right sizing
+  * Enable additional features
 * Q&A
 
 You will need:
