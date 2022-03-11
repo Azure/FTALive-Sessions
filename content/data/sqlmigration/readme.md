@@ -14,16 +14,17 @@ Please give us your feedback on https://aka.ms/ftalive-feedback
 * Introduction 
     * So much information out there, why this session?
     * [Data Migration landing page](https://docs.microsoft.com/en-us/data-migration/)
-* Choosing an [Azure SQL](https://docs.microsoft.com/en-us/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview) target 
+* Choosing an [Azure SQL](https://docs.microsoft.com/en-us/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview) target (Features -> Performamnce -> Other)
   * [Azure SQL DB](https://docs.microsoft.com/en-us/azure/azure-sql/database/)
   * [SQL Server on Azure VMs](https://docs.microsoft.com/en-us/azure/azure-sql/virtual-machines/)
   * [SQL Managed Instance](https://docs.microsoft.com/en-us/azure/azure-sql/managed-instance/)
+  * [Comparison](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/feature-comparison-of-azure-sql-database-azure-sql-managed/ba-p/3154789)
 * Assessment
   * [Data Migration Assistant (DMA)](https://docs.microsoft.com/en-us/sql/dma/) (Demo 1a)
   * Azure Migrate [Link 1](https://docs.microsoft.com/en-us/azure/migrate/concepts-azure-sql-assessment-calculation) | [Link 2](https://docs.microsoft.com/en-us/azure/migrate/how-to-create-azure-sql-assessment#:~:text=%20Run%20an%20assessment%20as%20follows%3A%20%201,to%20which%20you%20want%20to%20migrate.%20See%20More.)
   * [Azure Data Studio (ADS) with Migraition Extension](https://docs.microsoft.com/en-us/sql/azure-data-studio/extensions/azure-sql-migration-extension)  (Preview)
   * [Right sizing](https://docs.microsoft.com/en-us/sql/dma/dma-sku-recommend-sql-db?view=sql-server-ver15)
-  * DEA & SFS (Preview) - TBD
+  * [DEA](https://docs.microsoft.com/en-us/sql/dea/database-experimentation-assistant-overview?view=sql-server-ver15) & SFS (Preview) - TBD
 * Remediation
   * Fixing common issues / blockers
 * Migration Planning
