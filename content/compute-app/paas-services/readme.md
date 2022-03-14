@@ -1,4 +1,4 @@
-# Azure Platform services - A Detailed Walkthrough 
+# Azure PaaS services - A Detailed Walkthrough 
 
 ## Overview
 
@@ -6,10 +6,9 @@ In this session you will learn about Azure platform services which can help desi
 
 ### Agenda
 
-* Introduction to Azure Platform Services
+* Introduction to Azure PaaS Services
 * Compute Services
 * Integration Services
-* Networking Services
 
 ### Audience
 
@@ -18,16 +17,16 @@ This session is most useful for application developers and architects who want t
 ### Goals
 
 In this session you will learn how to:
-* Leverage different platform services on Azure
-* Architectural best practices for leveraging these platform services
-* Hands-On Deployment to few of these Azure platform services
+* Leverage different PaaS services on Azure
+* Architectural best practices for leveraging these PaaS services
+* Hands-On Deployment to few of these Azure PaaS services
 
 
 ## Resources
 
 Please find the most relevant resources below to continue your learning after this session:
 ****
-### Azure Platform Services
+### Azure PaaS Services
 
 - [Introduction](https://azurecharts.com/overview/?f=paas)
 
@@ -57,39 +56,20 @@ Please find the most relevant resources below to continue your learning after th
   - [External mode API Architecture](https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-vnet?tabs=stv2)
   - [Publish Internal APIM externally](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/apis/protect-apis) - [Reference](https://docs.microsoft.com/en-us/azure/architecture/example-scenario/apps/publish-internal-apis-externally)
   - [API Design eBook](https://aka.ms/api-design-ebook)
+  
 - [Logic App](https://azure.microsoft.com/en-us/services/logic-apps/)
 
   - [Enterprise integration Architecture](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/enterprise-integration/basic-enterprise-integration)
+  
 - [Service Bus](https://azure.microsoft.com/en-us/services/service-bus/)
+
 - [Event Grid](https://azure.microsoft.com/en-us/services/event-grid/)
 
   - [Event based automation scenarios](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/serverless/cloud-automation)
+  
   - [Message Broker & Events Architecture](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/enterprise-integration/queues-events)
-
-
-
-### Networking Services
-
-
-- [Application Gateway](https://azure.microsoft.com/en-us/services/application-gateway/)
-- [Azure Firewall](https://azure.microsoft.com/en-us/services/azure-firewall/)
-
-  - [AppGW and Firewall patterns](https://docs.microsoft.com/en-us/azure/architecture/example-scenario/gateway/firewall-application-gateway)
-- [Load Balancer](https://azure.microsoft.com/en-us/products/azure-load-balancing/)
-- [Azure DNS](https://azure.microsoft.com/en-us/services/dns/)
-- [Front Door](https://azure.microsoft.com/en-us/services/frontdoor/) / [Traffic Manager](https://azure.microsoft.com/en-us/services/traffic-manager/)
-
-## Additional Platform services
-
-### Database Services
-
-
-- [Azure cache for Redis](https://azure.microsoft.com/en-us/services/cache/)
-- NoSQL - [Cosmos DB](https://azure.microsoft.com/en-us/services/cosmos-db/)
-- [SQL Database](https://azure.microsoft.com/en-us/products/azure-sql/database/) / [Managed Instance](https://azure.microsoft.com/en-us/products/azure-sql/managed-instance/)
-- OSS databases - [MySQL](https://azure.microsoft.com/en-us/services/mysql/) / [MariaDB](https://azure.microsoft.com/en-us/services/mariadb/) / [PostgreSQL](https://azure.microsoft.com/en-us/services/postgresql/)
-
-
+  
+    
 
 
 
