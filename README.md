@@ -80,7 +80,7 @@ Management and Governance	| Azure Application Monitoring | In this session, you 
  |  |  |  |
 Management and Governance	| Azure Cost Management | Learn how to use the cost optimization pillar of the Microsoft Azure Well-Architected Framework to design a cloud-based architecture that is efficient, eliminates waste, and gives you full visibility into where your money is spent on cloud resources. |
  |  |  |  |
-Management and Governance	| Kusto Query Language | In this session, learn how to write queries in Kusto Query Language (KQL) in the context of Azure Monitor and Azure Sentinel. We will cover best practices, design, how to create queries in the interface and leveraging scalar/aggregation functions along with much more. |
+Management and Governance	| Kusto Query Language | In this session, learn how to write queries in Kusto Query Language (KQL) in the context of Azure Monitor and Microsoft Sentinel. We will cover best practices, design, how to create queries in the interface and leveraging scalar/aggregation functions along with much more. |
  |  |  |  |
 Networking	| Azure Networking Part 1 | This is Part One in a Two-Part Series. There are several critical design areas surrounding networking and connectivity to, from, and within Microsoft Azure. You will need to make networking design decisions to properly support the workloads and services that will be hosted in the cloud. The goal of this series is to provide you with an understanding of Azure's core networking services, how they interact with one another, and their respective best practices to aid with your deployments. |
  |  |  |  |
