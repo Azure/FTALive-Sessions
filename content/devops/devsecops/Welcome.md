@@ -1,4 +1,4 @@
-# FastTrack for Azure Application Development Security Call
+# FastTrack for Azure DevSecOps Call
 
 Welcome to the FastTrack for Azure DevSecOps call.
 
