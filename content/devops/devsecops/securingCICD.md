@@ -12,7 +12,9 @@
 
 Securing your CI/CD workflow makes a lot of sense, since it gives a point of access to the different environments you deploy to. This implies that you need to take extra care of into defining who has access to your repositories, pipelines and workflows and how each of your automatic processes are governed.
 
-For overall governance of your CI/CD processes, take a look at the [DevOps Governance session](../part-1-ado-governance.md) we host in [FTA Live](https://fasttrack.azure.com/live/category/DevOps).
+For overall governance of your CI/CD processes, take a look at the [DevOps Governance session](../patterns-and-practices/readme.md) we host in [FTA Live](https://fasttrack.azure.com/live/category/DevOps).
+
+<img src="https://raw.githubusercontent.com/Azure/devops-governance/main/images/e2e-governance-overview.svg" width="640" alt="Azure Architect Center - E2E Governance">
 
 This session is based upon: [Secure the pipeline and CI/CD workflow](https://docs.microsoft.com/azure/cloud-adoption-framework/secure/best-practices/secure-devops).
 
