@@ -10,6 +10,7 @@
 **Feeback** We would like to hear your thoughts, please provide us your feedback [https://aka.ms/ftalive-feedback](https://aka.ms/ftalive-feedback).
 
 ### Agenda
+1. [Why talk about governance?](./why.md)
 1. [Setup guide overview](https://portal.azure.com/#blade/Microsoft_Azure_Resources/QuickstartPlaybookBlade/guideId/intro-azure-setup)
 1. Organize resources
     1. [Azure Resource Manager Overview](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/overview)
