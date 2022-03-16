@@ -1,3 +1,7 @@
+# Demos
+
+#### [prev](./postmigration.md) | [home](./readme.md)  | [next](./faq.md)
+
 # Demo 1a - Assess Source Environment
 ## Objective
 ### Assess source SQL Server instance migrating to Azure SQL Managed Instance by using [Database Migration Assistant (DMA)](https://docs.microsoft.com/en-us/sql/dma/dma-overview?view=sql-server-ver15#supported-source-and-target-versions). This helps you to detect the issues below which can affect Azure SQL Mnaged Instace migration and provides detailed guidance on how to resolve them.
