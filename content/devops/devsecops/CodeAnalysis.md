@@ -33,7 +33,7 @@ The following are tools that you may considered:
 
 Checking the security on any dependencies you may use in your project:
 
-- [Dependabot](https://github.com/dependabot/dependabot-core#dependabot) - dependency review and alerts in GitHub.
+- [Dependabot](https://github.com/dependabot/dependabot-core#dependabot) - dependency review and alerts in GitHub. [Demo](https://github.com/dependabot/demo)
 - [OWASP Dependency-check project](https://owasp.org/www-project-dependency-check/)
 - [Securing software supply chain](https://docs.github.com/en/free-pro-team@latest/github/managing-security-vulnerabilities) in GitHub.
 
