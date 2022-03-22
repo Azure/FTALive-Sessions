@@ -167,8 +167,6 @@ IP tables for Azure CNI use one additional rule chain "MASQUERADE" which is call
 The two ways that Azure provides network policies use Linux IP tables to control the traffic between pods.
 [Create an AKS cluster with network policies](https://docs.microsoft.com/azure/aks/use-network-policies#network-policy-options-in-aks).
 
-> Walkthrough the customer on the rules and rule chains and how the routing decision has been made.
-
 ## Network Policies
 [Kubernetes Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/) are used to secure traffic only between the pods.
 
