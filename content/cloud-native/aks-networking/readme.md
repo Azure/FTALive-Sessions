@@ -75,17 +75,6 @@ A drawback with the traditional CNI is the exhaustion of pod IP addresses as the
 
 The new [dynamic IP](https://docs.microsoft.com/en-us/azure/aks/configure-azure-cni#dynamic-allocation-of-ips-and-enhanced-subnet-support-preview) allocation capability in Azure CNI solves this problem by allotting pod IPs from a subnet separate from the subnet hosting the AKS cluster.
 
-## The IP tables in Azure Kubernetes Service
-- Cluster level rules for each service.
-- KUBE-MARK-MASQ, KUBE-SVC-xyz, and KUBE-SEP-xyz rules.
-
-IP tables for Azure CNI use one additional rule chain "MASQUERADE" which is called by post routing chain. It is one of the last steps if the packets are leaving cluster. This sets the source IP to the node IP.
-
-The two ways that Azure provides network policies use Linux IP tables to control the traffic between pods.
-[Create an AKS cluster with network policies](https://docs.microsoft.com/azure/aks/use-network-policies#network-policy-options-in-aks).
-
-> Walkthrough the customer on the rules and rule chains and how the routing decision has been made.
-
 ## If Azure Application Gateway is used, how the networking between Application gateway and AKS can be setup?
 
 Refer [How to setup networking between Application gateway and AKS](https://azure.github.io/application-gateway-kubernetes-ingress/how-tos/networking/#with-kubenet)
@@ -168,6 +157,17 @@ Whilst AKS customers are able to route egress traffic through an Azure Load Bala
     - [How to create a Standard LoadBalancer](https://docs.microsoft.com/azure/aks/load-balancer-standard)
     - [Use a static public IP address and DNS label with the AKS load balancer](https://docs.microsoft.com/azure/aks/static-ip)
 - External DNS : Creates a specific DNS entry for easier application access.
+
+## The IP tables in Azure Kubernetes Service
+- Cluster level rules for each service.
+- KUBE-MARK-MASQ, KUBE-SVC-xyz, and KUBE-SEP-xyz rules.
+
+IP tables for Azure CNI use one additional rule chain "MASQUERADE" which is called by post routing chain. It is one of the last steps if the packets are leaving cluster. This sets the source IP to the node IP.
+
+The two ways that Azure provides network policies use Linux IP tables to control the traffic between pods.
+[Create an AKS cluster with network policies](https://docs.microsoft.com/azure/aks/use-network-policies#network-policy-options-in-aks).
+
+> Walkthrough the customer on the rules and rule chains and how the routing decision has been made.
 
 ## Network Policies
 [Kubernetes Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/) are used to secure traffic only between the pods.
