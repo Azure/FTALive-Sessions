@@ -136,7 +136,7 @@ How to [restrict egress traffic using Azure Firewall?](https://docs.microsoft.co
     -  [Create Azure Firewall with multiple public IP address](https://docs.microsoft.com/azure/firewall/quick-create-multiple-ip-template)
 - Azure Firewall provides `AzureKubernetesService` FQDN tag.
 - If `outboundType` as UDR, load balancer deployed when first services with type as `loadbalancer`. https://docs.microsoft.com/azure/aks/egress-outboundtype#load-balancer-creation-with-userdefinedrouting
-- Load blajacer with public IP is for inbound requests, rules are configured by Azure.
+- Load balancer with public IP is for inbound requests, rules are configured by Azure.
 - No outbound public IP address or oubtound rules
 
 ### Additional information
