@@ -28,7 +28,7 @@ Supported databases:
 
 AMS uses the [Azure Monitor](https://docs.microsoft.com/en-us/azure/azure-monitor/overview) capabilities of [Log Analytics](https://docs.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-overview) and [Workbooks](https://docs.microsoft.com/en-us/azure/azure-monitor/visualize/workbooks-overview).
 
-For more information, please refer to [Monitor SAP on Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/monitor-sap-on-azure)
+For more information, please refer to [Monitor SAP on Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/monitor-sap-on-azure).
 
 ### Links
 
@@ -40,6 +40,10 @@ For more information, please refer to [Monitor SAP on Azure](https://docs.micros
 - [New features in AMS: Alerts, 'data-size' for SAP HANA, HA cluster (RHEL) and new NetWeaver telemetry](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/new-features-in-ams-alerts-data-size-for-sap-hana-ha-cluster/ba-p/2550708)
 - [Using Azure Lighthouse and Azure Monitor for SAP Solutions to view telemetry across Multiple Tenants](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/using-azure-lighthouse-and-azure-monitor-for-sap-solutions-to/ba-p/1537293)
 - [IT Service Management Connector Overview](https://docs.microsoft.com/en-us/azure/azure-monitor/alerts/itsmc-overview)
+- [Public Preview of SAP NetWeaver, North Europe, OS, and new insights in Cluster Monitoring](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/public-preview-of-sap-netweaver-north-europe-os-and-new-insights/ba-p/2262975)
+- [SUSE & Microsoft collaborates to provide SAP monitoring](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/suse-amp-microsoft-collaborates-to-provide-sap-monitoring/ba-p/1571926)
+- [SUE Monitoring Capabilities](https://documentation.suse.com/sles-sap/15-SP2/html/SLES-SAP-sol-monitoring/art-sol-monitoring.html)
+- [SAP on Azure Video Podcast - Update on Azure Monitor for SAP](https://www.youtube.com/watch?v=8GkISZgiuZg)
 
 ## Microsoft Sentinel Continuous Threat Monitoring for SAP
 
