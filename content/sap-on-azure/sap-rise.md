@@ -1,4 +1,4 @@
-# Welcome to FTA Live session "Connect and Integrate RISE with SAP landscapes to Azure"
+# Welcome to FTA Live session "Connect and Integrate RISE with SAP Landscapes to Azure"
 
 ## Agenda
 
