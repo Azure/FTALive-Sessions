@@ -30,7 +30,19 @@ AMS uses the [Azure Monitor](https://docs.microsoft.com/en-us/azure/azure-monito
 
 For more information, please refer to [Monitor SAP on Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/monitor-sap-on-azure)
 
+### Links
+
+[AMS Onboarding Guide](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/azure-monitor-sap-quickstart)
+[AMS FAQ](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/azure-monitor-faq)
+[Private preview: Root cause analysis, new telemetry, & alerts for SAP NetWeaver in AMS](https://azure.microsoft.com/en-us/updates/private-preview-root-cause-analysis-new-telemetry-for-sap-netweaver/)
+[Azure Monitor Log Analytics data export is in public preview](https://azure.microsoft.com/en-us/updates/azure-monitor-log-analytics-data-export-is-in-public-preview/)
+[SAP NetWeaver monitoring- Azure Monitoring for SAP Solutions](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/sap-netweaver-monitoring-azure-monitoring-for-sap-solutions/ba-p/2262721)
+[New features in AMS: Alerts, 'data-size' for SAP HANA, HA cluster (RHEL) and new NetWeaver telemetry](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/new-features-in-ams-alerts-data-size-for-sap-hana-ha-cluster/ba-p/2550708)
+[Using Azure Lighthouse and Azure Monitor for SAP Solutions to view telemetry across Multiple Tenants](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/using-azure-lighthouse-and-azure-monitor-for-sap-solutions-to/ba-p/1537293)
+[IT Service Management Connector Overview](https://docs.microsoft.com/en-us/azure/azure-monitor/alerts/itsmc-overview)
+
 ## Microsoft Sentinel Continuous Threat Monitoring for SAP
+
 > [!IMPORTANT]
 > The Microsoft Sentinel SAP solution is currently in PREVIEW
 
@@ -38,7 +50,7 @@ For more information, please refer to [Monitor SAP on Azure](https://docs.micros
 
 By using the Microsoft Sentinel SAP data connector, you can monitor SAP systems for sophisticated threats within the business and application layer. The data connector collects logs from Advanced Business Application Programming (ABAP) via NetWeaver RFC calls and from file storage data via OSSAP Control interface. The SAP data connector adds to the ability of Microsoft Sentinel to monitor the SAP underlying infrastructure.
 
-Microsoft Sentinel provides you [SAP Solution security content](https://docs.microsoft.com/en-us/azure/sentinel/sap-solution-security-content) to gain insight into your organization's SAP environment and improve any related security operation capabilities. 
+Microsoft Sentinel provides you [SAP Solution security content](https://docs.microsoft.com/en-us/azure/sentinel/sap-solution-security-content) to gain insight into your organization's SAP environment and improve any related security operation capabilities.
 
 Supported SAP versions. We recommend using [SAP_BASIS versions 750 SP13](https://support.sap.com/en/my-support/software-downloads/support-package-stacks/product-versions.html#:%7E:text=SAP%20NetWeaver%20%20%20%20SAP%20Product%20Version,%20%20SAPKB710%3Cxx%3E%20%207%20more%20rows) or later.
 For more information, please refer to [Microsoft Sentinel for SAP](https://docs.microsoft.com/en-us/azure/sentinel/sap-deploy-solution)
