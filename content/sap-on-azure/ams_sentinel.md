@@ -32,14 +32,14 @@ For more information, please refer to [Monitor SAP on Azure](https://docs.micros
 
 ### Links
 
-[AMS Onboarding Guide](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/azure-monitor-sap-quickstart)
-[AMS FAQ](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/azure-monitor-faq)
-[Private preview: Root cause analysis, new telemetry, & alerts for SAP NetWeaver in AMS](https://azure.microsoft.com/en-us/updates/private-preview-root-cause-analysis-new-telemetry-for-sap-netweaver/)
-[Azure Monitor Log Analytics data export is in public preview](https://azure.microsoft.com/en-us/updates/azure-monitor-log-analytics-data-export-is-in-public-preview/)
-[SAP NetWeaver monitoring- Azure Monitoring for SAP Solutions](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/sap-netweaver-monitoring-azure-monitoring-for-sap-solutions/ba-p/2262721)
-[New features in AMS: Alerts, 'data-size' for SAP HANA, HA cluster (RHEL) and new NetWeaver telemetry](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/new-features-in-ams-alerts-data-size-for-sap-hana-ha-cluster/ba-p/2550708)
-[Using Azure Lighthouse and Azure Monitor for SAP Solutions to view telemetry across Multiple Tenants](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/using-azure-lighthouse-and-azure-monitor-for-sap-solutions-to/ba-p/1537293)
-[IT Service Management Connector Overview](https://docs.microsoft.com/en-us/azure/azure-monitor/alerts/itsmc-overview)
+- [AMS Onboarding Guide](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/azure-monitor-sap-quickstart)
+- [AMS FAQ](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/azure-monitor-faq)
+- [Private preview: Root cause analysis, new telemetry, & alerts for SAP NetWeaver in AMS](https://azure.microsoft.com/en-us/updates/private-preview-root-cause-analysis-new-telemetry-for-sap-netweaver/)
+- [Azure Monitor Log Analytics data export is in public preview](https://azure.microsoft.com/en-us/updates/azure-monitor-log-analytics-data-export-is-in-public-preview/)
+- [SAP NetWeaver monitoring- Azure Monitoring for SAP Solutions](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/sap-netweaver-monitoring-azure-monitoring-for-sap-solutions/ba-p/2262721)
+- [New features in AMS: Alerts, 'data-size' for SAP HANA, HA cluster (RHEL) and new NetWeaver telemetry](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/new-features-in-ams-alerts-data-size-for-sap-hana-ha-cluster/ba-p/2550708)
+- [Using Azure Lighthouse and Azure Monitor for SAP Solutions to view telemetry across Multiple Tenants](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/using-azure-lighthouse-and-azure-monitor-for-sap-solutions-to/ba-p/1537293)
+- [IT Service Management Connector Overview](https://docs.microsoft.com/en-us/azure/azure-monitor/alerts/itsmc-overview)
 
 ## Microsoft Sentinel Continuous Threat Monitoring for SAP
 
