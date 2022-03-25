@@ -31,3 +31,14 @@ AMS uses the [Azure Monitor](https://docs.microsoft.com/en-us/azure/azure-monito
 For more information, please refer to [Monitor SAP on Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/monitor-sap-on-azure)
 
 ## Microsoft Sentinel Continuous Threat Monitoring for SAP
+> [!IMPORTANT]
+> The Microsoft Sentinel SAP solution is currently in PREVIEW
+
+[Microsoft Sentinel solutions](https://docs.microsoft.com/en-us/azure/sentinel/sentinel-solutions) include bundled security content, such as threat detections, workbooks, and watchlists. With these solutions, you can onboard Microsoft Sentinel security content for a specific data connector by using a single process.
+
+By using the Microsoft Sentinel SAP data connector, you can monitor SAP systems for sophisticated threats within the business and application layer. The data connector collects logs from Advanced Business Application Programming (ABAP) via NetWeaver RFC calls and from file storage data via OSSAP Control interface. The SAP data connector adds to the ability of Microsoft Sentinel to monitor the SAP underlying infrastructure.
+
+Microsoft Sentinel provides you [SAP Solution security content](https://docs.microsoft.com/en-us/azure/sentinel/sap-solution-security-content) to gain insight into your organization's SAP environment and improve any related security operation capabilities. 
+
+Supported SAP versions. We recommend using [SAP_BASIS versions 750 SP13](https://support.sap.com/en/my-support/software-downloads/support-package-stacks/product-versions.html#:%7E:text=SAP%20NetWeaver%20%20%20%20SAP%20Product%20Version,%20%20SAPKB710%3Cxx%3E%20%207%20more%20rows) or later.
+For more information, please refer to [Microsoft Sentinel for SAP](https://docs.microsoft.com/en-us/azure/sentinel/sap-deploy-solution)
