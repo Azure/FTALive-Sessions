@@ -8,6 +8,9 @@ Azure Monitor for SAP Solutions (AMS) is an Azure-native monitoring product for 
 
 ## Azure Monitor for SAP Solutions (AMS)
 
+> [!IMPORTANT]
+> Azure Monitor for SAP Solutions is currently in PREVIEW.
+
 When you have critical applications and business processes relying on Azure resources, you'll want to monitor those resources for their availability, performance, and operation.
 
 Azure Monitor for SAP Solutions is an Azure-native monitoring product for anyone running their SAP landscapes on Azure. It works with both [SAP on Azure Virtual Machines](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/hana-get-started) and [SAP on HANA Large Instances](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/hana-overview-architecture).
@@ -24,9 +27,9 @@ Supported infrastructure:
 Supported databases:
 
 - SAP HANA
-- Microsoft SQL server
+- Microsoft SQL Server
 
-AMS uses the [Azure Monitor](https://docs.microsoft.com/en-us/azure/azure-monitor/overview) capabilities of [Log Analytics](https://docs.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-overview) and [Workbooks](https://docs.microsoft.com/en-us/azure/azure-monitor/visualize/workbooks-overview).
+AMS uses capabilities of [Log Analytics](https://docs.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-overview) and [Workbooks](https://docs.microsoft.com/en-us/azure/azure-monitor/visualize/workbooks-overview) in [Azure Monitor](https://docs.microsoft.com/en-us/azure/azure-monitor/overview).
 
 For more information, please refer to [Monitor SAP on Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/monitor-sap-on-azure).
 
@@ -42,13 +45,13 @@ For more information, please refer to [Monitor SAP on Azure](https://docs.micros
 - [IT Service Management Connector Overview](https://docs.microsoft.com/en-us/azure/azure-monitor/alerts/itsmc-overview)
 - [Public Preview of SAP NetWeaver, North Europe, OS, and new insights in Cluster Monitoring](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/public-preview-of-sap-netweaver-north-europe-os-and-new-insights/ba-p/2262975)
 - [SUSE & Microsoft collaborates to provide SAP monitoring](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/suse-amp-microsoft-collaborates-to-provide-sap-monitoring/ba-p/1571926)
-- [SUE Monitoring Capabilities](https://documentation.suse.com/sles-sap/15-SP2/html/SLES-SAP-sol-monitoring/art-sol-monitoring.html)
-- [SAP on Azure Video Podcast - Update on Azure Monitor for SAP](https://www.youtube.com/watch?v=8GkISZgiuZg)
+- [SUSE Monitoring Capabilities](https://documentation.suse.com/sles-sap/15-SP2/html/SLES-SAP-sol-monitoring/art-sol-monitoring.html)
+- [SAP on Azure Video Podcast - Update on Azure Monitor for SAP Solutions](https://www.youtube.com/watch?v=8GkISZgiuZg)
 
 ## Microsoft Sentinel Continuous Threat Monitoring for SAP
 
 > [!IMPORTANT]
-> The Microsoft Sentinel SAP solution is currently in PREVIEW
+> The Microsoft Sentinel SAP solution is currently in PREVIEW.
 
 [Microsoft Sentinel solutions](https://docs.microsoft.com/en-us/azure/sentinel/sentinel-solutions) include bundled security content, such as threat detections, workbooks, and watchlists. With these solutions, you can onboard Microsoft Sentinel security content for a specific data connector by using a single process.
 
