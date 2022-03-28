@@ -1,0 +1,11 @@
+variables:
+  - name: serviceConnectionName
+    value: '<spn-name>'
+  - name: resourceGroupName
+    value: '<rg-name>'
+  - name: virtualNetworkName
+    value: '<vnet-name>'
+  - name: subnetName
+    value: '<subnet-name>'
+  - name: location
+    value: '<region>'
