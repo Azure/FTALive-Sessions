@@ -61,3 +61,12 @@ Microsoft Sentinel provides you [SAP Solution security content](https://docs.mic
 
 Supported SAP versions. We recommend using [SAP_BASIS versions 750 SP13](https://support.sap.com/en/my-support/software-downloads/support-package-stacks/product-versions.html#:%7E:text=SAP%20NetWeaver%20%20%20%20SAP%20Product%20Version,%20%20SAPKB710%3Cxx%3E%20%207%20more%20rows) or later.
 For more information, please refer to [Microsoft Sentinel for SAP](https://docs.microsoft.com/en-us/azure/sentinel/sap-deploy-solution)
+
+### Links
+
+- [Integrate SAP and Microsoft Sentinel](https://docs.microsoft.com/en-us/azure/sentinel/sap-deploy-solution)
+- [Microsoft Sentinel SAP Solution: Security Content](https://docs.microsoft.com/en-us/azure/sentinel/sap-solution-security-content)
+- [SAP on Azure Video Podcast - Updates on Microsoft Sentinel for SAP](https://youtu.be/mn0kqpxitsQ)
+- [SAP Continous Threat Monitoring workbooks](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/microsoft-sentinel-sap-continuous-threat-monitoring-workbooks/ba-p/3015630)
+- [Public case study](https://www.microsoft.com/insidetrack/blog/protecting-microsofts-sap-workload-with-microsoft-sentinel/)
+- [Sample use case](https://blogs.sap.com/2022/03/14/microsoft-sentinel-and-logic-apps-can-be-the-guardians-of-sap-security-operations-secops/)
