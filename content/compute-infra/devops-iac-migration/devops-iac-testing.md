@@ -41,7 +41,7 @@ Please refer to the [Pre-Migration and Post-Migration Activities](https://github
 - Ensure Rollback plan is in place for the re-hosted VMs.
 
 
-### 1.2\. Create the appropriate scripts that correlate to the [types of tests](https://github.com/Azure/fta-liftandshift-dcmigration/blob/main/doc/testing.md#2-migration-plan-definition) needed for your deployment:
+### 1.2\. Create the appropriate scripts that correlate to the [types of tests](https://github.com/Azure/FTALive-Sessions/blob/main/content/compute-infra/server-migration/testing.md#2-migration-plan-definition) needed for your deployment:
 - Smoke Test
 - UAT
 - Failover
@@ -69,7 +69,7 @@ Pipeline Tasks:
 
 ### 2.4\. Validate Target VNet Tests
 * If execute the isolated VNet Testing Pipeline, validate the pipeline has ran through the necessary tasks above.
-* If utilizing the final Migration VNet, set the maintenance window and prepare migration waves for execution using the sample pipeline [template](../src/testing/testing-pipeline.yml) for migration.
+* If utilizing the final Migration VNet, set the maintenance window and prepare migration waves for execution using the sample pipeline [template](./src/testing/testing-pipeline.yml) for migration.
 * If any of the tests fail within a pipeline stage, execute the Rollback plan for the migration wave.
 
 ### 2.5\. Post Test Migration Tasks 
