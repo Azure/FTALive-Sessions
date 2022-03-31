@@ -1,7 +1,12 @@
-# Welcome to FTA Live session "Connect and Integrate RISE with SAP Landscapes to Azure"
+# Welcome to FTA Live session "Connect and Integrate _RISE with SAP_ Landscapes to Azure"
 
 ## Agenda
 
-In this session you will learn about Azure network connectivity options and how to connect SAP-managed RISE with SAP landscapes into your own Azure virtual networks.
+In the first part of the session, you will learn about network connectivity options between SAP-managed _RISE with SAP_ landscapes in Azure and your own Azure virtual networks. We will also give a high level overview of DNS configuration options and SAP Private Link Service for Azure.
 
-We will also present a sample integration scenario for sending e-mails from SAP NetWeaver through Exchange Online, independent of your deployment choice on Azure, native SAP on Azure or RISE with SAP.
+In the second part, we will present outbound e-mail communication from SAP NetWeaver-based systems through Exchange Online, considering different SMTP options.
+
+### Links
+
+- [Integrating Azure with SAP RISE managed workloads](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/sap-rise-integration)
+- [Exchange Online Integration for Email-Outbound from SAP NetWeaver](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/exchange-online-integration-sap-email-outbound)
