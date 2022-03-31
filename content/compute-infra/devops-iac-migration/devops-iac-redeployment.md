@@ -55,12 +55,11 @@ Details:
 - `All_Assessed_Machines.csv` and `All_Assessed_Disks.csv`: CSV files extracted from Azure Migrate Assessement excel file
 - `scripts`: folder to store powershell files for executing different test and validation scripts
     > Note: Test scripts are to be developed based on needs for your migration environment. (Recommendation is to develop them in PowerShell)
+- `pipeline-script.ps1`: script that deploys compute resources
 - `testing` folder: used for test migration purposes
-    - `testing-pipeline-script.ps1`: script that deploys test environment resourcs
     - `testing-pipeline.yml`: file for testing in an isolated or migration VNet
     - `testing-variables.yml`: variables used in powershell and pipeline yaml
 - `rehost` folder: used for rehosting migration resources
     - `azure-pipeline.yml`: file for rehosting VMs in a specified migration VNet
-    - `pipeline-script.ps1`: script that deploys migration resources
     - `variables.yml`: variables used in powershell and pipeline yaml
         - Manually populate the `variables.yml` using CSV recommended values and what is expected in Azure.
