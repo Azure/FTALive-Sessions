@@ -5,7 +5,7 @@ Below are descriptions to FTA Live sessions in the [AVD](https://fasttrack.azure
 List of Sessions
 - [Azure Virtual Desktop](#azure-virtual-desktop)
 - [FTA Live: FTA エンジニアによる AVD アーキテクチャーデザインガイドセッション](#fta-live-fta-エンジニアによる-avd-アーキテクチャーデザインガイドセッション)
-- 
+ 
 ---
 
 ## Azure Virtual Desktop 
