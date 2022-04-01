@@ -2,11 +2,64 @@
 
 Below are descriptions of FTA Live sessions as they appear on the [FTA Live Website](https://fasttrack.azure.com/live).
 
-### Select a Category
-
-Note: these categories reflect the listings on the FTA Live Website and ***may not*** reflect FastTrack internal categorization. 
+### Find a Session
 
 TODO: actually the categories on the website don't consistently match neither Azure Solution Areas nor FTA internal categories 😓
+
+Click on a category to view the description
+
+- [AppDev](./app-dev.md)
+  - App Service Networking
+  - PaaS Networking
+  - Cloud Architecture
+  - Microsoft Identity Platform
+- [Compute](./compute.md)
+	- Azure Arc for Servers
+	- Azure Arc for Kubernetes
+	- Azure Arc Services
+- [Containers](./contianers.md)
+  - TODO - Julie
+- [Data](./data.md)
+	- SQL API for Cosmos DB
+	- SQL Migration
+	- Azure Purview Fundamentals
+	- Azure Synapse
+	- Azure Data Factory Security
+	- Azure Machine Learning Fundamentals
+	- Azure ML Enterprise Deployment
+	- Vision AI
+- [DevOps](./devops.md)
+	- Azure DevOps Patterns and Practices
+	- CI/CD for Applications
+	- CI/CD for Infrastructure
+	- Infrastructure as Code
+	- DevSecOps
+- [Governance](./governance.md)
+	- Azure Governance
+	- Gobernanza de Azure
+	- Azure Cost Management
+- [Migrations](./migrations.md)
+	- Azure Migrate for Servers - Part 1
+	- Azure Migrate for Servers - Part 2
+	- Azure Service Manager Migration
+- [Monitoring](./monitoring.md)
+  - Kusto Query Language
+  - Azure Monitoring
+  - Azure Application Monitoring
+- [Networking](./networking.md)
+	- Azure Networking Part 1
+	- Azure Networking Part 2
+- [SAP on Azure](./sap-on-azure.md)
+	- Azure Monitor for SAP Solutions and Microsoft Sentinel - Continuous Threat Monitoring for SAP
+	- Connect and Integrate RISE with SAP landscapes to Azure
+- [Security](./security.md)
+	- Microsoft Defender for Cloud
+	- Seguridad de Azure
+	- Azure Data Security
+	- Microsoft Sentinel
+- [Virtual Desktop](./virtual-desktop.md)
+	- Azure Virtual Desktop
+	- FTA Live: FTA エンジニアによる AVD アーキテクチャーデザインガイドセッション
 
 ---
 
