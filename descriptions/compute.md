@@ -4,6 +4,11 @@ _Note: original readme listed Arc under "Hybrid Management" but that's not a cat
 
 Below are descriptions to FTA Live sessions in the [Compute category](https://fasttrack.azure.com/live/category/Compute) as they appear on the [FTA Live Website](https://fasttrack.azure.com/live).
 
+List of Sessions
+- [Azure Arc for Servers](#azure-arc-for-servers)
+- [Azure Arc for Kubernetes](#azure-arc-for-kubernetes)
+- [Azure Arc Services](#azure-arc-services)
+
 ---
 
 ## Azure Arc for Servers 

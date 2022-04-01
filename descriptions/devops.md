@@ -2,6 +2,13 @@
 
 Below are descriptions to FTA Live sessions in the [DevOps category](https://fasttrack.azure.com/live/category/DevOps) as they appear on the [FTA Live Website](https://fasttrack.azure.com/live).
 
+List of Sessions
+- [Azure DevOps Patterns and Practices](#azure-devops-patterns-and-practices)
+- [CI/CD for Applications](#cicd-for-applications)
+- [CI/CD for Infrastructure](#cicd-for-infrastructure)
+- [Infrastructure as Code](#infrastructure-as-code)
+- [DevSecOps](#devsecops)
+
 ---
 
 ## Azure DevOps Patterns and Practices 

@@ -2,6 +2,11 @@
 
 Below are descriptions to FTA Live sessions in the [Migrations category](https://fasttrack.azure.com/live/category/Migrations) as they appear on the [FTA Live Website](https://fasttrack.azure.com/live).
 
+List of Sessions
+- [Azure Migrate for Servers - Part 1](#azure-migrate-for-servers---part-1)
+- [Azure Migrate for Servers - Part 2](#azure-migrate-for-servers---part-2)
+- [Azure Service Manager Migration](#azure-service-manager-migration)
+
 ## Azure Migrate for Servers - Part 1 
 
 This Part 1 of 2 session will give you the opportunity to expand your knowledge around best practices for rehosting servers during your DC Migration project. In this first session, we will focus on the discovery and assessment of your source environment including a prescriptive framework, public documentation and Azure portal examples. Session 2 will go into more detail around best practices and discuss multiple scenarios and frameworks. 

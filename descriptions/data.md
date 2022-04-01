@@ -2,6 +2,18 @@
 
 Below are descriptions to FTA Live sessions in the [Data category](https://fasttrack.azure.com/live/category/Data) as they appear on the [FTA Live Website](https://fasttrack.azure.com/live).
 
+
+List of Sessions
+
+- [SQL API for Cosmos DB](#sql-api-for-cosmos-db)
+- [SQL Migration](#sql-migration)
+- [Azure Purview Fundamentals](#azure-purview-fundamentals)
+- [Azure Synapse](#azure-synapse)
+- [Azure Data Factory Security](#azure-data-factory-security)
+- [Azure Machine Learning Fundamentals](#azure-machine-learning-fundamentals)
+- [Azure ML Enterprise Deployment](#azure-ml-enterprise-deployment)
+- [Vision AI](#vision-ai)
+
 ---
 
 ## SQL API for Cosmos DB 

@@ -2,6 +2,14 @@
 
 Below are descriptions to FTA Live sessions in the [App Dev category](https://fasttrack.azure.com/live/category/AppDev) as they appear on the [FTA Live Website](https://fasttrack.azure.com/live).
 
+List of Sessions
+
+- [App Service Networking](#app-service-networking)
+- [PaaS Networking](#paas-networking)
+- [Cloud Architecture](#cloud-architecture)
+- [Microsoft Identity Platform](#microsoft-identity-platform)
+
+
 ---
 
 ## App Service Networking 

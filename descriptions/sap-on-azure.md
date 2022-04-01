@@ -2,6 +2,11 @@
 
 Below are descriptions to FTA Live sessions in the [SAP on Azure](https://fasttrack.azure.com/live/category/SAP%20on%20Azure) as they appear on the [FTA Live Website](https://fasttrack.azure.com/live).
 
+List of Sessions
+
+- [Azure Monitor for SAP Solutions and Microsoft Sentinel - Continuous Threat Monitoring for SAP](#azure-monitor-for-sap-solutions-and-microsoft-sentinel---continuous-threat-monitoring-for-sap)
+- [Connect and Integrate RISE with SAP landscapes to Azure](#connect-and-integrate-rise-with-sap-landscapes-to-azure)
+
 ---
 
 ## Azure Monitor for SAP Solutions and Microsoft Sentinel - Continuous Threat Monitoring for SAP 

@@ -2,7 +2,12 @@
 
 Below are descriptions to FTA Live sessions in the [Networking](https://fasttrack.azure.com/live/category/Networking) as they appear on the [FTA Live Website](https://fasttrack.azure.com/live).
 
-*TODO: Language Translations Missing here*
+*TODO: Language Translations Missing here. They are on live website but not in original readme*
+
+List of Sessions
+
+- [Azure Networking Part 1](#azure-networking-part-1)
+- [Azure Networking Part 2](#azure-networking-part-2)
 
 ---
 

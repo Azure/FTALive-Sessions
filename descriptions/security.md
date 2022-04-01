@@ -2,6 +2,12 @@
 
 Below are descriptions to FTA Live sessions in the [Security](https://fasttrack.azure.com/live/category/Security) as they appear on the [FTA Live Website](https://fasttrack.azure.com/live).
 
+List of Sessions
+- [Microsoft Defender for Cloud](#microsoft-defender-for-cloud)
+- [Seguridad de Azure](#seguridad-de-azure)
+- [Azure Data Security](#azure-data-security)
+- [Microsoft Sentinel](#microsoft-sentinel)
+
 ---
 
 ## Microsoft Defender for Cloud 

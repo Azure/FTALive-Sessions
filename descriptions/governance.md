@@ -2,6 +2,11 @@
 
 Below are descriptions to FTA Live sessions in the [Governance category](https://fasttrack.azure.com/live/category/Governance) as they appear on the [FTA Live Website](https://fasttrack.azure.com/live).
 
+
+- [Azure Governance](#azure-governance)
+- [Gobernanza de Azure](#gobernanza-de-azure)
+- [Azure Cost Management](#azure-cost-management)
+
 ---
 
 ## Azure Governance 

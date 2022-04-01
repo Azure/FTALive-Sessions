@@ -2,6 +2,12 @@
 
 Below are descriptions to FTA Live sessions in the [Monitoring](https://fasttrack.azure.com/live/category/Monitoring) as they appear on the [FTA Live Website](https://fasttrack.azure.com/live).
 
+List of Sessions
+
+- [Kusto Query Language](#kusto-query-language)
+- [Azure Monitoring](#azure-monitoring)
+- [Azure Application Monitoring](#azure-application-monitoring)
+
 ## Kusto Query Language 
 In this session, learn how to write queries in Kusto Query Language (KQL) in the context of Azure Monitor and Microsoft Sentinel. We will cover best practices, design, how to create queries in the interface and leveraging scalar/aggregation functions along with much more.  
   
