@@ -5,5 +5,5 @@ This table of contents links to the materials for the respective FTA Live sessio
 - [App Service Networking](app-service-networking/readme.md)
 - [Cloud Design Principles](./cloud-design-principles/readme.md)
 - [Migrating Legacy .NET Apps](./dotnet-upgrade/readme.md)
-- [Azure Platform Services](./paas-services/readme.md)
+- [Azure PaaS Services](./paas-services/readme.md)
 
