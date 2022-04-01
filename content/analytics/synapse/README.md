@@ -17,20 +17,21 @@ Experience a new class of analytics Azure Synapse Analytics is a limitless analy
 * Overview
     *   [Synapse](https://docs.microsoft.com/en-us/azure/synapse-analytics/)
     *	[Architecture of Synapse](https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/overview-architecture#:~:text=Synapse%20SQL%20uses%20a%20node-based%20architecture.%20Applications%20connect,Compute%20nodes%20to%20do%20their%20work%20in%20parallel)
+    *	*	[Managed Virtual Network](https://docs.microsoft.com/en-us/azure/synapse-analytics/security/synapse-workspace-managed-vnet)
     *	[Use Case of Synapse](https://azure.microsoft.com/en-us/blog/4-common-analytics-scenarios-to-build-business-agility/)
 
    
 * Setup Synapse & Integrate with other Components
     *	[Create and Setup Synpase workspace](https://docs.microsoft.com/en-us/azure/synapse-analytics/get-started-create-workspace)
     *	[Built in SQL Pools (Serverless)](https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/on-demand-workspace-overview)
-    *	[Built in SQL Pools (On Demand)](https://docs.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is?context=/azure/synapse-analytics/context/context) 
-    *	[Data Lake Storage)](https://docs.microsoft.com/en-us/azure/synapse-analytics/get-started-analyze-storage) 
+    *	[Built in SQL Dedicated Pools](https://docs.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is?context=/azure/synapse-analytics/context/context) 
+    *	[Data Lake Storage](https://docs.microsoft.com/en-us/azure/synapse-analytics/get-started-analyze-storage) 
     *	[Spark Compute Pools](https://docs.microsoft.com/en-us/azure/synapse-analytics/get-started-analyze-spark)
     *   [Power BI](https://docs.microsoft.com/en-us/azure/synapse-analytics/get-started-visualize-power-bi)
 
 * Security
     *	[Identity](https://docs.microsoft.com/en-us/azure/synapse-analytics/security/synapse-workspace-synapse-rbac)
-    *	[Network](https://docs.microsoft.com/en-us/azure/synapse-analytics/security/synapse-workspace-managed-vnet)
+    
     *	[Encryption](https://docs.microsoft.com/en-us/azure/azure-sql/database/transparent-data-encryption-tde-overview?bc=%2Fazure%2Fsynapse-analytics%2Fbreadcrumb%2Ftoc.json&toc=%2Fazure%2Fsynapse-analytics%2Ftoc.json&tabs=azure-portal)
     *	[Private endpoint](https://techcommunity.microsoft.com/t5/azure-architecture-blog/understanding-azure-synapse-private-endpoints/ba-p/2281463#:~:text=Private%20Endpoints%20%20%20Dedicated%20SQL%20endpoint%20,connect%20to%20the%20Synapse%20Studio%20we%20...%20)
 
