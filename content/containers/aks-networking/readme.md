@@ -169,22 +169,6 @@ Whilst AKS customers are able to route egress traffic through an Azure Load Bala
     - [Use a static public IP address and DNS label with the AKS load balancer](https://docs.microsoft.com/azure/aks/static-ip)
 - External DNS : Creates a specific DNS entry for easier application access.
 
-## Network Policies
-[Kubernetes Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/) are used to secure traffic only between the pods.
-
-There are two ways to implement Network Policies in AKS:
-
-- Azure Network Policies
-    - [Azure Container Networking Github Repo](https://github.com/Azure/azure-container-networking/blob/master/README.md)  
-    
-- Calico Network Policies, an open source network.
-    - [Calico Network Policies with AKS](https://cloudblogs.microsoft.com/opensource/2019/10/17/tutorial-calico-network-policies-with-azure-kubernetes-service/)
-    - [Calico Open Source Github Repo](https://github.com/projectcalico/calico)  
-- [Difference between Azure and Calico network policies](https://docs.microsoft.com/azure/aks/use-network-policies#differences-between-azure-and-calico-policies-and-their-capabilities)
-- [How to secure traffic between pods using network policies](https://docs.microsoft.com/azure/aks/use-network-policies)
-- [Deploy AKS clusters with network policy using Infrastructure as a code(IAC)](https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.NetworkPolicy/)
-  
-The best practice is to use network policies to allow or deny traffic to pods. By default, all traffic is allowed between pods within a cluster. For improved security, define rules that limit pod communication.
 
 ## Ingress
 [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) is to expose HTTP and HTTPS routes from outside of the cluster to the services within the cluster.
@@ -257,6 +241,23 @@ Add-On
 ## HAProxy Ingress controllers
 
 - [How to install the HAProxy Enterprise Kubernetes Ingress Controller in AKS](https://www.haproxy.com/documentation/kubernetes/latest/installation/enterprise/azure/)
+
+# Network Policies
+[Kubernetes Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/) are used to secure traffic only between the pods.
+
+There are two ways to implement Network Policies in AKS:
+
+- Azure Network Policies
+    - [Azure Container Networking Github Repo](https://github.com/Azure/azure-container-networking/blob/master/README.md)  
+    
+- Calico Network Policies, an open source network.
+    - [Calico Network Policies with AKS](https://cloudblogs.microsoft.com/opensource/2019/10/17/tutorial-calico-network-policies-with-azure-kubernetes-service/)
+    - [Calico Open Source Github Repo](https://github.com/projectcalico/calico)  
+- [Difference between Azure and Calico network policies](https://docs.microsoft.com/azure/aks/use-network-policies#differences-between-azure-and-calico-policies-and-their-capabilities)
+- [How to secure traffic between pods using network policies](https://docs.microsoft.com/azure/aks/use-network-policies)
+- [Deploy AKS clusters with network policy using Infrastructure as a code(IAC)](https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.NetworkPolicy/)
+  
+The best practice is to use network policies to allow or deny traffic to pods. By default, all traffic is allowed between pods within a cluster. For improved security, define rules that limit pod communication.
 
 # Service Mesh
 A service mesh provides capabilities like traffic management, resiliency, policy, security, strong identity, and observability to your workloads. Your application is decoupled from these operational capabilities and the service mesh moves them out of the application layer, and down to the infrastructure layer.
