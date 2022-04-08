@@ -9,7 +9,7 @@
 
 ### Agenda
 1. [What is Azure Virtual Desktop?](https://aka.ms/WVDDocs)
-1. [Prerequisites](https://docs.microsoft.com/en-us/azure/virtual-desktop/overview#requirements)
+1. [Prerequisites](https://docs.microsoft.com/en-us/azure/virtual-desktop/prerequisites)
 1. [Concepts](https://docs.microsoft.com/en-us/azure/virtual-desktop/environment-setup)
 1. [FSLogix](https://docs.microsoft.com/en-us/fslogix/overview)
 1. [Scaling](https://docs.microsoft.com/en-us/azure/virtual-desktop/set-up-scaling-script)
