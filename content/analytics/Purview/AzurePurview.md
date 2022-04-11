@@ -49,6 +49,10 @@ This session includes live demo, all demo guide from [Azure Purview documents](h
 - [Private endpoint](https://docs.microsoft.com/azure/purview/catalog-private-link)
 - [Managed VNet with Azure Purview account](https://docs.microsoft.com/azure/purview/catalog-managed-vnet)
 
+## Resources
+
+[Pattern of system classifications in Azure Purview](https://docs.microsoft.com/azure/purview/supported-classifications)
+
 You will need:
 
 - Microsoft Teams desktop client or Teams web client to view presentation.
