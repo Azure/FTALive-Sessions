@@ -14,6 +14,11 @@ Please give us your feedback on https://aka.ms/ftalive-feedback
 
 Azure Purview is a unified data governance solution that helps you manage and govern your on-premises, multi-cloud (Azure, AWS, GCP), and software-as-a-service (SaaS) data. Easily create a holistic, up-to-date map of your data landscape with automated data discovery, sensitive data classification, and end-to-end data lineage. Enable data consumers to find valuable, trustworthy data. There are several key components that gets created when using Azure Purview. This session will be delivered by Microsoft FastTrack for Azure engineers. Bring your questions!
 
+You will need:
+
+- Microsoft Teams desktop client or Teams web client to view presentation.
+- Optional headphones to make it easier to listen to and interact with the presenters.
+
 ## Demo walkthrough
 
 This session includes live demo, all demo guide from [Azure Purview documents](https://docs.microsoft.com/azure/purview/).
@@ -52,8 +57,3 @@ This session includes live demo, all demo guide from [Azure Purview documents](h
 ## Resources
 
 [Pattern of system classifications in Azure Purview](https://docs.microsoft.com/azure/purview/supported-classifications)
-
-You will need:
-
-- Microsoft Teams desktop client or Teams web client to view presentation.
-- Optional headphones to make it easier to listen to and interact with the presenters.
