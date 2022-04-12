@@ -34,11 +34,14 @@ This session includes live demo, all demo guide from [Azure Purview documents](h
 
 - [Purview supported data sources](https://docs.microsoft.com/azure/purview/azure-purview-connector-overview)
 - [How to scan Azure Blob storage](https://docs.microsoft.com/azure/purview/register-scan-azure-blob-storage-source)
+- [How to scan Synapse workspace](https://docs.microsoft.com/azure/purview/register-scan-synapse-workspace)
+- [How to scan Power BI](https://docs.microsoft.com/azure/purview/register-scan-power-bi-tenant)
 - [System Classification](https://docs.microsoft.com/azure/purview/apply-classifications)
 - [How to create custom Classification](https://docs.microsoft.com/azure/purview/create-a-custom-classification-and-classification-rule)
 - [Purview Data Lineage](https://docs.microsoft.com/azure/purview/catalog-lineage-user-guide)
 - [Azure Data Factory lineage best practices](https://docs.microsoft.com/azure/purview/concept-best-practices-lineage-azure-data-factory)
 - [Azure Synapse lineage](https://docs.microsoft.com/azure/purview/how-to-lineage-azure-synapse-analytics)
+- [How to build custom lineage](https://github.com/wjohnson/pyapacheatlas/blob/master/samples/CRUD/create_entity_and_lineage.py)
 - [Difference between classifications and sensitivity labels](https://docs.microsoft.com/azure/purview/sensitivity-labels-frequently-asked-questions)
 
 ### Data Catalog
@@ -47,6 +50,7 @@ This session includes live demo, all demo guide from [Azure Purview documents](h
 - [Business Glossary](https://docs.microsoft.com/azure/purview/concept-business-glossary)
 - [How to automatically apply sensitivity labels to Azure Purview](https://docs.microsoft.com/azure/purview/how-to-automatically-label-your-content)
 - [Workflow](https://docs.microsoft.com/azure/purview/concept-workflow)
+- [Azure Purview REST API](https://docs.microsoft.com/rest/api/purview/)
 
 ### Data Insights and Management
 
