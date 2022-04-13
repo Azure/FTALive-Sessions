@@ -1,0 +1,98 @@
+trigger:
+- none
+
+variables:
+- template: ./testing-variables.yml
+
+pool:
+  vmImage: windows-latest
+
+stages: 
+- stage: deploy_test_environment
+  displayName: Deploy Test Environment  
+  jobs:
+    - job: deploy_test_environment
+      steps:
+      - task: AzureCLI@2
+        displayName: Azure CLI
+        inputs:
+          azureSubscription: '$(serviceConnectionName)'
+          scriptType: bash
+          scriptLocation: inlineScript
+          inlineScript: |
+            az --version
+            az account show
+            az account set --subscription $(subscription)
+      - task: AzurePowerShell@5
+        inputs:
+          azureSubscription: '$(serviceConnectionName)'
+          ScriptType: 'InlineScript'
+          Inline: |
+            $defaultSubnet = New-AzVirtualNetworkSubnetConfig -Name '$(subnetName)' -AddressPrefix '$(subnetCIDR)'
+            New-AzVirtualNetwork -Name '$(virtualNetworkName)' -ResourceGroupName '$(ResourceGroupName)' -Location '$(location)' -AddressPrefix '$(vnetCIDR)' -Subnet $defaultSubnet
+          azurePowerShellVersion: 'LatestVersion'
+      - task: AzurePowerShell@5
+        displayName: Run Test Environment Script
+        inputs:
+          azureSubscription: '$(serviceConnectionName)'
+          scriptType: 'FilePath'
+          scriptPath: '$(Build.SourcesDirectory)\testing-pipeline-script.ps1'
+          azurePowerShellVersion: 'LatestVersion'
+          scriptArguments:
+            -AssessedMachinesFilePath '$(Build.SourcesDirectory)\All_Assessed_Machines.csv' `
+            -AssessedDisksFilePath '$(Build.SourcesDirectory)\All_Assessed_Disks.csv' `
+            -RG '$(ResourceGroupName)' `
+            -Location '$(location)' `
+            -VNetName '$(virtualNetworkName)' `
+            -SubnetName '$(subnetName)'`
+            -VNetCIDR '$(vnetCIDR)' `
+            -SubnetCIDR '$(subnetCIDR)'
+          errorActionPreference: 'silentlyContinue'
+
+          
+# # Initialize and Run Testing Migration Scripts           
+# - stage: Deploy Testing Scripts 
+#   jobs:
+#     - job: uat_powershell_script
+#       deployment: 
+#       steps:
+#       - task: AzurePowerShell@5
+#         displayName: UAT Testing Script
+#           inputs:
+#             azureSubscription: 'migration-pipeline-test'
+#             ScriptType: 'FilePath'
+#             ScriptPath: './scripts/uat-test.ps1'
+#             azurePowerShellVersion: 'LatestVersion' 
+#     - job: smoke_test_powershell_script
+#       steps:
+#       - task: AzurePowerShell@5
+#         displayName: Smoke Testing Script
+#           inputs:
+#             azureSubscription: 'migration-pipeline-test'
+#             ScriptType: 'FilePath'
+#             ScriptPath: './scripts/smoke-test.ps1'
+#             azurePowerShellVersion: 'LatestVersion'
+#     - job: failover_test_powershell_script
+#       steps:
+#       - task: AzurePowerShell@5
+#         displayName: Smoke Testing Script
+#           inputs:
+#             azureSubscription: 'migration-pipeline-test'
+#             ScriptType: 'FilePath'
+#             ScriptPath: './scripts/failover-test.ps1'
+#             azurePowerShellVersion: 'LatestVersion'
+
+# # Delete Test RG - Clean up resources
+# - stage: Clean up Testing Resources
+#   jobs:
+#     - job: cleanup_powershell_script
+#       deployment: CleanUpTestResources
+#       displayName: Clean Up Testing Resources
+#       environment: CleanUpTestResources
+#       steps:
+#       - task: AzurePowerShell@5
+#         inputs:
+#           azureSubscription: 'migration-pipeline-test'
+#           ScriptType: 'InlineScript'
+#           Inline: 'Get-AzResourceGroup -Name $(ResourceGroupName) | Remove-AzResourceGroup -Force'
+#           azurePowerShellVersion: 'LatestVersion'

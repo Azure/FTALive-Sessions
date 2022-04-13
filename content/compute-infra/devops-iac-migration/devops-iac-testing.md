@@ -67,16 +67,16 @@ Pipeline Tasks:
         - Failover
 - Clean up Test Resources
 
-### 2.4\. Validate Target VNet Tests
+### 2.3\. Validate Target VNet Tests
 * If execute the isolated VNet Testing Pipeline, validate the pipeline has ran through the necessary tasks above.
 * If utilizing the final Migration VNet, set the maintenance window and prepare migration waves for execution using the sample pipeline [template](./src/testing/testing-pipeline.yml) for migration.
 * If any of the tests fail within a pipeline stage, execute the Rollback plan for the migration wave.
 
-### 2.5\. Post Test Migration Tasks 
+### 2.4\. Post Test Migration Tasks 
 - Validate VM migration was successful and that applications are functioning as expected
     - Perform capacity testing to ensure that functioning properly in production
 
-### 2.6\. Expected Results 
+### 2.5\. Expected Results 
 * VNet created with specified parameters for testing its functionality before full migration of servers to Azure
 * Standardized pipeline to utilize for deploying compute resources in Azure
 * Pipeline provides option for executing tests within Azure on the testing resources that are deployed
