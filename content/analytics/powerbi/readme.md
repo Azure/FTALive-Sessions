@@ -1,4 +1,4 @@
-# Welcome to the FastTrack for Azure Live Text Analytics with Power BI
+# Welcome to the FastTrack for Azure Live - Text Analytics with Power BI
 
 ## We will start 1-2 minutes after the scheduled time to accommodate those still connecting
 
