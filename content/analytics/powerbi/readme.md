@@ -26,7 +26,7 @@ This session includes live demo, all demo guide from [Text Analytics](https://do
 ### Power BI overview
 
 - [Flavors of Power BI](https://docs.microsoft.com/power-bi/report-server/compare-report-server-service)
-- [Flavors of Power BI](https://info.microsoft.com/ww-Landing-2021-Gartner-MQ-for-Analytics-and-Business-Intelligence-Power-BI.html?LCID=EN-US)
+- [Business Intelligence tool in the Market](https://info.microsoft.com/ww-Landing-2021-Gartner-MQ-for-Analytics-and-Business-Intelligence-Power-BI.html?LCID=EN-US)
 - [Report Development Life Cycle](https://docs.microsoft.com/power-bi/fundamentals/desktop-what-is-desktop#connect-to-data)
 
 ### Power BI And Azure Data Sources
