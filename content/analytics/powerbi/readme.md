@@ -32,7 +32,7 @@ This session includes live demo, all demo guide from [Text Analytics](https://do
 ### Power BI And Azure Data Sources
 
 - [Power BI and On-Prem Challenges](https://docs.microsoft.com/power-bi/report-server/compare-report-server-service)
-- [Power BI Connectors - Azure](https://docs.microsoft.com/power-bi/fundamentals/desktop-getting-started)
+- [Power BI Connectors - Azure](https://docs.microsoft.com/en-us/power-bi/fundamentals/desktop-getting-started#connect-to-data)
 - [Data Wrangling](https://docs.microsoft.com/power-bi/transform-model/)
 - [Warehouse vs Real-time](https://docs.microsoft.com/power-bi/connect-data/service-real-time-streaming)
 
