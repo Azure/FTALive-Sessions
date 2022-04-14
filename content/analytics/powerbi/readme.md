@@ -21,7 +21,7 @@ You will need:
 
 ## Demo walkthrough
 
-This session includes live demo, all demo guide from [Azure Purview documents](https://docs.microsoft.com/azure/purview/).
+This session includes live demo, all demo guide from [Text Analytics](https://docs.microsoft.com/power-bi/transform-model/desktop-ai-insights).
 
 ### Power BI overview
 
