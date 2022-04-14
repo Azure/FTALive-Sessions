@@ -1,4 +1,4 @@
-# Welcome to the FastTrack for Azure Live Azure Purview
+# Welcome to the FastTrack for Azure Live Text Analytics with Power BI
 
 ## We will start 1-2 minutes after the scheduled time to accommodate those still connecting
 
@@ -28,7 +28,6 @@ This session includes live demo, all demo guide from [Azure Purview documents](h
 - [Flavors of Power BI](https://docs.microsoft.com/power-bi/report-server/compare-report-server-service)
 - [Flavors of Power BI](https://info.microsoft.com/ww-Landing-2021-Gartner-MQ-for-Analytics-and-Business-Intelligence-Power-BI.html?LCID=EN-US)
 - [Report Development Life Cycle](https://docs.microsoft.com/power-bi/fundamentals/desktop-what-is-desktop#connect-to-data)
--
 
 ### Power BI And Azure Data Sources
 
