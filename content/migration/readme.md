@@ -1,4 +1,4 @@
-# FastTrack for Azure Live - Compute Infrastructure sessions
+# FastTrack for Azure Live - Migration sessions
 
 This table of contents links to the materials for the respective FTA Live session.
 
