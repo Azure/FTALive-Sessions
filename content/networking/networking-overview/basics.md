@@ -2,40 +2,41 @@
 
 #### [prev](./concepts.md) | [home](./readme.md)  | [next](./topology-overview.md)
 
-## How does a virtual machine connect to the network?
+##### What is an Azure Virtual Network (VNET)?
+- A self contained software-defined network
+- Exists in a single region
+> [!NOTE]
+> Configure IP address and DNS settings outside of the VMs OS. Leave the VM to use DHCP (yes, even for NVAs)
 
-> Configure IP address and DNS settings outside of the VMs OS. Leave the VM to use DHCP (yes, even for NVAs).
+##### VNET configuration
+- Assign one or more address spaces
+    - Address spaces can be added after creation
+    - Address spaces with subnets cannot be modified 
+- Addresses will automatically be allocated to connected services
+- DNS set to Azure provided by default, change to custom servers if used
+- DDOS protection plan set at the VNET level
 
-Subnets and other VNets
-- Connected by default.
-- A basic NSG provides minimum ingress/egress controls.
+##### Connecting within a VNET
+- Traffic within and *between* subnets allowed by default
+- Use subnets to demark different applications, environments, or application tiers
 
-Internet locations
-- NAT is performed by the networking fabric by-default.
-- A public IP is **NOT** needed for internet access.
+##### Connecting to a VNET
+- No inbound connectivity is possible except through public-facing endpoints like Public IPs, Application Gateways, and Load Balancers
+- Assigning Public IPs to VMs is not recommended in production
+   - Use Azure Bastion or hybrid connectivity for management access
+   - Use App Gateway, Azure Firewall, or Standard Load Balancers for application traffic
+- From your remote networks: use a Virtual Network Gateway or custom VPN solution, detailed in [Connectivity section](./connectivity.md)
 
-On-premises network
-- Via the internet.
-- Via a Gateway.
+##### Connecting from a VNET
+- Default outbound NAT to a dynamic Azure Datacenter IP for internet access
+- VMs with a Public IP will use the public IP address for outbound SNAT
+- For persistent outbound IPs and production level SNAT port control, use NAT Gateway, a Standard Load Balancer, or a network appliance
 
-More information for [Outbound connection (flows)](https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-outbound-connections)
+> [!NOTE]
+> More information for [**Outbound connection (flows)**](https://docs.microsoft.com/en-us/azure/virtual-network/ip-services/default-outbound-access)
 
-## How do you connect to a virtual machine?
+##### Connecting between VNETs
+- VNETs are isolated by default
+- VNET peering or VPN. Covered in [Connectivity section](./connectivity.md)
 
-Azure Bastion (or even via console)
-- RDP and SSH over HTTPS.
-- Secure, simple, effective.
-- [VNet peering and Azure Bastion](https://docs.microsoft.com/en-us/azure/bastion/vnet-peering).
-
-Via an on-premises connection
-- Connecting to the virtual machine's private IP address.
-
-Via the internet
-- Through an Application Gateway or Firewall.
-- Assigning a public IP to the virtual machine directly.
-
-## What are the basics?
-
-![VNet Reference](png/basics.png)
-[Virtual network basics](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-faq)
-
+### [VNET Frequently Asked Questions](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-faq)
