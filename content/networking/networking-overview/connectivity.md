@@ -47,7 +47,7 @@ The Azure Architecture center has a a great article comparing the two [here](htt
 
 ## Private connectivity to PaaS resources
 We recommend adopting strategies like Zero Trust and moving the focus from network perimeters to Identity. However not everyone or system can make this shift today. We have increasing support for private access to normally public services. There are a few different approaches to this:
-* [Dedicated Service](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-for-azure-services) - Deploy dedicated but managed infrastructure inside your VNET e.g SQL Managed Instance or App Service Environment
+* [Dedicated Service](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-for-azure-services) - Deploy dedicated but managed infrastructure inside your VNet e.g SQL Managed Instance or App Service Environment
 * [Service Endpoint](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-service-endpoints-overview) - Allow ACLd Access to a public endpoint, firewall other access. Not accessible from remote networks
 * [Private Endpoints](https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-overview) - Provision private ip address in the virtual network that will enable access to public resource. Not supported for all services see [Availbilty](https://docs.microsoft.com/en-us/azure/private-link/private-link-overview#availability)
 
