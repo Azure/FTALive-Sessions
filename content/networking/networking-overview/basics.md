@@ -8,6 +8,8 @@
 > [!NOTE]
 > Configure IP address and DNS settings outside of the VMs OS. Leave the VM to use DHCP (yes, even for NVAs)
 
+A VNET enables you to connect your resources to each other, the internet, and other networks you own. By default, VNETs are isolated from each other and establish a connectivity and network security boundary. Everything connected to a VNET must reside in the same region as the VNET. 
+
 ##### VNET configuration
 - Assign one or more address spaces
     - Address spaces can be added after creation
@@ -20,9 +22,11 @@
 
 ##### Connecting within a VNET
 - Traffic within and *between* subnets allowed by default
-- Use subnets to demark different applications, environments, or application tiers
+- Use subnets to separate different applications, environments, or application tiers
+- Employ NSGs to restrict traffic in and between subnets
 
 ##### Connecting to a VNET
+Connecting to endpoints within a VNET requires additional configuration or the deployment of a resource with an associated public endpoint. 
 - No inbound connectivity is possible except through public-facing endpoints like Public IPs, Application Gateways, and Load Balancers
 - Assigning Public IPs to VMs is not recommended in production
    - Use Azure Bastion or hybrid connectivity for management access
@@ -30,6 +34,9 @@
 - From your remote networks: use a Virtual Network Gateway or custom VPN solution, detailed in [Connectivity section](./connectivity.md)
 
 ##### Connecting from a VNET
+
+Outbound connectivity to the internet is enabled by default in Azure--VNET configurations and default NSG rules allow outboud traffic. Azure's management plane relies on traffic being able to egress the VNET for services such as VM agents, DNS, and monitoring. 
+
 - Default outbound NAT to a dynamic Azure Datacenter IP for internet access
 - VMs with a Public IP will use the public IP address for outbound SNAT
 - For persistent outbound IPs and production level SNAT port control, use NAT Gateway, a Standard Load Balancer, or a network appliance
@@ -38,6 +45,9 @@
 > More information for [**Outbound connection (flows)**](https://docs.microsoft.com/en-us/azure/virtual-network/ip-services/default-outbound-access)
 
 ##### Connecting between VNETs
+
+
+
 - VNETs are isolated by default
 - VNET peering or VPN. Covered in [Connectivity section](./connectivity.md)
 
