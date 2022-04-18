@@ -2,7 +2,7 @@
 
 #### [prev](./concepts.md) | [home](./readme.md)  | [next](./topology-overview.md)
 
-##### What is an Azure Virtual Network (VNET)?
+### What is an Azure Virtual Network (VNET)?
 - A self contained software-defined network
 - Exists in a single region
 > [!NOTE]
@@ -10,7 +10,7 @@
 
 A VNET enables you to connect your resources to each other, the internet, and other networks you own. By default, VNETs are isolated from each other and establish a connectivity and network security boundary. Everything connected to a VNET must reside in the same region as the VNET. 
 
-##### VNET configuration
+### VNET configuration
 - Assign one or more address spaces
     - Address spaces can be added after creation
     - Address spaces with subnets cannot be modified 
@@ -20,12 +20,12 @@ A VNET enables you to connect your resources to each other, the internet, and ot
     - Can be set to one or more IPs for custom DNS servers
 - DDOS protection plan set at the VNET level
 
-##### Connecting within a VNET
+### Connecting within a VNET
 - Traffic within and *between* subnets allowed by default
 - Use subnets to separate different applications, environments, or application tiers
 - Employ NSGs to restrict traffic in and between subnets
 
-##### Connecting to a VNET
+### Connecting to a VNET
 Connecting to endpoints within a VNET requires additional configuration or the deployment of a resource with an associated public endpoint. 
 - No inbound connectivity is possible except through public-facing endpoints like Public IPs, Application Gateways, and Load Balancers
 - Assigning Public IPs to VMs is not recommended in production
@@ -33,7 +33,7 @@ Connecting to endpoints within a VNET requires additional configuration or the d
    - Use App Gateway, Azure Firewall, or Standard Load Balancers for application traffic
 - From your remote networks: use a Virtual Network Gateway or custom VPN solution, detailed in [Connectivity section](./connectivity.md)
 
-##### Connecting from a VNET
+### Connecting from a VNET
 
 Outbound connectivity to the internet is enabled by default in Azure--VNET configurations and default NSG rules allow outboud traffic. Azure's management plane relies on traffic being able to egress the VNET for services such as VM agents, DNS, and monitoring. 
 
@@ -44,7 +44,7 @@ Outbound connectivity to the internet is enabled by default in Azure--VNET confi
 > [!NOTE]
 > More information for [**Outbound connection (flows)**](https://docs.microsoft.com/en-us/azure/virtual-network/ip-services/default-outbound-access)
 
-##### Connecting between VNETs
+### Connecting between VNETs
 
 
 
