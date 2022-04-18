@@ -21,7 +21,7 @@ A logical address space housing virtual subnets.
 - Can be connected to other VNets using Peering.
 
 ## NSG
-A semi-statefull (*read non-statefull) low level (layer 3) packet filter. 
+A semi-stateful (*read non-stateful) low level (layer 3) packet filter. 
 - Rules based on ip address and port. 
 - Has constructs to determine Azure services instead of using IP addresses. 
 - Associated to subnets, virtual machines or both.

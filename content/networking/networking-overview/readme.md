@@ -12,7 +12,7 @@ questions you post will be public.
 the changes straight away.
 
 **Feedback** We would love to hear your thoughts, please provide us your feedback
-and register for other sessions at [//aka.ms/ftalive](https://aka.ms/ftalive).
+and register for other sessions at [https://aka.ms/ftalive](https://aka.ms/ftalive).
 
 ## Agenda
 
