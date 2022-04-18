@@ -13,7 +13,9 @@
     - Address spaces can be added after creation
     - Address spaces with subnets cannot be modified 
 - Addresses will automatically be allocated to connected services
-- DNS set to Azure provided by default, change to custom servers if used
+- DNS:
+    - Set to Azure provided by default, which includes DNS Zones and Private DNS Zones (if used)
+    - Can be set to one or more IPs for custom DNS servers
 - DDOS protection plan set at the VNET level
 
 ##### Connecting within a VNET
