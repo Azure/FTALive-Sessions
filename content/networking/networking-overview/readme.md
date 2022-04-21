@@ -21,8 +21,8 @@ and register for other sessions at [https://aka.ms/ftalive](https://aka.ms/ftali
 1. [Why should we talk about networking?](./why.md)
 1. [VNet Basics](./basics.md)
 1. [Topology (overview)](./topology-overview.md)
-1. [Routing](./routing.md)
 1. [Security](./security.md)
+1. [Routing](./routing.md)
 1. [QnA](./faq.md)
 
 ### Part 2
