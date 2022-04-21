@@ -1,6 +1,6 @@
 # Security
 
-#### [prev](./topology.md) | [home](./readme.md)  | [next](./mgmt.md)
+#### [prev](./routing.md) | [home](./readme.md)  | [next](./faq.md)
 
 ## Considering Endpoint Types
 

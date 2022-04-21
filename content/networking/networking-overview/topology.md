@@ -1,6 +1,6 @@
 # Topology
 
-#### [prev](./routing.md) | [home](./readme.md)  | [next](./security.md)
+#### [prev](./connectivity.md) | [home](./readme.md)  | [next](./mgmt.md)
 
 ## Hub and spoke 
 

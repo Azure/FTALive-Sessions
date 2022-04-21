@@ -1,6 +1,6 @@
 # VNet Basics
 
-#### [prev](./concepts.md) | [home](./readme.md)  | [next](./topology-overview.md)
+#### [prev](./why.md) | [home](./readme.md)  | [next](./topology-overview.md)
 
 ### What is an Azure Virtual Network (VNet)?
 - A self contained software-defined network

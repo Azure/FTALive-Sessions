@@ -1,6 +1,6 @@
 # Connectivity
 
-#### [prev](./topology-overview.md) | [home](./readme.md)  | [next](./routing.md)
+#### [prev](./concepts.md) | [home](./readme.md)  | [next](./topology.md)
 
 ## Connectivity between Azure Virtual Networks
 Use [Virtual network peering](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-peering-overview), fundamental in hub and spoke model.

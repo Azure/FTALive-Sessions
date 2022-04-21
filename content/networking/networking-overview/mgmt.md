@@ -1,6 +1,6 @@
 # Management
 
-#### [prev](./security.md) | [home](./readme.md)  | [next](./faq.md)
+#### [prev](./topology-overview.md) | [home](./readme.md)  | [next](./security-advanced.md)
 
 ## Azure Network Watcher
 

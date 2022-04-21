@@ -1,6 +1,6 @@
 # Concepts
 
-#### [prev](./why.md) | [home](./readme.md)  | [next](./basics.md)
+#### [prev](./readme.md) | [home](./readme.md)  | [next](./connectivity.md)
 
 Icon | Short Name | Full Name
 --|--|--
