@@ -5,6 +5,8 @@
 > This call will not be recorded due to the wide audience and to encourage
 > questions.
 
+**Chat History** You will lose access to the chat after the session, so save any of the links that you want to reference later!
+
 **Questions?** Feel free to type them in the chat window at any time. Note that
 questions you post will be public.
 
