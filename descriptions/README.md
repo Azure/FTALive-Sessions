@@ -18,7 +18,10 @@ Click on a category to view the description
 	- Azure Arc for Kubernetes
 	- Azure Arc Services
 - [Containers](./contianers.md)
-  - TODO - Julie
+  - AKS Operations
+  - AKS Monitoring
+  - AKS Networking
+  - AKS Security Best Practices
 - [Data](./data.md)
 	- SQL API for Cosmos DB
 	- SQL Migration
@@ -26,6 +29,7 @@ Click on a category to view the description
 	- Azure Synapse
 	- Azure Data Factory Security
 	- Azure Machine Learning Fundamentals
+	- ADLS Gen1 to Gen2 Migrations
 	- Azure ML Enterprise Deployment
 	- Vision AI
 - [DevOps](./devops.md)
