@@ -8,6 +8,10 @@ TODO: actually the categories on the website don't consistently match neither Az
 
 Click on a category to view the description
 
+- [AI & ML](./ai-ml.md)
+	- Azure Machine Learning Fundamentals
+	- Azure ML Enterprise Deployment
+	- Vision AI
 - [AppDev](./app-dev.md)
   - App Service Networking
   - PaaS Networking
@@ -28,10 +32,7 @@ Click on a category to view the description
 	- Azure Purview Fundamentals
 	- Azure Synapse
 	- Azure Data Factory Security
-	- Azure Machine Learning Fundamentals
 	- ADLS Gen1 to Gen2 Migrations
-	- Azure ML Enterprise Deployment
-	- Vision AI
 - [DevOps](./devops.md)
 	- Azure DevOps Patterns and Practices
 	- CI/CD for Applications
