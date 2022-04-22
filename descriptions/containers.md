@@ -6,6 +6,8 @@ List of Sessions
 
 - [AKS Operations](#aks-operations)
 - [AKS Monitoring](#aks-monitoring)
+- [AKS Networking](#aks-networking)
+- [AKS Security Best Practices](#aks-security-best-practices)
 
 ---
 
@@ -16,6 +18,15 @@ In this session we will cover the fundamentals of Azure Kubernetes Service (AKS)
 ## AKS Monitoring
 
 In this session we will cover the fundamentals of monitoring Azure Kubernetes Service (AKS). The common monitoring strategy that follows different layers of AKS cluster, minimum monitors, best practices, and log query examples to monitor the critical services and cluster health.
+
+## AKS Networking
+
+In this session you will learn about Azure Kubernetes Services networking and the core concepts that provide networking to the application in AKS. Additionally, you will also learn about service mesh and its capabilities.
+
+## AKS Security Best Practices
+
+In this session, you will learn the high-level breakdown of most aspects of security that should be considered when running an AKS cluster. This includes cluster level considerations, networking considerations, configuration concerns, and image management.
+
   
 ---
 
