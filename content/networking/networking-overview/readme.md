@@ -31,7 +31,7 @@ and register for other sessions at [https://aka.ms/ftalive](https://aka.ms/ftali
 
 1. [Concepts](./concepts.md)
 1. [Connectivity](./connectivity.md)
-1. [Topology (explained)](./topology.md)
+1. [Topology (explained)](./topology-advanced.md)
 1. [Management](./mgmt.md)
 1. [QnA](./faq.md)
 

@@ -40,4 +40,4 @@ We will talk more about this in the [Routing](routing.md) and [Security](securit
 
 ![Topology Diagram](png/topology.png)
 
-A more [detailed](./topology.md) breakdown of the hub and spoke topology is covered after introducing connectivity and routing.
+A more [detailed](./topology-advanced.md) breakdown of the hub and spoke topology is covered after introducing connectivity and routing.
