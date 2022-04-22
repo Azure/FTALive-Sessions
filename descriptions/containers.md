@@ -5,12 +5,17 @@ Below are descriptions to FTA Live sessions in the [Containers category](https:/
 List of Sessions
 
 - [AKS Operations](#aks-operations)
+- [AKS Monitoring](#aks-monitoring)
 
 ---
 
 ## AKS Operations 
  
 In this session we will cover the fundamentals of Azure Kubernetes Service (AKS) guidance, best practices, tools, and demos to help administrators and engineers who need to manage their AKS clusters in their day-to-day operations. 
+
+## AKS Monitoring
+
+In this session we will cover the fundamentals of monitoring Azure Kubernetes Service (AKS). The common monitoring strategy that follows different layers of AKS cluster, minimum monitors, best practices, and log query examples to monitor the critical services and cluster health.
   
 ---
 
