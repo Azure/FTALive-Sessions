@@ -10,6 +10,7 @@ List of Sessions
 - [Azure Purview Fundamentals](#azure-purview-fundamentals)
 - [Azure Synapse](#azure-synapse)
 - [Azure Data Factory Security](#azure-data-factory-security)
+- [ADLS Gen1 to Gen2 Migrations](#adls-gen1-to-gen2-migrations)
 - [Azure Machine Learning Fundamentals](#azure-machine-learning-fundamentals)
 - [Azure ML Enterprise Deployment](#azure-ml-enterprise-deployment)
 - [Vision AI](#vision-ai)
@@ -30,6 +31,10 @@ In this session we will cover the key features of Azure Synapse along with the a
   
 ## Azure Data Factory Security 
 Learn and review how to implement secure Azure Data Factory pipelines using VNET integration and managed private endpoints. We'll cover data exfiltration prevention in the most common scenarios including on prem to Azure data transfer. 
+
+## ADLS Gen1 to Gen2 Migrations
+
+In this session, you will learn about the *ADLS Gen1 to Gen2 Migration Initiative*, the available options for migrating from ADLS Gen1 to ADLS Gen2, and the best practices for conducting a successful migration. We will look at the migration life cycle and examine migrations using Azure Data Factory and the M3 Tool Portal Experience. 
 
 ---
 
