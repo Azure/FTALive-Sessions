@@ -70,3 +70,34 @@ There is no golden topology that will fit every workload scenario.
 - Consider availability requirements (including global and regional).
 - Consider peering costs.
 - Don't underestimate hidden costs and administrative overheads.
+
+## Advanced scenarios
+
+* [Virtual WAN](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-about)
+* [ExpressRoute Global Reach](https://docs.microsoft.com/azure/expressroute/expressroute-global-reach)
+* [Coexistance of ER and VPN Gateways](https://docs.microsoft.com/azure/expressroute/expressroute-howto-coexist-resource-manager)
+
+## Private connectivity to PaaS resources
+
+We recommend adopting strategies like Zero Trust and moving the focus from network perimeters to Identity. However not everyone or system can make this shift today. We have increasing support for private access to normally public services. There are a few different approaches to this:
+
+* [Dedicated Service](https://docs.microsoft.com/azure/virtual-network/virtual-network-for-azure-services) - Deploy dedicated but managed infrastructure inside your VNet e.g SQL Managed Instance or App Service Environment
+* [Service Endpoint](https://docs.microsoft.com/azure/virtual-network/virtual-network-service-endpoints-overview) - Allow ACLd Access to a public endpoint, firewall other access. Not accessible from remote networks
+* [Private Endpoints](https://docs.microsoft.com/azure/private-link/private-endpoint-overview) - Provision private ip address in the virtual network that will enable access to public resource. Not supported for all services see [Availbilty](https://docs.microsoft.com/azure/private-link/private-link-overview#availability)
+
+OPINION: 
+>Relying heavily on these mechanisms will make integration increasingly difficult, some services will have a loss of features when IP addresses are restricted. Remember many of the services were designed for a public cloud. Examples:
+
+>* [Azure SQL import/export service](https://docs.microsoft.com/azure/azure-sql/database/network-access-controls-overview#allow-azure-services)
+>* Managing some storage account settings from the portal [Storage Recommendations](https://docs.microsoft.com/azure/storage/blobs/security-recommendations#networking)
+>* Using PowerBI to easily integrate with data services
+
+## Alternatives to private connectivity
+
+You may not need a full hybrid network to support your workloads. Some services offer their own connectivity options which might be worth exploring if you only need connectivity for 1 or two solutions. 
+
+Examples:
+
+* [Azure Relay](https://docs.microsoft.com/azure/azure-relay/relay-what-is-it)
+* [Data Gateway](https://docs.microsoft.com/en-us/data-integration/gateway/service-gateway-onprem)
+* Exposing services using [Mutual Certificate Authentication](https://docs.microsoft.com/azure/api-management/api-management-howto-mutual-certificates)
