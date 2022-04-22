@@ -1,6 +1,6 @@
 # Containers - Session Descriptions
 
-Below are descriptions to FTA Live sessions in the [Containers TODO category](https://fasttrack.azure.com/live/category/ContainersTBD) as they appear on the [FTA Live Website](https://fasttrack.azure.com/live).
+Below are descriptions to FTA Live sessions in the [Containers category](https://fasttrack.azure.com/live/category/Containers) as they appear on the [FTA Live Website](https://fasttrack.azure.com/live).
 
 List of Sessions
 
