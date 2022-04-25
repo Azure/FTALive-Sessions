@@ -1,6 +1,6 @@
 # Routing
 
-#### [prev](./topology-overview.md) | [home](./readme.md)  | [next](./faq.md)
+#### [prev](./security-overview.md) | [home](./readme.md)  | [next](./faq.md)
 
 ### Common routing scenarios
 - Passing traffic between your Azure VNets and your external networks
