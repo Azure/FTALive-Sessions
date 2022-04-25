@@ -6,6 +6,7 @@
 ![VNet Reference](png/local-or-remote-gateway-in-peered-virtual-network.png)
 
 ## Within Azure (between VNets)
+
 Connectivity between VNets is usually accomplished with Azure's native [VNet Peering](https://docs.microsoft.com/azure/virtual-network/virtual-network-peering-overview) service. Peering is easy to configure and forms the foundation of a hub-and-spoke network architecture.  
 
 ### Virtual Network Peering
