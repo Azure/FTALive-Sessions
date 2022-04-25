@@ -4,10 +4,24 @@
 
 ## Network Virtual Appliances
 
-## Azure Firewall Standard vs. Premium
+### Third Party vs. Native
 
-## Azure Firewall Dashboard
+### Azure Firewall Standard vs. Premium
 
-## Selecting Front Door vs. App Gateway
+### Azure Firewall Policies
 
-## Web Application Firewall Reporting
+### Azure Firewall Management with Forced Tunneling
+
+### Azure Firewall Dashboard
+
+## Web Application Firewalls
+
+### Selecting Front Door vs. App Gateway
+
+### Web Application Firewall Reporting
+
+## Azure Defender for Cloud Features
+
+### Just In Time Access
+
+### Secure Score
