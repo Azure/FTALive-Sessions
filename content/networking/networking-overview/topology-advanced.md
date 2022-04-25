@@ -93,7 +93,6 @@ It can be a powerful tool, but it comes with some limitations
 * Route Tables have interactions with the Azure VWAN published routes, which can add complexity if an environment has unique routing concerns.
 * While VWAN allows for Any-to-Any between branches and spokes, this is disabled if you use the Secure Hub format and deploy an Azure Firewall in the hub.
 
-
 With this in mind, you should consider carefully if you wish to use Azure Virtual WAN, and what it means for your environment.
 
 ### Example Deployment
