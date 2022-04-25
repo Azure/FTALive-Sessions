@@ -20,8 +20,6 @@
 
 ### Web Application Firewall Reporting
 
-## Private Endpoints
-
 ## Azure Defender for Cloud Features
 
 ### Just In Time Access
