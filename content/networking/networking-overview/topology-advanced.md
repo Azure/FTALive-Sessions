@@ -45,9 +45,11 @@ You may also think about having a seperate hub for different environments if you
 
 ### Planning for your Spoke IP Space
 
-Spoke vnets are dynamic and map to an application or group of (heavily) related applications.  They are also often separated by environment, meaning that one application might have two virtual networks, one for Dev/Test and another for Prod.
+Spoke vnets are dynamic and map to an application or group of (heavily) related applications.  They are also often separated by environment, meaning that one application might have two virtual networks, one for Dev/Test and another for Prod.  Spoke vnets vary in size but are usually smaller rather than larger and subnets align to the application's requirements.  
 
-Spoke vnets vary in size but are usually smaller rather than larger and subnets align to the application's requirements.  It can be helpful to create t-shirt sizes for virtual networks.  
+![Example N-Tier App](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/images/n-tier-physical-bastion.png)
+
+Because spoke vnet size is dynamic, it can be helpful to create t-shirt sizes for virtual networks.  
 
 Example sizes might be:
 
@@ -62,7 +64,7 @@ Individual spokes should be pulled from the same supernet as their hub, and peer
 
 Other services, like Identity, can also go in their own spokes.
 
-![Hub and SPoke with multiple spoke sizes](./png/ipam-hub-spoke.png)
+![Hub and Spoke with multiple spoke sizes](./png/ipam-hub-spoke.png)
 
 >In migration scenarios, refactoring applications to use virtual network and subnet segmentation is recommended.  However, in some migrations, all source devices are replicated in to a single virtual network segmented by subnets.  In this scenario, a single virtual network might represent all workloads running in a source environment.
 
@@ -78,6 +80,8 @@ There is no golden topology that will fit every workload scenario.  It is helpfu
 This might lead you to adopt a stand alone vnet, vnet mesh, or some other topology.
 
 ## Hub and Spoke with Azure VWAN
+
+![Azure Virtual WAN overview diagram](https://docs.microsoft.com/azure/virtual-wan/media/virtual-wan-about/virtualwan1.png)
 
 ### Use Case for Azure VWAN
 
