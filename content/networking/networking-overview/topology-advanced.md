@@ -1,8 +1,8 @@
-# Topology
+# Topology (Advanced)
 
 #### [prev](./connectivity.md) | [home](./readme.md)  | [next](./security-advanced.md)
 
-## Hub and spoke 
+## Hub and spoke
 
 A working example for a hub and spoke topology.
 
