@@ -19,7 +19,7 @@ Connectivity between VNets is usually accomplished with Azure's native [VNet Pee
 **Alternatives to Peering:**
 
 * Site-to-site VPN
-* Shared ExpressRoute circuit: *no longer recommended by networking product group
+* Shared ExpressRoute circuit: *no longer recommended by networking product group due to inconsistent performance
 
 ## External Networks
 
@@ -49,9 +49,12 @@ If you need to communicate with services (using a private IP) in another network
   * *Microsoft Peering*: connect to Microsoft services, including PaaS services, Microsoft 365, and Dynamics
   * *Public Peering*: legacy version of Microsoft Peering
 * Circuit: ExpressRoute configuration resource for provider, bandwidth, billing type, routing, etc.
-  * Multiple circuits required for multiple peering locations or providers
-* Virtual Network Gateway: entrypoint for traffic from your ExpressRoute Circuit to your Azure VNets 
+  * Multiple circuits are required for multiple peering locations or providers
+  * Circuit SKU affects number of connected VNets, scope of connectivity, number of route prefixes, and M365 access
+  ![ExpressRoute circuit SKU scope of access](./png/er-sku-scope.png)
+* Virtual Network Gateway: entrypoint for traffic from your ExpressRoute Circuit to your Azure VNets
 * Bandwidth:
+  * Purchase options are 'metered' or 'unlimited', indicating how egress traffic will be charged (ingress is free). 'Metered' is more cost-effective at lower utilization and a good starting place
   * Connection is duplex--purchased bandwidth is available in both directions
   * Because connection is redundant, the customer actually has 2x the purchased bandwidth available  
 * [Routing Requirements](https://docs.microsoft.com/azure/expressroute/expressroute-routing): Microsoft peering requires registered ASN and public IP addresses; private peering can use private IPs and ASNs
@@ -67,4 +70,5 @@ If you need to communicate with services (using a private IP) in another network
 
 * [Coexistance of ExpressRoute and VPN Gateways](https://docs.microsoft.com/azure/expressroute/expressroute-howto-coexist-resource-manager)
   * Provide a fail-back for ExpressRoute connectivity
-  * Encrypt traffic over ExpressRoute to meet regulatory requirements
+  * Connect branch locations to Azure
+  * [Encrypt traffic over ExpressRoute](https://docs.microsoft.com/azure/expressroute/site-to-site-vpn-over-microsoft-peering) to meet regulatory requirements
