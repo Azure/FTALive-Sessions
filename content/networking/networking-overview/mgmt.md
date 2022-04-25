@@ -2,6 +2,12 @@
 
 #### [prev](./security-advanced.md) | [home](./readme.md)  | [next](./faq.md)
 
+## Azure Monitor Network Insights
+
+Azure Monitor's Network Insights page provides a quick dashboard of network component status and health across your subscriptions. Use it to quickly locate problems in your network.
+
+![Azure Monitor Network Insights](./png/azure-monitor-network-insights.png)
+
 ## Azure Network Watcher
 
 Azure Network Watcher provides tools to monitor, diagnose, view metrics, and enable or disable logs for resources in an Azure virtual network. Network Watcher is designed to monitor and repair the network health of IaaS (Infrastructure-as-a-Service) products which includes Virtual Machines, Virtual Networks, Application Gateways, Load balancers, etc. Note: It is not intended for and will not work for PaaS monitoring or Web analytics.
@@ -14,9 +20,9 @@ Network security group (NSG) flow logs is a feature of Azure Network Watcher tha
 
 [Introduction to flow logging for network security groups](https://docs.microsoft.com/en-us/azure/network-watcher/network-watcher-nsg-flow-logging-overview)
 
-## Traffic analytics
+### Traffic analytics
 
-Traffic Analytics is a cloud-based solution that provides visibility into user and application activity in cloud networks. Traffic analytics analyzes Network Watcher network security group (NSG) flow logs to provide insights into traffic flow in your Azure cloud. 
+Traffic Analytics is a cloud-based solution that provides visibility into user and application activity in cloud networks. Traffic analytics analyzes Network Watcher network security group (NSG) flow logs to provide insights into traffic flow in your Azure cloud.
 
 [Why traffic analytics?](https://docs.microsoft.com/en-us/azure/network-watcher/traffic-analytics)
 
@@ -53,14 +59,6 @@ Network Watcher variable packet capture allows you to create packet capture sess
 
 Portal link: [Network Watcher | Packet capture](https://ms.portal.azure.com/#blade/Microsoft_Azure_Network/NetworkWatcherMenuBlade/packetCapture)
 
-### Azure Serial Console 
+### Azure Serial Console
 
 The Serial Console in the Azure portal provides access to a text-based console for virtual machines (VMs) and virtual machine scale set instances running either Linux or Windows. This serial connection connects to the ttyS0 or COM1 serial port of the VM or virtual machine scale set instance, providing access independent of the network or operating system state. The serial console can only be accessed by using the Azure portal and is allowed only for those users who have an access role of Contributor or higher to the VM or virtual machine scale set.
-
-[Azure Serial Console for Linux](https://docs.microsoft.com/en-us/azure/virtual-machines/troubleshooting/serial-console-linux)
-
-![Serial console](png/serial-console-linux.png)
-
-[Azure Serial Console for Windows](https://docs.microsoft.com/en-us/azure/virtual-machines/troubleshooting/serial-console-windows)
-
-![Serial console](png/serial-console-windows.png)
