@@ -45,17 +45,62 @@ You may also think about having a seperate hub for different environments if you
 
 ### Planning for your Spoke IP Space
 
+Spoke vnets are dynamic and map to an application or group of (heavily) related applications.  They are also often separated by environment, meaning that one application might have two virtual networks, one for Dev/Test and another for Prod.
+
+Spoke vnets vary in size but are usually smaller rather than larger and subnets align to the application's requirements.  It can be helpful to create t-shirt sizes for virtual networks.  
+
+Example sizes might be:
+
+T-shirt Size| CIDR Size | Suited for | Hosts |
+---|---|---|---|
+Small | /26 | Small simple applications without much tiering or autoscaling  | 64 *minus 4 per subnet* |
+Medium | /25 | More complex applications that have more tiering or autoscaling, or are broken in to smaller services  | 128 *minus 4 per subnet*
+Large | /24 | Applications that have multiple tiers, and use vnet integration with app services, SQL services, or Azure Kubernetes Services **OR** a workload made up of multiple simple applications | 256 *minus 4 per subnet* |
+Extra Large | /23 | A workload made up of multiple complex applications, or that uses services with significant IP address considerations  | 512 *minus 4 per subnet* |
+
+Individual spokes should be pulled from the same supernet as their hub, and peered to the hub.  Stubbing out similar virtual networks in the secondary region can help you prepare for disaster recovery events.
+
+Other services, like Identity, can also go in their own spokes.
+
+![Hub and SPoke with multiple spoke sizes](./png/ipam-hub-spoke.png)
+
+>In migration scenarios, refactoring applications to use virtual network and subnet segmentation is recommended.  However, in some migrations, all source devices are replicated in to a single virtual network segmented by subnets.  In this scenario, a single virtual network might represent all workloads running in a source environment.
+
+## Considering Other Topologies
+
+There is no golden topology that will fit every workload scenario.  It is helpful to think about your requirements and use materials to make decisions early on in the process.
+
+* Consider the workload.
+* Consider availability requirements (including global and regional).
+* Consider peering costs.
+* Don't underestimate hidden costs and administrative overheads.
+
+This might lead you to adopt a stand alone vnet, vnet mesh, or some other topology.
+
+## Hub and Spoke with Azure VWAN
+
+### Use Case for Azure VWAN
+
+Azure Virtual WAN is a service that allows for improved throughput and management of virtual networks, but are managed very differently.  The advantages are:
+
+* Azure Virtual WAN provides more tunnels to on-prem networks (called branches).
+* Provides greater network throughput through the hub from these tunnels (but does not increase the throughput of each tunnel).
+* Provides a way to define routes and configure auto-learning of routes, and "push" them to spoke virtual networks.
+
+It can be a powerful tool, but it comes with some limitations
+
+* Because the Virtual WAN hubs are software defined, you cannot put your own resources in them; only Azure Firewalls, Virtual Network Gateways, ExpressRoute Gateways, and specific third party NVAs can be deployed in.
+* Route Tables have interactions with the Azure VWAN published routes, which can add complexity if an environment has unique routing concerns.
+* While VWAN allows for Any-to-Any between branches and spokes, this is disabled if you use the Secure Hub format and deploy an Azure Firewall in the hub.
 
 
-## Other topologies
+With this in mind, you should consider carefully if you wish to use Azure Virtual WAN, and what it means for your environment.
 
-There is no golden topology that will fit every workload scenario.
-- Consider the workload.
-- Consider availability requirements (including global and regional).
-- Consider peering costs.
-- Don't underestimate hidden costs and administrative overheads.
+### Example Deployment
 
-## Advanced scenarios
+Once you deploy a Virtual WAN, you will then deploy multiple Virtual Hubs.  These can have the same sizing as your Virtual Network Hub, and so shouldn't impact your IPAM plan.  One exception is if you need to shift other resources outside of the hub, so keep that in mind.
+
+You can peer 
 
 * [Virtual WAN](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-about)
 * [ExpressRoute Global Reach](https://docs.microsoft.com/azure/expressroute/expressroute-global-reach)
