@@ -23,5 +23,5 @@ During this phase, typically missed but important, each migration wave identifie
 ## [**Waves Migration & Post Go-Live Milestone**](./migration.md) 
 During this phase, each migration wave is cutover to Azure and validated for expected functionality. For Post Go-live, each migration wave is handed over to Azure operations teams for the defined soak period. 
 
-![Concept Diagram](./png/LiftandShift-dcmigration-workflow.PNG)
+![Concept Diagram](./png/liftandshift-dcmigration-workflow.png)
 

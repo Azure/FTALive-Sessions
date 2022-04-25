@@ -10,7 +10,7 @@ The following content can be used as a checklist to incorporate within your migr
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;1.1\.  Plan for scanning agents/appliances that will be needed to discover the state. 
  
-![Concept Diagram](./png/scan-workflow.PNG)
+![Concept Diagram](./png/scan-workflow.png)
 
 - &nbsp;&nbsp;&nbsp;&nbsp;Reference Link A: https://docs.microsoft.com/en-us/azure/migrate/tutorial-discover-vmware#set-up-the-appliance
 - &nbsp;&nbsp;&nbsp;&nbsp;Reference Link B: https://docs.microsoft.com/en-us/azure/migrate/tutorial-discover-hyper-v#set-up-the-appliance

@@ -88,7 +88,7 @@ This is usually led by application owners. For example, UAT may include:
 
 The below diagram aims to provide a workflow for testing and migration based on common scenarios. Timelines for different aspects of the workflow, such as testing vs. migration, may be targeted on different dates depending on your scenario.
 
-![Concept Diagram](./png/migration-workflow.PNG)
+![Concept Diagram](./png/migration-workflow.png)
 
 ## **3 Migration Plan Execution**
 
