@@ -26,7 +26,7 @@ Secondary Region | pool | P2S VPN  | 10.2.255.0/24
 
 > Secondary region supernet 10.2.0.0/16
 
-#### Hub subnets
+## Hub subnets
 
 Use a single address space of 10.x.0.0/22 for each hub divided into the following subnets.
 
@@ -51,6 +51,19 @@ VmSubnet2                       | .3.144 | /28 |  16 |  11 | .145, .146, .147 | 
 
 > Reserve .255.0/24 for Point to Site VPN.
 
-### Spoke subnets
+## Spoke subnets
 
-Spoke vnets are dynamic and map to an application or group of (heavily) related applications. Spoke vnets vary in size but are usually smaller rather than larger and subnets align to the application's requirements.
+Spoke vnets are dynamic and map to an application or group of (heavily) related applications.
+
+Spoke vnets vary in size but are usually smaller rather than larger and subnets align to the application's requirements.
+
+![Example N-Tier App](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/images/n-tier-physical-bastion.png)
+
+Example sizes might be:
+
+T-shirt Size| CIDR Size | Suited for | Hosts |
+---|---|---|---|
+Small | /26 | Small simple applications without much tiering or autoscaling  | 64 *minus 4 per subnet* |
+Medium | /25 | More complex applications that have more tiering or autoscaling, or are broken in to smaller services  | 128 *minus 4 per subnet*
+Large | /24 | Applications that have multiple tiers, and use vnet integration with app services, SQL services, or Azure Kubernetes Services **OR** a workload made up of multiple simple applications | 256 *minus 4 per subnet* |
+Extra Large | /23 | A workload made up of multiple complex applications, or that uses services with significant IP address considerations  | 512 *minus 4 per subnet* |
