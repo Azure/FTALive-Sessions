@@ -2,6 +2,8 @@
 
 #### [prev](./connectivity.md) | [home](./readme.md)  | [next](./security-advanced.md)
 
+![Example multi-hub virtual network](https://docs.microsoft.com/azure/cloud-adoption-framework/_images/azure-best-practices/network-hub-spokes-cluster.png)
+
 ## IP Address Management for Hub and Spoke Vnets
 
 A working example for a hub and spoke topology.
@@ -83,6 +85,14 @@ This might lead you to adopt a stand alone vnet, vnet mesh, or some other topolo
 
 ![Azure Virtual WAN overview diagram](https://docs.microsoft.com/azure/virtual-wan/media/virtual-wan-about/virtualwan1.png)
 
+You can use an Azure Virtual WAN and regional Virtual Hubs instead of a Virtual Network for managing your hub layer.
+
+Once you deploy a Virtual WAN, you will then deploy multiple Virtual Hubs.  These can have the same sizing as your Virtual Network Hub, and so shouldn't impact your IPAM plan.  One exception is if you need to shift other resources outside of the hub, so keep that in mind.
+
+You will then create connections from the hub to the spoke networks from within the Virtual WAN itself.
+
+Deployment of Gateways and Firewalls will occur from within the Virtual WAN/Virtual Hub interface, and you can also manage items as well.
+
 ### Use Case for Azure VWAN
 
 Azure Virtual WAN is a service that allows for improved throughput and management of virtual networks, but are managed very differently.  The advantages are:
@@ -99,15 +109,26 @@ It can be a powerful tool, but it comes with some limitations
 
 With this in mind, you should consider carefully if you wish to use Azure Virtual WAN, and what it means for your environment.
 
-### Example Deployment
+### Routing with Virtual Hubs
 
-Once you deploy a Virtual WAN, you will then deploy multiple Virtual Hubs.  These can have the same sizing as your Virtual Network Hub, and so shouldn't impact your IPAM plan.  One exception is if you need to shift other resources outside of the hub, so keep that in mind.
+Routing with spoke networks connected to VWAN Hubs works differently than normal routing.  A virtual hub has route tables associated with it by default:
 
-You can peer 
+* **Default** - Which is the standard route and assumed to be the one in use
+* **None** - Which is intended to be empty, and used for when a virtual network should not have additional routes assigned to it.
 
-* [Virtual WAN](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-about)
-* [ExpressRoute Global Reach](https://docs.microsoft.com/azure/expressroute/expressroute-global-reach)
-* [Coexistance of ER and VPN Gateways](https://docs.microsoft.com/azure/expressroute/expressroute-howto-coexist-resource-manager)
+You can add your own to match different patterns.  Route tables in the Virtual Hub are assigned labels, so they can be managed in groups.
+
+In addition to static routes inputted in to the route tables, when you go to connect spokes to the virtual hub, you will select what route tables to associate and which to propogate to.
+
+The route table that you select for **Associated Route Table** will be used by the network; it becomes the default route definitions for all subnets in the virtual network.  UDRs can still be used to overwrite these routes.
+
+The route table(s) that you select for **Propogate to Route Tables** will be the route tables that learn the routes associated with this Virtual Network.  **Propogate to labels** applies to all route tables with that labels.
+
+You can also specify static routes in this connection.
+
+Imagine if you had two network segments, Red and Blue.  You could use route tables to control traffic from Red and Blue networks in different ways.
+
+![Red and Blue Vnets with Virtual Hub](https://docs.microsoft.com/azure/virtual-wan/media/routing-scenarios/custom-branch-vnet/custom-branch.png)
 
 ## Private connectivity to PaaS resources
 
@@ -117,7 +138,7 @@ We recommend adopting strategies like Zero Trust and moving the focus from netwo
 * [Service Endpoint](https://docs.microsoft.com/azure/virtual-network/virtual-network-service-endpoints-overview) - Allow ACLd Access to a public endpoint, firewall other access. Not accessible from remote networks
 * [Private Endpoints](https://docs.microsoft.com/azure/private-link/private-endpoint-overview) - Provision private ip address in the virtual network that will enable access to public resource. Not supported for all services see [Availbilty](https://docs.microsoft.com/azure/private-link/private-link-overview#availability)
 
-OPINION: 
+OPINION:
 >Relying heavily on these mechanisms will make integration increasingly difficult, some services will have a loss of features when IP addresses are restricted. Remember many of the services were designed for a public cloud. Examples:
 
 >* [Azure SQL import/export service](https://docs.microsoft.com/azure/azure-sql/database/network-access-controls-overview#allow-azure-services)
@@ -126,7 +147,7 @@ OPINION:
 
 ## Alternatives to private connectivity
 
-You may not need a full hybrid network to support your workloads. Some services offer their own connectivity options which might be worth exploring if you only need connectivity for 1 or two solutions. 
+You may not need a full hybrid network to support your workloads. Some services offer their own connectivity options which might be worth exploring if you only need connectivity for 1 or two solutions.
 
 Examples:
 
