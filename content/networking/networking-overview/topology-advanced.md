@@ -207,7 +207,7 @@ OPINION:
 >* Managing some storage account settings from the portal [Storage Recommendations](https://docs.microsoft.com/azure/storage/blobs/security-recommendations#networking)
 >* Using PowerBI to easily integrate with data services
 
-## Alternatives to private connectivity
+### Alternatives to private connectivity
 
 You may not need a full hybrid network to support your workloads. Some services offer their own connectivity options which might be worth exploring if you only need connectivity for 1 or two solutions.
 
