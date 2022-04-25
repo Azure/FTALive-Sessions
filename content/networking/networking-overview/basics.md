@@ -19,7 +19,7 @@ A VNet enables you to connect your resources to each other, the internet, and ot
   - Address spaces with subnets cannot be modified 
 - Addresses will automatically be allocated to connected services
 
-### DNS and VNETs
+### DNS and VNets
 
 DNS for VNet-connected resources can be configured at the VNet level or on the NIC (not at the VM OS!)
 
@@ -51,7 +51,7 @@ Outbound connectivity to the internet is enabled by default in Azure--VNet confi
 - VMs with a Public IP will use the public IP address for outbound SNAT
 - For persistent outbound IPs and production level SNAT port control, use NAT Gateway, a Standard Load Balancer, or a network appliance
 
-> [!NOTE]
+> NOTE:
 > More information for [**Outbound connection (flows)**](https://docs.microsoft.com/azure/virtual-network/ip-services/default-outbound-access)
 
 ### Connecting between VNets
@@ -60,3 +60,9 @@ Outbound connectivity to the internet is enabled by default in Azure--VNet confi
 - VNet peering or VPN. Covered in [Connectivity section](./connectivity.md)
 
 ### [VNet Frequently Asked Questions](https://docs.microsoft.com/azure/virtual-network/virtual-networks-faq)
+
+### Network Virtual Appliances (NVAs)
+
+Network Virtual Appliances (NVAs) encompass a variety of networking solutions deployed on VMs in Azure. Common examples are firewall products, network monitoring products, and third-party VPN solutions. NVAs are generally used to provide additional functionality not included in Azure's first-party services or for management consistency with existing tools.
+
+![NVA deployment architecture](./png/nvaha-alb-internet.png)
