@@ -27,12 +27,27 @@ Azure Firewall has two SKUs, with Premium having the following features over Sta
 
 ### Azure Firewall Policies
 
+Azure Standard has the option to upgrade to using Policies, which are centrally managed rules collections.  Azure Firewall Premium has them as a requirement.
+
+![Azure Firewall Policy Break Down](https://docs.microsoft.com/azure/firewall/media/policy-rule-sets/policy-rule-sets.png)
+
+These policies allow you to create rules from a central location, and deploy them to multiple firewalls
+
+[More on Azure Firewall Policies](https://docs.microsoft.com/azure/firewall/policy-rule-sets)
+
 ### Azure Firewall Management with Forced Tunneling
+
+As part of its management, Azure Firewall needs to connect with Azure services.  If you need to send traffic from Azure Firewall to another appliance (an on-premises appliance or an NVA) to process traffic before it goes to the internet, commong routing solutions will break this function.
+
+You can deploy an Azure Firewall to use forced tunneling instead.  This seperate out customer traffic and management traffic, and requires an additional subnet to operate.
+
+[More on Forced Tunneling with Azure Firewall](https://docs.microsoft.com/azure/firewall/forced-tunneling)
 
 ### Azure Firewall Dashboard
 
 Azure firewall has a [monitoring workbook](https://github.com/Azure/Azure-Network-Security/tree/master/Azure%20Firewall/Workbook%20-%20Azure%20Firewall%20Monitor%20Workbook) that can be helpful for monitoring and managing the Azure Firewall environment.
-## Web Application Firewalls
+
+## Web Application Firewalls and Load Balancers
 
 ### Selecting Front Door vs. App Gateway
 
