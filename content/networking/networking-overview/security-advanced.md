@@ -49,9 +49,20 @@ Azure firewall has a [monitoring workbook](https://github.com/Azure/Azure-Networ
 
 ## Web Application Firewalls and Load Balancers
 
-### Selecting Front Door vs. App Gateway
+### Selecting Load Balancing
+
+![Azure Load Balancing Decision Flow](https://docs.microsoft.com/azure/architecture/guide/technology-choices/images/load-balancing-decision-tree.png)
+
+**Note** that only Frontdoor and Application Gateway can be configured with WAFs, and are focused on web apps.
+
+[More on selecting your load balancing options](https://docs.microsoft.com/azure/architecture/guide/technology-choices/load-balancing-overview)
 
 ### Web Application Firewall Reporting
+
+Both solutions use Log Analytics
+
+[WAF logs for Frontdoor](https://docs.microsoft.com/azure/web-application-firewall/afds/waf-front-door-monitor)
+[WAF logs for App Gateway](https://docs.microsoft.com/azure/web-application-firewall/ag/application-gateway-waf-metrics)
 
 ## Azure Defender for Cloud Features
 
