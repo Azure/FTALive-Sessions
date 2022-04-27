@@ -1,3 +1,13 @@
+# Overview 
+
+| Plan and Develop | Commit the Code | Build and Test | Go to Production | Operate |  
+|---|---|---|---|---|
+|[Threat Modelling](./ThreatModelling.md)| [Static application security testing](./CodeAnalysis.md)| [Dynamic application security testing](./CodeAnalysis.md) | Security smoke tests | [Continuous monitoring](Operate.md)
+|[IDE Security plugins](./CodeAnalysis.md)| Security Unit and Functional tests | _**[Cloud configuration validation](CloudConfigValidation.md)**_ | _**[Configuration checks](CloudConfigValidation.md)**_ | [Threat intelligence](Operate.md)
+|[Pre commit hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)| [Dependency management](./CodeAnalysis.md) | _**[Infrastructure scanning](CloudConfigValidation.md)**_ | [Live Site Penetration testing](https://docs.microsoft.com/azure/security/fundamentals/pen-testing) | [Penetration testing](https://docs.microsoft.com/azure/security/fundamentals/pen-testing)
+|[Secure coding standards](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/migrated_content) | [Securing the CI/CD workflow](./securingCICD.md) | Security acceptance testing | Blameless postmortems
+|[Peer review](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)||||
+
 # Cloud Configuration Validation
 
 When deploying to a cloud environment like Azure, and especially when applying Infrastructure as Code (IaC), it becomes important to check that any configuration made in your cloud environment complies with overall security and governance principles.
