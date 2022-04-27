@@ -14,7 +14,8 @@ Icon | Short Name | Full Name
 ![gw icon](svg/virtualnetworkgateways.svg)  | GW | Gateway
 ![waf icon](png/waf-icon.png) | WAF | Web Application Firewall
 
-## VNet 
+## VNet
+
 A logical address space housing virtual subnets.
 
 - Special subnets exist for interacting with the platform.
@@ -22,19 +23,22 @@ A logical address space housing virtual subnets.
 - Can be connected to other VNets using Peering.
 
 ## NSG
+
 A semi-stateful (*read non-stateful) low level (layer 3) packet filter.
 
-- Rules based on ip address and port. 
-- Has constructs to determine Azure services instead of using IP addresses. 
+- Rules based on ip address and port.
+- Has constructs to determine Azure services instead of using IP addresses.
 - Associated to subnets, virtual machines or both.
 
 ## UDR
+
 A routing table that allows users to override system routes.
 
 - Associated to subnets.
 - Inherited by NICs of VM and certain platform services.
 
 ## NIC
+
 A virtual network card to connect virtual machines to a subnet.
 
 - Assigned to a single virtual machine and associated to a subnet.
@@ -69,26 +73,30 @@ Private Link
 - You are responsible for the hosting the DNS name and correct name resolution.
 
 ## ILB
+
 A low cost, very fast load balancer capable of maintaining flow symmetry.
 
 - Not actually a resource;
 - A rule within the underlying virtual network fabric.
 
 ## NVA
+
 An essential part of the Hub and Spoke topology.
 
 - Azure Firewall is the native NVA option.
 - Non-native options include 3rd party appliances.
-- High level filtering (layer 7) between VNets, subnets, internet and on-premises. 
+- High level filtering (layer 7) between VNets, subnets, internet and on-premises.
 
 ## GW
+
 Gateways facilitate more comprehensive connectivity options.
+
 - There are VPN Gateways and ExpressRoute Gateways.
-- 
 - Linked to the GatewaySubnet.
 - Make routing decisions.
 
 ## WAF
+
  A Web Application Firewall in a PAAS Firewall which inspects requests on their way to an origin web server, and will block requests before they reach the server.
 
 - Web application firewall is used in context with an Application Gateway, Azure Front Door or Azure CDN (Preview).
