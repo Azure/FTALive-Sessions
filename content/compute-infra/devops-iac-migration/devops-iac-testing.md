@@ -9,8 +9,8 @@ The sample pipeline takes the output of an Azure Migrate Assessment and creates 
 
 ## 1 Pre-Requisites
 To get started, the assumption is the following:
-* The [discovery](https://github.com/Azure/fta-liftandshift-dcmigration/blob/main/doc/scan.md) is completed for the scoped VMs
-* The [assessment](https://github.com/Azure/fta-liftandshift-dcmigration/blob/main/doc/assess.md) for the environment is created within Azure Migrate.
+* The [discovery](https://github.com/Azure/FTALive-Sessions/blob/main/content/migration/server-migration/scan.md) is completed for the scoped VMs
+* The [assessment](https://github.com/Azure/FTALive-Sessions/blob/main/content/migration/server-migration/assess.md) for the environment is created within Azure Migrate.
     * The assessment is the source for where the VMs in the pipeline are created. Please ensure that only the VMs that are scoped for the test environment are in the assessment. Please manually omit VMs not needed in the deployment.
 * The assessment was exported as an Excel file to your local machine.
 * An [Azure DevOps Organization](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/organization-management?view=azure-devops) is created and linked to your subscription in Azure.
@@ -19,11 +19,11 @@ To get started, the assumption is the following:
 
 
 ### 1.1\. Pre-Migration Tasks 
-Please refer to the [Pre-Migration and Post-Migration Activities](https://github.com/Azure/fta-liftandshift-dcmigration/blob/main/doc/testing.md#12-technical) page that should be defined before executing the test pipeline. General best practices when preparing for test migration:
+Please refer to the [Pre-Migration and Post-Migration Activities](https://github.com/Azure/FTALive-Sessions/blob/main/content/migration/server-migration/testing.md#1-pre--post--migration-activities-defined) page that should be defined before executing the test pipeline. General best practices when preparing for test migration:
 
 **Isolated VNet**
 - Define parameters needed for an isolated VNet implementation (i.e. CIDR block, NSG Ports that will open on the test subnet, etc.).
-- Test the connectivity in the isolated ([Guidance for identifying target VNet](https://github.com/Azure/fta-liftandshift-dcmigration/blob/main/doc/testing.md#23-identify-target-vnets-tests-and-migration-workflow))
+- Test the connectivity in the isolated ([Guidance for identifying target VNet](https://github.com/Azure/FTALive-Sessions/blob/alexandram-migration-devops-iac/content/compute-infra/server-migration/testing.md#23-identify-target-vnets-tests-and-migration-workflow))
 - Ensure that appropriate stakeholders are given the least privilege permissions to execute the pipelines.
 - Define Test Migration approach through waves of execution
     - Understand dependencies to create migration waves/groups.

@@ -49,7 +49,7 @@ To get started, the assumption is the following:
 
 Recommended folder structure:
 
-![Migration Tree](../server-migration/png/folder-structure.png)
+![Migration Tree](../server-migration/png/folder-structure.jpg)
 
 Details:
 - `All_Assessed_Machines.csv` and `All_Assessed_Disks.csv`: CSV files extracted from Azure Migrate Assessement excel file
