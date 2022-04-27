@@ -93,6 +93,8 @@ You will then create connections from the hub to the spoke networks from within 
 
 Deployment of Gateways and Firewalls will occur from within the Virtual WAN/Virtual Hub interface, and you can also manage items as well.
 
+Also, you should make sure your [routing scenario is one of the supported patterns](https://docs.microsoft.com/azure/virtual-wan/scenario-any-to-any).
+
 ### Use Case for Azure VWAN
 
 Azure Virtual WAN is a service that allows for improved throughput and management of virtual networks, but are managed very differently.  The advantages are:
