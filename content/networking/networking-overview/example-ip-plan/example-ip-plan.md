@@ -63,7 +63,9 @@ Example sizes might be:
 
 T-shirt Size| CIDR Size | Suited for | Hosts |
 ---|---|---|---|
-Small | /26 | Small simple applications without much tiering or autoscaling  | 64 *minus 4 per subnet* |
-Medium | /25 | More complex applications that have more tiering or autoscaling, or are broken in to smaller services  | 128 *minus 4 per subnet*
-Large | /24 | Applications that have multiple tiers, and use vnet integration with app services, SQL services, or Azure Kubernetes Services **OR** a workload made up of multiple simple applications | 256 *minus 4 per subnet* |
-Extra Large | /23 | A workload made up of multiple complex applications, or that uses services with significant IP address considerations  | 512 *minus 4 per subnet* |
+Small | /26 | Small simple applications without much tiering or autoscaling  | 64 *minus 5 per subnet* |
+Medium | /25 | More complex applications that have more tiering or autoscaling, or are broken in to smaller services  | 128 *minus 5 per subnet*
+Large | /24 | Applications that have multiple tiers, and use vnet integration with app services, SQL services, or Azure Kubernetes Services **OR** a workload made up of multiple simple applications | 256 *minus 5 per subnet* |
+Extra Large | /23 | A workload made up of multiple complex applications, or that uses services with significant IP address considerations  | 512 *minus 5 per subnet* |
+
+[Read more about subnet reservations](https://docs.microsoft.com/azure/virtual-network/virtual-networks-faq#are-there-any-restrictions-on-using-ip-addresses-within-these-subnets)

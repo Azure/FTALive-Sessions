@@ -1,6 +1,6 @@
 # Topology (Advanced)
 
-#### [prev](./connectivity.md) | [home](./readme.md)  | [next](./security-advanced.md)
+[prev](./connectivity.md) | [home](./readme.md)  | [next](./security-advanced.md)
 
 ![Example multi-hub virtual network](https://docs.microsoft.com/azure/cloud-adoption-framework/_images/azure-best-practices/network-hub-spokes-cluster.png)
 
@@ -92,6 +92,8 @@ Once you deploy a Virtual WAN, you will then deploy multiple Virtual Hubs.  Thes
 You will then create connections from the hub to the spoke networks from within the Virtual WAN itself.
 
 Deployment of Gateways and Firewalls will occur from within the Virtual WAN/Virtual Hub interface, and you can also manage items as well.
+
+Also, you should make sure your [routing scenario is one of the supported patterns](https://docs.microsoft.com/azure/virtual-wan/scenario-any-to-any).
 
 ### Use Case for Azure VWAN
 
@@ -198,7 +200,7 @@ We recommend adopting strategies like Zero Trust and moving the focus from netwo
 
 * [Dedicated Service](https://docs.microsoft.com/azure/virtual-network/virtual-network-for-azure-services) - Deploy dedicated but managed infrastructure inside your VNet e.g SQL Managed Instance or App Service Environment
 * [Service Endpoint](https://docs.microsoft.com/azure/virtual-network/virtual-network-service-endpoints-overview) - Allow ACLd Access to a public endpoint, firewall other access. Not accessible from remote networks
-* [Private Endpoints](https://docs.microsoft.com/azure/private-link/private-endpoint-overview) - Provision private ip address in the virtual network that will enable access to public resource. Not supported for all services see [Availbilty](https://docs.microsoft.com/azure/private-link/private-link-overview#availability)
+* [Private Endpoints](https://docs.microsoft.com/azure/private-link/private-endpoint-overview) - Provision private ip address in the virtual network that will enable access to public resource. Not supported for all services see [Availability](https://docs.microsoft.com/azure/private-link/private-link-overview#availability)
 
 OPINION:
 >Relying heavily on these mechanisms will make integration increasingly difficult, some services will have a loss of features when IP addresses are restricted. Remember many of the services were designed for a public cloud. Examples:
@@ -214,5 +216,6 @@ You may not need a full hybrid network to support your workloads. Some services 
 Examples:
 
 * [Azure Relay](https://docs.microsoft.com/azure/azure-relay/relay-what-is-it)
-* [Data Gateway](https://docs.microsoft.com/en-us/data-integration/gateway/service-gateway-onprem)
-* Exposing services using [Mutual Certificate Authentication](https://docs.microsoft.com/azure/api-management/api-management-howto-mutual-certificates)
+* [Data Gateway](https://docs.microsoft.com/data-integration/gateway/service-gateway-onprem)
+* Exposing services using
+[Mutual Certificate Authentication](https://docs.microsoft.com/azure/api-management/api-management-howto-mutual-certificates)

@@ -1,6 +1,6 @@
 # Security (Advanced)
 
-#### [prev](./topology-advanced.md) | [home](./readme.md)  | [next](./mgmt.md)
+[prev](./topology-advanced.md) | [home](./readme.md)  | [next](./mgmt.md)
 
 ## Third Party vs. Native
 
@@ -59,7 +59,7 @@ Azure firewall has a [monitoring workbook](https://github.com/Azure/Azure-Networ
 
 ### Web Application Firewall Reporting
 
-Both solutions use Log Analytics
+Both solutions use Log Analytics for their logging purposes.  You can create queries and add them to dashboards to enable monitoring.
 
 [WAF logs for Frontdoor](https://docs.microsoft.com/azure/web-application-firewall/afds/waf-front-door-monitor)
 [WAF logs for App Gateway](https://docs.microsoft.com/azure/web-application-firewall/ag/application-gateway-waf-metrics)
