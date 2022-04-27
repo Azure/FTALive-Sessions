@@ -1,6 +1,6 @@
 # Security (Overview)
 
-#### [prev](./topology-overview.md) | [home](./readme.md)  | [next](./routing.md)
+[prev](./topology-overview.md) | [home](./readme.md)  | [next](./routing.md)
 
 ## Considering Endpoint Types
 
@@ -31,7 +31,7 @@ A network security group contains zero, or as many rules as desired, within Azur
 Each Security rule is created as either Inbound or Outbound rule.
 Each NSG also has default security rules which are created automatically by Azure.
 
-https://docs.microsoft.com/azure/virtual-network/security-overview
+[Networking security overview](https://docs.microsoft.com/azure/virtual-network/security-overview)
 
 ## Application Security Groups
 
@@ -39,13 +39,13 @@ Application security groups enable you to configure network security as a natura
 
 To do so, you associate virtual machine interfaces with an Application Security Group that represents their function inside of the application.  Then, you can use this as a source or destination in your Network Security Group.
 
-https://docs.microsoft.com/azure/virtual-network/application-security-groups
+[Application Security Group](https://docs.microsoft.com/azure/virtual-network/application-security-groups)
 
 ## Service Tags
 
 A service tag represents a group of IP address prefixes from a given Azure service. Microsoft manages the address prefixes encompassed by the service tag and automatically updates the service tag as addresses change, minimizing the complexity of frequent updates to network security rules.
 
-https://docs.microsoft.com/azure/virtual-network/service-tags-overview
+[Service Tags](https://docs.microsoft.com/azure/virtual-network/service-tags-overview)
 
 ## Azure Bastion
 
@@ -55,7 +55,7 @@ Use NSGs with Azure Bastion to create a separate administrative channel.
 
 Distributed denial of service (DDoS) attacks are some of the largest availability and security concerns facing customers that are moving their applications to the cloud. A DDoS attack attempts to exhaust an application's resources, making the application unavailable to legitimate users. DDoS attacks can be targeted at any endpoint that is publicly reachable through the internet.
 
-https://docs.microsoft.com/azure/virtual-network/ddos-protection-overview
+[DDOS Protection](https://docs.microsoft.com/azure/virtual-network/ddos-protection-overview)
 
 ## Azure Firewall
 
@@ -73,7 +73,7 @@ In addition, it applies Microsoft Threat Intelligence to protect against known m
 
 In addition to these standard features, there is a Premium SKU which provides advanced protection that will be discussed in [Advanced Security section](security-advanced.md)
 
-https://docs.microsoft.com/azure/firewall/overview
+[Azure firewall overview](https://docs.microsoft.com/azure/firewall/overview)
 
 ## WAF
 

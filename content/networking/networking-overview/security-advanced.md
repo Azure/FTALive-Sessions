@@ -1,6 +1,6 @@
 # Security (Advanced)
 
-#### [prev](./topology-advanced.md) | [home](./readme.md)  | [next](./mgmt.md)
+[prev](./topology-advanced.md) | [home](./readme.md)  | [next](./mgmt.md)
 
 ## Third Party vs. Native
 
