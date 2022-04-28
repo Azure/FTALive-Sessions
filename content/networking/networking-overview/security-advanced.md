@@ -70,9 +70,3 @@ Both solutions use Log Analytics for their logging purposes.  You can create que
 [WAF logs for Frontdoor](https://docs.microsoft.com/azure/web-application-firewall/afds/waf-front-door-monitor)
 
 [WAF logs for App Gateway](https://docs.microsoft.com/azure/web-application-firewall/ag/application-gateway-waf-metrics)
-
-## Azure Defender for Cloud Features
-
-### Just In Time Access
-
-### Secure Score
