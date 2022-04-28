@@ -14,7 +14,8 @@ questions you post will be public.
 the changes straight away.
 
 **Feedback** We would love to hear your thoughts, please provide us your feedback at [https://aka.ms/ftalive-feedback](https://aka.ms/ftalive-feedback)
-and register for other sessions at [https://aka.ms/ftalive](https://aka.ms/ftalive).
+
+**Additional FTA Live Sessions** register for other sessions at [https://aka.ms/ftalive](https://aka.ms/ftalive).
 
 ## Agenda
 
