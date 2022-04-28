@@ -46,7 +46,7 @@ Please refer to the [Pre-Migration and Post-Migration Activities](https://github
 - UAT
 - Failover
 
-![Concept Diagram](../png/migration-workflow.PNG)
+![Concept Diagram](../server-migration/png/migration-workflow.PNG)
 
 ## 2 Pipeline Execution for Testing
 
