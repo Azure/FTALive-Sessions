@@ -13,7 +13,7 @@ questions you post will be public.
 **Slideless** No PowerPoint, we promise! As we update this content you will get
 the changes straight away.
 
-**Feedback** We would love to hear your thoughts, please provide us your feedback
+**Feedback** We would love to hear your thoughts, please provide us your feedback at [https://aka.ms/ftalive-feedback](https://aka.ms/ftalive-feedback)
 and register for other sessions at [https://aka.ms/ftalive](https://aka.ms/ftalive).
 
 ## Agenda
