@@ -6,11 +6,11 @@ To effectively use a SIEM you need to be deliberate. You need to know what you'r
 
 ## What is Sentinel?
 
-![Overview](./Az-Sentinel-Overview.png)
+![Overview](./az-sentinel-overview.png)
 
 ### Sentinel Architecture
 
-![Azure Sentinel](./Sentinel-Arch.png)
+![Azure Sentinel](./sentinel-arch.png)
 
 ## SIEM Decision Points
 
