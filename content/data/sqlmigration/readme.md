@@ -25,7 +25,6 @@ For SQL Migrations, there is a lot of content to cover. Below is an overview of 
 1. [Migration Planning](./migrationplanning.md)
 1. [Migration Execution](./migrationexecution.md)
 1. [Post Migration](./postmigration.md)
-1. [Migration Demos](./Demo1a.md)
 1. [QnA](./faq.md)
 
 ## Appendix (not to be discussed)
