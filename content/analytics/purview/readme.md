@@ -1,4 +1,4 @@
-# Welcome to the FastTrack for Azure Live Azure Purview
+# Welcome to the FastTrack for Azure Live Microsoft Purview
 
 ## We will start 1-2 minutes after the scheduled time to accommodate those still connecting
 
@@ -12,7 +12,7 @@ Please give us your feedback on https://aka.ms/ftalive-feedback
 
 ## Overview
 
-Azure Purview is a unified data governance solution that helps you manage and govern your on-premises, multi-cloud (Azure, AWS, GCP), and software-as-a-service (SaaS) data. Easily create a holistic, up-to-date map of your data landscape with automated data discovery, sensitive data classification, and end-to-end data lineage. Enable data consumers to find valuable, trustworthy data. There are several key components that gets created when using Azure Purview. This session will be delivered by Microsoft FastTrack for Azure engineers. Bring your questions!
+Microsoft Purview is a unified data governance solution that helps you manage and govern your on-premises, multi-cloud (Azure, AWS, GCP), and software-as-a-service (SaaS) data. Easily create a holistic, up-to-date map of your data landscape with automated data discovery, sensitive data classification, and end-to-end data lineage. Enable data consumers to find valuable, trustworthy data. There are several key components that gets created when using Microsoft Purview. This session will be delivered by Microsoft FastTrack for Azure engineers. Bring your questions!
 
 You will need:
 
@@ -21,11 +21,11 @@ You will need:
 
 ## Demo walkthrough
 
-This session includes live demo, all demo guide from [Azure Purview documents](https://docs.microsoft.com/azure/purview/).
+This session includes live demo, all demo guide from [Microsoft Purview documents](https://docs.microsoft.com/azure/purview/).
 
-### Azure Purview overview
+### Microsoft Purview overview
 
-- [Introduction to Azure Purview](https://docs.microsoft.com/azure/purview/overview)
+- [Introduction to Microsoft Purview](https://docs.microsoft.com/azure/purview/overview)
 - [How to create Purview account from Purview studio](https://docs.microsoft.com/azure/purview/create-catalog-portal)
 - [Collection Architecture and best practices](https://docs.microsoft.com/azure/purview/concept-best-practices-collections)
 - [Permission Management](https://docs.microsoft.com/azure/purview/catalog-permissions)
@@ -48,16 +48,16 @@ This session includes live demo, all demo guide from [Azure Purview documents](h
 
 - [Catalog search](https://docs.microsoft.com/azure/purview/concept-search)
 - [Business Glossary](https://docs.microsoft.com/azure/purview/concept-business-glossary)
-- [How to automatically apply sensitivity labels to Azure Purview](https://docs.microsoft.com/azure/purview/how-to-automatically-label-your-content)
+- [How to automatically apply sensitivity labels to Microsoft Purview](https://docs.microsoft.com/azure/purview/how-to-automatically-label-your-content)
 - [Workflow](https://docs.microsoft.com/azure/purview/concept-workflow)
-- [Azure Purview REST API](https://docs.microsoft.com/rest/api/purview/)
+- [Microsoft Purview REST API](https://docs.microsoft.com/rest/api/purview/)
 
 ### Data Insights and Management
 
 - [Insight reports](https://docs.microsoft.com/azure/purview/asset-insights)
 - [Private endpoint](https://docs.microsoft.com/azure/purview/catalog-private-link)
-- [Managed VNet with Azure Purview account](https://docs.microsoft.com/azure/purview/catalog-managed-vnet)
+- [Managed VNet with Microsoft Purview account](https://docs.microsoft.com/azure/purview/catalog-managed-vnet)
 
 ## Resources
 
-[Pattern of system classifications in Azure Purview](https://docs.microsoft.com/azure/purview/supported-classifications)
+[Pattern of system classifications in Microsoft Purview](https://docs.microsoft.com/azure/purview/supported-classifications)
