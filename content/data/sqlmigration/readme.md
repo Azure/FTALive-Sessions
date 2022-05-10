@@ -14,7 +14,7 @@ You will need:
 * Microsoft Teams desktop client or Teams web client to view presentation.
 * Optional headphones to make it easier to listen to and interact with the presenters.
 
-# SQL Migrations (WIP)
+# SQL Migrations
 ## Agenda
 For SQL Migrations, there is a lot of content to cover. Below is an overview of this content, however we will not be discussing all of it today. There is extra information on some of these topics in the [Advanced Topics](./advancedtopics.md) Section.
 
