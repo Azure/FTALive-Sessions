@@ -6,4 +6,4 @@
 We have additional content & resources in our [Advanced Topics](./advancedtopics.md) section.
 
 ## I have a question which you didn't cover or answer.
-Ask it now!
+_Ask it now!_

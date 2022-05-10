@@ -5,7 +5,7 @@ This call will not be recorded due to the wide audience and to encourage questio
 
 **Questions?** Feel free to type them in the chat window at any time. Note that questions you post will be public.
 
-**Slideless** No PowerPoint, we promise! As we update this content (NEED aka.ms link) you will get the changes straight away.
+**Slideless** No PowerPoint, we promise! As we update this content (aka.ms link to be created soon) you will get the changes straight away.
 
 **Feedback** Please give us your feedback on https://aka.ms/ftalive-feedback
 
@@ -25,7 +25,7 @@ For SQL Migrations, there is a lot of content to cover. Below is an overview of 
 1. [Migration Planning](./migrationplanning.md)
 1. [Migration Execution](./migrationexecution.md)
 1. [Post Migration](./postmigration.md)
-1. [QnA](./faq.md)
+1. [Q&A](./faq.md)
 
-## Appendix (not to be discussed)
-1. [Advanced Topics](./advancedtopics.md)
+## Appendix
+1. [Advanced Topics and additional references](./advancedtopics.md)
