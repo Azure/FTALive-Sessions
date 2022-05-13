@@ -8,7 +8,8 @@ Scenario created by the demo scripts:
     - target Vnet
 
 ## Configuration
-Edit setup.ps1 and change as required:
+- Install pre-requisites, including [Bicep](https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/install#manual-with-powershell)
+- Review & Edit setup.ps1 and change as required
 
 ## Setup
 
