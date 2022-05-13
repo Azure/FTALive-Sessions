@@ -1,5 +1,4 @@
 # Initialize variables
-$vmname="centosvm1"
 $sourceResourcegroupName="fta-live-bcdr"
 $targetResourcegroupName="fta-live-bcdr-asr"
 $vaultName="fta-live-bcdr-vault"
@@ -38,7 +37,7 @@ New-AzResourceGroupDeployment -Name "ftalivebcdr2$randomstoragechars" -ResourceG
 
 $sourceStorageAccount=get-AzStorageaccount -ResourceGroupName $sourceResourcegroupName -Name $sourceStorageAccountName
 $vault=Get-AzRecoveryServicesVault -ResourceGroupName $sourceResourcegroupName -Name $vaultName
-$vm=get-azvm -Name $vmname -ResourceGroupName $sourceResourcegroupName
+$vms = Get-AzVM -ResourceGroupName $sourceResourcegroupName 
 
 #Disable soft-delete on the vault
 Write-Output "Disabling soft-delete on the vault"
@@ -167,35 +166,38 @@ $RecoveryRG = Get-AzResourceGroup -Name $targetResourcegroupName -Location $targ
 #Specify replication properties for each disk of the VM that is to be replicated (create disk replication configuration)
 
 
-#Create a list of disk replication configuration objects for the disks of the virtual machine that are to be replicated.
-$diskconfigs = @()
+foreach ($vm in $vms) {
+        #Create a list of disk replication configuration objects for the disks of the virtual machine that are to be replicated.
+        $diskconfigs = @()
 
-#OsDisk
-$OSdiskId = $vm.StorageProfile.OsDisk.ManagedDisk.Id
-$RecoveryOSDiskAccountType = $vm.StorageProfile.OsDisk.ManagedDisk.StorageAccountType
-$RecoveryReplicaDiskAccountType = $vm.StorageProfile.OsDisk.ManagedDisk.StorageAccountType
+        #OsDisk
+        $OSdiskId = $vm.StorageProfile.OsDisk.ManagedDisk.Id
+        $RecoveryOSDiskAccountType = $vm.StorageProfile.OsDisk.ManagedDisk.StorageAccountType
+        $RecoveryReplicaDiskAccountType = $vm.StorageProfile.OsDisk.ManagedDisk.StorageAccountType
 
-Write-Output "Creating disk replication configuration for OS disk"
-$OSDiskReplicationConfig = New-AzRecoveryServicesAsrAzureToAzureDiskReplicationConfig -ManagedDisk -LogStorageAccountId $sourceStorageAccount.Id `
-         -DiskId $OSdiskId -RecoveryResourceGroupId  $RecoveryRG.ResourceId -RecoveryReplicaDiskAccountType  $RecoveryReplicaDiskAccountType `
-         -RecoveryTargetDiskAccountType $RecoveryOSDiskAccountType
+        Write-Output "Creating disk replication configuration for OS disk"
+        $OSDiskReplicationConfig = New-AzRecoveryServicesAsrAzureToAzureDiskReplicationConfig -ManagedDisk -LogStorageAccountId $sourceStorageAccount.Id `
+                -DiskId $OSdiskId -RecoveryResourceGroupId  $RecoveryRG.ResourceId -RecoveryReplicaDiskAccountType  $RecoveryReplicaDiskAccountType `
+                -RecoveryTargetDiskAccountType $RecoveryOSDiskAccountType
 
-$diskconfigs += $OSDiskReplicationConfig
+        $diskconfigs += $OSDiskReplicationConfig
 
-# Data disk
-Write-Output "Adding data disk replication configuration"
-foreach ($dd in $vm.StorageProfile.DataDisks)
-{
-    $datadiskId1 = $dd.ManagedDisk.Id
-    $RecoveryReplicaDiskAccountType = $dd.ManagedDisk.StorageAccountType
-    $RecoveryTargetDiskAccountType = $dd.ManagedDisk.StorageAccountType
-    
-    $DataDiskReplicationConfig  = New-AzRecoveryServicesAsrAzureToAzureDiskReplicationConfig -ManagedDisk -LogStorageAccountId $EastUSCacheStorageAccount.Id `
-             -DiskId $datadiskId1 -RecoveryResourceGroupId $RecoveryRG.ResourceId -RecoveryReplicaDiskAccountType $RecoveryReplicaDiskAccountType `
-             -RecoveryTargetDiskAccountType $RecoveryTargetDiskAccountType
-    $diskconfigs += $DataDiskReplicationConfig
+        # Data disk
+        Write-Output "Adding data disk replication configuration"
+        foreach ($dd in $vm.StorageProfile.DataDisks)
+        {
+        $datadiskId1 = $dd.ManagedDisk.Id
+        $RecoveryReplicaDiskAccountType = $dd.ManagedDisk.StorageAccountType
+        $RecoveryTargetDiskAccountType = $dd.ManagedDisk.StorageAccountType
+        
+        $DataDiskReplicationConfig  = New-AzRecoveryServicesAsrAzureToAzureDiskReplicationConfig -ManagedDisk -LogStorageAccountId $EastUSCacheStorageAccount.Id `
+                -DiskId $datadiskId1 -RecoveryResourceGroupId $RecoveryRG.ResourceId -RecoveryReplicaDiskAccountType $RecoveryReplicaDiskAccountType `
+                -RecoveryTargetDiskAccountType $RecoveryTargetDiskAccountType
+        $diskconfigs += $DataDiskReplicationConfig
+        }
+
+        #Start replication by creating replication protected item. Using a GUID for the name of the replication protected item to ensure uniqueness of name.
+        Write-Output "Starting replication for $($vm.Name)"
+        $TempASRJob = New-AzRecoveryServicesAsrReplicationProtectedItem -AzureToAzure -AzureVmId $vm.Id -Name (New-Guid).Guid -ProtectionContainerMapping $srcToTgtPCMapping -AzureToAzureDiskReplicationConfiguration $diskconfigs -RecoveryResourceGroupId $RecoveryRG.ResourceId
+
 }
-
-#Start replication by creating replication protected item. Using a GUID for the name of the replication protected item to ensure uniqueness of name.
-Write-Output "Starting replication"
-$TempASRJob = New-AzRecoveryServicesAsrReplicationProtectedItem -AzureToAzure -AzureVmId $vm.Id -Name (New-Guid).Guid -ProtectionContainerMapping $srcToTgtPCMapping -AzureToAzureDiskReplicationConfiguration $diskconfigs -RecoveryResourceGroupId $RecoveryRG.ResourceId
