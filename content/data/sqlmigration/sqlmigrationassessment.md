@@ -40,7 +40,7 @@ The family of SQL cloud databases providing flexible options for application mig
 
 **Cloud migration phases**
 
-<img src="./images/sqlmigrationphases.png" alt="sql migration phases" style="float: left; margin-right:10px;" />
+<img src="./images/../../../../images/sqlmigrationphases.png" alt="sql migration phases" width="500"/>
 
 **Discover and Assess**
 
