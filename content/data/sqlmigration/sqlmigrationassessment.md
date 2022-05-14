@@ -29,6 +29,7 @@ The family of SQL cloud databases providing flexible options for application mig
 [Azure SQL deployment options](https://docs.microsoft.com/learn/modules/azure-sql-intro/3-deployment-options)
 
 **Choosing an Azure SQL Target**
+
 [Feature comparison of Azure SQL Database, Azure SQL Managed Instance and SQL Server on a VM](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/feature-comparison-of-azure-sql-database-azure-sql-managed/ba-p/3154789)
 
 [T-SQL differences between SQL Server & Azure SQL Managed Instance - Azure SQL Managed Instance](https://docs.microsoft.com/azure/azure-sql/managed-instance/transact-sql-tsql-differences-sql-server?view=azuresql)
@@ -37,9 +38,9 @@ The family of SQL cloud databases providing flexible options for application mig
 
 ### Migration Life Cycle
 
-**cloud migration phases**
+**Cloud migration phases**
 
-## <img src="./images/sqlmigrationphases.png" alt="sql migration phases" style="float: left; margin-right:10px;" />
+<img src="./images/sqlmigrationphases.png" alt="sql migration phases" style="float: left; margin-right:10px;" />
 
 **Discover and Assess**
 
@@ -109,6 +110,6 @@ SQL Server Migration Assistant (SSMA) is a suite of five tools designed to autom
 
 [Collect baseline: Performance best practices & guidelines](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-collect-baseline?view=azuresql)
 
-**Total Cost of Ownership Calculator**
+**Total Cost**
 
 [Total Cost of Ownership (TCO) Calculator](https://azure.microsoft.com/pricing/tco/calculator/)
