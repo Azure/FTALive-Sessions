@@ -67,9 +67,9 @@ Discover, assess, and migrate on-premises applications, infrastructure, and data
 - Get deployment recommendations with SQLAssessment.exe
 - Automate through the command line
 
-[Overview of Data Migration Assistant](https://docs.microsoft.com/sql/dma/dma-overview?view=sql-server-ver15)
+  [Overview of Data Migration Assistant](https://docs.microsoft.com/sql/dma/dma-overview?view=sql-server-ver15)
 
-[Get Azure SQL SKU recommendations (Data Migration Assistant)](https://docs.microsoft.com/sql/dma/dma-sku-recommend-sql-db?view=sql-server-ver15)
+  [Get Azure SQL SKU recommendations (Data Migration Assistant)](https://docs.microsoft.com/sql/dma/dma-sku-recommend-sql-db?view=sql-server-ver15)
 
 ## Demo walkthrough
 
@@ -83,9 +83,9 @@ This session includes live demo, please refer the following links get all demo g
 - Get deployment recommendations
 - Offline or online migrations to Azure
 
-[Azure SQL migration extension for Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/extensions/azure-sql-migration-extension?view=sql-server-ver15)
+  [Azure SQL migration extension for Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/extensions/azure-sql-migration-extension?view=sql-server-ver15)
 
-[Get SKU recommendations for Azure SQL migrations](https://techcommunity.microsoft.com/t5/azure-sql-blog/get-azure-recommendation-in-azure-sql-migration-extension/ba-p/3201479)
+  [Get SKU recommendations for Azure SQL migrations](https://techcommunity.microsoft.com/t5/azure-sql-blog/get-azure-recommendation-in-azure-sql-migration-extension/ba-p/3201479)
 
 ### Demo 2 - SSMA
 
@@ -98,7 +98,8 @@ SQL Server Migration Assistant (SSMA) is a suite of five tools designed to autom
 
 - Visual Studio Code extension that allows you to analyze Java and .Net source code and detect data access API calls and queries
 - Queries collected using the Data Access Migration Toolkit can be analyzed using Data Migration Assistant to understand any queries that may break together with any related mitigating actions.
-- [Data Access Migration Toolkit](https://marketplace.visualstudio.com/items?itemName=ms-databasemigration.data-access-migration-toolkit)
+
+  [Data Access Migration Toolkit](https://marketplace.visualstudio.com/items?itemName=ms-databasemigration.data-access-migration-toolkit)
 
   [Assess an application’s data access layer with Data Migration Assistant](https://docs.microsoft.com/sql/dma/dma-assess-app-data-layer?view=sql-server-ver15)
 
@@ -109,4 +110,5 @@ SQL Server Migration Assistant (SSMA) is a suite of five tools designed to autom
 [Collect baseline: Performance best practices & guidelines](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-collect-baseline?view=azuresql)
 
 **Total Cost of Ownership Calculator**
+
 [Total Cost of Ownership (TCO) Calculator](https://azure.microsoft.com/pricing/tco/calculator/)
