@@ -29,7 +29,7 @@ The family of SQL cloud databases providing flexible options for application mig
 [Azure SQL deployment options](https://docs.microsoft.com/learn/modules/azure-sql-intro/3-deployment-options)
 
 **Choosing an Azure SQL Target**
-[Feature comparison of Azure SQL Database, Azure SQL Managed Instance and SQL Server on a VM - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/feature-comparison-of-azure-sql-database-azure-sql-managed/ba-p/3154789)
+[Feature comparison of Azure SQL Database, Azure SQL Managed Instance and SQL Server on a VM](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/feature-comparison-of-azure-sql-database-azure-sql-managed/ba-p/3154789)
 
 [T-SQL differences between SQL Server & Azure SQL Managed Instance - Azure SQL Managed Instance](https://docs.microsoft.com/azure/azure-sql/managed-instance/transact-sql-tsql-differences-sql-server?view=azuresql)
 
