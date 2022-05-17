@@ -1,4 +1,4 @@
-# BCDR Overview
+# DR Overview
 
 - Scenarios
   - On-prem to Azure
