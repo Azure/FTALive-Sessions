@@ -16,7 +16,7 @@ A VNet enables you to connect your resources to each other, the internet, and ot
 
 - Assign one or more address spaces
   - Address spaces can be added after creation
-  - Address spaces with subnets cannot be modified 
+  - Address spaces with subnets cannot be modified
 - Addresses will automatically be allocated to connected services
 
 ## DNS and VNets
