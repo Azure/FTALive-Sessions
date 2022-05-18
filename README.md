@@ -62,6 +62,8 @@ AI & ML	| Azure ML Enterprise Deployment | In this session you will learn how to
 |  |  |  |
 AI & ML	| Vision AI | In this session you will learn about using Azure Machine Learning for vision related tasks. You will learn about deep computer vision and vision related tasks, including classification, segmentation, 2D, 3D pose estimation, video action recognition and more. We then discuss how to use Azure automation and cloud deployment and processing of your machine learning tasks.  |
   |  |  |  |
+AI & ML	| MLOps | In this session we will cover the best practices to deploy, manage, and retrain machine learning models within Azure. We will discover how to deploy machine learning models up to production and discover how to leverage the built-in integration with Azure DevOps for seamless scheduling, managing, and automating workflows.   |
+  |  |  |  |
 Intro	| FastTrack for Azure Introduction | In this session you will hear from our Program Managers who will walk through what FastTrack for Azure is and how it can support you in your Cloud Journey. |
   |  |  |  |
 Migrate	| Azure Migrate for Servers - Part 1 | This Part 1 of 2 session will give you the opportunity to expand your knowledge around best practices for rehosting servers during your DC Migration project. In this first session, we will focus on the discovery and assessment of your source environment including a prescriptive framework, public documentation and Azure portal examples. Session 2 will go into more detail around best practices and discuss multiple scenarios and frameworks. |
