@@ -9,7 +9,7 @@
 1. [Create an assessment](https://docs.microsoft.com/en-us/sql/dma/dma-assesssqlonprem?view=sql-server-ver15#create-an-assessment)
 1. [Choose assessment options](https://docs.microsoft.com/en-us/sql/dma/dma-assesssqlonprem?view=sql-server-ver15#choose-assessment-options)
 1. [Add databases and extended events trace to assess](https://docs.microsoft.com/en-us/sql/dma/dma-assesssqlonprem?view=sql-server-ver15#add-databases-and-extended-events-trace-to-assess)
-1. [View results] (https://docs.microsoft.com/en-us/sql/dma/dma-assesssqlonprem?view=sql-server-ver15#view-results)
+1. [View results](https://docs.microsoft.com/en-us/sql/dma/dma-assesssqlonprem?view=sql-server-ver15#view-results)
 
 # 2. Identify the right SKU for a migration target
 ## Objective
