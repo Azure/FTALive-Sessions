@@ -8,7 +8,7 @@
 
 If you need to communicate with services (using a private IP) in another network there are a few options depending on your requirements, primarily VPN or ExpressRoute. The Azure Architecture center has a a great article comparing the two [here](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/) also review the gateway [planning table](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways#planningtable):
 
-- [**VPN**](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways): A Virtual Private Network connection is established by creating an encrypted tunnel between a customer VPN device (could be a dedicated device, part of a firewall, or software) and a VPN Virtual Network Gateway in Azure. VPN is best for dev/test workloads and small and medium scale production workloads. It is a good starting place for new Azure environments and connectivity to smaller sites. Because it does not require a third party's involvement to configure, it generally takes less time to bring online.
+- [**VPN**](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways): A Virtual Private Network connection is established by creating an encrypted tunnel between a customer VPN device and a VPN Virtual Network Gateway in Azure. VPN is best suited for dev/test workloads and small and medium scale production workloads. It is a good starting place for new Azure environments and connectivity to smaller sites. Because it does not require a third party's involvement to configure, it generally takes less time to bring online.
 - [**ExpressRoute**](https://docs.microsoft.com/azure/expressroute/expressroute-introduction): ExpressRoute connectivity conceptually means running a physical wire from your datacenter to Microsoft, or--more commonly--to a provider who in turn has a direct connection to Microsoft. ExpressRoute connectivity provides the enterprise-class reliability, resiliency, and throughput required for more demanding production and mission critical workloads.
 
 ## Virtual Network Gateways
@@ -31,7 +31,8 @@ Virtual Network Gateways are Microsoft-managed, highly-available network gateway
   - Static routes using [Local Network Gateways](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpn-gateway-settings#lng)
 - [**Availability Design**](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-highlyavailable): high-availability is accomplished with multiple customer-side VPN devices and ideally active/active VPN gateway configurations
 
-  ![VPN dual-redundancy diagram](./png/vpn-dual-redundancy.png)*Ideal VPN configuration for availability and bandwidth*
+  ![VPN dual-redundancy diagram](./png/vpn-dual-redundancy.png)
+  *Ideal VPN configuration for availability and bandwidth*
 - VPN connectivity can be established without a Virtual Network Gateway, using NVAs that you deploy and manage
 
 ## ExpressRoute key points
