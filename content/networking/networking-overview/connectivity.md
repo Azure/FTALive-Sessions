@@ -22,7 +22,7 @@ Virtual Network Gateways are Microsoft-managed, highly-available network gateway
 - For ExpressRoute, your gateway is connected to the MSEE routers represented by your ExpressRoute Circuit
 - Gateways take 30 to 60 minutes to provision
 
-## VPN key points
+## Configuring VPN Connectivity
 
 - [**Customer devices**](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpn-devices): Microsoft provides a list of validated devices, supported IPSec/IKE configurations, and sample scripts for configuring your VPN device.
 - **Routing options**:
@@ -32,38 +32,44 @@ Virtual Network Gateways are Microsoft-managed, highly-available network gateway
 - [**Availability Design**](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-highlyavailable): high-availability is accomplished with multiple customer-side VPN devices and ideally active/active VPN gateway configurations
 
   ![VPN dual-redundancy diagram](./png/vpn-dual-redundancy.png)
-  *Ideal VPN configuration for availability and bandwidth*
-- VPN connectivity can be established without a Virtual Network Gateway, using NVAs that you deploy and manage
 
-## ExpressRoute key points
+- VPN connectivity can alternatively be established without a Virtual Network Gateway, using NVAs that you deploy and manage
+
+## Configuring ExpressRoute Connectivity
 
 ![Basic ExpressRoute diagram](./png/exr-reco.png)
+ExpressRoute is a connection to Microsoft, which can in turn be used to connect to Azure other Microsoft cloud services.
 
+- ExpressRoute [configuration workflow](https://docs.microsoft.com/azure/expressroute/expressroute-workflows)
 - **Circuit**: ExpressRoute configuration resource for provider, bandwidth, billing type, routing, etc.
   - Multiple circuits are required for multiple peering locations or providers
   - Circuit SKU affects number of connected VNets, scope of connectivity, number of route prefixes, and M365 access
   ![ExpressRoute circuit SKU scope of access](./png/er-sku-scope.png)
-- **Bandwidth**:
-  - Purchase options are 'metered' or 'unlimited', indicating how egress traffic will be charged (ingress is free). 'Metered' is more cost-effective at lower utilization and a good starting place. Plan can be upgraded from 'metered' to 'unlimited'
+
+- **Circuit Bandwidth**:
+  - Purchase options are 'metered' or 'unlimited', indicating how egress traffic will be charged (ingress is free). 'Metered' is more cost-effective at lower utilization (less than ~70% sustained).
   - Connection is duplex--purchased bandwidth is available in both directions
-  - Because connection is redundant, the customer actually has 2x the purchased bandwidth available
+  - Because connection is redundant, you have 2x the purchased bandwidth available but no resiliency over your purchased amount
   - Bandwidth can be increased, as long as provider has capacity
-- [**Peering Types**](https://docs.microsoft.com/azure/expressroute/expressroute-circuit-peerings): peering types determine the services connected to over ExpressRoute. Private Peering is typically where customers start; Microsoft Peering is recommended for customers looking to me specific compliance requirements  
-  - *Private Peering*: connect to your Azure resources via an ExpressRoute Virtual Network Gateway
+
+- [**Peering Locations**](https://docs.microsoft.com/azure/expressroute/expressroute-locations-providers): Microsoft Enterprise Edge (MSEE) peering locations are not Azure regions
+
+- [**ExpressRoute Peering Types**](https://docs.microsoft.com/azure/expressroute/expressroute-circuit-peerings): peering types determine the services connected to over ExpressRoute.
+  - *Private Peering*: connect to your private Azure resources via an ExpressRoute VNet Gateway
   - *Microsoft Peering*: connect to Microsoft services, including PaaS services, Microsoft 365, and Dynamics
   - *Public Peering*: legacy version of Microsoft Peering
-- [**Peering Locations**](https://docs.microsoft.com/azure/expressroute/expressroute-locations-providers): Microsoft Enterprise Edge (MSEE) peering locations are not Azure regions
+
 - [**Routing Requirements**](https://docs.microsoft.com/azure/expressroute/expressroute-routing): Microsoft peering requires registered ASN and public IP addresses; private peering can use private IPs and ASNs
-- [**High-availability**](https://docs.microsoft.com/azure/expressroute/designing-for-high-availability-with-expressroute):
+
+- [**High-availability and Disaster Recovery**](https://docs.microsoft.com/azure/expressroute/designing-for-high-availability-with-expressroute):
 ![HA ExpressRoute with more specific routes diagram](./png/er-dr-morespecificroute.png)
 
   - Use multiple peering locations and providers for maximum resiliency
   - Establish multiple connections to your provider and/or use multiple providers
   - Both BGP sessions (primary and secondary connections) need to be established for SLA
   - Use Availability Zone-aware ER gateways
+  - For Private Peering, remember that your ER peering location the same as your region Azure datacenters and could be impacted separately
 
-- [**Disaster Recovery for private peering**](https://docs.microsoft.com/azure/expressroute/designing-for-disaster-recovery-with-expressroute-privatepeering)
-  - Remember that a peering location could fail separately from an Azure region
 - [**Pricing**](https://azure.microsoft.com/pricing/details/expressroute/): For private peering, account for Circuit, Gateway, egress, and carrier charges
 
 ### Advanced Scenarios
