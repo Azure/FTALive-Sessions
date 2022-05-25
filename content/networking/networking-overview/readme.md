@@ -30,7 +30,6 @@ the changes straight away.
 
 ### Part 2
 
-1. [Concepts](./concepts.md)
 1. [Connectivity](./connectivity.md)
 1. [Topology (advanced)](./topology-advanced.md)
 1. [Security (advanced)](./security-advanced.md)
@@ -39,8 +38,9 @@ the changes straight away.
 
 ## Annex
 
-[Configure Route Tables for Hub and Spoke
+1. [Concepts](./concepts.md)
+1. [Configure Route Tables for Hub and Spoke
 Topology](./configure-route-tables-for-hub-and-spoke-topology/rt-hub-spoke.md)
-
-[Configure NVAs for Hub and Spoke
+1. [Configure NVAs for Hub and Spoke
 Topology](./configure-nva-for-hub-and-spoke-topology/01.md)
+1. [Reference IP Schema](./example-ip-plan/example-ip-plan.md)

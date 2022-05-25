@@ -1,6 +1,6 @@
 # Connectivity to External Networks
 
-[prev](./concepts.md) | [home](./readme.md)  | [next](./topology-advanced.md)
+[prev](./readme.md) | [home](./readme.md)  | [next](./topology-advanced.md)
 
 ## Overview
 
