@@ -1,4 +1,4 @@
-# Welcome to FastTrack for Azure Live - 'Modern Data Warehouses - Designing, Building and Operating'
+# Welcome to Microsoft Learn Live </br> Presented by FastTrack for Azure <br/> 
 ## We will start 1-2 minutes after the scheduled time to accommodate those still connecting
 
 This call will not be recorded due to the wide audience and to encourage questions.
@@ -15,7 +15,7 @@ You will need:
 * Optional headphones to make it easier to listen to and interact with the presenters.
 
 # Modern Data Warehouses - Designing, Building and Operating
-## Sub-Subtitle: Or how I learned to stop worrying and just build a MDW
+## Subtitle: Or how I learned to stop worrying and just build a MDW
 ## Who we are
 **FastTrack for Azure (FTA) ([aka.ms/fta](aka.ms/fta))** <br/>
 Presenter: Ben Harding ([www.linkedin.com/in/ben-harding-fta](www.linkedin.com/in/ben-harding-fta)) <br/>
@@ -30,22 +30,10 @@ Link to the Collection: https://aka.ms/ftalive-mdw-collection
 
 
 ## Agenda (Work in Progress)
-1. What makes a Data Warehouse Modern
-1. Designing
-    * Architecture
-    * High level design to detailed
-    * Business Continuity
-    * Skillset
-1. Building
-    * Scenario based
-    * Metadata driven
-    * Infrastrcture as Code
-    * DataOps
-1. Operating
-    * Governance
-    * Monitoring
-1. Security
-    * Personas
-    * Control plane vs Data plane
+1. [Introduction](./introduction.md)
+1. [Designing](./designing.md)
+1. [Building](./building.md)
+1. [Operating](./operating.md)
+1. [Security](./security.md)
 
 ## Additional resources
