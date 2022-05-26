@@ -18,10 +18,10 @@ You will need:
 ## Subtitle: Or how I learned to stop worrying and just build a MDW
 ## Who we are
 **FastTrack for Azure (FTA) ([aka.ms/fta](aka.ms/fta))** <br/>
-Presenter: Ben Harding ([www.linkedin.com/in/ben-harding-fta](www.linkedin.com/in/ben-harding-fta)) <br/>
-Presenter: Nitin Mehta ([linkedin.com/in/nitinmht](linkedin.com/in/nitinmht)) <br/>
-Moderator: Miho Yamamoto ([linkedin.com/in/mihoyamamoto](linkedin.com/in/mihoyamamoto))<br/>
-Moderator: Osamu Hirayama ([linkedin.com/in/osamu-hirayama-4b201b35](linkedin.com/in/osamu-hirayama-4b201b35))<br/>
+Presenter: Ben Harding ([linkedin.com/in/ben-harding-fta](https://www.linkedin.com/in/ben-harding-fta)) <br/>
+Presenter: Nitin Mehta ([linkedin.com/in/nitinmht](https://www.linkedin.com/in/nitinmht)) <br/>
+Moderator: Miho Yamamoto ([linkedin.com/in/mihoyamamoto](https://www.linkedin.com/in/mihoyamamoto))<br/>
+Moderator: Osamu Hirayama ([linkedin.com/in/osamuhir](https://www.linkedin.com/in/osamuhir/))<br/>
 
 
 ## Microsoft Learn
