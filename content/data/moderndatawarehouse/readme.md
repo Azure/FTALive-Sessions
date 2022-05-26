@@ -18,22 +18,21 @@ You will need:
 ## Subtitle: Or how I learned to stop worrying and just build a MDW
 ## Who we are
 **FastTrack for Azure (FTA) ([aka.ms/fta](aka.ms/fta))** <br/>
-Presenter: Ben Harding ([www.linkedin.com/in/ben-harding-fta](www.linkedin.com/in/ben-harding-fta)) <br/>
+Presenter: Ben Harding ([linkedin.com/in/ben-harding-fta](linkedin.com/in/ben-harding-fta)) <br/>
 Presenter: Nitin Mehta ([linkedin.com/in/nitinmht](linkedin.com/in/nitinmht)) <br/>
 Moderator: Miho Yamamoto ([linkedin.com/in/mihoyamamoto](linkedin.com/in/mihoyamamoto))<br/>
-Moderator: Osamu Hirayama ([linkedin.com/in/osamu-hirayama-4b201b35](linkedin.com/in/osamu-hirayama-4b201b35))<br/>
-
+Moderator: Osamu Hirayama ([linkedin.com/in/osamuhir](linkedin.com/in/osamuhir))<br/>
 
 ## Microsoft Learn
 This content was designed in conjuction with a Microsoft Learn Collection, which you can utilised for self-paced learning after this session. <br/>
 Link to the Collection: https://aka.ms/ftalive-mdw-collection
 
-
-## Agenda (Work in Progress)
+## Agenda
 1. [Introduction](./introduction.md)
 1. [Designing](./designing.md)
 1. [Building](./building.md)
 1. [Operating](./operating.md)
 1. [Security](./security.md)
+1. [Microsoft Learn Collection](./microsoftlearn.md)
 
-## Additional resources
+## Additional Resources
