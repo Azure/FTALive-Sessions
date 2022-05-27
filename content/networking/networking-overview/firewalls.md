@@ -1,6 +1,6 @@
-# Security (Advanced)
+# Firewalls
 
-[prev](./topology-advanced.md) | [home](./readme.md)  | [next](./mgmt.md)
+**[prev](./topology-overview.md) | [home](./readme.md)  | [next](./routing.md)**
 
 ## Third Party vs. Native
 
@@ -19,6 +19,22 @@ However, they can also have the following challenges:
 If you choose to use third party NVAs, you can use route tables to shape traffic to them the same way that you would to Azure native solutions.
 
 ## Azure Firewall
+
+![firewall hub spoke](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/images/spoke-spoke-routing.png)
+
+Azure Firewall is a managed, cloud-based network security service that protects your Azure Virtual Network resources. It's a fully stateful firewall as a service with built-in high availability and unrestricted cloud scalability.
+
+It allows you to create policies/rules of three types:
+
+* **Network Rules** which allow for traffic from an IP address range or IP group to another IP address range or IP group for specific ports and protocols
+* **Application Rules** which allow for traffic from an IP address range or IP group to a FQDN, for specific ports and protocols
+* **NAT Rules** which allow for traffic from an IP address range or IP group to an IP associated with a firewall for specific ports, which is then translated to a backend IP address and port set
+
+In addition, it applies Microsoft Threat Intelligence to protect against known malicious IPs and FQDNs.
+
+In addition to these standard features, there is a Premium SKU which provides advanced protection that will be discussed in [Advanced Security section](security-advanced.md)
+
+[Azure firewall overview](https://docs.microsoft.com/azure/firewall/overview)
 
 ### Azure Firewall Standard vs. Premium
 
@@ -52,21 +68,3 @@ You can deploy an Azure Firewall to use forced tunneling instead.  This separate
 ### Azure Firewall Dashboard
 
 Azure Firewall has a [monitoring workbook](https://github.com/Azure/Azure-Network-Security/tree/master/Azure%20Firewall/Workbook%20-%20Azure%20Firewall%20Monitor%20Workbook) that can be helpful for monitoring and managing the Azure Firewall environment.
-
-## Web Application Firewalls and Load Balancers
-
-### Selecting Load Balancing
-
-![Azure Load Balancing Decision Flow](https://docs.microsoft.com/azure/architecture/guide/technology-choices/images/load-balancing-decision-tree.png)
-
-**Note** that only Frontdoor and Application Gateway can be configured with WAFs, and are focused on web apps.
-
-[More on selecting your load balancing options](https://docs.microsoft.com/azure/architecture/guide/technology-choices/load-balancing-overview)
-
-### Web Application Firewall Reporting
-
-Both solutions use Log Analytics for their logging purposes.  You can create queries and add them to dashboards to enable monitoring.
-
-[WAF logs for Frontdoor](https://docs.microsoft.com/azure/web-application-firewall/afds/waf-front-door-monitor)
-
-[WAF logs for App Gateway](https://docs.microsoft.com/azure/web-application-firewall/ag/application-gateway-waf-metrics)

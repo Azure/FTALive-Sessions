@@ -24,7 +24,9 @@ the changes straight away.
 1. [Why should we talk about networking?](./why.md)
 1. [VNet Basics](./basics.md)
 1. [Topology (overview)](./topology-overview.md)
-1. [Security (overview)](./security-overview.md)
+1. [Virtual Network Security](./vnet-security.md)
+1. [Firewalls](./firewalls)
+1. [Load Balancers and Web Application Firewalls](./lbs-wafs.md)
 1. [Routing](./routing.md)
 1. [QnA](./faq.md)
 
@@ -32,7 +34,6 @@ the changes straight away.
 
 1. [Connectivity](./connectivity.md)
 1. [Topology (advanced)](./topology-advanced.md)
-1. [Security (advanced)](./security-advanced.md)
 1. [Management](./mgmt.md)
 1. [QnA](./faq.md)
 
