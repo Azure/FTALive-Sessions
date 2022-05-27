@@ -14,7 +14,9 @@ Make sure to understand the endpoint type you are using and threat model control
 
 **Private Endpoints** are private networking resources that use the Private Link service to communicate with a specific Azure resource, such as Storage Accounts or Azure SQL Databases.  They take up IPs in your private space, and are similar to Virtual NICs.  Once enabled on an Azure resource, the Public and Service Endpoints will cease to function for that resource, and the resource's firewall rules will not be applied.  This means that using this changes how you secure a resource.  It also has [very specific DNS considerations](https://docs.microsoft.com/azure/private-link/private-endpoint-dns) that some organizations find challenging to implement.  You commonly protect these with Network Security Groups for internal traffic, and Azure Firewalls and Web Application Firewalls for public traffic.
 
-## Network Security Groups (NSG)
+## Network and Application Security Groups
+
+### Network Security Groups (NSG)
 
 A network security group contains security rules that allow or deny inbound network traffic to, or outbound network traffic from, several types of Azure resources.
 
@@ -33,7 +35,7 @@ Each NSG also has default security rules which are created automatically by Azur
 
 [Networking security overview](https://docs.microsoft.com/azure/virtual-network/security-overview)
 
-## Application Security Groups
+### Application Security Groups
 
 Application security groups enable you to configure network security as a natural extension of an application's structure, allowing you to group virtual machines and define network security policies based on those groups.
 
@@ -41,7 +43,7 @@ To do so, you associate virtual machine interfaces with an Application Security 
 
 [Application Security Group](https://docs.microsoft.com/azure/virtual-network/application-security-groups)
 
-## Service Tags
+### Service Tags
 
 A service tag represents a group of IP address prefixes from a given Azure service. Microsoft manages the address prefixes encompassed by the service tag and automatically updates the service tag as addresses change, minimizing the complexity of frequent updates to network security rules.
 
@@ -49,7 +51,9 @@ A service tag represents a group of IP address prefixes from a given Azure servi
 
 ## Azure Bastion
 
-Use NSGs with Azure Bastion to create a separate administrative channel.
+Azure bastion can be used to grant remote access to VMs through a secure pane.  It doesn't provide a jump box, but instead a gateway to access a virtual machine through the portal or a client.  This gateway checks items such as MFA and conditional access for identities, and so provides additional security for accessing workloads.
+
+[Azure Bastion](https://docs.microsoft.com/azure/bastion/bastion-overview)
 
 ## DDoS Protection
 

@@ -19,29 +19,31 @@ the changes straight away.
 
 ## Agenda
 
-### Part 1
+### Virtual Network Fundamentals
 
 1. [Why should we talk about networking?](./why.md)
 1. [VNet Basics](./basics.md)
 1. [Virtual Network Security](./vnet-security.md)
 1. [Load Balancers and Web Application Firewalls](./lbs-wafs.md)
+1. [Azure DNS](./dns.md)
+1. [Management](./mgmt.md)
+
+### Hub and Spoke Topology
+
 1. [Hub and Spoke Topology](./vnet-hubspoke.md)
 1. [IP Address Management](./vnet-ipam.md)
 1. [Firewalls](./firewalls)
 1. [Routing](./routing.md)
-1. [QnA](./faq.md)
 
-### Part 2
+### Connectivity
 
 1. [Connectivity](./connectivity.md)
-1. [Azure DNS](./dns.md)
 1. [Private Endpoints](./private-endpoints.md)
 1. [Azure Virtual WAN](.vwan.md)
-1. [Management](./mgmt.md)
-1. [QnA](./faq.md)
 
-## Annex
+## Appendix
 
+1. [Reference List](./reference.md)
 1. [Concepts](./concepts.md)
 1. [Configure Route Tables for Hub and Spoke
 Topology](./configure-route-tables-for-hub-and-spoke-topology/rt-hub-spoke.md)
