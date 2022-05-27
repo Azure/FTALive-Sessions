@@ -23,11 +23,11 @@ the changes straight away.
 
 1. [Why should we talk about networking?](./why.md)
 1. [VNet Basics](./basics.md)
+1. [Virtual Network Security](./vnet-security.md)
+1. [Load Balancers and Web Application Firewalls](./lbs-wafs.md)
 1. [Hub and Spoke Topology](./vnet-hubspoke.md)
 1. [IP Address Management](./vnet-ipam.md)
-1. [Virtual Network Security](./vnet-security.md)
 1. [Firewalls](./firewalls)
-1. [Load Balancers and Web Application Firewalls](./lbs-wafs.md)
 1. [Routing](./routing.md)
 1. [QnA](./faq.md)
 
