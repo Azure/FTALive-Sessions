@@ -23,7 +23,8 @@ the changes straight away.
 
 1. [Why should we talk about networking?](./why.md)
 1. [VNet Basics](./basics.md)
-1. [Topology (overview)](./topology-overview.md)
+1. [Hub and Spoke Topology](./vnet-hubspoke.md)
+1. [IP Address Management](./vnet-ipam.md)
 1. [Virtual Network Security](./vnet-security.md)
 1. [Firewalls](./firewalls)
 1. [Load Balancers and Web Application Firewalls](./lbs-wafs.md)
@@ -33,7 +34,9 @@ the changes straight away.
 ### Part 2
 
 1. [Connectivity](./connectivity.md)
-1. [Topology (advanced)](./topology-advanced.md)
+1. [Azure DNS](./dns.md)
+1. [Private Endpoints](./private-endpoints.md)
+1. [Azure Virtual WAN](.vwan.md)
 1. [Management](./mgmt.md)
 1. [QnA](./faq.md)
 
