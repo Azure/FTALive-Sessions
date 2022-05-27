@@ -23,11 +23,30 @@ Each one has its own pros and cons, and so there is documentation that can help 
 
 ### Azure Load Balancers
 
-Internal and external options
+Azure Load Balancers are layer 4 load balancers that act as a single point of contacts for clients.  They contain rules that route traffic to a backend pool of resources, such as Virtual Machines or instances in a scale set.
+
+There are two sub-types of load balancers:
+
+* **Public Load Balancers** that are accessible outside of your virtual network, and load balance inbound traffic from the internet to your virtual machines.  While they can provide ingress for web traffic, Application Gateways are a better fit.
+* **Private Load Balancers** that are accessible inside of your network only, and load balance against your private IP space.  On-premise networks connected via a gateway can also access these.
+
+![Azure Load Balancer Overview](https://docs.microsoft.com/azure/load-balancer/media/load-balancer-overview/load-balancer.svg)
+
+[Azure Load Balancer](https://docs.microsoft.com/azure/load-balancer/load-balancer-overview)
 
 ### Traffic Manager
 
----
+Traffic Manager is a DNS-based traffic load balancer.  It allows you to distribute traffic to public facing applications across global regions.
+
+You can assign different [routing methods](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-routing-methods) to Traffic Manager, to determine the destination.  This can include things like client geography, performance, or others.
+
+For example, if you had a service that was available in both East US 2 and West US 2, Traffic Manager could route clients to the closest service.  However, that service would still need to be publicly accessible, such as with an external load balancer.
+
+Because it is DNS based, this routing occurs through providing DNS resolution to one of the regional endpoints, not by forwarding the traffic itself.
+
+![Azure Traffic Manager Diagram](https://docs.microsoft.com/azure/traffic-manager/media/traffic-manager-how-traffic-manager-works/flow.png)
+
+[Azure Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview)
 
 ## HTTP/S Load Balancers and Web Application Firewalls
 
