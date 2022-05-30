@@ -1,6 +1,7 @@
 # Security
 
 #### [prev](./operating.md) | [home](./readme.md)  | [next](./microsoftlearn.md)
+</br>
 
 ## [Defence in Depth](https://docs.microsoft.com/en-us/shows/azure-videos/defense-in-depth-security-in-azure)
 * [Zero trust](https://docs.microsoft.com/en-us/security/zero-trust/deploy/networks) ([Link 2](https://docs.microsoft.com/en-us/security/zero-trust/zero-trust-overview)) with multi-layer defence
@@ -9,7 +10,6 @@
 * Protect against [Data exfiltration](https://docs.microsoft.com/en-us/azure/synapse-analytics/security/workspace-data-exfiltration-protection)
 * Utilise [Encryption](https://docs.microsoft.com/en-us/azure/security/fundamentals/encryption-overview) at Rest across services
 * Best practices [Link 1](https://docs.microsoft.com/en-us/azure/security/fundamentals/best-practices-and-patterns) | [Link 2](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/secure/security-top-10) | [Link 3](https://docs.microsoft.com/en-us/azure/security/fundamentals/operational-best-practices) | [Link 4](https://docs.microsoft.com/en-us/azure/security/fundamentals/identity-management-best-practices) 
-
 
 ## Credential Management
 * [Identity Protection and Management](https://docs.microsoft.com/en-us/azure/security/fundamentals/steps-secure-identity) (with [Azure KeyVault](https://docs.microsoft.com/en-us/azure/key-vault/general/overview))

@@ -1,19 +1,21 @@
 # Designing
 
 #### [prev](./introduction.md) | [home](./readme.md)  | [next](./building.md)
-
+</br>
 
 ## Architecture
 * **Don't reinvent the wheel!** Visit our [architecture centre](https://docs.microsoft.com/en-us/azure/architecture/) and check out some reference [data architectures](https://docs.microsoft.com/en-us/azure/architecture/data-guide/) such as [MDW for SMB](https://docs.microsoft.com/en-us/azure/architecture/example-scenario/data/small-medium-data-warehouse)
-* Some architectures are applicable across technologies and cloud, such as Lambda
-* Keep it simple to begin with. Only include services that are required
+* Review the [Cloud Adoption Framework for Data and Analytics](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/)
+* Some architectures are applicable across technologies and clouds, such as Lambda
+* Keep it simple to begin with and only include services that are required
 * Iterative and modular
+* Leverage [Common Data Models or Industry Data Models](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/common-industry-data-models) where possible
 * Produce a 'High Level Design'
-* Then produce a 'Physical Design'
+* Then produce a 'Physical Design(s)'
    * Specific Azure services
    * Subscription, region, resource groups 
    * Networking
-* Pillars
+* Does your design address the pillars of [Microsoft Well-Architectured Framework](https://docs.microsoft.com/en-us/azure/architecture/framework/)?
    * Reliability
    * Security
    * Cost Optimization
@@ -27,18 +29,14 @@
       * **Networking**
       * **Business Continuity** (HA/DR)
       * **Backups** (But how...)
+   * Preferred technologies within your organisation, and skill-set to support them
    * Timelines
-
-## Find new home..
-* What experience and skills does your team have? SQL, Spark, something else? This should be a consideration.
-* CDM https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/common-industry-data-models
 
 ## Data Lakes
 * MDWs have [Data Lakes](https://azure.microsoft.com/en-us/overview/what-is-a-data-lake/) at their core, so become familiar with [concept](https://docs.microsoft.com/en-us/azure/architecture/data-guide/scenarios/data-lake)
-* Difference between the logical concept for a Data Lake and actual implementation.
-* Azure Data Lake Storage gen2
+* Understand the difference between the concept of a Data Lake, and actual implementation
+* [What is Azure Data Lake Storage Gen2](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction)
 * Microsoft has some very good guidance on [Zones](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/best-practices/data-lake-zones) and [Best Practices](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-best-practices)
-* 
 
 ## Questions you should ask yourself & document
 * From when a record enters your source system, when do you want to report or take action on in it in your MDW?
@@ -54,12 +52,9 @@
 * more more more !
 
 ## Additional Resources
-- CDM https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/common-industry-data-models
-- DATA LAKES!
-- DELTA TABLES
-- Lake databases
-- Synapse
-- https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/the-data-lakehouse-the-data-warehouse-and-a-modern-data-platform/ba-p/2792337
-- https://docs.microsoft.com/en-us/azure/architecture/example-scenario/data-warehouse/dataops-mdw
+- [What is Delta Lake](https://docs.microsoft.com/en-us/azure/synapse-analytics/spark/apache-spark-what-is-delta-lake)
+- [What is Lake Database](https://docs.microsoft.com/en-us/azure/synapse-analytics/database-designer/concepts-lake-database)
+- [What is Azure Synapse Analytics](https://docs.microsoft.com/en-us/azure/synapse-analytics/overview-what-is)
+- Blog: [The Data Lakehouse, the Data Warehouse and a Modern Data platform architecture](https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/the-data-lakehouse-the-data-warehouse-and-a-modern-data-platform/ba-p/2792337)
 
 

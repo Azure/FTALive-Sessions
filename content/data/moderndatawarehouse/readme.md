@@ -24,7 +24,7 @@ Moderator: Miho Yamamoto ([linkedin.com/in/mihoyamamoto](linkedin.com/in/mihoyam
 Moderator: Osamu Hirayama ([linkedin.com/in/osamuhir](linkedin.com/in/osamuhir))<br/>
 
 ## Microsoft Learn
-This content was designed in conjuction with a Microsoft Learn Collection, which you can utilised for self-paced learning after this session. <br/>
+This content was designed in conjunction with a Microsoft Learn Collection, which you can utilised for self-paced learning after this session. <br/>
 Link to the Collection: https://aka.ms/ftalive-mdw-collection
 
 ## Agenda
@@ -34,5 +34,3 @@ Link to the Collection: https://aka.ms/ftalive-mdw-collection
 1. [Operating](./operating.md)
 1. [Security](./security.md)
 1. [Microsoft Learn Collection](./microsoftlearn.md)
-
-## Additional Resources
