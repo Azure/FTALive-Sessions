@@ -11,7 +11,7 @@
 * Produce a 'High Level Design'
 * Then produce a 'Physical Design'
    * Specific Azure services
-   * Subscriptiion, region, resource groups 
+   * Subscription, region, resource groups 
    * Networking
 * Pillars
    * Reliability
@@ -37,7 +37,7 @@
 * MDWs have [Data Lakes](https://azure.microsoft.com/en-us/overview/what-is-a-data-lake/) at their core, so become familiar with [concept](https://docs.microsoft.com/en-us/azure/architecture/data-guide/scenarios/data-lake)
 * Difference between the logical concept for a Data Lake and actual implementation.
 * Azure Data Lake Storage gen2
-* Microsoft has some very good guideance on [Zones](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/best-practices/data-lake-zones) and [Best Practices](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-best-practices)
+* Microsoft has some very good guidance on [Zones](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/best-practices/data-lake-zones) and [Best Practices](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-best-practices)
 * 
 
 ## Questions you should ask yourself & document

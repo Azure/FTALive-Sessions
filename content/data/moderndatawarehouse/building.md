@@ -9,7 +9,7 @@
 * Provide value to the business 'fast'
 * Make sure you have knowledge and the skills within the team to achieve the scenario
 
-## Infrastrcture as Code (IaC)
+## Infrastructure as Code (IaC)
 * What is it
 * Source Control
 * Why should you do it
@@ -23,8 +23,8 @@
 * !!Link to Brad's Synapse blog series!!
 
 ## Metadata driven
-* Avoid hardcoding
-* Reduce number of pipelines by using parametisation.
+* Avoid hard coding
+* Reduce number of pipelines by using parametrisation.
 * https://docs.microsoft.com/en-us/azure/data-factory/copy-data-tool-metadata-driven
 * Plan for failure
 
