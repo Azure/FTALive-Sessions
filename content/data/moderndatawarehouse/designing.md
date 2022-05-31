@@ -5,8 +5,9 @@
 ## Architecture
 * **Don't reinvent the wheel!** Visit our [architecture centre](https://docs.microsoft.com/en-us/azure/architecture/) and check out some reference [data architectures](https://docs.microsoft.com/en-us/azure/architecture/data-guide/) such as [MDW for SMB](https://docs.microsoft.com/en-us/azure/architecture/example-scenario/data/small-medium-data-warehouse)
 * Review the [Cloud Adoption Framework for Data and Analytics](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/)
-* Some architectures are applicable across technologies and clouds, such as [Lambda](https://docs.microsoft.com/en-us/azure/architecture/data-guide/big-data/)
+* Some architectures are applicable across technologies and clouds, such as [Lambda](https://docs.microsoft.com/en-us/azure/architecture/data-guide/big-data/#lambda-architecture)
 * Keep it simple to begin with and only include services that are required
+* Security! More on this later, but design and build it into the solution from the beginning
 * Iterative and modular
 * Leverage [Common Data Models or Industry Data Models](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/common-industry-data-models) where possible
 
@@ -31,6 +32,7 @@
       * **Networking**
       * **Business Continuity** (HA/DR)
       * **Backups** (But how...)
+      * Performance
    * Preferred technologies within your organisation, and skill-set to support them
    * Timelines
 
@@ -45,6 +47,7 @@
 - [What is Delta Lake](https://docs.microsoft.com/en-us/azure/synapse-analytics/spark/apache-spark-what-is-delta-lake)
 - [What is Lake Database](https://docs.microsoft.com/en-us/azure/synapse-analytics/database-designer/concepts-lake-database)
 - [What is Azure Synapse Analytics](https://docs.microsoft.com/en-us/azure/synapse-analytics/overview-what-is)
+- [What is the Parquet file format](https://parquet.apache.org/) and [Unpacking the Transaction Log](https://databricks.com/session_eu20/diving-into-delta-lake-unpacking-the-transaction-log)
 - Blog: [The Data Lakehouse, the Data Warehouse and a Modern Data platform architecture](https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/the-data-lakehouse-the-data-warehouse-and-a-modern-data-platform/ba-p/2792337)
 
 ### Questions you should ask yourself & document
@@ -58,6 +61,7 @@
 * What variety of data do you have?
 * Who are the consumers of the MDW and what data will you expose to them, and where and how?
 * What technology & languages does your team have experience with?
+* Row level security - is it required and where will it be implemented?
 * More!
 
 

@@ -12,6 +12,7 @@
 ## Infrastructure as Code (IaC)
 * [What is it](https://docs.microsoft.com/en-us/devops/deliver/what-is-infrastructure-as-code) (Check out the video and GitHub links too!)
 * Why should you do it
+* Video: [FastTrack for Azure - Infrastrcuture as Code](https://youtu.be/p4I9Xfp80ZQ)
 
 ## DataOps
 * [What is it?](https://docs.microsoft.com/en-us/azure/architecture/example-scenario/data-warehouse/dataops-mdw) 
@@ -28,3 +29,4 @@
 
 ## Additional Resources
 - [Azure Data Platform End2End (V2)](https://github.com/fabragaMS/ADPE2E)
+- [Modern Data Warehouse DataOps E2E Samples](https://github.com/Azure-Samples/modern-data-warehouse-dataops/tree/main/e2e_samples)
