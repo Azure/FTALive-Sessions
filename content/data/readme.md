@@ -6,4 +6,5 @@ This table of contents links to the materials for the respective FTA Live sessio
 - [ADLS Gen1 to Gen2 Migrations](./adls-migration/readme.md)
 - [Cosmos DB](./cosmosdb/readme.md)
   - [Cosmos DB - Portuguese (Brazil)](./cosmosdb/readme-portuguese.md)
+- [SQL Migration](./sqlmigration/readme.md)
 - [Modern Data Warehouse](./moderndatawarehouse/readme.md)

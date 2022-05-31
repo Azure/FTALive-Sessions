@@ -9,5 +9,5 @@
 ## Assess
   * [Azure Data Studio (ADS) with Migration Extension](https://docs.microsoft.com/en-us/sql/azure-data-studio/extensions/azure-sql-migration-extension)
   * [Data Migration Assistant (DMA)](https://docs.microsoft.com/en-us/sql/dma/)
-  * [SKU Recommendation](https://docs.microsoft.com/en-us/sql/dma/dma-sku-recommend-sql-db?view=sql-server-ver15) **(Demo 1)**
+  * [SKU Recommendation](https://docs.microsoft.com/en-us/sql/dma/dma-sku-recommend-sql-db?view=sql-server-ver15) **([Demo 1](./Demo1.md))**
   * [DEA](https://docs.microsoft.com/en-us/sql/dea/database-experimentation-assistant-overview?view=sql-server-ver15) & SFS (Preview)
