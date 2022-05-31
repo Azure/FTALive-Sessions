@@ -10,19 +10,21 @@
 
 ## Why build a Modern Data Warehouse
 * Support modern business requirements and scenarios!
-* Support data-driven decision making within organisations (Business Intelligence)
+* Support data-driven decision making within organisations
 * Advanced Analytics workloads (AI/ML)
-* Data exploration and discovery (Data Democratization
-* More cost effective
+* Data exploration and discovery (Data Democratization)
+* Cost efficiency
 
 ## What makes a Data Warehouse *Modern*
 DW | MDW
 ---|---
-Built to ingest data from multiple data sources, usually structured (relational) | Ingest data from multiple sources of different types, including structured, semi-structured, unstructured and/or streaming data 
+Ingest data from multiple data sources, usually structured (relational) | Ingest data from multiple sources of *different types*, including structured, semi-structured, unstructured and/or streaming data 
 Usually Based on Kimball, Inmon or DataVault methodologies storing data within a relational database | Support for ‘Big Data’ with data stored in a Data Lake
-Usually batch loaded | Often batch, micro-batch, near-realtime and realtime loading can be used at the same time 
-The 'model' must be built before business can gain insights | Fast to gain insights from project inception.
-Often have OLAP models built on top of DW for reporting | Data can be accessed directly from the Data Lake (or pushed into any system including OLAP model, Data Mart or a Traditional Data Warehouse) 
+Usually batch loaded | Often batch, micro-batch, near-realtime and realtime ETL/ELT
+The 'model' must be built before business can gain insights | Gain business insights quickly
 Often built on Enterprise Relational Database engines | Built on modern technologies such as Highly scalable Cloud Storage (Azure Data Lake Storage Gen2) & Spark
 Usually Scale up | Scale out
 On-prem and Cloud | Cloud Only
+
+
+<!-- Often have OLAP models built on top of DW for reporting | Data can be accessed directly from the Data Lake (or pushed into any system including OLAP model, Data Mart or a Traditional Data Warehouse) -->

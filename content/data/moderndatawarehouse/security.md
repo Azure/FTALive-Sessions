@@ -12,6 +12,7 @@
 
 ## Credential Management
 * [Identity Protection and Management](https://docs.microsoft.com/en-us/azure/security/fundamentals/steps-secure-identity) (with [Azure KeyVault](https://docs.microsoft.com/en-us/azure/key-vault/general/overview))
+* Consider using [secured devices](https://docs.microsoft.com/en-us/security/compass/privileged-access-devices), [Multi-Factor-Authentication (MFA)](https://docs.microsoft.com/en-us/azure/active-directory/authentication/concept-mfa-howitworks) and [conditional access](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/overview) 
 * Azure AD (AAD) and [System & User Assigned Managed Identities](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview)
 
 ## [Network Security](https://docs.microsoft.com/en-us/azure/architecture/framework/security/design-network)
@@ -32,3 +33,14 @@
 
 ## Microsoft Defender for Cloud
 * Get familiar with Microsoft Defender for Cloud (Formerly Azure Security Center (ASC)) by reviewing your [Security Posture](https://docs.microsoft.com/en-us/azure/defender-for-cloud/secure-score-security-controls) and regularly checking your [Secure score](https://docs.microsoft.com/en-us/azure/defender-for-cloud/secure-score-access-and-track)
+
+---
+
+## Additional Resources
+* [Synapse Analytics Workspace Security Baseline](https://docs.microsoft.com/en-us/security/benchmark/azure/baselines/synapse-analytics-workspace-security-baseline)
+* [What is Azure AD Privileged Identity Management](https://docs.microsoft.com/en-us/azure/active-directory/privileged-identity-management/pim-configure)
+* [Understand Just In Time (JIT) VM access](https://docs.microsoft.com/en-us/azure/defender-for-cloud/just-in-time-access-overview?tabs=defender-for-container-arch-aks)
+* [Just Enough Administration (JEA)](https://docs.microsoft.com/en-us/powershell/scripting/learn/remoting/jea/security-considerations?view=powershell-7.2)
+* [DevSecOps Controls](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/secure/devsecops-controls)
+* [Secure DevOps](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/secure/best-practices/secure-devops)
+* [Enable and Manage Microsoft Defender for Cloud](https://docs.microsoft.com/en-us/learn/modules/azure-security-center/)

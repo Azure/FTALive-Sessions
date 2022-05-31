@@ -13,16 +13,16 @@
 
 ## Design
 * Produce a 'High Level Design'
-* Then produce a 'Physical Design(s)'
-   * Specific Azure services
-   * Subscription, region, resource groups 
-   * Networking
 * Does your design address the pillars of [Microsoft Well-Architectured Framework](https://docs.microsoft.com/en-us/azure/architecture/framework/)?
    * Reliability
    * Security
    * Cost Optimization
    * Operational Excellence
    * Performance Efficiency
+* Then produce a 'Physical Design(s)'
+   * Specific Azure services
+   * Subscription, region, resource groups 
+   * Networking
 
 ## Requirements
    * Don't build a 'generic data platform'
@@ -40,9 +40,9 @@
 * MDWs have [Data Lakes](https://azure.microsoft.com/en-us/overview/what-is-a-data-lake/) at their core, so become familiar with [concept](https://docs.microsoft.com/en-us/azure/architecture/data-guide/scenarios/data-lake)
 * Understand the difference between the concept of a Data Lake, and actual implementation
 * [What is Azure Data Lake Storage Gen2](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction)
-* Microsoft has some very good guidance on [Zones](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/best-practices/data-lake-zones) and [Best Practices](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-best-practices)
-* A well designed, built and governed Data Lake in an organizational is key to supporting all current and future scenarios
+* A well designed, built and governed Data Lake is key to supporting all current and future scenarios
 
+----
 ## Additional Resources
 - [What is Delta Lake](https://docs.microsoft.com/en-us/azure/synapse-analytics/spark/apache-spark-what-is-delta-lake)
 - [What is Lake Database](https://docs.microsoft.com/en-us/azure/synapse-analytics/database-designer/concepts-lake-database)
