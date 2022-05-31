@@ -1,7 +1,6 @@
 # Building
 
 #### [prev](./designing.md) | [home](./readme.md)  | [next](./operating.md)
-</br>
 
 ## Scenario based
 * Don't attempt to 'boil the ocean' by building the entire MDW in one go! Instead, define business scenarios that need to be addressed, and work through them in order

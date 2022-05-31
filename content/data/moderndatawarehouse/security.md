@@ -1,7 +1,6 @@
 # Security
 
 #### [prev](./operating.md) | [home](./readme.md)  | [next](./microsoftlearn.md)
-</br>
 
 ## [Defence in Depth](https://docs.microsoft.com/en-us/shows/azure-videos/defense-in-depth-security-in-azure)
 * [Zero trust](https://docs.microsoft.com/en-us/security/zero-trust/deploy/networks) ([Link 2](https://docs.microsoft.com/en-us/security/zero-trust/zero-trust-overview)) with multi-layer defence
