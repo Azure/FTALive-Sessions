@@ -23,7 +23,7 @@
 
 ## Metadata Driven
 * Avoid hard coding
-* Reduce number of pipelines by using parametrisation.
+* Reduce number of pipelines by using parameterisation.
 * https://docs.microsoft.com/en-us/azure/data-factory/copy-data-tool-metadata-driven
 * Plan for failure and define steps to recover
 
