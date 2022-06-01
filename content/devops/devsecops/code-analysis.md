@@ -57,7 +57,7 @@ When creating containerized workloads, you can be susceptible to additional secu
 - [Identify vulnerable container images in your CI/CD workflows](https://docs.microsoft.com/azure/defender-for-cloud/defender-for-container-registries-cicd)
 - [Enhance your CI/CD deployment by using Vulnerability Assessments from Microsoft Defender for ACR](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/enhance-your-ci-cd-deployment-by-using-vulnerability-assessments/ba-p/2102516)
 
-Also take a look at the [end to end setups](EndToEnd.md), which contains extra info for AKS workloads. 
+Also take a look at the [end to end setups](end-to-end.md), which contains extra info for AKS workloads. 
 
 ## Open Source Security
 

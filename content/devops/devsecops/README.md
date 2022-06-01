@@ -24,10 +24,10 @@ This document doesn't discuss any specific framework out of the above but genera
 
 | Plan and Develop | Commit the Code | Build and Test | Go to Production | Operate |  
 |---|---|---|---|---|
-|[Threat Modelling](./ThreatModelling.md)| [Static application security testing](./CodeAnalysis.md)| [Dynamic application security testing](./CodeAnalysis.md) | Security smoke tests | [Continuous monitoring](Operate.md)
-|[IDE Security plugins](./CodeAnalysis.md)| Security Unit and Functional tests | [Cloud configuration validation](CloudConfigValidation.md) | [Configuration checks](CloudConfigValidation.md) | [Threat intelligence](Operate.md)
-|[Pre commit hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)| [Dependency management](./CodeAnalysis.md) | [Infrastructure scanning](CloudConfigValidation.md) | [Live Site Penetration testing](https://docs.microsoft.com/azure/security/fundamentals/pen-testing) | [Penetration testing](https://docs.microsoft.com/azure/security/fundamentals/pen-testing)
-|[Secure coding standards](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/migrated_content) | [Securing the CI/CD workflow](./securingCICD.md) | Security acceptance testing | Blameless postmortems
+|[Threat Modelling](./threat-modelling.md)| [Static application security testing](./code-analysis.md)| [Dynamic application security testing](./code-analysis.md) | Security smoke tests | [Continuous monitoring](operate.md)
+|[IDE Security plugins](./code-analysis.md)| Security Unit and Functional tests | [Cloud configuration validation](cloud-config-validation.md) | [Configuration checks](cloud-config-validation.md) | [Threat intelligence](operate.md)
+|[Pre commit hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)| [Dependency management](./code-analysis.md) | [Infrastructure scanning](cloud-config-validation.md) | [Live Site Penetration testing](https://docs.microsoft.com/azure/security/fundamentals/pen-testing) | [Penetration testing](https://docs.microsoft.com/azure/security/fundamentals/pen-testing)
+|[Secure coding standards](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/migrated_content) | [Securing the CI/CD workflow](./securing-cicd.md) | Security acceptance testing | Blameless postmortems
 |[Peer review](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)||||
 
 ## End to End DevSecOps
@@ -36,7 +36,7 @@ How do you bring all of the above together in a pipeline or workflow for your te
 
 ## Additional Resources
 
-- [Cryptography Strategy](./CryptographyStrategy.md)
+- [Cryptography Strategy](./cryptography-strategy.md)
 - [Overview of the Azure Security Benchmark (v3)](https://docs.microsoft.com/security/benchmark/azure/overview)
   - [Security Control v3: DevOps Security](https://docs.microsoft.com/security/benchmark/azure/security-controls-v3-devops-security)
 - [Security in DevOps (DevSecOps)](https://docs.microsoft.com/devops/operate/security-in-devops)
