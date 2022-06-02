@@ -4,4 +4,4 @@
 
 
 ## Migration Hands-on Experience
-* [FastHach - SQL Migration](https://github.com/cyrille-visser/FastHack-SQL/blob/main/README.md)
+* [FastHack - SQL Migration](https://github.com/cyrille-visser/FastHack-SQL/blob/main/README.md)
