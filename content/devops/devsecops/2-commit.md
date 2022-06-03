@@ -2,6 +2,8 @@
 
 [< Previous](./1-plan-develop.md) | [Home](./readme.md) | [Next >](./3-build-test.md)
 
+![devsecops-controls](./media/devsecops-controls.png)
+
 Typically, developers create, manage, and share their code in repositories such as GitHub or Azure Repos. This approach provides a central, version-controlled library of code that can be collaborated on easily. However, enabling many collaborators on a single codebase can also introduce the risk of changes being introduced. That risk can lead to vulnerabilities or the unintentional inclusion of credentials or tokens in commits.
 
 To address this risk, development teams should evaluate and implement a repository scanning capability. Repository scanning tools perform static code analysis on source code within repositories and look for vulnerabilities or credentials and flag items found for remediation. This capability acts to protect against human error and is a useful safeguard for distributed teams where many people are collaborating in the same repository.
@@ -47,7 +49,5 @@ This session is based upon: [Secure the pipeline and CI/CD workflow](https://doc
 Guidance specifically for [Azure pipelines](https://docs.microsoft.com/azure/devops/pipelines/security/overview?view=azure-devops), which describes the different components you can secure.
 
 For workflows hosted on GitHub, there is guidance on [Security hardening](https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions). For authenticating your GitHub workflows against Azure Active Directory, there is a (currently preview!) way of authenticating based on [workload identity](https://docs.microsoft.com/azure/active-directory/develop/workload-identity-federation). Guidance on how to configure and use this can be found in the [GitHub docs on Configuring OpenID Connect in Azure](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-azure) and in the [Microsoft docs on Use GitHub Actions to connect to Azure](https://docs.microsoft.com/azure/developer/github/connect-from-azure?tabs=azure-portal%2Cwindows).
-
-![devsecops-controls](./media/devsecops-controls.png)
 
 [< Previous](./1-plan-develop.md) | [Home](./readme.md) | [Next >](./3-build-test.md)
