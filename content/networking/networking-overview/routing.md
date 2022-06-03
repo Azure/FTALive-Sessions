@@ -13,7 +13,7 @@
 - [**Optional System Routes**](https://docs.microsoft.com/azure/virtual-network/virtual-networks-udr-overview#optional-default-routes): added by the system depending on your VNet configuration, such as peering, Virtual Network Gateways, or Service Endpoints
 - [**Custom Routes**](https://docs.microsoft.com/azure/virtual-network/virtual-networks-udr-overview#custom-routes): Used to override system routes based on customer requirements
   - [User-defined](https://docs.microsoft.com/azure/virtual-network/virtual-networks-udr-overview#user-defined) routes specified in a Route Table
-  - Routes advertized over BGP through a VNet Gateway or a Route Server. BGP will be covered in the [Connectivity section](./connectivity.md)
+  - Routes advertized over BGP through a VNet Gateway or a Route Server. BGP will be covered in the [Connectivity section](./hybrid-connectivity-overview.md)
 
 ## Route Selection in Azure
 

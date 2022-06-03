@@ -41,7 +41,7 @@ Connecting to endpoints within a VNet requires additional configuration or the d
 - Assigning Public IPs to VMs is not recommended in production
   - Use Azure Bastion or hybrid connectivity for management access
   - Use App Gateway, Azure Firewall, or Standard Load Balancers for application traffic
-- From your remote networks: use a Virtual Network Gateway or custom VPN solution, detailed in [Connectivity section](./connectivity.md)
+- From your remote networks: use a Virtual Network Gateway or custom VPN solution, detailed in [Connectivity section](./hybrid-connectivity-overview.md)
 
 ## Connecting from a VNet
 
@@ -57,7 +57,7 @@ Outbound connectivity to the internet is enabled by default in Azure--VNet confi
 ## Connecting between VNets
 
 - VNets are isolated by default
-- VNet peering or VPN. Covered in [Connectivity section](./connectivity.md)
+- VNet peering or VPN. Covered in [Connectivity section](./hybrid-connectivity-overview.md)
 
 ## [VNet Frequently Asked Questions](https://docs.microsoft.com/azure/virtual-network/virtual-networks-faq)
 

@@ -37,7 +37,9 @@ the changes straight away.
 
 ### Connectivity
 
-1. [Connectivity](./connectivity.md)
+1. [Connectivity Overview](./hybrid-connectivity-overview.md)
+1. [VPN Connectivity](./vpn-connectivity.md)
+1. [ExpressRoute Connectivity](./er-connectivity.md)
 1. [Private Endpoints](./private-endpoints.md)
 1. [Azure Virtual WAN](.vwan.md)
 

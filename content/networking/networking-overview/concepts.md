@@ -1,6 +1,6 @@
 # Concepts
 
-[prev](./readme.md) | [home](./readme.md)  | [next](./connectivity.md)
+[prev](./readme.md) | [home](./readme.md)  | [next](./hybrid-connectivity-overview.md)
 
 Icon | Short Name | Full Name
 --|--|--
