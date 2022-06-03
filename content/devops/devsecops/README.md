@@ -1,4 +1,4 @@
-# Secure Software Development Lifecycle
+# DevSecOps
 
 Instead of going through the traditional Software Development Lifecycle (SDLC) of passing the appropriate work tasks from one team to the next, transformational change is needed to obtain the goal of “develop with security team(s)”. Compare this to the traditional process of validation of an architected / designed solution ready for deployment and later, collaborate with your security team to ensure it aligns with your various business requirements. This traditional collaboration model usually results in changes to architecture and/or design due to the security team’s feedback.
 
@@ -20,21 +20,23 @@ There are many secure software development frameworks being used out in the worl
 1. [Microsoft Secure Development Lifecycle](https://www.microsoft.com/securityengineering/sdl/practices).
 1. [SafeCode fundamental practices for Secure Software Development](https://safecode.org/uncategorized/fundamental-practices-secure-software-development).
 
+## DevSecOps controls
+
 This document doesn't discuss any specific framework out of the above but general practices involved in developing a Secure Software Development Lifecycle, based on the [Cloud Adoption Framework](https://docs.microsoft.com/azure/cloud-adoption-framework/secure/devsecops-controls).
 
-| Plan and Develop | Commit the Code | Build and Test | Go to Production | Operate |  
-|---|---|---|---|---|
-|[Threat Modelling](./ThreatModelling.md)| [Static application security testing](./CodeAnalysis.md)| [Dynamic application security testing](./CodeAnalysis.md) | Security smoke tests | [Continuous monitoring](Operate.md)
-|[IDE Security plugins](./CodeAnalysis.md)| Security Unit and Functional tests | [Cloud configuration validation](CloudConfigValidation.md) | [Configuration checks](CloudConfigValidation.md) | [Threat intelligence](Operate.md)
-|[Pre commit hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)| [Dependency management](./CodeAnalysis.md) | [Infrastructure scanning](CloudConfigValidation.md) | [Live Site Penetration testing](https://docs.microsoft.com/azure/security/fundamentals/pen-testing) | [Penetration testing](https://docs.microsoft.com/azure/security/fundamentals/pen-testing)
-|[Secure coding standards](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/migrated_content) | [Securing the CI/CD workflow](./securingCICD.md) | Security acceptance testing | Blameless postmortems
-|[Peer review](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)||||
+![DevSecOps Controls](./media/devsecops-controls.png)
+
+1. [Plan and Develop](./1-plan-develop.md)
+1. [Commit the Code](./2-commit.md)
+1. [Build and Test](./3-build-test.md)
+1. [Go to Production](./4-goto-production.md)
+1. [Operate](./5-operate.md)
 
 ## End to End DevSecOps
 
 How do you bring all of the above together in a pipeline or workflow for your team. Find out [here](EndToEnd.md).
 
-## Additional Resources
+## Additional resources
 
 - [Cryptography Strategy](./CryptographyStrategy.md)
 - [Overview of the Azure Security Benchmark (v3)](https://docs.microsoft.com/security/benchmark/azure/overview)
