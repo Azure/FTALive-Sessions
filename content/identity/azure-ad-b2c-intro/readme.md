@@ -23,6 +23,7 @@ Please give us your feedback at https://aka.ms/ftalive-feedback
 1. [User Flows](./user-flows.md)
 1. [Application Integration](./application-integration.md)
 1. [API Connectors](./api-connectors.md)
+1. [Identity Experience Framework](./identity-experience-framework.md)
 
 ### Audience
 
