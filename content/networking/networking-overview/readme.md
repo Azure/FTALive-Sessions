@@ -19,29 +19,37 @@ the changes straight away.
 
 ## Agenda
 
-### Virtual Network Fundamentals
+### Session 1
+
+#### Virtual Network Fundamentals
 
 1. [Why should we talk about networking?](./why.md)
 1. [VNet Basics](./basics.md)
-1. [Virtual Network Security](./vnet-security.md)
-1. [Load Balancers and Web Application Firewalls](./lbs-wafs.md)
 1. [Azure DNS](./dns.md)
 1. [Management](./mgmt.md)
 
-### Hub and Spoke Topology
+#### Hub and Spoke Topology
 
 1. [Hub and Spoke Topology](./vnet-hubspoke.md)
 1. [IP Address Management](./vnet-ipam.md)
-1. [Firewalls](./firewalls)
 1. [Routing](./routing.md)
 
-### Connectivity
+### Session 2
+
+#### Hybrid Connectivity
 
 1. [Connectivity Overview](./hybrid-connectivity-overview.md)
 1. [VPN Connectivity](./vpn-connectivity.md)
 1. [ExpressRoute Connectivity](./er-connectivity.md)
+1. [Azure Virtual WAN](./vwan.md)
+
+#### Network Security
+
+1. [Virtual Network Security](./vnet-security.md)
+1. [Firewalls](./firewalls)
+1. [Load Balancers and Web Application Firewalls](./lbs-wafs.md)
 1. [Private Endpoints](./private-endpoints.md)
-1. [Azure Virtual WAN](.vwan.md)
+
 
 ## Appendix
 
