@@ -54,11 +54,21 @@ Recommended folder structure:
 Details:
 - `All_Assessed_Machines.csv` and `All_Assessed_Disks.csv`: CSV files extracted from Azure Migrate Assessement excel file
 - `pipeline-script.ps1`: script that deploys compute resources
+- `bicep` folder: used for migration with bicep as deployment model
+    - `deployment-functions.psm1`: functions used for the `pipeline-script-bicep.ps1` script
+    - `hash_disk_table.json`: maps to VM disk size
+    - `hash_disk_table.json`: maps to VM disk type
+    - `pipeline-script-bicep.ps1`: ingests information from the Assessed Machines and Disks CSVs to map to Bicep files
+    - `vmLinux.bicep`: maps to Linux VM specifications (Ubuntu)
+    - `vmWindows.bicep`: maps to Windows VM specifications
+    - `vnet.bicep`: creates Isolated VNet for testing purposes
 - `test-migration` folder: used for test migration purposes
     - `testing-pipeline.yml`: file for testing in an isolated or migration VNet
+    - `bicep-testing-pipeline.yml`: file for testing in an isolated or migration VNet using Bicep
     - `testing-variables.yml`: variables used in powershell and pipeline yaml
 - `prod-migration` folder: used for redeploying migration resources
     - `migration-pipeline.yml`: file for redeploying VMs in a specified migration VNet
+    - `bicep-migration-pipeline.yml`: file for redeploying VMs in a specified migration VNet using Bicep
     - `variables.yml`: variables used in powershell and pipeline yaml
         - Manually populate the `variables.yml` using CSV recommended values and what is expected in Azure.
 - [optional folder] `scripts`: folder to store powershell files for executing different test and validation scripts

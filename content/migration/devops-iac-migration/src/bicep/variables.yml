@@ -1,0 +1,40 @@
+variables:
+  - name: serviceConnectionName
+    value: 'azure-devops-pipeline-spn'
+  - name: resourceGroupName
+    value: 'pipeline-test'
+  - name: subscription
+    value: 'c07bd8d6-a57c-4abc-b280-9b1771d0c4b3'
+  # - name: templateFile
+  #   value: '.\src\bicep\vnet.bicep'
+  # VNET parameters
+  - name: virtualNetworkName
+    value: 'test-migration-vnet'
+  - name: defaultSubnetName
+    value: 'default'
+  - name: subnetName
+    value: 'workload-subnet'
+  - name: location
+    value: 'eastus'
+  - name: vnetCIDR
+    value: '10.4.0.0/16'
+  - name: defaultSubnetCIDR
+    value: '10.4.0.0/24'
+  - name: subnetCIDR
+    value: '10.4.1.0/24'
+
+# variables:
+#   - name: serviceConnectionName
+#     value: 'AIRS'
+#   - name: resourceGroupName
+#     value: 'FTA-LIVE'
+#   - name: subscription
+#     value: '6c64f9ed-88d2-4598-8de6-7a9527dc16ca'
+
+#   # VNET parameters
+#   - name: virtualNetworkName
+#     value: 'migratevnet'
+#   - name: subnetName
+#     value: 'default'
+#   - name: location
+#     value: 'westus2'

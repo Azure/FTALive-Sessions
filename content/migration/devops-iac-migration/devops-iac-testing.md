@@ -52,9 +52,13 @@ Please refer to the [Pre-Migration and Post-Migration Activities](https://github
 
 This sample testing pipeline can be customized to fit the needs of your organization and can be modified to incorporate specific tests needed for your app validation in the Testing phase of migration.
 
-### 2.1\. Input parameters your environment using the [testing-variables.yml](./src/test-migration/testing-variables.yml) as a template.
+### 2.1 PowerShell Implementation
 
-### 2.2\. Create a `testing-pipeline.yml` for resource execution using the provided [template](./src/test-migration/testing-pipeline.yml) as a baseline. Below are a description of the tasks:
+The steps below outline the process for redeploying Azure assets through PowerShell, using the csvs as a source for the IaaS parameters.
+
+#### 2.1.1\. Input parameters your environment using the [testing-variables.yml](./src/test-migration/testing-variables.yml) as a template.
+
+#### 2.1.2\. Create a `testing-pipeline.yml` for resource execution using the provided [template](./src/test-migration/testing-pipeline.yml) as a baseline. Below are a description of the tasks:
 Pipeline Tasks:
 - Start Test Migration
     - Create isolated VNet (optional)
@@ -65,6 +69,19 @@ Pipeline Tasks:
         - Smoke Test
         - UAT
         - Failover
+- Clean up Test Resources
+
+### 2.2 Bicep Implementation
+
+The steps below outline the process for redeploying Azure assets through Bicep. This implementation uses the PowerShell script implementation (2.1) as a baseline for parsing the parameters and then executes the resources based on the parameters outlined by the CSVs in order to create Azure resources using Bicep.
+
+#### 2.2.1\. Input variables for your environment in Azure DevOps under `Pipelines` > `Library`. There you will see a variable group called `bicepPipelineVariables` where you can input the appropriate parameters.
+* More info on variable groups [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups?view=azure-devops&tabs=yaml).
+
+#### 2.2.2\. Create a `testing-pipeline.yml` for resource execution using the provided [template](./src/bicep/azure-pipelines.yml) as a baseline. Below are a description of the tasks:
+Pipeline Tasks:
+- Create isolated VNet with Bicep deployment (optional)
+- Powershell script run to parse the parameters and call Bicep templates for execution.
 - Clean up Test Resources
 
 ### 2.3\. Validate Target VNet Tests
@@ -81,3 +98,69 @@ Pipeline Tasks:
 * Standardized pipeline to utilize for deploying compute resources in Azure
 * Pipeline provides option for executing tests within Azure on the testing resources that are deployed
 * Pipeline performs clean up of test resources after validation of functionality
+
+### 2.6\. Considerations for Customizations
+The provided templates in the Azure DevOps Repo are meant to be a starter baseline for the execution of your migration waves. The defaults for the variables are based on the input CSV from Azure Migrate. Below are some additional areas for consideration if want to further customizing the templates to fit your business needs for redeploying Azure resources.
+
+#### 2.6.1\. Modifying VM SKU and Disk Size
+In the bicep templates, these options can be modified in the [Windows Bicep Template](./src/bicep/vmWindows.bicep) and [Linux Bicep Template](./src/bicep/vmLinux.bicep) in the following sections: 
+* **SKU parameter:** `param sku string` can be edited (i.e. `param sku string = '2019-Datacenter'`).
+* **VM Size:** `param vmSize string` can be edited (i.e. `param vmSize string = 'Standard_D2s_v3'`).
+* **Disk Size:** `param osDiskSize int` can be edited (i.e. `param osDiskSize int = 127`).
+* **Data Disk Size:** data disks are currently looped through in the following method based on the input CSV: 
+    ```bicep
+     dataDisks: [for i in range(0,length(datadisksizes)): {
+        name: '${vmname}-dataDisk${i}'
+        diskSizeGB: datadisksizes[i]
+        lun: i
+        createOption: 'Empty'
+        managedDisk: {
+            storageAccountType: datadisktypes[i]
+        }
+     }
+    ```
+    The disks can also be added on an individual basis in the following method:
+    ```bicep
+    dataDisks: [
+        {
+            diskSizeGB: 1023
+            lun: 0
+            createOption: 'Empty'
+        }
+    ]
+    ```
+
+#### 2.6.2\. VM Diagnostics Settings
+Boot Diagnostics can be enabled or disabled in the following section:
+
+```bicep
+ diagnosticsProfile: {
+    bootDiagnostics: {
+        enabled: true (#set as false to disable)
+    }
+ }
+```
+A specific storage account can also be referenced to correlate to the VMs by adding a storage account reference: 
+
+```bicep
+var storageAccountName = 'bootdiags${uniqueString(resourceGroup().id)}'
+
+resource bootStorage 'Microsoft.Storage/storageAccounts@2021-04-01' = {
+  name: storageAccountName
+  location: location
+  sku: {
+    name: 'Standard_LRS'
+  }
+  kind: 'Storage'
+}
+
+```
+and the following under `bootDiagnostics`:
+```bicep
+diagnosticsProfile: {
+    bootDiagnostics: {
+        enabled: true (#set as false to disable)
+        storageUri: bootStorage.properties.primaryEndpoints.blob
+    }
+ }
+```
