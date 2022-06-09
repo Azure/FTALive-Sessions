@@ -28,7 +28,7 @@ In order to prepare to migrate or deploy new workloads in to Azure, you need to 
 1. [Why should we talk about networking?](./why.md)
 1. [VNet Basics](./basics.md)
 1. [Azure DNS](./dns.md)
-1. [Management](./mgmt.md)
+1. [Network Watcher](./mgmt.md)
 
 #### Hub and Spoke Topology
 
