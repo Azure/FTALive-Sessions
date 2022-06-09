@@ -19,6 +19,8 @@ the changes straight away.
 
 ## Agenda
 
+In order to prepare to migrate or deploy new workloads in to Azure, you need to have a good grasp of Azure networking fundamentals, an understanding of the recommend hub and spoke topology, an understanding of the hybrid connectivity options available, and a plan for securing your network platform.  We will cover each of these in our two sessions.
+
 ### Session 1
 
 #### Virtual Network Fundamentals
