@@ -34,4 +34,13 @@ Following next hop types are available when creating user-defined route:
 - Virtual Network
 - Internet
 
+## Effective routes
+
+- Diagnostic property located on a Network Interface Card resource.
+- Dynamically updated and requires the NIC to be attached to a running VM.
+
+![Effective routes](png/effective-routes.png)
+
+[Diagnose a virtual machine routing problem](https://docs.microsoft.com/azure/virtual-network/diagnose-network-routing-problem)
+
 ### Detailed routing overview, scenarios, and route selection walk-through: [Virtual Network Traffic Routing](https://docs.microsoft.com/azure/virtual-network/virtual-networks-udr-overview)

@@ -9,8 +9,10 @@
 - Less resilient and consistent connectivity is acceptable
 - Maximum single-connection throughput of ~1Gbps is acceptable
 - ExpressRoute is not available or feasible
+- Encryption in transit is required
 
 ## Configuring VPN Connectivity
+
 
 1. Create a VPN Gateway in Azure
 1. Configure your on-prem device to connect to the gateway

@@ -33,7 +33,24 @@ A network security group contains zero, or as many rules as desired, within Azur
 Each Security rule is created as either Inbound or Outbound rule.
 Each NSG also has default security rules which are created automatically by Azure.
 
+It is recommended to use NSGs, even when leveraging a centralized firewall solution such as Azure Firewall, both as part of a defense-in-depth strategy and because NSGs are required to capture flow logs.
+
 [Networking security overview](https://docs.microsoft.com/azure/virtual-network/security-overview)
+
+#### Effective Security Rules
+
+* Diagnostic property located on a Network Interface Card resource.
+* Dynamically updated and requires the NIC to be attached to a running VM.
+
+![Effective security rules](png/effective-security-rules.png)
+
+[Diagnose a virtual machine network traffic filter problem](https://docs.microsoft.com/azure/virtual-network/diagnose-network-traffic-filter-problem)
+
+#### NSG Flow Logs
+
+Network security group (NSG) flow logs is a feature of Azure Network Watcher that allows you to log information about IP traffic flowing through an NSG. Flow data is sent to Azure Storage accounts from where you can access it as well as export it to any visualization tool, SIEM, or IDS of your choice.
+
+[Introduction to flow logging for network security groups](https://docs.microsoft.com/azure/network-watcher/network-watcher-nsg-flow-logging-overview)
 
 ### Application Security Groups
 
