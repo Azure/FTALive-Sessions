@@ -10,7 +10,7 @@ Threat modeling is a process by which potential threats, such as structural vuln
 
 Reference: [Wikipedia](https://en.wikipedia.org/wiki/Threat_model)
 
-### Common threat modelling approaches
+### Common threat modeling approaches
 
 1. Asset Centric - Focuses on the infrastructure components in an Organization.
 2. Attacker Centric - Focuses on the types of attacks that can take place based on organizational profile.
