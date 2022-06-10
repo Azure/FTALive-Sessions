@@ -15,7 +15,7 @@
 
 ![External User Stores](./Media/external-user-stores.png)
 
-- Provides a directory that can hold 100 custom attributes per user
+- Provides a directory that stores core identity attributes as well as custom attributes for a user
 - Can also integrate with external systems
 - Have Azure AD B2C handle the authentication for your application, but integrate with an external system that stores user profile or personal data
 - Facilitate collecting the information from the user during registration or profile editing, then hand that data off to the external system via API

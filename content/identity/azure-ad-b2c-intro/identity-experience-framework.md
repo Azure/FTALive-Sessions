@@ -13,5 +13,9 @@ Allow you to build complex, custom user journeys that cannot be created using bu
 | User Flows | Custom Policies |
 |------------|-----------------|
 | Targeted at all application developers | Targeted at identity pros comfortable with OpendID Connect flows, identity providers, and claims-based authentication|
-| Built with a user-friendly user interface provided in the Azure portal | Directly edit XML files and upload to the portal |
+| Built with a user-friendly user interface provided in the Azure portal | Directly edit XML files and upload to the portal or deploy via DevOps |
 | Limited integration with external systems via API Connectors | Fully integrate with external systems via APIs |
+
+## Sample Custom Policies
+
+Sample custom policies can be found [here](https://github.com/azure-ad-b2c/samples)

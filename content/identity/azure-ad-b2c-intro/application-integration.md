@@ -5,7 +5,7 @@
 - You can create many user flows, or custom policies of different types in your tenant and use them in your applications as needed
 - Can be reused across applications
 
-![Authentication Flow](./Media/application-integration.svg)
+![Authentication Flow](./Media/application-integration.png)
 
 - Application initiates a request to a user flow provided endpoint
 - The user flow defines and controls the user’s experience

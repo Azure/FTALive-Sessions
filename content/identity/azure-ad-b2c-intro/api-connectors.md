@@ -21,3 +21,7 @@ Allow you to integrate your user flows with REST APIs to customize the experienc
     - Before sending the token
 - Sign In
     - Before sending the token
+
+## Sample API Connectors
+
+Sample API Connectors can be found [here](https://github.com/azure-ad-b2c/api-connector-samples)

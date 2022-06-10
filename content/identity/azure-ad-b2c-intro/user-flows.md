@@ -11,4 +11,6 @@
 - Attributes to be collected from the consumer, such as first name, postal code, or country/region of residency
 - Set of claims in a token that your application receives after the user completes the user flow
 - Customization of the user interface
+- Integrate with external systems through the use of API Connectors
 - Multi-Factor Authentication
+- Trigger conditional access policies 
