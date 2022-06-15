@@ -1,6 +1,6 @@
 # ExpressRoute Connectivity
 
-[prev](./vpn-connectivity.md) | [home](./readme.md)  | [next](./private-endpoints.md)
+[prev](./vpn-connectivity.md) | [home](./readme.md)  | [next](./vwan.md)
 
 ## Why use ExpressRoute?
 

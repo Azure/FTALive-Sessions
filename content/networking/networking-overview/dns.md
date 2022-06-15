@@ -1,6 +1,6 @@
 # DNS Zones in Azure
 
-**[prev](./basics.md) | [home](./readme.md)  | [next](./security-overview.md)**
+**[prev](./basics.md) | [home](./readme.md)  | [next](./mgmt.md)**
 
 >This is in addition to the DNS discussion in **[Vnet Basics](basics.md)**.  From that discussion, you should be aware of:
 

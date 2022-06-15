@@ -48,7 +48,7 @@ In order to prepare to migrate or deploy new workloads in to Azure, you need to 
 #### Network Security
 
 1. [Virtual Network Security](./vnet-security.md)
-1. [Firewalls](./firewalls)
+1. [Firewalls](./firewalls.md)
 1. [Load Balancers and Web Application Firewalls](./lbs-wafs.md)
 1. [Private Endpoints](./private-endpoints.md)
 

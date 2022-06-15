@@ -1,6 +1,6 @@
 # Virtual Network Security
 
-**[prev](./topology-overview.md) | [home](./readme.md)  | [next](./routing.md)**
+**[prev](./readme.md) | [home](./readme.md)  | [next](./firewalls.md)**
 
 ## Considering Endpoint Types
 

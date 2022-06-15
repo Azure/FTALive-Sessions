@@ -1,6 +1,6 @@
 # IP Address Management for Hub and Spoke Vnets
 
-**[prev](./hybrid-connectivity-overview.md) | [home](./readme.md)  | [next](./security-advanced.md)**
+**[prev](./vnet-hubspoke.md) | [home](./readme.md)  | [next](./routing.md)**
 
 A working example for a hub and spoke topology.
 

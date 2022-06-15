@@ -1,6 +1,6 @@
 # Topology (Overview)
 
-**[prev](./basics.md) | [home](./readme.md)  | [next](./security-overview.md)**
+**[prev](./readme.md) | [home](./readme.md)  | [next](./vnet-ipam.md)**
 
 ## Hub and Spoke
 
