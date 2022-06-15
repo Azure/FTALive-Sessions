@@ -1,6 +1,6 @@
 # Routing
 
-[prev](./vnet-ipam.md) | [home](./readme.md)  | [next](./readme.md.md)
+[prev](./vnet-ipam.md) | [home](./readme.md)  | [next](./readme.md)
 
 ## Common routing scenarios
 
