@@ -64,7 +64,7 @@ In this FTA Live session, we want to help customers to understand some of the ke
    - In a hot-cold architecture, you might have last replicated or backed up your data the previous night.
    - In a warm-standby architecture, you might have asynchronous replication of your data across regions, and maybe it's ~15 minutes out of date.
    - This is your recovery point.
-- **RPO** is the amoiunt of data that you can tolerate losing in the event of a failure.
+- **RPO** is the amount of data that you can tolerate losing in the event of a failure.
 
 - Think about the business continuity in a wider context - e.g. can you switch to manual operations?
 
