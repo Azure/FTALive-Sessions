@@ -2,7 +2,7 @@
 
 [prev](./vpn-connectivity.md) | [home](./readme.md)  | [next](./vwan.md)
 
-## Why use ExpressRoute?
+## When to Use ExpressRoute?
 
 - Lower and more consistent latency and throughput is required than is achievable over the internet
 - VPN connectivity does not provide required bandwidth

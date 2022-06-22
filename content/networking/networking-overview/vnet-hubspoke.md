@@ -40,8 +40,6 @@ We will talk more about this in the [Routing](routing.md) and [Security](securit
 
 ![Topology Diagram](png/topology.png)
 
-A more [detailed](./topology-advanced.md) breakdown of the hub and spoke topology is covered after introducing connectivity and routing.
-
 ## Considering Other Topologies
 
 There is no golden topology that will fit every workload scenario.  It is helpful to think about your requirements and use materials to make decisions early on in the process.
@@ -51,4 +49,4 @@ There is no golden topology that will fit every workload scenario.  It is helpfu
 - Consider peering costs.
 - Don't underestimate hidden costs and administrative overheads.
 
-This might lead you to adopt a stand alone vnet, vnet mesh, or some other topology.
+This might lead you to adopt a stand alone VNet, VNet mesh, or some other topology.

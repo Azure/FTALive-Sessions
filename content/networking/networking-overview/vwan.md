@@ -41,14 +41,14 @@ Routing with spoke networks connected to VWAN Hubs works differently than normal
 
 You can add your own to match different patterns.  Route tables in the Virtual Hub are assigned labels, so they can be managed in groups.
 
-In addition to static routes inputted in to the route tables, when you go to connect spokes to the virtual hub, you will select what route tables to associate and which to propogate to.
+In addition to static routes inputted in to the route tables, when you go to connect spokes to the virtual hub, you will select what route tables to associate and which to propagate to.
 
 The route table that you select for **Associated Route Table** will be used by the network; it becomes the default route definitions for all subnets in the virtual network.  UDRs can still be used to overwrite these routes.
 
-The route table(s) that you select for **Propogate to Route Tables** will be the route tables that learn the routes associated with this Virtual Network.  **Propogate to labels** applies to all route tables with that labels.
+The route table(s) that you select for **Propagate to Route Tables** will be the route tables that learn the routes associated with this Virtual Network.  **Propagate to labels** applies to all route tables with that labels.
 
 You can also specify static routes in this connection.
 
 Imagine if you had two network segments, Red and Blue.  You could use route tables to control traffic from Red and Blue networks in different ways.
 
-![Red and Blue Vnets with Virtual Hub](https://docs.microsoft.com/azure/virtual-wan/media/routing-scenarios/custom-branch-vnet/custom-branch.png)
+![Red and Blue VNets with Virtual Hub](https://docs.microsoft.com/azure/virtual-wan/media/routing-scenarios/custom-branch-vnet/custom-branch.png)

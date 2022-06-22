@@ -2,7 +2,7 @@
 
 [prev](./hybrid-connectivity-overview.md) | [home](./readme.md)  | [next](./er-connectivity.md)
 
-## Why use VPN Connectivity?
+## When to Use VPN Connectivity?
 
 - VPN is quicker to configure and does not require third-party involvement
 - VPN is less expensive than ExpressRoute
@@ -12,7 +12,6 @@
 - Encryption in transit is required
 
 ## Configuring VPN Connectivity
-
 
 1. Create a VPN Gateway in Azure
 1. Configure your on-prem device to connect to the gateway
