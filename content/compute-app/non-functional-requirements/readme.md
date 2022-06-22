@@ -7,8 +7,8 @@ In this FTA Live session, we want to help customers to understand some of the ke
 ## Intended audience
 
 - Solution architects, and especially accidental architects (i.e. those who might not have a lot of formal experience with architecture but are responsible for designing/architecting a solution).
-- Product owners/product managers and other business stakeholders who are ultimately accountable for requirements.
-
+- Product owners/product managers and other business stakeholders. Ideally, requirements should be a negoation between business and technical stakeholders, and we want to empower business stakeholders to understand the technical impact of some of their decisions and requirements.
+ 
 ## Goals
 
 - Support customers' understanding of the key non-functional requirements they need to focus on.
@@ -71,6 +71,7 @@ In this FTA Live session, we want to help customers to understand some of the ke
 - Azure services provide several options for how you architect for different levels of uptime, RTO, and RPO. But these have tradeoffs.
    - Single-region, single-zone architectures tend to be cheapest, but have the least resiliency. You likely can't support low RTO or RPO.
    - Multi-region designs are often expensive because you need to deploy multiple separate instances. They can also introduce complexity. And data replication is usually asynchronous, which means you don't automatically get low RPO. But your risk is spread across multiple regions, so they can be resilient and performant, especially when you have customers in multiple regions.
+   - Disasters come in different types and have different risk levels. For example, a data centre HVAC/power outage might impact one zone, while a severe weather event (like a flood) might impact multiple zones in one region. You need to decide on your risk tolerance for different forms of disaster.
    - Single-region, multi-zone architectures tend to be the sweet spot for most customers. There is still some cost involved in the redundancy, but you can often support low RPO and RTO requirements.
   - Also, you might choose to have different controls in different parts of your system. For example, if you ingest invoices and then process them:
     - You might decide to synchronously replicate the incoming invoice data - it's hard to replace this, and even though there's a perf hit on the synchronous replication, it's worth it.
@@ -93,6 +94,17 @@ In this FTA Live session, we want to help customers to understand some of the ke
    - End-to-end transaction latency
    - The response time of individual APIs
 - Make sure you're clear about whether performance requirements are hard or soft (SLAs or SLOs).
+- Consider both average performance and also percentiles and ranges, so that you can consider outliers and monitor for unusual situations or problems.
+- The exact performance targets will vary depending on the solution, but when you're thinking about what is reasonable, consider these questions:
+   - What's the system all about? Is it a business-critical or low-priority system? Is it used a lot or infrequently?
+   - What will the users generally notice? When would they start to complain?
+   - Are you over-optimising a single part of a wider end-to-end system?
+   - What's reasonable given your constraints? e.g. if you rely on a database or a downstream third-party system, you might not have much ability to influence performance.
+   - If you're migrating or replacing an existing system, have you got a baseline measurement of performance? Is this acceptable or too slow?
+ - For example:
+   - Suppose you're building an internally facing web application that will be used a few times a day by a small number of employees in your company. That probably doesn't need to have low latency requirements - if it takes a few seconds to respond then that might be fine.
+   - Suppose you're building a public API. Your customers might notice if their requests don't receive a response within (say) 100-200ms.
+   - Suppose you're building a high-frequency trading system. Every millisecond counts.
 
 ## Security
 
@@ -147,7 +159,7 @@ In this FTA Live session, we want to help customers to understand some of the ke
 - We (FTA) can only help you if we understand your requirements. If you don't have them, or if you just make them up on the spot, we can't be as much use to you.
   - If you don't understand something, ask - we'll spend as much time as we need to help you understand what you need to decide.
 - Remember there are tradeoffs. Don't automatically dial everything up to 11 ("most secure", "most resilient") without thinking through the consequences.
-- **NFRs should come from product owners and business stakeholders, not from the technology builders.** Bring in the right people to help you determine your requirements.
+- **NFRs should come from a negotiation between the product owners/business stakeholders and the technology stakeholders.** Bring in the right people to help you determine your requirements and look at all of the tradeoffs involved.
 
 ## Tools to mention
 
