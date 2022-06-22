@@ -12,7 +12,8 @@
 
 - Talk to your current connectivity provider first
 - For new environments, review the list of [**providers and peering locations**](https://docs.microsoft.com/azure/expressroute/expressroute-locations-providers)
-- Review the ExpressRoute [**configuration workflow**](https://docs.microsoft.com/azure/expressroute/expressroute-workflows) to understand the setup process and to find links to details on each step. 
+- Review the ExpressRoute [**configuration workflow**](https://docs.microsoft.com/azure/expressroute/expressroute-workflows) to understand the setup process and to find links to details on each step.
+
 ## Configuring ExpressRoute Connectivity
 
 ![Basic ExpressRoute diagram](./png/exr-reco.png)

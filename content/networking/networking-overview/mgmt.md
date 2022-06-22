@@ -16,7 +16,6 @@ Portal link: [Network Watcher | Packet capture](https://ms.portal.azure.com/#bla
 
 [Introduction to variable packet capture in Azure Network Watcher](https://docs.microsoft.com/azure/network-watcher/network-watcher-packet-capture-overview)
 
-
 ## Azure Monitor Network Insights
 
 Azure Monitor's Network Insights page provides a quick dashboard of network component status and health across your subscriptions. Use it to quickly locate problems in your network.
