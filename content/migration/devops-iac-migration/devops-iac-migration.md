@@ -28,7 +28,7 @@ This section covers utilizing Azure Pipelines to execute Powershell scripts to c
 
 ### 2.1\. Based on the migration wave, manually fill in variables needed for the CI/CD pipeline, using the [variables.yml](../src/prod-migration/variables.yml) file as a template.
 
-#### 2.1.1\. [Bicep Implementation] Input variables for your environment in Azure DevOps under `Pipelines` > `Library`. There you will see a variable group called `bicepPipelineVariables` where you can input the appropriate parameters.
+#### 2.1.1\. [Bicep Implementation] Input variables for your environment in Azure DevOps under `Pipelines` > `Library`. There you will see a variable group called `bicepPipelineVariablesProd` where you can input the appropriate parameters.
 * More info on variable groups [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups?view=azure-devops&tabs=yaml).
 
 ### 2.2\. Create a [migration-pipeline.yml](../src/prod-migration/migration-pipeline.yml) for resource execution using the templates as a starter pipeline.

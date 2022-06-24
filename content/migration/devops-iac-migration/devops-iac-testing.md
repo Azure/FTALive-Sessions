@@ -75,7 +75,8 @@ Pipeline Tasks:
 
 The steps below outline the process for redeploying Azure assets through Bicep. This implementation uses the PowerShell script implementation (2.1) as a baseline for parsing the parameters and then executes the resources based on the parameters outlined by the CSVs in order to create Azure resources using Bicep.
 
-#### 2.2.1\. Input variables for your environment in Azure DevOps under `Pipelines` > `Library`. There you will see a variable group called `bicepPipelineVariables` where you can input the appropriate parameters.
+#### 2.2.1\. Input variables for your environment in Azure DevOps under `Pipelines` > `Library`. There you will see a variable group called `bicepPipelineVariablesDev` where you can input the appropriate parameters.
+* *Note:* Make sure to update the parameters with your own environment names. 
 * More info on variable groups [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups?view=azure-devops&tabs=yaml).
 
 #### 2.2.2\. Create a `testing-pipeline.yml` for resource execution using the provided [template](./src/bicep/azure-pipelines.yml) as a baseline. Below are a description of the tasks:
@@ -136,7 +137,7 @@ Boot Diagnostics can be enabled or disabled in the following section:
 ```bicep
  diagnosticsProfile: {
     bootDiagnostics: {
-        enabled: true (#set as false to disable)
+        enabled: true //set as false to disable
     }
  }
 ```
@@ -159,8 +160,100 @@ and the following under `bootDiagnostics`:
 ```bicep
 diagnosticsProfile: {
     bootDiagnostics: {
-        enabled: true (#set as false to disable)
+        enabled: true //set as false to disable
         storageUri: bootStorage.properties.primaryEndpoints.blob
     }
  }
 ```
+#### 2.6.3\. VM Passwords 
+In the baseline Bicep template for the Linux and Windows machines, it currently has hard coded passwords and usernames as an example for the implementation as seen below. This path is for testing/example purposes only.
+
+
+```bicep
+param adminUserName string ='azureuser'
+param adminPassword string ='@zureS3cur3P@ssw0rd'
+```
+
+```bicep
+resource WindowsVM 'Microsoft.Compute/virtualMachines@2021-07-01' = {
+    ...
+  properties: {
+      osProfile: {
+          computerName: vmname
+          adminUsername: adminUserName
+          adminPassword: adminPassword
+      }
+    ...
+  }
+```
+
+Below are the recommended paths to take when implementing:
+
+**Storing Passwords as a Secret in Key Vault:**
+1. Ensure that the Pipeline service principal has the appropriate permissions for using a key vault
+    1. Permission in RBAC: `Microsoft.KeyVault/vaults/deploy/action`
+1. Deploy a key vault in Azure and set up the secrets using the following guidance:
+[Quickstart: Set and retrieve a secret from Azure Key Vault using Bicep](https://docs.microsoft.com/en-us/azure/key-vault/secrets/quick-create-bicep?tabs=CLI)
+1. Pass the secret in the VM template Bicep files using the getSecret function:
+    1. Ensure that your parameter for the password has the following format:
+    ```bicep
+    @secure()
+    param adminPassword string
+    ```
+    1. Call the getSecret function based on the previous key vault reference:
+    
+    ```bicep
+    resource kv 'Microsoft.KeyVault/vaults@2021-11-01-preview' = {...}
+    resource secret 'Microsoft.KeyVault/vaults/secrets@2021-11-01-preview' = {...}
+
+    resource WindowsVM 'Microsoft.Compute/virtualMachines@2021-07-01' = {
+        ...
+      properties: {
+          osProfile: {
+              computerName: vmname
+              adminUsername: adminUserName
+              adminPassword: kv.getSecret('<secret_name>')
+          }
+        ...
+      }
+    }
+    ```
+    More info on getSecret function:[Use getSecret function](https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/key-vault-parameter?tabs=azure-cli#use-getsecret-function)
+
+Using an SSH Key:
+1. Generate SSH Key with `ssh-keygen` in your CLI.
+1. Add the parameters below in the following format:
+    ```bicep
+    param authenticationType string = 'sshPublicKey'    
+    @secure()
+    param adminPasswordOrKey string
+    ```
+1. Add the `linuxConfiguration` variable to reference the SSH path
+    ```bicep
+    var linuxConfiguration = {
+      disablePasswordAuthentication: true
+      ssh: {
+        publicKeys: [
+          {
+            path: "/home/${adminUsername}/.ssh/authorized_keys"
+            keyData: adminPasswordOrKey
+          }
+        ]
+      }
+    }
+    ```
+1. Add the `adminPassword` and `linuxConfiguration` references to the `osProfile` for the VM: 
+    ```bicep
+    resource LinuxVM 'Microsoft.Compute/virtualMachines@2021-07-01' = {
+        ...
+      properties: {
+          osProfile: {
+              computerName: vmName
+              adminUsername: adminUsername
+              adminPassword: adminPasswordOrKey
+              linuxConfiguration: ((authenticationType == 'password') ? null : linuxConfiguration)
+            }
+        ...
+      }
+    }
+    ```

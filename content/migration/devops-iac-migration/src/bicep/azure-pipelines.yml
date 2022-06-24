@@ -7,7 +7,7 @@ trigger:
 - none
 
 variables:
-- template: ./variables.yml
+- group: bicepPipelineVariablesDev
 
 pool:
   vmImage: windows-latest
