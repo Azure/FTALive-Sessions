@@ -1,6 +1,6 @@
 # Load Balancers and Web Application Firewalls
 
-**[prev](./topology-overview.md) | [home](./readme.md)  | [next](./private-endpoints.md)**
+**[prev](./firewalls.md) | [home](./readme.md)  | [next](./private-endpoints.md)**
 
 ## Load Balancing Options
 

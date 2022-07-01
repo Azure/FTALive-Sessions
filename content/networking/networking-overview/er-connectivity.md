@@ -1,8 +1,8 @@
 # ExpressRoute Connectivity
 
-[prev](./vpn-connectivity.md) | [home](./readme.md)  | [next](./private-endpoints.md)
+[prev](./vpn-connectivity.md) | [home](./readme.md)  | [next](./vwan.md)
 
-## Why use ExpressRoute?
+## When to Use ExpressRoute?
 
 - Lower and more consistent latency and throughput is required than is achievable over the internet
 - VPN connectivity does not provide required bandwidth
@@ -12,7 +12,8 @@
 
 - Talk to your current connectivity provider first
 - For new environments, review the list of [**providers and peering locations**](https://docs.microsoft.com/azure/expressroute/expressroute-locations-providers)
-- Review the ExpressRoute [**configuration workflow**](https://docs.microsoft.com/azure/expressroute/expressroute-workflows) to understand the setup process and to find links to details on each step. 
+- Review the ExpressRoute [**configuration workflow**](https://docs.microsoft.com/azure/expressroute/expressroute-workflows) to understand the setup process and to find links to details on each step.
+
 ## Configuring ExpressRoute Connectivity
 
 ![Basic ExpressRoute diagram](./png/exr-reco.png)

@@ -1,6 +1,6 @@
 # Firewalls
 
-**[prev](./topology-overview.md) | [home](./readme.md)  | [next](./lbs-wafs.md)**
+**[prev](./vnet-security.md) | [home](./readme.md)  | [next](./lbs-waf.md)**
 
 ## Third Party vs. Native
 
@@ -27,7 +27,7 @@ Azure Firewall is a managed, cloud-based network security service that protects 
 It allows you to create policies/rules of three types:
 
 * **Network Rules** which allow for traffic from an IP address range or IP group to another IP address range or IP group for specific ports and protocols
-* **Application Rules** which allow for traffic from an IP address range or IP group to a FQDN, for specific ports and protocols
+* **Application Rules** which allow for traffic from an IP address range or IP group to a FQDN, for specific ports and protocols. Application rules always SNAT traffic, ensuring flow symmetry
 * **NAT Rules** which allow for traffic from an IP address range or IP group to an IP associated with a firewall for specific ports, which is then translated to a backend IP address and port set
 
 In addition, it applies Microsoft Threat Intelligence to protect against known malicious IPs and FQDNs.

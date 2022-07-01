@@ -63,7 +63,7 @@ Private endpoints
 Service endpoints
 
 - Metadata containing routing information and service identifiers.
-- Used to optimise routing between VNets and Azure services (using the network back-plane).
+- Used to optimize routing between VNets and Azure services (using the network back-plane).
 - Used to identify Azure services in NSG and Azure Firewall rules.  
 
 Private Link
@@ -97,7 +97,7 @@ Gateways facilitate more comprehensive connectivity options.
 
 ## WAF
 
- A Web Application Firewall in a PAAS Firewall which inspects requests on their way to an origin web server, and will block requests before they reach the server.
+ A Web Application Firewall in a PaaS Firewall which inspects requests on their way to an origin web server, and will block requests before they reach the server.
 
 - Web application firewall is used in context with an Application Gateway, Azure Front Door or Azure CDN (Preview).
 - WAF provides centralized protection of your web applications against a number of layer 7 attack types. These include SQL injection attacks, cross-site scripting attacks, large request bodies, malformed HTTP requests, and many others. They can also enforce IP address restrictions, including blocking requests from IP addresses known to be used by malicious bots.

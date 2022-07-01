@@ -1,6 +1,6 @@
 # Management
 
-[prev](./security-advanced.md) | [home](./readme.md)  | [next](./faq.md)
+[prev](./dns.md) | [home](./readme.md)  | [next](./readme.md)
 
 ## Azure Network Watcher
 
@@ -15,7 +15,6 @@ Network Watcher variable packet capture allows you to create packet capture sess
 Portal link: [Network Watcher | Packet capture](https://ms.portal.azure.com/#blade/Microsoft_Azure_Network/NetworkWatcherMenuBlade/packetCapture)
 
 [Introduction to variable packet capture in Azure Network Watcher](https://docs.microsoft.com/azure/network-watcher/network-watcher-packet-capture-overview)
-
 
 ## Azure Monitor Network Insights
 

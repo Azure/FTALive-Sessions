@@ -1,6 +1,6 @@
 # Private Endpoints
 
-**[prev](./basics.md) | [home](./readme.md)  | [next](./security-overview.md)**
+**[prev](./lbs-wafs.md) | [home](./readme.md)  | [next](./readme.md)**
 
 ## Private connectivity to PaaS resources
 

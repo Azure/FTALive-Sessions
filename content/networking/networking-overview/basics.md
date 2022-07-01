@@ -1,6 +1,6 @@
 # VNet Basics
 
-[prev](./why.md) | [home](./readme.md)  | [next](./topology-overview.md)
+[prev](./why.md) | [home](./readme.md)  | [next](./dns.md)
 
 ## What is an Azure Virtual Network (VNet)?
 
