@@ -52,7 +52,6 @@ In order to prepare to migrate or deploy new workloads in to Azure, you need to 
 1. [Load Balancers and Web Application Firewalls](./lbs-wafs.md)
 1. [Private Endpoints](./private-endpoints.md)
 
-
 ## Appendix
 
 1. [Reference List](./reference.md)

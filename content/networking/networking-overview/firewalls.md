@@ -1,6 +1,6 @@
 # Firewalls
 
-**[prev](./topology-overview.md) | [home](./readme.md)  | [next](./routing.md)**
+**[prev](./topology-overview.md) | [home](./readme.md)  | [next](./lbs-wafs.md)**
 
 ## Third Party vs. Native
 
