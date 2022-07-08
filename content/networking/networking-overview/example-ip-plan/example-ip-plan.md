@@ -1,16 +1,8 @@
-# Topology
+# Example Address scheme
 
-#### [prev](./routing.md) | [home](./readme.md)  | [next](./security.md)
+## Regional Planning
 
-## Hub and spoke 
-
-A working example for a hub and spoke topology.
-
-![Topology Diagram](png/topology-210726.png)
-
-## Address scheme
-
-Use a /16 for each region. 
+Use a /16 for each region.
 
 Location | Type | Name | Address Space
 ---|---|---|---
@@ -61,12 +53,19 @@ VmSubnet2                       | .3.144 | /28 |  16 |  11 | .145, .146, .147 | 
 
 ## Spoke subnets
 
-Spoke vnets are dynamic and map to an application or group of (heavily) related applications. Spoke vnets vary in size but are usually smaller rather than larger and subnets align to the application's requirements.
+Spoke vnets are dynamic and map to an application or group of (heavily) related applications.
 
-## Other topologies
+Spoke vnets vary in size but are usually smaller rather than larger and subnets align to the application's requirements.
 
-There is no golden topology that will fit every workload scenario.
-- Consider the workload.
-- Consider availability requirements (including global and regional).
-- Consider peering costs.
-- Don't underestimate hidden costs and administrative overheads.
+![Example N-Tier App](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/images/n-tier-physical-bastion.png)
+
+Example sizes might be:
+
+T-shirt Size| CIDR Size | Suited for | Hosts |
+---|---|---|---|
+Small | /26 | Small simple applications without much tiering or autoscaling  | 64 *minus 5 per subnet* |
+Medium | /25 | More complex applications that have more tiering or autoscaling, or are broken in to smaller services  | 128 *minus 5 per subnet*
+Large | /24 | Applications that have multiple tiers, and use vnet integration with app services, SQL services, or Azure Kubernetes Services **OR** a workload made up of multiple simple applications | 256 *minus 5 per subnet* |
+Extra Large | /23 | A workload made up of multiple complex applications, or that uses services with significant IP address considerations  | 512 *minus 5 per subnet* |
+
+[Read more about subnet reservations](https://docs.microsoft.com/azure/virtual-network/virtual-networks-faq#are-there-any-restrictions-on-using-ip-addresses-within-these-subnets)
