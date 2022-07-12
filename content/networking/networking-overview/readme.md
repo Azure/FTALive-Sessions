@@ -61,4 +61,4 @@ Topology](./configure-route-tables-for-hub-and-spoke-topology/rt-hub-spoke.md)
 1. [Configure NVAs for Hub and Spoke
 Topology](./configure-nva-for-hub-and-spoke-topology/01.md)
 1. [Reference IP Schema](./example-ip-plan/example-ip-plan.md)
-1. [ARM/bicep templates](./arm.md)
+1. [ARM/bicep templates](./arm/README.md)
