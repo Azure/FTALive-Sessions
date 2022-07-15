@@ -1,0 +1,5 @@
+{
+  "S": "Standard_LRS",
+  "P": "Premium_LRS",
+  "E": "StandardSSD_LRS"
+}

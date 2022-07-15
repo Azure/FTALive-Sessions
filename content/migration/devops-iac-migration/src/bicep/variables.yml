@@ -1,0 +1,21 @@
+variables:
+  - name: serviceConnectionName
+    value: '<spn-name>'
+  - name: resourceGroupName
+    value: '<rg-name>'
+  - name: subscription
+    value: '<subscription-id>'
+  - name: virtualNetworkName
+    value: '<vnet-name>'
+  - name: defaultSubnetName
+    value: '<subnet-name>'
+  - name: subnetName
+    value: '<subnet-name>'
+  - name: location
+    value: '<region>'
+  - name: vnetCIDR
+    value: '<address-space>'
+  - name: defaultSubnetCIDR
+    value: '<address-space>'
+  - name: subnetCIDR
+    value: '<address-space>'
