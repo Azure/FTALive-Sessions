@@ -70,7 +70,7 @@ With [Azure CNI](https://docs.microsoft.com/azure/aks/concepts-network#azure-cni
 
 > While planning the IP addresses, leave some additional room for upgrade operations. By default, AKS configures upgrades to surge with 1 extra node.
 
-## Dynamic allocation of IPs and enhanced subnet support (preview)
+## Dynamic allocation of IPs and enhanced subnet support
 A drawback with the traditional CNI is the exhaustion of pod IP addresses as the AKS cluster grows, resulting in the need to rebuild the entire cluster in a bigger subnet.
 
 The new [dynamic IP](https://docs.microsoft.com/en-us/azure/aks/configure-azure-cni#dynamic-allocation-of-ips-and-enhanced-subnet-support-preview) allocation capability in Azure CNI solves this problem by allotting pod IPs from a subnet separate from the subnet hosting the AKS cluster.
