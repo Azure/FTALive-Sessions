@@ -71,7 +71,6 @@ resource WindowsVM 'Microsoft.Compute/virtualMachines@2021-07-01' = {
           networkInterfaces: [
               {
               id: nic.id
-                  //id: resourceId('Microsoft.Network/networkInterfaces', '${vmnameprefix}-NIC')
               }
           ] 
       }

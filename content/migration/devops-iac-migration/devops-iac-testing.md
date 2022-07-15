@@ -79,7 +79,7 @@ The steps below outline the process for redeploying Azure assets through Bicep. 
 * *Note:* Make sure to update the parameters with your own environment names. 
 * More info on variable groups [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups?view=azure-devops&tabs=yaml).
 
-#### 2.2.2\. Create a `testing-pipeline.yml` for resource execution using the provided [template](./src/bicep/azure-pipelines.yml) as a baseline. Below are a description of the tasks:
+#### 2.2.2\. Create a `testing-pipeline.yml` for resource execution using the provided [template](./src/test-migration/bicep-test-migration-pipeline.yml) as a baseline. Below are a description of the tasks:
 Pipeline Tasks:
 - Create isolated VNet with Bicep deployment (optional)
 - Powershell script run to parse the parameters and call Bicep templates for execution.
@@ -87,7 +87,7 @@ Pipeline Tasks:
 
 ### 2.3\. Validate Target VNet Tests
 * If execute the isolated VNet Testing Pipeline, validate the pipeline has ran through the necessary tasks above.
-* If utilizing the final Migration VNet, set the maintenance window and prepare migration waves for execution using the sample pipeline [template](./src/test-migration/testing-pipeline.yml) for migration.
+* If utilizing the final Migration VNet, set the maintenance window and prepare migration waves for execution using the sample pipeline [template](./src/prod-migration/bicep-migration-pipeline.yml) for migration.
 * If any of the tests fail within a pipeline stage, execute the Rollback plan for the migration wave.
 
 ### 2.4\. Post Test Migration Tasks 

@@ -2,7 +2,7 @@ trigger:
 - none
 
 variables:
-- template: ./testing-variables.yml
+- template: ./src/test-migration/testing-variables.yml
 
 pool:
   vmImage: windows-latest

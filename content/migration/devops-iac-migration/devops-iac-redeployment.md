@@ -49,7 +49,7 @@ To get started, the assumption is the following:
 
 Recommended folder structure:
 
-![Migration Tree](../server-migration/png/folder-structure.jpg)
+![Migration Tree](.\src\iac-migration-folder-structure.jpg)
 
 Details:
 - `All_Assessed_Machines.csv` and `All_Assessed_Disks.csv`: CSV files extracted from Azure Migrate Assessement excel file
@@ -64,7 +64,7 @@ Details:
     - `vnet.bicep`: creates Isolated VNet for testing purposes
 - `test-migration` folder: used for test migration purposes
     - `testing-pipeline.yml`: file for testing in an isolated or migration VNet
-    - `bicep-testing-pipeline.yml`: file for testing in an isolated or migration VNet using Bicep
+    - `bicep-test-migration-pipeline.yml`: file for testing in an isolated or migration VNet using Bicep
     - `testing-variables.yml`: variables used in powershell and pipeline yaml
 - `prod-migration` folder: used for redeploying migration resources
     - `migration-pipeline.yml`: file for redeploying VMs in a specified migration VNet
