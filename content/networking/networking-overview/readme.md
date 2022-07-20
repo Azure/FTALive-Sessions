@@ -1,4 +1,4 @@
-# Welcome to the FastTrack for Azure Networking Call
+# Welcome to the FastTrack for Azure Live Networking Session
 
 ## We will start 3-4 minutes after the scheduled time to accommodate those still connecting
 
@@ -15,7 +15,9 @@ the changes straight away.
 
 **Feedback** We would love to hear your thoughts, please provide us your feedback at [https://aka.ms/ftalive-feedback](https://aka.ms/ftalive-feedback)
 
-**Additional FTA Live Sessions** register for other sessions at [https://aka.ms/ftalive](https://aka.ms/ftalive).
+**Additional FTA Live Sessions** register for other sessions at [https://aka.ms/ftalive](https://aka.ms/ftalive)
+
+**Short Link to this Repo**: [https://aka.ms/fta.live.networking](https://aka.ms/fta.live.networking)
 
 ## Agenda
 
