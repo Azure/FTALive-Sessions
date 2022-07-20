@@ -1,6 +1,6 @@
 # Firewalls
 
-**[prev](./vnet-security.md) | [home](./readme.md)  | [next](./lbs-waf.md)**
+**[prev](./vnet-security.md) | [home](./readme.md)  | [next](./lbs-wafs.md)**
 
 ## Third Party vs. Native
 
