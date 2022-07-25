@@ -8,7 +8,7 @@
 
 ### Agenda
 
-1. [Why is Reliability important in Cloud?]
+1. Why is Reliability important in Cloud?
 1. [The Microsoft Azure Well-Architected Framework](https://aka.ms/WellArchitected/Framework)
 1. [Patterns for resilient cloud applications](https://docs.microsoft.com/en-us/azure/architecture/guide/)
 
@@ -43,10 +43,10 @@ Here is list of links shared during session for your reference:
 
 #### Protect your data with Azure Backup:
 - [Azure Backup landing page](https://aka.ms/azure-backup)
-- [Azure Backup’s Cloud-First approach](ttps://aka.ms/azure-backup-cloud-first)
+- [Azure Backup’s Cloud-First approach](https://aka.ms/azure-backup-cloud-first)
 - [Azure Backup blogs](https://aka.ms/azure-backup-blogs)
-- [Azure Backup videos](ttps://aka.ms/azurebackupvideo)
-- [Azure Backup documentation](ttps://aka.ms/azure-backup-documentation )
+- [Azure Backup videos](https://aka.ms/azurebackupvideo)
+- [Azure Backup documentation](https://aka.ms/azure-backup-documentation )
 - [Azure Backup support forum](https://aka.ms/azure-backup-support-forum)
 
 #### Ensure application availability with Azure Site Recovery
