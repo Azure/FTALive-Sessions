@@ -8,7 +8,7 @@
 
 ### Agenda
 
-1. [Why is Reliability important in Cloud?]
+1. Why is Reliability important in Cloud?
 1. [The Microsoft Azure Well-Architected Framework](https://aka.ms/WellArchitected/Framework)
 1. [Patterns for resilient cloud applications](https://docs.microsoft.com/en-us/azure/architecture/guide/)
 
