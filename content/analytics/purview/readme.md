@@ -22,6 +22,7 @@ You will need:
 ## Demo walkthrough
 
 This session includes live demo, all demo guide from [Microsoft Purview documents](https://docs.microsoft.com/azure/purview/).
+[Purview Sandbox](https://github.com/Azure/Azure-Purview-Starter-Kit) is a Sandbox environment for new users' test.
 
 ### Microsoft Purview overview
 
