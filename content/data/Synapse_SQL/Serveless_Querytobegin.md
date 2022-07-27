@@ -8,11 +8,7 @@
 
 Every Azure Synapse Analytics workspace comes with serverless SQL pool endpoints that you can use to query data in the [Azure Data Lake](https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/query-data-storage) ([Parquet](https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/query-data-storage#query-parquet-files), [Delta Lake](https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/query-delta-lake-format), [delimited text](https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/query-data-storage#query-csv-files) formats), [Cosmos DB](https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/query-cosmos-db-analytical-store?toc=/azure/synapse-analytics/toc.json&bc=/azure/synapse-analytics/breadcrumb/toc.json&tabs=openrowset-key), or Dataverse.
 
-<<<<<<< HEAD
 Serverless SQL pool is a distributed data processing system, built for large-scale data and computational functions. Serverless SQL pool enables you to analyse your Big Data in seconds to minutes, depending on the workload. 
-=======
-Serverless SQL pool is a distributed data processing system, built for large-scale data and computational functions. Serverless SQL pool enables you to analyze your Big Data in seconds to minutes, depending on the workload. 
->>>>>>> 8e7c2824b076b3316d95fc1747de8d1a00e505cb
 
 
 
@@ -34,10 +30,7 @@ OPENROWSET function in Synapse SQL reads the content of the file(s) from a data 
 
 Syntax Example:
 
-<<<<<<< HEAD
 ```
-=======
->>>>>>> 8e7c2824b076b3316d95fc1747de8d1a00e505cb
 SELECT *
 FROM OPENROWSET(BULK 'http://<storage account>.dfs.core.windows.net/container/folder/*.parquet',
                 FORMAT = 'PARQUET') AS [file]
@@ -50,7 +43,6 @@ SELECT *
 FROM OPENROWSET(BULK '/folder/*.parquet',
                 DATA_SOURCE='storage', --> Root URL is in LOCATION of DATA SOURCE
                 FORMAT = 'PARQUET') AS [file]
-<<<<<<< HEAD
 ```
 
 
@@ -85,12 +77,6 @@ WITH (
     [population] bigint 4
 ) AS [r]
 ```
-=======
-
-
-
-Example: <tbd>
->>>>>>> 8e7c2824b076b3316d95fc1747de8d1a00e505cb
 
 
 
@@ -110,7 +96,6 @@ You can use external tables to:
 - Store query results to files in Azure Blob Storage or Azure Data Lake Storage using [CETAS](https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/develop-tables-cetas).
 - Import data from Azure Blob Storage and Azure Data Lake Storage and store it in a dedicated SQL pool (only Hadoop tables in dedicated pool)
 
-<<<<<<< HEAD
 Example: 
 
 https://raw.githubusercontent.com/Azure-Samples/Synapse/main/SQL/Samples/LdwSample/SampleDB.sql
@@ -150,9 +135,6 @@ SELECT * FROM DBO.population
 
 
 ```
-=======
-Example: <tbd>
->>>>>>> 8e7c2824b076b3316d95fc1747de8d1a00e505cb
 
 
 
