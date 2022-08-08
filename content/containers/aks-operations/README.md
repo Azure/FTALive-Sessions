@@ -2,7 +2,7 @@
 
 ## Introduction
 
-As a managed Kubernetes service in Azure, the control plane of an AKS cluster is managed by Azure, which offloads quite significant operational overheads from you as an AKS customer. However, unlike other Azure PaaS services such as App Service, keeping an ASK cluster up and running is a shared responsibility between you and Azure. While the control plane is managed by Azure, the agent nodes are managed by you. You need to ensure the cluster is up to date so that it would not fall out of support. You also need to manage the workloads running in the cluster so that the business can be well served while the performance, availability and cost can be balanced.
+As a managed Kubernetes service in Azure, the control plane of an AKS cluster is managed by Azure, which offloads quite significant operational overheads from you as an AKS customer. However, unlike other Azure PaaS services such as App Service, keeping an AKS cluster up and running is a shared responsibility between you and Azure. While the control plane is managed by Azure, the agent nodes are managed by you. You need to ensure the cluster is up to date so that it would not fall out of support. You also need to manage the workloads running in the cluster so that the business can be well served while the performance, availability and cost can be balanced.
 
 ![Shared responsibility](./assets/shared-responsibility.png)
 
