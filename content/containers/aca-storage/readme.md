@@ -30,7 +30,6 @@ A container app has access to different types of storage. A single app can take 
 
 There is a much more detailed explanation about the 3 different types in the official [docs](https://docs.microsoft.com/en-us/azure/container-apps/storage-mounts?pivots=aca-cli)
 
-![ACA Storage diagram](media/aca-storage.png "ACA Storage diagram")
 
 ## Demo
 
