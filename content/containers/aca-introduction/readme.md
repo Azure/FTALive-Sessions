@@ -45,7 +45,6 @@
 
 - Run multiple container revisions and manage the container app's application lifecycle.
 - Autoscale your apps based on any KEDA-supported scale trigger. Most applications can scale to zero.
-![Screenshot](images/ApplicationAutoScalingWithKEDA.png)
 - Enable HTTPS ingress without having to manage other Azure infrastructure.
 - Split traffic across multiple versions of an application for Blue/Green deployments and A/B testing scenarios.
 - Use internal ingress and service discovery for secure internal-only endpoints with built-in DNS-based service discovery.
@@ -105,9 +104,8 @@
     - The changes are globally applied to all revisions.
     - A new revision isn't created.
 
-![Screenshot](images/ContainerAppsRevisions2.png)
 
-## Application Lifecycle Management in Container Apps
+## [Application Lifecycle Management in Container Apps](https://docs.microsoft.com/en-us/azure/container-apps/application-lifecycle-management)
 
 - When you deploy a container app, the first revision is automatically created.
 - Container Apps flow through three phases: deployment, update and deactivation.
@@ -116,22 +114,17 @@
 
 - When we first deploy a container app, the first revision is automatically created for us.
 
-![Upon deployment, the first revision is automatically created](./media/deployment.png)
 
 ### Update
 
 - When we update the container app with a *revision-scope* change, a new revision is created.
 - We can either automatically deactivate old revisions, or allow them to remain available.
 
-![As the container app is updated, a new revision is created](./media/updated.png)
-
 ### Deactivate
 
 - Once a revision is no longer needed, we can deactivate the revision.
 - During deactivation, containers in that revision are shut down.
 - We have the option to reactivate them later, provided they haven't been purged.
-
-![Once a revision is no longer needed, we can deactivate individual revisions or choose to automatically deactivate old revisions](./media/deactivation.png).
 
 ## VNET Integration
 
@@ -156,9 +149,7 @@
 
 #### External Access
 
-- If you deploy an external Azure Container Apps environment, this will be accessible via public endpoint. This is an Azure Public IP address:
-
-![External Azure Container Apps Environment](./media/externalACAenvironment.png)
+- If you deploy an external Azure Container Apps environment, this will be accessible via public endpoint.
 
 #### Internal Access
 
@@ -166,4 +157,4 @@
 - This environment will only expose applications via an IP address from within your VNET.
 - Configure your network with an **allow-all** configuration by default to ensure the deployment is successful.
 
-![Internal Azure Container Apps Environment](./media/internalACAenvironment.png)
+
