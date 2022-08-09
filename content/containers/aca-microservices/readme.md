@@ -108,7 +108,6 @@ Dapr components are loaded alongside your application processes. For example, if
 - Components of the same type can be changed without needing to change application code. 
   - For example, a pub/sub component implemented for Azure Service Bus may be substituted for another pubsub component implemented for AWS SQS.
 
-<img src="./images/overview-sidecar-model.png" width="500" />
 
 ---
 ## Components
