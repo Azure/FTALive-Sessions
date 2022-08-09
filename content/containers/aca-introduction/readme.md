@@ -33,7 +33,7 @@
 | Optimized for running general purpose containers, especially for applications that span many microservices deployed in containers<br>Powered by Kubernetes, Dapr, KEDA, and envoy<br>Supports Kubernetes-style apps and microservices with features like service discovery and traffic splitting<br>Scaling based on traffic and pulling from event sources like queues<br>Supports scale to zero<br>Support of long running processes and can run background tasks | No direct access to underlying Kubernetes APIs |
 
 
-## ![Container Apps Use Cases](https://docs.microsoft.com/en-us/azure/container-apps/overview)
+## [Container Apps Use Cases](https://docs.microsoft.com/en-us/azure/container-apps/overview)
 - Deploy and manage a micrososervices architechture with the option to integrate with Dapr.
 - Event-drive processing, for example, queue reader application that processes messages as they arrive in a queue.
 - Web Applications such ASP.NET Core, Express.js with custom domains, TLS certificates, with integrated authentication.
