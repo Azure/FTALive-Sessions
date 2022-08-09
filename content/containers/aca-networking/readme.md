@@ -134,9 +134,6 @@ Ref: [Setup HTTPS Ingress for Apps](https://docs.microsoft.com/en-us/azure/conta
 - Intra Vnet communication for private environment
 	- Ingress through private endpoint, Private Azure DNS Zone required for ACA Environment FQDN
 
-Below image shows example of private DNS zone config:
-
-![private-dns-zone](https://user-images.githubusercontent.com/29489962/174161696-74ed3fc4-8fd1-4029-9b23-d0fd51984443.png)
 
 ## Custom Domains
 
