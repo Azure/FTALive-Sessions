@@ -5,7 +5,7 @@
 
 ## Why choose Azure Container Apps over other cloud services?
 
-![Compute Choices](images/compute-choices.png)
+[Choose right azure compute service for your application](https://docs.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree#choose-a-candidate-service)
 
 ### Azure App Service and Azure Functions
 
