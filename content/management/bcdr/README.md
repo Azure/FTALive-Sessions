@@ -6,9 +6,12 @@ In this session, learn how to plan and implement BCDR solutions using Azure serv
 
 ## Agenda
 
-- Motivation and Overview of BDCR Solutions in Azure
+- Motivation and Overview of BCDR Solutions in Azure
+
+Azure provides a large of tools for Business Continuity and Disaster Recovery. This is session will provide an overview of Backup Solutions as well as solutions for Disaster Recovery. It will also provide an insight on the process to decide and create some of the basic strategies for proper BCDR management.
+
 - [Backup Options](backup.md)
-  - Demo
+  
 - [DR Scenarios](bcdroverview.md)
   - On-prem to Azure
   - Azure to Azure
