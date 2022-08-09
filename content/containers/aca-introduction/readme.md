@@ -66,8 +66,6 @@
   - Endpoints always expose ports 80 (for HTTP) and 443 (for HTTPS).
   - By default, HTTP requests to port 80 are automatically redirected to HTTPS on 443.
   - Request timeout is 240 seconds.
-  
-![Screenshot](images/ContainerAppsIngress.png)
 
 ## Container Apps Environment
 - Individual container apps are deployed to a single Container Apps environment, which acts as a secure boundary around groups of container apps. Container Apps in the same environment are deployed in the same virtual network and write logs to the same Log Analytics workspace. You may provide an existing virtual network when you create an environment.
@@ -83,13 +81,12 @@
   - Two applications never share the same compute resources
   - Two applications can't communicate with each other via Dapr
 
-![Screenshot](images/ContainerAppsEnvironment2.png)
 
 ## Containers and Revisions
 - Container Apps support any Linux-based x86-64 (linux/amd64) container image, **Windows Containers are not supported!**
 - Containers from any public or private container registry
 
-![Screenshot](images/ContainersInContainerApps2.png)
+
 
 - Azure Container Apps implements container app versioning by creating **revisions**. 
 - A revision is an immutable snapshot of a container app version.
