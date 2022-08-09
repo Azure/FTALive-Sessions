@@ -72,8 +72,6 @@ All the good things of Kubernetes without the complexity.
 ACA enables you to build serverless microservices based on containers. 
 See [Distinctive features](https://docs.microsoft.com/en-us/azure/container-apps/overview#features) of Container Apps.
 
-<img src='./images/azure-container-apps-example-scenarios.png' />
-
 <br/>
 
 
@@ -510,9 +508,8 @@ $ az deployment group create \
 {"TimeStamp":"2022-07-03T23:39:28.630779+00:00","Log":"received: { orderId: 41 }"}
 ...
  ```
-  - Alternatively, the logs can be viewed in the Azure Portal
+  - Alternatively, the logs can be viewed in the Azure Portal : Container App -> Log stream.
 
-<img src='./images/aca_log_stream.png'>
 
 <br/>
 
