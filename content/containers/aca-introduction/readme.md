@@ -39,7 +39,7 @@
 - Web Applications such ASP.NET Core, Express.js with custom domains, TLS certificates, with integrated authentication.
 - Public API endpoints, split traffic between two revisions of the app
 - Background processing, for example, continuously running background process that transforms data in a database
-![Screenshot](images/ContainerAppUseCases.jpg)
+
 
 ## What can you do with Container Apps
 
