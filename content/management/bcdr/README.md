@@ -58,3 +58,5 @@ In this session you will learn how to:
 [Azure Architecture Center - Resiliency checklist for specific Azure services](https://docs.microsoft.com/en-us/azure/architecture/checklist/resiliency-per-service)
 
 [Azure Architecture Center - SMB disaster recovery with Azure Site Recovery](https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/articles/disaster-recovery-smb-azure-site-recovery)
+
+[Azure Architecture Center - Enterprise-scale disaster recovery](https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/articles/disaster-recovery-enterprise-scale-dr)
