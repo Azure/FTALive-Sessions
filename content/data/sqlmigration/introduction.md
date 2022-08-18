@@ -5,7 +5,7 @@
 
 ## What is this session about : 5 W's of this course
 
-![Course Overview](/images/SQLLive_Intro.png)
+![Course Overview](/images/SQLLive_Intro.png#left)
 
 * **Who:** This session  is meant for aspirants who wish to migrate their databases to Azure
 * **What** : The session is a brief walkthrough which talks about various offerings of SQL server in Azure Cloud. And the right way to go about with your migration
@@ -15,4 +15,4 @@
 processes, tools, and services as well best practices based on lessons learned from working with hundreds of organizations
 
 A comprehensive guide to various source and target data assets in Azure can be found [here](https://docs.microsoft.com/en-us/data-migration/)
-![](/images/DataMigrationGuides.png)
+![](/images/DataMigrationGuides.png#left)
