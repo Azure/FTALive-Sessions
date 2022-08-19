@@ -19,7 +19,7 @@ The Azure Migrate appliance performs this discovery using the Windows OS domain 
 ## Assess
 An assessment with the Discovery and assessment tool is a point in time snapshot of data and measures the readiness and estimates the effect of migrating on-premises servers to Azure
 
-### **Tools for Assessment** (Azure Migrate, DMA, DEA)
+### **Tools for Assessment** (Azure Migrate, DMA, DEA, ADS, SSMA)
 
 **1. [Microsoft Assessment and Planning (MAP) Toolkit](https://www.microsoft.com/en-us/download/details.aspx?id=7826&msclkid=8e7def7ecffe11ec8c3035a0624ed880)**</br>
 [How it works using Azure Migrate ? ](https://docs.microsoft.com/en-us/azure/migrate/concepts-azure-sql-assessment-calculation#types-of-assessments)
