@@ -21,7 +21,8 @@ The following content can be used as a checklist to incorporate within your migr
 - &nbsp;&nbsp;&nbsp;&nbsp;Reference Link D: https://docs.microsoft.com/en-us/azure/migrate/how-to-create-group-machine-dependencies-agentless
 - &nbsp;&nbsp;&nbsp;&nbsp;Reference Link E: https://docs.microsoft.com/en-us/azure/migrate/tutorial-discover-vmware#provide-server-credentials
 - - &nbsp;&nbsp;&nbsp;&nbsp;Reference Link F: https://docs.microsoft.com/en-us/azure/migrate/how-to-create-group-machine-dependencies
-
+- &nbsp;&nbsp;&nbsp;&nbsp;Reference Link G: https://docs.microsoft.com/en-us/azure/migrate/how-to-create-group-machine-dependencies
+- 
 ### &nbsp;&nbsp;&nbsp;&nbsp;1.2\. Implement scanning agents/appliances.
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;1.3\. Ensure scanning agents/appliances have been running for at least 7 days or more for accuracy of collected data.
