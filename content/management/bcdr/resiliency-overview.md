@@ -3,6 +3,12 @@
 ## Motivation
 As part of modern, cloud operations we must implement solutions to minimize interruptions and ensure rapid recovery when needed.
 
+### DR Events
+Operational downtime can happen anytime and to any business.
+
+- **Natural causes:** Hurricanes, earthquakes, floods...
+- **Human / System causes:** Security breaches (Ransomware), operational errors, component failures...
+
 ## Design Resiliency
 Make sure you are considering resiliency among your requirements when designing solutions.
 
