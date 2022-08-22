@@ -1,4 +1,4 @@
-[&larr; Netorking ](./1-networking.md) | Part 2 of 6 | Cluster Deployment &rarr;
+[&larr; Networking ](./1-networking.md) | Part 2 of 6 | [Automating Cluster Deployment &rarr;](3-cluster-deployment-automation.md)
 
 # Security Best Practices
 
