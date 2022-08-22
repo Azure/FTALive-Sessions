@@ -5,8 +5,6 @@
 
 ## What is this session about : 5 W's of this course
 
-![Course Overview](/images/SQLLive_Intro.png#left)
-
 * **Who:** This session  is meant for aspirants who wish to migrate their databases to Azure
 * **What** : The session is a brief walkthrough which talks about various offerings of SQL server in Azure Cloud. And the right way to go about with your migration
 * **When**: We conduct these sessions every month or every quarter depending on the requirements and learnings we have had working with our customers
