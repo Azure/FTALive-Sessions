@@ -19,21 +19,23 @@ In this session you will learn about the different ways you can plan and impleme
 
 Azure provides a large of tools for Business Continuity and Disaster Recovery. This is session will provide an overview of Backup Solutions as well as solutions for Disaster Recovery. It will also provide an insight on the process to decide and create some of the basic strategies for proper BCDR management.
 
-- [Backup Options](backup.md)
+#### [Resiliency Overview](resiliency-overview.md) 
+Let's start with the business requirements... What can we protect? 
+
+#### [Azure Backup](backup.md) 
+Protect Data, VM configuration and Files
   
-- [DR Scenarios](bcdroverview.md)
-  - On-prem to Azure
-  - Azure to Azure
-  - DC to DC with VMM
-  - Application specific DR
+#### [Azure Site Recovery](bcdroverview.md)
+Real-time business continuity for hardware or data center failures
+  
+#### [DR Planning](drplanning.md) 
+What considerations should we make when designing our BCDR process?
 
-- [Planning](drplanning.md)
+#### [DR Testing](drtesting.md)
+What kinds of tests can we run?
 
-- [Testing](drtesting.md)
-
-- Actual DR Execution
-
-- [DR Tools](siterecovery.md) - Azure Site Recovery in Action
+#### [ASR Demo](siterecovery.md) 
+Azure Site Recovery in Action - failover & reprotect Azure VMs
 
 ### Audience
 
