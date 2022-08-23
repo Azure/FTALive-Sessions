@@ -2,6 +2,9 @@
 
 #### [prev](./discoveryandassessment.md) | [home](./readme.md)  | [next](./migrationplanning.md)
 
+# Pre-migration
+The following covers the readiness phase of pre-migration steps of **Remediation of Sevrers/Instances**
+
 ## Remediation
 The remediation steps consists of activities required to fix your database and application layer before migration
 Each of the assessment tools mentioned in the previous modules provide reports which reflect changes in the following 3 categories
