@@ -1,8 +1,6 @@
-[&larr; Netorking ](./1-networking.md) | Part 2 of 6 | Cluster Deployment &rarr;
+[&larr; Networking ](./1-networking.md) | Part 2 of 6 | [Automating Cluster Deployment &rarr;](3-cluster-deployment-automation.md)
 
 # Security Best Practices
 
-> **Note**   
-> _This handout was prepared in advance and intentionally generic. Actual session content may differ based on discussion. Please refer to your own personal notes._
-
-Links will be posted after the session (to ensure the accurate list). Watch this document!
+Please see the [standalone AKS Security Best Practices handout &rarr;](../aks-security/readme.md)   
+which has all the links, including those not covered on 18 August 2022, and are included in separate sessions in this 6 part series.
