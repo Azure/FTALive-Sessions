@@ -21,13 +21,4 @@ This tool collects several reports which includes and inventory for server insta
 ##### Azure VM Readiness Section
 The Azure VM Readiness section provides insights on readiness for you to migrate for IAAS offering. The remediation actions however reflect in the above snapshot alone. Most of the sections are self explanatory with excels providing insights on high level overview of the Microsoft SQL Server usage assessment. 
 
-![MAPToolKit VM Section](/images/MAPAssessment2.png#left)![VM Readiness Excel](/images/MAPSQLSummary1.png#right)
-
-##### Azure VM Readiness Section
-Likewise the SQL Server Details section provides SQL Server database instances and other SQL Server components. 
-
-You will still have to review these components against the [Feature Comparison](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/feature-comparison-of-azure-sql-database-azure-sql-managed/ba-p/3154789) table to evaluate/ remediate any feature which is currently in use but unsupported in the Azure SQL flavor you choose (Azure SQL MI/Azure SQL Database/SQL server on Azure VM)
-These details are helpful provide the usage is accurately captured in even deciding the service tiers which maybe a potential good fit. 
-
-![MAPToolKit SQL section](/images/MAPAssessment3.png#left) 
-![SQL Assessments Excel](/images/MAPSQLSummary1.png#left)![SQL Database Assessments Excel](/images/MAPSQLSummary2.png)
+![MAPToolKit VM Section](/images/MAPAssessment2.png)!
