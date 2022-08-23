@@ -55,3 +55,11 @@ The Azure SQL migration extension supports assessment, get right-sized [Azure re
 In general [this](https://docs.microsoft.com/en-us/sql/sql-server/migrate/dma-azure-migrate-compare-migration-tools?view=sql-server-ver15#quick-comparison) is a good table for refernce to validate which tool to use when assessing your databases/instances
 
 ![](/images/MigrationFlow.png)
+
+
+## Demos
+**1) [DMA Reports](https://docs.microsoft.com/en-us/sql/dma/dma-assess-sql-data-estate-to-sqldb?view=sql-server-ver16)**
+
+**2) [SKU Recommendations through SQLAssessmentConsole](https://docs.microsoft.com/en-us/sql/dma/dma-sku-recommend-sql-db?view=sql-server-ver16)**
+
+**3) [ADS SKU Recommendations](https://docs.microsoft.com/en-us/azure/dms/ads-sku-recommend)**
