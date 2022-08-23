@@ -19,6 +19,6 @@ This tool collects several reports which includes and inventory for server insta
 ![MAPToolKit Database Section](/images/MAPAssessment1.png#left)
 
 ##### Azure VM Readiness Section
-The Azure VM Readiness section provides insights on readiness for you to migrate for IAAS offering. The remediation actions however reflect in the above snapshot alone. Most of the sections are self explanatory with excels providing insights on high level overview of the Microsoft SQL Server usage assessment. 
+The Azure VM Readiness section provides insights on readiness for you to migrate for IAAS offering. The remediation actions however reflect in the below snapshot alone. Most of the sections are self explanatory with excels providing insights on high level overview of the Microsoft SQL Server usage assessment. 
 
-![MAPToolKit VM Section](/images/MAPAssessment2.png)!
+![MAPToolKit VM Section](/images/MAPAssessment2.png#left)![Excel Report](/images/MAPVMSummary1.png#right)
