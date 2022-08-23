@@ -14,16 +14,15 @@ Diagrams below provide a rough overview of how each of the tools conducts the as
 ### **Reports Overview**
 **1. MAP ToolKit Assessments** ->Detection but manual remediation
 
-This tool collects several reports which includes and inventory for server instances and the databases contained. The sample looks as follows under the database section of the toolkit. 
+This tool collects several reports which includes and inventory for server instances and the databases contained. The sample looks as follows under the database section of the toolkit. <br/>
 
 ![MAPToolKit Database Section](/images/MAPAssessment1.png#left)
 
 **Azure VM Readiness Section** <br />
-The Azure VM Readiness section provides insights on readiness for you to migrate for IAAS offering. The remediation actions however reflect in the below snapshot alone. Most of the sections are self explanatory with excels providing insights on high level overview of the Microsoft SQL Server usage assessment. 
-
+The Azure VM Readiness section provides insights on readiness for you to migrate for IAAS offering. The remediation actions however reflect in the below snapshot alone. Most of the sections are self explanatory with excels providing insights on high level overview of the Microsoft SQL Server usage assessment. <br/>
 ![MAPToolKit VM Section](/images/MAPAssessment2.png#left)
 
 **SQL Server Discovery Section** <br />
 Likewise the SQL Server Details section provides SQL Server database instances and other SQL Server components which are elaborated in the Excels. You will still have to review these components against the [Feature Comparison](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/feature-comparison-of-azure-sql-database-azure-sql-managed/ba-p/3154789) table to evaluate/ remediate any feature which is currently in use but unsupported in the Azure SQL flavor you choose (Azure SQL MI/Azure SQL Database/SQL server on Azure VM)
-These details are helpful provide the usage is accurately captured in even deciding the service tiers which maybe a potential good fit. 
+These details are helpful provide the usage is accurately captured in even deciding the service tiers which maybe a potential good fit. <br/>
 ![MAPToolKit SQL Section](/images/MAPAssessment3.png#left)
