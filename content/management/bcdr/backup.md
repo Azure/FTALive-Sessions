@@ -31,7 +31,7 @@
 
 - Enable Backup Protection
 - Recover an Azure VM
-- Recovery a file from a restore point
+- Recover a file from a restore point
 
 ### Additional learning resources
 
