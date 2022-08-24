@@ -3,7 +3,7 @@
 ### Replication Scenarios
 
 - [Azure VMs](https://docs.microsoft.com/en-us/azure/site-recovery/azure-to-azure-support-matrix) from region to region
-- On-premises [VMware / Physical](https://docs.microsoft.com/en-us/azure/site-recovery/vmware-physical-azure-support-matrix), Hyper-V, Azure Stack
+- On-premises [VMware / Physical](https://docs.microsoft.com/en-us/azure/site-recovery/vmware-physical-azure-support-matrix), [Hyper-V](https://docs.microsoft.com/en-us/azure/site-recovery/hyper-v-azure-support-matrix)
 
 - [Availability Zone to Availabilty Zone](https://docs.microsoft.com/en-us/azure/site-recovery/azure-to-azure-how-to-enable-zone-to-zone-disaster-recovery) (within the same Azure region)
 
