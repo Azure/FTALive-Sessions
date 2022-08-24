@@ -63,19 +63,40 @@ OPENROWSET(
   )AS [r]
 ```
 
-The following example shows how you can query csv files.it example returns only two columns with ordinal numbers 1 and 4 from the population*.csv files. Since there's no header row in the files, it starts reading from the first line:
+Or 
 
 ```
-SELECT     * 
+SELECT   TOP 10 *,  r.filepath(1)
+FROM 
+OPENROWSET(
+​    BULK (
+​      'https://azureopendatastorage.blob.core.windows.net/censusdatacontainer/release/us_population/*/*.parquet'
+​    )
+​    , FORMAT='PARQUET'
+  )AS [r]
+where r.filepath(1) in ('year=2010', 'year=2000')
+```
+
+The following example reads CSV file :
+
+```
+--The following example reads CSV file that contains header row without specifying column names and data types:
+
+SELECT 
+    *
 FROM OPENROWSET(
-        BULK 'https://sqlondemandstorage.blob.core.windows.net/csv/population/population*.csv',
-        FORMAT = 'CSV',
-        FIRSTROW = 1
-    )
-WITH (
-    [country_code] VARCHAR (5) COLLATE Latin1_General_BIN2 1,
-    [population] bigint 4
-) AS [r]
+    BULK 'https://pandemicdatalake.blob.core.windows.net/public/curated/covid-19/ecdc_cases/latest/ecdc_cases.csv',
+    FORMAT = 'CSV',
+    PARSER_VERSION = '2.0',
+    HEADER_ROW = TRUE) as [r]
+
+--The following example reads CSV file that doesn't contain header row without specifying column names and data types:
+    SELECT 
+    *
+FROM OPENROWSET(
+    BULK 'https://pandemicdatalake.blob.core.windows.net/public/curated/covid-19/ecdc_cases/latest/ecdc_cases.csv',
+    FORMAT = 'CSV',
+    PARSER_VERSION = '2.0') as [r]
 ```
 
 
@@ -115,6 +136,18 @@ CREATE EXTERNAL DATA SOURCE SqlOnDemandDemo WITH (
 );
 GO
 
+--FileFormat
+CREATE EXTERNAL FILE FORMAT QuotedCsvWithHeader
+WITH (  
+    FORMAT_TYPE = DELIMITEDTEXT,
+    FORMAT_OPTIONS (
+        FIELD_TERMINATOR = ',',
+        STRING_DELIMITER = '"',
+        FIRST_ROW = 2
+    )
+);
+GO
+
 --EXTERNAL TABLE THAT WILL USE THE DATASOURCE TO PROVIDE THE DATA
 CREATE EXTERNAL TABLE DBO.population
 (
@@ -145,3 +178,7 @@ SELECT * FROM DBO.population
 [Use external tables with Synapse SQL - Azure Synapse Analytics | Microsoft Docs](https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/develop-tables-external-tables?tabs=hadoop)
 
 [How to use OPENROWSET in serverless SQL pool - Azure Synapse Analytics | Microsoft Docs](https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/develop-openrowset)
+
+[FilePath and FileName | Microsoft Docs](https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/query-specific-files#filename)
+
+[MSI | Microsoft Docs](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/how-manage-user-assigned-managed-identities?pivots=identity-mi-methods-azp)
