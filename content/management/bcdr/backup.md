@@ -38,6 +38,8 @@ Diverse support for workloads running in Azure or on-premises:
 
 [FAQ - Back up Azure VMs](https://docs.microsoft.com/en-us/azure/backup/backup-azure-vm-backup-faq)
 
+[Azure Backup - Guidance and Best Practices](https://docs.microsoft.com/en-us/azure/backup/guidance-best-practices)
+
 [Tutorial - Backup Multiple Azure VMs](https://docs.microsoft.com/en-us/azure/backup/tutorial-backup-vm-at-scale)
 
 [Protect Against Ransomware](https://docs.microsoft.com/en-us/azure/security/fundamentals/backup-plan-to-protect-against-ransomware)
