@@ -25,11 +25,6 @@
 - For SQL Server, there are [many choices](https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-sql).  Review the database platform's native DR capabilities. 
 
 - For replication of encrypted Azure VMs be sure to [copy the disk encryption keys](https://docs.microsoft.com/en-us/azure/site-recovery/azure-to-azure-how-to-enable-replication-ade-vms) to the DR region. 
-#### DEMO: Azure Site Recovery in action
-
-- Enable replication for Azure VM 
-- Failover to secondary region
-- Re-protect the VM (for failback)
 
 ### Additional learning resources
 
