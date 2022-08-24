@@ -1,6 +1,6 @@
 # Firewalls
 
-**[prev](./vnet-security.md) | [home](./readme.md)  | [next](./lbs-waf.md)**
+**[prev](./vnet-security.md) | [home](./readme.md)  | [next](./lbs-wafs.md)**
 
 ## Third Party vs. Native
 
@@ -40,7 +40,7 @@ In addition to these standard features, there is a Premium SKU which provides ad
 
 Azure Firewall has two SKUs, with Premium having the following features over Standard:
 
-* **TLS Inspection** - Azure Firewall Premium is able to terminate and inspect TLS connections to detect, alert, and mitigate malicious activity.
+* **TLS Inspection** - Azure Firewall Premium is able to terminate and inspect outbound TLS connections to detect, alert, and mitigate malicious activity.
 * **IDPS** - Azure Firewall Premium provides a signature-based intrusion detection and prevention system by looking for specific patterns or known malicious instruction sequences.  This looks at Layers 4-7.
 * **URL Filtering** - Azure Firewall Premium extends the FQDN filtering ability to use the whole url, such as `www.contoso.com/a/c` instead of just `www.contoso.com`.
 * **Web categories** - Azure Firewall Premium allows for filtering based on a website's category at a more fine-tuned version than in standard.  Like URL filtering, this now looks at the whole URL, instead of just the host.
