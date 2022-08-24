@@ -2,7 +2,7 @@
 
 ### What can we backup?
 
-Diverse support for workloads running in Azure, on-premises or in other clouds:
+Diverse support for workloads running in Azure or on-premises:
 
 - [Azure Backup - Support Matrix](https://docs.microsoft.com/en-us/azure/backup/backup-support-matrix)
 - [Azure Backup Server - Support Matrix](https://docs.microsoft.com/en-us/azure/backup/backup-mabs-protection-matrix)
