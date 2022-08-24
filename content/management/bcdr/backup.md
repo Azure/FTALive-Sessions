@@ -2,9 +2,10 @@
 
 ### What can we backup?
 
-- Diverse support for workloads running in Azure, on-premises or in other clouds ([full list](https://docs.microsoft.com/en-us/azure/backup/backup-overview#what-can-i-back-up))
+Diverse support for workloads running in Azure, on-premises or in other clouds:
 
-- [Support Matrix](https://docs.microsoft.com/en-us/azure/backup/backup-support-matrix)
+- [Azure Backup - Support Matrix](https://docs.microsoft.com/en-us/azure/backup/backup-support-matrix)
+- [Azure Backup Server - Support Matrix](https://docs.microsoft.com/en-us/azure/backup/backup-mabs-protection-matrix)
    
 ### Types of Vaults
 - [Recovery Services Vaults](https://docs.microsoft.com/en-us/azure/backup/backup-azure-recovery-services-vault-overview)
@@ -19,7 +20,7 @@
 
 ### Backup Center
 
-[Backup Center](https://docs.microsoft.com/en-us/azure/backup/backup-overview#what-can-i-back-up) makes it easier to manage backups at scale.
+[Backup Center](https://docs.microsoft.com/en-us/azure/backup/backup-overview#what-can-i-back-up) makes it easier to manage backups at scale.  Remember to [configure](https://docs.microsoft.com/en-us/azure/backup/configure-reports) Azure Backup reports to gain insights into backup jobs. Use [built-in](https://docs.microsoft.com/en-us/azure/backup/azure-policy-configure-diagnostics) Azure Policy definitions to automate your backup protection at scale.
 
 #### DEMO: Key benefits of Backup Center
 
@@ -34,5 +35,9 @@
 - Recover a file from a restore point
 
 ### Additional learning resources
+
+[FAQ - Back up Azure VMs](https://docs.microsoft.com/en-us/azure/backup/backup-azure-vm-backup-faq)
+
+[Tutorial - Backup Multiple Azure VMs](https://docs.microsoft.com/en-us/azure/backup/tutorial-backup-vm-at-scale)
 
 [Protect Against Ransomware](https://docs.microsoft.com/en-us/azure/security/fundamentals/backup-plan-to-protect-against-ransomware)
