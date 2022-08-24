@@ -38,6 +38,14 @@ https://raw.githubusercontent.com/Azure-Samples/Synapse/main/SQL/Samples/LdwSamp
            DATA_SOURCE = 'DeltaLakeStorage',
            FORMAT = 'delta'
        ) as rows;
+       
+       --Or Bulk it directly
+       
+       SELECT TOP 10 *
+        FROM OPENROWSET(
+        BULK 'https://sqlondemandstorage.blob.core.windows.net/delta-lake/covid/',
+        FORMAT = 'delta'
+    ) as rows;
    ```
 
    
@@ -60,6 +68,9 @@ https://raw.githubusercontent.com/Azure-Samples/Synapse/main/SQL/Samples/LdwSamp
    ```
 
    Note: With the explicit specification of the result set schema, you can minimize the type sizes and use the more precise types VARCHAR(6) for string columns instead of pessimistic VARCHAR(1000). Minimization of types might significantly improve performance of your queries.
+
+
+
 
 3) Partition elimination:
 
@@ -89,6 +100,17 @@ https://raw.githubusercontent.com/Azure-Samples/Synapse/main/SQL/Samples/LdwSamp
 
 
 Note: The `OPENROWSET` function will eliminate partitions that don't match the `year` and `month` in the where clause. This file/partition pruning technique will significantly reduce your data set, improve performance, and reduce the cost of the query.
+
+##### Limitations:
+
+Review the limitations and the known issues on Synapse serverless SQL pool self-help page. [Self Help Serveless - Azure Synapse Analytics | Microsoft Docs](https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/resources-self-help-sql-on-demand?tabs=x80070002#delta-lake)
+
+Some of the limtiations are listed here, be sure you review them before build your queries:
+- [ ] External tables don't support partitioning. Use partitioned views on the Delta Lake folder to use the partition elimination. 
+- [ ] Serverless SQL pools don't support time travel queries.
+- [ ] The CETAS command supports only Parquet and CSV as the output formats.
+- [ ] Delta Lake support isn't available in dedicated SQL pools. Make sure that you use serverless SQL pools to query Delta Lake files
+- [ ] Currently, both the Spark pool and serverless SQL pool in Azure Synapse Analytics support Delta Lake format. Serverless SQL pools do not support updating Delta Lake files. Only tables in Parquet format are shared from Spark pools to a serverless SQL pool. For more information, see Shared Spark tables.
 
 ##### Reference:
 
