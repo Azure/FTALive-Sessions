@@ -1,6 +1,6 @@
 # Azure Backup
 
-#### [prev](./resiliency-overview.md) | [home](./readme.md)  | [next](./siterecovery.md)
+#### [prev](./resiliency-overview.md) | [home](./readme.md)  | [next](./drplanning.md)
 ### What can we backup?
 
 Diverse support for workloads running in Azure or on-premises:

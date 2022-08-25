@@ -1,6 +1,6 @@
 # DR Testing Strategies
 
-#### [prev](./drplanning.md) | [home](./readme.md)  | [next](./asr-demo.md)
+#### [prev](./drplanning.md) | [home](./readme.md)  | [next](./siterecovery.md)
 
 ## Isolated Testing (bubble)
 - In this scenario, tests are conducted in an isolated environment. Limits of the tests must be considered, since not all dependencies may be able to be reproduced. Tests are conducted in the isolated environment, so, no data is kept once the tests are concluded.

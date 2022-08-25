@@ -21,17 +21,14 @@ Let's start with the business requirements... What can we protect?
 #### [Azure Backup](backup.md) 
 Protect Data, VM configuration and Files
   
-#### [Azure Site Recovery](siterecovery.md)
-Real-time business continuity for hardware or data center failures
-  
 #### [DR Planning](drplanning.md) 
 What considerations should we make when designing our BCDR process?
 
 #### [DR Testing](drtesting.md)
 What kinds of tests can we run?
 
-#### [ASR Demo](asr-demo.md) 
-Azure Site Recovery in Action - failover & reprotect Azure VMs
+#### [Azure Site Recovery](siterecovery.md)
+Real-time business continuity for hardware or data center failures
 
 ### Audience
 
