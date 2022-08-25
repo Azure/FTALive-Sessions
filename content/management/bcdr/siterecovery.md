@@ -14,6 +14,8 @@
 
 - Recovery plans can be developed for each workload (Example: [IIS web app recovery plan](https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-iis#create-a-recovery-plan))
 
+- Divert network traffic from the primary site to a DR site via Azure DNS, Traffic Manager or 3rd Party Load Balancers.
+
 ### Failover and Failback
 
 - Planned and test failovers will have zero data loss while unplanned will have minimal data loss (based on the recovery point)
@@ -31,3 +33,7 @@
 [Capacity Planning for VMware replication](https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-plan-capacity-vmware)
 
 [Azure Site Recovery via Policy](https://docs.microsoft.com/en-us/azure/site-recovery/azure-to-azure-how-to-enable-policy)
+
+[SMB disaster recovery with Azure Site Recovery](https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/articles/disaster-recovery-smb-azure-site-recovery)
+
+[Disaster recovery using Azure DNS and Traffic Manager](https://docs.microsoft.com/en-us/azure/networking/disaster-recovery-dns-traffic-manager)
