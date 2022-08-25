@@ -56,11 +56,15 @@ Data | Azure Synapse | In this session we will cover the key features of Azure S
   |  |  |  |
 Data	| Azure Data Factory Security | Learn and review how to implement secure Azure Data Factory pipelines using VNET integration and managed private endpoints. We'll cover data exfiltration prevention in the most common scenarios including on prem to Azure data transfer. |
   |  |  |  |
+Data	| Modern Data Warehouses - Designing, Building and Operating | As more businesses become data-driven, Modern Data Warehouse (MDW) solutions have exploded in popularity with numerous architectures and technologies to support them. Deciding on which architecture and set of technologies to include in your MDW project can be overwhelming however. In this session you will learn critical considerations to produce a MDW design and best practices to deploy successfully into Azure. Based on lessons learned from working with hundreds of organisations, topics include architecture, security, business continuity, governance, monitoring, development practices and many more. Join us so we can fast-track your next MDW project. |
+  |  |  |  |
 AI & ML	| Azure Machine Learning Fundamentals | In this session you will gain an understanding of the overall Azure Machine Learning (AzureML) components and how you can start using the AzureML studio web portal to accelerate you AI journey in the cloud. |
   |  |  |  |
 AI & ML	| Azure ML Enterprise Deployment | In this session you will learn how to design and implement Azure Machine Learning using enterprise deployment features, so you can create a secure configuration that is compliant with your companies policies, enjoys tighter security and satisfies your enteprise governance requirements. We will discuss vNets, Endpoints, RBAC, AKS and much more! |
 |  |  |  |
 AI & ML	| Vision AI | In this session you will learn about using Azure Machine Learning for vision related tasks. You will learn about deep computer vision and vision related tasks, including classification, segmentation, 2D, 3D pose estimation, video action recognition and more. We then discuss how to use Azure automation and cloud deployment and processing of your machine learning tasks.  |
+  |  |  |  |
+AI & ML	| MLOps | In this session we will cover the best practices to deploy, manage, and retrain machine learning models within Azure. We will discover how to deploy machine learning models up to production and discover how to leverage the built-in integration with Azure DevOps for seamless scheduling, managing, and automating workflows.   |
   |  |  |  |
 Intro	| FastTrack for Azure Introduction | In this session you will hear from our Program Managers who will walk through what FastTrack for Azure is and how it can support you in your Cloud Journey. |
   |  |  |  |

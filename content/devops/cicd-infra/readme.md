@@ -103,6 +103,24 @@ Please note both code projects are based on [Secure AKS Baseline Reference Archi
   - has multiple files, e.g. [`./network.bicep`](https://github.com/Azure/Aks-Construction/blob/main/bicep/network.bicep) with local directory requirement.
   - [`main.bicep`](https://github.com/Azure/Aks-Construction/blob/main/bicep/main.bicep) - note parameters/variables
 
+# Scenario Walkthroughs
+
+### Shared Resources at Scale - Platform vs Workload Teams
+
+This is an example from the API Management PG that is a great example of a real life solution to the complex problem of CI/CD at scale.
+
+The key difference can be summarized in the table below. 
+
+| Environment | # of APIMs | APIM Owner | API Definitions |
+|:--|:--|:--|:--|
+| Dev | _n_ | Workload Team | Export API definitions config |
+| Prod |  1 | Central or Platform Team | Imports API definitions config |
+
+Please read the PG documentation to undestand the nuances:
+
+- [APIM DevOps Resource Kit](https://github.com/Azure/azure-api-management-devops-resource-kit) - the README and diagram are great. Take the time to really digest.
+- [PG Video Walkthrough of APIM DevOps Resource Kit](https://www.youtube.com/watch?v=4Sp2Qvmg6j8)
+
 # Resources
 
 Additional resources to bookmark
