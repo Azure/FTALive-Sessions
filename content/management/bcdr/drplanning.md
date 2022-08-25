@@ -1,5 +1,7 @@
 # DR Planning
 
+#### [prev](./siterecovery.md) | [home](./readme.md)  | [next](./drtesting.md)
+
 ## Define Requirements
 Each workload may have different requirements for availability and DR. Workloads can be grouped together if they have similar requirements or as dictated by business needs.
 

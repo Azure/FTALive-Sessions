@@ -1,5 +1,7 @@
 # Azure Site Recovery
 
+#### [prev](./backup.md) | [home](./readme.md)  | [next](./drplanning.md)
+
 ### Replication Scenarios
 
 - [Azure VMs](https://docs.microsoft.com/en-us/azure/site-recovery/azure-to-azure-support-matrix) from region to region

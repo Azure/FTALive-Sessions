@@ -1,5 +1,7 @@
 # Resiliency Overview
 
+#### [home](./readme.md)  | [next](./backup.md)
+
 ## Motivation
 As part of modern, cloud operations we must implement solutions to minimize interruptions and ensure rapid recovery when needed.
 
