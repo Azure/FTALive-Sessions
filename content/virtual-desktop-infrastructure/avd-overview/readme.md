@@ -12,7 +12,7 @@
 1. [Prerequisites](https://docs.microsoft.com/en-us/azure/virtual-desktop/prerequisites)
 1. [Concepts](https://docs.microsoft.com/en-us/azure/virtual-desktop/environment-setup)
 1. [FSLogix](https://docs.microsoft.com/en-us/fslogix/overview)
-1. [Scaling](https://docs.microsoft.com/en-us/azure/virtual-desktop/set-up-scaling-script)
+1. [Scaling](https://docs.microsoft.com/en-us/azure/virtual-desktop/autoscale-scaling-plan)
 1. [Monitoring](https://docs.microsoft.com/en-us/azure/virtual-desktop/azure-monitor)
 1. [Image Management](https://docs.microsoft.com/en-us/azure/virtual-desktop/set-up-golden-image)
 1. [Application Delivery in AVD](https://docs.microsoft.com/en-us/azure/virtual-desktop/what-is-app-attach)
