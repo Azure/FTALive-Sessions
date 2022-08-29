@@ -9,5 +9,5 @@ Please find the links below to the handouts from the 6 Part AKS Series
 - ### [Automating Cluster Deployments](./3-cluster-deployment-automation.md) *(23 August 2022)*
 - ### [Operations](./4-operations.md) *(25 August 2022)*
   Please see the [standalone handout &rarr;](../aks-operations/README.md)   
-- ### Monitoring *(coming 30 Aug)*
+- ### [Monitoring](./5-monitoring.md) *(coming 30 Aug)*
 - ### Automating Workload Deployments *(coming 01 September)*
