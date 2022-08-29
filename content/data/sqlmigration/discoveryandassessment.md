@@ -64,11 +64,4 @@ Step 2: Understanding Database assessments reports </br>
 * [Data Migration Assistant: Configuration settings](https://docs.microsoft.com/en-us/sql/dma/dma-configurationsettings?view=sql-server-ver16)
 * [Data Migration Assistant: Best Practices](https://docs.microsoft.com/en-us/sql/dma/dma-bestpractices?view=sql-server-ver16)
    
-**3) DEA viewing reports with sample database assessment**
-* [Configure Distributed Replay for DEA](https://docs.microsoft.com/en-us/sql/dea/database-experimentation-assistant-configure-replay?view=sql-server-ver16)
-* [Capture a trace in DEA](https://docs.microsoft.com/en-us/sql/dea/database-experimentation-assistant-capture-trace?view=sql-server-ver16)
-* [Create analysis reports in DEA](https://docs.microsoft.com/en-us/sql/dea/database-experimentation-assistant-create-report?view=sql-server-ver16)
-* [Replay a trace in DEA](https://docs.microsoft.com/en-us/sql/dea/database-experimentation-assistant-replay-trace?view=sql-server-ver16)
-* [View reports in DEA](https://docs.microsoft.com/en-us/sql/dea/database-experimentation-assistant-view-report?view=sql-server-ver16)</br>
-
-**4) [Azure Data Studio (ADS) with Migration Extension](https://docs.microsoft.com/en-us/sql/azure-data-studio/extensions/azure-sql-migration-extension)**
+**3) [Azure Data Studio (ADS) with Migration Extension](https://docs.microsoft.com/en-us/sql/azure-data-studio/extensions/azure-sql-migration-extension)**

@@ -41,11 +41,7 @@ This provides a richer interface to the assessments. You can potentially fix for
 
 ![DMA Recommendations](/images/DMARecommendations.png)
 
-**3. [DEA Assessments](https://docs.microsoft.com/en-in/sql/dea/database-experimentation-assistant-view-report?view=sql-server-ver16)** ->Workload specific detection. 
-
-This provides results for specific workloads. You can review the report for performance insights based on the A/B test you performed. This may or may not detect all the breaking/deprecated changes but useful in detecting behavioral changes for given workloads. Not very frequently used for assessment of the Azure SQL flavor(On-premise version upgrade) of compatibility but more from a performance perspective.
-
-**4. [ADS Assessments](https://docs.microsoft.com/en-us/azure/dms/migration-using-azure-data-studio)** -> Detection, remediation help and migration
+**3. [ADS Assessments](https://docs.microsoft.com/en-us/azure/dms/migration-using-azure-data-studio)** -> Detection, remediation help and migration
 
 The Azure SQL migration extension supports assessment, get right-sized [Azure recommendations](https://docs.microsoft.com/en-us/azure/dms/ads-sku-recommend#performance-data-collection-and-sku-recommendation) and migrate your SQL Server database(s) to Azure.
 - SQL Server on Azure Virtual Machines (SQL VM)
