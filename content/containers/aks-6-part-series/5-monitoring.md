@@ -40,14 +40,13 @@ Popularized by [Tom Willke](https://grafana.com/blog/2018/08/02/the-red-method-h
 
 ### What to Measure?
 
+This session follows the structure are illustrated in [Monitor AKS with Azure Monitor for Container Insights](https://docs.microsoft.com/azure/aks/monitor-aks#monitor-layers-of-aks-with-container-insights)
+
 - [Layer 1 - Cluster Level Infrastructure Components](#layer-1---cluster-level-infrastructure-components)
 - [Layer 2 - AKS Managed Components](#layer-2---aks-managed-components)
 - [Layer 3 - Cluster Availability (Kubernetes pods, replicasets, and daemonsets)](#layer-3---cluster-availability-kubernetes-pods-replicasets-and-daemonsets)
 - [Layer 4 - Workloads and hosted Applications](#layer-4---workloads-and-hosted-applications)
 - [Layer 5 - Resources Additional to AKS](#layer-5---resources-additional-to-aks)
-
-
-This session follows the structure are illustrated in [Monitor AKS with Azure Monitor for container insight](https://docs.microsoft.com/azure/aks/monitor-aks#monitor-layers-of-aks-with-container-insights)
 
 ![AKS Monitoring Layers](https://docs.microsoft.com/en-us/azure/aks/media/monitor-aks/layers.png)
 
