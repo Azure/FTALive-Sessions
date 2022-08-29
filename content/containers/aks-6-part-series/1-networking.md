@@ -1,4 +1,4 @@
-Part 1 of 6 | [Security Best Practices &rarr;](./security-best-practices.md)
+Part 1 of 6 | [Security Best Practices &rarr;](./2-security-best-practices.md)
 
 # Networking
 
