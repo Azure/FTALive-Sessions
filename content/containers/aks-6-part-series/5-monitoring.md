@@ -28,9 +28,7 @@ Monitor from client point of view, ignoring infrastructure
 - E = Errors
 - D = Duration
 
-
 Popularized by [Tom Willke](https://grafana.com/blog/2018/08/02/the-red-method-how-to-instrument-your-services) (VP Technology, Granfana Labs)
-
 
 ## Part 2 - Deep Dive: AKS Monitoring
 
@@ -40,8 +38,14 @@ Popularized by [Tom Willke](https://grafana.com/blog/2018/08/02/the-red-method-h
 - Alerting
 - Querying Logs with Container Insights
 
-
 ### What to Measure?
+
+- [Layer 1 - Cluster Level Infrastructure Components](#layer-1---cluster-level-infrastructure-components)
+- [Layer 2 - AKS Managed Components](#layer-2---aks-managed-components)
+- [Layer 3 - Cluster Availability (Kubernetes pods, replicasets, and daemonsets)](#layer-3---cluster-availability-kubernetes-pods-replicasets-and-daemonsets)
+- [Layer 4 - Workloads and hosted Applications](#layer-4---workloads-and-hosted-applications)
+- [Layer 5 - Resources Additional to AKS](#layer-5---resources-additional-to-aks)
+
 
 This session follows the structure are illustrated in [Monitor AKS with Azure Monitor for container insight](https://docs.microsoft.com/azure/aks/monitor-aks#monitor-layers-of-aks-with-container-insights)
 
@@ -97,7 +101,7 @@ To assist with troubleshooting AKS cluster problems and gain deeper insights ena
 | Cluster health |		| Metric |
 | Unschedulable pods | Monitor the unschedulable pods. | Metric |
 
-## Layer 3 - Cluster Availability (Kubernetes pods, replicasets, and daemonsets):
+## Layer 3 - Cluster Availability (Kubernetes pods, replicasets, and daemonsets)
 
 Kubernetes requires its system services pods to run in desired state for stable cluster operation. Monitoring the system services critical pods is a minimum requirement.
 
@@ -121,7 +125,7 @@ CPU and memory usage at controller level|	Monitor the applications CPU and memor
 
 ** *The availability can be monitored based on pod/container status, restart counts. If replicasets, individual pod unavailability may not impact the service, having correct threshold will help monitor the availability and give enough time to address issue before it becomes completely down. Monitor the number of replicas vs desired state.*
 
-## Layer 6 - Resources Additional to AKS
+## Layer 5 - Resources Additional to AKS
 
 ### Monitor Azure Application gateway
 
@@ -139,7 +143,6 @@ CPU and memory usage at controller level|	Monitor the applications CPU and memor
 ### Monitor Azure Load Balancer
 
 - [Azure Standard load balancers diagnostics with metrics, alerts and resource health](https://docs.microsoft.com/azure/load-balancer/load-balancer-standard-diagnostics)
-
 - [Common and recommended alert rules for Load Balancer](https://docs.microsoft.com/azure/load-balancer/monitor-load-balancer#alerts)
 
 | Name | Objective/Description	| Metrics & Resource logs |
@@ -152,8 +155,6 @@ CPU and memory usage at controller level|	Monitor the applications CPU and memor
 - [Monitor Firewall health state](https://docs.microsoft.com/en-us/azure/firewall/logs-and-metrics#metrics)
 - Possible status are "Healthy", "Degraded" & "Unhealthy"
 - SNAT port utilization - The percentage of SNAT port that has been utilized
-
-
 
 
 ## Misc. References
