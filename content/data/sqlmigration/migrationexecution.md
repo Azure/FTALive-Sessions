@@ -6,7 +6,7 @@
 
 |SQL on Azure VM ![](/images/SQLVM_icon.png "SQL_VM")|Azure SQL MI ![](/images/SQLMI_icon.png "SQL_MI")|Azure SQL DB![](/images/SQLDB_icon.png "SQL_DB")|
 |:---|:---|:---|
-|   | **`Online`**  |   |
+| **`Online`** | **`Online`**  | **`Online`**  |
 |[Azure Migrate using DMA]()|[Azure Migrate using DMA](https://docs.microsoft.com/en-us/azure/migrate/how-to-create-azure-sql-assessment)|[Azure Migrate using DMA]()|[Azure Migrate using DMA](https://docs.microsoft.com/en-us/azure/migrate/how-to-create-azure-sql-assessment)|
 | [DMS using ADS Online- Azure VM](https://docs.microsoft.com/en-us/azure/dms/tutorial-sql-server-to-virtual-machine-online-ads)  |[DMS using ADS Online- SQL MI](https://docs.microsoft.com/en-us/azure/dms/tutorial-sql-server-managed-instance-online-ads)| NA |
 | NA | [DMS without using ADS Online-SQL MI](https://docs.microsoft.com/en-us/azure/dms/tutorial-sql-server-managed-instance-online)|[DMS without using ADS Online- SQL DB](https://docs.microsoft.com/en-us/azure/dms/tutorial-sql-server-to-azure-sql) |
@@ -14,14 +14,13 @@
 |NA|[Azure Data Factory](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-sql-managed-instance)|[Azure Data Factory](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-sql-database?tabs=data-factory) |
 |[Adding Replica](https://docs.microsoft.com/en-us/previous-versions/azure/virtual-machines/windows/sqlclassic/virtual-machines-windows-classic-sql-onprem-availability)|[Log Relay Service](https://docs.microsoft.com/en-us/azure/azure-sql/managed-instance/log-replay-service-migrate?view=azuresql)| |
 ||[Managed Instance Link](https://docs.microsoft.com/en-us/azure/azure-sql/managed-instance/managed-instance-link-feature-overview?view=azuresql)| |
-|   | **`Offline`**  |   |
+|  **`Offline`**  | **`Offline`**  | **`Offline`**   |
 |[DMS using ADS Offline- AzureVM](https://docs.microsoft.com/en-us/azure/dms/tutorial-sql-server-to-virtual-machine-offline-ads)| [DMS using ADS Offline- SQL MI](https://docs.microsoft.com/en-us/azure/dms/tutorial-sql-server-managed-instance-offline-ads)| NA |
 | NA | [DMS without using ADS - SQL MI](https://docs.microsoft.com/en-us/azure/dms/tutorial-sql-server-to-managed-instance)|[DMS without using ADS - SQL DB](https://docs.microsoft.com/en-us/azure/dms/tutorial-sql-server-to-azure-sql)|
 |Perform an on-premises [backup using compression and restore](https://docs.microsoft.com/en-us/azure/azure-sql/virtual-machines/windows/migrate-to-vm-from-sql-server?view=azuresql#back-up-and-restore)|[Import/Export BACPAC Wizard](https://docs.microsoft.com/en-us/azure/azure-sql/database/database-import?view=azuresql)|[Import/Export BACPAC Wizard](https://docs.microsoft.com/en-us/azure/azure-sql/database/database-import?view=azuresql)|
 |[Backup to URL and Restore](https://docs.microsoft.com/en-us/azure/azure-sql/virtual-machines/windows/migrate-to-vm-from-sql-server?view=azuresql#backup-to-url-and-restore-from-url) | [Native Backup and Restore](https://docs.microsoft.com/en-us/azure/azure-sql/managed-instance/restore-sample-database-quickstart?view=azuresql)| |
 | [Detach and Attach from URL](https://docs.microsoft.com/en-us/azure/azure-sql/virtual-machines/windows/migrate-to-vm-from-sql-server?view=azuresql#detach-and-attach-from-a-url)|||
-|[Convert to VM and Upload](https://docs.microsoft.com/en-us/azure/azure-sql/virtual-machines/windows/migrate-to-vm-from-sql-server?view=azuresql#convert-to-a-vm-upload-to-a-url-and-deploy-as-a-new-vm)||
-|
+|[Convert to VM and Upload](https://docs.microsoft.com/en-us/azure/azure-sql/virtual-machines/windows/migrate-to-vm-from-sql-server?view=azuresql#convert-to-a-vm-upload-to-a-url-and-deploy-as-a-new-vm)|||
 |[Ship Hard Drive](https://docs.microsoft.com/en-us/azure/azure-sql/virtual-machines/windows/migrate-to-vm-from-sql-server?view=azuresql#ship-a-hard-drive)|||
 
 

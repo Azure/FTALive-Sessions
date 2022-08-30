@@ -30,7 +30,7 @@
 * System level objects [Link 1](https://docs.microsoft.com/en-us/sql/relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server?view=sql-server-ver15) | [Link 2](https://techcommunity.microsoft.com/t5/azure-sql-blog/automate-migration-to-sql-managed-instance-using-azure/ba-p/830801)
 
 
-### **Good to know links**
+## **Good to know links**
   * Review [Pricing guidance for SQL Server Azure VMs.](https://docs.microsoft.com/en-us/azure/azure-sql/virtual-machines/windows/pricing-guidance)
   * Review [Service Tiers in Azure SQL Managed Instance](https://docs.microsoft.com/en-us/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview?view=azuresql#service-tiers)
   * Review [Service Tiers for Azure SQL Database](https://docs.microsoft.com/en-us/azure/azure-sql/database/sql-database-paas-overview?view=azuresql#service-tiers)
