@@ -5,6 +5,7 @@
 
 ## Migration Planning
 ![migration planning](/images/MigrationPlanning.png)
+
 * **Other deciding factors**
   * Number of servers and databases
   * Size of databases
