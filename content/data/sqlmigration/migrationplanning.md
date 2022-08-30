@@ -2,6 +2,7 @@
 
 #### [prev](./remediation.md) | [home](./readme.md)  | [next](./migrationexecution.md)
 
+
 ## Migration Planning
 ![migration planning](/images/MigrationPlanning.png)
 * **Other deciding factors**
