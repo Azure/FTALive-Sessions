@@ -23,7 +23,7 @@ You will need:
 <!--Presenter: Ben Harding ([linkedin.com/in/ben-harding-fta](linkedin.com/in/ben-harding-fta)) <br/>
 Presenter: Nitin Mehta ([linkedin.com/in/nitinmht](linkedin.com/in/nitinmht)) <br/>
 Moderator: Miho Yamamoto ([linkedin.com/in/mihoyamamoto](linkedin.com/in/mihoyamamoto))<br/>
-Moderator: Osamu Hirayama ([linkedin.com/in/osamuhir](linkedin.com/in/osamuhir))
+Moderator: Osamu Hirayama ([linkedin.com/in/osamuhir](linkedin.com/in/osamuhir))<br/>
 Moderator: Ryan CrawCour ([linkedin.com/in/ryancrawcour](linkedin.com/in/ryancrawcour))<br/>-->
 
 ## Microsoft Learn
