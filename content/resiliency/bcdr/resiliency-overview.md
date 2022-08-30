@@ -29,3 +29,5 @@ Business requirements should drive the type of solution leveraged for each prote
 [Cloud Adoption Framework Management Guide - Protect & Recover](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/manage/azure-management-guide/protect-recover?tabs=AzureBackup%2Csiterecovery)
 
 [Well-Architected Framework - Resiliency & Dependencies](https://docs.microsoft.com/en-us/azure/architecture/framework/resiliency/design-resiliency)
+
+[Whitepaper - Resilience in Azure](https://aka.ms/resilience-in-azure-whitepaper)
