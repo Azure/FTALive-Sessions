@@ -11,6 +11,8 @@ Operational downtime can happen anytime and to any business.
 - **Natural causes:** Hurricanes, earthquakes, floods...
 - **Human / System causes:** Security breaches (Ransomware), operational errors, component failures...
 
+![Resiliency - Scope of impact for data and applications in different types of failures](/images/resilience-scope-of-impact.png)
+
 ## Design Resiliency
 Make sure you are considering resiliency among your requirements when designing solutions.
 
