@@ -31,3 +31,9 @@ Review the workload resources to identify what solutions you will need employ in
 ### Additional learning resources
 
 [MS Learn - Describe HADR Strategies | RTO and RPO](https://docs.microsoft.com/en-us/learn/modules/describe-high-availability-disaster-recovery-strategies/2-describe-recovery-time-objective-recovery-point-objective)
+
+[Retain IP addresses after failover](https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-retain-ip-azure-vm-failover) 
+
+[Connecting to DR region via ExpressRoute](https://docs.microsoft.com/en-us/azure/site-recovery/azure-vm-disaster-recovery-with-expressroute#fail-over-azure-vms-when-using-expressroute)
+
+
