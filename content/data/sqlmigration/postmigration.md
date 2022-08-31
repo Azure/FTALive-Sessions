@@ -1,6 +1,6 @@
 # Post Migration
 
-#### [prev](./migrationexecution.md) | [home](./readme.md)  | [next](./faq.md)
+#### [prev](./migrationexecution.md) | [home](./readme.md)  | [next](./QnA.md)
 
 ## Post Migration
 ### Perform Tests
