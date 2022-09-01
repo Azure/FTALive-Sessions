@@ -42,6 +42,7 @@ Popularized by [Tom Willke](https://grafana.com/blog/2018/08/02/the-red-method-h
 ```bash
 # Set subscription context
 az account set --subscription <subscriptionId>
+
 # Enable monitoring on existing cluster
 az aks enable-addons -a monitoring -n <clustername> -g <resourcegroupname>
 
