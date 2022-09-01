@@ -28,7 +28,7 @@ The family of SQL cloud databases providing flexible options for application mig
 
 [Azure SQL deployment options](https://docs.microsoft.com/learn/modules/azure-sql-intro/3-deployment-options)
 
-**Choosing an Azure SQL Target**
+### **Choosing an Azure SQL Target**
 
 [Feature comparison of Azure SQL Database, Azure SQL Managed Instance and SQL Server on a VM](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/feature-comparison-of-azure-sql-database-azure-sql-managed/ba-p/3154789)
 
@@ -51,7 +51,7 @@ The family of SQL cloud databases providing flexible options for application mig
 - Analyze the results
 - Plan for migration
 
-**Tools to assist with Discovery and assessment**
+### **Tools to assist with Discovery and assessment**
 
 **Azure Migrate**
 Centralized migration service, to discover and assess your datacenter, and then migrate workloads to Azure.
@@ -70,25 +70,32 @@ Discover, assess, and migrate on-premises applications, infrastructure, and data
 
   [Overview of Data Migration Assistant](https://docs.microsoft.com/sql/dma/dma-overview?view=sql-server-ver15)
 
-  [Get Azure SQL SKU recommendations (Data Migration Assistant)](https://docs.microsoft.com/sql/dma/dma-sku-recommend-sql-db?view=sql-server-ver15)
 
-## Demo walkthrough
 
-This session includes live demo, please refer the following links get all demo guide
+This session includes live demo, please refer the following links get all demo guide.
+### Demo 1 - Database Migration Assistant
 
-### Demo 1 - Azure Data Studio
+[Perform a SQL Server migration assessment with Data Migration Assistant](https://docs.microsoft.com/en-us/sql/dma/dma-assesssqlonprem?view=sql-server-ver15#create-an-assessment)
+[Get Azure SQL SKU recommendations (Data Migration Assistant)](https://docs.microsoft.com/sql/dma/dma-sku-recommend-sql-db?view=sql-server-ver15)
 
+
+**Azure Data Studio**
 - Cross-platform
 - Extension for Azure migration
 - Assess SQL Server for possible migration blockers/warnings
 - Get deployment recommendations
 - Offline or online migrations to Azure
 
-  [Azure SQL migration extension for Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/extensions/azure-sql-migration-extension?view=sql-server-ver15)
 
-  [Get SKU recommendations for Azure SQL migrations](https://techcommunity.microsoft.com/t5/azure-sql-blog/get-azure-recommendation-in-azure-sql-migration-extension/ba-p/3201479)
+### Demo 2 - Azure Data Studio
 
-### Demo 2 - SSMA
+ [Azure SQL migration extension for Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/extensions/azure-sql-migration-extension?view=sql-server-ver15)
+
+ [Get SKU recommendations for Azure SQL migrations](https://techcommunity.microsoft.com/t5/azure-sql-blog/get-azure-recommendation-in-azure-sql-migration-extension/ba-p/3201479)
+
+
+
+
 
 **SSMA**
 SQL Server Migration Assistant (SSMA) is a suite of five tools designed to automate database migration to SQL Server/Azure SQL platform from Microsoft Access, DB2, MySQL, Oracle, and SAP ASE.

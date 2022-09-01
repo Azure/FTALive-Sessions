@@ -3,7 +3,7 @@
 #### [prev](./migrationplanning.md) | [home](./readme.md)  | [next](./postmigration.md)
 
 ## Migration Execution
-* **[Azure Data Studio with Azure SQL Migration Extension](https://docs.microsoft.com/en-us/azure/dms/) (Demo 2)**
+* **[Azure Data Studio with Azure SQL Migration Extension](https://docs.microsoft.com/en-us/azure/dms/) ([Demo 2](./Demo2.md))**
 * [Backup and restore](https://docs.microsoft.com/en-us/azure/azure-sql/managed-instance/restore-sample-database-quickstart)
 * [Log Replay Service (LRS)](https://docs.microsoft.com/en-us/azure/azure-sql/managed-instance/log-replay-service-migrate)
 * [.bacpac](https://docs.microsoft.com/en-us/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-ver15#bacpac)

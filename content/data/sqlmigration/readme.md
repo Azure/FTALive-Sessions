@@ -29,3 +29,4 @@ For SQL Migrations, there is a lot of content to cover. Below is an overview of 
 
 ## Appendix
 1. [Advanced Topics and additional references](./advancedtopics.md)
+1. [Learning Resources](./learningresources.md)
