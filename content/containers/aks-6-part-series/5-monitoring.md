@@ -1,4 +1,4 @@
-[&larr; Operations](./04-operations.md) | Part 5 of 6 | [Workload Deployment &rarr;](#)
+[&larr; Operations](./4-operations.md) | Part 5 of 6 | [Workload Deployment &rarr;](./6-workload-deployments-automation.md)
 
 # AKS Monitoring
 
