@@ -5,7 +5,7 @@ This call will not be recorded due to the wide audience and to encourage questio
 
 **Questions?** Feel free to type them in the chat window at any time. Note that questions you post will be public.
 
-**Slideless** No PowerPoint, we promise! As we update this [content](https://aka.ms/ftalive-sqlmigrations) you will get the changes straight away.
+**Slideless** No PowerPoint, we promise! As we update this content ([https://aka.ms/ftalive-sqlmigrations](https://aka.ms/ftalive-sqlmigrations)) you will get the changes straight away.
 
 **Feedback** Please give us your feedback on https://aka.ms/ftalive-feedback
 
@@ -16,7 +16,7 @@ You will need:
 
 # SQL Migrations
 ## Agenda
-For SQL Migrations, there is a lot of content to cover. Below is an overview of this content, however we will not be discussing all of it today. There is extra information on some of these topics in the [Advanced Topics](./advancedtopics.md) Section.
+There is a lot to know before performing a SQL Migration, as such, this content is designed to be _delivered_ in two parts. Below is the agenda, however we intentionally will not be covering all of the content. Instead we encourage you to access this repository at your pace. There is extra information on some of these topics in the [Advanced Topics](./advancedtopics.md) Section.
 
 1. [Introduction](./introduction.md)
 1. [Choosing an Azure SQL Target](./choosewhichsql.md)
