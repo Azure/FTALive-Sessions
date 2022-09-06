@@ -13,3 +13,7 @@
 
 A great place to start any database migration is Microsoft's comprehensive guide to migrate to any source database to Azure Database can be found at [https://docs.microsoft.com/en-us/data-migration/](https://docs.microsoft.com/en-us/data-migration/)
 ![](/images/DataMigrationGuides.png#left)
+
+## SQL Migration Flow
+In general [this](https://docs.microsoft.com/en-us/sql/sql-server/migrate/dma-azure-migrate-compare-migration-tools?view=sql-server-ver15#quick-comparison) is a good table for refernce to validate which tool to use when assessing your databases/instances
+![](/images/MigrationFlow.png)

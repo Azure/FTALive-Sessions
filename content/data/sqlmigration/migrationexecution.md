@@ -2,7 +2,35 @@
 
 #### [prev](./migrationplanning.md) | [home](./readme.md)  | [next](./postmigration.md)
 
-## Migration Execution
+Since you've planned and practice the migration, this phase should be a breeze!
+
+## Online migration options
+
+Tool / Method | SQL on Azure VM | Azure SQL MI | Azure SQL DB
+---|---|---|---
+Azure Migrate Using DMA | &check; | &check; | 
+DMS Using ADS Online - Azure VM | &check; | &check; | 
+DMS without using ADS Online-SQL MI |  | &check; | 
+Transactional Replication | &check; | &check; | &check;
+Azure Data Factory | | &check; | 
+Adding Replica | &check; | | 
+Log Relay Service | | &check; |
+Managed Instance Link | | &check; |
+
+## Offline migration options
+Tool / Method | SQL on Azure VM | Azure SQL MI | Azure SQL DB
+---|---|---|---
+Import/Export BACPAC Wizard | &check; | &check; | &check;
+SQL Server backup and restore | &check; | &check; | 
+Smark Bulk Copy Tool | &check; | &check; | &check;
+DMS using ADS Offline- AzureVM | &check; | &check; |
+DMS without using ADS - SQL MI | | &check; | &check;
+Detach and Attach from URL | &check; | |
+Convert to VM and Upload | &check; | |
+Ship Hard Drive | &check; | 
+
+
+## TBD to on tables
 
 |SQL on Azure VM ![](/images/SQLVM_icon.png "SQL_VM")|Azure SQL MI ![](/images/SQLMI_icon.png "SQL_MI")|Azure SQL DB![](/images/SQLDB_icon.png "SQL_DB")|
 |:---|:---|:---|
@@ -25,14 +53,14 @@
 
 
 ## Demos
-**1) [DMA](https://docs.microsoft.com/en-us/azure/dms/tutorial-sql-server-to-azure-sql) Migration Option**<br />
+**1) [DMS](https://docs.microsoft.com/en-us/azure/dms/tutorial-sql-server-to-azure-sql) Migration Option**<br />
 
 **2) [Migrate SQL Server to an Azure SQL Managed Instance online](https://docs.microsoft.com/en-us/azure/dms/tutorial-sql-server-managed-instance-online-ads) using Azure Data Studio with DMS** <br />
 
 **3) [Migrate SQL Server to SQL Server on Azure Virtual Machine online](https://docs.microsoft.com/en-us/azure/dms/tutorial-sql-server-to-virtual-machine-online-ads) using Azure Data Studio with DMS** <br />
 
-
-### **Good to know links**
+---
+## Additional Information
 * Choose a [migration method for SQL on Azure VM](https://docs.microsoft.com/en-us/azure/azure-sql/virtual-machines/windows/migrate-to-vm-from-sql-server?view=azuresql#choose-a-migration-method)
 * Choose a [migration method for Azure SQL MI](https://docs.microsoft.com/en-us/azure/azure-sql/migration-guides/managed-instance/sql-server-to-managed-instance-overview?view=azuresql#migration-tools)
 * Choose a [migraiton method for Azure SQL DB](https://docs.microsoft.com/en-us/azure/azure-sql/migration-guides/database/sql-server-to-sql-database-overview?view=azuresql#migration-tools)

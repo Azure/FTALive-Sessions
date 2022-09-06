@@ -19,13 +19,13 @@ You will need:
 There is a lot to know before performing a SQL Migration, as such, this content is designed to be _delivered_ in two parts. Below is the agenda, however we intentionally will not be covering all of the content. Instead we encourage you to access this repository at your pace. There is extra information on some of these topics in the [Advanced Topics](./advancedtopics.md) Section.
 
 1. [Introduction](./introduction.md)
-1. [Choosing an Azure SQL Target](./choosewhichsql.md)
+1. [Understanding Azure SQL and Choosing a Target](./choosewhichsql.md)
 1. [Discovery & Assessment](./discoveryandassessment.md)
 1. [Remediation](./remediation.md)
 1. [Migration Planning](./migrationplanning.md)
 1. [Migration Execution](./migrationexecution.md)
 1. [Post Migration](./postmigration.md)
-1. [Q&A](./QnA.md)
+1. [Q&A](./qna.md)
 
 ## Appendix
 1. [Advanced Topics and additional references](./advancedtopics.md)

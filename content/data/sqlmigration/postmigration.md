@@ -1,16 +1,17 @@
 # Post Migration
 
-#### [prev](./migrationexecution.md) | [home](./readme.md)  | [next](./QnA.md)
+#### [prev](./migrationexecution.md) | [home](./readme.md)  | [next](./qna.md)
 
-## Post Migration
-### Perform Tests
-1.  **Develop validation tests:** To test the database migration, you need to use SQL queries. Create validation queries to run against both the source and target databases. Your validation queries should cover the scope you've defined.
-2.  **Set up a test environment:** The test environment should contain a copy of the source database and the target database. Be sure to isolate the test environment.
-3.  **Run validation tests:** Run validation tests against the source and the target, and then analyze the results.
-4.  **Run performance tests:** Run performance tests against the source and target, and then analyze and compare the results.
+## Initial Tasks
+Congratulations on completing the migration! But the work is not finished yet..
+1. **Run validation tests** to test the database migration was successful. This usually involves turning on the application for testers only. 
+1. **Validate performance** of the platform in Azure meets technical and business expectations. 
+1. **Capture new performance baselines** to enable comparison of old/new system, and, as a reference point going forward.
+1. **Optimize for cost** through right-sizing and scaling up/down through automation
+1. **Enable additional features** many of which are only available in Azure!
 
-### Best Practices
-
+<!--
+## Best Practices
 <table border="10" >
   <tbody >
     <tr>
@@ -104,6 +105,7 @@
 ## **Sample Datasets**
 - [Sample Databases](https://docs.microsoft.com/en-us/sql/samples/sql-samples-where-are?view=sql-server-ver16)
 - [Public Datasets](https://docs.microsoft.com/en-us/azure/azure-sql/public-data-sets?view=azuresql)
+-->
 
 ## **Stay Updated**
 - [Latest Updates](https://azure.microsoft.com/en-us/updates/)

@@ -2,19 +2,13 @@
 
 #### [prev](./discoveryandassessment.md) | [home](./readme.md)  | [next](./migrationplanning.md)
 
-# Pre-migration
-The following covers the readiness phase of pre-migration steps of **Remediation of Sevrers/Instances**
+## Why Remediate?
+The remediation phase consists of activities required to fix or refactor your database and application layer before migration. Each of the assessment tools mentioned in the previous section provide reports which reflect changes in the following 3 categories:
+* Breaking changes - These will block the migration
+* Behavior changes - Can impact the functionality of the database and application
+* Deprecated features - Addressing these are usually out-of-scope for a migration, but should be addressed to reduce technical debt.
 
-## Remediation
-The remediation steps consists of activities required to fix your database and application layer before migration
-Each of the assessment tools mentioned in the previous modules provide reports which reflect changes in the following 3 categories
-* Breaking changes - Which will block the migration
-* Behavior changes - Which will impact the functionality in use (Application and Data Layer)
-* Deprecated features - Which will not be supported in the latest versions
-
-Diagrams below provide a rough overview of how each of the tools conducts the assessment
-
-### **Reports Overview**
+## Reports Overview
 **1. MAP ToolKit Assessments** ->Detection but manual remediation
 
 This tool collects several reports which includes and inventory for server instances and the databases contained. The sample looks as follows under the database section of the toolkit. <br/>
@@ -47,14 +41,7 @@ The Azure SQL migration extension supports assessment, get right-sized [Azure re
 - SQL Server on Azure Virtual Machines (SQL VM)
 - Azure SQL Managed Instance (SQL MI)
 
-
 ![ADS Recommendations](/images/ADSRecommendations.png)
-
-## SQL Migration Flow
-In general [this](https://docs.microsoft.com/en-us/sql/sql-server/migrate/dma-azure-migrate-compare-migration-tools?view=sql-server-ver15#quick-comparison) is a good table for refernce to validate which tool to use when assessing your databases/instances
-
-![](/images/MigrationFlow.png)
-
 
 ## Demos
 **1) [DMA Reports](https://docs.microsoft.com/en-us/sql/dma/dma-assess-sql-data-estate-to-sqldb?view=sql-server-ver16)**
