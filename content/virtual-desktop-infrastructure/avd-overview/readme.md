@@ -22,8 +22,8 @@
 ### Additional Resources
 - [Azure Virtual Desktop for the Enterprise](https://docs.microsoft.com/en-us/azure/architecture/example-scenario/wvd/windows-virtual-desktop)
 - [FSLogix for the Enterprise](https://docs.microsoft.com/en-us/azure/architecture/example-scenario/wvd/windows-virtual-desktop-fslogix)
-- [Enterprise-scale landing zone Construction Set for Azure Virtual Desktop](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/wvd/enterprise-scale-landing-zone)
+- [Cloud Adoption Framework for Azure Virtual Desktop](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/wvd/enterprise-scale-landing-zone)
 - [What's new in Azure Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/whats-new)
 - [Azure Academy AVD Playlist](https://aka.ms/AzureAcademy-WVD)
-- [Terraform for AVD with Azure Files](https://github.com/Azure/terraform/tree/master/quickstart/101-azure-virtual-desktop)
+- [Azure Virtual Desktop Automation](https://github.com/Azure/avdaccelerator)
 - [Terraform for AVD with NetApp](https://github.com/Azure/terraform/tree/master/quickstart/101-azure-virtual-desktop-anf)
