@@ -27,3 +27,13 @@ As **Summary**, Table for comparison (Table 1):
 | Pay by minutes online ( manage by a pause and resume operations) | No                  | Yes                                                          |
 
 Table 1
+
+**Note:**
+In terms of Servelss SQL Pool - The select surface is fully supported, as this option will be used to query and organize files from the storage but it will not store them in a database structure. Hence, DMLs operations such as Insert, Update, and Delete are not supported. 
+
+Table creation is also not supported, only external tables are supported in this context. Follow the link for more information on how to use CETAS: [How to use CETAS on serverless SQL pool to improve performance and automatically recreate it - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/how-to-use-cetas-on-serverless-sql-pool-to-improve-performance/ba-p/3548040)
+
+For more information about T-SQL feature support, please review this doc.
+
+[T-SQL feature in Synapse SQL pool - Azure Synapse Analytics | Microsoft Docs](https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/overview-features)
+
