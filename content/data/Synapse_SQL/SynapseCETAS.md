@@ -67,9 +67,9 @@ https://raw.githubusercontent.com/Azure-Samples/Synapse/main/SQL/Samples/LdwSamp
    
      \---------------------------------------
      --CETAS DDL
-     CREATE EXTERNAL TABLE FactSale_CETAS
+     CREATE EXTERNAL TABLE LLive_CETAS
      WITH (
-       LOCATION = 'FactSale_CETAS/',
+       LOCATION = 'LLive_CETAS/',
        DATA_SOURCE = LLive,
        FILE_FORMAT = Parquet_file
          ) 
@@ -100,13 +100,13 @@ https://raw.githubusercontent.com/Azure-Samples/Synapse/main/SQL/Samples/LdwSamp
    
    \--------------------------
    --Query
-    SELECT *   FROM  FactSale_CETAS
+    SELECT *   FROM  LLive_CETAS
    
    \--------------------------
    --Clean
    --Need to drop files on the Storage manually
    
-    DROP EXTERNAL TABLE FactSale_CETAS
+    DROP EXTERNAL TABLE LLive_CETAS
    ```
 
    
