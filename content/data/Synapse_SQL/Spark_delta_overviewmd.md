@@ -1,6 +1,6 @@
 ## Synapse SQL serverless pool 
 
-*Home* - [Next >](Summary.md)
+*Home* - [Next >](SynapseCETAS.md)
 
 ### Spark and Delta Integration overview
 
