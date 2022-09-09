@@ -8,7 +8,7 @@ When using serverless SQL pool, CETAS is used to create an external table and ex
 
 **Example**: 
 
-These example use CETAS to save the results of the super join in a folder configured in the data source configuration. Hence, this sample relies on the credential, data source, and external file format created previously.
+The following example use CETAS to save the results of the super join in a folder configured in the data source configuration. Hence, this sample relies on the credential, data source, and external file format created previously.
 
 https://raw.githubusercontent.com/Azure-Samples/Synapse/main/SQL/Samples/LdwSample/SampleDB.sql
 
