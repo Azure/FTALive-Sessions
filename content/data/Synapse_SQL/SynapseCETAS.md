@@ -42,7 +42,7 @@ https://raw.githubusercontent.com/Azure-Samples/Synapse/main/SQL/Samples/LdwSamp
    ON us_population_county.countyName = us_population.countyName
    ```
 
-   2. Now, lets check  how much time can be saved from the query execution while using CETAS
+  2. Now, lets check  how much time can be saved from the query execution while using CETAS
 
    ```
    \------------------------------------------------------------------------------
