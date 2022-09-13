@@ -1,7 +1,7 @@
 # Welcome to the FastTrack for Azure Azure Sentinel Call
 ## We will start 3-4 minutes after the scheduled time to accommodate those still connecting
 
-#### [home](./readme.md)  | [next](./Pre-requisites.md)
+#### [home](./readme.md)  | [next](./pre-requisites.md)
 
 > This call will not be recorded due to the wide audience and to encourage questions.
 
@@ -12,7 +12,7 @@
 Please give us your feedback on https://aka.ms/ftalive-feedback
 
 Agenda
-1. [Getting started (Prerequisites)](./Pre-requisites.md)
+1. [Getting started (Prerequisites)](./pre-requisites.md)
 
 2. [Walk through [Portal]](https://portal.azure.com/#blade/Microsoft_Azure_Security_Insights/WorkspaceSelectorBlade)
 

@@ -48,17 +48,23 @@ Data | SQL API for Cosmos DB | In this session you will learn how to design and 
   |  |  |  |
 Data | SQL Migration | In this session, you will learn how to migrate your data to Azure and different deployment options in Azure. Specifically SQL IaaS vs PaaS, understanding High Availability concepts, leveraging Data Migration Assistant and various Services available in your Migration. |
   |  |  |  |
+Data | ADLS Gen1 to Gen2 Migrations | In this session, you will learn about the *ADLS Gen1 to Gen2 Migration Initiative*, the available options for migrating from ADLS Gen1 to ADLS Gen2, and the best practices for conducting a successful migration. We will look at the migration life cycle and examine migrations using Azure Data Factory and the M3 Tool Portal Experience. | [aka.ms/ftalive-adlsmig](https://aka.ms/ftalive-adlsmig)
+  |  |  |  |  |
 Data | Azure Purview Fundamentals | This is a demo-heavy session covering the core fundamentals of Azure Purview. We will cover the key features of Azure Purview which enables you to achieve unified data governance including deployment options, asset scanning, custom/default classifications and security principles. |
   |  |  |  |
 Data | Azure Synapse | In this session we will cover the key features of Azure Synapse along with the architecture and common use cases. This is a demo based session covering the core fundamentals of Azure Synapse to illustrate setting up the core features. The session will cover various key features like identity, managed virtual network & private end point configuration in Synapse. |
   |  |  |  |
 Data	| Azure Data Factory Security | Learn and review how to implement secure Azure Data Factory pipelines using VNET integration and managed private endpoints. We'll cover data exfiltration prevention in the most common scenarios including on prem to Azure data transfer. |
   |  |  |  |
+Data	| Modern Data Warehouses - Designing, Building and Operating | As more businesses become data-driven, Modern Data Warehouse (MDW) solutions have exploded in popularity with numerous architectures and technologies to support them. Deciding on which architecture and set of technologies to include in your MDW project can be overwhelming however. In this session you will learn critical considerations to produce a MDW design and best practices to deploy successfully into Azure. Based on lessons learned from working with hundreds of organisations, topics include architecture, security, business continuity, governance, monitoring, development practices and many more. Join us so we can fast-track your next MDW project. |
+  |  |  |  |
 AI & ML	| Azure Machine Learning Fundamentals | In this session you will gain an understanding of the overall Azure Machine Learning (AzureML) components and how you can start using the AzureML studio web portal to accelerate you AI journey in the cloud. |
   |  |  |  |
 AI & ML	| Azure ML Enterprise Deployment | In this session you will learn how to design and implement Azure Machine Learning using enterprise deployment features, so you can create a secure configuration that is compliant with your companies policies, enjoys tighter security and satisfies your enteprise governance requirements. We will discuss vNets, Endpoints, RBAC, AKS and much more! |
 |  |  |  |
 AI & ML	| Vision AI | In this session you will learn about using Azure Machine Learning for vision related tasks. You will learn about deep computer vision and vision related tasks, including classification, segmentation, 2D, 3D pose estimation, video action recognition and more. We then discuss how to use Azure automation and cloud deployment and processing of your machine learning tasks.  |
+  |  |  |  |
+AI & ML	| MLOps | In this session we will cover the best practices to deploy, manage, and retrain machine learning models within Azure. We will discover how to deploy machine learning models up to production and discover how to leverage the built-in integration with Azure DevOps for seamless scheduling, managing, and automating workflows.   |
   |  |  |  |
 Intro	| FastTrack for Azure Introduction | In this session you will hear from our Program Managers who will walk through what FastTrack for Azure is and how it can support you in your Cloud Journey. |
   |  |  |  |
