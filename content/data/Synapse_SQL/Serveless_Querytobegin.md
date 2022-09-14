@@ -30,7 +30,7 @@ OPENROWSET function in Synapse SQL reads the content of the file(s) from a data 
 
 Syntax Example:
 
-```
+``` sql
 SELECT *
 FROM OPENROWSET(BULK 'http://<storage account>.dfs.core.windows.net/container/folder/*.parquet',
                 FORMAT = 'PARQUET') AS [file]
@@ -51,7 +51,7 @@ Example:
 
 The following example shows how you can use multiple file/folder paths in BULK parameter:
 
-```
+``` sql
 SELECT   TOP 10 *
 FROM 
 OPENROWSET(
@@ -65,7 +65,7 @@ OPENROWSET(
 
 Or 
 
-```
+``` sql
 SELECT   TOP 10 *,  r.filepath(1)
 FROM 
 OPENROWSET(
@@ -79,7 +79,7 @@ where r.filepath(1) in ('year=2010', 'year=2000')
 
 The following example reads CSV file :
 
-```
+``` sql
 --The following example reads CSV file that contains header row without specifying column names and data types:
 
 SELECT 
@@ -121,7 +121,7 @@ Example:
 
 https://raw.githubusercontent.com/Azure-Samples/Synapse/main/SQL/Samples/LdwSample/SampleDB.sql
 
-```
+``` sql
 --- SCOPED CREDENTIAL
 CREATE DATABASE SCOPED CREDENTIAL [sqlondemand]
 WITH IDENTITY='SHARED ACCESS SIGNATURE',  
