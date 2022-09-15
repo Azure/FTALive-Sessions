@@ -10,11 +10,12 @@ The serverless SQL pool also enables you to read the data stored in Delta Lake f
 
 Syntax example: 
 
+``` sql
 SELECT TOP 10 *
 FROM OPENROWSET(
     BULK 'https://sqlondemandstorage.blob.core.windows.net/delta-lake/folder/',
     FORMAT = 'delta') as rows;
-
+   ```
 
 
 The URI in the `OPENROWSET` function must reference the root Delta Lake folder that contains a subfolder called `_delta_log`.
@@ -27,7 +28,7 @@ https://raw.githubusercontent.com/Azure-Samples/Synapse/main/SQL/Samples/LdwSamp
 
 1) Create an external table example:
 
-   ```
+   ``` sql
    CREATE EXTERNAL DATA SOURCE DeltaLakeStorage
    WITH ( LOCATION = 'https://sqlondemandstorage.blob.core.windows.net/delta-lake/' );
    GO
@@ -52,7 +53,7 @@ https://raw.githubusercontent.com/Azure-Samples/Synapse/main/SQL/Samples/LdwSamp
 
 2. Create with schema:
 
-   ```
+   ``` sql
     SELECT TOP 10 *
       FROM OPENROWSET(
               BULK 'covid',
@@ -74,7 +75,7 @@ https://raw.githubusercontent.com/Azure-Samples/Synapse/main/SQL/Samples/LdwSamp
 
 3) Partition elimination:
 
-```
+``` sql
     SELECT
             YEAR(pickup_datetime) AS year,
             passenger_count,

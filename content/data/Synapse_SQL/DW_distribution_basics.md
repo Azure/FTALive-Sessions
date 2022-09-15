@@ -142,8 +142,8 @@ https://docs.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-
 DBCC PDW_SHOWSPACEUSED('[Sales].[FactSales]')
 GO
 
-All the rows belong to the same distribution that is the now the bottleneck.
-Once tha table has been created there's no way to change its distribution, we must create a new copy and distribute it using the proper column(s) using the [CREATE TABLE AS SELECT (CTAS)](https://docs.microsoft.com/en-us/sql/t-sql/statements/create-table-as-select-azure-sql-data-warehouse?toc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Ftoc.json&bc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Fbreadcrumb%2Ftoc.json&view=azure-sqldw-latest&preserve-view=true) command.
+--All the rows belong to the same distribution that is the now the bottleneck.
+--Once tha table has been created there's no way to change its distribution, we must create a new copy and distribute it using the proper column(s) using the [CREATE TABLE AS SELECT (CTAS)]--(https://docs.microsoft.com/en-us/sql/t-sql/statements/create-table-as-select-azure-sql-data-warehouse?toc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Ftoc.json&bc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Fbreadcrumb%2Ftoc.json&view=azure-sqldw-latest&preserve-view=true) command.
 ```
 
 
