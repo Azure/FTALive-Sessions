@@ -8,6 +8,8 @@ Azure Synapse Analytics provides multiple query runtimes that you can use to que
 
 The serverless SQL pool also enables you to read the data stored in Delta Lake format, and serve it to reporting tools. A serverless SQL pool can read Delta Lake files that are created using Apache Spark, Azure Databricks, or any other producer of the Delta Lake format.
 
+Delta Lake is an open-source storage layer that brings ACID (atomicity, consistency, isolation, and durability) transactions to Apache Spark and big data workloads. The current version of Delta Lake included with Azure Synapse has language support for Scala, PySpark, and .NET. It is not on the scope of this presentation to deep dive on the Delta specifics.
+
 Syntax example: 
 
 ``` sql
