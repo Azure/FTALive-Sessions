@@ -14,7 +14,9 @@ Azure SQL is a family of managed, secure, and intelligent products that use the 
 ## Choosing a target
 When picking a target, it's critical to consider vendor support, compatibility, features, performance and many other factors. To compare Azure SQL versions please see this [comparison table](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/feature-comparison-of-azure-sql-database-azure-sql-managed/ba-p/3154789).</br>
 One of the important factors to consider is Total Cost of Ownership (TCO) and what level of control is required or desired. The below table illustrates the shared responsibility model for Azure SQL.
+
 ![](/images/SQLFamily_IAAS_PAAS.png)
+
 ---
 ## Additional Information 
   * [Azure SQL DB](https://docs.microsoft.com/en-us/azure/azure-sql/database/)

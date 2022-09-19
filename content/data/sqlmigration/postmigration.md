@@ -1,6 +1,6 @@
 # Post Migration
 
-#### [prev](./migrationexecution.md) | [home](./readme.md)  | [next](./qna.md)
+#### [prev](./migrationexecution.md) | [home](./readme.md)  | [next](./QnA.md)
 
 ## Initial Tasks
 Congratulations on completing the migration! But the work is not finished yet..
