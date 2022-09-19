@@ -10,7 +10,7 @@ Congratulations on completing the migration! But the work is not finished yet..
 1. **Optimize for cost** through right-sizing and scaling up/down through automation
 1. **Enable additional features** many of which are only available in Azure!
 
-<!--
+
 ## Best Practices
 <table border="10" >
   <tbody >
@@ -105,7 +105,7 @@ Congratulations on completing the migration! But the work is not finished yet..
 ## **Sample Datasets**
 - [Sample Databases](https://docs.microsoft.com/en-us/sql/samples/sql-samples-where-are?view=sql-server-ver16)
 - [Public Datasets](https://docs.microsoft.com/en-us/azure/azure-sql/public-data-sets?view=azuresql)
--->
+
 
 ## **Stay Updated**
 - [Latest Updates](https://azure.microsoft.com/en-us/updates/)
