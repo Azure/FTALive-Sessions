@@ -9,7 +9,7 @@ Some documentation links are highlighted with icons
 | Icon | Description |
 |:--|:--|
 | 📖 | Bookmark-worthy references, tables, etc. |
-| 💭 | Great Docs for helping you design your ADO organization and model |
+| 🤔 | Guidance to help you plan and design your ADO organization and operating model |
 
 ### Microsoft Learn - Learning Paths
 
@@ -22,7 +22,7 @@ Resources for absolute beginners.
 
 ### Azure Architecture Center
 
-- [Azure-Architecture Center: End-to-end governance in Azure when using CI/CD](https://docs.microsoft.com/azure/architecture/example-scenario/governance/end-to-end-governance-in-azure) 💭 - _preview diagram below_
+- [Azure-Architecture Center: End-to-end governance in Azure when using CI/CD](https://docs.microsoft.com/azure/architecture/example-scenario/governance/end-to-end-governance-in-azure) 🤔 - _preview diagram below_
 - [GitHub.com - Governance on Azure Demo - from DevOps to ARM](https://github.com/azure/devops-governance) - _repo that accompanies that Architecture Center article_
 
 <img src="https://raw.githubusercontent.com/Azure/devops-governance/main/images/e2e-governance-overview.svg" width="640" alt="Azure Architect Center - E2E Governance">
@@ -40,12 +40,12 @@ Resources for absolute beginners.
 #### Azure DevOps Organizations
 
 - [Manage your organizations](https://docs.microsoft.com/azure/devops/organizations/accounts/organization-management?view=azure-devops)
-- [Plan your organizational structure](https://docs.microsoft.com/azure/devops/user-guide/plan-your-azure-devops-org-structure?toc=%2Fazure%2Fdevops%2Forganizations%2Ftoc.json&bc=%2Fazure%2Fdevops%2Forganizations%2Fbreadcrumb%2Ftoc.json&view=azure-devops) 💭
+- [Plan your organizational structure](https://docs.microsoft.com/azure/devops/user-guide/plan-your-azure-devops-org-structure?toc=%2Fazure%2Fdevops%2Forganizations%2Ftoc.json&bc=%2Fazure%2Fdevops%2Forganizations%2Fbreadcrumb%2Ftoc.json&view=azure-devops) 🤔
 - [Restrict organization creation via Azure AD tenant policy](https://docs.microsoft.com/azure/devops/organizations/accounts/azure-ad-tenant-policy-restrict-org-creation?view=azure-devops)
 
 #### Azure DevOps Projects
 
-- [How many projects do you need?](https://docs.microsoft.com/azure/devops/user-guide/plan-your-azure-devops-org-structure?view=azure-devops#how-many-projects-do-you-need) 💭
+- [How many projects do you need?](https://docs.microsoft.com/azure/devops/user-guide/plan-your-azure-devops-org-structure?view=azure-devops#how-many-projects-do-you-need) 🤔
 - [Default permissions quick reference for Azure DevOps](https://docs.microsoft.com/azure/devops/organizations/security/permissions-access?toc=%2Fazure%2Fdevops%2Fget-started%2Ftoc.json&bc=%2Fazure%2Fdevops%2Fget-started%2Fbreadcrumb%2Ftoc.json&view=azure-devops) 📖
 
 #### Azure DevOps Repositories
