@@ -10,6 +10,9 @@ The serverless SQL pool also enables you to read the data stored in Delta Lake f
 
 Delta Lake is an open-source storage layer that brings ACID (atomicity, consistency, isolation, and durability) transactions to Apache Spark and big data workloads. The current version of Delta Lake included with Azure Synapse has language support for Scala, PySpark, and .NET. It is not on the scope of this presentation to deep dive on the Delta specifics.
 
+The core idea of Delta Lake is simple: information about which objects are part of a Delta table are maintaned in an ACID manner, using a write-ahead log
+that is itself stored in the cloud object store. Based on this transactional design,  it is possible to  add multiple features in Delta Lake that are not available in traditional cloud data lakes like: Time travel to let users query point-in-time snapshots, UPSERT, DELETE and MERGE operations.
+
 Syntax example: 
 
 ``` sql
@@ -116,6 +119,8 @@ Some of the limtiations are listed here, be sure you review them before build yo
 - [ ] Currently, both the Spark pool and serverless SQL pool in Azure Synapse Analytics support Delta Lake format. Serverless SQL pools do not support updating Delta Lake files. Only tables in Parquet format are shared from Spark pools to a serverless SQL pool. For more information, see Shared Spark tables.
 
 ##### Reference:
+
+[Home | Delta Lake](https://delta.io/)
 
 [Query Delta Lake format using serverless SQL pool - Azure Synapse Analytics | Microsoft Docs](https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/query-delta-lake-format#query-partitioned-data)
 
