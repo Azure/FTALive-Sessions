@@ -182,3 +182,5 @@ SELECT * FROM DBO.population
 [FilePath and FileName | Microsoft Docs](https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/query-specific-files#filename)
 
 [MSI | Microsoft Docs](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/how-manage-user-assigned-managed-identities?pivots=identity-mi-methods-azp)
+
+[Best practices for serverless SQL pool - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/best-practices-serverless-sql-pool)
