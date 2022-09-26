@@ -127,3 +127,5 @@ Some of the limtiations are listed here, be sure you review them before build yo
 [Synapse/SampleDB.sql at main · Azure-Samples/Synapse (github.com)](https://github.com/Azure-Samples/Synapse/blob/main/SQL/Samples/LdwSample/SampleDB.sql)
 
 [Spark notebook can read data from SQL pool (microsoft.com)](https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/query-serverless-sql-pool-from-an-apache-spark-scala-notebook/ba-p/2250968)
+
+[Create and use views in serverless SQL pool - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/create-use-views#delta-lake-views)
