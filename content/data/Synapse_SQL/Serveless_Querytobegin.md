@@ -236,6 +236,32 @@ GO
 SELECT * FROM DBO.population 
 
 
+
+--===============================================================
+--Stats -- External tables
+--===============================================================
+DROP STATISTICS population.population_stat_country_name
+DROP STATISTICS population.population_stat_country_code
+DROP STATISTICS population.population_stat_year
+DROP STATISTICS population.population_stat_population
+
+CREATE STATISTICS population_stat_country_name
+    on population (country_name )
+    WITH FULLSCAN, NORECOMPUTE
+
+CREATE STATISTICS population_stat_country_code
+    on population (country_code )
+    WITH FULLSCAN, NORECOMPUTE
+
+    
+CREATE STATISTICS population_stat_year
+    on population (year )
+    WITH FULLSCAN, NORECOMPUTE
+
+CREATE STATISTICS population_stat_population
+    on population (population )
+    WITH FULLSCAN, NORECOMPUTE
+--===============================================================
 ```
 
 
