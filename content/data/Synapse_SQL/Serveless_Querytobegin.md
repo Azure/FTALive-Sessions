@@ -264,6 +264,32 @@ CREATE STATISTICS population_stat_population
 --===============================================================
 ```
 
+#### File path and Filename 
+
+Data is often organized in partitions. You can instruct serverless SQL pool to query particular folders and files. Doing so reduces the number of files and the amount of data the query needs to read and process. An added bonus is that you'll achieve better performance.
+
+```
+SELECT  r.filepath()
+
+FROM 
+OPENROWSET(
+  BULK (
+  'https://azureopendatastorage.blob.core.windows.net/censusdatacontainer/release/*/*/*.parquet'  )
+  , FORMAT='PARQUET'
+ )AS [r]  
+ GROUP BY r.filepath();
+----------------------------------------------------------
+ SELECT
+  cto.filename() AS [filename]
+  ,COUNT_BIG(*) AS [rows]
+FROM 
+  OPENROWSET(
+    BULK 'https://azureopendatastorage.blob.core.windows.net/censusdatacontainer/release/us_population_county/year=2010/*.parquet',
+    FORMAT='PARQUET'
+  ) cto
+GROUP BY cto.filename();
+```
+
 
 
 ##### Reference:
@@ -281,3 +307,5 @@ CREATE STATISTICS population_stat_population
 [Best practices for serverless SQL pool - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/best-practices-serverless-sql-pool)
 
 [Create and update statistics using Azure Synapse SQL resources - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/develop-tables-statistics#statistics-in-serverless-sql-pool)
+
+[Using file metadata in queries - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/query-specific-files)
