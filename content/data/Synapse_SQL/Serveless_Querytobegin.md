@@ -128,7 +128,7 @@ Example:
 
 *Note: CSV sampling does not work at this time, only FULLSCAN is supported for CSV.*
 
-```
+``` sql
 
 EXEC sys.sp_drop_openrowset_statistics N'SELECT 
     year
@@ -268,9 +268,8 @@ CREATE STATISTICS population_stat_population
 
 Data is often organized in partitions. You can instruct serverless SQL pool to query particular folders and files. Doing so reduces the number of files and the amount of data the query needs to read and process. An added bonus is that you'll achieve better performance.
 
-```
+``` sql
 SELECT  r.filepath()
-
 FROM 
 OPENROWSET(
   BULK (
