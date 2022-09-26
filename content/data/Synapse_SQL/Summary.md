@@ -37,3 +37,4 @@ For more information about T-SQL feature support, please review this doc.
 
 [T-SQL feature in Synapse SQL pool - Azure Synapse Analytics | Microsoft Docs](https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/overview-features)
 
+Table reference: [Understand Synapse dedicated SQL pool (formerly SQL DW) and Serverless SQL pool - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/understand-synapse-dedicated-sql-pool-formerly-sql-dw-and/ba-p/3594628)
