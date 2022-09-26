@@ -22,6 +22,7 @@ A serverless SQL pool query reads files directly from Azure Storage. Permissions
 - **Access Control Lists (ACL)** enable you to define a fine grained [Read(R), Write(W), and Execute(X) permissions](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-access-control#levels-of-permission) on the files and directories in Azure storage. ACL can be assigned to Azure AD users. If readers want to read a file on a path in Azure Storage, they must have Execute(X) ACL on every folder in the file path, and Read(R) ACL on the file.
 - **Shared access signature (SAS)** enables a reader to access the files on the Azure Data Lake storage using the time-limited token. 
 
+
 ### Query to beginners: OpenRowset, Credentials, External tables
 
 External tables, openrowset can be used to query data on SQL Serveless Pool. Follow the most basic way to query : Openrowset
@@ -100,7 +101,6 @@ FROM OPENROWSET(
 ```
 
 
-
 #### Format files supported:
 
 You have two choices for input files that contain the target data for querying. Valid values are:
@@ -108,6 +108,75 @@ You have two choices for input files that contain the target data for querying. 
 - 'CSV' - Includes any delimited text file with row/column separators. Any character can be used as a field separator, such as TSV: FIELDTERMINATOR = tab.
 - 'PARQUET' - Binary file in Parquet format
 - 'DELTA' - A set of Parquet files organized in Delta Lake (preview) format
+
+#### Stats
+Serverless SQL pool relies on statistics to generate optimal query execution plans. Statistics are automatically created for columns in Parquet files when needed. At this moment, statistics aren't automatically created for columns in CSV files. Create statistics manually for columns that you use in queries, particularly those used in DISTINCT, JOIN, WHERE, ORDER BY, and GROUP BY
+
+When statistics are stale, new ones will be created. The algorithm goes through the data and compares it to the current state of the dataset. Manual stats are never declared stale.
+
+>  Note:
+>
+> Automatic recreation of statistics is turned on for Parquet files. For CSV files, statistics will be recreated if you use OPENROWSET. You need to drop and create statistics manually for CSV external tables. Check the examples below on how to drop and create statistics.
+
+To create statistics on a column, provide a query that returns the column for which you need statistics.
+
+By default, if you don't specify otherwise, serverless SQL pool uses 100% of the data provided in the dataset when it creates statistics.
+
+For example, to create statistics with default options (FULLSCAN) for a year column of the dataset based on the population.csv file:
+
+Example:
+
+*Note: CSV sampling does not work at this time, only FULLSCAN is supported for CSV.*
+
+```
+
+EXEC sys.sp_drop_openrowset_statistics N'SELECT 
+    year
+FROM OPENROWSET(
+    BULK ''https://pandemicdatalake.blob.core.windows.net/public/curated/covid-19/ecdc_cases/latest/ecdc_cases.csv'',
+    FORMAT = ''CSV'',
+    PARSER_VERSION = ''2.0'',
+    HEADER_ROW = TRUE)
+WITH (
+    [country_code] VARCHAR (5) COLLATE Latin1_General_BIN2,
+    [country_name] VARCHAR (100) COLLATE Latin1_General_BIN2,
+    [year] smallint,
+    [population] bigint
+) AS [r]
+'
+
+EXEC sys.sp_create_openrowset_statistics N'SELECT 
+    year
+FROM OPENROWSET(
+    BULK ''https://pandemicdatalake.blob.core.windows.net/public/curated/covid-19/ecdc_cases/latest/ecdc_cases.csv'',
+    FORMAT = ''CSV'',
+    PARSER_VERSION = ''2.0'',
+    HEADER_ROW = TRUE)
+WITH (
+    [country_code] VARCHAR (5) COLLATE Latin1_General_BIN2,
+    [country_name] VARCHAR (100) COLLATE Latin1_General_BIN2,
+    [year] smallint,
+    [population] bigint
+) AS [r]
+'
+
+SELECT 
+    year
+FROM OPENROWSET(
+    BULK 'https://pandemicdatalake.blob.core.windows.net/public/curated/covid-19/ecdc_cases/latest/ecdc_cases.csv',
+    FORMAT = ''CSV'',
+    PARSER_VERSION = ''2.0'',
+    HEADER_ROW = TRUE)
+WITH (
+    [country_code] VARCHAR (5) COLLATE Latin1_General_BIN2,
+    [country_name] VARCHAR (100) COLLATE Latin1_General_BIN2,
+    [year] smallint,
+    [population] bigint
+) AS [r]
+```
+
+
+
 
 #### External tables in dedicated SQL pool and serverless SQL pool
 
@@ -184,3 +253,5 @@ SELECT * FROM DBO.population
 [MSI | Microsoft Docs](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/how-manage-user-assigned-managed-identities?pivots=identity-mi-methods-azp)
 
 [Best practices for serverless SQL pool - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/best-practices-serverless-sql-pool)
+
+[Create and update statistics using Azure Synapse SQL resources - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/develop-tables-statistics#statistics-in-serverless-sql-pool)
