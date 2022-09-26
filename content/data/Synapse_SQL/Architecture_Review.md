@@ -77,3 +77,4 @@ In Serverless SQL Pool you could have a varied number of active queries,not a fi
 ###### Reference:
 
 [Synapse SQL architecture - Azure Synapse Analytics | Microsoft Docs](https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/overview-architecture)
+[Understand Synapse dedicated SQL pool (formerly SQL DW) and Serverless SQL pool - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/understand-synapse-dedicated-sql-pool-formerly-sql-dw-and/ba-p/3594628)
