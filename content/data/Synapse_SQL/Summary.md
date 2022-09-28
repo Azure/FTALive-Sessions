@@ -4,7 +4,7 @@
 
 ### Summary
 
-Follow a table for comparison for differences (Table 1):
+Follow a table for comparison (Table 1):
 
  
 
