@@ -37,5 +37,7 @@ https://raw.githubusercontent.com/Azure-Samples/Synapse/main/SQL/Samples/LdwSamp
 
 [Use external tables with Synapse SQL - Azure Synapse Analytics | Microsoft Docs](https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/develop-tables-external-tables?tabs=hadoop)
 
+### Let's start:
+
  [Next >](Architecture_Review.md)
 
