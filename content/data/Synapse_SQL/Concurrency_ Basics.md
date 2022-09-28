@@ -1,6 +1,6 @@
 ## Synapse SQL dedicate pool SQL Dedicated Pools ( former DW)
 
-[Home](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/Agenda.md)\- [Next >](Serveless_Querytobegin.md)
+[Back <](DW_distribution_basics.md) -[Home](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/Agenda.md)\- [>Next](Serveless_Querytobegin.md)
 
 ##### Concurrency Consideration Basics
 
