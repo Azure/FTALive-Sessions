@@ -1,5 +1,7 @@
 ## Synapse SQL dedicate pool SQL Dedicated Pools ( former DW)
 
+[Home](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/Agenda.md)\- [Next >](Serveless_Querytobegin.md)
+
 ##### Concurrency Consideration Basics
 
 CPU, memory, and IO are bundled into units of compute scale called Data Warehouse Units (DWUs). 
