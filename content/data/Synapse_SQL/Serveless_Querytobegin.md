@@ -322,3 +322,5 @@ GROUP BY cto.filename()--,  cto.filepath(1) ;
 [Create and update statistics using Azure Synapse SQL resources - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/develop-tables-statistics#statistics-in-serverless-sql-pool)
 
 [Using file metadata in queries - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/query-specific-files)
+
+[How to use OPENROWSET in serverless SQL pool - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/develop-openrowset)
