@@ -3,10 +3,11 @@
 **Presenters - FTA engineers**
 
 ​	Liliam Leme
+
 ​	Luca Ferrari
 
 
-#### What is the difference of those 2 options inside of Synapse?
+#### What is the difference of Synapse dedicated SQL pool (formerly SQL DW) and Serverless SQL pool?
 
 ##### SQL DW Architecture overview
 
@@ -20,6 +21,7 @@
 3. ​	 CETAS
 
 ##### Summary
+1. ​	 Table of comparison
 
 
 ### Audience
