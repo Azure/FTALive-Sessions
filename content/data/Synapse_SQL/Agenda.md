@@ -1,19 +1,26 @@
 # Agenda
 
-Presenters - FTA engineers
-	Liliam Leme
-	Luca Ferrari
+**Presenters - FTA engineers**
 
-Synapse SQL dedicate pool and SQL serverless pool review
+​	Liliam Leme
+​	Luca Ferrari
 
-[What is the difference of those 2 options inside of Synapse?]
 
-[SQL DW Architecture overview]
-	1.1 - Distribution keys consideration basics
-	1.2 - Concurrency consideration basics
-[SQL Serveless Architecture overview]
-	2.1 Query to beginners: OpenRowset, Credentials, External tables
-	2.2 Spark\Delta Integration overview
+#### What is the difference of those 2 options inside of Synapse?
+
+##### SQL DW Architecture overview
+
+1. ​	 Distribution keys consideration basics
+2. ​	 Concurrency consideration basics
+
+##### SQL Serveless Architecture overview
+
+1. ​	 Query to beginners: OpenRowset, Credentials, External tables
+2. ​     Spark\Delta Integration overview
+3. ​	 CETAS
+
+##### Summary
+
 
 ### Audience
 
@@ -36,6 +43,11 @@ https://raw.githubusercontent.com/Azure-Samples/Synapse/main/SQL/Samples/LdwSamp
 [Control storage account access for serverless SQL pool - Azure Synapse Analytics | Microsoft Docs](https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/develop-storage-files-storage-access-control?tabs=user-identity)
 
 [Use external tables with Synapse SQL - Azure Synapse Analytics | Microsoft Docs](https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/develop-tables-external-tables?tabs=hadoop)
+
+[Understand Synapse dedicated SQL pool (formerly SQL DW) and Serverless SQL pool - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/understand-synapse-dedicated-sql-pool-formerly-sql-dw-and/ba-p/3594628)
+
+[How to use CETAS on serverless SQL pool to improve performance and automatically recreate it - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/how-to-use-cetas-on-serverless-sql-pool-to-improve-performance/ba-p/3548040)
+
 
 ### Let's start:
 
