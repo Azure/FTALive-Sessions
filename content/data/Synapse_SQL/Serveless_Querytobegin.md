@@ -287,6 +287,20 @@ FROM
     FORMAT='PARQUET'
   ) cto
 GROUP BY cto.filename();
+
+----------------------------------------------------------
+ SELECT
+    cto.filename() AS [filename]--, cto.filepath(1)
+    ,COUNT_BIG(*) AS [rows]
+FROM  
+    OPENROWSET(
+        BULK 'https://azureopendatastorage.blob.core.windows.net/censusdatacontainer/release/us_population_county/*/*.parquet',
+        FORMAT='PARQUET'
+    ) cto
+WHERE cto.filepath(1) = 'year=2000'
+GROUP BY cto.filename()--,  cto.filepath(1) ;
+
+
 ```
 
 
