@@ -3,8 +3,7 @@
 #### What is the difference of SQL dedicate pool and SQL serverless pool options inside of Synapse?
 
 
-
-***\*[Home](../tobedefined.md)\**** - [Next >](test.md)
+****[Home](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/Agenda.md)\****- [Next >](DW_distribution_basics.md)
 
 ##### Architecture Overview
 
