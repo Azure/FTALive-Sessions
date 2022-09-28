@@ -1,6 +1,6 @@
 ## Synapse SQL serverless pool 
 
-***\*[Home](../tobedefined.md)\**** - [Next >](Concurrency_ Basics.md)
+***\*[Home](../Agenda.md)\**** - [Next >](Spark_delta_overviewmd.md)
 
 
 
