@@ -1,6 +1,6 @@
 ## Synapse SQL serverless pool and Dedicated SQL Pool Summary
 
-****[Home](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Agenda.md)\**** 
+****[Home](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/Agenda.md)\**** 
 
 As **Summary**, Table for comparison (Table 1):
 
