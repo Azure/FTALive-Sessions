@@ -2,7 +2,9 @@
 
 [Back <](SynapseCETAS.md) [Home](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/Agenda.md) 
 
-As **Summary**, Table for comparison (Table 1):
+### Summary
+
+Follow a table for comparison for differences (Table 1):
 
  
 
