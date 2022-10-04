@@ -1,4 +1,7 @@
+
 ## Synapse SQL dedicate pool SQL Dedicated Pools ( former DW)
+
+[Back < -](Architecture_Review.md)[Home](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/Agenda.md)\- [> Next](Concurrency_%20Basics.md)
 
 ##### Distribution keys consideration basics
 

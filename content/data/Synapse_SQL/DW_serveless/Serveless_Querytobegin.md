@@ -1,6 +1,6 @@
 ## Synapse SQL serverless pool 
 
-***\*[Home](../tobedefined.md)\**** - [Next >](Concurrency_ Basics.md)
+[Back <](Concurrency_%20Basics.md) -[Home](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/Agenda.md)\- [> Next](Spark_delta_overviewmd.md)
 
 
 
@@ -21,6 +21,7 @@ A serverless SQL pool query reads files directly from Azure Storage. Permissions
 - **[Role based access control (RBAC)](https://docs.microsoft.com/en-us/azure/role-based-access-control/overview)** enables you to assign a role to some Azure AD user in the tenant where your storage is placed. A reader must have `Storage Blob Data Reader`, `Storage Blob Data Contributor`, or `Storage Blob Data Owner` RBAC role on storage account. A user who writes data in the Azure storage must have `Storage Blob Data Contributor` or `Storage Blob Data Owner` role. Note that `Storage Owner` role does not imply that a user is also `Storage Data Owner`.
 - **Access Control Lists (ACL)** enable you to define a fine grained [Read(R), Write(W), and Execute(X) permissions](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-access-control#levels-of-permission) on the files and directories in Azure storage. ACL can be assigned to Azure AD users. If readers want to read a file on a path in Azure Storage, they must have Execute(X) ACL on every folder in the file path, and Read(R) ACL on the file.
 - **Shared access signature (SAS)** enables a reader to access the files on the Azure Data Lake storage using the time-limited token. 
+
 
 ### Query to beginners: OpenRowset, Credentials, External tables
 
@@ -100,7 +101,6 @@ FROM OPENROWSET(
 ```
 
 
-
 #### Format files supported:
 
 You have two choices for input files that contain the target data for querying. Valid values are:
@@ -108,6 +108,75 @@ You have two choices for input files that contain the target data for querying. 
 - 'CSV' - Includes any delimited text file with row/column separators. Any character can be used as a field separator, such as TSV: FIELDTERMINATOR = tab.
 - 'PARQUET' - Binary file in Parquet format
 - 'DELTA' - A set of Parquet files organized in Delta Lake (preview) format
+
+#### Stats
+Serverless SQL pool relies on statistics to generate optimal query execution plans. Statistics are automatically created for columns in Parquet files when needed. At this moment, statistics aren't automatically created for columns in CSV files. Create statistics manually for columns that you use in queries, particularly those used in DISTINCT, JOIN, WHERE, ORDER BY, and GROUP BY
+
+When statistics are stale, new ones will be created. The algorithm goes through the data and compares it to the current state of the dataset. Manual stats are never declared stale.
+
+>  Note:
+>
+> Automatic recreation of statistics is turned on for Parquet files. For CSV files, statistics will be recreated if you use OPENROWSET. You need to drop and create statistics manually for CSV external tables. Check the examples below on how to drop and create statistics.
+
+To create statistics on a column, provide a query that returns the column for which you need statistics.
+
+By default, if you don't specify otherwise, serverless SQL pool uses 100% of the data provided in the dataset when it creates statistics.
+
+For example, to create statistics with default options (FULLSCAN) for a year column of the dataset based on the population.csv file:
+
+Example:
+
+*Note: CSV sampling does not work at this time, only FULLSCAN is supported for CSV.*
+
+``` sql
+
+EXEC sys.sp_drop_openrowset_statistics N'SELECT 
+    year
+FROM OPENROWSET(
+    BULK ''https://pandemicdatalake.blob.core.windows.net/public/curated/covid-19/ecdc_cases/latest/ecdc_cases.csv'',
+    FORMAT = ''CSV'',
+    PARSER_VERSION = ''2.0'',
+    HEADER_ROW = TRUE)
+WITH (
+    [country_code] VARCHAR (5) COLLATE Latin1_General_BIN2,
+    [country_name] VARCHAR (100) COLLATE Latin1_General_BIN2,
+    [year] smallint,
+    [population] bigint
+) AS [r]
+'
+
+EXEC sys.sp_create_openrowset_statistics N'SELECT 
+    year
+FROM OPENROWSET(
+    BULK ''https://pandemicdatalake.blob.core.windows.net/public/curated/covid-19/ecdc_cases/latest/ecdc_cases.csv'',
+    FORMAT = ''CSV'',
+    PARSER_VERSION = ''2.0'',
+    HEADER_ROW = TRUE)
+WITH (
+    [country_code] VARCHAR (5) COLLATE Latin1_General_BIN2,
+    [country_name] VARCHAR (100) COLLATE Latin1_General_BIN2,
+    [year] smallint,
+    [population] bigint
+) AS [r]
+'
+
+SELECT 
+    year
+FROM OPENROWSET(
+    BULK 'https://pandemicdatalake.blob.core.windows.net/public/curated/covid-19/ecdc_cases/latest/ecdc_cases.csv',
+    FORMAT = ''CSV'',
+    PARSER_VERSION = ''2.0'',
+    HEADER_ROW = TRUE)
+WITH (
+    [country_code] VARCHAR (5) COLLATE Latin1_General_BIN2,
+    [country_name] VARCHAR (100) COLLATE Latin1_General_BIN2,
+    [year] smallint,
+    [population] bigint
+) AS [r]
+```
+
+
+
 
 #### External tables in dedicated SQL pool and serverless SQL pool
 
@@ -167,6 +236,71 @@ GO
 SELECT * FROM DBO.population 
 
 
+
+--===============================================================
+--Stats -- External tables
+--===============================================================
+DROP STATISTICS population.population_stat_country_name
+DROP STATISTICS population.population_stat_country_code
+DROP STATISTICS population.population_stat_year
+DROP STATISTICS population.population_stat_population
+
+CREATE STATISTICS population_stat_country_name
+    on population (country_name )
+    WITH FULLSCAN, NORECOMPUTE
+
+CREATE STATISTICS population_stat_country_code
+    on population (country_code )
+    WITH FULLSCAN, NORECOMPUTE
+
+    
+CREATE STATISTICS population_stat_year
+    on population (year )
+    WITH FULLSCAN, NORECOMPUTE
+
+CREATE STATISTICS population_stat_population
+    on population (population )
+    WITH FULLSCAN, NORECOMPUTE
+--===============================================================
+```
+
+#### File path and Filename 
+
+Data is often organized in partitions. You can instruct serverless SQL pool to query particular folders and files. Doing so reduces the number of files and the amount of data the query needs to read and process. An added bonus is that you'll achieve better performance.
+
+``` sql
+SELECT  r.filepath()
+FROM 
+OPENROWSET(
+  BULK (
+  'https://azureopendatastorage.blob.core.windows.net/censusdatacontainer/release/*/*/*.parquet'  )
+  , FORMAT='PARQUET'
+ )AS [r]  
+ GROUP BY r.filepath();
+----------------------------------------------------------
+ SELECT
+  cto.filename() AS [filename]
+  ,COUNT_BIG(*) AS [rows]
+FROM 
+  OPENROWSET(
+    BULK 'https://azureopendatastorage.blob.core.windows.net/censusdatacontainer/release/us_population_county/year=2010/*.parquet',
+    FORMAT='PARQUET'
+  ) cto
+GROUP BY cto.filename();
+
+----------------------------------------------------------
+ SELECT
+    cto.filename() AS [filename]--, cto.filepath(1)
+    ,COUNT_BIG(*) AS [rows]
+FROM  
+    OPENROWSET(
+        BULK 'https://azureopendatastorage.blob.core.windows.net/censusdatacontainer/release/us_population_county/*/*.parquet',
+        FORMAT='PARQUET'
+    ) cto
+WHERE cto.filepath(1) = 'year=2000'
+GROUP BY cto.filename()--,  cto.filepath(1) ;
+
+
 ```
 
 
@@ -182,3 +316,11 @@ SELECT * FROM DBO.population
 [FilePath and FileName | Microsoft Docs](https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/query-specific-files#filename)
 
 [MSI | Microsoft Docs](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/how-manage-user-assigned-managed-identities?pivots=identity-mi-methods-azp)
+
+[Best practices for serverless SQL pool - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/best-practices-serverless-sql-pool)
+
+[Create and update statistics using Azure Synapse SQL resources - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/develop-tables-statistics#statistics-in-serverless-sql-pool)
+
+[Using file metadata in queries - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/query-specific-files)
+
+[How to use OPENROWSET in serverless SQL pool - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/develop-openrowset)
