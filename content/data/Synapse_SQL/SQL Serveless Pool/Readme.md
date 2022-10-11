@@ -4,11 +4,11 @@
 
  
 
-SQL serverless pool user case scenario and best practices
+Serverless SQL pool user case scenario and best practices
 
  
 
-SQL Serverless Pool Architecture overview:
+Serverless SQL Pool Architecture overview:
 
 -  OpenRowset,     External tables, Credentials
 -  Metadata     exploration, Spark integration and concurrency
@@ -25,7 +25,7 @@ SQL Serverless Pool Architecture overview:
 
  
 
-SQL Serveless pool examples and docs:
+Serveless SQL pool examples and docs:
 
  [https://raw.githubusercontent.com/Azure-Samples/Synapse/main/SQL/Samples/LdwSample/SampleDB.sqlhttps://docs.microsoft.com/en-us/azure/synapse-analytics/sql/query-delta-lake-format#query-partitioned-data](https://raw.githubusercontent.com/Azure-Samples/Synapse/main/SQL/Samples/LdwSample/SampleDB.sqlhttps:/docs.microsoft.com/en-us/azure/synapse-analytics/sql/query-delta-lake-format#query-partitioned-data)
 
