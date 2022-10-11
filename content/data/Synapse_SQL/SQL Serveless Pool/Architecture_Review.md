@@ -21,8 +21,7 @@ With decoupled storage and compute, when using Synapse SQL one can benefit from 
 
 Serverless SQL pool allows you to query your data lake files, while dedicated SQL pool allows you to query and ingest data from your data lake files.
 
-![image-20221011133751346](C:\Users\lilem\AppData\Roaming\Typora\typora-user-images\image-20221011133751346.png)
-
+![image](https://user-images.githubusercontent.com/62876278/195101572-25795a60-977b-49ee-b3cb-dc9fe0539051.png)
 
 
  
