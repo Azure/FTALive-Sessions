@@ -60,9 +60,9 @@ The following example shows how you can query csv files.
 
 A serverless SQL pool in Azure Synapse Analytics enables you to read UTF-8 encoded text as VARCHAR columns and this is the most optimal approach for representing UTF-8 data. But you need to be careful to avoid conversion errors that might be caused by wrong collations on VARCHAR columns. 
 
-<!--Note:  When HEADER_ROW = TRUE is specified: The engine read column names from the first row, and skip this row for inferencing column types (since it's always strings). After t100 rows it will try to infer schema from that data. So if there is conversation error it will not show promptly.--> 
-                ref: https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/always-use-utf-8-collations-to-read-utf-8-text-in-serverless-sql/ba-p/1883633
-          
+ref: https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/always-use-utf-8-collations-to-read-utf-8-text-in-serverless-sql/ba-p/1883633
+
+*Note:  When HEADER_ROW = TRUE is specified: The engine read column names from the first row, and skip this row for inferencing column types (since it's always strings). After 100 rows it will try to infer schema from that data. So if there is conversation error it will not show promptly.* 
 
 ```
 SELECT
@@ -76,7 +76,7 @@ FROM
        ) as rows
 ```
 
-This example will throw an error, if the header_row is uncomment it will not show it promptly.
+This example (above) will throw an error, if the header_row is in use it will not show it promptly as mentioned on the NOTE.
 
 CSV example:
 
