@@ -2,7 +2,7 @@
 
 ***\*[Home](Serveless_architc.md)\**** - [Next >](SynapseCETAS.md)
 
-#### Basics
+### Query Basics
 
 #### Permissions required
 
