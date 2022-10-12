@@ -37,7 +37,7 @@ We spoke about [Microsoft Defender for Cloud](https://docs.microsoft.com/en-gb/a
     *   [Defender for Storage](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-storage-introduction)
     *   [Defender for Key Vault](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-key-vault-introduction)
 *   We also mentioned that you can integrate with [Defender for Endpoint](https://docs.microsoft.com/en-us/azure/security-center/security-center-wdatp)  for advanced threat protection detection and response capabilities.
-*   For downstream integration into other tools, you can use [the continuous export capability](https://docs.microsoft.com/en-us/azure/security-center/continuous-export?tabs=azure-portal) in Security Center, and stream the events, alerts and recommendations to an Event Hub or to a Log Analytics workspace.
+*   For downstream integration into other tools, you can use [the continuous export capability](https://docs.microsoft.com/en-us/azure/security-center/continuous-export?tabs=azure-portal) in Defender for Cloud, and stream the events, alerts and recommendations to an Event Hub or to a Log Analytics workspace.
 * Defender for Cloud generates alerts for resources deployed on your Azure, on-premises, and hybrid cloud environments. Read more:
     * [Security alerts and incidents in Microsoft Defender for Cloud](https://docs.microsoft.com/en-us/azure/defender-for-cloud/alerts-overview)
     * [Security alerts - a reference guide](https://docs.microsoft.com/en-us/azure/defender-for-cloud/alerts-reference)
