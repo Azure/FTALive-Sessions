@@ -42,6 +42,7 @@ Resources for absolute beginners.
 - [Manage your organizations](https://docs.microsoft.com/azure/devops/organizations/accounts/organization-management?view=azure-devops)
 - [Plan your organizational structure](https://docs.microsoft.com/azure/devops/user-guide/plan-your-azure-devops-org-structure?toc=%2Fazure%2Fdevops%2Forganizations%2Ftoc.json&bc=%2Fazure%2Fdevops%2Forganizations%2Fbreadcrumb%2Ftoc.json&view=azure-devops) 🤔
 - [Restrict organization creation via Azure AD tenant policy](https://docs.microsoft.com/azure/devops/organizations/accounts/azure-ad-tenant-policy-restrict-org-creation?view=azure-devops)
+- [Permission States](https://learn.microsoft.com/en-us/azure/devops/organizations/security/about-permissions?view=azure-devops&tabs=preview-page#permission-states) 📖 - be aware that "not set" is an implicit *deny*.
 
 #### Azure DevOps Projects
 
@@ -59,3 +60,18 @@ Resources for absolute beginners.
 - [Add & use variable groups](https://docs.microsoft.com/azure/devops/pipelines/library/variable-groups?view=azure-devops&tabs=yaml)
 - [Set different levels of pipeline permissions](https://docs.microsoft.com/azure/devops/pipelines/policies/permissions?view=azure-devops#set-service-connection-permissions)
 - [Securing Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/security/overview?view=azure-devops) 
+
+---
+
+## Security Exploits Slide
+
+Important: this is a sample and not an exhaustive list. It is included here for reference.
+
+
+| | Thinking | Exploit | Response |
+|:--|:--|:--|:--|
+| 1 | Devs have no access to production (ARM) | Trigger Production Pipeline from CI Platform | Configure CI Platform Pipeline Permissions (queue build, run workflow) |
+| 2 | Devs cannot trigger pipelines | Push to production branch | Configure Git Repo Branch Protection |
+| 3 | Devs cannot push to production branch | Merge own Pull Requests | Configure Pull Request & Merge Requirements |
+| 4 | Fine with diff. credentials for diff. environments | Reference production credentials from development Pipeline (as Code) | Lock Credentials to specific branches |
+| 5 | You don’t have access to my pipelines | Fork a Repo and Create Pull Request with destructive code | Disable Access to Credentials from Forks |
