@@ -5,7 +5,7 @@ SSH_KEY=$(cat ~/.ssh/id_rsa.pub)
 # 1. Kubenet CNI (Container Network Interface) cluster
 ######################################################
 
-RG_NAME='1-kubenet-cluster-rg'
+RG_NAME='001-kubenet-cluster-rg'
 az group create -n $RG_NAME --location $LOCATION
 
 az network vnet create \
@@ -39,7 +39,7 @@ kubectl debug node/$NODE_NAME -it --image=mcr.microsoft.com/dotnet/runtime-deps:
 ######################################################
 # 2. Azure CNI cluster
 ######################################################
-RG_NAME='2-cni-cluster-rg'
+RG_NAME='002-cni-cluster-rg'
 az group create -n $RG_NAME --location $LOCATION
 
 az network vnet create -g $RG_NAME --name 'cni-vnet' --address-prefixes '192.168.0.0/16' --subnet-name 'cni-subnet' --subnet-prefix '192.168.1.0/24'
@@ -58,7 +58,7 @@ az aks get-credentials -g $RG_NAME -n 'cni-cluster' --admin
 ###########################################################################
 # 3. Azure CNI cluster with dynamic IP allocation & enhanced subnet support
 ###########################################################################
-RG_NAME='3-cni-dyn-subnet-cluster-rg'
+RG_NAME='003-cni-dyn-subnet-cluster-rg'
 az group create -n $RG_NAME --location $LOCATION
 
 # Create vnet & 2 subnets
@@ -83,7 +83,7 @@ az aks get-credentials -g $RG_NAME -n 'cni-dyn-subnet-cluster' --admin
 ######################
 # 4. Private cluster
 ######################
-RG_NAME='4-private-cluster-rg'
+RG_NAME='004-private-cluster-rg'
 az group create -n $RG_NAME --location $LOCATION
 
 az network vnet create \
@@ -117,7 +117,7 @@ az aks get-credentials -g $RG_NAME -n 'private-cluster' --admin
 ################################
 
 PREFIX="egress"
-RG_NAME="5-${PREFIX}-rg"
+RG_NAME="005-${PREFIX}-rg"
 LOCATION="australiaeast"
 PLUGIN=azure
 AKSNAME="${PREFIX}-cluster"
@@ -220,7 +220,7 @@ curl http://$FWPUBLIC_IP
 ################################
 # 6. Managed NAT Gateway egress
 ################################
-RG_NAME='6-nat-gwy-cluster-rg'
+RG_NAME='006-nat-gwy-cluster-rg'
 az group create -n $RG_NAME --location $LOCATION
 
 az aks create \
@@ -236,7 +236,7 @@ az aks get-credentials -g $RG_NAME -n 'nat-gwy-cluster' --admin
 ################################
 # 7. Ingress with NGINX
 ################################
-RG_NAME='7-nginx-cluster-rg'
+RG_NAME='007-nginx-cluster-rg'
 az group create -n $RG_NAME --location $LOCATION
 
 az aks create \
@@ -269,7 +269,7 @@ EXTERNAL_IP=$(k get svc ingress-nginx-controller -n ingress-basic -o json | jq .
 #####################################
 # 8. Ingress with private NGINX IP
 #####################################
-RG_NAME='8-internal-nginx-cluster-rg'
+RG_NAME='008-internal-nginx-cluster-rg'
 az group create -n $RG_NAME --location $LOCATION
 
 az network vnet create -g $RG_NAME -n 'internal-nginx-vnet' \
@@ -321,7 +321,7 @@ kubectl run -it aks-ingress-test --image=mcr.microsoft.com/dotnet/runtime-deps:6
 ################################
 # 9. External ingress with AGIC
 ################################
-RG_NAME='9-app-gateway-ingress-controller-cluster-rg'
+RG_NAME='009-app-gateway-ingress-controller-cluster-rg'
 az group create -n $RG_NAME --location $LOCATION
 
 az aks create -n 'agic-cluster' -g $RG_NAME --network-plugin azure --enable-managed-identity \
@@ -335,7 +335,7 @@ kubectl get ingress
 ######################
 # Network policies
 #######################
-RG_NAME='10-network-policy-cluster-rg'
+RG_NAME='010-network-policy-cluster-rg'
 az group create -n $RG_NAME --location $LOCATION
 
 az aks create \
@@ -387,7 +387,7 @@ kubectl exec -n demo -it pod/client -- bash
 #######################
 # Service Mesh
 #######################
-RG_NAME='11-osm-cluster-rg'
+RG_NAME='011-osm-cluster-rg'
 az group create -n $RG_NAME --location $LOCATION
 
 az aks create \
