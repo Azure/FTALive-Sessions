@@ -1,9 +1,9 @@
 LOCATION='australiaeast'
 SSH_KEY=$(cat ~/.ssh/id_rsa.pub)
 
-######################################################
-# 1. Kubenet CNI (Container Network Interface) cluster
-######################################################
+#########################################################
+# 1 - Kubenet CNI (Container Network Interface) cluster
+#########################################################
 
 RG_NAME='001-kubenet-cluster-rg'
 az group create -n $RG_NAME --location $LOCATION
@@ -36,9 +36,9 @@ kubectl debug node/$NODE_NAME -it --image=mcr.microsoft.com/dotnet/runtime-deps:
 # $ uname -r # get kernel details
 # $ chroot /host # interact with node session
 
-######################################################
-# 2. Azure CNI cluster
-######################################################
+###############################
+# 2 - Azure CNI cluster
+###############################
 RG_NAME='002-cni-cluster-rg'
 az group create -n $RG_NAME --location $LOCATION
 
@@ -56,7 +56,7 @@ az aks create -g $RG_NAME -n 'cni-cluster' \
 az aks get-credentials -g $RG_NAME -n 'cni-cluster' --admin
 
 ###########################################################################
-# 3. Azure CNI cluster with dynamic IP allocation & enhanced subnet support
+# 3 - Azure CNI cluster with dynamic IP allocation & enhanced subnet support
 ###########################################################################
 RG_NAME='003-cni-dyn-subnet-cluster-rg'
 az group create -n $RG_NAME --location $LOCATION
@@ -81,7 +81,7 @@ az aks create \
 az aks get-credentials -g $RG_NAME -n 'cni-dyn-subnet-cluster' --admin
 
 ######################
-# 4. Private cluster
+# 4 - Private cluster
 ######################
 RG_NAME='004-private-cluster-rg'
 az group create -n $RG_NAME --location $LOCATION
@@ -113,7 +113,7 @@ az aks create \
 az aks get-credentials -g $RG_NAME -n 'private-cluster' --admin
 
 ################################
-# 5. Egress controlled cluster
+# 5 - Egress controlled cluster
 ################################
 
 PREFIX="egress"
@@ -218,7 +218,7 @@ az network firewall nat-rule create \
 curl http://$FWPUBLIC_IP
 
 ################################
-# 6. Managed NAT Gateway egress
+# 6 - Managed NAT Gateway egress
 ################################
 RG_NAME='006-nat-gwy-cluster-rg'
 az group create -n $RG_NAME --location $LOCATION
@@ -234,7 +234,7 @@ az aks create \
 az aks get-credentials -g $RG_NAME -n 'nat-gwy-cluster' --admin
 
 ################################
-# 7. Ingress with NGINX
+# 7 - Ingress with NGINX
 ################################
 RG_NAME='007-nginx-cluster-rg'
 az group create -n $RG_NAME --location $LOCATION
@@ -267,7 +267,7 @@ EXTERNAL_IP=$(k get svc ingress-nginx-controller -n ingress-basic -o json | jq .
 # $ curl -L http://$EXTERNAL_IP
 
 #####################################
-# 8. Ingress with private NGINX IP
+# 8 - Ingress with private NGINX IP
 #####################################
 RG_NAME='008-internal-nginx-cluster-rg'
 az group create -n $RG_NAME --location $LOCATION
@@ -318,9 +318,9 @@ kubectl apply -f ./hello-world-ingress.yaml
 
 kubectl run -it aks-ingress-test --image=mcr.microsoft.com/dotnet/runtime-deps:6.0 --namespace ingress-basic
 
-################################
-# 9. External ingress with AGIC
-################################
+##################################
+# 9 - External ingress with AGIC
+##################################
 RG_NAME='009-app-gateway-ingress-controller-cluster-rg'
 az group create -n $RG_NAME --location $LOCATION
 
@@ -332,9 +332,9 @@ az aks get-credentials -g $RG_NAME -n 'agic-cluster' --admin
 kubectl apply -f ./agic-app.yaml
 kubectl get ingress
 
-######################
-# Network policies
-#######################
+#########################
+# 10 - Network policies
+#########################
 RG_NAME='010-network-policy-cluster-rg'
 az group create -n $RG_NAME --location $LOCATION
 
@@ -385,7 +385,7 @@ kubectl exec -n demo -it pod/client -- bash
 # $ /agnhost connect <server-ip>:80 --timeout=3s --protocol=tcp 
 
 #######################
-# Service Mesh
+# 11 - Service Mesh
 #######################
 RG_NAME='011-osm-cluster-rg'
 az group create -n $RG_NAME --location $LOCATION
@@ -457,10 +457,230 @@ kubectl patch meshconfig osm-mesh-config -n kube-system -p '{"spec":{"traffic":{
 # books being stolen should now stop
 kubectl apply -f ./osm-policy-deny-bookthief.yaml
 
-##########################
-# External components
-##########################
+##############################
+# 12 - ACR Private Endpoints
+##############################
+RG_NAME='012-acr-cluster-rg'
+az group create -n $RG_NAME --location $LOCATION
+ACR_NAME='acrcluster228f0r720'
 
-## Private Endpoints
-## ACR
-## KeyVault CSI
+az network vnet create \
+    -g $RG_NAME \
+    -n 'acr-vnet' \
+    --address-prefixes '192.168.0.0/16' \
+    --subnet-name 'pe-subnet' \
+    --subnet-prefix '192.168.1.0/24'
+
+SUBNET_ID=$(az network vnet subnet show \
+    -g $RG_NAME \
+    --vnet-name 'acr-vnet' \
+    -n 'pe-subnet' \
+    --query id -o tsv)
+
+az network vnet subnet update \
+ --name 'pe-subnet' \
+ --vnet-name 'acr-vnet' \
+ --resource-group $RG_NAME \
+ --disable-private-endpoint-network-policies
+
+# create ACR
+az acr create -n $ACR_NAME -g $RG_NAME --sku premium
+
+az network private-dns zone create \
+  --resource-group $RG_NAME \
+  --name "privatelink.azurecr.io"
+
+az network private-dns link vnet create \
+  --resource-group $RG_NAME \
+  --zone-name "privatelink.azurecr.io" \
+  --name 'acr-dns-link' \
+  --virtual-network 'acr-vnet' \
+  --registration-enabled false
+
+REGISTRY_ID=$(az acr show -n $ACR_NAME -g $RG_NAME --query 'id' --output tsv)
+
+az network private-endpoint create \
+    --name 'acr-pe' \
+    --resource-group $RG_NAME \
+    --vnet-name 'acr-vnet' \
+    --subnet 'pe-subnet' \
+    --private-connection-resource-id $REGISTRY_ID \
+    --group-ids registry \
+    --connection-name 'acr-pe-cxn'
+
+NETWORK_INTERFACE_ID=$(az network private-endpoint show \
+  --name 'acr-pe' \
+  --resource-group $RG_NAME \
+  --query 'networkInterfaces[0].id' \
+  --output tsv)
+
+REGISTRY_PRIVATE_IP=$(az network nic show \
+  --ids $NETWORK_INTERFACE_ID \
+  --query "ipConfigurations[?privateLinkConnectionProperties.requiredMemberName=='registry'].privateIpAddress" \
+  --output tsv)
+
+DATA_ENDPOINT_PRIVATE_IP=$(az network nic show \
+  --ids $NETWORK_INTERFACE_ID \
+  --query "ipConfigurations[?privateLinkConnectionProperties.requiredMemberName=='registry_data_$LOCATION'].privateIpAddress" \
+  --output tsv)
+
+# An FQDN is associated with each IP address in the IP configurations
+REGISTRY_FQDN=$(az network nic show \
+  --ids $NETWORK_INTERFACE_ID \
+  --query "ipConfigurations[?privateLinkConnectionProperties.requiredMemberName=='registry'].privateLinkConnectionProperties.fqdns" \
+  --output tsv)
+
+DATA_ENDPOINT_FQDN=$(az network nic show \
+  --ids $NETWORK_INTERFACE_ID \
+  --query "ipConfigurations[?privateLinkConnectionProperties.requiredMemberName=='registry_data_$LOCATION'].privateLinkConnectionProperties.fqdns" \
+  --output tsv)
+
+az network private-dns record-set a create \
+  --name $ACR_NAME \
+  --zone-name privatelink.azurecr.io \
+  --resource-group $RG_NAME
+
+# Specify registry region in data endpoint name
+az network private-dns record-set a create \
+  --name ${ACR_NAME}.${LOCATION}.data \
+  --zone-name privatelink.azurecr.io \
+  --resource-group $RG_NAME
+
+az network private-dns record-set a add-record \
+  --record-set-name $ACR_NAME \
+  --zone-name privatelink.azurecr.io \
+  --resource-group $RG_NAME \
+  --ipv4-address $REGISTRY_PRIVATE_IP
+
+# Specify registry region in data endpoint name
+az network private-dns record-set a add-record \
+  --record-set-name ${ACR_NAME}.${LOCATION}.data \
+  --zone-name privatelink.azurecr.io \
+  --resource-group $RG_NAME \
+  --ipv4-address $DATA_ENDPOINT_PRIVATE_IP
+
+az aks create -n 'acr-cluster' -g $RG_NAME --generate-ssh-keys --attach-acr $ACR_NAME
+
+#####################
+# 13 - KeyVault CSI
+#####################
+RG_NAME='013-akv-csi-cluster-rg'
+KV_NAME='akvcsi42398g398'
+UAMI='akv-csi-identity'
+serviceAccountName="workload-identity-sa"  # sample name; can be changed
+serviceAccountNamespace="default" # can be changed to namespace of your workload
+federatedIdentityName="aksfederatedidentity" # can be changed as needed
+
+# add preview Az CLI extension
+az feature register --namespace "Microsoft.ContainerService" --name "EnableWorkloadIdentityPreview"
+az feature list -o table --query "[?contains(name, 'Microsoft.ContainerService/EnableWorkloadIdentityPreview')].{Name:name,State:properties.state}"
+az provider register -n Microsoft.ContainerService
+az extension add --name aks-preview
+
+az group create -n $RG_NAME --location $LOCATION
+
+az aks create -n 'akv-csi-cluster' -g $RG_NAME \
+    --enable-addons azure-keyvault-secrets-provider \
+    --enable-managed-identity \
+    --enable-oidc-issuer \
+    --enable-workload-identity
+
+# get kube config
+az aks get-credentials -g $RG_NAME -n 'akv-csi-cluster' --admin
+
+kubectl get pods -n kube-system -l 'app in (secrets-store-csi-driver, secrets-store-provider-azure)'
+
+az keyvault create -n $KV_NAME -g $RG_NAME -l $LOCATION
+az keyvault secret set --vault-name $KV_NAME -n secret1 --value MyAKSExampleSecret
+
+# install Workload Identity
+az identity create --name $UAMI --resource-group $RG_NAME
+USER_ASSIGNED_CLIENT_ID="$(az identity show -g $RG_NAME --name $UAMI --query 'clientId' -o tsv)"
+IDENTITY_TENANT=$(az aks show --name 'akv-csi-cluster' --resource-group $RG_NAME --query identity.tenantId -o tsv)
+
+az keyvault set-policy -n $KV_NAME --key-permissions get --spn $USER_ASSIGNED_CLIENT_ID
+az keyvault set-policy -n $KV_NAME --secret-permissions get --spn $USER_ASSIGNED_CLIENT_ID
+az keyvault set-policy -n $KV_NAME --certificate-permissions get --spn $USER_ASSIGNED_CLIENT_ID
+
+AKS_OIDC_ISSUER="$(az aks show --resource-group $RG_NAME --name 'akv-csi-cluster' --query "oidcIssuerProfile.issuerUrl" -o tsv)"
+echo $AKS_OIDC_ISSUER
+
+cat <<EOF | kubectl apply -f -
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  annotations:
+    azure.workload.identity/client-id: ${USER_ASSIGNED_CLIENT_ID}
+  labels:
+    azure.workload.identity/use: "true"
+  name: ${serviceAccountName}
+  namespace: ${serviceAccountNamespace}
+EOF
+
+az identity federated-credential create \
+    --name $federatedIdentityName \
+    --identity-name $UAMI \
+    --resource-group $RG_NAME \
+    --issuer ${AKS_OIDC_ISSUER} \
+    --subject system:serviceaccount:${serviceAccountNamespace}:${serviceAccountName}
+
+cat <<EOF | kubectl apply -f -
+# This is a SecretProviderClass example using workload identity to access your key vault
+apiVersion: secrets-store.csi.x-k8s.io/v1
+kind: SecretProviderClass
+metadata:
+  name: azure-kvname-workload-identity # needs to be unique per namespace
+spec:
+  provider: azure
+  parameters:
+    usePodIdentity: "false"
+    useVMManagedIdentity: "false"          
+    clientID: "${USER_ASSIGNED_CLIENT_ID}" # Setting this to use workload identity
+    keyvaultName: ${KV_NAME}       # Set to the name of your key vault
+    cloudName: ""                         # [OPTIONAL for Azure] if not provided, the Azure environment defaults to AzurePublicCloud
+    objects:  |
+      array:
+        - |
+          objectName: secret1
+          objectType: secret              # object types: secret, key, or cert
+          objectVersion: ""               # [OPTIONAL] object versions, default to latest if empty
+        - |
+          objectName: key1
+          objectType: key
+          objectVersion: ""
+    tenantId: "${IDENTITY_TENANT}"        # The tenant ID of the key vault
+EOF
+
+cat <<EOF | kubectl apply -n $serviceAccountNamespace -f -
+# This is a sample pod definition for using SecretProviderClass and the user-assigned identity to access your key vault
+kind: Pod
+apiVersion: v1
+metadata:
+  name: busybox-secrets-store-inline-user-msi
+spec:
+  serviceAccountName: ${serviceAccountName}
+  containers:
+    - name: busybox
+      image: k8s.gcr.io/e2e-test-images/busybox:1.29-1
+      command:
+        - "/bin/sleep"
+        - "10000"
+      volumeMounts:
+      - name: secrets-store01-inline
+        mountPath: "/mnt/secrets-store"
+        readOnly: true
+  volumes:
+    - name: secrets-store01-inline
+      csi:
+        driver: secrets-store.csi.k8s.io
+        readOnly: true
+        volumeAttributes:
+          secretProviderClass: "azure-kvname-workload-identity"
+EOF
+
+## show secrets held in secrets-store
+kubectl exec busybox-secrets-store-inline-user-msi -- ls /mnt/secrets-store/
+
+## print a test secret 'ExampleSecret' held in secrets-store
+kubectl exec busybox-secrets-store-inline-user-msi -- cat /mnt/secrets-store/ExampleSecret
+
