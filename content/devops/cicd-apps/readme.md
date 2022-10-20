@@ -6,9 +6,16 @@ _This handout was prepared in advance and generic. Actual session content may di
 
 ## Learn DevOps on MS Learn Platform
 
+### MS Learn Modules
+
+[Microsoft Learn and Search for “DevOps” and “DevOps Engineer” Role](https://docs.microsoft.com/learn/browse/?terms=devops&roles=devops-engineer)
+
+<img src="./images/mslearn-devops.png" alt="Search Results for 'DevOps'" width="500">
+
+### Hands on Labs
+
 - [Azure DevOps Labs](https://azuredevopslabs.com/) - hands on step by step Labs for both Azure DevOps and GitHub, including pipelines
-- [Microsoft Learn and Search for “DevOps” and “DevOps Engineer” Role](https://docs.microsoft.com/learn/browse/?terms=devops&roles=devops-engineer)
-  <img src="./images/mslearn-devops.png" alt="Search Results for 'DevOps'" width="500">
+- [Parts Unlimited Demo](https://microsoft.github.io/PartsUnlimited/) - sample website and pipelines with step-by-step labs.
 
 ## DevOps Workflow
 
