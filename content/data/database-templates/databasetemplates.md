@@ -22,4 +22,4 @@ Azure Synapse database templates enable data integration based on industry stand
 ![](/images/databasetemplates.png)
 
 ## Azure Synapse database templates features
-![](/images/databasetemplates_features.png)
+![](/images/databaseTemplates_features.png)

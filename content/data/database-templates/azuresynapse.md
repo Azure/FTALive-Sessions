@@ -1,4 +1,4 @@
-# Wrap up- Azure Synapse Analytics
+# Wrap up - Azure Synapse Analytics
 
 #### [prev](./introduction.md) | [home](./readme.md)  | [next](./databasetemplates.md)
 
@@ -9,4 +9,4 @@
 *  [Working with your Data Lake](https://learn.microsoft.com/en-us/azure/synapse-analytics/overview-what-is#working-with-your-data-lake)
 *  [Built-in data integration](https://learn.microsoft.com/en-us/azure/synapse-analytics/overview-what-is#built-in-data-integration)
 
-![](/images/databaseTEmplates_azureSynapse.png)
+![](/images/databaseTemplates_azureSynapse.png)
