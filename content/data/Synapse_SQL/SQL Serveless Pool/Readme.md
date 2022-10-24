@@ -8,7 +8,7 @@ Serverless SQL pool user case scenario and best practices
 
  
 
-Serverless SQL  Pool Architecture overview:
+Serverless SQL  Pool Architecture overview - Liliam
 
 - OpenRowset, External tables, Credentials (Stijn)
 	- Parquet Vs CSV
