@@ -1,6 +1,6 @@
 # Business Case for AMS
 
-#### [prev](./azuremonitor.md) | [home](./introduction.md)  | [next](./amsarchitecture.md)
+#### [prev](./azuremonitor.md) | [home](./readme.md)  | [next](./amsarchitecture.md)
 
 
 ## SAP BASIS Team
