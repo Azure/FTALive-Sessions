@@ -1,6 +1,6 @@
 # Understanding how Azure Monitor works
 
-#### [prev](./introduction.md) | [home](./introduction.md)  | [next](./businesscase.md)
+#### [prev](./introduction.md) | [home](./readme.md)  | [next](./businesscase.md)
 
 ## How does Azure Monitor work?
 It all starts with collecting telemetry. Azure Monitor can collect data from Application, Network, Infrastructure and you can also ingest your own custom data. All the data is stored in centralized, fully managed logs and metrics stores.
