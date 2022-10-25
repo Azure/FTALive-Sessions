@@ -3,11 +3,14 @@
 #### [prev](./azuremonitor.md) | [home](./readme.md)  | [next](./amsarchitecture.md)
 
 
+![](/content/sap-on-azure/images/businesscase.png) </br></br>
+
+
 ## SAP BASIS Team
 
-* Sees end-to-end SAP system & application telemetry at one place in Azure Portal​
+* Sees end-to-end SAP system & application telemetry at one place in Azure Portal
 
-* Drills down and correlates telemetry across different stacks​
+* Drills down and correlates telemetry across different stacks
 
 * Sets alerts
 
@@ -17,9 +20,9 @@
 
 ## Infrastructure Team
 
-* Sees end-to-end infrastructure & SAP system telemetry at one place in Azure Portal​
+* Sees end-to-end infrastructure & SAP system telemetry at one place in Azure Portal
 
-* Figures out whether issues are on infrastructure or SAP layer​
+* Figures out whether issues are on infrastructure or SAP layer
 
 
 
