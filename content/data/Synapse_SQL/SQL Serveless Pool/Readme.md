@@ -18,7 +18,7 @@ Serverless SQL  Pool Architecture overview - Liliam
 
 - Partition Elimination (Luca)
 	- FilePath and FileName
-- Metadata exploration, Spark integration and concurrency (Liliam)
+- Metadata exploration, Spark integration(Liliam)
 	- Querying Delta files
 - Monitoring
 
