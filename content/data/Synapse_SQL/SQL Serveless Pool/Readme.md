@@ -8,14 +8,18 @@ Serverless SQL pool user case scenario and best practices
 
  
 
-Serverless SQL  Pool Architecture overview:
+Serverless SQL  Pool Architecture overview - Liliam
 
-- OpenRowset, External tables, Credentials
+- OpenRowset, External tables, Credentials (Stijn)
 	- Parquet Vs CSV
+	- Anatomy of Parquet
 	- Statistics
 	- CETAS
-- Metadata exploration, Spark integration and concurrency
-- Querying Delta files
+
+- Partition Elimination (Luca)
+	- FilePath and FileName
+- Metadata exploration, Spark integration(Liliam)
+	- Querying Delta files
 - Monitoring
 
  

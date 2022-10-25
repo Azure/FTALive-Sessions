@@ -10,15 +10,20 @@
 
 ## Agenda
 
-Serverless SQL  Pool Architecture overview:
+Serverless SQL Pool Architecture overview 
 
-- OpenRowset, External tables, Credentials
-	- Parquet Vs CSV
-	- Statistics
-	- CETAS
-- Metadata exploration, Spark integration and concurrency
-- Querying Delta files
-- Monitoring
+OpenRowset, External tables, Credentials 
+	Parquet Vs CSV
+	Anatomy of Parquet
+	Statistics
+	CETAS
+	
+Partition Elimination 
+	FilePath and FileName
+
+Metadata exploration, Spark integration
+	Querying Delta files
+Monitoring
 
 **Audience**
 
