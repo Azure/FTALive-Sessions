@@ -2,13 +2,7 @@
 
 ***\*[Home](../tobedefined.md)\**** - [Next >](TBD.md)
 
-**What is Delta?**
 
-Delta lake is an open-source storage framework that enables building a Lakehouse Architecture. Delta Lake is simple: Information about which objects are part of a Delta table is maintained in an ACID manner, using a write-ahead log that is itself stored in the cloud object store. The objects themselves are encoded in Parquet. Delta lake is becoming increasingly popular and you can use it inside of your Synapse Workspace.
-
-Ref: [Home | Delta Lake](https://delta.io/)
-
- 
 
 **What is Time travel using Delta?**
 
@@ -95,28 +89,6 @@ SELECT     TOP 100 *
 
 FROM OPENROWSET(  BULK 'https://Storage.blob.core.windows.net/Container/sqlserverlessanalitics/FactCurrencyRate_join/Timetravel',         
 FORMAT = 'Delta'     ) AS [result]
-```
-
- **Creating Delta Tables**
-
-There is a service inside of the Serverless SQL Pool that ensures the metadata sync with Spark, hence external tables created and managed on the Lake database are also made available as external tables with the same name in the corresponding synchronized database in the Serverless SQL pool. Therefore, Spark and Serverless SQL Pool are integrated and you can use it to create Delta tables and expose them to Analysis Services, Power BI, or any other tool connected to Serverless SQL Pool.
-
-Ref: [Shared metadata tables - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/metadata/table)
-
- 
-
-For Example, I am reading the files from my folder which contains a set parquet with information of FactCurrencyRate - called FactCurrencyRate_Parquet, and then I save them as Delta Table on the Lake Database Default:
-
-  
-
-```
-df = spark.read\ 
-
-.format('delta')\ 
-
- .load("/sqlserverlessanalitics/FactCurrencyRate_Parquet") 
-
-df.write.format("delta").mode("overwrite").saveAsTable("default.FactCurrencyRate_join")
 ```
 
  **Conclusion:**
