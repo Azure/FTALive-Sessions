@@ -1,6 +1,6 @@
 # Features
 
-#### [prev](./amsarchitecture.md) | [home](./introduction.md)  | [next](./availability&pricing.md)
+#### [prev](./amsarchitecture.md) | [home](./readme.md)  | [next](./availability&pricing.md)
 
 * Azure-native monitoring tool built on top of Azure Monitor
 
