@@ -2,7 +2,7 @@
 
 #### [prev](./features.md) | [home](./introduction.md)  | [next](./providers.md)
 
-![image](https://user-images.githubusercontent.com/102125916/197125717-8f1ddd31-18d7-418e-90fc-9f0574ec9758.png)
+![image](/content/sap-on-azure/images/availability.png)
 
 ** **More regions to be added in future** **
 
