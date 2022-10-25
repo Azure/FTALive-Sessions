@@ -1,6 +1,6 @@
 # Introduction
 
-#### [prev](./introduction.md) | [home](./introduction.md)  | [next](./azuremonitor.md)
+#### [prev](./introduction.md) | [home](./readme.md)  | [next](./azuremonitor.md)
 
 
 ## What is this session about
