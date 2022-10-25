@@ -24,4 +24,4 @@ Provider contains the connection information for a corresponding component and h
 
 ## Metrics available for each provider
 
-![image](https://user-images.githubusercontent.com/102125916/197125052-a4c78269-64b8-4b11-8ae7-9e3246642747.png)
+![](/content/sap-on-azure/images/metrics.png)
