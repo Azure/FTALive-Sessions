@@ -2,7 +2,7 @@
 
 #### [prev](./businesscase.md) | [home](./readme.md)  | [next](./features.md)
 
-![image](https://user-images.githubusercontent.com/102125916/197119980-2e2acd96-2bc1-487f-8c9b-525acc67948e.png)
+![image](/content/sap-on-azure/images/amsarchitecture.png)
 
 
 
