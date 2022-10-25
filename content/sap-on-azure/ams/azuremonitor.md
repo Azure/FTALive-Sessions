@@ -5,7 +5,7 @@
 ## How does Azure Monitor work?
 It all starts with collecting telemetry. Azure Monitor can collect data from Application, Network, Infrastructure and you can also ingest your own custom data. All the data is stored in centralized, fully managed logs and metrics stores.
 
-
+![](/content/sap-on-azure/images/azuremonitor.png) </br></br>
 
 So what can you do with all the data: </br></br>
 
