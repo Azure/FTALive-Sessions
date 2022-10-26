@@ -2,16 +2,19 @@
 
 #### [prev](./businesscase.md) | [home](./readme.md)  | [next](./features.md)
 
-![image](/content/sap-on-azure/images/amsarchitecture.png)
+The following diagram describes, how Azure Monitor for SAP solutions collects data using azure functions with the help of different providers.
 
-
+<br>
+<p align="center">
+<img src="/content/sap-on-azure/images/amsarchitecture.png" width="60%" height="60%">
+</p>
 
 
 * The architecture is **multi-instance**. You can monitor multiple instances of a given component type across multiple SAP systems (SID) within a virtual network with a single resource of AMS. For example, you can monitor HANA databases, high availability (HA) clusters, Microsoft SQL server, SAP NetWeaver, etc.
 
 * The architecture is **multi-provider**. The architecture diagram shows the SAP HANA provider as an example. Similarly, you can configure more providers for corresponding components to collect data from those components. For example, HANA DB, HA cluster, Microsoft SQL server, and SAP NetWeaver.
 
-* The architecture has an extensible query framework. Write [SQL queries to collect data in JSON]([https://github.com/Azure/AzureMonitorForSAPSolutions/blob/master/sapmon/content/SapHana.json](https://github.com/Azure/AzureMonitorForSAPSolutions/blob/master/sapmon/content/SapHana.json)). Easily add more SQL queries to collect other data.
+* The architecture has an extensible query framework. Write [SQL queries to collect data in JSON](https://github.com/Azure/AzureMonitorForSAPSolutions/blob/master/sapmon/content/SapHana.json). Easily add more SQL queries to collect other data.
 
 ## The key components of the architecture are
 
