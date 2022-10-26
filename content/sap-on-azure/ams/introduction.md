@@ -7,7 +7,7 @@
 
 
 * **Who:** This session is meant for Customers/Partners/Engineers who wish to use deploy Azure Monitor for SAP (AMS) solutions to monitor SAP Workloads in their Azure environment.
-* **What**: The session is a walk-through **Azure Monitor for SAP (AMS) solutions** and how to setup for monitoring SAP workloads in Azure.
+* **What**: The session is a walk-through **Azure Monitor for SAP (AMS) solutions** and how to setup  monitoring for SAP workloads in Azure.
 * **When**: We conduct these sessions regularly based on customer demand. 
 * **Where**: These sessions are offered as part of 'FTA Live' and delivered virtually. To learn when this session will next be delivered and for a full catalogue of FTA Live sessions please visit [aka.ms/ftalive](https://aka.ms/ftalive).
 * **Why**: Azure Monitor for SAP (AMS) provides end-to-end telemetry for SAP in Azure Portal using Azure native monitoring tool built on top of [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/overview). </br>
