@@ -2,9 +2,9 @@
 
 ***\*[Home](../tobedefined.md)\**** 
 
-**Monitoring options:**
+#### **Monitoring options:**
 
-**Log analytics**
+##### **Log analytics**
 
 Natively speaking you can use log analytics to monitor the following on Serverless SQL Pool:
 
@@ -29,7 +29,7 @@ Using those metrics you can measure the bytes processed per query and even manag
 
 [Azure Monitor Logs reference - SynapseBuiltinSqlPoolRequestsEnded | Microsoft Learn](https://learn.microsoft.com/en-us/azure/azure-monitor/reference/tables/synapsebuiltinsqlpoolrequestsended)
 
-**DMVs**
+##### **DMVs**
 
 In terms of overall performance you can use SQL DMVs to monitor the environment:
 
