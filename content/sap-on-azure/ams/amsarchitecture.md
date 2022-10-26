@@ -2,7 +2,7 @@
 
 #### [prev](./businesscase.md) | [home](./readme.md)  | [next](./features.md)
 
-The following diagram describes, how Azure Monitor for SAP solutions collects data using azure functions with the help of different providers.
+The following diagram describes, how **Azure Monitor for SAP (AMS) solutions** collects data using azure functions with the help of different providers.
 
 <br>
 <p align="center">
