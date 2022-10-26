@@ -19,13 +19,13 @@ Provider contains the connection information for a corresponding component and h
 
 * HA Provider
 
-* Linux OS
+* Linux OS - SUSE & RHEL
 
 
 ## Metrics available for each provider
 
 <br>
 <p align="center">
-<img src="/content/sap-on-azure/images/metrics.png" width="60%" height="60%">
+<img src="/content/sap-on-azure/images/metrics.png" width="90%" height="90%">
 </p>
 <br>
