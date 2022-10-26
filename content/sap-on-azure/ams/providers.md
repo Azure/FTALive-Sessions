@@ -28,3 +28,4 @@ Provider contains the connection information for a corresponding component and h
 <p align="center">
 <img src="/content/sap-on-azure/images/metrics.png" width="60%" height="60%">
 </p>
+<br>
