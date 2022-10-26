@@ -28,7 +28,10 @@
 2. Provide the input as shown in the image below to configure HANA provider.
 3. For HA systems, IP address of Standard ILB can be used so that failover scenarios are monitored. 
 
-![](/content/sap-on-azure/images/hanaprovider.png)
+<br>
+<p align="center">
+<img src="/content/sap-on-azure/images/hanaprovider.png" width="50%" height="50%">
+</p>
 
 
 ## Provider type: MS SQL Server
@@ -38,7 +41,11 @@
 3. Create a dedicated user for the database SID as described in [MS Docs](https://learn.microsoft.com/en-us/azure/virtual-machines/workloads/sap/configure-sql-server-azure-monitor-sap-solutions#configure-sql-server).
 4. Configure MS SQL Provider in AMS as shown below.
 
-![](/content/sap-on-azure/images/mssprovider.png)
+<br>
+<p align="center">
+<img src="/content/sap-on-azure/images/mssprovider.png" width="50%" height="50%">
+</p>
+
 
 ## Provider type: High Availability cluster (Pacemaker)
 
@@ -49,8 +56,11 @@
 2. Configure High Availability cluster (pacemaker) provider for each node as mentioned in [MS Docs](https://learn.microsoft.com/en-us/azure/virtual-machines/workloads/sap/configure-ha-cluster-azure-monitor-sap-solutions#create-provider-for-azure-monitor-for-sap-solutions)
 3. Each node have to be added separately into High Availability cluster (pacemaker) provider.
 
+<br>
+<p align="center">
+<img src="/content/sap-on-azure/images/hacluster.png" width="50%" height="50%">
+</p>
 
-![](/content/sap-on-azure/images/hacluster.png)
 
 ## Provider type: OS Linux
 
