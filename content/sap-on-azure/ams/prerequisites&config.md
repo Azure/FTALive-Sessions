@@ -1,6 +1,6 @@
 # Provider Configuration Prerequisites
 
-#### [prev](./providers.md) | [home](./introduction.md)  | [next](./introduction.md)
+#### [prev](./providers.md) | [home](./introduction.md)
 
 ## Provider type: SAP NetWeaver
 
