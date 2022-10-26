@@ -2,6 +2,9 @@
 
 #### [prev](./amsarchitecture.md) | [home](./readme.md)  | [next](./availability&pricing.md)
 
+**Azure Monitor for SAP (AMS)** solutions can be used to collect data from Azure infrastructure and databases in one central location. Then, you can visually correlate the data for faster troubleshooting. Some of the other features are listed below:
+
+
 * Azure-native monitoring tool built on top of Azure Monitor
 
 * End-to-end telemetry for SAP in Azure Portal
@@ -18,7 +21,7 @@
 
 * Connect monitoring data with ticketing systems
 
-* Integration with ACSS
+* Integration with Azure managed Grafana Instance
 
 * Flexible data retention period
 
