@@ -15,7 +15,7 @@ Provider contains the connection information for a corresponding component and h
 
 * SAP HANA
 
-* IB Db2
+* IBM Db2
 
 * HA Provider
 
