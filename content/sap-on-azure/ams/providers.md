@@ -24,4 +24,7 @@ Provider contains the connection information for a corresponding component and h
 
 ## Metrics available for each provider
 
-![](/content/sap-on-azure/images/metrics.png)
+<br>
+<p align="center">
+<img src="/content/sap-on-azure/images/metrics.png" width="60%" height="60%">
+</p>
