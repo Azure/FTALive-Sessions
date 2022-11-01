@@ -29,7 +29,7 @@ _This handout was prepared in advance and generic. Actual session content may di
 - [GitFlow (2010)](https://nvie.com/posts/a-successful-git-branching-model/) - the first, but not a standard
 - [GitHub Flow (2011)](https://guides.github.com/introduction/flow/) - start simple
 - [Gitlab Flow (2014)](https://docs.gitlab.com/ee/topics/gitlab_flow.html) - building on simple
-- [ Trunk based development](https://trunkbaseddevelopment.com) - for both small and large teams
+- [Trunk based development](https://trunkbaseddevelopment.com) - for both small and large teams
 - [Patterns for Managing Source Code Branches (2020)](https://martinfowler.com/articles/branching-patterns.html) - team experiences and what happens when you apply _all_ the Best Practices
 - [Azure Docs - Adopt a Git branching strategy](https://docs.microsoft.com/azure/devops/repos/git/git-branching-guidance?view=azure-devops)
 - [Patterns for Managing Source Code Branches](https://martinfowler.com/articles/branching-patterns.html) - indepth article by Martin Fowler
