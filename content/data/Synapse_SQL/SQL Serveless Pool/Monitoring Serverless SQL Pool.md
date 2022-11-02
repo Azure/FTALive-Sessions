@@ -1,8 +1,8 @@
-## Monitoring Serverless SQL Pool 
+## Synapse Serverless SQL pool 
 
-***\*[Home](../tobedefined.md)\**** 
+[Back<](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/SQL%20Serveless%20Pool/Delta_timetravel_serveless.md) -[Home](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/SQL%20Serveless%20Pool/Agenda_serveless.md)
 
-#### **Monitoring options:**
+#### **Monitoring Serveless SQL Pool:**
 
 ##### **Log analytics**
 
@@ -35,22 +35,22 @@ In terms of overall performance you can use SQL DMVs to monitor the environment:
 
 For example, you can monitor the requests using  : 
 
-```
-select * from sys.dm_exec_requests
+```sql
+SELECT * FROM sys.dm_exec_requests
 ```
 
 Monitor the sessions:
 
-```applescript
- select * from sys.dm_exec_sessions 
+```sql
+ SELECT * FROM sys.dm_exec_sessions 
 ```
 
 
 
 Open sessions per program, database:
 
-```
-select
+```sql
+SELECT
 
   DB_NAME(database_id) as DBName, 
 
@@ -66,7 +66,7 @@ select
 
   COUNT(*) AS NB_Connections
 
-from sys.dm_exec_sessions
+FROM sys.dm_exec_sessions
 
 GROUP BY DB_NAME(database_id) , 
 
@@ -85,22 +85,22 @@ GROUP BY DB_NAME(database_id) ,
 
 Cross the requests with sessions and SQl text:
 
-```applescript
-	SELECT * FROM 
-    sys.dm_exec_requests req
-    CROSS APPLY sys.dm_exec_sql_text(sql_handle) sqltext
-    JOIN sys.dm_exec_sessions s ON req.session_id = s.session_id
+```sql
+SELECT * FROM 
+    sys.dm_exec_requests req 
+CROSS APPLY sys.dm_exec_sql_text(sql_handle) sqltext
+JOIN sys.dm_exec_sessions s 
+ON req.session_id = s.session_id
 ```
 
 
 
 Check the history of the executions:
 
-```
+```sql
 SELECT  * 
-
-FROM sys.dm_exec_requests_history req where transaction_ID = 23022567
-
+FROM sys.dm_exec_requests_history req 
+WHERE transaction_ID = 23022567
 Order by data_processed_mb desc
 
 
