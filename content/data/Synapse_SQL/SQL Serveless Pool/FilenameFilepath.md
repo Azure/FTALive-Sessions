@@ -1,6 +1,6 @@
-## Synapse SQL serverless pool 
+## Synapse Serverless SQL pool 
 
-***\*[Home](../tobedefined.md)\**** 
+[Back<](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/SQL%20Serveless%20Pool/Agenda_serveless.md) -[Home](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/SQL%20Serveless%20Pool/Agenda_serveless.md)\- [>Next ](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/SQL%20Serveless%20Pool/SQL%20serverless%20pool%20and%20Spark%20Integration.md)
 
 ### FileName and FilePath 
 
@@ -77,6 +77,9 @@ ORDER BY
     filepath;
 ```
 
-Reference:
+### Partition Elimination
+The usage of those functions with a partition set of folders enables serverless SQL Pool the possibility of using partition elemination to optimize the query results. Partition elimination means the optimizer will use the query filter to eliminate the partitions that do not satisfy it in early stages of the query and it will keep only the ones that has the results corresponding to the predicate.
+
+#### Reference:
 
 [Using file metadata in queries - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/query-specific-files)
