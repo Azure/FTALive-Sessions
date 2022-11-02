@@ -49,11 +49,12 @@ df.printSchema()
 Suppose I increased by "mistake" a few times the *AverageRate* values and now I need to travel back in time to bring back the last valid value before I changed. Following the code to travel in time based on the checkpoint where the information was in the state before the changes, which in my example is **"2022-09-16 08:41:00".** If you want to list the last checkpoint and versions, follow the code example. Fig 2 shows the results, and Fig 3 checkpoints illustration: 
 
 ```
-from delta.tables import * deltaTable = DeltaTable.forPath(spark, "/sqlserverlessanalitics/FactCurrencyRate_join/") 
+from delta.tables 
+import * deltaTable = DeltaTable.forPath(spark, "/sqlserverlessanalitics/FactCurrencyRate_join/") 
 
 latestHistory = deltaTable.history(); 
 
- latestHistory.show(10)    
+latestHistory.show(10)    
 ```
 
 
@@ -84,7 +85,7 @@ df_read.write.mode("overwrite").format("delta").save("/sqlserverlessanalitics/Fa
 
   
 
-```
+```sql
 SELECT     TOP 100 * 
 
 FROM OPENROWSET(  BULK 'https://Storage.blob.core.windows.net/Container/sqlserverlessanalitics/FactCurrencyRate_join/Timetravel',         
