@@ -1,6 +1,6 @@
-## Serverless SQL Pool and Delta time travel
+## Synapse Serverless SQL pool 
 
-***\*[Home](../tobedefined.md)\**** - [Next >](TBD.md)
+[Back<](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/SQL%20Serveless%20Pool/SQL%20serverless%20pool%20and%20Spark%20Integration.md) -[Home](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/SQL%20Serveless%20Pool/Agenda_serveless.md)\- [>Next](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/SQL%20Serveless%20Pool/Monitoring%20Serverless%20SQL%20Pool.md)
 
 
 
@@ -14,7 +14,7 @@ Use time travel to let users query point-in-time snapshots or roll back erroneou
 
  
 
-The solution is very simple. The plan is to export a point in time to recover a change in a transaction. The steps are to be executed in an environment you already set up the Delta files.
+For example. The plan here is to export a point in time to recover a change in a transaction. The steps are to be executed in an environment you already set up the Delta files.
 
 Following the steps.
 
