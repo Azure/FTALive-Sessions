@@ -25,7 +25,7 @@ For example:
 
 2. Run this select using Serverless SQL Pool ( SQL Script from Synapse Studio)
 
-```
+```sql
 SELECT TOP (100) [DateID]
                 ,[MedallionID]
                 ,[HackneyLicenseID]
@@ -74,7 +74,7 @@ Delta lake is an open-source storage framework that enables building a Lakehouse
 
 Syntax example: 
 
-```
+```sql
 SELECT TOP 10 *
 FROM OPENROWSET(
     BULK 'https://sqlondemandstorage.blob.core.windows.net/delta-lake/folder/',
