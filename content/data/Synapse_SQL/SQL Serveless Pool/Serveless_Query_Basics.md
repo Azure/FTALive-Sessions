@@ -23,7 +23,7 @@ OPENROWSET function in Synapse SQL reads the content of the file(s) from a data 
 
 Syntax Example:
 
-```
+```sql
 SELECT *
 FROM OPENROWSET(BULK 'http://<storage account>.dfs.core.windows.net/container/folder/*.parquet',
                 FORMAT = 'PARQUET') AS [file]
@@ -44,7 +44,7 @@ Example:
 
 The following example shows how you can use multiple file/folder paths in BULK parameter:
 
-```
+```sql
 
 SELECT   TOP 10 *
 FROM 
@@ -65,7 +65,7 @@ ref: https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/always-
 
 *Note:  When HEADER_ROW = TRUE is specified: The engine read column names from the first row, and skip this row for inferencing column types (since it's always strings). After 100 rows it will try to infer schema from that data. So if there is conversation error it will not show promptly.* 
 
-```
+```sql
 SELECT
    ProductKey, OrderDateKey,DueDateKey
 FROM
@@ -81,7 +81,7 @@ This example (above) will throw an error, if the header_row is in use it will no
 
 CSV example:
 
-```
+```sql
 
 
 --The following example reads CSV file that contains header row without specifying column names and data types:
@@ -143,7 +143,7 @@ Example:
 
 *Note: CSV sampling does not work at this time, only FULLSCAN is supported for CSV.*
 
-```
+```sql
 EXEC sys.sp_drop_openrowset_statistics N'SELECT 
     year
 FROM OPENROWSET(
@@ -201,7 +201,7 @@ Example:
 
 https://raw.githubusercontent.com/Azure-Samples/Synapse/main/SQL/Samples/LdwSample/SampleDB.sql
 
-```
+```sql
 --- SCOPED CREDENTIAL
 CREATE DATABASE SCOPED CREDENTIAL [sqlondemand]
 WITH IDENTITY='SHARED ACCESS SIGNATURE',  
