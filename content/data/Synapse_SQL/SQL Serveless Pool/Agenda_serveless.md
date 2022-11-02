@@ -1,3 +1,7 @@
+
+[Home](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/edit/main/content/data/Synapse_SQL/SQL%20Serveless%20Pool/Agenda_serveless.md)\- [>Next](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/SQL%20Serveless%20Pool/Architecture_Review.md)
+
+
 # Serverless SQL pool user case scenario and best practices
 
 **Presenters - FTA engineers**
@@ -60,4 +64,4 @@ https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/how-to-use-c
 
 ### Let's start:
 
- [Next >](Architecture_Review.md)
+ [Next >](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/SQL%20Serveless%20Pool/Architecture_Review.md)
