@@ -19,20 +19,22 @@ To get started, the assumption is the following:
 
 
 ### 1.1\. Pre-Migration Tasks 
-Please refer to the [Pre-Migration and Post-Migration Activities](https://github.com/Azure/FTALive-Sessions/blob/main/content/migration/server-migration/testing.md#1-pre--post--migration-activities-defined) page that should be defined before executing the test pipeline. General best practices when preparing for test migration:
+Please refer to the [Pre-Migration and Post-Migration Activities](https://github.com/Azure/FTALive-Sessions/blob/main/content/migration/server-migration/testing.md#1-pre--post--migration-activities-defined) page that should be defined before executing the test pipeline. 
 
-**Isolated VNet**
+General best practices when preparing for test migration in the outlined scenarios below include:
+
+**Performing a Test Migration on an Isolated VNet**
 - Define parameters needed for an isolated VNet implementation (i.e. CIDR block, NSG Ports that will open on the test subnet, etc.).
-- Test the connectivity in the isolated ([Guidance for identifying target VNet](https://github.com/Azure/FTALive-Sessions/blob/main/content/migration/server-migration/testing.md#23-identify-target-vnets-tests-and-migration-workflow)
+- Test the connectivity in the isolated VNet ([Guidance for identifying target VNet](https://github.com/Azure/FTALive-Sessions/blob/main/content/migration/server-migration/testing.md#23-identify-target-vnets-tests-and-migration-workflow))
 - Ensure that appropriate stakeholders are given the least privilege permissions to execute the pipelines.
-- Define Test Migration approach through waves of execution
+- Define Test Migration approach through waves of execution:
     - Understand dependencies to create migration waves/groups.
     - Define test cases.
     - Ensure Rollback plan is in place for the re-hosted VMs.
     - Make sure that test data is consistent with the data used in production.
 - Clean up test resources that were deployed in an isolated VNet.
 
-**Production VNet**
+**Performing a Test Migration in a Production VNet**
 - Define parameters needed for the production VNet
 - Plan a maintenance window to shut down on-prem workload for test migration, set up a VNet with the parameters needed for production workloads to move to Azure
 - Define test cases for the environment

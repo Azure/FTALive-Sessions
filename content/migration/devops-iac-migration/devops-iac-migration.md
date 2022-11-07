@@ -24,12 +24,12 @@ Please refer to the [Milestone: Redeployment of Migration Waves](./devops-iac-re
 ## 2 Pipeline Execution for Redeployment
 This section covers utilizing Azure Pipelines to execute Powershell scripts to create the environment to redeploy the VMs within the specified Azure environment.The implementation steps are the same for PowerShell and Bicep execution of the pipeline.
 
-> Note: Guidance for utilizing 3rd Party Orchestration Engines (Optional) can be found [here](https://github.com/Azure/fta-live-iac#other-orchestrators)
+> Note: Guidance for utilizing 3rd Party Orchestration Engines (Optional) can be found [here](https://github.com/Azure/FTALive-Sessions/tree/main/content/devops/iac#other-orchestrators)
 
 ### 2.1\. Based on the migration wave, manually fill in variables needed for the CI/CD pipeline, using the [variables.yml](../src/prod-migration/variables.yml) file as a template.
 
 #### 2.1.1\. [Bicep Implementation] Input variables for your environment in Azure DevOps under `Pipelines` > `Library`. There you will see a variable group called `bicepPipelineVariablesProd` where you can input the appropriate parameters.
-* More info on variable groups [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups?view=azure-devops&tabs=yaml).
+* More information on variable groups can be found [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups?view=azure-devops&tabs=yaml).
 
 ### 2.2\. Create a [migration-pipeline.yml](../src/prod-migration/migration-pipeline.yml) for resource execution using the templates as a starter pipeline.
 
@@ -38,7 +38,7 @@ This section covers utilizing Azure Pipelines to execute Powershell scripts to c
 ## 3 Post Go-Live 
 ### 3.1\. Post Migration activities (Optional)
 - Validate connections to the VMs that were done in the Testing Phase now that the cutover is complete
-- BCDR Considerations 
+- BCDR Considerations
     - Backup of Servers
         - Can be executed via Azure Policy with Azure Backup: 
             - [DevOps Task](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/deploy/azure-policy?view=azure-devops) 
