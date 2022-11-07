@@ -48,7 +48,7 @@ To get started, the assumption is the following:
 
 Recommended folder structure:
 
-![Migration Tree](.\src\iac-migration-folder-structure.jpg)
+![Migration Tree](./src/iac-migration-folder-structure.jpg)
 
 Details:
 - `All_Assessed_Machines.csv` and `All_Assessed_Disks.csv`: CSV files extracted from Azure Migrate Assessement excel file
