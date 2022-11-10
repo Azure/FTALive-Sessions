@@ -3,26 +3,29 @@
 Partitioning can improve scalability, reduce contention, and optimize performance. 
 It can also provide a mechanism for dividing data by usage pattern. For example, you can archive older data in cheaper data storage.
 
-## Why Partition data ?
+## Why Partitions ?
 
 - Improve performance
-  - It reduce the I/O and the cost
+    - Optimizes your per-query amount of data processed, it reduces cost and improve performance 
 - Improve Security
   - You can separate sensitive and nonsensitive data into different partitions and apply different security controls
 - Improve flexibility
   - maximize administrative efficiency. For example, you can define different strategies for management, monitoring, backup and restore and other administrative tasks based on the importance of the data in each partition.
 
+Data processed consists of the following quantities:
 
-## Partitioning data with Synapse
+- Amount of data read from storage. This amount includes:
+  - Data read while reading data.
+  - Data read while reading metadata (for file formats that contain metadata, like Parquet).
+- Amount of data in intermediate results. This data is transferred among nodes while the query runs. It  includes the data transfer to your endpoint, in an uncompressed format.
+- Amount of data written to storage. If you use CETAS to export your result set to storage, then the amount of data written out is added to the amount of data processed for the SELECT part of CETAS.
 
-Synapse Serverless SQL Pool can benefit from partitioning, it reduce the I/O and the cost($)
+The amount of data processed is rounded up to the nearest MB per query. Each query has a minimum of 10 MB of data processed.
 
-### Can Serverless SQL Pool create partitioned table ?
-
-No, you can materialize results from your queries using Serverless SQL Pool but [CREATE EXTERNAL TABLE AS SELECT](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/create-use-external-tables) only allows you to control the destination folder and not subfolders/files.
+You can instruct serverless SQL pool to query particular folders and files. Doing so reduces the number of files and the amount of data the query needs to read and process. An added bonus is that you'll achieve better performance and save money.
 
 
-### What if we use Synapse Pipeline/DataFlow or Spark ?
+### How to create partitioned table with Synapse ?
 
 Spark and ADF/Synapse pipelines with [DataFlow](https://learn.microsoft.com/en-us/azure/synapse-analytics/concepts-data-flow-overview) can be used to create partitioned data.  
 
@@ -43,6 +46,11 @@ FactInternetSalesPartitioned (Destination) = Writes data using partitions by YEA
 And this is the result
 
 ![text](.\Partitioned_Folder.png?raw=true)
+
+
+### Can Synapse Serverless SQL Pool create partitioned table ?
+
+No, you can materialize results from your queries using Serverless SQL Pool but the [CREATE EXTERNAL TABLE AS SELECT](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/create-use-external-tables) cmd only allows you to control the destination folder and not subfolders/files.
 
 
 ### Querying Partitioned data with Synapse Serverless SQL Pool
@@ -208,10 +216,11 @@ Synapse Serverless SQL Pool currently only shares managed and external Spark tab
 ### Querying Partitioned Spark table
 
 Using Spark notebook you can create a new spark table in a new Spark DB and query it from Synapse Serverless Pool.
+When you query partitioned Apache Spark for Azure Synapse tables from serverless SQL pool, the query automatically targets only the necessary files.
 
 ![text](.\SparkDb.png?raw=true)
 
-the interesting part is that you can benefit from partion elimination just filtering by fields [YEAR] and [DATE] 
+The interesting part is that you can benefit from partion elimination just filtering by fields [YEAR] and [DATE] 
 
 ``` spark
 
@@ -249,6 +258,8 @@ Select Top 10 * from [dbo].[factinternetsales_partitioned] where orderdatekey = 
 
 ### Reference:
 
+[Cost management for serverless SQL pool in Azure Synapse Analytics](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/data-processed)
+
 [Azure architecture - Data partitioning guidance](https://learn.microsoft.com/en-us/azure/architecture/best-practices/data-partitioning)
 
 [Best practices for using Data Lake G2](https://learn.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-best-practices)
@@ -260,3 +271,5 @@ Select Top 10 * from [dbo].[factinternetsales_partitioned] where orderdatekey = 
 [Shared Spark Table](https://learn.microsoft.com/en-us/azure/synapse-analytics/metadata/table)
 
 [Create and connect to Spark database with serverless SQL pool](https://learn.microsoft.com/en-us/azure/synapse-analytics/metadata/matabase#create-and-connect-to-spark-database-with-serverless-sql-pool)
+
+[Synchronize Apache Spark for Azure Synapse external table definitions in serverless SQL pool](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/develop-storage-files-spark-tables)
