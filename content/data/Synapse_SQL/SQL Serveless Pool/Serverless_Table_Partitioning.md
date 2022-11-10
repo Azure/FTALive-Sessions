@@ -1,4 +1,4 @@
-##Synapse Serverless SQL pool - Partitioned Data
+## Synapse Serverless SQL pool - Partitioned Data
 
 Partitioning can improve scalability, reduce contention, and optimize performance. 
 It can also provide a mechanism for dividing data by usage pattern. For example, you can archive older data in cheaper data storage.
