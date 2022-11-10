@@ -1,18 +1,8 @@
-## Synapse Serverless SQL pool - Partitioned Data
-
-Partitioning can improve scalability, reduce contention, and optimize performance. 
-It can also provide a mechanism for dividing data by usage pattern. For example, you can archive older data in cheaper data storage.
 
 ## Why Partitions ?
 
-- Improve performance
-    - Optimizes your per-query amount of data processed, it reduces cost and improve performance 
-- Improve Security
-  - You can separate sensitive and nonsensitive data into different partitions and apply different security controls
-- Improve flexibility
-  - maximize administrative efficiency. For example, you can define different strategies for management, monitoring, backup and restore and other administrative tasks based on the importance of the data in each partition.
-
-Data processed consists of the following quantities:
+Because it optimizes your per-query amount of data processed, it reduces cost and improve performance
+Serverless is billed based on Data processed, and Data processed consists of:
 
 - Amount of data read from storage. This amount includes:
   - Data read while reading data.
@@ -23,7 +13,6 @@ Data processed consists of the following quantities:
 The amount of data processed is rounded up to the nearest MB per query. Each query has a minimum of 10 MB of data processed.
 
 You can instruct serverless SQL pool to query particular folders and files. Doing so reduces the number of files and the amount of data the query needs to read and process. An added bonus is that you'll achieve better performance and save money.
-
 
 ### How to create partitioned table with Synapse ?
 
