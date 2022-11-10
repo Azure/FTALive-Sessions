@@ -2,11 +2,12 @@
 
 ## Overview
 
-In this session, learn about [Azure Arc-enabled servers](https://docs.microsoft.com/en-us/azure/azure-arc/servers/overview) including Deployment Approaches and how to leverage Azure Management capbilities for you non-Azure estate.
+In this session you will learn about how to manage Windows and Linux physical servers and virtual machines hosted outside of Azure, on your corporate network, or other cloud provide using [Azure Arc-enabled servers](https://docs.microsoft.com/en-us/azure/azure-arc/servers/overview). We will be showing the deployment approaches for ARC agents and also the management capabilities for your non-Azure estate. 
 
 ## Agenda
 
-* What is Azure Arc-enabled Servers?
+* [What is Azure Arc-enabled Servers?](/content/hybrid-management/arc-servers/Arc-Enabled-Servers.md)
+* [Prerequisites](https://learn.microsoft.com/en-us/azure/azure-arc/servers/plan-at-scale-deployment#prerequisites)
 * Agent onboarding
 * How to use Azure Management and Security capabilities with Arc-enabled servers
 
