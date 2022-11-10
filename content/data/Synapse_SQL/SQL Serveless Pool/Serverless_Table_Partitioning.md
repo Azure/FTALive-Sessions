@@ -1,4 +1,3 @@
-
 ## Why Partitions ?
 
 Because it optimizes your per-query amount of data processed, it reduces cost and improve performance
