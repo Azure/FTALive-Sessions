@@ -104,6 +104,11 @@ WHERE transaction_ID = 23022567
 Order by data_processed_mb desc
 
 
+
+SELECT * FROM sys.dm_external_data_processed
+
+
+
 ```
 
 **References:** 
@@ -113,5 +118,7 @@ Order by data_processed_mb desc
 [Troubleshooting SQL On-demand or Serverless DMVs - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/troubleshooting-sql-on-demand-or-serverless-dmvs/ba-p/1955869)
 
 [(3) Troubleshooting performance on serverless Synapse SQL pool using QPI library | LinkedIn](https://www.linkedin.com/pulse/troubleshooting-performance-serverless-synapse-sql-pool-jovan-popovic/)
+
+[Cost management for serverless SQL pool - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/data-processed)
 
 https://github.com/JocaPC/qpi/blob/master/src/qpi.sql 
