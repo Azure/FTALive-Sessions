@@ -155,8 +155,35 @@ GO
 In this demo we'll show you how replicated tables work and their performance impact.
 
 ``` sql
+
 /****************************************************************************************
-STEP 1 of 4 - Run this query 
+STEP 1 of 5 - Invalidating the replicated table cache
+https://docs.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/design-guidance-for-replicated-tables#what-is-a-replicated-table
+
+****************************************************************************************/
+
+IF EXISTS
+(
+	SELECT * FROM sys.pdw_replicated_table_cache_state 
+		WHERE OBJECT_NAME(object_id) IN('DimProduct','DimCustomer','DimSalesTerritory') 
+			and State = 'Ready'
+)
+BEGIN
+	--Invalidate Cache (if any)
+	UPDATE Sales.DimCustomer Set EmailAddress = '___' + EmailAddress
+	UPDATE Sales.DimCustomer Set EmailAddress = REPLACE(EmailAddress,'___','')
+	UPDATE Sales.DimProduct SET [DaysToManufacture] = [DaysToManufacture] + 1
+	UPDATE Sales.DimProduct SET [DaysToManufacture] = [DaysToManufacture] - 1
+	UPDATE Sales.DimSalesTerritory Set SalesTerritoryRegion = '___' + SalesTerritoryRegion
+	UPDATE Sales.DimSalesTerritory Set SalesTerritoryRegion = REPLACE(SalesTerritoryRegion,'___','')
+	--UPDATE Sales.DimSalesReason Set SalesReasonName = '___' + SalesReasonName
+	--UPDATE Sales.DimSalesReason Set SalesReasonName = REPLACE(SalesReasonName,'___','')
+END
+GO
+
+
+/****************************************************************************************
+STEP 2 of 5 - Run this query 
 ****************************************************************************************/
 
 SELECT
@@ -184,14 +211,14 @@ OPTION(LABEL = 'FactInternetSales - No Replicate Table Cache')
 GO
 
 /****************************************************************************************
-STEP 2 of 4 - Identify the request_id for the query and its MPP execution plan
+STEP 3 of 5 - Identify the request_id for the query and its MPP execution plan
 Multiple Broadcastmove operations are affecting performances due to Replicate table cache not available yet
 *****************************************************************************************/
 SELECT * FROM sys.dm_pdw_exec_requests WHERE [LABEL] = 'FactInternetSales - No Replicate Table Cache'
 SELECT * FROM Sys.dm_pdw_request_steps WHERE request_id = 'request_id'
 
 /****************************************************************************************
-STEP 3 of 4 - Compare this execution and its MPP plan wih the previous one
+STEP 4 of 5 - Compare this execution and its MPP plan wih the previous one
 *****************************************************************************************/
 
 SELECT
@@ -220,7 +247,7 @@ GO
 
 
 /****************************************************************************************
-STEP 4 of 4 - this execution doesn't need BroadcastMove, replicate table is in place
+STEP 5 of 5 - this execution doesn't need BroadcastMove, replicate table is in place
 *****************************************************************************************/
 
 SELECT * FROM sys.dm_pdw_exec_requests WHERE [LABEL] = 'FactInternetSales - With Replicate Table Cache'
