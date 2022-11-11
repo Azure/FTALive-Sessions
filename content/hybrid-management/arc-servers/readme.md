@@ -6,10 +6,14 @@ In this session you will learn about how to manage Windows and Linux physical se
 
 ## Agenda
 
-* [What is Azure Arc-enabled Servers?](/content/hybrid-management/arc-servers/Arc-Enabled-Servers.md)
+* [What is Azure Arc-enabled Servers?](https://learn.microsoft.com/en-us/azure/azure-arc/servers/overview)
 * [Prerequisites](https://learn.microsoft.com/en-us/azure/azure-arc/servers/plan-at-scale-deployment#prerequisites)
-* Agent onboarding
-* How to use Azure Management and Security capabilities with Arc-enabled servers
+* [Agent onboarding](https://learn.microsoft.com/en-us/azure/azure-arc/servers/deployment-options)
+* Capabilities with Arc-enabled servers
+    * [Govern](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-security-governance-and-compliance#policy-management-and-reporting)
+    * [Protect](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-security-governance-and-compliance#governance-disciplines)
+    * [Monitor](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-management-and-monitoring-arc-server#azure-monitor-requirements)
+    * [Automation](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-automation-arc-server)
 
 
 ## Learning Resources and Session Summary
