@@ -83,3 +83,5 @@ The usage of those functions with a partition set of folders enables serverless 
 #### Reference:
 
 [Using file metadata in queries - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/query-specific-files)
+
+[Synapse Serverless SQL Pool - Performance and cost optimization with partitioning - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/synapse-serverless-sql-pool-performance-and-cost-optimization/ba-p/3673286)
