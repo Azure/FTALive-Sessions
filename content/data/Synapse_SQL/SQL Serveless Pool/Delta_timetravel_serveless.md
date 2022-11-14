@@ -99,7 +99,9 @@ Delta time travel can be used inside Synapse Spark as an option to do a point-in
   **Ref:**
  
  [How to Query Delta Lake Tables in Lake Databases Using Serverless SQL? - YouTube](https://www.youtube.com/watch?v=LSIVX0XxVfc&t=184s)
+ 
  [Synapse Espresso: Introduction to Delta Tables - YouTube](https://www.youtube.com/watch?v=B_wyRXlLKok&t=9s)
+ 
  [Synapse Spark Delta Time Travel - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/synapse-spark-delta-time-travel/ba-p/3646789)
 
  
