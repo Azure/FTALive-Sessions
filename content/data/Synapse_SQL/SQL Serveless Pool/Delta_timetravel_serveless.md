@@ -96,7 +96,11 @@ FORMAT = 'Delta'     ) AS [result]
 
 Delta time travel can be used inside Synapse Spark as an option to do a point-in-time recovery while building a Lakehouse architecture. That is very useful as you can also use it to roll back changes, create snapshot scenarios, and manage the file versions and changes on top of your Data lake architecture. As Serverless SQL pools support Delta format and it is integrated with Spark you can use it to explore further as an end-to-end solution.
 
+  **Ref:**
  
+ [How to Query Delta Lake Tables in Lake Databases Using Serverless SQL? - YouTube](https://www.youtube.com/watch?v=LSIVX0XxVfc&t=184s)
+ [Synapse Espresso: Introduction to Delta Tables - YouTube](https://www.youtube.com/watch?v=B_wyRXlLKok&t=9s)
+ [Synapse Spark Delta Time Travel - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/synapse-spark-delta-time-travel/ba-p/3646789)
 
  
 
