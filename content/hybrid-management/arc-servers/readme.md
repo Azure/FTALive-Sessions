@@ -15,7 +15,7 @@ In this session you will learn about how to manage Windows and Linux physical se
     * [Monitor](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-management-and-monitoring-arc-server#azure-monitor-requirements)
     * [Automation](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-automation-arc-server)
 
-
+![alt txt](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/media/arc-enabled-servers-policy.png#lightbox)
 ## Learning Resources and Session Summary
 
 *   Azure Arc enabled servers enables you to use the Azure Management capabilities, such as Azure Policy, Change Tracking and Inventory, etc on your servers hosted outside of Azure in the same way that you use for Azure-hosted machines
