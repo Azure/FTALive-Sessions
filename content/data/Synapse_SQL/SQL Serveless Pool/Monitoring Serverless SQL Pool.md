@@ -121,4 +121,5 @@ SELECT * FROM sys.dm_external_data_processed
 
 [Cost management for serverless SQL pool - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/data-processed)
 
+[Synapse Espresso: Using QPI Library to Troubleshoot Performance Issues in Serverless SQL Pools - YouTube](https://www.youtube.com/watch?v=KLyTmRXySHE&t=31s)
 https://github.com/JocaPC/qpi/blob/master/src/qpi.sql 
