@@ -8,21 +8,21 @@ Through this introduction customers will gain insight, expertise and clarity ill
 
 ## Agenda
 
-- **Demo of Conditional access processes**
-- **Overview of Zero trust enabling technologies**
-- **ADFS to AAD app migration discussion**
-- **MFA options and demo**
+- Demo of Conditional access processes
+- Overview of Zero trust enabling technologies
+- ADFS to AAD app migration discussion
+- MFA options and demo
 
 
-## **Resources and Session Summary**
+## Resources and Session Summary
 
-[**strict User default permissions**](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Factive-directory%2Ffundamentals%2Fusers-default-permissions%23restrict-member-users-default-permissions&data=05%7C01%7CJose.Fehse%40microsoft.com%7C75f987bce23a460fcd3a08dac725018a%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638041259006042689%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=nb5nCkxIFK75NbrHsRKnAsmw8EQL3dSqE43wA3umFKs%3D&reserved=0)
+- [Strict User default permissions](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Factive-directory%2Ffundamentals%2Fusers-default-permissions%23restrict-member-users-default-permissions&data=05%7C01%7CJose.Fehse%40microsoft.com%7C75f987bce23a460fcd3a08dac725018a%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638041259006042689%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=nb5nCkxIFK75NbrHsRKnAsmw8EQL3dSqE43wA3umFKs%3D&reserved=0)
 
-[**Secure Guest User default permissions**](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Factive-directory%2Ffundamentals%2Fusers-default-permissions%23restrict-guest-users-default-permissions&data=05%7C01%7CJose.Fehse%40microsoft.com%7C75f987bce23a460fcd3a08dac725018a%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638041259006198307%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=bgKErPms5zMOHuHKGz1WoI2McCWSgzE%2FPPd2ku681bI%3D&reserved=0)
+- [Secure Guest User default permissions](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Factive-directory%2Ffundamentals%2Fusers-default-permissions%23restrict-guest-users-default-permissions&data=05%7C01%7CJose.Fehse%40microsoft.com%7C75f987bce23a460fcd3a08dac725018a%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638041259006198307%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=bgKErPms5zMOHuHKGz1WoI2McCWSgzE%2FPPd2ku681bI%3D&reserved=0)
 
-[**Restrict Group default permission**](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Factive-directory%2Fenterprise-users%2Fgroups-self-service-management%23group-settings&data=05%7C01%7CJose.Fehse%40microsoft.com%7C75f987bce23a460fcd3a08dac725018a%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638041259006198307%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=8ZHlvey1mP23bOJ9XhjfKDFKlgQI4QC5NpT8RofRMMA%3D&reserved=0)
+- [Restrict Group default permission](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Factive-directory%2Fenterprise-users%2Fgroups-self-service-management%23group-settings&data=05%7C01%7CJose.Fehse%40microsoft.com%7C75f987bce23a460fcd3a08dac725018a%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638041259006198307%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=8ZHlvey1mP23bOJ9XhjfKDFKlgQI4QC5NpT8RofRMMA%3D&reserved=0)
 
-[**Azure Active Directory security defaults**](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Factive-directory%2Ffundamentals%2Fconcept-fundamentals-security-defaults&data=05%7C01%7CJose.Fehse%40microsoft.com%7C75f987bce23a460fcd3a08dac725018a%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638041259006198307%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=%2FVvP2aDYDyWqCV1gdZ1d8qodRbVQHqa6xweJeVL72oY%3D&reserved=0)
+- [Azure Active Directory security defaults](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Factive-directory%2Ffundamentals%2Fconcept-fundamentals-security-defaults&data=05%7C01%7CJose.Fehse%40microsoft.com%7C75f987bce23a460fcd3a08dac725018a%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638041259006198307%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=%2FVvP2aDYDyWqCV1gdZ1d8qodRbVQHqa6xweJeVL72oY%3D&reserved=0)
 
 - [Require multi-factor authentication for admins](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Factive-directory%2Fconditional-access%2Fhowto-conditional-access-policy-admin-mfa&data=05%7C01%7CJose.Fehse%40microsoft.com%7C75f987bce23a460fcd3a08dac725018a%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638041259006198307%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=1lmncIS6xqUe9ObzshDVaB0SzdlJgggy83ZC5HAve%2FA%3D&reserved=0)
 
