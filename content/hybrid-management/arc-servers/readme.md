@@ -15,6 +15,8 @@ In this session you will learn about how to manage Windows and Linux physical se
     * [Monitor](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-management-and-monitoring-arc-server#azure-monitor-requirements)
     * [Automation](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-automation-arc-server)
 
+
+**Architecture**
 ![alt txt](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/media/arc-enabled-servers-policy.png#lightbox)
 ## Learning Resources and Session Summary
 
