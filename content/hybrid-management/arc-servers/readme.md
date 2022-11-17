@@ -36,6 +36,6 @@ Additional learning resources:
 
 Interactive Demos:
 
-*   [Onboarding a server to Azure Arc (octe.azurewebsites.net)](https://octe.azurewebsites.net/Microsoft/viewer/71/index.html#/0/0.)
-*   [Using Azure Policy with Arc enabled servers (octe.azurewebsites.net)](https://octe.azurewebsites.net/Microsoft/viewer/68/index.html#/0/0)
-*   [Extensions and logs for Arc enabled servers (octe.azurewebsites.net)](https://octe.azurewebsites.net/Microsoft/viewer/72/index.html#/)
+*   [Onboarding a server to Azure Arc](https://octe.azurewebsites.net/Microsoft/viewer/71/index.html#/0/0.)
+*   [Using Azure Policy with Arc enabled servers](https://octe.azurewebsites.net/Microsoft/viewer/68/index.html#/0/0)
+*   [Extensions and logs for Arc enabled servers](https://octe.azurewebsites.net/Microsoft/viewer/72/index.html#/)
