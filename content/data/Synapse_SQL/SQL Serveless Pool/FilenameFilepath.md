@@ -1,6 +1,6 @@
-## Synapse SQL serverless pool 
+## Synapse Serverless SQL pool 
 
-***\*[Home](../tobedefined.md)\**** 
+[Back<](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/SQL%20Serveless%20Pool/SynapseCETAS.md) -[Home](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/SQL%20Serveless%20Pool/Agenda_serveless.md)\- [>Next ](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/SQL%20Serveless%20Pool/SQL%20serverless%20pool%20and%20Spark%20Integration.md)
 
 ### FileName and FilePath 
 
@@ -14,7 +14,7 @@ This function returns the file name that row originates from.
 
 The following sample reads the NYC Yellow Taxi data files for the last three months of 2017 and returns the number of rides per file. The OPENROWSET part of the query specifies which files will be read.
 
-```
+```sql
 SELECT
     nyc.filename() AS [filename]
     ,COUNT_BIG(*) AS [rows]
@@ -57,7 +57,7 @@ The filepath function returns a full or partial path:
 - When called without a parameter, it returns the full file path that the row originates from. When DATA_SOURCE is used in OPENROWSET, it returns path relative to DATA_SOURCE.
 - When called with a parameter, it returns part of the path that matches the wildcard on the position specified in the parameter. For example, parameter value 1 would return part of the path that matches the first wildcard.
 
-```
+```sql
 SELECT
     r.filepath() AS filepath
     ,COUNT_BIG(*) AS [rows]
@@ -77,6 +77,11 @@ ORDER BY
     filepath;
 ```
 
-Reference:
+### Partition Elimination
+The usage of those functions with a partition set of folders enables serverless SQL Pool the possibility of using partition elemination to optimize the query results. Partition elimination means the optimizer will use the query filter to eliminate the partitions that do not satisfy it in early stages of the query and it will keep only the ones that has the results corresponding to the predicate.
+
+#### Reference:
 
 [Using file metadata in queries - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/query-specific-files)
+
+[Synapse Serverless SQL Pool - Performance and cost optimization with partitioning - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/synapse-serverless-sql-pool-performance-and-cost-optimization/ba-p/3673286)

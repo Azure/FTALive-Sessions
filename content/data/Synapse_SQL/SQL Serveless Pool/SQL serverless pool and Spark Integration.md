@@ -1,6 +1,6 @@
-## Synapse SQL serverless pool 
+## Synapse Serverless SQL pool 
 
-***\*[Home](../tobedefined.md)\**** 
+[Back<](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/SQL%20Serveless%20Pool/FilenameFilepath.md) -[Home](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/SQL%20Serveless%20Pool/Agenda_serveless.md)\- [>Next](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/SQL%20Serveless%20Pool/Delta_timetravel_serveless.md)
 
 ### Spark Integration overview
 
@@ -8,7 +8,7 @@ Azure Synapse Analytics provides multiple query runtimes that you can use to que
 
 For example:
 
-1) Data is available via the dataframe named **df**. Load it into a Spark database named **nyctaxi**.
+1) Using notebooks you can code with the languages supported in Spark like Phyton. In the following example data is available via the dataframe named **df** and load into a Spark database named **nyctaxi**.
 
    Add a new code cell to the notebook, and then enter the following code ( Notebook from Synapse Studio):
 
@@ -25,7 +25,7 @@ For example:
 
 2. Run this select using Serverless SQL Pool ( SQL Script from Synapse Studio)
 
-```
+```sql
 SELECT TOP (100) [DateID]
                 ,[MedallionID]
                 ,[HackneyLicenseID]
@@ -74,7 +74,7 @@ Delta lake is an open-source storage framework that enables building a Lakehouse
 
 Syntax example: 
 
-```
+```sql
 SELECT TOP 10 *
 FROM OPENROWSET(
     BULK 'https://sqlondemandstorage.blob.core.windows.net/delta-lake/folder/',

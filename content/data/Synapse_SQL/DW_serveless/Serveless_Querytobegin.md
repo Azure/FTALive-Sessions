@@ -110,7 +110,7 @@ You have two choices for input files that contain the target data for querying. 
 - 'DELTA' - A set of Parquet files organized in Delta Lake (preview) format
 
 #### Stats
-Serverless SQL pool relies on statistics to generate optimal query execution plans. Statistics are automatically created for columns in Parquet files when needed. At this moment, statistics aren't automatically created for columns in CSV files. Create statistics manually for columns that you use in queries, particularly those used in DISTINCT, JOIN, WHERE, ORDER BY, and GROUP BY
+Serverless SQL pool relies on statistics to generate optimal query execution plans. Statistics are automatically created for columns in Parquet files when needed. You can also create statistics manually for columns that you use in queries, particularly those used in DISTINCT, JOIN, WHERE, ORDER BY, and GROUP BY
 
 When statistics are stale, new ones will be created. The algorithm goes through the data and compares it to the current state of the dataset. Manual stats are never declared stale.
 

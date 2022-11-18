@@ -1,6 +1,6 @@
-## Synapse CETAS
+## Synapse Serverless SQL pool 
 
-*Home* - [Next >](Summary.md)
+[Back<](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/SQL%20Serveless%20Pool/Serveless_Query_Basics.md) -[Home](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/SQL%20Serveless%20Pool/Agenda_serveless.md)\- [>Next](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/SQL%20Serveless%20Pool/FilenameFilepath.md)
 
 ### CETAS
 
@@ -14,7 +14,7 @@ https://raw.githubusercontent.com/Azure-Samples/Synapse/main/SQL/Samples/LdwSamp
 
 1. Lets first check the time it takes to run this query using the public repository:
 
-   ```
+   ```sql
    \------------------------------------------------------------------------------
    --Super Join
    --+-16SECONDS
@@ -44,7 +44,7 @@ https://raw.githubusercontent.com/Azure-Samples/Synapse/main/SQL/Samples/LdwSamp
 
    2. Now, lets check  how much time can be saved from the query execution while using CETAS
 
-   ```
+   ```sql
    \------------------------------------------------------------------------------
    ---CETAS
    \------------------------------------------------------------------------------

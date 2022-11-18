@@ -1,3 +1,7 @@
+
+[Home](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/edit/main/content/data/Synapse_SQL/SQL%20Serveless%20Pool/Agenda_serveless.md)\- [>Next](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/SQL%20Serveless%20Pool/Architecture_Review.md)
+
+
 # Serverless SQL pool user case scenario and best practices
 
 **Presenters - FTA engineers**
@@ -10,20 +14,22 @@
 
 ## Agenda
 
-Serverless SQL Pool Architecture overview 
+Serverless SQL pool user case scenario and best practices
 
-OpenRowset, External tables, Credentials 
-	Parquet Vs CSV
-	Anatomy of Parquet
-	Statistics
-	CETAS
-	
-Partition Elimination 
-	FilePath and FileName
+Serverless SQL  Pool Architecture overview 
 
-Metadata exploration, Spark integration
-	Querying Delta files
-Monitoring
+- OpenRowset, External tables, Credentials 
+	- Parquet Vs CSV
+	- Anatomy of Parquet
+	- Statistics
+	- CETAS
+
+- Partition Elimination 
+	- FilePath and FileName
+- Metadata exploration, Spark integration
+	- Querying Delta files
+- Monitoring
+
 
 **Audience**
 
@@ -60,4 +66,4 @@ https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/how-to-use-c
 
 ### Let's start:
 
- [Next >](Architecture_Review.md)
+ [Next >](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/SQL%20Serveless%20Pool/Architecture_Review.md)
