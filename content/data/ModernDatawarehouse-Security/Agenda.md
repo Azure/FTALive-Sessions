@@ -3,25 +3,25 @@
 
 **Synapse Analytics**
 
-  Dedicated SQL Pools
-  
-  Serveless SQL Pools
-  
-  VNET and Private Endpoints
-  
-  Firewall
-  
-  Least Privilege Rule
-  
-  Data Masking
-  
-  Row level Security
-  
-**Storage - Data Lake
+      Dedicated SQL Pools
 
-Power BI**
+      Serveless SQL Pools
 
+      VNET and Private Endpoints
 
+      Firewall
+
+      Least Privilege Rule
+
+      Data Masking
+
+      Row level Security
+
+**Storage - Data Lake**
+
+**Power BI**
+
+===============================================
 
 **Presenters -  FTA Data Engineers**
 
