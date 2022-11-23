@@ -7,6 +7,8 @@ This section outlines the steps needed in order to setup an Azure DevOps Pipelin
 
 The sample pipeline takes the output of an Azure Migrate Assessment and creates new VMs based on the configuration from the exported assessment output. The VMs that will be created via this sample pipeline are empty Marketplace images, ready for configuration and app installation.
 
+![Migration Workflow](./src/workflow-devops-iac.png)
+
 ## 1 Pre-Requisites
 
 To get started, the assumption is the following:
