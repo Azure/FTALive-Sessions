@@ -40,3 +40,6 @@ Monitoring critical SAP applications and business processes for availability, pe
 ## Hoster/Partner/Managed Services Provider
 
 * Visualize cross-tenant telemetry in Azure Portal via Azure Lighthouse
+
+
+#### [prev](./azuremonitor.md) | [home](./readme.md)  | [next](./amsarchitecture.md)
