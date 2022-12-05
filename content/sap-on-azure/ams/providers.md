@@ -1,6 +1,6 @@
 # Different types of Providers for AMS
 
-#### [prev](./availability&pricing.md) | [home](./introduction.md)  | [next](./prerequisites&config.md)
+#### [prev](./network.md) | [home](./introduction.md)  | [next](./prerequisites&config.md)
 
 ## What is a provider?
 
@@ -29,3 +29,5 @@ Provider contains the connection information for a corresponding component and h
 <img src="/content/sap-on-azure/images/metrics.png" width="90%" height="90%">
 </p>
 <br>
+
+#### [prev](./network.md) | [home](./introduction.md)  | [next](./prerequisites&config.md)
