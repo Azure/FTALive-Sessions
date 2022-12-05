@@ -1,6 +1,6 @@
 # Availability of AMS across Regions
 
-#### [prev](./features.md) | [home](./introduction.md)  | [next](./providers.md)
+#### [prev](./features.md) | [home](./introduction.md)  | [next](./network.md)
 
 **Azure Monitor for SAP (AMS)** solutions are currently available as public preview in the below mentioned Regions.
 <br>
@@ -29,3 +29,6 @@ Usage based pricing for below components that are part of AMS Managed resource g
 * Azure storage account [(link)](https://azure.microsoft.com/pricing/details/storage/queues/)
 
 # Azure Alert and Notification [(link)](https://azure.microsoft.com/en-us/pricing/details/monitor/)
+
+
+#### [prev](./features.md) | [home](./introduction.md)  | [next](./network.md)
