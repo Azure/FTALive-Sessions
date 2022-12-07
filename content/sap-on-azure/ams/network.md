@@ -10,12 +10,12 @@ A new empty/dummy subnet is required for Azure Monitor for SAP (AMS) Solutions w
 
 ## Configure outbound internet access
 
-In most of the use cases, Customers/Partners restrict or block outbound internet access to their SAP applications. However, Azure Monitor for SAP **(AMS)** solutions requires network connectivity between the subnet that you configured and the systems that you want to monitor. Before you deploy an Azure Monitor for SAP solutions resource, you need to configure outbound internet access, or the deployment will fail. 
+In most of the use cases, Customers/Partners restrict or block outbound internet access to their SAP applications. However, Azure Monitor for SAP **(AMS)** solutions requires network connectivity between the subnet that you configured for deployment of Azure Monitor for SAP **(AMS)** Solutions and the systems that you want to monitor. Before you deploy an Azure Monitor for SAP solutions resource, you need to configure outbound internet access for the subnet where AMS managed resource group resides, or the deployment will fail. 
 
 </br>There are multiple methods to address restricted or blocked outbound internet access. Choose the method that works best for your use case:
 
 * Use the **Route All feature** in Azure functions
-* Use **service tags** with a **network security group (NSG)** in your virtual network
+* Use **service tags** with a **network security group (NSG)** for your subnet hosting Azure Monitor for SAP **(AMS)** Solutions
 * Use a **private endpoint** for your subnet
 
 ## Route All
