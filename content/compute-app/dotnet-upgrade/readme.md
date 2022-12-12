@@ -6,8 +6,8 @@ In this session you will learn about upgrading the DotNet framework of your appl
 
 ### Agenda
 
-* Introduction to .NET 6
-* Upgrade to .NET 6
+* Introduction to .NET 7
+* Upgrade to .NET 7
 * Azure PaaS Services for Web Applications
     * Azure App Service
     * Azure Kubernetes Service
@@ -22,7 +22,7 @@ This session is most useful for application developers and architects who want t
 ### Goals
 
 In this session you will learn how to:
-* Upgrade and leverage modern .NET 6 framework
+* Upgrade and leverage modern .NET 7 framework
 * Understand different PaaS Services available to deploy modernized applications and their use case
 * Hands-On Deployment to Azure App Service and Azure Kubernetes Service
 
@@ -31,11 +31,11 @@ In this session you will learn how to:
 
 Please find the most relevant resources below to continue your learning after this session:
 ****
-### DotNet 6
+### DotNet 7
 
 - [Introduction](https://dotnet.microsoft.com)
 
-- [Why to migrate?](https://devblogs.microsoft.com/dotnet/announcing-net-6/)
+- [Why to migrate?](https://devblogs.microsoft.com/dotnet/announcing-dotnet-7/)
 
 - Considerations before migration
 
