@@ -4,8 +4,8 @@
 
 **Azure Monitor for SAP (AMS)** solutions are currently available as public preview in the below mentioned Regions.
 <br>
-<p align="center">
-<img src="/content/sap-on-azure/images/availability.png" width="70%" height="60%">
+<p align="left">
+<img src="/content/sap-on-azure/images/availability.png" width="80%" height="70%">
 </p>
 
 ** *`More regions to be added in future`* **
