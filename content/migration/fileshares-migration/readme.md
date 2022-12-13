@@ -13,5 +13,5 @@ Agenda
 5. [Assess and Select Migration Tooling](./replication.md)
 6. [Migration Testing](./testing.md)
 7. [Migration Execution and Post Go-Live](./migration.md)
-8. [QnA](./faq.md)
+8. [FAQ](./faq.md)
 9. [Resources & Training](./resources.md)
