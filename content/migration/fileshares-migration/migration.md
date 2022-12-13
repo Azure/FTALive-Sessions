@@ -3,6 +3,9 @@
 #### [prev](./testing.md) | [home](./readme.md)  | [next](./faq.md)
 
 The following content can be used as a checklist to incorporate within your migration project plan to ensure best practices.
+
+![Concept Diagram](./png/FileSharesMigration-workflow-Milestone6.JPG)
+
 ## **Plan for the Cutover**
 
 - Identify cutover window, recommend for a Friday evening or weekend.

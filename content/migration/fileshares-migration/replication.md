@@ -3,6 +3,8 @@
 #### [prev](./landingzone.md) | [home](./readme.md)  | [next](./testing.md)
 
 The following content can be used as a checklist to incorporate within your migration project plan to ensure best practices.
+
+![Concept Diagram](./png/FileSharesMigration-workflow-Milestone4.JPG)
 ## **Data Transfer** 
 
 ### Choose between Offline vs. Online data transfer

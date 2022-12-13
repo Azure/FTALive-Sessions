@@ -3,6 +3,8 @@
 #### [prev](./assess.md) | [home](./readme.md)  | [next](./landingzone.md)
 
 The following content can be used as a checklist to incorporate within your migration project plan to ensure best practices.
+
+![Concept Diagram](./png/FileSharesMigration-workflow-Milestone2.JPG)
 ## **Discover Source File Shares** 
 
 ### Choose between automated vs. manual approach

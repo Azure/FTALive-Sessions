@@ -2,6 +2,8 @@
 
 #### [prev](./readme.md) | [home](./readme.md)  | [next](./assess.md)
 
+![Concept Diagram](./png/FileSharesMigration-workflow.PNG)
+
 ## [**Assess and Select Target File Share Service Milestone**](./assess.md) 
 During this phase, the target File Share Service options are reviewed and one or more target File share services are chosen to host the migrated file shares.
 ## [**Scan File Shares Milestone**](./scan.md)
