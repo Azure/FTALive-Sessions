@@ -30,10 +30,17 @@ In order to prepare the business and its stakeholders for the migration activiti
     - Take backup of servers on-premises.
     - Open Firewall Ports.
     - Get local admins accounts for login purposes.
+    - Define and Plan on File Share name changes:
+        - Update DFS Namespaces 
+        - Update Login Scripts
+        - Update Group Policies
 
 
 - **Post-Migration Tasks:**
     - Update any existing CMDB
+    - Update existing DFSN Configuration
+    - Update existing DNS entries
+    - Update existing scripts
     - Validate file share monitoring via new or existing service.
     - Validate file share backup via new or existing service.
     - Tag Azure resources.
