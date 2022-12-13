@@ -5,7 +5,7 @@
 
 The following content can be used as a checklist to incorporate within your migration project plan to ensure best practices.
 
-![Concept Diagram](./png/FileSharesMigration-workflow-Milestone5.JPG)
+![Concept Diagram](./png/FileSharesMigration-workflow-Milestone5.PNG)
 
 ## **Pre & Post  Migration Activities Defined**
 

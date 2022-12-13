@@ -4,7 +4,7 @@
 
 The following content can be used as a checklist to incorporate within your migration project plan to ensure best practices.
 
-![Concept Diagram](./png/FileSharesMigration-workflow-Milestone4.JPG)
+![Concept Diagram](./png/FileSharesMigration-workflow-Milestone4.PNG)
 ## **Data Transfer** 
 
 ### Choose between Offline vs. Online data transfer

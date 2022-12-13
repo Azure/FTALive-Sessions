@@ -4,7 +4,7 @@
 
 The overall Landing Zone architecture and implementation will be defined by your specific company requirements. Specific requirements to host File Shares infrastructure will need to be defined based on the underlying Landing Zone design.
 
-![Concept Diagram](./png/FileSharesMigration-workflow-Milestone3.JPG)
+![Concept Diagram](./png/FileSharesMigration-workflow-Milestone3.PNG)
 ## Azure Landing Architecture
 It's important to plan for the overall Landing Zone architecture and implementation before focusing on the File Shares architecture requirements.
 
