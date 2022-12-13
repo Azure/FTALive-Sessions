@@ -4,7 +4,7 @@
 
 The following content can be used as a checklist to incorporate within your migration project plan to ensure best practices.
 
-![Concept Diagram](./png/FileSharesMigration-workflow-Milestone6.JPG)
+![Concept Diagram](./png/FileSharesMigration-workflow-Milestone6.PNG)
 
 ## **Plan for the Cutover**
 
