@@ -14,7 +14,14 @@ This is where [Microsoft Defender for Cloud](https://docs.microsoft.com/azure/de
 
 ## Threat intelligence
 
-Additionaly you can make use of [Azure threat protection](https://docs.microsoft.com/azure/security/fundamentals/threat-detection), which is an additional offering on top of Azure Active Directory and Microsoft Defender for Cloud.
+Additionaly you can make use of [Azure threat protection](https://docs.microsoft.com/azure/security/fundamentals/threat-detection), which is an additional offering on top of Azure Active Directory and Microsoft Defender for Cloud. 
+
+Protect your workloads:
+
+* [Defender for DevOps (Preview)](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-devops-introduction)
+* [Defender for Resource Manager](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-resource-manager-introduction)
+* [Defender for Containers](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-introduction)
+* [Defender for App Service](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-app-service-introduction)
 
 ## Penetration testing
 
