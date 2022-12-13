@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerateMessages", "GenerateMessages\GenerateMessages.csproj", "{568FEE0A-3762-4ED5-ADDD-08E0BB266431}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{568FEE0A-3762-4ED5-ADDD-08E0BB266431}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{568FEE0A-3762-4ED5-ADDD-08E0BB266431}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{568FEE0A-3762-4ED5-ADDD-08E0BB266431}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{568FEE0A-3762-4ED5-ADDD-08E0BB266431}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F08F6D34-2C7C-450B-BCEB-DD82BDCCCFB0}
+	EndGlobalSection
+EndGlobal
