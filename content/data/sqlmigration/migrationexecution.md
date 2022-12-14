@@ -12,9 +12,9 @@ Azure Migrate using DMA|[&check;](https://docs.microsoft.com/en-us/azure/migrate
 DMS using ADS|[&check;](https://docs.microsoft.com/en-us/azure/dms/tutorial-sql-server-to-virtual-machine-online-ads)  |[&check;](https://docs.microsoft.com/en-us/azure/dms/tutorial-sql-server-managed-instance-online-ads)| |
 DMS | | [&check;](https://docs.microsoft.com/en-us/azure/dms/tutorial-sql-server-managed-instance-online)| |
 Transactional Replication|[&check;](https://docs.microsoft.com/en-us/sql/relational-databases/replication/transactional/transactional-replication?view=sql-server-ver16)|[&check;](https://docs.microsoft.com/en-us/azure/azure-sql/managed-instance/replication-transactional-overview?view=azuresql)|[&check;](https://docs.microsoft.com/en-us/azure/azure-sql/database/replication-to-sql-database?view=azuresql) |
-Azure Data Factory| &check; |[&check;](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-sql-managed-instance)||
+Azure Data Factory| [&check;](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-sql-managed-instance) |[&check;](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-sql-managed-instance)|[&check;](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-sql-managed-instance)|
 Availability Group Replica|[&check;](https://docs.microsoft.com/en-us/previous-versions/azure/virtual-machines/windows/sqlclassic/virtual-machines-windows-classic-sql-onprem-availability)|||
-Managed Instance Link (Preview)| [&check;](https://docs.microsoft.com/en-us/azure/azure-sql/managed-instance/managed-instance-link-feature-overview?view=azuresql)||
+Managed Instance Link||[&check;](https://docs.microsoft.com/en-us/azure/azure-sql/managed-instance/managed-instance-link-feature-overview?view=azuresql)|
 <br/>
 
 ## **Offline** migration tools
