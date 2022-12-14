@@ -29,7 +29,6 @@ In order to prepare the business and its stakeholders for the migration activiti
     - Define Rollback Plan.
     - Take backup of servers on-premises.
     - Open Firewall Ports.
-    - Get local admins accounts for login purposes.
     - Define and Plan on File Share name changes:
         - Update DFS Namespaces 
         - Update Login Scripts
