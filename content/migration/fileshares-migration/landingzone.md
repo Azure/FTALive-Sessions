@@ -3,6 +3,8 @@
 #### [prev](./scan.md) | [home](./readme.md)  | [next](./replication.md)
 
 The overall Landing Zone architecture and implementation will be defined by your specific company requirements. Specific requirements to host File Shares infrastructure will need to be defined based on the underlying Landing Zone design.
+
+![Concept Diagram](./png/FileSharesMigration-workflow-Milestone3.PNG)
 ## Azure Landing Architecture
 It's important to plan for the overall Landing Zone architecture and implementation before focusing on the File Shares architecture requirements.
 
@@ -27,4 +29,4 @@ The following architecture options exists for the various file share services an
 
 ### **Windows Server File Share on Azure Architecture**
 
-- [TBD]()
+- [Create a 2-node cluster Windows File Server](https://learn.microsoft.com/en-us/windows-server/failover-clustering/deploy-two-node-clustered-file-server)

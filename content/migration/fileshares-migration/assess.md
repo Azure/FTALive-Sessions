@@ -1,6 +1,10 @@
 # Milestone: Assess and Select Target File Share Service
 #### [prev](./overview.md) | [home](./readme.md)  | [next](./scan.md)
 
+The following content can be used as a checklist to incorporate within your migration project plan to ensure best practices.
+
+![Concept Diagram](./png/FileSharesMigration-workflow-Milestone1.PNG)
+
 ## Define and Gather File Services Requirements
 The following table lists common file services requirements to be considered when planning to migrate file services to Azure. Knowing your requirements will help ensure you select the appropriate solution that meets your needs. 
 

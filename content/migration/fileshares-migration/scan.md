@@ -3,6 +3,8 @@
 #### [prev](./assess.md) | [home](./readme.md)  | [next](./landingzone.md)
 
 The following content can be used as a checklist to incorporate within your migration project plan to ensure best practices.
+
+![Concept Diagram](./png/FileSharesMigration-workflow-Milestone2.PNG)
 ## **Discover Source File Shares** 
 
 ### Choose between automated vs. manual approach
@@ -25,5 +27,6 @@ In the [Discovery](https://docs.microsoft.com/en-us/azure/storage/common/storage
 
 ### Choose between automated vs. manual approach to discover clients
 Azure Migrate or other third party tools can be used to discover dependent client machines based on TCP connections on standard ports such as 445, 139, 2049, etc. 
+Other common dependencies may include other servers not necessarily consuming the files shares, but managing them. For example: A DFSN Server
 
 Guidance can be found in our [FTA Live for Server Migration](../server-migration/assess.md) content. 
