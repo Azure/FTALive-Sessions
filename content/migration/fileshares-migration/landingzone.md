@@ -29,4 +29,4 @@ The following architecture options exists for the various file share services an
 
 ### **Windows Server File Share on Azure Architecture**
 
-- [TBD]()
+- [Create a 2-node cluster Windows File Server](https://learn.microsoft.com/en-us/windows-server/failover-clustering/deploy-two-node-clustered-file-server)
