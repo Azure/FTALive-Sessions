@@ -43,3 +43,6 @@
 * Integration with [Azure Lighthouse](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/using-azure-lighthouse-and-azure-monitor-for-sap-solutions-to/ba-p/1537293)
 
 * [“Data Size” forecast](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/new-features-in-ams-alerts-data-size-for-sap-hana-ha-cluster/ba-p/2550708) functionality for SAP HANA
+
+
+#### [prev](./amsarchitecture.md) | [home](./readme.md)  | [next](./availability&pricing.md)
