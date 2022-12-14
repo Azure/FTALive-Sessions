@@ -29,3 +29,6 @@ The following diagram describes, how **Azure Monitor for SAP (AMS) solutions** c
 5. An **Azure Key Vault** resource, which securely holds the SAP HANA database credentials and stores information about providers.
 
 6. The **Log Analytics workspace**, which is the destination for storing data. Optionally, you can choose to use an existing workspace in the same subscription as your AMS resource at deployment.
+
+
+#### [prev](./businesscase.md) | [home](./readme.md)  | [next](./features.md)
