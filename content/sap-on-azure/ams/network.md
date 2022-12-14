@@ -17,6 +17,10 @@ In most of the use cases, Customers/Partners restrict or block outbound internet
 * Use the **Route All feature** in Azure functions
 * Use **service tags** with a **network security group (NSG)** for your subnet hosting Azure Monitor for SAP **(AMS)** Solutions
 * Use a **private endpoint** for your subnet
+<br>
+<p align="left">
+<img src="/content/sap-on-azure/images/network.png" width="80%" height="70%">
+</p>
 
 ## Route All
 
