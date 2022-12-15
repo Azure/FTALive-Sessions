@@ -46,7 +46,7 @@ To get started, the assumption is the following:
 
 ### 2.3\. Create the appropriate repository for scripts storage, CSV files and version control using guidance outlined below:
 
-![Bicep Concepts](./src/bicep-concepts.png)
+![Bicep Concepts](../devops-iac-migration/src/bicep-concepts.png)
 
 * This file structure will be auto created for you within the repo (can also be found under the [src folder](./src/))
 > Note: With the virtual machines that are created in the script, the default for Linux machines are Ubuntu OS.
