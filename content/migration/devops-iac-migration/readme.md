@@ -12,4 +12,4 @@ Agenda
 
 
 **Additional Resources**
-* [Azure IaC DevOps Generator](https://azuredevopsdemogenerator.azurewebsites.net/environment/createproject) - includes the starter template for rehosting Migrated resources in Azure via DevOps. It includes an Azure Repos repository that has all of the source files and scripts, Azure DevOps Pipeline with a starter yaml, and Azure Boards to track the tasks outlined in the session. 
+* [Azure IaC DevOps Generator](http://azuredevopsdemogenerator.azurewebsites.net/?name=AzureMigrationsIaC) - includes the starter template for redeploying Migrated resources in Azure via DevOps. It includes an Azure Repos repository that has all of the source files and scripts, Azure DevOps Pipeline with a starter yaml, and Azure Boards to track the tasks outlined in the session. 
