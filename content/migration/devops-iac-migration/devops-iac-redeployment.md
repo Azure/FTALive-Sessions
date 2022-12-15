@@ -45,6 +45,9 @@ To get started, the assumption is the following:
         * **Roles:** [Virtual Machine Contributor](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#virtual-machine-contributor), [Network Contributor](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#network-contributor)
 
 ### 2.3\. Create the appropriate repository for scripts storage, CSV files and version control using guidance outlined below:
+
+![Bicep Concepts](./src/bicep-concepts.png)
+
 * This file structure will be auto created for you within the repo (can also be found under the [src folder](./src/))
 > Note: With the virtual machines that are created in the script, the default for Linux machines are Ubuntu OS.
 
@@ -74,3 +77,4 @@ Details:
         - Manually populate the `variables.yml` using CSV recommended values and what is expected in Azure.
 - [optional folder] `scripts`: folder to store powershell files for executing different test and validation scripts
     > Note: Test scripts are to be developed based on needs for your migration environment. (Recommendation is to develop them in PowerShell)
+
