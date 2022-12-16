@@ -4,8 +4,9 @@
 ### Least Privilege user
 
 [<Back](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Network.md)\- [Next >](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Data%20Factory)
- 
+
 #### Workspace permissions
+
 Azure Synapse Workspace is integrated with Azure role-based access control (Azure RBAC) to manage its resources. Azure RBAC allows you to manage Azure resource access through role assignments. You can assign these roles to users, groups service principals, and **managed identities**. Use built-in roles to allocate permissions and only create custom roles when required.
 
 ![image](https://user-images.githubusercontent.com/62876278/208107285-857a14c3-f5db-4ef7-9540-c1ace1024691.png)
@@ -148,8 +149,27 @@ All Synapse RBAC permissions/actions shown in the table are prefixed `Microsoft/
 | Review Synapse RBAC role assignments at any scope            | Synapse User                                                 | read                                                         |
 | Assign and remove Synapse RBAC role assignments for users, groups, and service principals | Synapse Administrator at the workspace or at a specific workspace item scope | roleAssignments/write, delete                                |
 
+
+
+#### Access Control
+
+Suggestion: You can create a basic group and add your members at the same time using the Azure Active Directory (Azure AD) portal and add permissions as applied,  you will use the following [Access control in Synapse workspace how to - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/security/how-to-set-up-access-control) and [How to manage groups - Azure Active Directory - Microsoft Entra | Microsoft Learn](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/how-to-manage-groups):
+
+- **Security Groups**, to group users with similar access requirements.
+- **Azure roles**, to control who can create and manage SQL pools, Apache Spark pools and Integration runtimes, and access ADLS Gen2 storage.
+- **Synapse roles**, to control access to published code artifacts, use of Apache Spark compute resources and integration runtimes.
+- **SQL permissions**, to control administrative and data plane access to SQL pools.
+- **Git permissions**, to control who can access code artifacts in source control if you configure Git-support for workspaces.
+
+
+
 #### Reference
 
 [Understand the roles required to perform common tasks in Azure Synapse - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/security/synapse-workspace-understand-what-role-you-need)
 
 [How to review Azure Synapse RBAC role assignments in Synapse Studio - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/security/how-to-review-synapse-rbac-role-assignments)
+
+[Access control in Synapse workspace how to - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/security/how-to-set-up-access-control)
+
+[How to manage groups - Azure Active Directory - Microsoft Entra | Microsoft Learn](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/how-to-manage-groups)
+
