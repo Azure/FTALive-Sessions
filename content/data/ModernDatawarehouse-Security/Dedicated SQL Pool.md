@@ -123,6 +123,13 @@ SQLCopy
 ALTER DATABASE [AdventureWorks] SET ENCRYPTION ON;
 ```
 
+#### Synapse role-based access control
+Azure Synapse also includes Synapse role-based access control (RBAC) roles to manage different aspects of Synapse Studio. Leverage these built-in roles to assign permissions to users, groups, or other security principals to manage who can:
+
+        Publish code artifacts and list or access published code artifacts.
+        Execute code on Apache Spark pools and integration runtimes.
+        Access linked (data) services that are protected by credentials.
+        Monitor or cancel job executions, review job output and execution logs.
 
 #### References
 
