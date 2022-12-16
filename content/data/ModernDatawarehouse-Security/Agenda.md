@@ -1,34 +1,43 @@
-**Modern Data warehouse end to end security**
+
+[Home](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/edit/main/content/data/ModernDatawarehouse-Security/Agenda.md)\- [>Next](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Serveless_dedicatedPool_DataProtection.md)
 
 
-**Synapse Analytics**
+# Modern Data warehouse end to end security
+
+
+**Presenters - FTA engineers**
+
+      Kathryn Varral
+      Liliam Leme
+
+
+## Agenda
+
+Synapse Analytics
 
       Dedicated SQL Pools
-
       Serveless SQL Pools
-
-      VNET and Private Endpoints
-
+      VNET, DEP and Private Endpoints
       Firewall
-
       Least Privilege Rule
-
       Data Masking
-
       Row level Security
 
-**Storage - Data Lake**
+Storage - Data Lake
 
-**Power BI**
-
-===============================================
-
-**Presenters -  FTA Data Engineers**
-
-Working for Microsoft for around of 10 years with focus on Analytics those engineers will present a nice discussion about Modern Data warehouse end to end security.
+Power BI
 
 
+**Audience**
 
-Kathryn Varrall
+IT Pros or architects that want to understand the options to enforce the security in a Modern Datwarehouse
 
-Liliam C Leme
+**References:**
+
+
+
+### Let's start:
+
+ [Next >](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Serveless_dedicatedPool_DataProtection.md)
+
+
