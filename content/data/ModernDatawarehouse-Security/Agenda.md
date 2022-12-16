@@ -16,12 +16,12 @@
 Synapse Analytics
 
       Dedicated SQL Pools
+            Data Masking
+            Row level Security
       Serveless SQL Pools
-      VNET, DEP and Private Endpoints
-      Firewall
+      Synapse Workspace - VNET, DEP and Private Endpoints, RBACs
       Least Privilege Rule
-      Data Masking
-      Row level Security
+
 
 Storage - Data Lake
 
