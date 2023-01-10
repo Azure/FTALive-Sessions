@@ -19,6 +19,7 @@ You will need:
 The goal of this session is to provide a basic understanding of Azure Synapse database templates, Laka database and Map data tool, concluding session with Q&A..
 
 1. [Introduction](./introduction.md)
+1. [Wrap up - Azure Synapse Analytics](./azuresynapse.md)
 1. [Azure Synapse database templates](./databasetemplates.md)
 1. [Lake Database](./lakedatabase.md)
 1. [Map data tool (Preview)](./mapdata.md)
