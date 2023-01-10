@@ -117,6 +117,7 @@ Show the Secure Score per subscription:
 *   [Optimize log queries in Azure Monitor](https://docs.microsoft.com/en-us/azure/azure-monitor/logs/query-optimization)
 *   [Query best practices - Azure Data Explorer | Microsoft Docs](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/best-practices)
 *   [Audit queries in Azure Monitor Logs](https://docs.microsoft.com/en-us/azure/azure-monitor/logs/query-audit) < shows how you can monitor the performance of your queries
+*   [Learn: Guided project - Analyze logs in Azure Monitor with KQL](https://learn.microsoft.com/en-us/training/modules/analyze-logs-with-kql/)
 *   [Keyboard shortcuts in the Azure portal for Azure Resource Graph Explorer - Azure Resource Graph | Microsoft Docs](https://docs.microsoft.com/en-us/azure/governance/resource-graph/reference/keyboard-shortcuts) < this works in the Log Analytics query interface as well
 *   [Log Analytics in Azure Monitor offers sets of example queries that you can run on their own or use as a starting point for your own queries. - Azure Monitor | Microsoft Docs](https://docs.microsoft.com/en-us/azure/azure-monitor/logs/example-queries)
 *   [Azure Monitor Logs table reference organized by category](https://docs.microsoft.com/en-us/azure/azure-monitor/reference/tables/tables-category)
