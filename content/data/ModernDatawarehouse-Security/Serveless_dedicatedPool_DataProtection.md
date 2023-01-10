@@ -1,134 +1,146 @@
-# Dynamic data masking - Dedicated SQL Pool
 
-- 
+## Synapse SQL dedicate pool 
 
-Dynamic data masking helps prevent unauthorized access to sensitive data by enabling customers to designate how much of the sensitive data to reveal with minimal impact on the application layer. It's a policy-based security feature that hides the sensitive data in the result set of a query over designated database fields, while the data in the database is not changed.
-
+#### Security
 
 
-## Dynamic data masking basics
+[<Back](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Agenda.md)\- [Next >](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Dedicated%20SQL%20Pool_data.md)
 
-You set up a dynamic data masking policy in the Azure portal by selecting the **Dynamic Data Masking** blade under **Security** in your SQL Database configuration pane. This feature cannot be set using portal for SQL Managed Instance. For more information, see [Dynamic Data Masking](https://learn.microsoft.com/en-us/sql/relational-databases/security/dynamic-data-masking).
+#### Connection
 
-### Dynamic data masking policy
+Connection Security refers to how you restrict and secure connections to your database using firewall rules and connection encryption. you can use the portal page under network to configure the IPs that can access the workspace:
 
-- **SQL users excluded from masking** - A set of SQL users or Azure AD identities that get unmasked data in the SQL query results. Users with administrator privileges are always excluded from masking, and see the original data without any mask.
-- **Masking rules** - A set of rules that define the designated fields to be masked and the masking function that is used. The designated fields can be defined using a database schema name, table name, and column name.
-- **Masking functions** - A set of methods that control the exposure of data for different scenarios.
 
-| Masking function  | Masking logic                                                |
-| :---------------- | :----------------------------------------------------------- |
-| **Default**       | **Full masking according to the data types of the designated fields**  • Use XXXX or fewer Xs if the size of the field is less than 4 characters for string data types (nchar, ntext, nvarchar). • Use a zero value for numeric data types (bigint, bit, decimal, int, money, numeric, smallint, smallmoney, tinyint, float, real). • Use 01-01-1900 for date/time data types (date, datetime2, datetime, datetimeoffset, smalldatetime, time). • For SQL variant, the default value of the current type is used. • For XML the document <masked/> is used. • Use an empty value for special data types (timestamp table, hierarchyid, GUID, binary, image, varbinary spatial types). |
-| **Credit card**   | **Masking method, which exposes the last four digits of the designated fields** and adds a constant string as a prefix in the form of a credit card.  XXXX-XXXX-XXXX-1234 |
-| **Email**         | **Masking method, which exposes the first letter and replaces the domain with XXX.com** using a constant string prefix in the form of an email address.  aXX@XXXX.com |
-| **Random number** | **Masking method, which generates a random number** according to the selected boundaries and actual data types. If the designated boundaries are equal, then the masking function is a constant number.  ![Screenshot that shows the masking method for generating a random number.](https://learn.microsoft.com/en-us/azure/azure-sql/database/media/dynamic-data-masking-overview/1_ddm_random_number.png?view=azuresql) |
-| **Custom text**   | **Masking method, which exposes the first and last characters** and adds a custom padding string in the middle. If the original string is shorter than the exposed prefix and suffix, only the padding string is used. prefix[padding]suffix  ![Navigation pane](https://learn.microsoft.com/en-us/azure/azure-sql/database/media/dynamic-data-masking-overview/2_ddm_custom_text.png?view=azuresql) |
+![image](https://user-images.githubusercontent.com/62876278/208086623-bb8e021f-28bb-4e49-8fee-9645dca41422.png)
 
-### Creating a Dynamic Data Mask
+Dedicated SQL pool (formerly SQL DW) are encrypted by default. Modifying connection settings to disable encryption are ignored.
 
-The following example creates a table with three different types of dynamic data masks. The example populates the table, and selects to show the result.
+#### Public network access
+You can use the public network access feature to allow incoming public network connectivity to your Azure Synapse workspace.
+
+        When public network access is disabled, you can connect to your workspace only using private endpoints.
+        When public network access is enabled, you can connect to your workspace also from public networks. You can manage this feature both during and after your workspace creation.
+        
+        
+####  Minimal TLS version
+
+Starting in December 2021, a requirement for TLS 1.2 has been implemented for workspace-managed dedicated SQL pools in new Synapse workspaces. Login attempts from connections using a TLS version lower than 1.2 will fail. 
+
+####  Connection policy
+**Default**:  The default policy is Redirect for all client connections originating inside of Azure (for example, from an Azure Virtual Machine) and Proxy for all client connections originating outside (for example, connections from your local workstation).
+We highly recommend the Redirect connection policy over the Proxy connection policy for the lowest latency and highest throughput.
+
+**Redirect**
+If you are connecting from within Azure your connections have a connection policy of Redirect by default. A policy of Redirect means that after the TCP session is established to Azure SQL Database, the client session is then redirected to the right database cluster with a change to the destination virtual IP from that of the Azure SQL Database gateway to that of the cluster. Thereafter, all subsequent packets flow directly to the cluster, bypassing the Azure SQL Database gateway. The following diagram illustrates this traffic flow.
+
+![image](https://user-images.githubusercontent.com/62876278/208086135-ac97ec42-840e-47d8-90fb-e08295aaa0d8.png)
+
+
+**Proxy**
+If you are connecting from outside Azure, your connections have a connection policy of Proxy by default. A policy of Proxy means that the TCP session is established via the Azure SQL Database gateway and all subsequent packets flow via the gateway.
+
+![image](https://user-images.githubusercontent.com/62876278/208086049-2f935696-2257-4684-bf88-627c64c15f2d.png)
+
+#### Authentication
+
+Authentication refers to how you prove your identity when connecting to the database. Dedicated SQL pool (formerly SQL DW) currently supports SQL Server Authentication with a username and password, and with Azure Active Directory.
+
+When you created the server for your database, you specified a "server admin" login with a username and password. Using these credentials, you can authenticate to any database on that server as the database owner, or "dbo" through SQL Server Authentication.
+
+You can see this configuration on the portal -> properties:
+
+![image](https://user-images.githubusercontent.com/62876278/208087739-9831c5c1-56b2-49a6-8364-a61ce269ca40.png)
+
+
+However, as a best practice, your organization's users should use a different account to authenticate. This way you can limit the permissions granted to the application and reduce the risks of malicious activity in case your application code is vulnerable to a SQL injection attack.
+
+For example, you could reate an Azure Active Directory administrator account with full administrative permission and  one Azure Active Directory account could be configured as an administrator of the Azure SQL deployment with full administrative permissions. This account could be either an individual or security group account. An Azure AD administrator must be configured if you want to use Azure AD accounts to connect to the Database.
+In SQL Database, you can create SQL logins with limited administrative permissions using the fixed roles to help you manage that.
+
+To create a SQL Server Authenticated user, connect to the master database on your server with your server admin login and create a new server login. It's a good idea to also create a user in the master database. Creating a user in master allows a user to log in using tools like SSMS without specifying a database name. It also allows them to use the object explorer to view all databases on a server.
+SQLCopy
+
+```sql
+-- Connect to master database and create a login
+CREATE LOGIN ApplicationLogin WITH PASSWORD = 'Str0ng_password';
+CREATE USER ApplicationUser FOR LOGIN ApplicationLogin;
+```
+
+Then, connect to your **dedicated SQL pool (formerly SQL DW)** with your server admin login and create a database user based on the server login you created.
 
 SQLCopy
 
 ```sql
--- schema to contain user tables
-CREATE SCHEMA Data;
-GO
-
--- table with masked columns
-CREATE TABLE Data.Membership(
-    MemberID        int IDENTITY(1,1) NOT NULL PRIMARY KEY CLUSTERED,
-    FirstName        varchar(100) MASKED WITH (FUNCTION = 'partial(1, "xxxxx", 1)') NULL,
-    LastName        varchar(100) NOT NULL,
-    Phone            varchar(12) MASKED WITH (FUNCTION = 'default()') NULL,
-    Email            varchar(100) MASKED WITH (FUNCTION = 'email()') NOT NULL,
-    DiscountCode    smallint MASKED WITH (FUNCTION = 'random(1, 100)') NULL
-    );
-
--- inserting sample data
-INSERT INTO Data.Membership (FirstName, LastName, Phone, Email, DiscountCode)
-VALUES   
-('Roberto', 'Tamburello', '555.123.4567', 'RTamburello@contoso.com', 10),  
-('Janice', 'Galvin', '555.123.4568', 'JGalvin@contoso.com.co', 5),  
-('Shakti', 'Menon', '555.123.4570', 'SMenon@contoso.net', 50),  
-('Zheng', 'Mu', '555.123.4569', 'ZMu@contoso.net', 40);  
+-- Connect to the database and create a database user
+CREATE USER ApplicationUser FOR LOGIN ApplicationLogin;
 ```
 
-A new user is created and granted the **SELECT** permission on the schema where the table resides. Queries executed as the `MaskingTestUser` view masked data.
+#### Authorization
+
+Authorization refers to what you can do within a database once you are authenticated and connected. Authorization privileges are determined by role memberships and permissions. As a best practice, you should grant users the least privileges necessary. To manage roles, you can use the following stored procedures:
 
 SQLCopy
 
 ```sql
-CREATE USER MaskingTestUser WITHOUT LOGIN;  
-
-GRANT SELECT ON SCHEMA::Data TO MaskingTestUser;  
-  
-  -- impersonate for testing:
-EXECUTE AS USER = 'MaskingTestUser';  
-
-SELECT * FROM Data.Membership;  
-
-REVERT;  
+EXEC sp_addrolemember 'db_datareader', 'ApplicationUser'; -- allows ApplicationUser to read data
+EXEC sp_addrolemember 'db_datawriter', 'ApplicationUser'; -- allows ApplicationUser to write data
 ```
 
-The result demonstrates the masks by changing the data from
+The server admin account you are connecting with is a member of db_owner, which has authority to do anything within the database. Save this account for deploying schema upgrades and other management operations. Use the "ApplicationUser" account with more limited permissions to connect from your application to the database with the least privileges needed by your application.
 
-```
-1 Roberto Tamburello 555.123.4567 RTamburello@contoso.com 10
-```
+There are ways to further limit what a user can do within the database:
 
-into
-
-```
-1 Rxxxxxo Tamburello xxxx RXXX@XXXX.com 91
-```
-
-where the number in DiscountCode is random for every query result.
-
-### Adding or editing a mask on an existing column
-
-Use the **ALTER TABLE** statement to add a mask to an existing column in the table, or to edit the mask on that column.
-The following example adds a masking function to the `LastName` column:
+The following example grants read access to a user-defined schema.
 
 SQLCopy
 
 ```sql
-ALTER TABLE Data.Membership  
-ALTER COLUMN LastName ADD MASKED WITH (FUNCTION = 'partial(2,"xxxx",0)');  
+--CREATE SCHEMA Test
+GRANT SELECT ON SCHEMA::Test to ApplicationUser
 ```
 
-The following example changes a masking function on the `LastName` column:
+Managing databases and servers from the Azure portal or using the Azure Resource Manager API is controlled by your portal user account's role assignments. For more information, see [Assign Azure roles using the Azure portal](https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal?toc=/azure/synapse-analytics/sql-data-warehouse/toc.json&bc=/azure/synapse-analytics/sql-data-warehouse/breadcrumb/toc.json).
+
+#### Encryption
+
+Transparent Data Encryption (TDE) helps protect against the threat of malicious activity by encrypting and decrypting your data at rest. When you encrypt your database, associated backups and transaction log files are encrypted without requiring any changes to your applications. TDE encrypts the storage of an entire database by using a symmetric key called the database encryption key.
+
+In SQL Database, the database encryption key is protected by a built-in server certificate. The built-in server certificate is unique for each server. Microsoft automatically rotates these certificates at least every 90 days. The encryption algorithm used is AES-256. For a general description of TDE, see [Transparent Data Encryption](https://learn.microsoft.com/en-us/sql/relational-databases/security/encryption/transparent-data-encryption?toc=/azure/synapse-analytics/sql-data-warehouse/toc.json&bc=/azure/synapse-analytics/sql-data-warehouse/breadcrumb/toc.json&view=azure-sqldw-latest&preserve-view=true).
+
+You can encrypt your database using the [Azure portal](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde) or [T-SQL](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql).
+
+Follow these steps to enable TDE:
+
+1. Connect to the *master* database on the server hosting the database using a login that is an administrator or a member of the **dbmanager** role in the master database
+2. Execute the following statement to encrypt the database.
 
 SQLCopy
 
 ```sql
-ALTER TABLE Data.Membership  
-ALTER COLUMN LastName varchar(100) MASKED WITH (FUNCTION = 'default()');  
+ALTER DATABASE [AdventureWorks] SET ENCRYPTION ON;
 ```
 
-### Granting permissions to view unmasked data
 
-Granting the **UNMASK** permission allows `MaskingTestUser` to see the data unmasked.
+### References
+[IP firewall rules - Azure SQL Database and Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/azure-sql/database/firewall-configure?toc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Ftoc.json&bc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Fbreadcrumb%2Ftoc.json&view=azuresql)
 
-SQLCopy
+[Azure Synapse connectivity settings - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/security/connectivity-settings)
 
-```sql
-GRANT UNMASK TO MaskingTestUser;  
+[Azure SQL Database connectivity architecture - Azure SQL Database and Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/azure-sql/database/connectivity-architecture?view=azuresql#connection-policy)
 
-EXECUTE AS USER = 'MaskingTestUser';  
+[Managing databases and logins in Azure SQL Database](https://learn.microsoft.com/en-us/azure/azure-sql/database/logins-create-manage?toc=/azure/synapse-analytics/sql-data-warehouse/toc.json&bc=/azure/synapse-analytics/sql-data-warehouse/breadcrumb/toc.json). 
 
-SELECT * FROM Data.Membership;  
+[Connecting by using Azure Active Directory Authentication](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-authentication).
 
-REVERT;    
-  
--- Removing the UNMASK permission  
-REVOKE UNMASK TO MaskingTestUser;  
-```
+[sp_addrolemember (Transact-SQL) - SQL Server | Microsoft Learn](https://learn.microsoft.com/en-us/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql?view=sql-server-ver16#examples)
 
-### Custom Options - Serveless SQL Pool
+[Azure Active Directory authentication - Azure SQL Database | Microsoft Learn](https://learn.microsoft.com/en-us/azure/azure-sql/database/authentication-aad-overview?view=azuresql)
 
-Row Level Security
+[Granular Permissions](https://learn.microsoft.com/en-us/sql/relational-databases/security/permissions-database-engine?toc=/azure/synapse-analytics/sql-data-warehouse/toc.json&bc=/azure/synapse-analytics/sql-data-warehouse/breadcrumb/toc.json&view=azure-sqldw-latest&preserve-view=true) 
 
-Dynamic Data masking Script
+[Database roles](https://learn.microsoft.com/en-us/sql/relational-databases/security/authentication-access/database-level-roles?toc=/azure/synapse-analytics/sql-data-warehouse/toc.json&bc=/azure/synapse-analytics/sql-data-warehouse/breadcrumb/toc.json&view=azure-sqldw-latest&preserve-view=true) 
 
-encrypt on Spark level.
+[Stored procedures](https://learn.microsoft.com/en-us/sql/relational-databases/stored-procedures/stored-procedures-database-engine?toc=/azure/synapse-analytics/sql-data-warehouse/toc.json&bc=/azure/synapse-analytics/sql-data-warehouse/breadcrumb/toc.json&view=azure-sqldw-latest&preserve-view=true) 
+
+[Transparent data encryption (T-SQL) - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql)
+
