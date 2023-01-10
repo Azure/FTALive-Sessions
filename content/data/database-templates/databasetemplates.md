@@ -1,6 +1,6 @@
 # Azure Synapse database templates
 
-#### [prev](./introduction.md) | [home](./readme.md)  | [next](./lakedatabase.md)
+#### [prev](./azuresynapse.md) | [home](./readme.md)  | [next](./lakedatabase.md)
 
 ## Data integration and data Standardization efforts of Microsoft
 
