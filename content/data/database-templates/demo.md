@@ -1,6 +1,6 @@
 # Demo
 
-#### [back](./discoveryandassessment.md) | [home](./readme.md)  | [next](./QnA.md)
+#### [back](./mapdata.md) | [home](./readme.md)  | [next](./QnA.md)
 
 # 1. Walk thrugh Azure Synapse database templates
 ## Objective
