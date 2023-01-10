@@ -9,7 +9,7 @@
 * **When**: We conduct these sessions regularly based on customer demand. 
 * **Where**: These sessions are offered as part of 'FTA Live' and delivered virtually. To learn when this session will next be delivered and for a full catalogue of FTA Live sessions please visit [aka.ms/ftalive](https://aka.ms/ftalive).
 * **Why**: One of the challenges that users in key industry areas face is how to describe and shape the mass of data that they are gathering. Most of this data is currently stored in data lakes or in application-specific data silos. This session is aimed to understand how to bring all this data together in a standardized format enabling it to be more easily analyzed and understood by using Azure Synapse database templates. </br>
-## One of the challenges
+## Challenges of the data management
  *  Data is complex and hard to manage...
  ![](/images/databaseTemplates_intro1.png)
 *  Azure Synapse provides the one of solutions for this challenge.
