@@ -1,0 +1,49 @@
+## What is a Data Warehouse
+
+A data warehouse - a large store of data accumulated from a wide range of sources within a company and used to guide management decisions.
+When businesses started realizing the value of analyzing and reporting on their data,  there wasn’t the type of technology there is today.  Reports were generally limited to a 24 hour interval.  Data went through a very sequential and structured flow.  It was loaded, and then transformed and then stored in a relational format. 
+Most organisations pretty much had a one box solution. Tools were used for ETL like SSIS to get data from somewhere and land it into a staging database. Data was usually landed in the format it was originally in, some transformations were applied, maybe some data typing, maybe a column was added or an aggregate.  And then it was put into a into a a nice format of dimensions and facts
+It was a type of conveyor belt of data going through for many years there was very little flexibility. and this became the ingrained thinking of developers. There were also added limitations like hardware and the type of technology available to execute advanced use cases furthermore, for example if you wanted an Apache Spark cluster or a Hadoop cluster on premise for big data analytics, it was very costly, it required skills to configure and maintain it and usually was only a luxury big organisations could afford. 
+Adding any additional source was cumbersome and time consuming, data had to be analyzed before loading into relational structures and because data needed to be in a relational structure, analyzing or working with structured or non structured data was almost impossible. Near real time was expensive and mostly something that was just dreamed of. 
+This kind of approach doesn’t always make sense when analytic requirements and use cases are changing all the time and when things are getting competitive
+Today there are many technology choices to choose from and hardware that is required to run these use cases is right at your finger tips 
+These DW systems as they were known are being replaced by the modern data warehouse - database equivalent of a Swiss Army knife - where one can integrate multiple fit-for-purpose analytics engines. 
+As scenarios evolve with multiple data types and different types of analytics that needs to be performed over big data structures,  it becomes common that customers inevitably spawn many types of data workloads and because no single platform runs all workloads equally well most data warehouse and analytics systems trend toward a multiplatform environment. 
+The design focus has changed the scenarios that involve exploring data, analysing data to generating new insights and new analytics application and for this to be successful, we need to get data from where it is, to where it is needed and when it is needed.
+Instead of the relational data store being the centre of the data warehouse, the data lake becomes the centre of any modern DW solution. 
+The data lake is the storage repository, which will holds the vast amount of raw data in its native format until it is needed.
+If we look at a modern DW architecture in Azure, it typically consists of the following services:
+Pipelines using either Azure Data Factory or Azure Synapse pipelines, Azure Data Lake Storage, Azure Synapse Dedicated and Serverless Pools and Power BI. 
+
+
+### Security 
+
+[<Back](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Dedicated%20SQL%20Pool_data.md)\- [Next >](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Network.md)
+
+
+#### Serverless Security overview
+Serverless SQL pool enables you to centrally manage identities of database user and other Microsoft services with [Azure Active Directory integration](https://learn.microsoft.com/en-us/azure/azure-sql/database/authentication-aad-configure). . Azure Active Directory (Azure AD) supports [multi-factor authentication](https://learn.microsoft.com/en-us/azure/azure-sql/database/authentication-mfa-ssms-configure) (MFA).
+
+**Authentication**
+
+Serverless SQL pool authentication refers to how users prove their identity when connecting to the endpoint. Two types of authentication are supported:
+
+•    **SQL Authentication**
+
+•    This authentication method uses a username and password.
+
+•    **Azure Active Directory Authentication**:
+
+•    This authentication method uses identities managed by Azure Active Directory. 
+
+**Authorization**
+
+If SQL Authentication is used, the SQL user exists only in serverless SQL pool and permissions are scoped to the objects in serverless SQL pool. The SQL user needs to use one of the [supported authorization types](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/develop-storage-files-storage-access-control#supported-storage-authorization-types) to access the files on teh storage as give permission to a SQl user would not be possible.
+
+If Azure AD authentication is used, a user can sign in to serverless SQL pool and other services, like Azure Storage, and can grant permissions to the Azure AD user.
+
+#### **Access to storage accounts**
+
+ serverless SQL pool supports the following authorization types:
+
+•    [**Shared access signature (SAS)**](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/develop-storage-files-storage-access-control?tabs=shared-access-signature) A SAS gives you granular control over the type of access you grant to clients who have the SAS: validity interval, granted permissions, acceptable IP address range, acceptable protocol (https/http).
