@@ -22,6 +22,7 @@ Synapse Analytics
       Synapse Workspace - VNET, DEP and Private Endpoints, RBACs
       Least Privilege Rule
 
+Data Factory
 
 Storage - Data Lake
 
