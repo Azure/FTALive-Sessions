@@ -14,7 +14,7 @@ Please give us your feedback on https://aka.ms/ftalive-feedback
 | | Topic    | Feature																										| Description  
 | :-----  |:-----																										| :----------    | :--------
 |1.| Cloud Adoption Framework </br> [Manage Phase](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/manage/)  		|											| Recommendations, guidance and tools for cloud monitoring strategy and implementation.
-|2.| [Conceptual: Data Sources](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/data-sources#application-tiers)      |      | Application tiers, data sources and fundamental data types.   |
+|2.| [Conceptual: Data Sources](https://docs.microsoft.com/en-us/azure/azure-monitor/data-sources)      |      | Application tiers, data sources and fundamental data types.   |
 |3. |  [Azure Monitor](https://docs.microsoft.com/en-us/azure/azure-monitor/) </br> (Portal Walkthrough) | [Activity](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/activity-log)															| Audit Azure control plane operations with Azure Monitor.
 ||    | Metrics ([Platform](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/data-platform-metrics) and [Guest](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/diagnostics-extension-overview))													| Performance with Azure Monitor & Diagnostics Extension.
 ||    | [Logs](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/data-platform-logs)															| Health & Diagnostics with Azure Monitor.

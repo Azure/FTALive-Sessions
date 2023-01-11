@@ -26,5 +26,4 @@ Often built on Enterprise Relational Database engines | Built on modern technolo
 Usually Scale up | Scale out
 On-prem and Cloud | Cloud Only
 
-
 <!-- Often have OLAP models built on top of DW for reporting | Data can be accessed directly from the Data Lake (or pushed into any system including OLAP model, Data Mart or a Traditional Data Warehouse) -->

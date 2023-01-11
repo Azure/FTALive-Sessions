@@ -10,31 +10,24 @@ This also means newer techniques are available when designing a network topology
 
 ## Common traps and wrong assumptions
 
-Thinking there is still layer 2
+- Thinking there is still layer 2
+- Running a DHCP server in Azure
+- Adding multiple NICs on VMs to influence bandwidth
+- Force tunneling and hair-pinning
+- Assuming no public IP equals no internet access
+- Fear of Public Endpoints
+- VNet mistakes:
+  - Nesting VNets unnecessarily
+  - Forgetting to use Network Security Groups (NSGs)
+  - Asking too much from Network Security Groups (NSGs)
+  - Trying to put PaaS services "into" a VNet when there is no requirement to do so
+- Security mistakes
+  - Low segmentation/high trust design.
+  - Not leveraging identity as the primary security layer.
+  - Not considering logging requirements in network design.
 
-- Running a DHCP server in Azure.
-- Multiple NICs on NVAs.
+## Troubleshoot difficulties
 
-Force tunneling and hair-pinning
-
-- Assuming no public IP equals no internet access.
-- Fear of Public Endpoints.
-
-VNet mistakes
-
-- Nesting VNets.
-- Forgetting to use NSGs.
-- Asking too much from NSGs.
-- Trying to put PaaS services "into" a VNet when there is no requirement to do so.
-
-Security mistakes
-
-- Low segmentation/high trust design.
-- Not leveraging Identity as the primary security layer.
-- Not considering logging requirements in network design.
-
-Troubleshoot difficulties
-
-- Using ICMP.
-- The platform does routing not the VMs.
-- Misconfigured DNS.
+- Relying on ICMP and on-prem utilities
+- Forgetting platform handles routing, not the VMs
+- Misconfigured DNS

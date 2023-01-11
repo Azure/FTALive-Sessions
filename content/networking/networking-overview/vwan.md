@@ -1,6 +1,6 @@
 # Hub and Spoke with Azure VWAN
 
-**[prev](./basics.md) | [home](./readme.md)  | [next](./security-overview.md)**
+**[prev](./basics.md) | [home](./readme.md)  | [next](./readme.md)**
 
 ## Virtual WAN Overview
 

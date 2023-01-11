@@ -1,0 +1,34 @@
+trigger:
+- none
+
+variables:
+- template: ./src/prod-migration/variables.yml
+
+pool:
+  vmImage: windows-latest
+
+steps:
+- task: AzureCLI@2
+  displayName: Azure CLI
+  inputs:
+    azureSubscription: '$(serviceConnectionName)'
+    scriptType: bash
+    scriptLocation: inlineScript
+    inlineScript: |
+      az --version
+      az account show
+      az account set --subscription $(subscription)
+
+- task: AzurePowerShell@5
+  inputs:
+    azureSubscription: '$(serviceConnectionName)'
+    scriptType: 'FilePath'
+    scriptPath: '$(Build.SourcesDirectory)\src\pipeline-script.ps1'
+    azurePowerShellVersion: 'LatestVersion'
+    scriptArguments:
+      -AssessedMachinesFilePath '$(Build.SourcesDirectory)\All_Assessed_Machines.csv' `
+      -AssessedDisksFilePath '$(Build.SourcesDirectory)\All_Assessed_Disks.csv' `
+      -RG '$(ResourceGroupName)' `
+      -Location '$(location)' `
+      -VNetName '$(virtualNetworkName)' `
+      -SubnetName '$(subnetName)'

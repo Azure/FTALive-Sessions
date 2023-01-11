@@ -1,0 +1,211 @@
+# voting-storage-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: voting-storage
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: voting-storage
+  template:
+    metadata:
+      labels:
+        app: voting-storage
+    spec:
+      containers:
+      - name: voting-storage
+        image: mcr.microsoft.com/aks/samples/voting/storage:2.0
+        args: ["--ignore-db-dir=lost+found"]
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 250m
+            memory: 256Mi
+        ports:
+        - containerPort: 3306
+          name: mysql
+        volumeMounts:
+        - name: mysql-persistent-storage
+          mountPath: /var/lib/mysql
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: voting-storage-secret
+              key: MYSQL_ROOT_PASSWORD
+        - name: MYSQL_USER
+          valueFrom:
+            secretKeyRef:
+              name: voting-storage-secret
+              key: MYSQL_USER
+        - name: MYSQL_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: voting-storage-secret
+              key: MYSQL_PASSWORD
+        - name: MYSQL_DATABASE
+          valueFrom:
+            secretKeyRef:
+              name: voting-storage-secret
+              key: MYSQL_DATABASE
+      volumes:
+      - name: mysql-persistent-storage
+        persistentVolumeClaim:
+          claimName: mysql-pv-claim
+---
+# voting-storage-secret.yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: voting-storage-secret
+type: Opaque
+data:
+  MYSQL_USER: ZGJ1c2Vy
+  MYSQL_PASSWORD: UGFzc3dvcmQxMg==
+  MYSQL_DATABASE: YXp1cmV2b3Rl
+  MYSQL_ROOT_PASSWORD: UGFzc3dvcmQxMg==
+---
+# voting-storage-pv-claim.yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mysql-pv-claim
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
+# voting-storage-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: voting-storage
+  labels: 
+    app: voting-storage
+spec:
+  ports:
+  - port: 3306
+    name: mysql
+  selector:
+    app: voting-storage
+---
+# voting-app-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: voting-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: voting-app
+  template:
+    metadata:
+      labels:
+        app: voting-app
+    spec:
+      containers:
+      - name: voting-app
+        image: mcr.microsoft.com/aks/samples/voting/app:2.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+          name: http
+        env:
+        - name: MYSQL_HOST
+          value: "voting-storage"
+        - name: MYSQL_USER
+          valueFrom:
+            secretKeyRef:
+              name: voting-storage-secret
+              key: MYSQL_USER
+        - name: MYSQL_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: voting-storage-secret
+              key: MYSQL_PASSWORD
+        - name: MYSQL_DATABASE
+          valueFrom:
+            secretKeyRef:
+              name: voting-storage-secret
+              key: MYSQL_DATABASE
+        - name: ANALYTICS_HOST
+          value: "voting-analytics"
+---
+# voting-app-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: voting-app
+  labels: 
+    app: voting-app
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 8080
+    name: http
+  selector:
+    app: voting-app
+---
+# voting-analytics-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: voting-analytics
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: voting-analytics
+      version: "2.0"
+  template:
+    metadata:
+      labels:
+        app: voting-analytics
+        version: "2.0"
+    spec:
+      containers:
+      - name: voting-analytics
+        image: mcr.microsoft.com/aks/samples/voting/analytics:2.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+          name: http
+        env:
+        - name: MYSQL_HOST
+          value: "voting-storage"
+        - name: MYSQL_USER
+          valueFrom:
+            secretKeyRef:
+              name: voting-storage-secret
+              key: MYSQL_USER
+        - name: MYSQL_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: voting-storage-secret
+              key: MYSQL_PASSWORD
+        - name: MYSQL_DATABASE
+          valueFrom:
+            secretKeyRef:
+              name: voting-storage-secret
+              key: MYSQL_DATABASE
+---
+# voting-analytics-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: voting-analytics
+  labels: 
+    app: voting-analytics
+spec:
+  ports:
+  - port: 8080
+    name: http
+  selector:
+    app: voting-analytics

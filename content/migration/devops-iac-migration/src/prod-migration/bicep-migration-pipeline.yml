@@ -1,0 +1,49 @@
+trigger:
+- none
+
+variables:
+- group: bicepPipelineVariablesProd
+
+pool:
+  vmImage: windows-latest
+
+steps:
+- task: AzureCLI@2
+  displayName: Azure CLI
+  inputs:
+    azureSubscription: '$(serviceConnectionName)'
+    scriptType: bash
+    scriptLocation: inlineScript
+    inlineScript: |
+      az --version
+      az account show
+      az account set --subscription $(subscription)
+
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: $(serviceConnectionName)
+    scriptType: bash
+    scriptLocation: inlineScript
+    inlineScript: |
+      az --version
+      az deployment group create \
+        --resource-group $(ResourceGroupName) \
+        --template-file '$(Build.SourcesDirectory)\src\bicep\vnet.bicep' \
+        --parameters virtualNetworkName=$(virtualNetworkName) subnetName=$(subnetName) subnetCIDR=$(subnetCIDR) VNetCIDR=$(vnetCIDR) location=$(location) defaultSubnetName=$(defaultSubnetName) defaultSubnetCIDR=$(defaultSubnetCIDR)
+
+
+- task: AzurePowerShell@5
+  inputs:
+    azureSubscription: '$(serviceConnectionName)'
+    scriptType: 'FilePath'
+    scriptPath: '$(Build.SourcesDirectory)\src\bicep\pipeline-script-bicep.ps1'
+    azurePowerShellVersion: 'LatestVersion'
+    scriptArguments:
+      -AssessedMachinesFilePath '$(Build.SourcesDirectory)\src\bicep\All_Assessed_Machines.csv' `
+      -AssessedDisksFilePath '$(Build.SourcesDirectory)\src\bicep\All_Assessed_Disks.csv' `
+      -RG '$(ResourceGroupName)' `
+      -Location '$(location)' `
+      -VNetName '$(virtualNetworkName)' `
+      -SubnetName '$(subnetName)'
+
+
