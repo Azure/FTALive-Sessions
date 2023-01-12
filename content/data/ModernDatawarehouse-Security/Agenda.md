@@ -39,6 +39,6 @@ IT Pros or architects that want to understand the options to enforce the securit
 
 ### Let's start:
 
- [Next >](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Serveless_dedicatedPool_DataProtection.md)
+ [Next >](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Network.md)
 
 
