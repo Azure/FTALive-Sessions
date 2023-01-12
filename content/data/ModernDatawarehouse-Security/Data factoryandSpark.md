@@ -3,7 +3,7 @@
 
 ### Overview
 
-[<Back](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Workspace.md)\- [Next >](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/ADLS%20Security)
+[<Back](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Serveless%20SQL%20Pool.md)\- [Next >](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/ADLS%20Security)
 
 ### Data Factory
 
@@ -81,7 +81,6 @@ df.show()
 [Secure access credentials with Linked Services in Apache Spark for Azure Synapse Analytics - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/spark/apache-spark-secure-credentials-with-tokenlibrary?pivots=programming-language-python)
 
 [Synapse Spark - Encryption, Decryption and Data Masking - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/synapse-spark-encryption-decryption-and-data-masking/ba-p/3615094)
-
 
 
 [Using the workspace MSI to authenticate a Synapse notebook when accessing an Azure Storage account - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/using-the-workspace-msi-to-authenticate-a-synapse-notebook-when/ba-p/2330029)
