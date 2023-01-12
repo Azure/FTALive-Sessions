@@ -93,6 +93,16 @@ Synapse Administrator is not listed for each task unless it is the only role tha
 
 Guest users from another tenant are also able to review, add, or change role assignments once they have been assigned as Synapse Administrator.
 
+
+#### Synapse role-based access control
+Azure Synapse also includes Synapse role-based access control (RBAC) roles to manage different aspects of Synapse Studio. Leverage these built-in roles to assign permissions to users, groups, or other security principals to manage who can:
+
+        Publish code artifacts and list or access published code artifacts.
+        Execute code on Apache Spark pools and integration runtimes.
+        Access linked (data) services that are protected by credentials.
+        Monitor or cancel job executions, review job output and execution logs.
+
+
 The minimum Synapse RBAC role required is shown.
 
 All Synapse RBAC roles at any scope provide you Synapse User permissions at the workspace.
@@ -158,9 +168,6 @@ All Synapse RBAC permissions/actions shown in the table are prefixed `Microsoft/
 | ACCESS MANAGEMENT                                            |                                                              |                                                              |
 | Review Synapse RBAC role assignments at any scope            | Synapse User                                                 | read                                                         |
 | Assign and remove Synapse RBAC role assignments for users, groups, and service principals | Synapse Administrator at the workspace or at a specific workspace item scope | roleAssignments/write, delete                                |
-
-
-
 
 
 
