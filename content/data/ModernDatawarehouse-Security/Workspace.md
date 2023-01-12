@@ -39,18 +39,15 @@ You can create SQL pools, Data Explorer pools, Apache Spark pools, and Integrati
 
 You can pause or scale a dedicated SQL pool, configure a Spark pool, or an integration runtime if you're an Azure Owner or Contributor on the workspace or that resource.
 
-### Access Control
-Synapse access control can be simplified by aligning roles and personas in your organization with security groups. This enables you to manage access to security groups simply by adding and removing users.
+#### Access Control
 
-     Azure roles for resource management and access to data in storage,
-     
-     Synapse roles for managing live access to code and execution,
-     
-     SQL roles for data plane access to data in SQL pools, and
-     
-     Git permissions for source code control, including continuous integration and deployment 
+Suggestion: You can create a basic group and add your members at the same time using the Azure Active Directory (Azure AD) portal and add permissions as applied,  you will use the following [Access control in Synapse workspace how to - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/security/how-to-set-up-access-control) and [How to manage groups - Azure Active Directory - Microsoft Entra | Microsoft Learn](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/how-to-manage-groups):
 
-[Access control in Synapse workspace how to - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/security/how-to-set-up-access-control)
+- **Security Groups**, to group users with similar access requirements.
+- **Azure roles**, to control who can create and manage SQL pools, Apache Spark pools and Integration runtimes, and access ADLS Gen2 storage.
+- **Synapse roles**, to control access to published code artifacts, use of Apache Spark compute resources and integration runtimes.
+- **SQL permissions**, to control administrative and data plane access to SQL pools.
+- **Git permissions**, to control who can access code artifacts in source control if you configure Git-support for workspaces.
 
 ### View and edit code artifacts
 
@@ -164,15 +161,7 @@ All Synapse RBAC permissions/actions shown in the table are prefixed `Microsoft/
 
 
 
-#### Access Control
 
-Suggestion: You can create a basic group and add your members at the same time using the Azure Active Directory (Azure AD) portal and add permissions as applied,  you will use the following [Access control in Synapse workspace how to - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/security/how-to-set-up-access-control) and [How to manage groups - Azure Active Directory - Microsoft Entra | Microsoft Learn](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/how-to-manage-groups):
-
-- **Security Groups**, to group users with similar access requirements.
-- **Azure roles**, to control who can create and manage SQL pools, Apache Spark pools and Integration runtimes, and access ADLS Gen2 storage.
-- **Synapse roles**, to control access to published code artifacts, use of Apache Spark compute resources and integration runtimes.
-- **SQL permissions**, to control administrative and data plane access to SQL pools.
-- **Git permissions**, to control who can access code artifacts in source control if you configure Git-support for workspaces.
 
 
 
