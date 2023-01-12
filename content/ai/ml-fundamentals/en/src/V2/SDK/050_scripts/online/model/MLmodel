@@ -1,0 +1,16 @@
+artifact_path: Diabetest-LGBM-Model
+flavors:
+  lightgbm:
+    code: null
+    data: model.lgb
+    lgb_version: 3.2.1
+    model_class: lightgbm.basic.Booster
+  python_function:
+    data: model.lgb
+    env: conda.yaml
+    loader_module: mlflow.lightgbm
+    python_version: 3.7.13
+mlflow_version: 1.26.1
+model_uuid: 106038612dcc4f3692ddaa58d1fe68e1
+run_id: b5e04ea9-612e-453b-8fac-41bdc8d54c56
+utc_time_created: '2022-06-17 09:25:39.472211'
