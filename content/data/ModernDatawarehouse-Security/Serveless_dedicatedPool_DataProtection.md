@@ -6,49 +6,6 @@
 
 [<Back](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Agenda.md)\- [Next >](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Dedicated%20SQL%20Pool_data.md)
 
-#### Workspace - Connection
-
-Connection Security refers to how you restrict and secure connections to your database using firewall rules and connection encryption. you can use the portal page under network to configure the IPs that can access the workspace:
-
-With managed Vnet:
-![image](https://user-images.githubusercontent.com/62876278/208086623-bb8e021f-28bb-4e49-8fee-9645dca41422.png)
-
-
-
-Non managed 
-
-![image](https://user-images.githubusercontent.com/62876278/212038852-c2e3cd73-4fcd-42bc-8f43-40465dae63f3.png)
-
-
-Dedicated SQL pool (formerly SQL DW) are encrypted by default. Modifying connection settings to disable encryption are ignored.
-
-#### Public network access
-You can use the public network access feature to allow incoming public network connectivity to your Azure Synapse workspace.
-
-        When public network access is disabled, you can connect to your workspace only using private endpoints.
-        When public network access is enabled, you can connect to your workspace also from public networks. You can manage this feature both during and after your workspace creation.
-  
-Note:
-This feature is only available to Azure Synapse workspaces associated with Azure Synapse Analytics Managed Virtual Network. However, you can still open your Synapse workspaces to the public network regardless of its association with managed VNet.
-        
-####  Minimal TLS version
-
-Starting in December 2021, a requirement for TLS 1.2 has been implemented for workspace-managed dedicated SQL pools in new Synapse workspaces. Login attempts from connections using a TLS version lower than 1.2 will fail. 
-
-####  Connection policy
-**Default**:  The default policy is Redirect for all client connections originating inside of Azure (for example, from an Azure Virtual Machine) and Proxy for all client connections originating outside (for example, connections from your local workstation).
-We highly recommend the Redirect connection policy over the Proxy connection policy for the lowest latency and highest throughput.
-
-**Redirect**
-If you are connecting from within Azure your connections have a connection policy of Redirect by default. A policy of Redirect means that after the TCP session is established to Azure SQL Database, the client session is then redirected to the right database cluster with a change to the destination virtual IP from that of the Azure SQL Database gateway to that of the cluster. Thereafter, all subsequent packets flow directly to the cluster, bypassing the Azure SQL Database gateway. The following diagram illustrates this traffic flow.
-
-![image](https://user-images.githubusercontent.com/62876278/208086135-ac97ec42-840e-47d8-90fb-e08295aaa0d8.png)
-
-
-**Proxy**
-If you are connecting from outside Azure, your connections have a connection policy of Proxy by default. A policy of Proxy means that the TCP session is established via the Azure SQL Database gateway and all subsequent packets flow via the gateway.
-
-![image](https://user-images.githubusercontent.com/62876278/208086049-2f935696-2257-4684-bf88-627c64c15f2d.png)
 
 #### Authentication
 
