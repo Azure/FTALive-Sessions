@@ -28,21 +28,6 @@ You can use the public network access feature to allow incoming public network c
 Note:
 This feature is only available to Azure Synapse workspaces associated with Azure Synapse Analytics Managed Virtual Network. However, you can still open your Synapse workspaces to the public network regardless of its association with managed VNet.<figure above>
 
-
-####  Connection policy
-**Default**:  The default policy is Redirect for all client connections originating inside of Azure (for example, from an Azure Virtual Machine) and Proxy for all client connections originating outside (for example, connections from your local workstation).
-We highly recommend the Redirect connection policy over the Proxy connection policy for the lowest latency and highest throughput.
-
-**Redirect**
-If you are connecting from within Azure your connections have a connection policy of Redirect by default. A policy of Redirect means that after the TCP session is established to Azure SQL Database, the client session is then redirected to the right database cluster with a change to the destination virtual IP from that of the Azure SQL Database gateway to that of the cluster. Thereafter, all subsequent packets flow directly to the cluster, bypassing the Azure SQL Database gateway. The following diagram illustrates this traffic flow.
-
-![image](https://user-images.githubusercontent.com/62876278/208086135-ac97ec42-840e-47d8-90fb-e08295aaa0d8.png)
-
-
-**Proxy**
-If you are connecting from outside Azure, your connections have a connection policy of Proxy by default. A policy of Proxy means that the TCP session is established via the Azure SQL Database gateway and all subsequent packets flow via the gateway.
-
-![image](https://user-images.githubusercontent.com/62876278/208086049-2f935696-2257-4684-bf88-627c64c15f2d.png)
 #### Manage VNet
  
 When you create your Azure Synapse workspace, you can choose to associate it to a Microsoft Azure Virtual Network. The Virtual Network associated with your workspace is managed by Azure Synapse. This Virtual Network is called a *Managed workspace Virtual Network*. Creating a workspace with a Managed workspace Virtual Network associated with it ensures that your workspace is network isolated from other workspaces. 
