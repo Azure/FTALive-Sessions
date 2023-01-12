@@ -76,7 +76,7 @@ REVERT;
 The result demonstrates the masks by changing the data from
 
 ```
-1 Roberto Tamburello 555.123.4567 RTamburello@contoso.com 10
+1 Roberto Tamburello 555.123.4567 RTamburello@contoso.com 10.
 ```
 
 into
