@@ -39,6 +39,19 @@ You can create SQL pools, Data Explorer pools, Apache Spark pools, and Integrati
 
 You can pause or scale a dedicated SQL pool, configure a Spark pool, or an integration runtime if you're an Azure Owner or Contributor on the workspace or that resource.
 
+### Access Control
+Synapse access control can be simplified by aligning roles and personas in your organization with security groups. This enables you to manage access to security groups simply by adding and removing users.
+
+     Azure roles for resource management and access to data in storage,
+     
+     Synapse roles for managing live access to code and execution,
+     
+     SQL roles for data plane access to data in SQL pools, and
+     
+     Git permissions for source code control, including continuous integration and deployment 
+
+[Access control in Synapse workspace how to - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/security/how-to-set-up-access-control)
+
 ### View and edit code artifacts
 
 With access to Synapse Studio, you can create new code artifacts, such as SQL scripts, KQL scripts, notebooks, spark jobs, linked services, pipelines, dataflows, triggers, and credentials. These artifacts can be published or saved with additional permissions.
