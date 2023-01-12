@@ -10,8 +10,15 @@
 
 Connection Security refers to how you restrict and secure connections to your database using firewall rules and connection encryption. you can use the portal page under network to configure the IPs that can access the workspace:
 
-
+With managed Vnet:
 ![image](https://user-images.githubusercontent.com/62876278/208086623-bb8e021f-28bb-4e49-8fee-9645dca41422.png)
+
+
+
+Non managed 
+
+![image](https://user-images.githubusercontent.com/62876278/212038852-c2e3cd73-4fcd-42bc-8f43-40465dae63f3.png)
+
 
 Dedicated SQL pool (formerly SQL DW) are encrypted by default. Modifying connection settings to disable encryption are ignored.
 
