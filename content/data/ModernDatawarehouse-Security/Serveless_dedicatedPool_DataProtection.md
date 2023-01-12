@@ -20,7 +20,9 @@ You can use the public network access feature to allow incoming public network c
 
         When public network access is disabled, you can connect to your workspace only using private endpoints.
         When public network access is enabled, you can connect to your workspace also from public networks. You can manage this feature both during and after your workspace creation.
-        
+  
+Note:
+This feature is only available to Azure Synapse workspaces associated with Azure Synapse Analytics Managed Virtual Network. However, you can still open your Synapse workspaces to the public network regardless of its association with managed VNet.
         
 ####  Minimal TLS version
 
