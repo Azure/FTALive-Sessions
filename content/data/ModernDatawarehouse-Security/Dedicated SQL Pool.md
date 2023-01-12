@@ -5,6 +5,49 @@
 
 [<Back](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Workspace.md)\- [Next >](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/edit/main/content/data/ModernDatawarehouse-Security/Dedicated%20SQL%20Pool_data.md)
 
+
+####  Connection policy
+**Default**:  The default policy is Redirect for all client connections originating inside of Azure (for example, from an Azure Virtual Machine) and Proxy for all client connections originating outside (for example, connections from your local workstation).
+We highly recommend the Redirect connection policy over the Proxy connection policy for the lowest latency and highest throughput.
+
+**Redirect**
+If you are connecting from within Azure your connections have a connection policy of Redirect by default. A policy of Redirect means that after the TCP session is established to Azure SQL Database, the client session is then redirected to the right database cluster with a change to the destination virtual IP from that of the Azure SQL Database gateway to that of the cluster. Thereafter, all subsequent packets flow directly to the cluster, bypassing the Azure SQL Database gateway. The following diagram illustrates this traffic flow.
+
+![image](https://user-images.githubusercontent.com/62876278/208086135-ac97ec42-840e-47d8-90fb-e08295aaa0d8.png)
+
+
+First you reach the one of the Gateways public IPs on port 1433.
+
+Then you are redirected to one of the multiple possible Tenant Rings on port 11000-11999 range. Tenant rings are clusters where your DW server lives
+
+**Proxy**
+If you are connecting from outside Azure, your connections have a connection policy of Proxy by default. A policy of Proxy means that the TCP session is established via the Azure SQL Database gateway and all subsequent packets flow via the gateway.
+
+![image](https://user-images.githubusercontent.com/62876278/208086049-2f935696-2257-4684-bf88-627c64c15f2d.png)
+
+First you reach are going to reach a region load balancer using one of the Gateways public IPs on port 1433
+
+These public gateways IPs are documented at https://docs.microsoft.com/en-us/azure/azure-sql/database/connectivity-architecture#gateway-ip-addre...
+
+        Samples (CR means Control Ring):
+        
+        Name: cr4.westeurope1-a.control.database.windows.net
+        
+        Address: 104.40.168.105
+        
+        Name: cr4.westus2-a.control.database.windows.net
+        
+        Address: 40.78.240.8
+        
+        
+You need to make sure you open your corporate firewall to your server region gateways on port 1433  
+
+Ref: [Synapse Connectivity Series Part #1 - Inbound SQL DW connections on Public Endpoints - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/synapse-connectivity-series-part-1-inbound-sql-dw-connections-on/ba-p/3589170)
+
+####  Minimal TLS version
+
+Starting in December 2021, a requirement for TLS 1.2 has been implemented for workspace-managed dedicated SQL pools in new Synapse workspaces. Login attempts from connections using a TLS version lower than 1.2 will fail. 
+
 #### Authentication
 
 Authentication refers to how you prove your identity when connecting to the database. Dedicated SQL pool (formerly SQL DW) currently supports SQL Server Authentication with a username and password, and with Azure Active Directory.
@@ -93,47 +136,6 @@ Azure Synapse also includes Synapse role-based access control (RBAC) roles to ma
         Monitor or cancel job executions, review job output and execution logs.
 
 
-####  Connection policy
-**Default**:  The default policy is Redirect for all client connections originating inside of Azure (for example, from an Azure Virtual Machine) and Proxy for all client connections originating outside (for example, connections from your local workstation).
-We highly recommend the Redirect connection policy over the Proxy connection policy for the lowest latency and highest throughput.
-
-**Redirect**
-If you are connecting from within Azure your connections have a connection policy of Redirect by default. A policy of Redirect means that after the TCP session is established to Azure SQL Database, the client session is then redirected to the right database cluster with a change to the destination virtual IP from that of the Azure SQL Database gateway to that of the cluster. Thereafter, all subsequent packets flow directly to the cluster, bypassing the Azure SQL Database gateway. The following diagram illustrates this traffic flow.
-
-![image](https://user-images.githubusercontent.com/62876278/208086135-ac97ec42-840e-47d8-90fb-e08295aaa0d8.png)
-
-
-First you reach the one of the Gateways public IPs on port 1433.
-
-Then you are redirected to one of the multiple possible Tenant Rings on port 11000-11999 range. Tenant rings are clusters where your DW server lives
-
-**Proxy**
-If you are connecting from outside Azure, your connections have a connection policy of Proxy by default. A policy of Proxy means that the TCP session is established via the Azure SQL Database gateway and all subsequent packets flow via the gateway.
-
-![image](https://user-images.githubusercontent.com/62876278/208086049-2f935696-2257-4684-bf88-627c64c15f2d.png)
-
-First you reach are going to reach a region load balancer using one of the Gateways public IPs on port 1433
-
-These public gateways IPs are documented at https://docs.microsoft.com/en-us/azure/azure-sql/database/connectivity-architecture#gateway-ip-addre...
-
-        Samples (CR means Control Ring):
-        
-        Name: cr4.westeurope1-a.control.database.windows.net
-        
-        Address: 104.40.168.105
-        
-        Name: cr4.westus2-a.control.database.windows.net
-        
-        Address: 40.78.240.8
-        
-        
-You need to make sure you open your corporate firewall to your server region gateways on port 1433  
-
-Ref: [Synapse Connectivity Series Part #1 - Inbound SQL DW connections on Public Endpoints - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/synapse-connectivity-series-part-1-inbound-sql-dw-connections-on/ba-p/3589170)
-
-####  Minimal TLS version
-
-Starting in December 2021, a requirement for TLS 1.2 has been implemented for workspace-managed dedicated SQL pools in new Synapse workspaces. Login attempts from connections using a TLS version lower than 1.2 will fail. 
 
 
 #### References
