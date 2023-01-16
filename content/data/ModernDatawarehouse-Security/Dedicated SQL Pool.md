@@ -108,6 +108,71 @@ GRANT SELECT ON SCHEMA::Test to ApplicationUser
 
 Managing databases and servers from the Azure portal or using the Azure Resource Manager API is controlled by your portal user account's role assignments. For more information, see [Assign Azure roles using the Azure portal](https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal?toc=/azure/synapse-analytics/sql-data-warehouse/toc.json&bc=/azure/synapse-analytics/sql-data-warehouse/breadcrumb/toc.json).
 
+#### Ownership chaining
+
+A user with ALTER permission on a schema can use ownership chaining to access securables in other schemas, including securables to which that user is explicitly denied access. This is because ownership chaining bypasses permissions checks on referenced objects when they are owned by the principal that owns the objects that refer to them. A user with ALTER permission on a schema can create procedures, synonyms, and views that are owned by the schema's owner. Those objects will have access (via ownership chaining) to information in other schemas owned by the schema's owner. When possible, you should avoid granting ALTER permission on a schema if the schema's owner also owns other schemas.
+
+For example, this issue may occur in the following scenarios. These scenarios assume that a user, referred as U1, has the ALTER permission on the S1 schema. The U1 user is denied to access a table object, referred as T1, in the schema S2. The S1 schema and the S2 schema are owned by the same owner.
+
+The U1 user has the CREATE PROCEDURE permission on the database and the EXECUTE permission on the S1 schema. Therefore, the U1 user can create a stored procedure, and then access the denied object T1 in the stored procedure.
+
+The U1 user has the CREATE SYNONYM permission on the database and the SELECT permission on the S1 schema. Therefore, the U1 user can create a synonym in the S1 schema for the denied object T1, and then access the denied object T1 by using the synonym.
+
+The U1 user has the CREATE VIEW permission on the database and the SELECT permission on the S1 schema. Therefore, the U1 user can create a view in the S1 schema to query data from the denied object T1, and then access the denied object T1 by using the view
+
+```sql
+------------------------------
+--Master Database
+CREATE LOGIN testUser1 
+	WITH PASSWORD = 'Lalala!0000'
+----Change to SQLDW
+CREATE USER testUser1 FROM LOGIN testUser1
+------------------------------------------
+CREATE SCHEMA Schema_B;
+go
+CREATE SCHEMA Schema_A;
+go
+--------------------------------------
+GRANT CREATE SCHEMA ON DATABASE :: [SQL_DW_database_name] TO testUser1 
+ 
+GRANT SELECT, INSERT, DELETE, UPDATE, ALTER ON Schema::Schema_A TO  testUser1 
+------------------------------------------
+CREATE TABLE Schema_B.TestTbl
+WITH(DISTRIBUTION=ROUND_ROBIN)    
+AS    
+	SELECT 1 AS ID, 100 AS VAL UNION ALL
+	SELECT 2 AS ID, 200 AS VAL UNION ALL    
+	SELECT 2 AS ID, 200 AS VAL
+go
+ 
+ 
+----------------------------------------
+CREATE VIEW Schema_A.Bypass_VW 
+AS -- runs successfully
+SELECT * FROM Schema_B.TestTbl
+ 
+go
+ 
+-------------------------------------------------------------------------
+--Log into SQLDW with the testUser1  ; --->executing as this user.
+ 
+GO
+ 
+SELECT * FROM Schema_B.TestTbl---> user does not have access
+ 
+SELECT * FROM Schema_A.Bypass_VW -- runs successfully and fetches data from table not having select access to
+```
+
+Workaround:
+The point here is: there are  2 schemas with the same owner. So let's change that: different schema owners.
+or
+Deny to the user select on the View(Schema_A.Bypass_VW ) or deny the select.
+
+```sql
+Deny select on Schema_A.Bypass_VW  TO testUser1  
+Deny SELECT ON SCHEMA :: Schema_A TO testUser1 
+```
+
 #### Encryption
 
 Transparent Data Encryption (TDE) helps protect against the threat of malicious activity by encrypting and decrypting your data at rest. When you encrypt your database, associated backups and transaction log files are encrypted without requiring any changes to your applications. TDE encrypts the storage of an entire database by using a symmetric key called the database encryption key.
@@ -159,3 +224,5 @@ ALTER DATABASE [AdventureWorks] SET ENCRYPTION ON;
 [Transparent data encryption (T-SQL) - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql)
 
 [Transparent data encryption (T-SQL)](https://learn.microsoft.com/en-us/sql/relational-databases/security/encryption/transparent-data-encryption?toc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Ftoc.json&bc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Fbreadcrumb%2Ftoc.json&view=azure-sqldw-latest&preserve-view=true)
+
+[Inconsistent permissions or ownership chaining - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/inconsistent-permissions-or-ownership-chaining/ba-p/1552690)
