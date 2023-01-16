@@ -25,7 +25,7 @@ If you are connecting from outside Azure, your connections have a connection pol
 
 ![image](https://user-images.githubusercontent.com/62876278/208086049-2f935696-2257-4684-bf88-627c64c15f2d.png)
 
-First you reach are going to reach a region load balancer using one of the Gateways public IPs on port 1433
+First you reach a region load balancer using one of the Gateways public IPs on port 1433. Which means you need to make sure to open your corporate firewall using the server region gateways.
 
 These public gateways IPs are documented at https://docs.microsoft.com/en-us/azure/azure-sql/database/connectivity-architecture#gateway-ip-addre...
 
@@ -40,7 +40,7 @@ These public gateways IPs are documented at https://docs.microsoft.com/en-us/azu
         Address: 40.78.240.8
         
         
-You need to make sure you open your corporate firewall to your server region gateways on port 1433  
+
 
 Ref: [Synapse Connectivity Series Part #1 - Inbound SQL DW connections on Public Endpoints - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/synapse-connectivity-series-part-1-inbound-sql-dw-connections-on/ba-p/3589170)
 
