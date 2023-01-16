@@ -130,6 +130,7 @@ SQLCopy
 ALTER DATABASE [AdventureWorks] SET ENCRYPTION ON;
 ```
 
+![image](https://user-images.githubusercontent.com/62876278/212685727-f5648001-bf7b-4f99-97e1-3ee3c9751570.png)
 
 
 
