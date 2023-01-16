@@ -64,7 +64,7 @@ However, as a best practice, your organization's users should use a different ac
 For example, you could reate an Azure Active Directory administrator account with full administrative permission and  one Azure Active Directory account could be configured as an administrator of the Azure SQL deployment with full administrative permissions. This account could be either an individual or security group account. An Azure AD administrator must be configured if you want to use Azure AD accounts to connect to the Database.
 In SQL Database, you can create SQL logins with limited administrative permissions using the fixed roles to help you manage that.
 
-To create a SQL Server Authenticated user, connect to the master database on your server with your server admin login and create a new server login. It's a good idea to also create a user in the master database. Creating a user in master allows a user to log in using tools like SSMS without specifying a database name. It also allows them to use the object explorer to view all databases on a server.
+
 SQLCopy
 
 ```sql
