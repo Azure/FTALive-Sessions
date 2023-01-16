@@ -41,6 +41,7 @@ e[adlsguidancedoc/Hitchhikers_Guide_to_the_Datalake.md at master · rukmani-msft
 **Serveless SQL Pool** ( Luca/Liliam)
 
 - Views, external Tables     and partition
+- SCD type 2 ( in evaluation)
 
 
 
