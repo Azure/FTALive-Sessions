@@ -50,10 +50,13 @@ az aks enable-addons -a monitoring -n <clustername> -g <resourcegroupname>
 az aks enable-addons -a monitoring -n <clustername> -g <resourcegroupname> --workspace-resource-id "/subscriptions/<subscriptionId>/resourcegroups/<resourcegroupname>/providers/microsoft.operationalinsights/workspaces/<workspacename>"
 
 # Verify the status and the agent version
-kubectl get ds omsagent --namespace kube-system
+kubectl get ds ama-logs --namespace=kube-system
 
 # To verify the agent version running on Windows nodepool.
-kubectl get ds omsagent-win --namespace kube-system
+kubectl get ds ama-logs-windows --namespace=kube-system
+
+# To verify the deployment of the solution
+kubectl get deployment ama-logs-rs -n=kube-system
 
 # Check the connected workspace details for an existing cluster
 az aks show -g <resourcegroupname> -n <clustername> | grep -i "logAnalyticsWorkspaceResourceID"
