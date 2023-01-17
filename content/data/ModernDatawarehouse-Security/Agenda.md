@@ -9,6 +9,7 @@
 
       Kathryn Varral
       Liliam Leme
+      Jose Moreno
 
 
 ## Agenda
