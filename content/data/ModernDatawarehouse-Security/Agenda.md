@@ -15,15 +15,25 @@
 ## Agenda
 
 Synapse Analytics
+
       Workspace and Network security overview
+      
             Synapse Workspace - VNET, DEP and Private Endpoints, RBACs
+            
             Least Privilege Rule
+            
       Dedicated SQL Pools
+      
             Data Masking
+            
             Row level Security
+            
       Serveless SQL Pools
+      
             Permissions: Scoped or SQL user
+            
       Spark
+      
             MSI\AAD Passthrough
       
 
@@ -39,6 +49,7 @@ Synapse Analytics
 IT Pros or architects that want to understand the options to enforce the security in a Modern Datwarehouse
 
 **References:**
+
 [Row-level security in serverless Synapse SQL pools (microsoft.com)](https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/how-to-implement-row-level-security-in-serverless-sql-pools/ba-p/2354759#:~:text=Row-level)
 
 [Serverless SQL pool - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/on-demand-workspace-overview)
