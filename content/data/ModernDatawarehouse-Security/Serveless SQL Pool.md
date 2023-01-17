@@ -6,6 +6,7 @@
 
 
 #### Serverless Security overview
+
 Serverless SQL pool enables you to centrally manage identities of database user and other Microsoft services with [Azure Active Directory integration](https://learn.microsoft.com/en-us/azure/azure-sql/database/authentication-aad-configure). . Azure Active Directory (Azure AD) supports [multi-factor authentication](https://learn.microsoft.com/en-us/azure/azure-sql/database/authentication-mfa-ssms-configure) (MFA).
 
 **Authentication**
@@ -36,9 +37,34 @@ If Azure AD authentication is used, a user can sign in to serverless SQL pool an
 
 •    [**Workspace Identity**](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/develop-storage-files-storage-access-control?tabs=managed-identity) is an authorization type where the identity of the Synapse workspace is used to authorize access to the data. Before accessing the data, Azure Storage administrator must grant permissions to workspace identity for accessing the data.
 
+```
+CREATE MASTER KEY ENCRYPTION BY PASSWORD= '...';
+
+-- Create a database scoped credential.
+CREATE DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'Managed Identity'
+
+CREATE EXTERNAL DATA SOURCE [LLive_sqlserverlessanalitics] 
+WITH (LOCATION = N'https://STORAGE.dfs.core.windows.net/Container/Folder/'
+    , CREDENTIAL = [AppCred]
+)
+GO
+
+---****Remove storage permissions, leaving only the owner which is inherited and test.---****
+SELECT  *
+FROM OPENROWSET(
+        BULK 'Folder/',
+        DATA_SOURCE = 'LLive_sqlserverlessanalitics',
+        FORMAT = 'Delta'
+) as X
+```
+
+- **[Role based access control (RBAC)](https://learn.microsoft.com/en-us/azure/role-based-access-control/overview)** enables you to assign a role to some Azure AD user in the tenant where your storage is placed. A reader must have `Storage Blob Data Reader`, `Storage Blob Data Contributor`, or `Storage Blob Data Owner` RBAC role on storage account. A user who writes data in the Azure storage must have `Storage Blob Data Contributor` or `Storage Blob Data Owner` role. Note that `Storage Owner` role does not imply that a user is also `Storage Data Owner`.
+- **Access Control Lists (ACL)** enable you to define a fine grained [Read(R), Write(W), and Execute(X) permissions](https://learn.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-access-control#levels-of-permission) on the files and directories in Azure storage. ACL can be assigned to Azure AD users. If readers want to read a file on a path in Azure Storage, they must have Execute(X) ACL on every folder in the file path, and Read(R) ACL on the file. [Learn more how to set ACL permissions in storage layer](https://learn.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-access-control#how-to-set-acls).
+- **Shared access signature (SAS)** enables a reader to access the files on the Azure Data Lake storage using the time-limited token. The reader doesn’t even need to be authenticated as Azure AD user. SAS token contains the permissions granted to the reader as well as the period when the token is valid. SAS token is good choice for time-constrained access to any user that doesn't even need to be in the same Azure AD tenant. SAS token can be defined on the storage account or on specific directories. Learn more about [granting limited access to Azure Storage resources using shared access signatures](https://learn.microsoft.com/en-us/azure/storage/common/storage-sas-overview).
+
 #### Data security
 
- As Serveless SQL Pool does not support data masking or row level security there are some workarounds possible. You manually create the data masking function and applied it to a view as the same for the row level security.
+ As Serverless SQL Pool does not support data masking or row level security there are some workarounds possible. You manually create the data masking function and applied it to a view as the same for the row level security.
 
 
 #### Reference
@@ -46,3 +72,7 @@ If Azure AD authentication is used, a user can sign in to serverless SQL pool an
 [Row-level security in serverless Synapse SQL pools (microsoft.com)](https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/how-to-implement-row-level-security-in-serverless-sql-pools/ba-p/2354759#:~:text=Row-level)
 
 [Serverless SQL pool - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/on-demand-workspace-overview)
+
+[Permissions (Database Engine) - SQL Server | Microsoft Learn](https://learn.microsoft.com/en-us/sql/relational-databases/security/permissions-database-engine?view=sql-server-ver16)
+
+[Control storage account access for serverless SQL pool - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/develop-storage-files-storage-access-control?tabs=user-identity)
