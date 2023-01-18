@@ -320,7 +320,22 @@ REVERT
 -- The SELECT permission was denied on the column 'SSN' of the object 'Membership', database 'CLS_TestDW', schema 'dbo'.
 ```
 
+#### Auditing for Azure Synapse Analytics
 
+
+Auditing for Azure Synapse Analytics tracks database events and writes them to an audit log in your Azure storage account, Log Analytics workspace, or Event Hubs.
+
+Auditing also:
+
+Helps you maintain regulatory compliance, understand database activity, and gain insight into discrepancies and anomalies that could indicate business concerns or suspected security violations.
+
+Enables and facilitates adherence to compliance standards, although it doesn't guarantee compliance. For more information, see the Microsoft Azure Trust Center where you can find the most current list of SQL Database compliance certifications.
+
+The default auditing policy includes the following set of action groups, which will audit all the queries and stored procedures executed against the database, as well as successful and failed logins:
+
+	BATCH_COMPLETED_GROUP
+	SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP
+	FAILED_DATABASE_AUTHENTICATION_GROUP
 
 #### References
 
@@ -335,4 +350,7 @@ REVERT
 [Column-level security for dedicated SQL pool - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/column-level-security)
 
 [Row-Level Security - SQL Server | Microsoft Learn](https://learn.microsoft.com/en-us/sql/relational-databases/security/row-level-security?view=azure-sqldw-latest&preserve-view=true)
+
+[Azure SQL Auditing for Azure SQL Database and Azure Synapse Analytics - Azure SQL Database | Microsoft Learn](https://learn.microsoft.com/en-us/azure/azure-sql/database/auditing-overview?view=azuresql)
+
 
