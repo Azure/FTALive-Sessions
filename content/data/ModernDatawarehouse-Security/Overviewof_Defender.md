@@ -35,9 +35,7 @@ To enable Microsoft Defender for Azure SQL Database at the subscription level fr
 
    
 
-   
-
-
+#### Reference
 
 
 https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-sql-introduction
