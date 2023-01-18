@@ -1,4 +1,4 @@
-## Synapse Dedicate SQL pool 
+## Synapse Dedicated SQL pool 
 
 #### Security
 
