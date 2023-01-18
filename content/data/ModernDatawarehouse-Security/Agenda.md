@@ -14,6 +14,8 @@
 
 ## Agenda
 
+Security overview considerations
+
 Synapse Analytics
 
       Workspace and Network security overview
@@ -27,6 +29,10 @@ Synapse Analytics
             Data Masking
             
             Row level Security
+            
+            Columns Level Security
+            
+            Defender
             
       Serveless SQL Pools
       
