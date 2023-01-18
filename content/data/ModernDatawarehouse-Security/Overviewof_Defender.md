@@ -1,12 +1,25 @@
-Microsoft Defender for SQL is a Defender plan in Microsoft Defender for Cloud. Microsoft Defender for SQL includes functionality for surfacing and mitigating potential database vulnerabilities, and detecting anomalous activities that could indicate a threat to your database. It provides a single go-to location for enabling and managing these capabilities.
+## Defender Overview
 
+#### Security
 
+[<Back]()\- [Next >]()
 
-
-
- you can enable it at the resource level as described in [Enable Microsoft Defender for Azure SQL Database at the resource level](https://learn.microsoft.com/en-us/azure/azure-sql/database/azure-defender-for-sql?view=azuresql#enable-microsoft-defender-for-azure-sql-database-at-the-resource-level).
+Microsoft Defender for SQL is a Defender plan in Microsoft Defender for Cloud. Microsoft Defender for SQL includes functionality for surfacing and mitigating potential database vulnerabilities, and detecting anomalous activities that could indicate a threat to your database. It provides a single go-to location for enabling and managing these capabilities. you can enable it at the resource level as described in [Enable Microsoft Defender for Azure SQL Database at the resource level](https://learn.microsoft.com/en-us/azure/azure-sql/database/azure-defender-for-sql?view=azuresql#enable-microsoft-defender-for-azure-sql-database-at-the-resource-level).
 
 When you enable on the subscription level, all databases in Azure SQL Database and Azure SQL Managed Instance are protected. You can then disable them individually if you choose. If you want to manually manage which databases are protected, disable at the subscription level and enable each database that you want protected.
+
+| Aspect                  | Details                                                      |
+| :---------------------- | :----------------------------------------------------------- |
+| Release state:          | Generally available (GA)                                     |
+| Pricing:                | **Microsoft Defender for Azure SQL** is billed as shown on the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/) |
+| Protected SQL versions: | Read-write replicas of: - Azure SQL [single databases](https://learn.microsoft.com/en-us/azure/azure-sql/database/single-database-overview) and [elastic pools](https://learn.microsoft.com/en-us/azure/azure-sql/database/elastic-pool-overview) - [Azure SQL Managed Instance](https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview) - [Azure Synapse Analytics (formerly SQL DW) dedicated SQL pool](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) |
+
+Threat intelligence enriched security alerts are triggered when there's:
+
+- **Potential SQL injection attacks** - including vulnerabilities detected when applications generate a faulty SQL statement in the database
+- **Anomalous database access and query patterns** - for example, an abnormally high number of failed sign-in attempts with different credentials (a brute force attempt)
+- **Suspicious database activity** - for example, a legitimate user accessing an SQL Server from a breached computer which communicated with a crypto-mining C&C server
+- 
 
 ### Enable Microsoft Defender for Azure SQL Database at the subscription level in Microsoft Defender for Cloud
 
@@ -20,47 +33,13 @@ To enable Microsoft Defender for Azure SQL Database at the subscription level fr
 
 4. Change the plan setting to **On**.
 
-   ![Enabling Microsoft Defender for Azure SQL Database at the subscription level.](https://learn.microsoft.com/en-us/azure/azure-sql/database/media/azure-defender-for-sql/enable-azure-defender-sql-subscription-level.png?view=azuresql)
+   
 
-5. Select **Save**.
+   
 
-### Enable Microsoft Defender plans programatically
 
-The flexibility of Azure allows for a number of programmatic methods for enabling Microsoft Defender plans.
 
-Use any of the following tools to enable Microsoft Defender for your subscription:
 
-| Method       | Instructions                                                 |
-| :----------- | :----------------------------------------------------------- |
-| REST API     | [Pricings API](https://learn.microsoft.com/en-us/rest/api/securitycenter/pricings) |
-| Azure CLI    | [az security pricing](https://learn.microsoft.com/en-us/cli/azure/security/pricing) |
-| PowerShell   | [Set-AzSecurityPricing](https://learn.microsoft.com/en-us/powershell/module/az.security/set-azsecuritypricing) |
-| Azure Policy | [Bundle Pricings](https://github.com/Azure/Azure-Security-Center/blob/master/Pricing %26 Settings/ARM Templates/Set-ASC-Bundle-Pricing.json) |
+https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-sql-introduction
 
-### Enable Microsoft Defender for Azure SQL Database at the resource level
-
-We recommend enabling Microsoft Defender plans at the subscription level so that new resources are automatically protected. However, if you have an organizational reason to enable Microsoft Defender for Cloud at the server level, use the following steps:
-
-1. From the [Azure portal](https://portal.azure.com/), open your server or managed instance.
-
-2. Under the **Security** heading, select **Defender for Cloud**.
-
-3. Select **Enable Microsoft Defender for SQL**.
-
-   ![Enable Microsoft Defender for SQL from within Azure SQL databases.](https://learn.microsoft.com/en-us/azure/azure-sql/database/media/azure-defender-for-sql/enable-azure-defender.png?view=azuresql)
-
-## Manage Microsoft Defender for SQL settings
-
-To view and manage Microsoft Defender for SQL settings:
-
-1. From the **Security** area of your server or managed instance, select **Defender for Cloud**.
-
-   On this page, you'll see the status of Microsoft Defender for SQL:
-
-   ![Checking the status of Microsoft Defender for SQL inside Azure SQL databases.](https://learn.microsoft.com/en-us/azure/azure-sql/database/media/azure-defender-for-sql/status-of-defender-for-sql.png?view=azuresql)
-
-2. If Microsoft Defender for SQL is enabled, you'll see a **Configure** link as shown in the previous graphic. To edit the settings for Microsoft Defender for SQL, select **Configure**.
-
-   ![Settings for Microsoft Defender for SQL.](https://learn.microsoft.com/en-us/azure/azure-sql/database/media/azure-defender-for-sql/security-server-settings.png?view=azuresql)
-
-3. Make the necessary changes and select **Save**.
+https://learn.microsoft.com/en-us/azure/azure-sql/database/threat-detection-overview?view=azuresql
