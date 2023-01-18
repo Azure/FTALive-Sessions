@@ -2,7 +2,7 @@
 
 #### Security
 
-[<Back]()\- [Next >]
+[<Back](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Agenda.md)\- [Next >](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Network.md)
 
 #### Least Privilege user
 
@@ -98,7 +98,7 @@ Regardless of which approach you follow, you should always:
 
 [Secure access control using groups in Azure AD - Microsoft Entra | Microsoft Learn](https://learn.microsoft.com/en-us/azure/active-directory/develop/secure-group-access-control)
 
-[Azure Policy Initiatives vs Azure Policies: When should I use one over the other? (microsoft.com)](https://techcommunity.microsoft.com/t5/itops-talk-blog/azure-policy-initiatives-vs-azure-policies-when-should-i-use-one/ba-p/1229167#:~:text=What is an Azure Policy%3F 1 Policy definition,number of policy definitions you must create. )
+[Azure Policy Initiatives vs Azure Policies: When should I use one over the other? (microsoft.com)](https://techcommunity.microsoft.com/t5/itops-talk-blog/azure-policy-initiatives-vs-azure-policies-when-should-i-use-one/ba-p/1229167#:~:text=What%20is%20an%20Azure%20Policy%3F%201%20Policy%20definition,number%20of%20policy%20definitions%20you%20must%20create.%20 )
 
 [Overview of Azure Policy - Azure Policy | Microsoft Learn](https://learn.microsoft.com/en-us/azure/governance/policy/overview)
 
