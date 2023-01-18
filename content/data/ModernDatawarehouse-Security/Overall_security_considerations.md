@@ -103,3 +103,5 @@ Regardless of which approach you follow, you should always:
 [Overview of Azure Policy - Azure Policy | Microsoft Learn](https://learn.microsoft.com/en-us/azure/governance/policy/overview)
 
 [Development lifecycle - Cloud Adoption Framework | Microsoft Learn](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/considerations/development-strategy-development-lifecycle#deployment-strategy)
+
+https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/
