@@ -5,6 +5,8 @@
 
 **Questions?** Feel free to type them in the chat window at any time. Note that questions you post will be public. 
 
+**Feedback** We would like to hear your thoughts, please provide us your feedback [https://aka.ms/ftalive-feedback](https://aka.ms/ftalive-feedback).
+
 ## Overview
 
 This session is fundamental to understanding your Azure costs and how you can optimize them. Learn how to use the cost optimization pillar of the Azure Well-Architected Framework to design a cloud-based architecture that is efficient, eliminates waste and gives you full visibility into where your money is spent on cloud resources.
