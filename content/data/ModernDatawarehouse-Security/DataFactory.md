@@ -212,14 +212,7 @@ There are two types of supported managed identities:
 System-assigned: You can enable a managed identity directly on a service instance. When you allow a system-assigned managed identity during the creation of the service, an identity is created in Azure AD tied to that service instance's lifecycle. By design, only that Azure resource can use this identity to request tokens from Azure AD. So when the resource is deleted, Azure automatically deletes the identity for you.
 User-assigned: You may also create a managed identity as a standalone Azure resource. You can create a user-assigned managed identity and assign it to one or more instances of a data factory. In user-assigned managed identities, the identity is managed separately from the resources that use it.
 
-Managed identity provides the below benefits:
-
-Store credential in Azure Key Vault, in which case-managed identity is used for Azure Key Vault authentication.
-Access data stores or computes using managed identity authentication, including Azure Blob storage, Azure Data Explorer, Azure Data Lake Storage Gen1, Azure Data Lake Storage Gen2, Azure SQL Database, Azure SQL Managed Instance, Azure Synapse Analytics, REST, Databricks activity, Web activity, and more. 
-
-Managed identity is also used to encrypt/decrypt data and metadata using the customer-managed key stored in Azure Key Vault, providing double encryption.
-
-Managed identity provides the below benefits:
+**Managed identity provides the below benefits:**
 
 •    Store credential in Azure Key Vault, in which case-managed identity is used for Azure Key Vault authentication.
 
@@ -233,7 +226,7 @@ When you create an Azure integration runtime within a Data Factory managed virtu
 
 Creating an integration runtime within a managed virtual network ensures the data integration process is isolated and secure.
 
-Benefits of using a managed virtual network:
+**Benefits of using a managed virtual network:**
 
 With a managed virtual network, you can offload the burden of managing the virtual network to Data Factory. You don't need to create a subnet for an integration runtime that could eventually use many private IPs from your virtual network and would require prior network infrastructure planning.
 
@@ -241,7 +234,7 @@ Deep Azure networking knowledge isn't required to do data integrations securely.
 
 A managed virtual network along with managed private endpoints protects against data exfiltration.
 
-![image](images/ManagedVNetArchitecture.png)
+![image](https://user-images.githubusercontent.com/24648322/213683974-1c5d806e-65cd-4921-bf86-dceeefc04b7f.png)
 
 [Azure Data Factory managed virtual network | Microsoft Learn](
 https://learn.microsoft.com/en-us/azure/data-factory/managed-virtual-network-private-endpoint )
