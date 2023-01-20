@@ -33,7 +33,7 @@ Azure Storage provides a layered security model. This model enables you to secur
 ![image](images/DataLakeSecurity.png)
 
 
-**Network Security**
+**Network Security** 
 
 **Configure the minimum required version of Transport Layer Security (TLS) for a storage account.**
 
