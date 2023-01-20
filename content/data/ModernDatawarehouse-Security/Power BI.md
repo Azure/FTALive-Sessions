@@ -20,6 +20,9 @@ The authentication process in Power Bi is governed by Azure Active Directory (AA
 
 Power BI then uses the login email as a username, passing it to resources whenever an attempt is made by the user to connect to data sources. The username is mapped to the UPN and resolved with a windows domain account for authentication.
 
+![image](https://user-images.githubusercontent.com/24648322/213692947-6f1534ec-de29-4618-ada6-c80e77e08108.png)
+
+
 **Data Residency**
 
 Unless otherwise indicated in documentation, Power BI stores customer data in an Azure geography that is assigned when an Azure AD tenant signs up for Power BI services for the first time. An Azure AD tenant houses the user and application identities, groups, and other relevant information that pertain to an organization and its security.
@@ -225,6 +228,7 @@ To restrict service principal access to specific tenant settings, you can allow 
 
 **This topic excludes Dataflows and DataMarts*
 
+![image](https://user-images.githubusercontent.com/24648322/213696207-c03c766f-93b7-472c-a2c8-767f44ada8fc.png)
 
 Here are a few examples of high-level security strategies. You might choose to make decisions that impact the entire organization.
 
