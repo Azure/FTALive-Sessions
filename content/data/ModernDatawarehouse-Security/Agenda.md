@@ -14,7 +14,11 @@
 
 ## Agenda
 
+What is a modern Datawarehouse?
+
 Security overview considerations
+
+Storage - Data Lake
 
 Synapse Analytics
 
@@ -45,7 +49,6 @@ Synapse Analytics
 
  Data Factory
 
- Storage - Data Lake
 
  Power BI
 
