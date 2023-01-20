@@ -1,9 +1,32 @@
-## Network overview
+## Workspace overview
 
 ### Security overview
 
-[<Back](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Serveless%20SQL%20Pool.md)\- [Next >](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Workspace.md)
+[<Back](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Overall_security_considerations.md)\- [Next >](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Workspace.md)
 
+#### Workspace - Connection
+
+Connection Security refers to how you restrict and secure connections to your database using firewall rules and connection encryption. you can use the portal page under network to configure the IPs that can access the workspace:
+
+Managed Vnet:
+![image](https://user-images.githubusercontent.com/62876278/208086623-bb8e021f-28bb-4e49-8fee-9645dca41422.png)
+
+
+Non managed 
+
+![image](https://user-images.githubusercontent.com/62876278/212038852-c2e3cd73-4fcd-42bc-8f43-40465dae63f3.png)
+
+
+Dedicated SQL pool (formerly SQL DW) are encrypted by default. Modifying connection settings to disable encryption are ignored.
+
+#### Public network access
+You can use the public network access feature to allow incoming public network connectivity to your Azure Synapse workspace.
+
+        When public network access is disabled, you can connect to your workspace only using private endpoints.
+        When public network access is enabled, you can connect to your workspace also from public networks. You can manage this feature both during and after your workspace creation.
+  
+Note:
+This feature is only available to Azure Synapse workspaces associated with Azure Synapse Analytics Managed Virtual Network. However, you can still open your Synapse workspaces to the public network regardless of its association with managed VNet.<figure above>
 
 #### Manage VNet
  
@@ -81,3 +104,13 @@ When using the Azure Integration Runtime with DEP enabled, Linked Service connec
 
 [Managed identities for Azure resources - Microsoft Entra | Microsoft Learn](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview)
 
+[Gateway Region](https://learn.microsoft.com/en-us/azure/azure-sql/database/connectivity-architecture?view=azuresql#gateway-ip-addresses)
+
+[Synapse Connectivity Series Part #1 - Inbound SQL DW connections on Public Endpoints - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/synapse-connectivity-series-part-1-inbound-sql-dw-connections-on/ba-p/3589170)
+        
+[Synapse Connectivity Series Part #2](https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/synapse-connectivity-series-part-2-inbound-synapse-private/ba-p/3705160)
+        
+[Connect to workspace resources in Azure Synapse Analytics Studio from a restricted network - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/security/how-to-connect-to-workspace-from-restricted-network)
+        
+
+[Connect to a Synapse Studio using private links - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/security/synapse-private-link-hubs)

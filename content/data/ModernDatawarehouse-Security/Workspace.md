@@ -1,9 +1,7 @@
-## Workspace and Least Privilege user
+## Workspace 
 
 
-### Least Privilege user
-
-[<Back](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Network.md)\- [Next >](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Data%20factoryandSpark.md)
+[<Back](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Network.md)\- [Next >](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Dedicated%20SQL%20Pool.md)
 
 #### Workspace permissions
 
@@ -14,15 +12,6 @@ Azure Synapse Workspace is integrated with Azure role-based access control (Azur
 
 Azure Synapse Analytics requires users in Azure Owner or Azure Contributor roles at the resource-group to control management of its dedicated SQL pools, Spark pools, and Integration runtimes. In addition to this, users and the workspace system-identity must be granted Storage Blob Data Contributor access to the ADLS Gen2 storage container associated with the Synapse workspace.
 
-#### Manage application identities securely and automatically
-
-Azure Synapse Workspace supports managed identities for its Azure resources. Use managed identities with Azure Synapse Workspace instead of creating service principals to access other resources. Azure Synapse Workspace can natively authenticate to the Azure services/resources that supports Azure AD authentication through a pre-defined access grant rule without using credentials hard coded in source code or configuration files.
-
-### What are Managed identities?
-
-·    **System-assigned**. Some Azure services allow you to enable a managed identity directly on a service instance. When you enable a system-assigned managed identity, an identity is created in Azure AD. The identity is tied to the lifecycle of that service instance.
-
-·    **User-assigned**. You may also create a managed identity as a standalone Azure resource. You can [create a user-assigned managed identity](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/how-to-manage-ua-identity-portal) and assign it to one or more instances of an Azure service. For user-assigned managed identities, the identity is managed separately from the resources that use it.
 
 ### Security RBAC
 
@@ -38,6 +27,16 @@ You can open Synapse Studio and view details of the workspace and list any of it
 You can create SQL pools, Data Explorer pools, Apache Spark pools, and Integration runtimes if you're an Azure Owner or Contributor on the workspace. When using ARM templates for automated deployment, you need to be an Azure Contributor on the resource group.
 
 You can pause or scale a dedicated SQL pool, configure a Spark pool, or an integration runtime if you're an Azure Owner or Contributor on the workspace or that resource.
+
+#### Access Control
+
+Suggestion: You can create a basic group and add your members at the same time using the Azure Active Directory (Azure AD) portal and add permissions as applied,  you will use the following [Access control in Synapse workspace how to - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/security/how-to-set-up-access-control) and [How to manage groups - Azure Active Directory - Microsoft Entra | Microsoft Learn](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/how-to-manage-groups):
+
+- **Security Groups**, to group users with similar access requirements.
+- **Azure roles**, to control who can create and manage SQL pools, Apache Spark pools and Integration runtimes, and access ADLS Gen2 storage.
+- **Synapse roles**, to control access to published code artifacts, use of Apache Spark compute resources and integration runtimes.
+- **SQL permissions**, to control administrative and data plane access to SQL pools.
+- **Git permissions**, to control who can access code artifacts in source control if you configure Git-support for workspaces.
 
 ### View and edit code artifacts
 
@@ -82,6 +81,16 @@ Synapse Administrator is not listed for each task unless it is the only role tha
  Note
 
 Guest users from another tenant are also able to review, add, or change role assignments once they have been assigned as Synapse Administrator.
+
+
+#### Synapse role-based access control
+Azure Synapse also includes Synapse role-based access control (RBAC) roles to manage different aspects of Synapse Studio. Leverage these built-in roles to assign permissions to users, groups, or other security principals to manage who can:
+
+        Publish code artifacts and list or access published code artifacts.
+        Execute code on Apache Spark pools and integration runtimes.
+        Access linked (data) services that are protected by credentials.
+        Monitor or cancel job executions, review job output and execution logs.
+
 
 The minimum Synapse RBAC role required is shown.
 
@@ -149,17 +158,6 @@ All Synapse RBAC permissions/actions shown in the table are prefixed `Microsoft/
 | Review Synapse RBAC role assignments at any scope            | Synapse User                                                 | read                                                         |
 | Assign and remove Synapse RBAC role assignments for users, groups, and service principals | Synapse Administrator at the workspace or at a specific workspace item scope | roleAssignments/write, delete                                |
 
-
-
-#### Access Control
-
-Suggestion: You can create a basic group and add your members at the same time using the Azure Active Directory (Azure AD) portal and add permissions as applied,  you will use the following [Access control in Synapse workspace how to - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/security/how-to-set-up-access-control) and [How to manage groups - Azure Active Directory - Microsoft Entra | Microsoft Learn](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/how-to-manage-groups):
-
-- **Security Groups**, to group users with similar access requirements.
-- **Azure roles**, to control who can create and manage SQL pools, Apache Spark pools and Integration runtimes, and access ADLS Gen2 storage.
-- **Synapse roles**, to control access to published code artifacts, use of Apache Spark compute resources and integration runtimes.
-- **SQL permissions**, to control administrative and data plane access to SQL pools.
-- **Git permissions**, to control who can access code artifacts in source control if you configure Git-support for workspaces.
 
 
 

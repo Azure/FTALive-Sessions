@@ -2,7 +2,7 @@
 
 #### Security Data
 
-[<Back](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Agenda.md)\- [Next >](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Serveless%20SQL%20Pool.md)
+[<Back](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Dedicated%20SQL%20Pool.md)\- [Next >](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Overviewof_Defender.md)
 
 
 #### Dynamic data masking 
@@ -30,22 +30,34 @@ Dynamic data masking helps prevent unauthorized access to sensitive data by enab
 
 The following example creates a table with three different types of dynamic data masks. The example populates the table, and selects to show the result.
 
+Note: This can also be done from the portal: Dedicated SQl Pool -> Database -> Dynamic Data Masking
+![image](https://user-images.githubusercontent.com/62876278/212326697-5b0f5a97-54ce-41dd-ad7a-574c7dc90414.png)
+
+
+A new user is created and granted the **SELECT** permission on the schema where the table resides. Queries executed as the `MaskingTestUser` view masked data.
+
 SQLCopy
 
 ```sql
--- schema to contain user tables
-CREATE SCHEMA Data;
+---Create Schema Data
+--Create Schema [data]
+-- table with masked columns. Test from SSMS
+    
+CREATE TABLE [data].[Membership]
+( 
+	[MemberID] [int]  NOT NULL,
+	[FirstName] [varchar](100) MASKED WITH (FUNCTION = 'partial(1, "xxxxx", 1)')  NULL,
+	[LastName] [varchar](100)  NOT NULL,
+	[Phone] [varchar](12)  NULL MASKED WITH (FUNCTION = 'default()') NULL,
+	[Email] [varchar](100) MASKED WITH (FUNCTION = 'email()') NOT NULL,,
+	[DiscountCode] [smallint]  MASKED WITH (FUNCTION = 'random(1, 100)') NULL
+)
+WITH
+(
+	DISTRIBUTION = ROUND_ROBIN,
+	CLUSTERED COLUMNSTORE INDEX
+)
 GO
-
--- table with masked columns
-CREATE TABLE Data.Membership(
-    MemberID        int IDENTITY(1,1) NOT NULL PRIMARY KEY CLUSTERED,
-    FirstName        varchar(100) MASKED WITH (FUNCTION = 'partial(1, "xxxxx", 1)') NULL,
-    LastName        varchar(100) NOT NULL,
-    Phone            varchar(12) MASKED WITH (FUNCTION = 'default()') NULL,
-    Email            varchar(100) MASKED WITH (FUNCTION = 'email()') NOT NULL,
-    DiscountCode    smallint MASKED WITH (FUNCTION = 'random(1, 100)') NULL
-    );
 
 -- inserting sample data
 INSERT INTO Data.Membership (FirstName, LastName, Phone, Email, DiscountCode)
@@ -54,18 +66,13 @@ VALUES
 ('Janice', 'Galvin', '555.123.4568', 'JGalvin@contoso.com.co', 5),  
 ('Shakti', 'Menon', '555.123.4570', 'SMenon@contoso.net', 50),  
 ('Zheng', 'Mu', '555.123.4569', 'ZMu@contoso.net', 40);  
-```
 
-A new user is created and granted the **SELECT** permission on the schema where the table resides. Queries executed as the `MaskingTestUser` view masked data.
-
-SQLCopy
-
-```sql
 CREATE USER MaskingTestUser WITHOUT LOGIN;  
 
 GRANT SELECT ON SCHEMA::Data TO MaskingTestUser;  
   
   -- impersonate for testing:
+
 EXECUTE AS USER = 'MaskingTestUser';  
 
 SELECT * FROM Data.Membership;  
@@ -76,7 +83,7 @@ REVERT;
 The result demonstrates the masks by changing the data from
 
 ```
-1 Roberto Tamburello 555.123.4567 RTamburello@contoso.com 10
+1 Roberto Tamburello 555.123.4567 RTamburello@contoso.com 10.
 ```
 
 into
@@ -150,13 +157,19 @@ SQLCopy
 ```sql
 CREATE SCHEMA Sales
 GO
-CREATE TABLE Sales.Orders
-    (
-    OrderID int,
-    SalesRep nvarchar(50),
-    Product nvarchar(50),
-    Quantity smallint
-    );
+CREATE TABLE [Sales].[Orders]
+( 
+	[OrderID] [int]  NULL,
+	[SalesRep] [nvarchar](50)  NULL,
+	[Product] [nvarchar](50)  NULL,
+	[Quantity] [smallint]  NULL
+)
+WITH
+(
+	DISTRIBUTION = ROUND_ROBIN,
+	CLUSTERED COLUMNSTORE INDEX
+)
+GO
 ```
 
 Populate the table with six rows of data, showing three orders for each sales representative.
@@ -271,7 +284,14 @@ CREATE TABLE Membership
    SSN char(9) NOT NULL,
    LastName varchar(100) NOT NULL,
    Phone varchar(12) NULL,
-   Email varchar(100) NULL);
+   Email varchar(100) NULL
+   )
+   WITH
+(
+	DISTRIBUTION = ROUND_ROBIN,
+	CLUSTERED COLUMNSTORE INDEX
+)
+GO
 ```
 
 Allow `TestUser` to access all columns except for the SSN column, which has the sensitive data:
@@ -287,13 +307,35 @@ Queries executed as `TestUser` will fail if they include the SSN column:
 SQLCopy
 
 ```sql
+
+EXECUTE AS USER = 'TestUser';
+
+--Queries executed as TestU will fail if they include columns whis user has no access
 SELECT * FROM Membership;
+SELECT MemberID, FirstName, LastName FROM [data].Membership;
+
+REVERT
 
 -- Msg 230, Level 14, State 1, Line 12
 -- The SELECT permission was denied on the column 'SSN' of the object 'Membership', database 'CLS_TestDW', schema 'dbo'.
 ```
 
+#### Auditing for Azure Synapse Analytics
 
+
+Auditing for Azure Synapse Analytics tracks database events and writes them to an audit log in your Azure storage account, Log Analytics workspace, or Event Hubs.
+
+Auditing also:
+
+Helps you maintain regulatory compliance, understand database activity, and gain insight into discrepancies and anomalies that could indicate business concerns or suspected security violations.
+
+Enables and facilitates adherence to compliance standards, although it doesn't guarantee compliance. For more information, see the Microsoft Azure Trust Center where you can find the most current list of SQL Database compliance certifications.
+
+The default auditing policy includes the following set of action groups, which will audit all the queries and stored procedures executed against the database, as well as successful and failed logins:
+
+	BATCH_COMPLETED_GROUP
+	SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP
+	FAILED_DATABASE_AUTHENTICATION_GROUP
 
 #### References
 
@@ -308,4 +350,7 @@ SELECT * FROM Membership;
 [Column-level security for dedicated SQL pool - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/column-level-security)
 
 [Row-Level Security - SQL Server | Microsoft Learn](https://learn.microsoft.com/en-us/sql/relational-databases/security/row-level-security?view=azure-sqldw-latest&preserve-view=true)
+
+[Azure SQL Auditing for Azure SQL Database and Azure Synapse Analytics - Azure SQL Database | Microsoft Learn](https://learn.microsoft.com/en-us/azure/azure-sql/database/auditing-overview?view=azuresql)
+
 

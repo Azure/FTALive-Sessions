@@ -1,35 +1,12 @@
-## Synapse SQL dedicate pool 
+## Synapse Dedicated SQL pool 
 
 #### Security
 
 
-[Home](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Agenda.md)\- [Next >](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/edit/main/content/data/ModernDatawarehouse-Security/Dedicated%20SQL%20Pool_data.md)
+[<Back](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Workspace.md)\- [Next >](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/edit/main/content/data/ModernDatawarehouse-Security/Dedicated%20SQL%20Pool_data.md)
 
-#### Connection
-
-Connection Security refers to how you restrict and secure connections to your database using firewall rules and connection encryption. you can use the portal page under network to configure the IPs that can access the workspace:
-
-
-![image](https://user-images.githubusercontent.com/62876278/208086623-bb8e021f-28bb-4e49-8fee-9645dca41422.png)
-
-Dedicated SQL pool (formerly SQL DW) are encrypted by default. Modifying connection settings to disable encryption are ignored.
-
-#### Public network access
-
-You can use the public network access feature to allow incoming public network connectivity to your Azure Synapse workspace.
-
-        When public network access is disabled, you can connect to your workspace only using private endpoints.
-        When public network access is enabled, you can connect to your workspace also from public networks. You can manage this feature both during and after your workspace creation.
-
-
-​        
-
-####  Minimal TLS version
-
-Starting in December 2021, a requirement for TLS 1.2 has been implemented for workspace-managed dedicated SQL pools in new Synapse workspaces. Login attempts from connections using a TLS version lower than 1.2 will fail. 
 
 ####  Connection policy
-
 **Default**:  The default policy is Redirect for all client connections originating inside of Azure (for example, from an Azure Virtual Machine) and Proxy for all client connections originating outside (for example, connections from your local workstation).
 We highly recommend the Redirect connection policy over the Proxy connection policy for the lowest latency and highest throughput.
 
@@ -39,10 +16,63 @@ If you are connecting from within Azure your connections have a connection polic
 ![image](https://user-images.githubusercontent.com/62876278/208086135-ac97ec42-840e-47d8-90fb-e08295aaa0d8.png)
 
 
+First you reach the one of the Gateways public IPs on port 1433.
+
+Then you are redirected to one of the multiple possible Tenant Rings on port 11000-11999 range. Tenant rings are clusters where your DW server lives
+
 **Proxy**
 If you are connecting from outside Azure, your connections have a connection policy of Proxy by default. A policy of Proxy means that the TCP session is established via the Azure SQL Database gateway and all subsequent packets flow via the gateway.
 
 ![image](https://user-images.githubusercontent.com/62876278/208086049-2f935696-2257-4684-bf88-627c64c15f2d.png)
+
+First you reach a region load balancer using one of the Gateways public IPs on port 1433. Which means you need to make sure to open your corporate firewall using the server region gateways.
+
+These public gateways IPs are documented at https://docs.microsoft.com/en-us/azure/azure-sql/database/connectivity-architecture#gateway-ip-addre...
+
+        Samples (CR means Control Ring):
+        
+        Name: cr4.westeurope1-a.control.database.windows.net
+        
+        Address: 104.40.168.105
+        
+        Name: cr4.westus2-a.control.database.windows.net
+        
+        Address: 40.78.240.8
+        
+        
+
+
+Ref: [Synapse Connectivity Series Part #1 - Inbound SQL DW connections on Public Endpoints - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/synapse-connectivity-series-part-1-inbound-sql-dw-connections-on/ba-p/3589170)
+
+####  Minimal TLS version
+
+Starting in December 2021, a requirement for TLS 1.2 has been implemented for workspace-managed dedicated SQL pools in new Synapse workspaces. Login attempts from connections using a TLS version lower than 1.2 will fail. 
+
+
+
+#### Encryption
+
+Transparent Data Encryption (TDE) helps protect against the threat of malicious activity by encrypting and decrypting your data at rest. When you encrypt your database, associated backups and transaction log files are encrypted without requiring any changes to your applications. TDE encrypts the storage of an entire database by using a symmetric key called the database encryption key.
+
+In SQL Database, the database encryption key is protected by a built-in server certificate. The built-in server certificate is unique for each server. Microsoft automatically rotates these certificates at least every 90 days. The encryption algorithm used is AES-256. For a general description of TDE, see [Transparent Data Encryption](https://learn.microsoft.com/en-us/sql/relational-databases/security/encryption/transparent-data-encryption?toc=/azure/synapse-analytics/sql-data-warehouse/toc.json&bc=/azure/synapse-analytics/sql-data-warehouse/breadcrumb/toc.json&view=azure-sqldw-latest&preserve-view=true).
+
+Note
+:Encryption of a database file is done at the page level. The pages in an encrypted database are encrypted before they're written to disk and are decrypted when read into memory. TDE doesn't increase the size of the encrypted database.
+
+You can encrypt your database using the [Azure portal](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde) or [T-SQL](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql).
+
+Follow these steps to enable TDE:
+
+1. Connect to the *master* database on the server hosting the database using a login that is an administrator or a member of the **dbmanager** role in the master database
+2. Execute the following statement to encrypt the database.
+
+SQLCopy
+
+```sql
+ALTER DATABASE [AdventureWorks] SET ENCRYPTION ON;
+```
+
+![image](https://user-images.githubusercontent.com/62876278/212685727-f5648001-bf7b-4f99-97e1-3ee3c9751570.png)
 
 #### Authentication
 
@@ -60,7 +90,7 @@ However, as a best practice, your organization's users should use a different ac
 For example, you could reate an Azure Active Directory administrator account with full administrative permission and  one Azure Active Directory account could be configured as an administrator of the Azure SQL deployment with full administrative permissions. This account could be either an individual or security group account. An Azure AD administrator must be configured if you want to use Azure AD accounts to connect to the Database.
 In SQL Database, you can create SQL logins with limited administrative permissions using the fixed roles to help you manage that.
 
-To create a SQL Server Authenticated user, connect to the master database on your server with your server admin login and create a new server login. It's a good idea to also create a user in the master database. Creating a user in master allows a user to log in using tools like SSMS without specifying a database name. It also allows them to use the object explorer to view all databases on a server.
+
 SQLCopy
 
 ```sql
@@ -104,32 +134,72 @@ GRANT SELECT ON SCHEMA::Test to ApplicationUser
 
 Managing databases and servers from the Azure portal or using the Azure Resource Manager API is controlled by your portal user account's role assignments. For more information, see [Assign Azure roles using the Azure portal](https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal?toc=/azure/synapse-analytics/sql-data-warehouse/toc.json&bc=/azure/synapse-analytics/sql-data-warehouse/breadcrumb/toc.json).
 
-#### Encryption
+#### Ownership chaining
 
-Transparent Data Encryption (TDE) helps protect against the threat of malicious activity by encrypting and decrypting your data at rest. When you encrypt your database, associated backups and transaction log files are encrypted without requiring any changes to your applications. TDE encrypts the storage of an entire database by using a symmetric key called the database encryption key.
+A user with ALTER permission on a schema can use ownership chaining to access securables in other schemas, including securables to which that user is explicitly denied access. This is because ownership chaining bypasses permissions checks on referenced objects when they are owned by the principal that owns the objects that refer to them. A user with ALTER permission on a schema can create procedures, synonyms, and views that are owned by the schema's owner. Those objects will have access (via ownership chaining) to information in other schemas owned by the schema's owner. When possible, you should avoid granting ALTER permission on a schema if the schema's owner also owns other schemas.
 
-In SQL Database, the database encryption key is protected by a built-in server certificate. The built-in server certificate is unique for each server. Microsoft automatically rotates these certificates at least every 90 days. The encryption algorithm used is AES-256. For a general description of TDE, see [Transparent Data Encryption](https://learn.microsoft.com/en-us/sql/relational-databases/security/encryption/transparent-data-encryption?toc=/azure/synapse-analytics/sql-data-warehouse/toc.json&bc=/azure/synapse-analytics/sql-data-warehouse/breadcrumb/toc.json&view=azure-sqldw-latest&preserve-view=true).
+For example, this issue may occur in the following scenarios. These scenarios assume that a user, referred as U1, has the ALTER permission on the S1 schema. The U1 user is denied to access a table object, referred as T1, in the schema S2. The S1 schema and the S2 schema are owned by the same owner.
 
-You can encrypt your database using the [Azure portal](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde) or [T-SQL](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql).
+The U1 user has the CREATE PROCEDURE permission on the database and the EXECUTE permission on the S1 schema. Therefore, the U1 user can create a stored procedure, and then access the denied object T1 in the stored procedure.
 
-Follow these steps to enable TDE:
+The U1 user has the CREATE SYNONYM permission on the database and the SELECT permission on the S1 schema. Therefore, the U1 user can create a synonym in the S1 schema for the denied object T1, and then access the denied object T1 by using the synonym.
 
-1. Connect to the *master* database on the server hosting the database using a login that is an administrator or a member of the **dbmanager** role in the master database
-2. Execute the following statement to encrypt the database.
-
-SQLCopy
+The U1 user has the CREATE VIEW permission on the database and the SELECT permission on the S1 schema. Therefore, the U1 user can create a view in the S1 schema to query data from the denied object T1, and then access the denied object T1 by using the view
 
 ```sql
-ALTER DATABASE [AdventureWorks] SET ENCRYPTION ON;
+------------------------------
+--Master Database
+CREATE LOGIN testUser1 
+	WITH PASSWORD = 'Lalala!0000'
+----Change to SQLDW
+CREATE USER testUser1 FROM LOGIN testUser1
+------------------------------------------
+CREATE SCHEMA Schema_B;
+go
+CREATE SCHEMA Schema_A;
+go
+--------------------------------------
+GRANT CREATE SCHEMA ON DATABASE :: [SQL_DW_database_name] TO testUser1 
+ 
+GRANT SELECT, INSERT, DELETE, UPDATE, ALTER ON Schema::Schema_A TO  testUser1 
+------------------------------------------
+CREATE TABLE Schema_B.TestTbl
+WITH(DISTRIBUTION=ROUND_ROBIN)    
+AS    
+	SELECT 1 AS ID, 100 AS VAL UNION ALL
+	SELECT 2 AS ID, 200 AS VAL UNION ALL    
+	SELECT 2 AS ID, 200 AS VAL
+go
+ 
+ 
+----------------------------------------
+CREATE VIEW Schema_A.Bypass_VW 
+AS -- runs successfully
+SELECT * FROM Schema_B.TestTbl
+ 
+go
+ 
+-------------------------------------------------------------------------
+--Log into SQLDW with the testUser1  ; --->executing as this user.
+ 
+GO
+ 
+SELECT * FROM Schema_B.TestTbl---> user does not have access
+ 
+SELECT * FROM Schema_A.Bypass_VW -- runs successfully and fetches data from table not having select access to
 ```
 
-#### Synapse role-based access control
-Azure Synapse also includes Synapse role-based access control (RBAC) roles to manage different aspects of Synapse Studio. Leverage these built-in roles to assign permissions to users, groups, or other security principals to manage who can:
+Workaround:
+The point here is: there are  2 schemas with the same owner. So let's change that: different schema owners.
+or
+Deny to the user select on the View(Schema_A.Bypass_VW ) or deny the select.
 
-        Publish code artifacts and list or access published code artifacts.
-        Execute code on Apache Spark pools and integration runtimes.
-        Access linked (data) services that are protected by credentials.
-        Monitor or cancel job executions, review job output and execution logs.
+```sql
+Deny select on Schema_A.Bypass_VW  TO testUser1  
+Deny SELECT ON SCHEMA :: Schema_A TO testUser1 
+```
+
+
 
 #### References
 
@@ -154,3 +224,7 @@ Azure Synapse also includes Synapse role-based access control (RBAC) roles to ma
 [Stored procedures](https://learn.microsoft.com/en-us/sql/relational-databases/stored-procedures/stored-procedures-database-engine?toc=/azure/synapse-analytics/sql-data-warehouse/toc.json&bc=/azure/synapse-analytics/sql-data-warehouse/breadcrumb/toc.json&view=azure-sqldw-latest&preserve-view=true) 
 
 [Transparent data encryption (T-SQL) - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql)
+
+[Transparent data encryption (T-SQL)](https://learn.microsoft.com/en-us/sql/relational-databases/security/encryption/transparent-data-encryption?toc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Ftoc.json&bc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Fbreadcrumb%2Ftoc.json&view=azure-sqldw-latest&preserve-view=true)
+
+[Inconsistent permissions or ownership chaining - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/inconsistent-permissions-or-ownership-chaining/ba-p/1552690)
