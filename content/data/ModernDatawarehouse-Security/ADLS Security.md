@@ -30,8 +30,7 @@ The data lake is the storage repository, which holds the vast amount of raw data
 
 Azure Storage provides a layered security model. This model enables you to secure and control the level of access to your storage accounts that your applications and enterprise environments demand, based on the type and subset of networks or resources used. When network rules are configured, only applications requesting data over the specified set of networks or through the specified set of Azure resources can access a storage account. You can limit access to your storage account to requests originating from specified IP addresses, IP ranges, subnets in an Azure Virtual Network (VNet), or resource instances of some Azure services.
 
-![image](images/DataLakeSecurity.png)
-
+![image](https://user-images.githubusercontent.com/24648322/213681827-84c9fc0b-b3ca-45bb-a8ce-ccb57bb92955.png)
 
 **Network Security** 
 
@@ -200,13 +199,13 @@ During security principal-based authorization, permissions are evaluated in the 
 3️⃣   If the operation is not fully authorized, then ACLs are evaluated.
 
 
-![image](images/DataLakeStoragePermissionsFlows.png)
+![image](https://user-images.githubusercontent.com/24648322/213682034-b5fffb63-3436-4f7b-8db5-8c327d060065.png)
 
 Because of the way that access permissions are evaluated by the system, you cannot use an ACL to restrict access that has already been granted by a role assignment. That's because the system evaluates Azure role assignments first, and if the assignment grants sufficient access permission, ACLs are ignored.
 
 The following diagram shows the permission flow for three common operations: listing directory contents, reading a file, and writing a file.
 
-![image](images/DataLakeStoragePermissionExample.png)
+![image](https://user-images.githubusercontent.com/24648322/213682181-baab78b3-1dd2-45a5-84a8-d8f869650c1d.png)
 
 **References**
 
