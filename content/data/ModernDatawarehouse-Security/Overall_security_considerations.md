@@ -18,19 +18,30 @@ The information security principle of least privilege asserts that users and app
 
 #### AAD
 
-##### AAD security Groups 
+  ##### AAD security Groups 
 
-Azure Active Directory (Azure AD) provides several ways to manage access to resources, applications, and tasks. With Azure AD groups, you can grant access and permissions to a group of users instead of for each individual user. 
+  Azure Active Directory (Azure AD) provides several ways to manage access to resources, applications, and tasks. With Azure AD groups, you can grant access and permissions to a group of users instead of for each individual user. 
 
-Azure Synapse Workspace supports managed identities for its Azure resources. Use managed identities with Azure Synapse Workspace instead of creating service principals to access other resources. Azure Synapse Workspace can natively authenticate to the Azure services/resources that supports Azure AD authentication through a pre-defined access grant rule without using credentials hard coded in source code or configuration files.
+  Azure Synapse Workspace supports managed identities for its Azure resources. Use managed identities with Azure Synapse Workspace instead of creating service principals to access other resources. Azure Synapse Workspace can natively authenticate to the Azure services/resources that supports Azure AD authentication through a pre-defined access grant rule without using credentials hard coded in source code or configuration files.
 
-#### What are Managed identities?
+  ##### What are Managed identities?
 
-·    **System-assigned**. Some Azure services allow you to enable a managed identity directly on a service instance. When you enable a system-assigned managed identity, an identity is created in Azure AD. The identity is tied to the lifecycle of that service instance.
+  ·    **System-assigned**. Some Azure services allow you to enable a managed identity directly on a service instance. When you enable a system-assigned managed identity, an identity is created in Azure AD. The identity is tied to the lifecycle of that service instance.
 
-·    **User-assigned**. You may also create a managed identity as a standalone Azure resource. You can [create a user-assigned managed identity](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/how-to-manage-ua-identity-portal) and assign it to one or more instances of an Azure service. For user-assigned managed identities, the identity is managed separately from the resources that use it.
+  ·    **User-assigned**. You may also create a managed identity as a standalone Azure resource. You can [create a user-assigned managed identity](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/how-to-manage-ua-identity-portal) and assign it to one or more instances of an Azure service. For user-assigned managed identities, the identity is managed separately from the resources that use it.
 
+  ###### MFA
 
+  Azure AD Multi-Factor Authentication works by requiring two or more of the following authentication methods:
+
+      Something you know, typically a password.
+
+      Something you have, such as a trusted device that's not easily duplicated, like a phone or hardware key.
+
+      Something you are - biometrics like a fingerprint or face scan.
+
+  Azure AD Multi-Factor Authentication can also further secure password reset. When users register themselves for Azure AD Multi-Factor Authentication, they can also register for self-service password reset in one step. Administrators can choose forms of secondary authentication and configure challenges for MFA based on configuration decisions.
+  You can use security defaults in Azure AD tenants to quickly enable Microsoft Authenticator for all users. You can enable Azure AD Multi-Factor Authentication to prompt users and groups for additional verification during sign-in.
 
 #### Azure Policies
 
@@ -104,4 +115,6 @@ Regardless of which approach you follow, you should always:
 
 [Development lifecycle - Cloud Adoption Framework | Microsoft Learn](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/considerations/development-strategy-development-lifecycle#deployment-strategy)
 
-https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/
+[Landing Zone | Microsoft Learn](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/)
+
+[MFA | Microsoft Learn](https://learn.microsoft.com/en-us/azure/active-directory/authentication/concept-mfa-howitworks)
