@@ -80,21 +80,6 @@ In this architecture, your product transitions in order from Development (the en
 | UAT         | User Acceptance Testing (UAT) allows your end-users or clients to perform tests to verify/accept the software system before a software application can move to your production environment. |
 | Production  | Your production environment (production), sometimes called *live*, is the environment your users directly interact with. |
 
-#### Azure Landing Zones
-
-Adopting multiple environments for an Azure Landing Zone deployment is common when a customer wants to test the effects and results of new Azure Policy Assignments, Azure RBAC role assignments, Azure AD group memberships, Azure resources' creation, and more.
-
-[Testing approach for enterprise-scale](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/enterprise-scale/testing-approach) describes two different adoption approaches:
-
-- Replication of management group hierarchy in Canary and Production environment
-- Sandbox subscriptions
-
-Regardless of which approach you follow, you should always:
-
-- Adopt at least one environment for testing.
-- Use separated Service Principal for test and production purposes to protect your environments.
-- Implement automated checks and approvals to validate and approve changes prior to deploying any change to a particular environment
-
 
 
 #### References
