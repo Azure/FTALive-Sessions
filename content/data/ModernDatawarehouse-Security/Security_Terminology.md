@@ -1,6 +1,6 @@
-[<Back](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Dedicated%20SQL%20Pool_data.md)\- [Next >](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Network.md)
+## Terminology
 
-#### Overview
+### Authentication
 
 Authentication is the process of verifying the identity of the user or application. A single source identity provider is preferred, which handles identity management and authentication. This provider is known as a directory service. It provides methods for storing directory data and making this data available to network users and administrators.
 
@@ -46,7 +46,7 @@ An Azure service principal is a security identity used by user-created apps, ser
 
 The key difference between Azure service principals and managed identities is that, with the latter, admins do not have to manage credentials, including passwords.
 
-https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/data-management/secure-authentication
+[Authentication for cloud-scale analytics in Azure | Microsoft Learn](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/data-management/secure-authentication)
 
 **Access Control**
 
@@ -69,7 +69,7 @@ When planning an access control strategy, it's recommended to grant users only t
 
 Some services have specific RBAC roles like Storage Blob Data Contributor or Data Factory Contributor, which means that specific RBAC roles should be used for these services. RBAC is an additive model where adding role assignments is an active permission. RBAC also supports deny assignments which take precedence over role assignments.
 
-The following best practices can help you to get started with RBAC:
+**The following best practices can help you to get started with RBAC:**
 
 •	**Use RBAC roles for service management and operations, and use service-specific roles for data access and workload-specific tasks:**  Security principals that need to access data within storage don't require an RBAC role on the resource, because they don't need to manage it. Instead, grant permission to data objects directly. For example, grant read access to a folder in Azure Data Lake Storage Gen2 or a contained database user and table permission on a database in Azure SQL Database.
 
@@ -83,4 +83,4 @@ The following best practices can help you to get started with RBAC:
 
 •	**Opt for least-privilege access**: Select the right and only role for the job.
 
-https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/data-management/secure-analytics-role-based-access-control 
+[Data management and role-based access control for cloud-scale analytics in Azure | Microsoft Learn](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/secure-analytics-role-based-access-control)
