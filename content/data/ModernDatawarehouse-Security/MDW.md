@@ -1,4 +1,9 @@
-#### What is a Data Warehouse
+## Overview - MDW
+
+### What is a Modern Data Warehouse
+
+[<Back](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Dedicated%20SQL%20Pool_data.md)\- [Next >](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Network.md)
+
 
 A data warehouse - a large store of data accumulated from a wide range of sources within a company and used to guide management decisions.
 
@@ -25,6 +30,9 @@ If we look at a modern DW architecture in Azure, it typically consists of the fo
 Pipelines using either Azure Data Factory or Azure Synapse pipelines, Azure Data Lake Storage, Azure Synapse Dedicated and Serverless Pools and Power BI. 
 
 As we move into more use cases,  the architecture expands to include other services and even technologies such as Machine Learning, Streaming etc.
+
+![image](https://user-images.githubusercontent.com/24648322/213684800-447f4713-0b48-4128-9ac8-d7ee81d0563a.png)
+
 
 #### Reference
 
