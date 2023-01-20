@@ -39,6 +39,7 @@ In this session you will learn to:
 
 ### Additional Learning Resources
 
+* [The Azure FinOps Guide](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/the-azure-finops-guide/ba-p/3704132#whatisfinops)
 * [Azure Cost Optimization](https://aka.ms/costoptimization)
 * [Azure Cost Management + Billing Power BI Template](https://aka.ms/costmgmt/ACMApp)
 * [Microsoft Azure Well-Architected Framework](https://aka.ms/architecture/framework) 
