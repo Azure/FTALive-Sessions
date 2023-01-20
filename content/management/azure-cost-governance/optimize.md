@@ -30,7 +30,7 @@ Scaling up and down is called vertical scaling, keeps the same number of resourc
 ### Locating Orphaned Resources
 Often a workload is built, used for a short period and then forgotten about. It’s a good idea to locate these orphaned resources and remove them if they are not being used. 
 
-We have an Azure Orphan Resources Workbook that will scan the resources below:
+Use the [Azure Orphan Resources Workbook](https://github.com/dolevshor/azure-orphan-resources) to scan for the following orphaned resource types:
 - Disks
 - Network Interfaces
 - Public IPs
