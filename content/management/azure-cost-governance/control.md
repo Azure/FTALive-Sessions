@@ -40,7 +40,7 @@ Walkthrough/demo:
 - [Decide between savings plans and reservations](https://learn.microsoft.com/en-us/azure/cost-management-billing/savings-plan/decide-between-savings-plan-reservation)
 
 
-## Azure Hybrid Use Benefit
+## Azure Hybrid Benefit
 
 Azure Hybrid Benefit is a licensing benefit, and it works by letting you use Software Assurance-enabled Windows Server and SQL Server licenses, and RedHat and SUSE Linux subscriptions on virtual machines in Azure in order to avoid monthly licensing charges. 
 
