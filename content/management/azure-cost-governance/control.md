@@ -3,6 +3,7 @@
 #### [prev](./optimize.md) | [home](./readme.md)  
 
 Besides helping with many other aspects, Governance can also assist with cost management strategies. Adopting specific Azure Policy definitions will benefit your ongoing cost review process and will offer a level of protection for new resources, as they can relieve some of the burden related to on-going cost monitoring and optimization.
+
 We can’t talk about cost optimization without covering Reserved Instances and the “new” Savings Plans offerings. These two will be a great addition to your toolbelt when trying to bring huge savings to your monthly invoice.
 
 
