@@ -5,7 +5,7 @@
 This section covers securing Azure Data Factory. Securing the Azure Synapse Workspace will be covered later. 
 
 
-[<Back](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Dedicated%20SQL%20Pool_data.md)\- [Next >](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Network.md)
+[<Back](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Data%20factoryandSpark.md)\- [Next >](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Power%20BI.md)
 
 
 #### Overview
@@ -136,11 +136,6 @@ In this scenario, either your source or your destination is behind a firewall or
 
 •   Store credentials in Azure Key Vault. You can also store the data store's credential in Azure Key Vault. Data Factory retrieves the credential during the execution of an activity. 
 
-[Security recommendations for Blob storage | Microsoft Learn](
-https://learn.microsoft.com/en-us/azure/storage/blobs/security-recommendations )
-
-[Store credentials in Azure Key Vault | Microsoft Learn](
-https://learn.microsoft.com/en-us/azure/data-factory/store-credentials-in-key-vault )
 
 •   **Hybrid**
 
@@ -199,9 +194,6 @@ Data stores that support TDE (transparent data encryption)
 
 •    Salesforce supports Shield Platform Encryption
 
-[Security considerations for data movement in Azure Data Factory | Microsoft Learn](
-https://learn.microsoft.com/en-us/azure/data-factory/data-movement-security-considerations)
-
 
 **Managed Identity for Azure Data Factory**
 
@@ -236,8 +228,7 @@ A managed virtual network along with managed private endpoints protects against 
 
 ![image](https://user-images.githubusercontent.com/24648322/213683974-1c5d806e-65cd-4921-bf86-dceeefc04b7f.png)
 
-[Azure Data Factory managed virtual network | Microsoft Learn](
-https://learn.microsoft.com/en-us/azure/data-factory/managed-virtual-network-private-endpoint )
+
 
 **Managed private endpoints**
 
@@ -249,5 +240,19 @@ When you use a private link, traffic between your data stores and managed virtua
 
 A private endpoint uses a private IP address in the managed virtual network to effectively bring the service into it. Private endpoints are mapped to a specific resource in Azure and not the entire service. Customers can limit connectivity to a specific resource approved by their organization. 
 
+#### Reference
+
 [Azure security baseline for Data Factory| Microsoft Learn](
 https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/data-factory-security-baseline)
+
+[Azure Data Factory managed virtual network | Microsoft Learn](
+https://learn.microsoft.com/en-us/azure/data-factory/managed-virtual-network-private-endpoint )
+
+[Security considerations for data movement in Azure Data Factory | Microsoft Learn](
+https://learn.microsoft.com/en-us/azure/data-factory/data-movement-security-considerations)
+
+[Security recommendations for Blob storage | Microsoft Learn](
+https://learn.microsoft.com/en-us/azure/storage/blobs/security-recommendations )
+
+[Store credentials in Azure Key Vault | Microsoft Learn](
+https://learn.microsoft.com/en-us/azure/data-factory/store-credentials-in-key-vault )
