@@ -42,6 +42,10 @@ Require that clients use a more secure version of TLS to make requests against a
 
 When you enable the Secure transfer required option, all requests made against the storage account must take place over secure connections. Any requests made over HTTP will fail. 
 
+**Allow Blob public access**
+
+When allow blob public access is enabled, one is permitted to configure container ACLs to allow anonymous access to blobs within the storage account. When disabled, no anonymous access to blobs within the storage account is permitted, regardless of underlying ACL configurations
+
 **Enable firewall rules**	
 
 Configure firewall rules to limit access to your storage account to requests that originate from specified IP addresses or ranges, or from a list of subnets in an Azure Virtual Network (VNet). 
