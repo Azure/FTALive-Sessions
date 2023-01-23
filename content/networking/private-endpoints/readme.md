@@ -13,4 +13,5 @@
 - Creating DNS
 - Creating Routing
 - Private Inbound Access (NOT private endpoints!)
-AMPLS and Data Services (Portal, ???, Ingestion)
+- Weird Services (Storage Accounts having multiple endpoints)
+- AMPLS and Data Services (Portal, ???, Ingestion)
