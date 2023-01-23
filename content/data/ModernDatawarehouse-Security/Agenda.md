@@ -14,11 +14,17 @@
 
 ## Agenda
 
-What is a modern Datawarehouse?
+Welcome and introductions
 
-Security overview considerations
+What is a Modern Datawarehouse?
 
-Storage - Data Lake
+Security overview and considerations
+
+Storage - Securing Azure Data Lake
+
+Synapse security configuration
+
+Security Overview
 
 Synapse Analytics
 
@@ -47,11 +53,13 @@ Synapse Analytics
             MSI\AAD Passthrough
       
 
- Data Factory
+ Securing Azure Data Factory
 
+ Securing Power BI
 
- Power BI
-
+ Summary - Putting it all together 
+ 
+ Q&A
 
 **Audience**
 
