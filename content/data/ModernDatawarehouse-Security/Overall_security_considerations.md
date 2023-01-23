@@ -103,3 +103,5 @@ In this architecture, your product transitions in order from Development (the en
 [Landing Zone | Microsoft Learn](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/)
 
 [MFA | Microsoft Learn](https://learn.microsoft.com/en-us/azure/active-directory/authentication/concept-mfa-howitworks)
+
+[Using MFA | Microsoft Learn](https://learn.microsoft.com/en-us/azure/azure-sql/database/authentication-mfa-ssms-overview?source=recommendations&view=azuresql)
