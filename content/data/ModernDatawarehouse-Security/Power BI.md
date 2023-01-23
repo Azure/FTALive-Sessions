@@ -4,7 +4,7 @@
 
 This section covers securing Power BI, Data and Data Transfer in Power BI 
 
-[<Back](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Dedicated%20SQL%20Pool_data.md)\- [Next >](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Network.md)
+[<Back](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/DataFactory.md)\- [Next >](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Putting_it_all_together.md)
 
 #### Overview
 
@@ -99,8 +99,6 @@ When you've already entered credentials for a dataset data source, the Power BI 
 
 Some data sources support single-sign on (SSO), which can be set when entering credentials in the Power BI service (for dataset or gateway data sources). When you enable SSO, Power BI sends the authenticated user's credentials to the data source. This option enables Power BI to honor the security settings that are set up in the data source, such as row-level security. SSO is especially useful when tables in the data model use DirectQuery storage mode.
 
-[Automate Premium workspace and dataset tasks with service principals | Microsoft Learn](
-https://learn.microsoft.com/en-us/power-bi/enterprise/service-premium-service-principal)
 
 
 **Network isolation**
@@ -118,9 +116,6 @@ Using Private Link with Power BI provides the following benefits:
 •     Private Link ensures that traffic will flow over the Azure backbone to a private endpoint for Azure cloud-based resources.
 
 •     Network traffic isolation from non-Azure-based infrastructure, such as on-premises access, would require customers to have ExpressRoute or a Virtual Private Network (VPN) configured.
-
-[Private endpoints for accessing Power BI | Microsoft Learn](
-https://learn.microsoft.com/en-us/power-bi/enterprise/service-security-private-links)
 
 
 **On Premise Data Gateway**
@@ -149,11 +144,6 @@ By default, the gateway uses Transport Layer Security (TLS) 1.2 to communicate w
 
 We recommend that you allow the "*.servicebus.windows.net" Domain Name System (DNS). 
 
-[What is an on-premises data gateway? | Microsoft Learn](
-https://learn.microsoft.com/en-us/power-bi/connect-data/service-gateway-onprem)
-
-[On-premises data gateway in-depth | Microsoft Learn](
-https://learn.microsoft.com/en-us/power-bi/connect-data/service-gateway-onprem-indepth)
 
 **VNet connectivity (preview - coming soon)**
 
@@ -176,10 +166,6 @@ The query is then sent to the data source for execution.
 After execution, the results are sent to the VNet gateway, and the PP VNet service securely pushes the data from the container to the Power BI cloud service.
 
 **This feature will be available in public preview soon.*
-
-[VNet connectivity (preview - coming soon) | Microsoft Learn](
-https://learn.microsoft.com/en-us/power-bi/guidance/whitepaper-powerbi-security#vnet-connectivity-preview---coming-soon)
-
 
 **Power BI Service** 
 
@@ -243,9 +229,6 @@ Inbound private networking: Determine whether there are requirements for network
 Outbound private networking: Determine whether more security is required when connecting to data sources. The Virtual Network (VNet) data gateway enables secure outbound connectivity from Power BI to data sources within a VNet. You can use an Azure VNet data gateway when content is stored in a Premium workspace.
 
 When considering network isolation, work with your IT infrastructure and networking teams before you change any of the Power BI tenant settings. Azure Private Link allows for enhanced inbound security through private endpoints, while an Azure VNet gateway allows for enhanced outbound security when connecting to data sources. Azure VNet gateway is Microsoft-managed rather than customer-managed, so it eliminates the overhead of installing and monitoring on-premises gateways.
-
-[Power BI implementation planning: Security | Microsoft Learn](
-https://learn.microsoft.com/en-us/power-bi/guidance/powerbi-implementation-planning-security-overview)
 
 
 When reviewing security in the Power BI Service, it must be take into consideration that security is implemented in layers.
@@ -399,5 +382,28 @@ Admins and other users with the necessary privileges can access the Office 365 A
 
 It would be wise to regularly access your audit logs so you can see who is doing what. That’s a critical step in helping your organization comply with regulatory requirements on record preservation.
 
+
+#### Reference
 [Power BI security white paper | Microsoft Learn](
 https://learn.microsoft.com/en-us/power-bi/guidance/whitepaper-powerbi-security )
+
+[Power BI implementation planning: Security | Microsoft Learn](
+https://learn.microsoft.com/en-us/power-bi/guidance/powerbi-implementation-planning-security-overview)
+
+[VNet connectivity (preview - coming soon) | Microsoft Learn](
+https://learn.microsoft.com/en-us/power-bi/guidance/whitepaper-powerbi-security#vnet-connectivity-preview---coming-soon)
+
+
+[What is an on-premises data gateway? | Microsoft Learn](
+https://learn.microsoft.com/en-us/power-bi/connect-data/service-gateway-onprem)
+
+[On-premises data gateway in-depth | Microsoft Learn](
+https://learn.microsoft.com/en-us/power-bi/connect-data/service-gateway-onprem-indepth)
+
+
+[Private endpoints for accessing Power BI | Microsoft Learn](
+https://learn.microsoft.com/en-us/power-bi/enterprise/service-security-private-links)
+
+
+[Automate Premium workspace and dataset tasks with service principals | Microsoft Learn](
+https://learn.microsoft.com/en-us/power-bi/enterprise/service-premium-service-principal)
