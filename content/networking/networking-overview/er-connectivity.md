@@ -47,6 +47,6 @@ ExpressRoute is a **connection to Microsoft**, which can in turn be used to conn
 ### Advanced Scenarios
 
 - [**Coexistence of ExpressRoute and VPN Gateways**](https://docs.microsoft.com/azure/expressroute/expressroute-howto-coexist-resource-manager)
-  - [Provide a failover for ExpressRoute connectivity](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/azure-best-practices/plan-for-ip-addressing)
+  - [Provide a failover for ExpressRoute connectivity](https://learn.microsoft.com/azure/expressroute/use-s2s-vpn-as-backup-for-expressroute-privatepeering)
   - Connect branch locations to Azure
   - [Encrypt traffic over ExpressRoute](https://docs.microsoft.com/azure/expressroute/site-to-site-vpn-over-microsoft-peering) to meet regulatory requirements
