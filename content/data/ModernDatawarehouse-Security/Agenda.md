@@ -26,9 +26,11 @@ Synapse security configuration
 
 Security Overview
 
+Network security overview
+
 Synapse Analytics
 
-      Workspace and Network security overview
+      Workspace  
       
             Synapse Workspace - VNET, DEP and Private Endpoints, RBACs
             
