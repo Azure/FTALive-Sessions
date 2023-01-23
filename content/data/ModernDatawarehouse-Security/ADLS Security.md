@@ -2,7 +2,7 @@
 
 ### Securing Azure Data Lake   
 
-[<Back](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Dedicated%20SQL%20Pool_data.md)\- [Next >](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Network.md)
+[<Back](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Overall_security_considerations.md)\- [Next >](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Network.md)
 
 #### Overview
 When implementing a Modern Data Warehouse, the Data lake becomes the center of the solution instead of the relational database. 
@@ -180,8 +180,6 @@ Setting permissions for the service + the data stored in ADLS is always two sepa
 
 When you define an owner for the ADLS service in Azure, that owner is automatically granted 'superuser' (full) access to manage the ADLS resource in Azure *AND* full access to the data.
 
-To allow access to other services such as Databricks or Azure Data Factory, use security principles. Access for users can be done using Azure Active Directory security groups.
-
 RBAC uses role assignments to effectively apply sets of permissions to security principals.
 
 Any other RBAC role other than owner needs the data access specifically assigned via ACLs 
@@ -189,9 +187,7 @@ Any other RBAC role other than owner needs the data access specifically assigned
 
 Use groups whenever you can to grant access, rather than individual accounts. This is a consistent best practice for managing security across many types of systems.
 
-Use groups whenever you can to grant access, rather than individual accounts. This is a consistent best practice for managing security across many types of systems
-
-ACL (access control list) grants permissions to create, read, and/or modify files and folders stored in the ADLS service.
+ACL's (access control lists) grants permissions to create, read, and/or modify files and folders stored in the ADLS service.
 
 **How permissions are evaluated**
 During security principal-based authorization, permissions are evaluated in the following order.
