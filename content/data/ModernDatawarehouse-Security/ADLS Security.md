@@ -67,7 +67,7 @@ https://learn.microsoft.com/en-us/azure/storage/common/storage-private-endpoints
 
 **Use VNet service tags**	
 
-A service tag represents a group of IP address prefixes from a given Azure service. Microsoft manages the address prefixes encompassed by the service tag and automatically updates the service tag as addresses change. For more information about service tags supported by Azure Storage, see Azure service tags overview. For a tutorial that shows how to use service tags to create outbound network rules, see Restrict access to PaaS resources.
+A service tag represents a group of IP address prefixes from a given Azure service. Microsoft manages the address prefixes encompassed by the service tag and automatically updates the service tag as addresses change. 
 
 **Limit network access to specific networks**	
 
