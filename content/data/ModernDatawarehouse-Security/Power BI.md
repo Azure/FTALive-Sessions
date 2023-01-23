@@ -20,8 +20,7 @@ The authentication process in Power Bi is governed by Azure Active Directory (AA
 
 Power BI then uses the login email as a username, passing it to resources whenever an attempt is made by the user to connect to data sources. The username is mapped to the UPN and resolved with a windows domain account for authentication.
 
-![image](https://user-images.githubusercontent.com/24648322/213692947-6f1534ec-de29-4618-ada6-c80e77e08108.png)
-
+![image](https://user-images.githubusercontent.com/24648322/214106037-51be1375-8836-4762-b489-5da0574b1629.png)
 
 **Data Residency**
 
