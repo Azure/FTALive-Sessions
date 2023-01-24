@@ -2,7 +2,35 @@
 
 ### Security overview
 
-[<Back](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/ADLS%20Security.md)\- [Next >](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Workspace.md)
+[<Back](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Overall_security_considerations.md) - [Next>](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Workspace.md)
+
+The network mechanisms that can be used to increase security in Azure Synapse and Azure Data Factory depend on the characteristics of each component of those services. As an introduction, we can start with the networking options of ADF, since its architecture is much simpler than the one of Synapse.
+
+In ADF 4 security options exist:
+
+![ADF network options](adf_network_options.png)
+
+Note the following:
+
+- A data plane (integration runtime) and a control plane (studio) exist
+- Three options exist for the data plane:
+  - Multi-tenant
+  - Single-tenant, Microsoft-managed (managed VNet)
+  - Single-tenant, customer-managed (Self-Hosted Integration Runtime)
+- The data plane can be secured as well with private endpoints.
+
+The architecture of Synapse is more complex, however there is still two primary components:
+
+- A data plane (Synapse Studio)
+- A control plane (the workspace), with 4 elements:
+  - Integration Runtime, Spark pools and Data Explorer, which can be placed in a single-tenant managed VNet
+  - Dedicated and serverless SQL pools
+
+![synapse network options 1 and 2](synapse_network_options_1-2.png)
+
+The Integration Runtime component for pipelines can be deployed in a customer-managed VNet as well, and inbound access to the studio and the workplace can be securized with private endpoints:
+
+![synapse network option 3](synapse_network_options_3.png)
 
 #### Workspace - Connection
 
