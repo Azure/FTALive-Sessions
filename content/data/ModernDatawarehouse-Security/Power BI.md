@@ -164,6 +164,8 @@ The query is then sent to the data source for execution.
 
 After execution, the results are sent to the VNet gateway, and the PP VNet service securely pushes the data from the container to the Power BI cloud service.
 
+![image](https://user-images.githubusercontent.com/24648322/214289905-f4fb6e04-7cdb-4a91-81f7-d794fcb33dd9.png)
+
 **This feature will be available in public preview soon.*
 
 **Power BI Service** 
