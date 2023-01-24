@@ -179,6 +179,7 @@ The following table summarizes the network and self-hosted integration runtime c
 Some data stores support encryption of data at rest. We recommend that you enable the data encryption mechanism for those data stores.
 
 Data stores that support TDE (transparent data encryption)
+
 •    Azure Synapse Analytics
 
 •    Azure SQL Database
