@@ -34,6 +34,8 @@ df = spark.read.csv('abfss://<CONTAINER>@<ACCOUNT>.dfs.core.windows.net/<DIRECTO
 
 df.show()
 ```
+##### Note about spark: Be aware which kind of package you are installing in your environment, be sure if the source is secure and can be installed.
+
 ### Data Factory
 
 Data Factory management resources are built on Azure security infrastructure and use all possible security measures offered by Azure.
@@ -86,3 +88,7 @@ Note: By default, when remote access from intranet is enabled, PowerShell uses p
 [Using the workspace MSI to authenticate a Synapse notebook when accessing an Azure Storage account - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/using-the-workspace-msi-to-authenticate-a-synapse-notebook-when/ba-p/2330029)
 
 [Secure access credentials with Linked Services in Apache Spark for Azure Synapse Analytics - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/spark/apache-spark-secure-credentials-with-tokenlibrary?pivots=programming-language-scala#adls-gen2-storage-with-linked-services)
+
+[Spark Security](https://spark.apache.org/security.html)
+
+[Spark Security latest](https://spark.apache.org/docs/latest/security.html)
