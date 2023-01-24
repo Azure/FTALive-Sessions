@@ -80,6 +80,18 @@ In this architecture, your product transitions in order from Development (the en
 | UAT         | User Acceptance Testing (UAT) allows your end-users or clients to perform tests to verify/accept the software system before a software application can move to your production environment. |
 | Production  | Your production environment (production), sometimes called *live*, is the environment your users directly interact with. |
 
+#### SQL Injection
+
+![image](https://user-images.githubusercontent.com/62876278/214304895-dfe6d60b-a80f-4f43-87bb-ca24965fa07b.png)
+
+Image from web commic exploits of a Mom. Ref: xkcd.com/
+
+SQL injection means someone getting unauthorized access to execute an action on the database by manipulating SQL code. This could be done on any SQL, through pipelines or Spark code for example. As generic guideline:
+
+1) Try to use prepared statements
+2) Validate the inputs
+3) Enforce least privilege user
+4) Test! Test and explore different scenarios to mitigate the risk
 
 
 #### References
