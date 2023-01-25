@@ -11,4 +11,4 @@
 1. Cousume data from the Lake database
 
 ## What is the Map data tool?
-* [Map data tool (Preview)](https://docs.microsoft.com/en-us/azure/synapse-analytics/database-designer/overview-map-data)
+* [Map data tool](https://docs.microsoft.com/en-us/azure/synapse-analytics/database-designer/overview-map-data)
