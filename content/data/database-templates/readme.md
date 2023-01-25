@@ -22,6 +22,6 @@ The goal of this session is to provide a basic understanding of Azure Synapse da
 1. [Wrap up - Azure Synapse Analytics](./azuresynapse.md)
 1. [Azure Synapse database templates](./databasetemplates.md)
 1. [Understanding Lake Database](./lakedatabase.md)
-1. [Map data tool (Preview)](./mapdata.md)
+1. [Map data tool](./mapdata.md)
 1. [Demo](./demo.md)
 1. [Q&A](./QnA.md)
