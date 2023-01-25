@@ -9,6 +9,8 @@ To obtain visibility for cloud subscriptions and resource configuration across m
 
 Azure includes monitoring and security capabilities that are designed to detect and alert anomalous events or configurations that require investigation and potential remediation. Technologies such as [Microsoft Defender for Cloud](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction) and [Microsoft Sentinel](https://docs.microsoft.com/en-us/azure/sentinel/overview) are first-party tools that natively integrate into the Azure environments. These tools complement the environment and code security tools to provide a broad-reaching set of security monitoring to enable organizations to experiment and innovate at a pace in a secure way.
 
+For Sentinel you can also take a look at the [dedicated learn collection for Azure Sentinel](https://learn.microsoft.com/en-us/users/kimberlm/collections/eegrh51oqe3np5).
+
 ## Penetration testing
 Penetration testing is a recommended practice for environments to check for any vulnerabilities in the infrastructure or application configuration that might create weaknesses that attackers could exploit.
 
