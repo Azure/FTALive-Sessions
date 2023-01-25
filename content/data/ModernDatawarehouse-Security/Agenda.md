@@ -22,11 +22,9 @@ Security overview and considerations
 
 Storage - Securing Azure Data Lake
 
+Security  Overview
+
 Synapse security configuration
-
-Security Overview
-
-Network security overview
 
 Synapse Analytics
 
