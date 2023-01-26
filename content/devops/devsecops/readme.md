@@ -38,7 +38,6 @@ How do you bring all of the above together in a pipeline or workflow for your te
 
 ## Additional resources
 
-- [Cryptography Strategy](./CryptographyStrategy.md)
 - [Overview of the Azure Security Benchmark (v3)](https://docs.microsoft.com/security/benchmark/azure/overview)
   - [Security Control v3: DevOps Security](https://docs.microsoft.com/security/benchmark/azure/security-controls-v3-devops-security)
 - [Security in DevOps (DevSecOps)](https://docs.microsoft.com/devops/operate/security-in-devops)

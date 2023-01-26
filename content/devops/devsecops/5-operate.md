@@ -10,7 +10,7 @@ Once you start operating your workloads, you need a means to continuously assess
 
 ## Continuous monitoring
 
-This is where [Microsoft Defender for Cloud](https://docs.microsoft.com/azure/defender-for-cloud/defender-for-cloud-introduction) steps in. Here as well, there is a dedicated [FTA Live session](https://github.com/Azure/FTALive-Sessions/blob/main/content/security/azure-security/AzureSecurityCenter.MD) for which you can sign up [here](https://fasttrack.azure.com/live/category/Security).
+This is where [Microsoft Defender for Cloud](https://docs.microsoft.com/azure/defender-for-cloud/defender-for-cloud-introduction) steps in. Here as well, there is a dedicated [FTA Live session](https://aka.ms/ftalive).
 
 ## Threat intelligence
 
