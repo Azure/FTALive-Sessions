@@ -1,0 +1,23 @@
+name: Deploy in prod 
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy_endpoint:
+    runs-on: ubuntu-latest
+    environment:
+        name: prod    
+    steps:
+    - name: Check out repo
+      uses: actions/checkout@main
+    - name: Install az ml extension
+      run: az extension add -n ml -y
+    - name: Azure login
+      uses: azure/login@v1
+      with:
+        creds: ${{secrets.AZURE_PROD_CREDENTIALS}}
+    - name: deploy prod
+      run: |
+        az ml online-endpoint create --name diabetes-endpoint -f level-4/src/create-endpoint.yaml --resource-group mlops-prod --workspace-name mlops-prod --wait
+        az ml online-deployment create --name mlflow-deployment --endpoint diabetes-endpoint -f level-4/src/mlflow-deployment.yaml --all-traffic --resource-group mlops-prod --workspace-name mlops-prod
+

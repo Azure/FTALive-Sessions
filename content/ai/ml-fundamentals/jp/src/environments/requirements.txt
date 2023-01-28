@@ -1,0 +1,10 @@
+lightgbm==3.3.1
+matplotlib==3.5.1
+scikit-learn==1.0.2
+pandas==1.4.2
+ipykernel==6.12.1
+pytest==7.1.1
+inference-schema[numpy-support]==1.3.2
+azureml-mlflow==1.40.0
+azureml-dataprep==3.0.1
+azureml-defaults==1.40.0
