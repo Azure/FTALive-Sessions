@@ -1,5 +1,11 @@
 #!/bin/bash
 
+##### Prerequisites #####
+# 1. copy a valid public .PFX encoded TLS certificate to a new ./certs directory
+# 2. create a file '.env' in the root of the 'custom-domain' directory
+# 3. add a line to the file to define an environment variable for the certificate password. .i.e. CERTIFICATE_PASSWORD=<your password>
+# 4. SSH public key exists at '~/.ssh/id_rsa.pub'
+
 LOCATION='australiaeast'
 PREFIX='custom-dns'
 RG_NAME="${PREFIX}-aca-rg"
