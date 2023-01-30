@@ -118,4 +118,4 @@ module dnsZone 'modules/dns.bicep' = {
   }
 }
 
-output appFqdn string = containerApp.properties.configuration.ingress.fqdn
+output appFqdn string = '${subDomainName}.${domainName}'

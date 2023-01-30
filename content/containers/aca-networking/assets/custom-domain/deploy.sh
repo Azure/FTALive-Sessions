@@ -4,6 +4,7 @@ LOCATION='australiaeast'
 PREFIX='custom-dns'
 RG_NAME="${PREFIX}-aca-rg"
 SSH_KEY=`cat ~/.ssh/id_rsa.pub`
+CERT_PATH='./certs/star.kainiindustries.net.bundle.pfx'
 
 # source 'CERTIFICATE_PASSWORD' from .env file
 source ./.env
@@ -19,14 +20,14 @@ az deployment group create \
 	--parameters location=$LOCATION \
 	--parameters prefix=$PREFIX \
 	--parameters certificatePassword=$CERTIFICATE_PASSWORD \
-	--parameters certificate="$(cat ./certs/star.kainiindustries.net.bundle.pfx | base64)"
+	--parameters certificate="$(cat $CERT_PATH | base64)"
 
 # get deployment template outputs
 APP_FQDN=`az deployment group show --resource-group $RG_NAME --name 'infra-deployment' --query properties.outputs.appFqdn.value --output tsv`
-BASTION_HOST_NAME=`az deployment group show --resource-group $RG_NAME --name 'infra-deployment' --query properties.outputs.bastionHostName.value --output tsv`
-VM_ID=`az deployment group show --resource-group $RG_NAME --name 'infra-deployment' --query properties.outputs.vmId.value --output tsv`
 
 echo "APP_FQDN: https://$APP_FQDN"
+
+curl https://$APP_FQDN
 
 
 
