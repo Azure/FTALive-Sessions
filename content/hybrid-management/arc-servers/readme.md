@@ -2,15 +2,22 @@
 
 ## Overview
 
-In this session, learn about [Azure Arc-enabled servers](https://docs.microsoft.com/en-us/azure/azure-arc/servers/overview) including Deployment Approaches and how to leverage Azure Management capbilities for you non-Azure estate.
+In this session you will learn about how to manage Windows, Linux physical servers and virtual machines hosted outside of Azure, on your corporate network, or other cloud provide using [Azure Arc-enabled servers](https://docs.microsoft.com/en-us/azure/azure-arc/servers/overview). We will be showing the deployment approaches for ARC agents and also the management capabilities for your non-Azure estate. 
 
 ## Agenda
 
-* What is Azure Arc-enabled Servers?
-* Agent onboarding
-* How to use Azure Management and Security capabilities with Arc-enabled servers
+* [What is Azure Arc-enabled Servers?](https://learn.microsoft.com/en-us/azure/azure-arc/servers/overview)
+* [Prerequisites](https://learn.microsoft.com/en-us/azure/azure-arc/servers/plan-at-scale-deployment#prerequisites)
+* [Agent onboarding](https://learn.microsoft.com/en-us/azure/azure-arc/servers/deployment-options)
+* Capabilities with Arc-enabled servers
+    * [Govern](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-security-governance-and-compliance#policy-management-and-reporting)
+    * [Protect](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-security-governance-and-compliance#governance-disciplines)
+    * [Monitor](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-management-and-monitoring-arc-server#azure-monitor-requirements)
+    * [Automation](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-automation-arc-server)
 
 
+**Architecture**
+![alt txt](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/media/arc-enabled-servers-policy.png#lightbox)
 ## Learning Resources and Session Summary
 
 *   Azure Arc enabled servers enables you to use the Azure Management capabilities, such as Azure Policy, Change Tracking and Inventory, etc on your servers hosted outside of Azure in the same way that you use for Azure-hosted machines
@@ -29,6 +36,6 @@ Additional learning resources:
 
 Interactive Demos:
 
-*   [Onboarding a server to Azure Arc (octe.azurewebsites.net)](https://octe.azurewebsites.net/Microsoft/viewer/71/index.html#/0/0.)
-*   [Using Azure Policy with Arc enabled servers (octe.azurewebsites.net)](https://octe.azurewebsites.net/Microsoft/viewer/68/index.html#/0/0)
-*   [Extensions and logs for Arc enabled servers (octe.azurewebsites.net)](https://octe.azurewebsites.net/Microsoft/viewer/72/index.html#/)
+*   [Onboarding a server to Azure Arc](https://octe.azurewebsites.net/Microsoft/viewer/71/index.html#/0/0.)
+*   [Using Azure Policy with Arc enabled servers](https://octe.azurewebsites.net/Microsoft/viewer/68/index.html#/0/0)
+*   [Extensions and logs for Arc enabled servers](https://octe.azurewebsites.net/Microsoft/viewer/72/index.html#/)
