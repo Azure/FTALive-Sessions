@@ -2,5 +2,5 @@
 
 # Operations
 
-Please see the [standalone AKS Operations handout &rarr;](../aks-operations/readme.md)   
+Please see the [standalone AKS Operations handout &rarr;](../aks-operations/README.md)   
 which has all the links, including those not covered on 25 August 2022, and are included in separate sessions in this 6 part series.

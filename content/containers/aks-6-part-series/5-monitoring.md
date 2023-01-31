@@ -1,4 +1,4 @@
-[&larr; Operations](./04-operations.md) | Part 5 of 6 | [Workload Deployment &rarr;](#)
+[&larr; Operations](./4-operations.md) | Part 5 of 6 | [Workload Deployment &rarr;](./6-workload-deployments-automation.md)
 
 # AKS Monitoring
 
@@ -37,6 +37,31 @@ Popularized by [Tom Willke](https://grafana.com/blog/2018/08/02/the-red-method-h
 - Azure Monitor
 - Alerting
 - Querying Logs with Container Insights
+
+### Enable Azure Monitor for Containers
+```bash
+# Set subscription context
+az account set --subscription <subscriptionId>
+
+# Enable monitoring on existing cluster
+az aks enable-addons -a monitoring -n <clustername> -g <resourcegroupname>
+
+# Enable monitoring on existing cluster with existing workspace
+az aks enable-addons -a monitoring -n <clustername> -g <resourcegroupname> --workspace-resource-id "/subscriptions/<subscriptionId>/resourcegroups/<resourcegroupname>/providers/microsoft.operationalinsights/workspaces/<workspacename>"
+
+# Verify the status and the agent version
+kubectl get ds omsagent --namespace kube-system
+
+# To verify the agent version running on Windows nodepool.
+kubectl get ds omsagent-win --namespace kube-system
+
+# Check the connected workspace details for an existing cluster
+az aks show -g <resourcegroupname> -n <clustername> | grep -i "logAnalyticsWorkspaceResourceID"
+
+# To disable the addon Azure monitor for containers
+az aks disable-addons -a monitoring -g <resourcegroupname> -n <clustername>
+
+````
 
 ### What to Measure?
 

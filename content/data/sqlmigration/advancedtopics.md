@@ -1,7 +1,6 @@
 # Advanced Topics
 
-#### [prev](./faq.md) | [home](./readme.md)  | [next](./readme.md)
-
+#### [prev](./qna.md) | [home](./readme.md)  | [next](./readme.md)
 
 ## Pre-Migration
 * 

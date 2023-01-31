@@ -1,0 +1,37 @@
+name: Manually trigger an Azure Machine Learning job
+
+on:
+  workflow_dispatch:
+    inputs:
+      training_data:
+        description: 'Training data'
+        required: true
+        default: 'azureml:test_mlops:1'
+      reg_rate:
+        description: 'Regularization rate'
+        required: true
+        default: '0.01'
+
+jobs:
+  train:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out repo
+      uses: actions/checkout@main
+    - name: Install az ml extension
+      run: az extension add -n ml -y
+    - name: Azure login
+      uses: azure/login@v1
+      with:
+        creds: ${{secrets.AZURE_CREDENTIALS}}
+    - name: Submit job
+      run: |
+        az ml job create \
+          --file src/job.yml \
+          --set training_data=${{github.event.inputs.training_data}} \
+          --set reg_rate=${{github.event.inputs.reg_rate}} \
+          --name train \
+          --wait
+      
+
+
