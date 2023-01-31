@@ -2,7 +2,7 @@
 
 ## Agenda
 
-- What we see in FTA Live
+- [What we see in the field at Fast Track for Azure](field-experience.md)
 - Misconceptions about Private Endpoints
 - Why do Private Endpoints?
   - We want a private IP that we can plan around
