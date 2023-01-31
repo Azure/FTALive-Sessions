@@ -1,7 +1,7 @@
 #!/bin/bash
 
 LOCATION='australiaeast'
-PREFIX='frontdoor'
+PREFIX='afd'
 RG_NAME="${PREFIX}-aca-rg"
 
 # create resource group
@@ -25,4 +25,4 @@ echo "approving private endpoint connection ID: '$PEC_ID'"
 az network private-endpoint-connection approve -g $RG_NAME -n $PLS_NAME --id $PEC_ID --description "Approved" 
 
 # test AFD endpoint
-curl https://$AFD_FQDN
+curl "https://$AFD_FQDN"

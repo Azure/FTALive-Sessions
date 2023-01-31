@@ -8,7 +8,6 @@ var frontDoorName = '${prefix}-afd-${suffix}'
 var wafPolicyName = '${prefix}wafpolicy'
 var workspaceName = '${prefix}-wks-${suffix}'
 var appName = '${prefix}-app-${suffix}'
-var plsNicName = '${prefix}-pls-nic-${suffix}'
 var plsName = '${prefix}-pls-${suffix}'
 var appEnvironmentName = '${prefix}-env-${suffix}'
 var originName = '${prefix}-origin-${suffix}'
@@ -49,19 +48,6 @@ resource vnet 'Microsoft.Network/virtualNetworks@2022-07-01' = {
     ]
     virtualNetworkPeerings: []
     enableDdosProtection: false
-  }
-}
-
-resource frontDoor 'Microsoft.Cdn/profiles@2022-11-01-preview' = {
-  name: frontDoorName
-  location: 'Global'
-  sku: {
-    name: 'Premium_AzureFrontDoor'
-  }
-  properties: {
-    originResponseTimeoutSeconds: 30
-    extendedProperties: {
-    }
   }
 }
 
@@ -154,6 +140,49 @@ resource containerApp 'Microsoft.App/containerApps@2022-06-01-preview' = {
   }
 }
 
+module privateLinkService './modules/pls.bicep' = {
+  name: 'modules-private-link-service'
+  params: {
+    appEnvironmentResourceGroupName: appEnvironmentResourceGroupName
+    loadBalancerName: loadBalancerName
+    location: location
+    name: plsName
+    subnetId: vnet.properties.subnets[1].id
+  }
+}
+
+resource frontDoor 'Microsoft.Cdn/profiles@2022-11-01-preview' = {
+  name: frontDoorName
+  location: 'Global'
+  sku: {
+    name: 'Premium_AzureFrontDoor'
+  }
+  properties: {
+    originResponseTimeoutSeconds: 30
+    extendedProperties: {
+    }
+  }
+}
+
+resource afdOriginGroup 'Microsoft.Cdn/profiles/origingroups@2022-11-01-preview' = {
+  parent: frontDoor
+  name: originGroupName
+  properties: {
+    loadBalancingSettings: {
+      sampleSize: 4
+      successfulSamplesRequired: 3
+      additionalLatencyInMilliseconds: 50
+    }
+    healthProbeSettings: {
+      probePath: '/'
+      probeRequestType: 'GET'
+      probeProtocol: 'Https'
+      probeIntervalInSeconds: 60
+    }
+    sessionAffinityState: 'Disabled'
+  }
+}
+
 resource afdEndpoint 'Microsoft.Cdn/profiles/afdendpoints@2022-11-01-preview' = {
   parent: frontDoor
   name: afdEndpointName
@@ -189,68 +218,6 @@ resource afdRoute 'Microsoft.Cdn/profiles/afdendpoints/routes@2022-11-01-preview
   dependsOn: [
     afdOrigin
   ]
-}
-
-resource afdOriginGroup 'Microsoft.Cdn/profiles/origingroups@2022-11-01-preview' = {
-  parent: frontDoor
-  name: originGroupName
-  properties: {
-    loadBalancingSettings: {
-      sampleSize: 4
-      successfulSamplesRequired: 3
-      additionalLatencyInMilliseconds: 50
-    }
-    healthProbeSettings: {
-      probePath: '/'
-      probeRequestType: 'GET'
-      probeProtocol: 'Https'
-      probeIntervalInSeconds: 60
-    }
-    sessionAffinityState: 'Disabled'
-  }
-}
-
-module privateLinkService './modules/pls.bicep' = {
-  name: 'modules-private-link-service'
-  params: {
-    appEnvironmentResourceGroupName: appEnvironmentResourceGroupName
-    loadBalancerName: loadBalancerName
-    location: location
-    name: plsName
-    subnetId: vnet.properties.subnets[1].id
-  }
-}
-
-resource plsNic 'Microsoft.Network/networkInterfaces@2022-07-01' = {
-  name: plsNicName
-  location: location
-  properties: {
-    ipConfigurations: [
-      {
-        name: 'ipconfig-0'
-        type: 'Microsoft.Network/networkInterfaces/ipConfigurations'
-        properties: {
-          privateIPAddress: '10.0.2.4'
-          privateIPAllocationMethod: 'Dynamic'
-          subnet: {
-            id: vnet.properties.subnets[1].id
-          }
-          primary: true
-          privateIPAddressVersion: 'IPv4'
-        }
-      }
-    ]
-    dnsSettings: {
-      dnsServers: []
-    }
-    enableAcceleratedNetworking: false
-    enableIPForwarding: false
-    disableTcpStateTracking: false
-    privateLinkService: {
-      id: privateLinkService.outputs.id
-    }
-    nicType: 'Standard'
-  }
 }
 
 resource afdOrigin 'Microsoft.Cdn/profiles/origingroups/origins@2022-11-01-preview' = {
