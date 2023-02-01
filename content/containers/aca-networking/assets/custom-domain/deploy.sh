@@ -7,8 +7,8 @@
 # 4. SSH public key exists at '~/.ssh/id_rsa.pub'
 
 LOCATION='australiaeast'
-PREFIX='custom-dns'
-RG_NAME="${PREFIX}-aca-rg"
+PREFIX='aca-custom-dns'
+RG_NAME="${PREFIX}-rg"
 SSH_KEY=`cat ~/.ssh/id_rsa.pub`
 CERT_PATH='./certs/star.kainiindustries.net.bundle.pfx'
 

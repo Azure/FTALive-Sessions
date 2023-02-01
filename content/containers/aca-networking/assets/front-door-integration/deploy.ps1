@@ -1,6 +1,6 @@
 $LOCATION = 'australiaeast'
-$PREFIX = 'afd'
-$RG_NAME = "$PREFIX-aca-rg"
+$PREFIX = 'aca-afd'
+$RG_NAME = "$PREFIX-rg"
 
 # create resource group
 New-AzResourceGroup -Location $LOCATION -name $RG_NAME -Force      

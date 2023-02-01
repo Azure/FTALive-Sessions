@@ -1,8 +1,8 @@
 #!/bin/bash
 
 LOCATION='australiaeast'
-PREFIX='afd'
-RG_NAME="${PREFIX}-aca-rg"
+PREFIX='aca-afd'
+RG_NAME="${PREFIX}-rg"
 
 # install ssh AZ CLI extension
 az extension add --name ssh

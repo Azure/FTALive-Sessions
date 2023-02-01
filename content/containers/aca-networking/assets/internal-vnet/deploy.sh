@@ -1,8 +1,8 @@
 #!/bin/bash
 
 LOCATION='australiaeast'
-PREFIX='internal'
-RG_NAME="${PREFIX}-aca-rg"
+PREFIX='aca-internal'
+RG_NAME="${PREFIX}-rg"
 SSH_KEY=`cat ~/.ssh/id_rsa.pub`
 
 # create resource group
@@ -36,8 +36,9 @@ az network bastion ssh \
 
 az network bastion tunnel --name $BASTION_HOST_NAME --resource-group $RG_NAME --target-resource-id $VM_ID --resource-port 22 --port 50022
 
-# run these commands in a separate shell
+echo "APP_FQDN: https://$APP_FQDN"
+
+# run these commands in a the remote ssh shell
 #
-# $ ssh localadmin@127.0.0.1 -p 50022
-# $ nslookup $APP_FQDN
-# $ curl https://$APP_FQDN
+# $ nslookup <APP_FQDN>
+# $ curl https://<APP_FQDN>
