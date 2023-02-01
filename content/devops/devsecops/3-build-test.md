@@ -31,13 +31,13 @@ When utilizing Infrastructure as Code you can run these checks beforehand by usi
 
 Depending on which IaC tooling you use, you will have different tools available to you to run checks before deployment happens.
 
-In case you want to learn more about IaC and how to build a secure process, we also advise you to take a look at the [FTA Live sessions on DevOps for infrastructure](https://github.com/Azure/FTALive-Sessions/blob/main/content/devops/part-3-infra.md). You can sign up for these session on the [FTA Live site](https://fasttrack.azure.com/live/category/DevOps).
+In case you want to learn more about IaC and how to build a secure process, we also advise you to take a look at the [FTA Live sessions on DevOps for infrastructure](https://github.com/Azure/FTALive-Sessions/tree/main/content/devops/cicd-infra). You can sign up for these session on the [FTA Live site](https://aka.ms/ftalive).
 
 #### ARM and Bicep
 
 For both JSon and Bicep ARM templates, you can add template scanning by using the [arm-ttk](https://github.com/Azure/arm-ttk) toolkit. The [Bicep Linter](https://docs.microsoft.com/azure/azure-resource-manager/bicep/linter) is the more up to date version of arm-ttk for Bicep templates. 
 
-A full run-through of how to test Bicep code can be found in this [learn module for Azure Pipelines](https://docs.microsoft.com/learn/modules/test-bicep-code-using-azure-pipelines/) and this one for [GitHub Actions](https://docs.microsoft.com/learn/modules/test-bicep-code-using-github-actions/). It also covers steps like validating, linting, previewing changes and approving deployment. Both modules are part of a larger set of [learn paths on Bicep](https://docs.microsoft.com/azure/azure-resource-manager/bicep/learn-bicep)
+A full run-through of how to test Bicep code can be found in this [learn module for Azure Pipelines](https://docs.microsoft.com/learn/modules/test-bicep-code-using-azure-pipelines/) and this one for [GitHub Actions](https://docs.microsoft.com/learn/modules/test-bicep-code-using-github-actions/). It also covers steps like validating, linting, previewing changes and approving deployment. Both modules are part of a larger set of [learn paths on Bicep](https://docs.microsoft.com/azure/azure-resource-manager/bicep/learn-bicep). There are also recordings of these modules availabe [here](https://learn.microsoft.com/en-us/events/learn-events/learnlive-iac-and-bicep/) and [here](https://learn.microsoft.com/en-us/events/learn-events/learnlive-automate-azure-deployments-bicep-github-actions/).
 
 #### Terraform
 
@@ -57,7 +57,7 @@ This end state can be enforced by utilizing [Azure Policies](https://docs.micros
 
 Depending on how you configure Azure Policy you can opt for a no-deploy of a resource in case it does not comply with the standards you have set. As an alternative you can opt for a flagging of a incompliant state.
 
-We provide an [FTA Live session on Azure Governance](https://github.com/Azure/FTALive-Sessions/tree/main/content/management-governance/governance) for which you can sign up [here](https://fasttrack.azure.com/live/category/Governance)
+We provide an [FTA Live session on Azure Governance](https://aka.ms/ftalive) for which there is also a recording available [here]([https://fasttrack.azure.com/live/category/Governance](https://learn.microsoft.com/shows/learn-live/fasttrack-for-azure-season-1-ep03-azure-governance?WT.mc_id=learnlive-20220929A))
 
 ### Post-deployment checks
 

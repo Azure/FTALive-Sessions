@@ -57,7 +57,7 @@ Another step worth considering is to introduce a pre-commit framework if the ver
 
 ## Secure coding standards
 
-Secure coding practice guidelines help developers learn essential secure coding principles and how they should be applied. There are secure coding practices such as [OWASP](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/migrated_content) secure coding practices available and incorporated with the general coding practices.
+Secure coding practice guidelines help developers learn essential secure coding principles and how they should be applied. There are secure coding practices such as [OWASP](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide) secure coding practices available and incorporated with the general coding practices.
 
 ## Peer review
 

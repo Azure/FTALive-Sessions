@@ -1,0 +1,70 @@
+name: Train in dev/prod 
+on:
+  push:
+    branches:
+      - main
+    inputs:
+      dev_training_data:
+        description: 'Training data'
+        required: true
+        default: 'azureml:diabetes-dev:1'
+      prod_training_data:
+        description: 'Training data'
+        required: true
+        default: 'azureml:diabetes-prod:1'        
+      reg_rate:
+        description: 'Regularization rate'
+        required: true
+        default: '0.01'
+
+jobs:
+  train_dev:
+    runs-on: ubuntu-latest
+    environment:
+        name: dev    
+    steps:
+    - name: Check out repo
+      uses: actions/checkout@main
+    - name: Install az ml extension
+      run: az extension add -n ml -y
+    - name: Azure login
+      uses: azure/login@v1
+      with:
+        creds: ${{secrets.AZURE_DEV_CREDENTIALS}}
+    - name: run dev job
+      run: |
+        az ml job create \
+          --file job.yml \
+          --set training_data=${{github.event.inputs.training_data}} \
+          --set reg_rate=${{github.event.inputs.reg_rate}} \
+          --name train_dev \
+          --resource-group mlops-dev --workspace-name mlops-dev  
+          --stream
+  
+
+  train_prod:
+    runs-on: ubuntu-latest
+    environment:
+        name: prod
+    steps:
+    - name: check out repo
+      uses: actions/checkout@v2
+    - name: install az ml extension
+      run: az extension add -n ml -y
+    - name: azure login
+      uses: azure/login@v1
+      with:
+        creds: ${{secrets.AZURE_PROD_CREDENTIALS}}
+    - name: set current directory
+      run: cd src
+    - name: run prod job
+      run: |
+        az ml job create \
+          --file job.yml \
+          --set training_data=${{github.event.inputs.prod_training_data}} \
+          --set reg_rate=${{github.event.inputs.reg_rate}} \
+          --name train_prod \
+          --resource-group mlops-prod --workspace-name mlops-prod  
+          --stream
+      needs: train_dev
+
