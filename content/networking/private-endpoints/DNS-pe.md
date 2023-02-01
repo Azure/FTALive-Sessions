@@ -22,7 +22,8 @@ For example, if you perform an NS lookup for `mysa.blob.core.windows.net` that h
 
 There are two main options for managing the DNS for your Private Endpoints.
 
-First is the manual option.  In whatever DNS solution you are using, you add a record for your private resource's private link alias.  On paper this is easy - creating a zone and record for the service that you want to access (for example, a zone for `privatelink.blob.core.windows.net`).
+First is the manual option.  In whatever DNS solution you are using, you add a record for your private resource's private link alias.  On paper this is easy - creating a zone and record for the service that you want to access (for example, a zone for `privatelink.blob.core.windows.net`).  
+>🌋REVISIT FOR ZONE THIS IS INCORRECT need whole thing
 
 Requesting clients will then:
 
