@@ -34,11 +34,6 @@ az network bastion ssh \
 	--username 'localadmin' \
 	--ssh-key '~/.ssh/id_rsa'
 
-az network bastion tunnel --name $BASTION_HOST_NAME --resource-group $RG_NAME --target-resource-id $VM_ID --resource-port 22 --port 50022
-
-echo "APP_FQDN: https://$APP_FQDN"
-
-# run these commands in a the remote ssh shell
-#
+# run these commands in the remote ssh session opened by the previous command
 # $ nslookup <APP_FQDN>
 # $ curl https://<APP_FQDN>
