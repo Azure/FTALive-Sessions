@@ -33,7 +33,7 @@ In this section, we provide an introduction to the Azure OpenAI service, backgro
 
 
 
-<img src='./images/hype.png' width=500 />
+<img src='./images/hype.png' width=900 />
 
 ## Generative AI
 Generative AI is a subfield of Artificial Intelligence that focuses on creating systems that can generate new examples, such as images, text, or speech, that are similar to examples from a given dataset. The goal of generative AI is to develop algorithms that can learn the underlying probability distribution of a given dataset and use this knowledge to generate new examples that are similar to the examples in the dataset.
@@ -41,7 +41,7 @@ Generative AI models can be classified into two broad categories: generative mod
 Generative AI sits on top of other areas of AI like unsupervised learning, supervised learning and reinforcement learning. It relies on the capability of those models to extract useful features from the data and use that for learning the underlying probability distribution of the data which is used for generthe potential to be used in a wide range of applications, such as computer vision, natural language processing, speech recognition, and many more.
 
 
-<img src='./images/generative.png' width=500 />
+<img src='./images/generative.png' width=900 />
 
 ## Use Cases & Capabilities
 Working with customers on OpenAI has highlighted four (4) capabilities moreso than others: Content generation, Summarisation, Code Generation and Semantic Search. 
@@ -55,7 +55,7 @@ These use cases are particular to these 4 categories or capabilities of OpenAI t
 * Customer 360 where hyper-personalization will use more than one of the above capabilities to ensure you have a complete and holistic view of your customers and are increasing your customer satisfaction, whilst using feedback and trends to serve them better in the future.
 * Business Process Automation like document automation where we use capabilities across search, code generation and content generation to do things faster and more efficiently.
 
-<img src='./images/top4.png' width=500 />
+<img src='./images/top4.png' width=900 />
 
 ## OpenAI Overview 
 
@@ -67,7 +67,7 @@ Microsoft’s relationship with OpenAI began on July 22, 2019, when we announced
 
 The partnership also includes a mutual commitment to ethical AI development and responsible use of AI, with both companies working together on safety, trust, and reliability of AI systems and services.
 
-<img src='./images/breakthroughs.png' width=500 />
+<img src='./images/breakthroughs.png' width=900 />
 
 <br></br>
 
@@ -114,7 +114,7 @@ It's important to provide some information on the underlying concepts.
 
 [Detailed information on models and capability](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/models#model-summary-table-and-region-availability)
 
-<img src='./images/openai_models.png' width=500 />
+<img src='./images/openai_models.png' width=900 />
 
 ### **Prompts & Completions**
 The completions endpoint is the core component of the API service. This API provides access to the model's text-in, text-out interface. Users simply need to provide an input prompt containing the English text command, and the model will generate a text completion.
@@ -177,7 +177,7 @@ The diagram below illustrates how customer data is processed. This diagram cover
 2. How the Azure OpenAI Service processes customer text prompts to generate completions, embeddings, and search results; and
 3. How the Azure OpenAI Service and Microsoft personnel analyse prompts & completions for abuse, misuse or harmful content generation.
 
-<img src='./images/flow.png' width=500 />
+<img src='./images/flow.png' width=900 />
 
 ### Fine-tuning
 
