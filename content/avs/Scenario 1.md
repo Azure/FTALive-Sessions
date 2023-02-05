@@ -6,4 +6,4 @@
   
 ![eslz-net-scenario-1](https://user-images.githubusercontent.com/97964083/216805269-ccdc8006-1202-4ab1-863a-f5d9b296863d.png)
 
-#### [prev](https://github.com/jasonamedina/FTALive-Sessions/blob/main/content/avs/Traffic%20Inspection%20Requirements.md) | [home](./readme.md) | [next](https://github.com/jasonamedina/FTALive-Sessions/blob/main/content/avs/3.%20Egress%20from%20Azure%20VMware%20Solution%20with%20or%20without%20NSX-T%20or%20NVA.md)
+#### [prev](https://github.com/jasonamedina/FTALive-Sessions/blob/main/content/avs/Traffic%20Inspection%20Requirements.md) | [home](./readme.md) | [next](https://github.com/jasonamedina/FTALive-Sessions/blob/main/content/avs/Scenario%202.md)
