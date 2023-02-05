@@ -2,7 +2,28 @@
 
 #### [prev](./understand-forecast.md) | [home](./readme.md)  | [next](./control.md)
 
-### Using Azure Advisor
+### Basic AVS Network Connectivity 
+
+What is AVS Managed ExpressRoute?
+
+What is Global Reach?
+
+What is an ExpressRoute Gateway?
+
+What is a VPN Gateway?
+
+### Other Azure Networking Components related to AVS
+
+What is vWAN?
+
+What is Azure Firewall?
+
+What are Azure Route Servers?
+
+What are 3rd party Firewalls and layer 3 NVA's and why would you use them?
+ 
+ What are Route-Tables?
+
 Azure Advisor can be thought of as a personalized cloud consultant that helps you follow not only best practices, but also gives you the ability to optimize workloads by giving you insight into underutilized instances.
 - Advisor uses machine-learning algorithms to identify low utilization and to identify the ideal recommendation to ensure optimal usage of virtual machines and virtual machine scale sets. The recommended actions are shut down or resize, specific to the resource being evaluated.
 - Advisor will look at CPU, Memory and Outbound Network utilization.
