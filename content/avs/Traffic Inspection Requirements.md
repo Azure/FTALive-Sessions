@@ -1,5 +1,5 @@
 # What are your AVS traffic inspection requirements?
-
+So how do we know which Netowork Scenario is best for us? First, you need to figure out your AVS inspection requirements as shown below. This answers will lead you to your scenario and what your network topology will look like.  
 
 The following table uses VMware solution traffic inspection requirements to provide recommendations and considerations for the most common networking scenarios.
 
