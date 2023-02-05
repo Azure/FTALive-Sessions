@@ -1,4 +1,4 @@
-# Optimize Workloads
+# Azure Network Connectivity & Components for AVS
 
 #### [prev](./understand-forecast.md) | [home](./readme.md)  | [next](./control.md)
 
