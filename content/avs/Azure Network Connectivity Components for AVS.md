@@ -22,7 +22,9 @@ What are Azure Route Servers?
 
 What are 3rd party Firewalls and layer 3 NVA's and why would you use them?
  
- What are Route-Tables?
+What are Route-Tables?
+ 
+What is an Application Gateway?
 
 Azure Advisor can be thought of as a personalized cloud consultant that helps you follow not only best practices, but also gives you the ability to optimize workloads by giving you insight into underutilized instances.
 - Advisor uses machine-learning algorithms to identify low utilization and to identify the ideal recommendation to ensure optimal usage of virtual machines and virtual machine scale sets. The recommended actions are shut down or resize, specific to the resource being evaluated.
