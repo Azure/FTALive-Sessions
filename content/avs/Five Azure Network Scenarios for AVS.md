@@ -1,4 +1,4 @@
-# What are your AVS inspection requirements?
+# What are your AVS traffic inspection requirements?
 
 
 The following table uses VMware solution traffic inspection requirements to provide recommendations and considerations for the most common networking scenarios.
