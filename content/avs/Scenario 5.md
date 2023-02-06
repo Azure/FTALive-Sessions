@@ -6,4 +6,4 @@
 ![image](https://user-images.githubusercontent.com/97964083/216826483-bbb1c507-7fcf-4da6-98ea-a86100a2b28f.png)
 
 
-#### [prev](https://github.com/jasonamedina/FTALive-Sessions/blob/main/content/avs/Scenario%204.md) | [home](./readme.md) 
+#### [prev](https://github.com/jasonamedina/FTALive-Sessions/blob/main/content/avs/Scenario%204.md) | [home](./readme.md) | [next](https://github.com/jasonamedina/FTALive-Sessions/blob/main/content/avs/Internet%20Connectivity%20Change.md) 
