@@ -38,8 +38,8 @@ In this session you will learn about:
 
 ### Additional Learning Resources
 
-* [The Azure FinOps Guide](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/the-azure-finops-guide/ba-p/3704132#whatisfinops)
-* [Azure Cost Optimization](https://aka.ms/costoptimization)
+* [Example architectures for Azure VMWare Solutions](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/azure-vmware/example-architectures)
+* [Enterprise Scale for AVS-Networking](https://github.com/Azure/Enterprise-Scale-for-AVS/tree/main/BrownField/Networking)
 * [Azure Cost Management + Billing Power BI Template](https://aka.ms/costmgmt/ACMApp)
 * [Microsoft Azure Well-Architected Framework](https://aka.ms/architecture/framework) 
 * [Microsoft Azure Well-Architected Review](https://aka.ms/architecture/review) 
