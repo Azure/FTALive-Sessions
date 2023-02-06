@@ -13,13 +13,19 @@ In this FTA Live session the FastTrack Azure VMware Solution team will cover the
 
 ## Agenda
 
-#### [Cost Management Overview](overview.md)
+#### [Azure Network Connectivity & Components for AVS](https://github.com/jasonamedina/FTALiveSessions/blob/main/content/avs/Azure%20Network%20Connectivity%20Components%20for%20AVS.md)
 
-#### [Understand & Forecast Costs](understand-forecast.md)
+#### [What are your AVS traffic inspection requirements?](https://github.com/jasonamedina/FTALiveSessions/blob/main/content/avs/Traffic%20Inspection%20Requirements.md)
 
-#### [Optimize Workloads](optimize.md)
+#### [Scenario 1: Secured Virtual WAN hub with default route propagation](https://github.com/jasonamedina/FTALive-Sessions/blob/main/content/avs/Scenario%201.md)
 
-#### [Control Costs](control.md)
+#### [Scenario 2: Network Virtual Appliance in Azure Virtual Network to inspect all network traffic](https://github.com/jasonamedina/FTALiveSessions/blob/main/content/avs/Scenario%202.md)
+
+#### [Scenario 3: Egress from Azure VMware Solution with or without NSX-T or NVA](https://github.com/jasonamedina/FTALiveSessions/blob/main/content/avs/Scenario%203.md)
+
+#### [Scenario 4: Egress from Azure VMware Solution through 0.0.0.0/0 advertisement from on-premises](https://github.com/jasonamedina/FTALiveSessions/blob/main/content/avs/Scenario%204.md)
+
+#### [Scenario 5: A third-party NVA in the hub VNet inspects traffic between AVS and the internet and between AVS and Azure VNets](https://github.com/jasonamedina/FTALive-Sessions/blob/main/content/avs/Scenario%205.md)
 
 ### Audience
 
