@@ -32,3 +32,5 @@ These public addresses are used for the following types of connections:
 
 How To Enable From Azure Portal: Choose **"Connect using Public IP down to the NSX-T Edge"**
 ![image](https://user-images.githubusercontent.com/97964083/217096473-40af8f40-c9c5-48fa-99a1-bb0abad28456.png)
+
+#### [prev](https://github.com/jasonamedina/FTALive-Sessions/blob/main/content/avs/Scenario%205.md) | [home](./readme.md)
