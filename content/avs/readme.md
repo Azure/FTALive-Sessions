@@ -23,7 +23,7 @@ In this FTA Live session the FastTrack Azure VMware Solution team will cover the
 
 ### Audience
 
-This session is most useful for individuals responsible for cloud infrastructure within the organization. Cloud strategy and cloud governance teams will also find information from the agenda relevant to their roles. While this session does introduce technical concepts, no special knowledge is required other than a general familiarity with the Azure Portal.
+This session is most useful for individuals responsible for cloud infrastructure within the organization. This session will cover best practices for planning your Azure Network Infrastructure when deploying Azure VMWare Solution. 
 
 ### Goals
 
