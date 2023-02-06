@@ -9,7 +9,7 @@
 
 ## Overview
 
-This session is fundamental to understanding your Azure costs and how you can optimize them. Learn how to use the cost optimization pillar of the Azure Well-Architected Framework to design a cloud-based architecture that is efficient, eliminates waste and gives you full visibility into where your money is spent on cloud resources.
+In this FTA Live session the FastTrack Azure VMware Solution team will cover the 5 established architecture patterns that have been developed to support common customer scenarios. We will start with a review of the networks and firewalls and how ExpressRoute, ExpressRoute Global Reach, VPN and network peering are used to meet specific customer requirements. This session is designed to help technical sellers understand the 5 scenarios and how to match customers to the appropriate architecture, and for engineers, an opportunity to deep dive into the connectivity and routing patterns.
 
 ## Agenda
 
