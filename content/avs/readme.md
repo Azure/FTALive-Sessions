@@ -43,5 +43,6 @@ In this session you will learn about:
 * [Azure VMware Solution network design considerations](https://learn.microsoft.com/en-us/azure/azure-vmware/concepts-network-design-considerations)
 * [Azure VMware Solution networking and interconnectivity concepts](https://learn.microsoft.com/en-us/azure/azure-vmware/concepts-networking) 
 * [Network topology and connectivity for Azure VMware Solution](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/azure-vmware/eslz-network-topology-connectivity) 
+* [Azure VMware Solution - End to End Networking](https://www.youtube.com/watch?v=6_LYsYicacs) 
 
 
