@@ -29,15 +29,12 @@ Prerequisites: Basic understanding of Azure Networking and Azure VMWare Solution
 
 ### Goals
 
-In this session you will learn to:
+In this session you will learn about:
 
-- Forecast costs using the Azure Pricing Calculator
-- Monitor your costs & set budgets using Azure Cost Management
-- Optimize workload costs with Azure Advisor
-- Understand how the Azure Well-Architected Framework's design best practices can help save money
-- Locate unused and orphaned resources
-- Determine how to purchase and utilize reservations and cost savings plans
-- Use Azure Policy to prevent unanticipated resource costs
+- Key Azure networking components when deploying AVS
+- How to plan your Azure Network deployment for AVS
+- Traffic Inspection Requirements
+- Best practice Azure Network topologies for AVS
 
 ### Additional Learning Resources
 
