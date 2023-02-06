@@ -25,6 +25,8 @@ In this FTA Live session the FastTrack Azure VMware Solution team will cover the
 
 This session is most useful for individuals responsible for cloud infrastructure within the organization. This session will cover best practices for planning your Azure Network Infrastructure when deploying Azure VMWare Solution. 
 
+Prerequisites: Basic understanding of Azure Networking and Azure VMWare Solution
+
 ### Goals
 
 In this session you will learn to:
