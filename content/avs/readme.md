@@ -19,7 +19,7 @@ In this FTA Live session the FastTrack Azure VMware Solution team will cover the
 
 #### [Scenario 1: Secured Virtual WAN hub with default route propagation](https://github.com/jasonamedina/FTALive-Sessions/blob/main/content/avs/Scenario%201.md)
 
-#### [Scenario 2]:(https://github.com/jasonamedina/FTALiveSessions/blob/main/content/avs/Scenario%202.md)
+#### [Scenario 2:](https://github.com/jasonamedina/FTALiveSessions/blob/main/content/avs/Scenario%202.md)
 
 #### [Scenario 3: Egress from Azure VMware Solution with or without NSX-T or NVA](https://github.com/jasonamedina/FTALiveSessions/blob/main/content/avs/Scenario%203.md)
 
