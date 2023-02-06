@@ -40,8 +40,8 @@ In this session you will learn about:
 
 * [Example architectures for Azure VMWare Solutions](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/azure-vmware/example-architectures)
 * [Enterprise Scale for AVS-Networking](https://github.com/Azure/Enterprise-Scale-for-AVS/tree/main/BrownField/Networking)
-* [Azure Cost Management + Billing Power BI Template](https://aka.ms/costmgmt/ACMApp)
-* [Microsoft Azure Well-Architected Framework](https://aka.ms/architecture/framework) 
-* [Microsoft Azure Well-Architected Review](https://aka.ms/architecture/review) 
+* [Azure VMware Solution network design considerations](https://learn.microsoft.com/en-us/azure/azure-vmware/concepts-network-design-considerations)
+* [Azure VMware Solution networking and interconnectivity concepts](https://learn.microsoft.com/en-us/azure/azure-vmware/concepts-networking) 
+* [Network topology and connectivity for Azure VMware Solution](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/azure-vmware/eslz-network-topology-connectivity) 
 
 
