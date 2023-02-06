@@ -23,7 +23,7 @@ In this FTA Live session the FastTrack Azure VMware Solution team will cover the
 
 #### [Scenario 3: Egress from Azure VMware Solution with or without NSX-T or NVA](https://github.com/jasonamedina/FTALive-Sessions/blob/main/content/avs/Scenario%203.md)
 
-#### [Scenario 4: Egress from Azure VMware Solution through 0.0.0.0/0 advertisement from on-premises](https://github.com/jasonamedina/FTALiveSessions/blob/main/content/avs/Scenario%204.md)
+#### [Scenario 4: Egress from Azure VMware Solution through 0.0.0.0/0 advertisement from on-premises](https://github.com/jasonamedina/FTALive-Sessions/blob/main/content/avs/Scenario%204.md)
 
 #### [Scenario 5: A third-party NVA in the hub VNet inspects traffic between AVS and the internet and between AVS and Azure VNets](https://github.com/jasonamedina/FTALive-Sessions/blob/main/content/avs/Scenario%205.md)
 
