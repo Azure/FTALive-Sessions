@@ -15,7 +15,7 @@ In this FTA Live session the FastTrack Azure VMware Solution team will cover the
 
 #### [Azure Network Connectivity & Components for AVS](https://github.com/jasonamedina/FTALive-Sessions/blob/main/content/avs/Azure%20Network%20Connectivity%20Components%20for%20AVS.md)
 
-#### [What are your AVS traffic inspection requirements?](https://github.com/jasonamedina/FTALiveSessions/blob/main/content/avs/Traffic%20Inspection%20Requirements.md)
+#### [What are your AVS traffic inspection requirements?](https://github.com/jasonamedina/FTALive-Sessions/blob/main/content/avs/Traffic%20Inspection%20Requirements.md)
 
 #### [Scenario 1: Secured Virtual WAN hub with default route propagation](https://github.com/jasonamedina/FTALive-Sessions/blob/main/content/avs/Scenario%201.md)
 
