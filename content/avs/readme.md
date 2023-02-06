@@ -27,6 +27,8 @@ In this FTA Live session the FastTrack Azure VMware Solution team will cover the
 
 #### [Scenario 5: A third-party NVA in the hub VNet inspects traffic between AVS and the internet and between AVS and Azure VNets](https://github.com/jasonamedina/FTALive-Sessions/blob/main/content/avs/Scenario%205.md)
 
+#### [Internet Connectivity Change](https://github.com/jasonamedina/FTALive-Sessions/blob/main/content/avs/Internet%20Connectivity%20Change.md)
+
 ### Audience
 
 This session is most useful for individuals responsible for cloud infrastructure within the organization. This session will cover best practices for planning your Azure Network Infrastructure when deploying Azure VMWare Solution. 
