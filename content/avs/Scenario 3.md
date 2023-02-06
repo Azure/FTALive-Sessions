@@ -6,4 +6,4 @@
 ![image](https://user-images.githubusercontent.com/97964083/216826172-a34594ec-5db3-43a2-874b-6d344845ab99.png)
 
 
-#### [prev](./understand-forecast.md) | [home](./readme.md)  | [next](./control.md)
+#### [prev](https://github.com/jasonamedina/FTALive-Sessions/blob/main/content/avs/Scenario%202.md) | [home](./readme.md)  | [next](https://github.com/jasonamedina/FTALive-Sessions/blob/main/content/avs/Scenario%204.md)
