@@ -17,9 +17,9 @@ In this FTA Live session the FastTrack Azure VMware Solution team will cover the
 
 #### [What are your AVS traffic inspection requirements?](https://github.com/jasonamedina/FTALiveSessions/blob/main/content/avs/Traffic%20Inspection%20Requirements.md)
 
-#### [Scenario 1: Secured Virtual WAN hub with default route propagation](./Scenario 1.md)
+#### [Scenario 1: Secured Virtual WAN hub with default route propagation](https://github.com/jasonamedina/FTALive-Sessions/blob/main/content/avs/Scenario%201.md)
 
-#### [Scenario 2: Network Virtual Appliance in Azure Virtual Network to inspect all network traffic](https://github.com/jasonamedina/FTALiveSessions/blob/main/content/avs/Scenario%202.md)
+#### [Scenario 2:(https://github.com/jasonamedina/FTALiveSessions/blob/main/content/avs/Scenario%202.md)
 
 #### [Scenario 3: Egress from Azure VMware Solution with or without NSX-T or NVA](https://github.com/jasonamedina/FTALiveSessions/blob/main/content/avs/Scenario%203.md)
 
