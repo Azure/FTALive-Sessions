@@ -1,6 +1,6 @@
 # Azure Network Connectivity & Components for AVS
 
-#### [prev](./understand-forecast.md) | [home](./readme.md)  | [next](./control.md)
+#### [home](./readme.md)
 
 ### Basic AVS Network Connectivity 
 
@@ -9,7 +9,8 @@ An AVS Managed ExpressRoute is provisioned for you at the time of AVS deployment
 
 What is Global Reach?
 Global Reach is used to connect private clouds to on-premises environments. It connects circuits directly at the Microsoft Enterprise Edge (MSEE) level. The connection requires a virtual network (vNet) with an ExpressRoute circuit to on-premises in your subscription. 
-See: [Peer on-premises environments to Azure VMware Solution - Azure VMware Solution | Microsoft Learn]([https://learn.microsoft.com/en-us/azure/architecture/guide/spot/spot-eviction](https://learn.microsoft.com/en-us/azure/azure-vmware/tutorial-expressroute-global-reach-private-cloud)) for additional information.
+
+See: [Peer on-premises environments to Azure VMware Solution - Azure VMware Solution | Microsoft Learn](https://learn.microsoft.com/en-us/azure/azure-vmware/tutorial-expressroute-global-reach-private-cloud) for additional information.
 
 What is an ExpressRoute Gateway?
 You must first create a virtual network gateway before connecting AVS. A virtual network gateway serves two purposes: it exchanges IP routes between the networks and routes network traffic.
@@ -24,14 +25,17 @@ See: [Configure a site-to-site VPN in vWAN for Azure VMware Solution - Azure VMw
 
 What is vWAN?
 Azure Virtual WAN is a networking service that brings many networking, security, and routing functionalities together to provide a single operational interface. The Virtual WAN architecture is a hub and spoke architecture with scale and performance built in for branches (VPN/SD-WAN devices), users (Azure VPN/OpenVPN/IKEv2 clients), ExpressRoute circuits, and virtual networks.
+
 See: [Virtual WAN documentation | Microsoft Learn](https://learn.microsoft.com/en-us/azure/virtual-wan/)
 
 What is Azure Firewall?
 Azure Firewall is a cloud-native and intelligent network firewall security service that provides the best of breed threat protection for your cloud workloads running in Azure. It's a fully stateful, firewall as a service with built-in high availability and unrestricted cloud scalability. It provides both east-west and north-south traffic inspection.
+
 See: [What is Azure Firewall? | Microsoft Learn](https://learn.microsoft.com/en-us/azure/firewall/overview)
 
 What are Azure Route Servers?
 Azure Route Server simplifies dynamic routing between your network virtual appliance (NVA) and your virtual network. It allows you to exchange routing information directly through Border Gateway Protocol (BGP) routing protocol between any NVA that supports the BGP routing protocol and the Azure Software Defined Network (SDN) in the Azure Virtual Network (VNet) without the need to manually configure or maintain route tables. Azure Route Server is a fully managed service and is configured with high availability.
+
 See: [Quickstart: Create and configure Route Server using the Azure portal | Microsoft Learn](https://learn.microsoft.com/en-us/azure/route-server/quickstart-configure-route-server-portal)
 
 What are 3rd party Firewalls and layer 3 NVA's and why would you use them?
