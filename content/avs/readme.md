@@ -55,5 +55,6 @@ In this session you will learn about:
 * [Enable Public IP to the NSX-T Data Center Edge for Azure VMware Solution](https://learn.microsoft.com/en-us/azure/azure-vmware/enable-public-ip-nsx-edge) 
 * [Enable Managed SNAT for Azure VMware Solution workloads](https://learn.microsoft.com/en-us/azure/azure-vmware/enable-managed-snat-for-workloads)
 * [Internet connectivity design considerations](https://learn.microsoft.com/en-us/azure/azure-vmware/concepts-design-public-internet-access)
+* [Step-By-Step-Guides](https://github.com/Azure/Enterprise-Scale-for-AVS/tree/main/BrownField/Networking/Step-By-Step-Guides)
 
 [next](https://github.com/jasonamedina/FTALive-Sessions/blob/main/content/avs/Azure%20Network%20Connectivity%20Components%20for%20AVS.md)
