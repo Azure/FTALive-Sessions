@@ -5,17 +5,17 @@
 **What is AVS Managed ExpressRoute?**  
 An AVS Managed ExpressRoute is provisioned for you at the time of AVS deployment. When AVS is deployed, it’s isolated and because you will likely need connectivity to other resources, and ExpressRoute is deployed for you. You can then connect other vNETs or via an ExpressRoute back to on-prem.
 
-See: [What is Azure ExpressRoute?](https://learn.microsoft.com/en-us/azure/expressroute/expressroute-introduction) for additional information.
+See: [What is Azure ExpressRoute?](https://learn.microsoft.com/en-us/azure/expressroute/expressroute-introduction)
 
 **What is Global Reach?**  
 Global Reach is used to connect private clouds to on-premises environments. It connects circuits directly at the Microsoft Enterprise Edge (MSEE) level. The connection requires a virtual network (vNet) with an ExpressRoute circuit to on-premises in your subscription. 
 
-See: [Peer on-premises environments to Azure VMware Solution - Azure VMware Solution | Microsoft Learn](https://learn.microsoft.com/en-us/azure/azure-vmware/tutorial-expressroute-global-reach-private-cloud) for additional information.
+See: [Peer on-premises environments to Azure VMware Solution - Azure VMware Solution | Microsoft Learn](https://learn.microsoft.com/en-us/azure/azure-vmware/tutorial-expressroute-global-reach-private-cloud)
 
 **What is an ExpressRoute Gateway?**  
 You must first create a virtual network gateway before connecting AVS. A virtual network gateway serves two purposes: it exchanges IP routes between the networks and routes network traffic.  
 
-See: [About ExpressRoute virtual network gateways - Azure | Microsoft Learn](https://learn.microsoft.com/en-us/azure/expressroute/expressroute-about-virtual-network-gateways) for additional information.
+See: [About ExpressRoute virtual network gateways - Azure | Microsoft Learn](https://learn.microsoft.com/en-us/azure/expressroute/expressroute-about-virtual-network-gateways)
 
 **What is a VPN Gateway?**  
 While ExpressRoute is the preferred way to connect an on premise network to AVS, a VPN Gateway can be used.
