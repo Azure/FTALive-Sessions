@@ -56,4 +56,4 @@ In this session you will learn about:
 * [Enable Managed SNAT for Azure VMware Solution workloads](https://learn.microsoft.com/en-us/azure/azure-vmware/enable-managed-snat-for-workloads)
 * [Internet connectivity design considerations](https://learn.microsoft.com/en-us/azure/azure-vmware/concepts-design-public-internet-access)
 
-
+[next](https://github.com/jasonamedina/FTALive-Sessions/blob/main/content/avs/Azure%20Network%20Connectivity%20Components%20for%20AVS.md)
