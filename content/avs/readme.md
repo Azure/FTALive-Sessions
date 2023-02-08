@@ -21,7 +21,7 @@ In this FTA Live session the FastTrack Azure VMware Solution team will cover the
 
 #### [Scenario 2:Network Virtual Appliance in Azure Virtual Network to inspect all network traffic](https://github.com/jasonamedina/FTALive-Sessions/blob/main/content/avs/Scenario%202.md)
 
-#### [Scenario 3: Egress from Azure VMware Solution with or without NSX-T or NVA](https://github.com/jasonamedina/FTALive-Sessions/blob/main/content/avs/Scenario%203.md)
+#### [Scenario 3: Egress natively from Azure VMware Solution using NSX-T or NVA](https://github.com/jasonamedina/FTALive-Sessions/blob/main/content/avs/Scenario%203.md)
 
 #### [Scenario 4: Egress from Azure VMware Solution through 0.0.0.0/0 advertisement from on-premises](https://github.com/jasonamedina/FTALive-Sessions/blob/main/content/avs/Scenario%204.md)
 
