@@ -54,4 +54,4 @@ See: [Create, change, or delete an Azure route table | Microsoft Learn](https://
 **What is an Application Gateway?**  
 An Azure Application Gateway is a web traffic load balancer that enables you to manage traffic to your web applications. They can operate at both layer 4 and layer 7.  
 
- [home](./readme.md) | [next](https://github.com/jasonamedina/FTALive-Sessions/blob/main/content/avs/Scenario%201.md)
+ [home](./readme.md) | [next](https://github.com/jasonamedina/FTALive-Sessions/blob/main/content/avs/Traffic%20Inspection%20Requirements.md)
