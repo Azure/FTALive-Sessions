@@ -1,4 +1,4 @@
-## Synapse SQL serverless pool 
+## Synapse Serverless SQL pool 
 
 [Back <](Concurrency_%20Basics.md) -[Home](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/Agenda.md)\- [> Next](Spark_delta_overviewmd.md)
 
