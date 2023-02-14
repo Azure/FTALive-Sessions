@@ -3,6 +3,14 @@
 
 [<Back](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Network.md)\- [Next >](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Dedicated%20SQL%20Pool.md)
 
+
+#### Workspace Encryption
+
+Workspaces can be configured to enable double encryption with a customer-managed key at the time of workspace creation. Enable double encryption using a customer-managed key on the "Security" tab when **creating** your new workspace. You can choose to enter a key identifier URI or select from a list of key vaults in the same region as the workspace. The Key Vault itself needs to have purge protection enabled.
+
+<img width="528" alt="image" src="https://user-images.githubusercontent.com/62876278/218741629-b6bba426-a124-4656-8205-57125cb1f2d7.png">
+
+
 #### Workspace permissions
 
 Azure Synapse Workspace is integrated with Azure role-based access control (Azure RBAC) to manage its resources. Azure RBAC allows you to manage Azure resource access through role assignments. You can assign these roles to users, groups service principals, and **managed identities**. Use built-in roles to allocate permissions and only create custom roles when required.
@@ -170,4 +178,6 @@ All Synapse RBAC permissions/actions shown in the table are prefixed `Microsoft/
 [Access control in Synapse workspace how to - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/security/how-to-set-up-access-control)
 
 [How to manage groups - Azure Active Directory - Microsoft Entra | Microsoft Learn](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/how-to-manage-groups)
+
+[Workspace Encryption | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/security/workspaces-encryption)
 
