@@ -1,9 +1,15 @@
-## Workspace and Least Privilege user
+## Workspace 
 
-
-### Least Privilege user
 
 [<Back](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Network.md)\- [Next >](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Dedicated%20SQL%20Pool.md)
+
+
+#### Workspace Encryption
+
+Workspaces can be configured to enable double encryption with a customer-managed key at the time of workspace creation. Enable double encryption using a customer-managed key on the "Security" tab when **creating** your new workspace. You can choose to enter a key identifier URI or select from a list of key vaults in the same region as the workspace. The Key Vault itself needs to have purge protection enabled.
+
+<img width="528" alt="image" src="https://user-images.githubusercontent.com/62876278/218741629-b6bba426-a124-4656-8205-57125cb1f2d7.png">
+
 
 #### Workspace permissions
 
@@ -14,15 +20,6 @@ Azure Synapse Workspace is integrated with Azure role-based access control (Azur
 
 Azure Synapse Analytics requires users in Azure Owner or Azure Contributor roles at the resource-group to control management of its dedicated SQL pools, Spark pools, and Integration runtimes. In addition to this, users and the workspace system-identity must be granted Storage Blob Data Contributor access to the ADLS Gen2 storage container associated with the Synapse workspace.
 
-#### Manage application identities securely and automatically
-
-Azure Synapse Workspace supports managed identities for its Azure resources. Use managed identities with Azure Synapse Workspace instead of creating service principals to access other resources. Azure Synapse Workspace can natively authenticate to the Azure services/resources that supports Azure AD authentication through a pre-defined access grant rule without using credentials hard coded in source code or configuration files.
-
-### What are Managed identities?
-
-·    **System-assigned**. Some Azure services allow you to enable a managed identity directly on a service instance. When you enable a system-assigned managed identity, an identity is created in Azure AD. The identity is tied to the lifecycle of that service instance.
-
-·    **User-assigned**. You may also create a managed identity as a standalone Azure resource. You can [create a user-assigned managed identity](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/how-to-manage-ua-identity-portal) and assign it to one or more instances of an Azure service. For user-assigned managed identities, the identity is managed separately from the resources that use it.
 
 ### Security RBAC
 
@@ -182,62 +179,5 @@ All Synapse RBAC permissions/actions shown in the table are prefixed `Microsoft/
 
 [How to manage groups - Azure Active Directory - Microsoft Entra | Microsoft Learn](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/how-to-manage-groups)
 
-|      |      |      |
-| :--- | :--- | :--- |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
+[Workspace Encryption | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/security/workspaces-encryption)
+
