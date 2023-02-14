@@ -4,6 +4,7 @@
 
 #### Security overview
 
+This session is an overview of some security recommendations for Blob storage. Implementing these recommendations will help you fulfill your security obligations , you can find more information on Microsoft Docs on the references at the end of this file.
 
 
 | Recommendation                                             | Comments                                                     | Defender for Cloud                                           |
@@ -11,10 +12,7 @@
 | Use the Azure Resource Manager deployment model            | Create new storage accounts using the Azure Resource Manager deployment model for important security enhancements, including superior Azure role-based access control (Azure RBAC) and auditing, Resource Manager-based deployment and governance, access to managed identities, access to Azure Key Vault for secrets, and Azure AD-based authentication and authorization for access to Azure Storage data and resources. If possible, migrate existing storage accounts that use the classic deployment model to use Azure Resource Manager. For more information about Azure Resource Manager, see [Azure Resource Manager overview](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview). | -                                                            |
 | Enable Microsoft Defender for all of your storage accounts | Microsoft Defender for Storage provides an additional layer of security intelligence that detects unusual and potentially harmful attempts to access or exploit storage accounts. Security alerts are triggered in Microsoft Defender for Cloud when anomalies in activity occur and are also sent via email to subscription administrators, with details of suspicious activity and recommendations on how to investigate and remediate threats. For more information, see [Configure Microsoft Defender for Storage](https://learn.microsoft.com/en-us/azure/storage/common/azure-defender-storage-configure). | [Yes](https://learn.microsoft.com/en-us/azure/defender-for-cloud/implement-security-recommendations) |
 | Turn on soft delete for blobs                              | Soft delete for blobs enables you to recover blob data after it has been deleted. For more information on soft delete for blobs, see [Soft delete for Azure Storage blobs](https://learn.microsoft.com/en-us/azure/storage/blobs/soft-delete-blob-overview). | -                                                            |
-| Turn on soft delete for containers                         | Soft delete for containers enables you to recover a container after it has been deleted. For more information on soft delete for containers, see [Soft delete for containers](https://learn.microsoft.com/en-us/azure/storage/blobs/soft-delete-container-overview). |                                                              |
-
-| Recommendation                                               | Comments                                                     | Defender for Cloud                                           |
-| :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
+| Turn on soft delete for containers                         | Soft delete for containers enables you to recover a container after it has been deleted. For more information on soft delete for containers, see [Soft delete for containers](https://learn.microsoft.com/en-us/azure/storage/blobs/soft-delete-container-overview). |      
 | Configure the minimum required version of Transport Layer Security (TLS) for a storage account. | Require that clients use a more secure version of TLS to make requests against an Azure Storage account by configuring the minimum version of TLS for that account. For more information, see [Configure minimum required version of Transport Layer Security (TLS) for a storage account](https://learn.microsoft.com/en-us/azure/storage/common/transport-layer-security-configure-minimum-version?toc=/azure/storage/blobs/toc.json) | -                                                            |
 | Enable the **Secure transfer required** option on all of your storage accounts | When you enable the **Secure transfer required** option, all requests made against the storage account must take place over secure connections. Any requests made over HTTP will fail. For more information, see [Require secure transfer in Azure Storage](https://learn.microsoft.com/en-us/azure/storage/common/storage-require-secure-transfer?toc=/azure/storage/blobs/toc.json). | [Yes](https://learn.microsoft.com/en-us/azure/defender-for-cloud/implement-security-recommendations) |
 | Enable firewall rules                                        | Configure firewall rules to limit access to your storage account to requests that originate from specified IP addresses or ranges, or from a list of subnets in an Azure Virtual Network (VNet). For more information about configuring firewall rules, see [Configure Azure Storage firewalls and virtual networks](https://learn.microsoft.com/en-us/azure/storage/common/storage-network-security?toc=/azure/storage/blobs/toc.json). | -                                                            |
@@ -28,7 +26,7 @@
 
 
 
-##### **Considerations to the design of the Storage Account:**
+#### **Considerations to the design of the Storage Account**
 
 1. What am I storing in my data lake?
 2. How much data am I storing in the data lake?
@@ -75,15 +73,14 @@ When deciding the number of storage accounts you want to create, the following c
 in Summary consider the following key aspects, as an example:
 
 **Key aspect:**
+- Isolate security Storage configuration and permission. 
+- Data isolate per Domain requiring data governance per team
+- Permissions for only people that require access to that domains on Storage Account Level
+- Storage account in different subscriptions per domain
+- Different network settings per Storage account if there are different requirements.( data lake external and internal for example)
+- If the data has a requirement to be isolated per region and data can't leave that region
 
-- ​					 Isolate security Storage configuration and permission. 
-- ​					  Data isolate per Domain requiring data governance per team
--   					Permissions for only people that require access to that domains on Storage Account Level/
--  					 Storage account in different subscriptions per domain
--  					 Different network settings per Storage account if there are different requirements.( data lake external and internal for example)
-- ​    				  If the data has a requirement to be isolated per region and data can't leave that region.
-
-#### Design:
+#### Design
 
 | Cloud-scale analytics | Delta Lake | Other terms             | Description                                                  |
 | :-------------------- | :--------- | :---------------------- | :----------------------------------------------------------- |
@@ -91,10 +88,10 @@ in Summary consider the following key aspects, as an example:
 | Enriched              | Silver     | Standardization Zone    | Refined Tables. Stored full entity, consumption-ready recordsets from systems of record. |
 | Curated               | Gold       | Product Zone            | Feature or aggregated tables. Primary zone for applications, teams, and users to consume data products. |
 | Development           | --         | Development Zone        | Location for data engineers and scientists, comprising both an analytics sandbox and a product development zone. |
+  
 
 
-
-##### Raw layer or data lake one
+#### Raw layer or data lake one
 
 Think of the raw layer as a reservoir that stores data in its natural and original state. It's unfiltered and unpurified. You might choose to store the data in its original format, such as JSON or CSV, but you might also encounter scenarios where it's more cost effective to store the file contents as a column in a compressed file format like Avro, Parquet, or Databricks Delta Lake.
 
@@ -120,7 +117,7 @@ We define full loads and delta loads as:
     - The source system maintains a timestamp field that identifies if data has been added/updated or deleted
     - The source system creates and updates files on data changes.
 
-##### Enriched layer or data lake two
+#### Enriched layer or data lake two
 
 Think of the enriched layer as a filtration layer. It removes impurities and can also involve enrichment.
 
@@ -134,7 +131,7 @@ The following diagram shows the flow of data lakes and containers from source da
 
 
 
-##### Curated layer or data lake two
+#### Curated layer or data lake two
 
 Your curated layer is your consumption layer. It's optimized for analytics, rather than data ingestion or processing. The curated layer might store data in de-normalized data marts or star schemas.
 
@@ -146,7 +143,7 @@ If you do dimensional modeling outside of your lake, you might want to publish m
 
 
 
-##### Development layer or data lake three
+#### Development layer or data lake three
 
 Your data consumers can bring other useful data products along with the data ingested into your standardized container.
 
