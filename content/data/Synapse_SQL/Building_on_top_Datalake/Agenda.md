@@ -14,7 +14,7 @@ Working for Microsoft for around of 10 years with focus on Analytics those engin
 
 **Agenda**
 
-**Security** ( Liliam)
+**Security** ( Liliam) --10 min
 
 - - Workspace, Storage RBAC
 
@@ -23,37 +23,38 @@ Working for Microsoft for around of 10 years with focus on Analytics those engin
     - SAS key
     - AAD and SQL user
 
-**Connectivity** ( Matteo)
+**Connectivity** ( Matteo) -- 20 min
 
 - - PE: managed, non      managed and Dep ( how it affects data lake)
   - User Cases
 
  
-
-**Storage** ( Liliam)
+**Storage** ( Liliam) --10 min
 
 - - How to organize folder:      Raw, Silver and Gold
 
 e[adlsguidancedoc/Hitchhikers_Guide_to_the_Datalake.md at master · rukmani-msft/adlsguidancedoc (github.com)](https://github.com/rukmani-msft/adlsguidancedoc/blob/master/Hitchhikers_Guide_to_the_Datalake.md)
 
  
+**Serveless SQL Pool** ( Luca/Liliam) --20 min
 
-**Spark** ( Luca)
+- Openrowset, Views, external Tables   and partition
+-  CETAS
+- SCD type 2 ( in evaluation)
+
+
+**Spark** ( Luca) --20 min
 
 - Delta Table \Partition
 
-- - How the partition will affect      Spark/ Serverless
+- - How the partition will affect  Spark/ Serverless
 
-- Reading and transforming     the data
+- Reading and transforming the data
 
 - Time travel
 
  
 
-**Serveless SQL Pool** ( Luca/Liliam)
-
-- Views, external Tables     and partition
-- SCD type 2 ( in evaluation)
 
 
 
