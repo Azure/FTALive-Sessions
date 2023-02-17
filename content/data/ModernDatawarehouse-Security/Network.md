@@ -142,3 +142,5 @@ When using the Azure Integration Runtime with DEP enabled, Linked Service connec
         
 
 [Connect to a Synapse Studio using private links - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/security/synapse-private-link-hubs)
+
+[Connect to a secure network design]( https://techcommunity.microsoft.com/t5/azure-data-blog/azure-data-components-network-architecture-with-secure/ba-p/3141331)
