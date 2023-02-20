@@ -116,6 +116,15 @@ It's important to provide some information on the underlying concepts.
 
 <img src='./images/openai_models.png' width=900 />
 
+<!Note>
+Information from OpenAI on models can be found [here](https://platform.openai.com/docs/model-index-for-researchers)
+Models referred to as "GPT 3.5"
+GPT-3.5 series is a series of models that was trained on a blend of text and code from before Q4 2021. The following models are in the GPT-3.5 series:
+
+1. code-davinci-002 is a base model, so good for pure code-completion tasks
+2. text-davinci-002 is an InstructGPT model based on code-davinci-002
+3. text-davinci-003 is an improvement on text-davinci-002
+
 ### **Prompts & Completions**
 The completions endpoint is the core component of the API service. This API provides access to the model's text-in, text-out interface. Users simply need to provide an input prompt containing the English text command, and the model will generate a text completion.
 
@@ -140,7 +149,9 @@ Azure OpenAI models use natural language instructions and examples provided in t
 
 There are three main approaches for in-context learning: Few-shot, one-shot and zero-shot. These approaches vary based on the amount of task-specific data that is given to the model:
 
-### Demo of in-context learning [Studio or notebook]
+[Demo of Summarisation from Azure/openai-samples](Solution_Notebooks/Summarization/SummarizationOverview.ipynb)
+
+
 
 
 
@@ -167,7 +178,46 @@ OpenAI GPT models are based on [InstructGPT](https://openai.com/blog/instruction
 "John Smith is married to Lucy Smith.  They have five kids, and he works as a software engineer at Microsoft.  How should I fact-check this? <|endofprompt|>"
 ```
 
-## TODO ADD CONTENT
+### Guidelines
+There are three basic guidelines to creating prompts:
+
+**Show and tell**. Make it clear what you want either through instructions, examples, or a combination of the two. If you want the model to rank a list of items in alphabetical order or to classify a paragraph by sentiment, show it that's what you want.
+
+**Provide quality data**. If you're trying to build a classifier or get the model to follow a pattern, make sure that there are enough examples. Be sure to proofread your examples — the model is usually smart enough to see through basic spelling mistakes and give you a response, but it also might assume this is intentional and it can affect the response.
+
+**Check your settings.** The temperature and top_p settings control how deterministic the model is in generating a response. If you're asking it for a response where there's only one right answer, then you'd want to set these lower. If you're looking for more diverse responses, then you might want to set them higher. The number one mistake people use with these settings is assuming that they're "cleverness" or "creativity" controls.
+
+
+## Fine-tuning
+Fine-tuning lets you get more out of the models available through the API by providing:
+
+* Higher quality results than prompt design
+* Ability to train on more examples than can fit in a prompt
+* Token savings due to shorter prompts
+* Lower latency requests
+
+Fine-tuning improves on few-shot learning by training on many more examples than can fit in the prompt, letting you achieve better results on a wide number of tasks. Once a model has been fine-tuned, you won't need to provide examples in the prompt anymore. This saves costs and enables lower-latency requests.
+
+At a high level, fine-tuning involves the following steps:
+
+1. Prepare and upload training data
+2. Train a new fine-tuned model
+3. Use your fine-tuned model
+
+Fine-tuning is currently only available for the following base models: davinci, curie, babbage, and ada. These are the original models that do not have any instruction following training (like text-davinci-003 does for example). You are also able to continue fine-tuning a fine-tuned model to add additional data without having to start from scratch.
+
+Designing your prompts and completions for fine-tuning is different from designing your prompts for use with our base models (Davinci, Curie, Babbage, Ada). In particular, while prompts for base models often consist of multiple examples ("few-shot learning"), for fine-tuning, each training example generally consists of a single input example and its associated output, without the need to give detailed instructions or include multiple examples in the same prompt.
+
+The more training examples you have, the better. **OpenAI recommends having at least a couple hundred examples.** In general, we've found that each doubling of the dataset size leads to a linear increase in model quality.
+
+### Preparing your dataset
+
+To fine-tune a model, you'll need a set of training examples that each consist of a single input ("prompt") and its associated output ("completion"). This is notably different from using our base models, where you might input detailed instructions or multiple examples in a single prompt.
+
+* Each prompt should end with a fixed separator to inform the model when the prompt ends and the completion begins. A simple separator which generally works well is \n\n###\n\n. The separator should not appear elsewhere in any prompt.
+* Each completion should start with a whitespace due to the OpenAI tokenization, which tokenizes most words with a preceding whitespace.
+* Each completion should end with a fixed stop sequence to inform the model when the completion ends. A stop sequence could be \n, ###, or any other token that does not appear in any completion.
+* For inference, you should format your prompts in the same way as you did when creating the training dataset, including the same separator. Also specify the same stop sequence to properly truncate the completion.
 
 ## Data Processing
 
@@ -260,3 +310,13 @@ To empower its enterprise customers and to strike a balance between regulatory /
 2. content filtering
 
 These Limited Access features will enable potential customers to opt out of the human review and data logging processes subject to eligibility criteria governed by Microsoft’s Limited Access framework. Customers who meet Microsoft’s Limited Access eligibility criteria and have a low-risk use case can apply for the ability to opt-out of both data logging and human review process. This allows trusted customers with low-risk scenarios the data and privacy controls they require while also allowing us to offer AOAI models to all other customers in a way that minimizes the risk of harm and abuse.
+
+## <a name="4-references"></a>4. References
+
+
+|Topics          |Links                                               |Notes    |
+|----------------|----------------------------------------------------|---------|
+|Language Models are Few-Shot Learners     |[[2005.14165] Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165)|Research paper for davinci, curie, babbage models|
+|Evaluating Large Language Models Trained on Code  |[[2107.03374] Evaluating Large Language Models Trained on Code](https://arxiv.org/abs/2107.03374)|Research paper for code-cushman-001 model|
+|Training language models to follow instructions with human feedback   |[[2203.02155] Training language models to follow instructions with human feedback](https://arxiv.org/abs/2203.02155)| Research paper for InstructGPT-3 model  |
+|Fine-tuning | [OpenAI Fine-tuning](https://platform.openai.com/docs/guides/fine-tuning) | OpenAI documentation on fine-tuning models |
