@@ -21,7 +21,7 @@ In this section, we provide an overview of MLOps, the different components withi
 
 Consider the machine learning lifecycle:
 
-<img src='./en/images/end-to-end-lifecycle.JPG' width=1000 />
+<img src='images/end-to-end-lifecycle.JPG' width=1000 />
 
 <br/>
 
@@ -29,7 +29,7 @@ Consider the machine learning lifecycle:
 
 MLOPs is the combination of people, processes, and platforms that enables the development and deployment of machine learning models in a production environment. It is a combination of DevOps and Data Science
 
-<img src='./en/images/mlops-ppp.JPG' width=1000 />
+<img src='images/mlops-ppp.JPG' width=1000 />
 
 Devops follows certain processes that include code, build, test, release, deploy, operate, monitor and plan. 
 
@@ -41,7 +41,7 @@ However, MLOPs differs from DevOps in several key areas. MLOPs has these charact
 * A greater operational effort is required than in DevOps.
 * Work teams require specialists and domain experts.
 
-<img src='./en/images/mlops-stages.png' width=1000 />
+<img src='images/mlops-stages.png' width=1000 />
 
 <br></br>
 ### Continuous Development vs Continuous Deployment
@@ -68,7 +68,7 @@ There are many branching strategies, but the most common are:
     - This is the most common branching strategy
     - Short-lived branches with a few small commits compared to other long-lived feature branching strategies
 
-<img src='./en/images/trunk-based-development-branching-strategy.png' width=500 />
+<img src='images/trunk-based-development-branching-strategy.png' width=500 />
 
 * Feature Branching
     - Developers create a branch for each feature they are working on
@@ -81,14 +81,14 @@ There are many branching strategies, but the most common are:
     - Has more, longer-lived branches and larger commits than trunk-based
     - Developers create a feature branch and delay merging it to the main trunk branch until the feature is complete
 
-<img src='./en/images/gitflow-branching-strategy.png' width=500 />
+<img src='images/gitflow-branching-strategy.png' width=500 />
 
 * GitHub Flow
     - Simpler branching strategy
     - Doesn’t have release branches
     - Keeping master code in a constant deployable state
 
-<img src='./en/images/github-flow-branching-model.jpeg' width=500>
+<img src='images/github-flow-branching-model.jpeg' width=500>
 
 
 <br></br>
@@ -188,7 +188,7 @@ https://learn.microsoft.com/en-us/azure/architecture/example-scenario/mlops/mlop
 </tbody>
 </table>
 <tr>
-<img src='./en/images/level-1-no-mlops.JPG' width=1000 />
+<img src='images/level-1-no-mlops.JPG' width=1000 />
 </tr>
 <h2 id="level-1-devops-no-mlops">Level 1: DevOps no MLOps</h2>
 <table>
@@ -229,7 +229,7 @@ https://learn.microsoft.com/en-us/azure/architecture/example-scenario/mlops/mlop
 </tbody>
 </table>
 <tr>
-<img src='./en/images/level-2-reproducible-model-training.JPG' width=1000 />
+<img src='images/level-2-reproducible-model-training.JPG' width=1000 />
 </tr>
 <h2 id="level-3-automated-model-deployment">Level 3: Automated Model Deployment</h2>
 <table>
@@ -251,7 +251,7 @@ https://learn.microsoft.com/en-us/azure/architecture/example-scenario/mlops/mlop
 </tbody>
 </table>
 <tr>
-<img src='./en/images/level-3-managed-model-operations.JPG' width=1000 />
+<img src='images/level-3-managed-model-operations.JPG' width=1000 />
 </tr>
 <h2 id="level-4-full-mlops-automated-retraining">Level 4: Full MLOps Automated Retraining</h2>
 <table>
@@ -272,7 +272,7 @@ https://learn.microsoft.com/en-us/azure/architecture/example-scenario/mlops/mlop
 </tr>
 </tbody>
 </table>
-<img src='./en/images/level-4-full-automated-retraining.JPG' width=1000 />
+<img src='images/level-4-full-automated-retraining.JPG' width=1000 />
 
 <h4 id="workflow-for-the-classical-machine-learning-architecture">Workflow for the classical machine learning architecture</h4>
 <ol>
@@ -319,7 +319,7 @@ https://learn.microsoft.com/en-us/azure/architecture/example-scenario/mlops/mlop
 <p>Based on criteria for infrastructure matters of concern such as endpoint response lag or insufficient compute for the deployment, automated triggers and notifications can implement appropriate actions to take. They trigger a loopback to the setup and administration phase where the infrastructure team can investigate and potentially reconfigure the compute and network resources.</p>
 </li>
 </ol>
-<img src="./en/images/classical-ml-architecture.png" alt="Diagram for the classical machine learning architecture." width=1000  />
+<img src="images/classical-ml-architecture.png" alt="Diagram for the classical machine learning architecture." width=1000  />
 </a>
 </p>
 <br/>
