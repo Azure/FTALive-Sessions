@@ -360,3 +360,5 @@ MigrationBackup/
 
 # environment files
 .env
+
+content/ai/azure-openai/en/src/call-center/python-client
