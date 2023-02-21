@@ -171,6 +171,8 @@ All Synapse RBAC permissions/actions shown in the table are prefixed `Microsoft/
 
 #### Reference
 
+[Securing your Synapse environment](https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/securing-your-synapse-environment/ba-p/3725524)
+
 [Understand the roles required to perform common tasks in Azure Synapse - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/security/synapse-workspace-understand-what-role-you-need)
 
 [How to review Azure Synapse RBAC role assignments in Synapse Studio - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/security/how-to-review-synapse-rbac-role-assignments)
