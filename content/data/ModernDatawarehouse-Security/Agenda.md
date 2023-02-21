@@ -67,6 +67,8 @@ IT Pros or architects that want to understand the options to enforce the securit
 
 **References:**
 
+[Securing your Synapse environment](https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/securing-your-synapse-environment/ba-p/3725524)
+
 [Row-level security in serverless Synapse SQL pools (microsoft.com)](https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/how-to-implement-row-level-security-in-serverless-sql-pools/ba-p/2354759#:~:text=Row-level)
 
 [Serverless SQL pool - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/on-demand-workspace-overview)
