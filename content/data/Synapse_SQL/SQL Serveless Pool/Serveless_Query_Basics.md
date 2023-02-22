@@ -236,7 +236,26 @@ SELECT * FROM DBO.population
 
 
 ```
+#### Talking about parquet:
 
+*Terminology*:
+Row group: A logical horizontal partitioning of the data into rows. There is no physical structure that is guaranteed for a row group. A row group consists of a column chunk for each column in the dataset.
+
+Column chunk: A chunk of the data for a particular column. These live in a particular row group and is guaranteed to be contiguous in the file.
+
+Page: Column chunks are divided up into pages. A page is conceptually an indivisible unit (in terms of compression and encoding). There can be multiple page types which is interleaved in a column chunk.
+
+Hierarchically, a file consists of one or more row groups. A row group contains exactly one column chunk per column. Column chunks contain one or more pages
+
+The file metadata contains the locations of all the column metadata start locations. More details on what is contained in the metadata can be found in the thrift files.
+
+Metadata is written after the data to allow for single pass writing.
+
+Readers are expected to first read the file metadata to find all the column chunks they are interested in. The columns chunks should then be read sequentially.
+
+The format is explicitly designed to separate the metadata from the data. This allows splitting columns into multiple files, as well as having a single metadata file reference multiple parquet files.
+
+![image](https://user-images.githubusercontent.com/62876278/220607364-c00465de-d4e4-4e44-a204-186852d9d647.png)
 
 
 ##### Reference:
@@ -246,3 +265,5 @@ SELECT * FROM DBO.population
 [Use external tables with Synapse SQL - Azure Synapse Analytics | Microsoft Docs](https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/develop-tables-external-tables?tabs=hadoop)
 
 [How to use OPENROWSET in serverless SQL pool - Azure Synapse Analytics | Microsoft Docs](https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/develop-openrowset)
+
+[Parquet] (https://parquet.apache.org/docs/)
