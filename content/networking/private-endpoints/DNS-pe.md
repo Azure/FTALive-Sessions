@@ -22,19 +22,17 @@ For example, if you perform an NS lookup for `mysa.blob.core.windows.net` that h
 
 There are two main options for managing the DNS for your Private Endpoints.
 
-First is the manual option.  In whatever DNS solution you are using, you add a record for your private resource's private link alias.  On paper this is easy - creating a zone and record for the service that you want to access (for example, a zone for `privatelink.blob.core.windows.net`).  
->🌋REVISIT FOR ZONE THIS IS INCORRECT need whole thing
+First is the manual option.  In whatever DNS solution you are using, you add a record for your private resource, using the Public DNS zone forwarders found [here](https://learn.microsoft.com/azure/private-link/private-endpoint-dns#azure-services-dns-zone-configuration).  On paper this is easy - creating a zone and record for the service that you want to access (for example, a zone for `blob.core.windows.net`), adding a record for your resource, and then adding root hints to a public DNS resolver for any other entries in this zone that are not found.
 
-Requesting clients will then:
+Requesting clients will then request resolution from your DNS server, which will provide the private IP for the Private Endpoint, or query the root hint to find an answer.
 
-- Go to your DNS service to resolve the public name.
-- Your global hints will direct the request to a public DNS provider, and resolve to the alias.
-- Your DNS service will be able to use the alias to provide the correct IP.
+>🤢 Confirm this works as intended
 
 However, this has a lot of challenges as adoption increases:
 
 - This means there is a non-Azure configuration needed for these services.  If you are using IaC or subscription democratization to allow for teams to deploy in an agile fashion, you are now hindering that agility by requiring this additional step.
 - Alternatively, you are having to manage automation for creating and destroying these records as part of your Azure deployment process, which is an additional investment.
+- You can have DNS issues in your environment that create issues connecting to Azure services.
 
 In general, this doesn't scale well, so the second method is used.  This method involves doing conditional forwarders to the Azure DNS resolver and using Azure Private DNS.
 
@@ -52,4 +50,10 @@ At a high level, it works like this:
 
 ## What do I need to plan for?
 
-There is a guide for [Private endpoint DNS integration](https://learn.microsoft.com/azure/private-link/private-endpoint-dns) that you should review, and we should do so now.
+There is a guide for [Private endpoint DNS integration](https://learn.microsoft.com/azure/private-link/private-endpoint-dns) that explains this process in more detail!
+
+One major call out is that Private DNS Zones and Conditional Forwarders are not always 1:1.  For example, Key Vault requires forwarders for `vault.azure.net` & `vaultcore.azure.net`, but a Private DNS Zone for `privatelink.vaultcore.azure.net` only.  Implementing just one of the forwarding zones can create intermittent issues and caching of the incorrect IP address, creating issues.  Consult the table in the above article to plan your DNS needs for a service.
+
+## Why can't I use my own Zone name?
+
+A common challenge is that organizations wish to use their own zone names for the resources.  While some services offer the option to set custom domain names, most need to use the existing domains.  This is because the certificates used for communication are set to expect specific CN records; if you change these, the traffic will not be permitted.

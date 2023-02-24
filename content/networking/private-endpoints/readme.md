@@ -4,6 +4,7 @@
 
 - [Why use Private Endpoints?](why-pe.md)
 - [What we see in the field at Fast Track for Azure](field-experience.md)
+- [How Private Endpoints Work](overview.md)
 - Misconceptions about Private Endpoints
 - [DNS Refresher](dns-pe.md) - what you need to know for Private Endpoints
 - Creating Private Endpoints
@@ -28,13 +29,13 @@
 	4. [brandon] Configuring DNS for Private Endpoints
 		a. Required records
 			i. TLS subject mismatch issue with custom names
-		b. Implementation options:
-			i. Private DNS Zones
-			ii. Custom DNS
-		c. Access from on-prem: DNS forwarding approaches 
-			i. Conditional forwarders
-			ii. Private Resolver
-			iii. Azure Firewall Proxy
+		b. ✅Implementation options:
+			i. ✅IPrivate DNS Zones
+			ii. ✅ICustom DNS
+		c. ✅IAccess from on-prem: DNS forwarding approaches 
+			i. ✅IConditional forwarders
+			ii. ✅IPrivate Resolver
+			iii. ✅IAzure Firewall Proxy
 	5. [matthew] Troubleshooting
 		a. Name resolution
 			i. 'nslookup' example
