@@ -14,7 +14,7 @@
 - AMPLS and Data Services (Portal, ???, Ingestion)
 
 ### content creation
-	1. [brandon] Why use Private Endpoints/field experience 
+	1. [brandon] Why use Private Endpoints✅/field experience✅
 	2. [matthew] How do Private Endpoints work?
 		a. Connectivity 
 		b. DNS
