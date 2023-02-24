@@ -20,7 +20,7 @@ For example, if you perform an NS lookup for `mysa.blob.core.windows.net` that h
 
 ## What are my options for managing this?
 
-There are two main options for managing the DNS for your Private Endpoints.
+There are two main options for managing the DNS for your Private Endpoints, at least when it comes to looking up resources from on-prem.
 
 First is the manual option.  In whatever DNS solution you are using, you add a record for your private resource, using the Public DNS zone forwarders found [here](https://learn.microsoft.com/azure/private-link/private-endpoint-dns#azure-services-dns-zone-configuration).  On paper this is easy - creating a zone and record for the service that you want to access (for example, a zone for `blob.core.windows.net`), adding a record for your resource, and then adding root hints to a public DNS resolver for any other entries in this zone that are not found.
 
