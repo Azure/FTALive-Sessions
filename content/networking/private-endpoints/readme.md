@@ -7,6 +7,7 @@
 - [How Private Endpoints Work](overview.md)
 - Misconceptions about Private Endpoints
 - [DNS Refresher](dns-pe.md) - what you need to know for Private Endpoints
+- [Private Endpoint Security and Routing](security-and-routing.md)
 - Creating Private Endpoints
 - Creating DNS
 - Creating Routing
@@ -26,9 +27,9 @@
 				1) Storage, SQL, Key Vault
 			ii. Portals and shared name endpoints [save for later or don't detail….]
 				1) ADF, Synapse, HD Insight, AMPLS
-	4. [brandon] Configuring DNS for Private Endpoints
-		a. Required records
-			i. TLS subject mismatch issue with custom names
+	4. [brandon] ✅Configuring DNS for Private Endpoints
+		a. ✅Required records
+			i. ✅✅
 		b. ✅Implementation options:
 			i. ✅IPrivate DNS Zones
 			ii. ✅ICustom DNS
@@ -41,7 +42,7 @@
 			i. 'nslookup' example
 		b. Traffic routing
 		c. Filtering by NSGs and NVAs
-	6. [brandon] Private Endpoint security and routing
+	6. [brandon] ⌛Private Endpoint security and routing (Framing out)
 	7. [matthew] Common misconfigurations:
 		1) DNS configuration is not complete for the requested service (a consistent approach is not followed) 
 		2) Private DNS Zones
@@ -54,5 +55,3 @@
 			b) conditional forwarder zone name has 'privatelink' subdomain 
 			c) clients are using a different DNS service than were the conditional forwarder is configured (for example, on VPN) 
 			d) forwarded queries from on-prem DNS cannot reach the Azure DNS forwarder (routing or hybrid connectivity issues)
-	
-	
