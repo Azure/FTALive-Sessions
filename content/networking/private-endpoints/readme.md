@@ -12,3 +12,47 @@
 - Private Inbound Access (NOT private endpoints!)
 - Weird Services (Storage Accounts having multiple endpoints)
 - AMPLS and Data Services (Portal, ???, Ingestion)
+
+
+### content creation
+	1. [brandon] Why use Private Endpoints/field experience
+	2. [matthew] How do Private Endpoints work?
+		a. Connectivity 
+		b. DNS
+		c. Private Link Service
+	3. [matthew] Creating Private Endpoints - demo
+		a. PaaS Services
+			i. Globally-unique name endpoints
+				1) Storage, SQL, Key Vault
+			ii. Portals and shared name endpoints [save for later or don't detail….]
+				1) ADF, Synapse, HD Insight, AMPLS
+	4. [brandon] Configuring DNS for Private Endpoints
+		a. Required records
+			i. TLS subject mismatch issue with custom names
+		b. Implementation options:
+			i. Private DNS Zones
+			ii. Custom DNS
+		c. Access from on-prem: DNS forwarding approaches 
+			i. Conditional forwarders
+			ii. Private Resolver
+			iii. Azure Firewall Proxy
+	5. [matthew] Troubleshooting
+		a. Name resolution
+			i. 'nslookup' example
+		b. Traffic routing
+		c. Filtering by NSGs and NVAs
+	6. [brandon] Private Endpoint security and routing
+	7. [matthew] Common misconfigurations:
+		1) DNS configuration is not complete for the requested service (a consistent approach is not followed) 
+		2) Private DNS Zones
+			a) Private DNS Zone not linked to DNS forwarder VNET
+			b) Private DNS Zone missing link to Private Endpoint (DNS Zone Group), 'A' record is missing
+			c) Multiple, segmented Private DNS Zones for the same zone name
+			d) Mismatch with corporate policy (ie, custom DNS configuration is used instead of Private DNS Zones or new Private DNS Zone created when one already exists) 
+		3) On-prem:
+			a) conditional forwarder forwards requests to 168.63.129.16 directly 
+			b) conditional forwarder zone name has 'privatelink' subdomain 
+			c) clients are using a different DNS service than were the conditional forwarder is configured (for example, on VPN) 
+			d) forwarded queries from on-prem DNS cannot reach the Azure DNS forwarder (routing or hybrid connectivity issues)
+	
+	
