@@ -113,7 +113,7 @@ It's important to provide some information on the underlying concepts.
  Azure OpenAI provides access to different OpenAI models, which are grouped by family and capability.  Familys are associated with the intended task of the model.  Current models include:
  * GPT-3.  A series of models that can interpret and generate natural language.
  * Codex. A series of models that interpret and generate code, including translating natural language into code.
- * Embeddings.  A series of models that can use embeddedings, which are information-dense representations of the semantic meaning of a piece of text.  Embeddings are a special format of data representation that can be easily utilized by machine learning models and algorithms. 
+ * Embeddings.  A series of models that can use embeddings, which are information-dense representations of the semantic meaning of a piece of text.  Embeddings are a special format of data representation that can be easily utilized by machine learning models and algorithms. 
 
 [Detailed information on models and capability](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/models#model-summary-table-and-region-availability)
 
@@ -319,15 +319,11 @@ The diagram below illustrates how customer data is processed. This diagram cover
 
 Microsoft charges per 1000 “tokens”. A token can be thought of as a “piece” of a word. 1000 tokens is approximately 750 words, depending on the words used.  Refer to the [pricing page](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
 
-## Demos
+## End to end
 
 
 
-#### Search
 
-#### Fine-tuning
-
-#### Completions
 
 
 <br></br>
