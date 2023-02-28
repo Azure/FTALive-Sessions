@@ -171,16 +171,6 @@ OpenAI GPT models are based on [InstructGPT](https://openai.com/blog/instruction
 3. two internet-based book corpora, and
 4. English-language Wikipedia.
 
-### **Instructions vs. completions***
-* Referring to work by Scott Lundberg, Marco Tulio Ribeiro
-```python
-"John Smith is married to Lucy Smith.  They have five kids, and he works as a software engineer at Microsoft.  How should I fact-check this?"
-```
-
-```python
-"John Smith is married to Lucy Smith.  They have five kids, and he works as a software engineer at Microsoft.  How should I fact-check this? <|endofprompt|>"
-```
-
 ### Guidelines
 There are some basic guidelines to creating prompts:
 * https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api
@@ -280,6 +270,8 @@ Fine-tuning is currently only available for the following base models: davinci, 
 Designing your prompts and completions for fine-tuning is different from designing your prompts for use with our base models (Davinci, Curie, Babbage, Ada). In particular, while prompts for base models often consist of multiple examples ("few-shot learning"), for fine-tuning, each training example generally consists of a single input example and its associated output, without the need to give detailed instructions or include multiple examples in the same prompt.
 
 The more training examples you have, the better. **OpenAI recommends having at least a couple hundred examples.** In general, we've found that each doubling of the dataset size leads to a linear increase in model quality.
+
+### Demo of simple app/static page
 
 ### Preparing your dataset
 
