@@ -271,8 +271,7 @@ Designing your prompts and completions for fine-tuning is different from designi
 
 The more training examples you have, the better. **OpenAI recommends having at least a couple hundred examples.** In general, we've found that each doubling of the dataset size leads to a linear increase in model quality.
 
-### Demo of single app
-
+### Demo of simple app/static page
 
 ### Preparing your dataset
 
