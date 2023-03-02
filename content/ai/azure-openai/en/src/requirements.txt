@@ -1,0 +1,68 @@
+asttokens==2.1.0
+backcall @ file:///home/ktietz/src/ci/backcall_1611930011877/work
+certifi @ file:///croot/certifi_1665076670883/work/certifi
+charset-normalizer==2.1.1
+contourpy==1.0.6
+cycler==0.11.0
+debugpy==1.6.3
+decorator @ file:///opt/conda/conda-bld/decorator_1643638310831/work
+docopt==0.6.2
+entrypoints @ file:///tmp/build/80754af9/entrypoints_1649908313000/work
+et-xmlfile==1.1.0
+executing==1.2.0
+filelock==3.9.0
+fonttools==4.38.0
+huggingface-hub==0.11.1
+idna==3.4
+ipykernel==6.17.1
+ipython @ file:///croot/ipython_1668088122043/work
+jedi @ file:///tmp/build/80754af9/jedi_1644315229345/work
+joblib==1.2.0
+jupyter_client==7.4.5
+jupyter_core==5.0.0
+kiwisolver==1.4.4
+matplotlib==3.6.2
+matplotlib-inline @ file:///opt/conda/conda-bld/matplotlib-inline_1662014470464/work
+nest-asyncio==1.5.6
+num2words==0.5.12
+numpy==1.23.4
+openai==0.25.0
+openpyxl==3.0.10
+packaging @ file:///tmp/build/80754af9/packaging_1637314298585/work
+pandas==1.5.1
+pandas-stubs==1.5.1.221024
+parso @ file:///opt/conda/conda-bld/parso_1641458642106/work
+pexpect @ file:///tmp/build/80754af9/pexpect_1605563209008/work
+pickleshare @ file:///tmp/build/80754af9/pickleshare_1606932040724/work
+Pillow==9.4.0
+platformdirs==2.5.4
+plotly==5.11.0
+prompt-toolkit==3.0.32
+psutil==5.9.4
+ptyprocess @ file:///tmp/build/80754af9/ptyprocess_1609355006118/work/dist/ptyprocess-0.7.0-py2.py3-none-any.whl
+pure-eval @ file:///opt/conda/conda-bld/pure_eval_1646925070566/work
+Pygments==2.13.0
+pyparsing @ file:///opt/conda/conda-bld/pyparsing_1661452539315/work
+python-dateutil @ file:///tmp/build/80754af9/python-dateutil_1626374649649/work
+python-dotenv==0.21.0
+pytz==2022.6
+PyYAML==6.0
+pyzmq==24.0.1
+regex==2022.10.31
+requests==2.28.1
+scikit-learn==1.2.0
+scipy==1.10.0
+six @ file:///tmp/build/80754af9/six_1644875935023/work
+stack-data==0.6.1
+tenacity==8.1.0
+threadpoolctl==3.1.0
+tokenizers==0.13.2
+tornado @ file:///opt/conda/conda-bld/tornado_1662061693373/work
+tqdm==4.64.1
+traitlets==5.5.0
+transformers==4.25.1
+types-pytz==2022.6.0.1
+typing_extensions==4.4.0
+urllib3==1.26.12
+wcwidth @ file:///Users/ktietz/demo/mc3/conda-bld/wcwidth_1629357192024/work
+websockets==10.4

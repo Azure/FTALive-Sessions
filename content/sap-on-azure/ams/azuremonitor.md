@@ -24,3 +24,6 @@ So what can you do with all the data: </br></br>
 ---
 ## Additional Information
   * [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/overview)
+
+
+#### [prev](./introduction.md) | [home](./readme.md)  | [next](./businesscase.md)

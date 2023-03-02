@@ -40,7 +40,7 @@ To check the security on any dependencies you may use in your project:
 
 Securing your CI/CD workflow makes a lot of sense, since it gives a point of access to the different environments you deploy to. This implies that you need to take extra care of into defining who has access to your repositories, pipelines and workflows and how each of your automatic processes are governed.
 
-For overall governance of your CI/CD processes, take a look at the [DevOps Governance session](../patterns-and-practices/readme.md) we host in [FTA Live](https://fasttrack.azure.com/live/category/DevOps).
+For overall governance of your CI/CD processes, take a look at the [DevOps Governance session](../patterns-and-practices/readme.md) we host in [FTA Live](https://aka.ms/ftalive).
 
 <img src="https://raw.githubusercontent.com/Azure/devops-governance/main/images/e2e-governance-overview.svg" width="640" alt="Azure Architect Center - E2E Governance">
 

@@ -1,0 +1,28 @@
+<html class="{{.Colour}}">
+
+<head>
+</head>
+
+<body style="background-color: {{.Colour}};color: #cccccc;">
+    <div>
+        <h1>{{.Colour}} deployment</h1>
+        <div>
+            <p>HostName: {{.HostName}}</p>
+        </div>
+        <div>
+            <p>Request URI: {{.RequestURI}}</p>
+        </div>
+        <div>
+            <p>Client Address: {{.ClientAddress}}</p>
+        </div>
+        <div>
+            <p>Env Vars: {{range .EnvVars}} <ul>{{.}}</ul> {{end}}</p>
+        </div>
+        <div>
+            <p>Headers: {{range .Headers}} <ul>{{.}}</ul> {{end}}</p>
+        </div>
+    </div>
+</body>
+
+</html>
+</div>
