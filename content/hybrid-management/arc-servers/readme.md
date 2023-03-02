@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this session you will learn about how to manage Windows, Linux physical servers and virtual machines hosted outside of Azure, on your corporate network, or other cloud provide using [Azure Arc-enabled servers](https://docs.microsoft.com/en-us/azure/azure-arc/servers/overview). We will be showing the deployment approaches for ARC agents and also the management capabilities for your non-Azure estate. 
+In this session you will learn about how to manage Windows, Linux physical servers and virtual machines hosted outside of Azure, on your corporate network, or other cloud provide using [Azure Arc-enabled servers](https://docs.microsoft.com/en-us/azure/azure-arc/servers/overview). We will be showing the deployment approaches for Arc agents and also the management capabilities for your non-Azure estate. 
 
 ## Agenda
 
