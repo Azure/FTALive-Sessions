@@ -1,4 +1,4 @@
-# Azure Arc-enabled Servers
+# Azure Arc-enabled servers
 
 ## Overview
 
