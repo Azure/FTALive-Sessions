@@ -15,7 +15,7 @@ This overview focuses on the simple scenario of a Storage Account and Private En
 **Without Private Endpoints - Storage Account Example:**
 
 1. A client requests a name be resolved to an IP address by DNS - for example: `mystorageaccount.blob.core.windows.net`.
-1. The client's configured DNS server queries Microsoft's DNS servers (which are authoritative 'blob.core.windows.net') 
+1. The client's configured DNS server queries Microsoft's DNS servers (which are authoritative 'blob.core.windows.net')
 1. Microsoft's DNS servers respond with a public corresponding to the Storage cluster where the Storage Account resides - for example: **20.60.128.228**
 1. The client sends their storage request to **20.60.128.228**
 
@@ -35,6 +35,6 @@ Private Endpoints can either be created directly or through most PaaS service ne
 
 ## Private Link Service
 
-For most PaaS services, a Private Link Service resides in between your Private Endpoint and the PaaS service. You do not see it or manage it; you only work with the Private Endpoint. 
+For most PaaS services, a Private Link Service resides in between your Private Endpoint and the PaaS service. You do not see it or manage it; you only work with the Private Endpoint.
 
 It is possible to provide a Private Endpoint (and thereby 'tunnel') to IaaS resources. To do this, you need to build your own Private Link Service. Private Link Services are not the focus of this content and not necessary for most Private Endpoint deployments.

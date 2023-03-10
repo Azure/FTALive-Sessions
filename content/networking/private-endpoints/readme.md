@@ -2,22 +2,23 @@
 
 ## Agenda
 
+### Overview
+
 - [Why use Private Endpoints?](why-pe.md)
 - [What we see in the field at Fast Track for Azure](field-experience.md)
 - [How Private Endpoints Work](overview.md)
-- Misconceptions about Private Endpoints
 - [DNS Concepts](dns-pe-concepts.md) - Core DNS concepts for Private Endpoints
 - [DNS Scenarios](dns-pe-scenarios.md) - Common DNS scenarios for Private Endpoints that you can use in your environment
 - [Private Endpoint Security and Routing](security-and-routing.md)
-- Creating Private Endpoints
-- Creating DNS
-- Creating Routing
-- Private Inbound Access (NOT private endpoints!)
-- Weird Services (Storage Accounts having multiple endpoints)
-- AMPLS and Data Services (Portal, ???, Ingestion)
+
+### Special Cases
+
+- [Special Case - Storage Accounts](pe-sa-scenarios.md) - An overview of some special considerations for Azure Storage Accounts.
+- [Special Case - Azure Data Factory, Synapse, and Purview](pe-data-scenarios.md) - An overview of some of the special considerations of the data pipeline services in Azure.
+- [Special Case - AMPLS](pe-ampls-scenarios.md) - An overview of the special considerations of the Azure Monitor Private Link Service.
 
 ### content creation
-	1. [brandon] Why use Private Endpoints✅/field experience✅
+	1. ✅[brandon] Why use Private Endpoints/field experience
 	2. [matthew] How do Private Endpoints work?
 		a. Connectivity 
 		b. DNS
@@ -28,22 +29,21 @@
 				1) Storage, SQL, Key Vault
 			ii. Portals and shared name endpoints [save for later or don't detail….]
 				1) ADF, Synapse, HD Insight, AMPLS
-	4. [brandon] ✅Configuring DNS for Private Endpoints
-		a. ✅Required records
-			i. ✅✅
-		b. ✅Implementation options:
-			i. ✅IPrivate DNS Zones
-			ii. ✅ICustom DNS
-		c. ✅IAccess from on-prem: DNS forwarding approaches 
-			i. ✅Conditional forwarders
-			ii. ✅Private Resolver
-			iii. ✅Azure Firewall Proxy
+	4. ✅[brandon] Configuring DNS for Private Endpoints
+		a. Required records
+		b. Implementation options:
+			i. Private DNS Zones
+			ii. Custom DNS
+		c. Access from on-prem: DNS forwarding approaches 
+			i. Conditional forwarders
+			ii. Private Resolver
+			iii. Azure Firewall Proxy
 	5. [matthew] Troubleshooting
 		a. Name resolution
 			i. 'nslookup' example
 		b. Traffic routing
 		c. Filtering by NSGs and NVAs
-	6. [brandon] ⌛Private Endpoint security and routing (Framing out)
+	6. ⌛ [brandon] Private Endpoint security and routing (Framing out)
 	7. [matthew] Common misconfigurations:
 		1) DNS configuration is not complete for the requested service (a consistent approach is not followed) 
 		2) Private DNS Zones

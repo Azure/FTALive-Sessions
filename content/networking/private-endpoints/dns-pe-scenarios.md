@@ -3,7 +3,7 @@
 Now that we have some of the main concepts for DNS and Private Endpoints matched out, lets talk about the three resolution scenarios that you can plan to adopt:
 
 - **Private DNS Zone Only** - for environments that are hosted in Azure and only need to resolve private IPs backed by Azure Private DNS Zone.
-- **Custom DNS Resolution in Azure** - for environments that are hosted in Azure and need to resolve private IPs back by Azure Private DNS Zone as well as by your custom DNS provider, such as Windows Server DNS, Infoblox, or some other solution.  Azure Private DNS Resolver can also come in to play here.
+- **Custom DNS Resolution in Azure** - for environments that are hosted in Azure and need to resolve private IPs back by Azure Private DNS Zone as well as by your DNS forwarder, such as Azure Firewall with DNS Proxy, Windows Server DNS, Infoblox, or some other solution.  Azure Private DNS Resolver can also come in to play here.
 - **Hybrid DNS Resolution** - for the environments hosted in Azure or in other data centers, that need to be able to resolve to each other.  Effectively, Azure-to-Azure, Azure-to-On-Prem, and On-prem-to-Azure are needed.
 
 Most customers will need **Hybrid DNS Resolution**, and you should be prepared to implement that.  However, discussing these different solutions helps you build up an understanding of why you need that solution, and can help you with troubleshooting later.
