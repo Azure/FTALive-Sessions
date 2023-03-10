@@ -2,9 +2,9 @@
 
 Now that we have some of the main concepts for DNS and Private Endpoints matched out, lets talk about the three resolution scenarios that you can plan to adopt:
 
-* **Private DNS Zone Only** - for environments that are hosted in Azure and only need to resolve private IPs backed by Azure Private DNS Zone.
-* **Custom DNS Resolution in Azure** - for environments that are hosted in Azure and need to resolve private IPs back by Azure Private DNS Zone as well as by your custom DNS provider, such as Windows Server DNS, Infoblox, or some other solution.
-* **Hybrid DNS Resolution** - for the environments hosted in Azure or in other data centers, that need to be able to resolve to each other.  Effectively, Azure-to-Azure, Azure-to-On-Prem, and On-prem-to-Azure are needed.
+- **Private DNS Zone Only** - for environments that are hosted in Azure and only need to resolve private IPs backed by Azure Private DNS Zone.
+- **Custom DNS Resolution in Azure** - for environments that are hosted in Azure and need to resolve private IPs back by Azure Private DNS Zone as well as by your custom DNS provider, such as Windows Server DNS, Infoblox, or some other solution.
+- **Hybrid DNS Resolution** - for the environments hosted in Azure or in other data centers, that need to be able to resolve to each other.  Effectively, Azure-to-Azure, Azure-to-On-Prem, and On-prem-to-Azure are needed.
 
 Most customers will need **Hybrid DNS Resolution**, and you should be prepared to implement that.  However, discussing these different solutions helps you build up an understanding of why you need that solution, and can help you with troubleshooting later.
 
@@ -22,11 +22,11 @@ The over all flow for DNS resolution here is:
 
 To deploy it, you will need:
 
-* A Virtual Network
-* A Virtual Machine deployed to the network
-* A Resource such as a SQL DB or a Storage Account
-* A private DNS zone for the appropriate zone(s), linked to your virtual network
-* A Private Endpoint for the resource, deployed to the network, and with an entry in the zone.
+- A Virtual Network
+- A Virtual Machine deployed to the network
+- A Resource such as a SQL DB or a Storage Account
+- A private DNS zone for the appropriate zone(s), linked to your virtual network
+- A Private Endpoint for the resource, deployed to the network, and with an entry in the zone.
 
 When you set it up, the Private DNS zone should have the following settings:
 
@@ -35,16 +35,13 @@ When you set it up, the Private DNS zone should have the following settings:
 
 Now the resolution flow discussed before should work!
 
+## Custom DNS Resolution in Azure
 
-
-## Custom DNS Zone Provider
+## Hybrid DNS Resolution
 
 While you can attempt to manage your DNS records for Private Endpoints manually, it is recommended.  It is a lot of effort and it very fragile.
 
 Instead, you should look at at implementing a hybrid resolution
-
-
-
 
 First is the manual option.  I  On paper this is easy - creating a zone and record for the service that you want to access (for example, a zone for `blob.core.windows.net`), adding a record for your resource, and then adding root hints to a public DNS resolver for any other entries in this zone that are not found.
 
