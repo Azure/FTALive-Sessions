@@ -3,7 +3,7 @@
 Now that we have some of the main concepts for DNS and Private Endpoints matched out, lets talk about the three resolution scenarios that you can plan to adopt:
 
 - **Private DNS Zone Only** - for environments that are hosted in Azure and only need to resolve private IPs backed by Azure Private DNS Zone.
-- **Custom DNS Resolution in Azure** - for environments that are hosted in Azure and need to resolve private IPs back by Azure Private DNS Zone as well as by your custom DNS provider, such as Windows Server DNS, Infoblox, or some other solution.
+- **Custom DNS Resolution in Azure** - for environments that are hosted in Azure and need to resolve private IPs back by Azure Private DNS Zone as well as by your custom DNS provider, such as Windows Server DNS, Infoblox, or some other solution.  Azure Private DNS Resolver can also come in to play here.
 - **Hybrid DNS Resolution** - for the environments hosted in Azure or in other data centers, that need to be able to resolve to each other.  Effectively, Azure-to-Azure, Azure-to-On-Prem, and On-prem-to-Azure are needed.
 
 Most customers will need **Hybrid DNS Resolution**, and you should be prepared to implement that.  However, discussing these different solutions helps you build up an understanding of why you need that solution, and can help you with troubleshooting later.
@@ -20,52 +20,68 @@ The over all flow for DNS resolution here is:
 
 ![Image of DNS resolution](https://learn.microsoft.com/azure/private-link/media/private-endpoint-dns/single-vnet-azure-dns.png)
 
-To deploy it, you will need:
+In this scenario...
 
-- A Virtual Network
-- A Virtual Machine deployed to the network
-- A Resource such as a SQL DB or a Storage Account
-- A private DNS zone for the appropriate zone(s), linked to your virtual network
-- A Private Endpoint for the resource, deployed to the network, and with an entry in the zone.
+- The Client VM will use the Azure provided DNS resolver, which is configured as the default on virtual networks, to send its DNS requests to the 168.63.129.16 magic IP.
+- This service then performs the recursive lookup to return the correct IP, enabling resolution to the Private Endpoint.
 
 When you set it up, the Private DNS zone should have the following settings:
 
 ![An image of a Private DNS Zone with a record for a storage account](img/dnszoneexample.png)
-![An image of a PRivate DNS Zone linked with the subnet](img/privednszonelink.png)
-
-Now the resolution flow discussed before should work!
+![An image of a Private DNS Zone linked with the subnet](img/privednszonelink.png)
 
 ## Custom DNS Resolution in Azure
 
+Custom DNS Resolution in Azure tends to be used by organizations that do not have a physical data center, but have an Azure footprint that is a mix of traditional domain-joined VMs and non-VM services.
+
+The following diagram can help envision the scenario:
+![Hub and spoke DNS zone diagram](https://learn.microsoft.com/azure/architecture/guide/networking/images/private-link-hub-spoke-network-basic-hub-spoke-diagram.png)
+
+In this scenario...
+
+- The Spoke VM will use the DNS Forwarders in the hub as their DNS resolvers.  When they make any DNS query, it is sent to these forwarders.
+- These forwarders have a mechanic to forward DNS requests for the zone in question to the Azure provided DNS service.
+- Once the request is forwarded, the Azure provided DNS operates as in the first scenario.
+- The DNS forwarders return the requested IP to the spoke VM.
+
+It should be noted that these DNS forwarders can be many different kinds of resources, such as:
+
+- Azure Private DNS Resolvers
+- Windows Server DNS Server or AD Domain Controller
+- An Azure Firewall with DNS Proxy enabled
+- A third party DNS solution
+
+When setting this up, the DNS zone should be connected to the virtual networks where the DNS forwarding mechanics are.
+
+If you are using a Windows Server DNS, the conditional forwarder to send the traffic to the Azure IP would look like:
+
+![Picture of DNS settings on Vnet](img/dns-vnet-example.png)
+
+### Conditional Forwarders in Windows Server
+
+If you are using an AD domain controller or a DNS server for forwarding, your conditional forwarder should look something like:
+
+![Image of conditional forwarder in AD](img/conditional-forwarder.png)
+![Image of conditional forwarder in AD](img/conditional-forwarder2.png)
+
+Other options for DNS forwarding will have their own options.
+
 ## Hybrid DNS Resolution
 
-While you can attempt to manage your DNS records for Private Endpoints manually, it is recommended.  It is a lot of effort and it very fragile.
+This scenario is the most common used by organizations in the field, because it allows for you to resolve Azure private endpoints from on-prem, and also builds in the ability to resolve on-prem resources from Azure.  While it has the most complex setup, it provides the best management moving forward, and is very resilient.
 
-Instead, you should look at at implementing a hybrid resolution
+This scenario builds upon the concepts already established in the other two scenarios.
 
-First is the manual option.  I  On paper this is easy - creating a zone and record for the service that you want to access (for example, a zone for `blob.core.windows.net`), adding a record for your resource, and then adding root hints to a public DNS resolver for any other entries in this zone that are not found.
+The following diagram can help us envision the scenario:
+![Diagram of hybrid DNS resolution](https://learn.microsoft.com/azure/private-link/media/private-endpoint-dns/on-premises-forwarding-to-azure.png)
 
-Requesting clients will then request resolution from your DNS server, which will provide the private IP for the Private Endpoint, or query the root hint to find an answer.
+In this scenario, Azure resources operate in the same fashion as the above scenario, with the addition that the DNS forwarders in Azure are either able to resolve on-prem FQDNs, or will forward traffic to the on-prem DNS servers for resolution.
 
->🤢 Confirm this works as intended
+On-prem resources will operate in the following way:
 
-However, this has a lot of challenges as adoption increases:
+- The on-prem Client VM will send a DNS request to their Internal DNS server.
+- The DNS server has a conditional forwarder to the DNS forwarder in Azure.  It will navigate there over the VPN or ExpressRoute.
+- Once there, the DNS forwarder will behave as in the previous scenario, sending to the private DNS resolver for recursive look up.
+- The responses will be returned, and the Client VM can access the endpoint over the VPN or ExpressRoute.
 
-- This means there is a non-Azure configuration needed for these services.  If you are using IaC or subscription democratization to allow for teams to deploy in an agile fashion, you are now hindering that agility by requiring this additional step.
-- Alternatively, you are having to manage automation for creating and destroying these records as part of your Azure deployment process, which is an additional investment.
-- You create a bottle neck for accessing Azure services with your DNS.  This can make things difficult for accessing third party resources.
-- You can have DNS issues in your environment that create issues connecting to Azure services.
-
-In general, this doesn't scale well, so the second method is used.  This method involves doing conditional forwarders to the Azure DNS resolver and using Azure Private DNS.
-
-At a high level, it works like this:
-
-- Your on-prem DNS services have a zone for the Azure service involved.  It performs a conditional forwarder for the zone to a DNS service in Azure.
-- Your DNS service in Azure forwards the traffic to the Azure DNS resolver (via virtual public IP address [168.63.129.16](https://learn.microsoft.com/azure/virtual-network/what-is-ip-address-168-63-129-16)).  Your DNS service in Azure can be one of many solutions, such as:
-  - [Azure DNS Private Resolver](https://learn.microsoft.com/azure/dns/dns-private-resolver-overview)
-  - [Azure Firewall DNS Proxy](https://learn.microsoft.com/azure/firewall/dns-details)
-  - Domain controllers
-  - Stand alone DNS servers, such as Infoblox or Windows Server DNS.
-- You have an Azure Private DNS Zone attached to the network for the Service's private link address (example: `privatelink.blob.core.windows.net`).
-- The Private Endpoint is attached to the Private DNS Zone through the DNS Zone Group function, meaning the IP address is added to the zone automatically.
-- Azure DNS performs recursive lookups for the alias, and returns the private IP.
+As new resources are deployed to the Private DNS Zone, no additional configuration on the internal DNS is needed.  You do need to add a new conditional forwarder for net new zones, but management afterwards is reduced.

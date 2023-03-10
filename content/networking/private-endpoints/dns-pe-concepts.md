@@ -20,6 +20,10 @@ This is made easier by an alias being created for most services when you set up 
 
 For example, if you perform an NS lookup for `mysa.blob.core.windows.net` that has a Private Endpoint enabled, you will get an alias for `mysa.privatelink.blob.core.windows.net`.  This tells the requesting machine to look up that domain name.  But providing resolution for this domain name, you can redirect towards your private endpoint.
 
+## Why can't I just use my own DNS and manually update IP addresses?
+
+You *can* but management for that will become very difficult.  It involves constant management as resources are created and destroyed, which can involve a lot of back and forth.  It can create delays with onboarding Azure resources (deploying a new resource will require a change to DNS), and will create issues with short lived resources.
+
 ## Why can't I use my own Zone Name?
 
 A common challenge is that organizations wish to use their own zone names for the resources.  While some services offer the option to set custom domain names, most need to use the existing domains.  This is because the certificates used for communication are set to expect specific CN records; if you change these, the traffic will not be permitted.
