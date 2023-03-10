@@ -2,6 +2,10 @@
 
 This section reviews some common field observations for designing your network to use private endpoints, from a security and routing perspective.
 
+## Resource Firewall
+
+Just having private endpoints doesn't prevent most resources from accempting ingress from their public endpoint.  To secure, you need to deny access from the resources firewall.
+
 ## Network Policies
 
 In order to use NSGs and route tables to manage your private endpoints, you will need to enable network policies on the subnets that house the private endpoints.  Enabling network policies will affect all private endpoints in the subnet, and allow them to be managed with User-Define Routes and Network security groups.  A policy can enable one of these services, or both.
