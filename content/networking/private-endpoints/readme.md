@@ -34,9 +34,9 @@
 			i. ✅IPrivate DNS Zones
 			ii. ✅ICustom DNS
 		c. ✅IAccess from on-prem: DNS forwarding approaches 
-			i. ✅IConditional forwarders
-			ii. ✅IPrivate Resolver
-			iii. ✅IAzure Firewall Proxy
+			i. ✅Conditional forwarders
+			ii. ✅Private Resolver
+			iii. ✅Azure Firewall Proxy
 	5. [matthew] Troubleshooting
 		a. Name resolution
 			i. 'nslookup' example
