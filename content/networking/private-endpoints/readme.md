@@ -7,9 +7,9 @@
 - [Why use Private Endpoints?](why-pe.md)
 - [What we see in the field at Fast Track for Azure](field-experience.md)
 - [How Private Endpoints Work](overview.md)
-- [DNS Concepts](dns-pe-concepts.md) - Core DNS concepts for Private Endpoints
-- [DNS Scenarios](dns-pe-scenarios.md) - Common DNS scenarios for Private Endpoints that you can use in your environment
-- [Private Endpoint Security and Routing](security-and-routing.md)
+- [DNS Concepts](dns-pe-concepts.md)
+- [DNS Scenarios](dns-pe-scenarios.md)
+- [Network Design for Private Endpoints](security-and-routing.md)
 
 ### Special Cases
 
