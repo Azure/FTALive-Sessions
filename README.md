@@ -111,6 +111,12 @@ Virtual Desktop	| Azure Virtual Desktop | Azure Virtual Desktop (AVD) empowers f
 Virtual Desktop	| FTA Live: FTA エンジニアによる AVD アーキテクチャーデザインガイドセッション | 本セッションでは、FTA にて AVD の本格展開をご支援する際に、検討すべき内容、見落としがちなポイント、よくご質問を頂く点など、本番展開に向けた設計のポイントを凝縮してお届けします | 
  |  |  |  |
 Marketplace	| Marketplace Fundamentals | Join this session to understand the value proposition of the Azure Marketplace. We will cover the fundamentals and main features to get up and running with your applications. | 
+ |  |  |  |
+Hybrid	| Azure Stack HCI - Part 1: Introduction To HCI (1 of 3) | Azure Stack HCI is a new hyperconverged infrastructure (HCI) operating system delivered as an Azure service. This is our solution in cases where latency, data sovereignity or legal restrictions require you to stay onpremise. Run your favorite workloads like virtual machines, kubernetes and run Azure services like SQL managed instances, Azure Virtual Desktop meeting the requirements of onpremise hosting. There are a lot of moving parts and decision points to get AzStack HCI running. During this session we will discuss the what, use cases, benefits and what to do to get started.| 
+ |  |  |  |
+Hybrid	| Azure Stack HCI - Part 2: Planning & Deploying Azure Stack HCI (2 of 3) | Azure Stack HCI is a new hyperconverged infrastructure (HCI) operating system delivered as an Azure service. During this session we will discuss the various deployment methods and tools, networking design and storage considerations |
+ |  |  |  |
+Hybrid	| Azure Stack HCI - Part 3: Operating Azure Stack HCI (3 of 3) | Azure Stack HCI is a new hyperconverged infrastructure (HCI) operating system delivered as an Azure service. This session is about - operation tasks (Backup, Updating, Monitoring) - your management options and shows some of the hybrid workloads (e.g. Azure Resource Bridge, AKS, AVD,...) you can run on HCI |
 
 
 
