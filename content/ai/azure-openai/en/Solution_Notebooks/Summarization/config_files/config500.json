@@ -1,0 +1,7 @@
+{
+    "base_url":"insert resource endpoint"
+    , "deployment_name": "insert deployment name"
+    , "api_key" : ""
+    , "api_version": ""
+    , "api_type": "azure"
+}

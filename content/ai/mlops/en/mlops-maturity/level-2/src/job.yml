@@ -1,0 +1,18 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
+code: model
+# define command
+
+command: >-
+  python 
+  train.py --training_data ${{inputs.training_data}} --reg_rate ${{inputs.reg_rate}}
+inputs:
+  training_data: 
+    type: uri_folder 
+    path: azureml:diabetes-dev:1
+  reg_rate: 0.01
+environment: azureml:AzureML-sklearn-0.24-ubuntu18.04-py37-cpu@latest
+# define compute target
+compute: azureml:cpu-cluster
+# define experiment name
+experiment_name: mlops-maturity-level-2  
+description: Train a classification model on diabetes data using a registered dataset as input.

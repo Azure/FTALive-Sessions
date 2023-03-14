@@ -1,0 +1,7 @@
+{
+    "base_url":"your resource endpoint"
+    , "deployment_name": "davinci-instruct (your deployment name for text-davinci-001 model" 
+    , "api_key" : ""
+    , "api_version": ""
+    , "api_type": "azure"
+}
