@@ -48,3 +48,9 @@
 - [Azure Virtual Desktop (AVD) Landing Zone Accelerator:](https://github.com/Azure/avdaccelerator)
 
 
+## Thank you for your time today
+
+Where can you go next?
+
+- **Tell us what you think at [aka.ms/ftalive-feedback](https://aka.ms/ftalive-feedback)** - help us improve this delivery format and let us know if this has been useful.
+- **Visit [aka.ms/ftalive](https://aka.ms/ftalive) to sign up for other topics** - they are open to everyone.
