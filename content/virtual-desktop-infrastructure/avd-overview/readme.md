@@ -33,7 +33,7 @@
 ### Deploying AVD 
 - [Deploy Azure Virtual Desktop with the getting started feature: Small deployments & POC](https://learn.microsoft.com/en-us/azure/virtual-desktop/getting-started-feature?tabs=new-aadds)
 - [Azure Virtual Desktop (AVD) Landing Zone Accelerator:](https://github.com/Azure/avdaccelerator)
-- 
+
 
 ### Additional Resources
 - [Azure Virtual Desktop for the Enterprise](https://docs.microsoft.com/en-us/azure/architecture/example-scenario/wvd/windows-virtual-desktop)
@@ -46,3 +46,12 @@
 - [Azure Virtual Desktop Automation](https://github.com/Azure/avdaccelerator)
 - [Required URLs for Azure Virtual Desktop | Microsoft Learn](https://learn.microsoft.com/en-us/azure/virtual-desktop/safe-url-list?tabs=azure)
 - [Terraform for AVD with NetApp](https://github.com/Azure/terraform/tree/master/quickstart/101-azure-virtual-desktop-anf)
+
+
+## Thank you for your time today
+
+Where can you go next?
+
+- **Tell us what you think at [aka.ms/ftalive-feedback](https://aka.ms/ftalive-feedback)** - help us improve this delivery format and let us know if this has been useful.
+- **Visit [aka.ms/ftalive](https://aka.ms/ftalive) to sign up for other topics** - they are open to everyone.
+
