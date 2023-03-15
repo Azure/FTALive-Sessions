@@ -19,27 +19,14 @@
 1. [Security with AVD](https://docs.microsoft.com/en-us/azure/virtual-desktop/security-guide#azure-virtual-desktop-security-best-practices)
 
 
-### Additional Resources
-- [Azure Virtual Desktop for the Enterprise](https://docs.microsoft.com/en-us/azure/architecture/example-scenario/wvd/windows-virtual-desktop)
-- [FSLogix for the Enterprise](https://docs.microsoft.com/en-us/azure/architecture/example-scenario/wvd/windows-virtual-desktop-fslogix)
-- [Cloud Adoption Framework for Azure Virtual Desktop](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/wvd/enterprise-scale-landing-zone)
-- [What's new in Azure Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/whats-new)
-- [Azure Virtual Desktop Experience Estimator](https://azure.microsoft.com/en-gb/products/virtual-desktop/assessment/#estimation-tool)
-- [Cloud Adoptation Framework for Azure Virtual Desktop: Azure Virtual Desktop design considerations](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/wvd/eslz-identity-and-access-management#azure-virtual-desktop-design-considerations)
-- [Create a golden image in Azure](https://learn.microsoft.com/en-us/azure/virtual-desktop/set-up-golden-image)
-- [Azure Academy AVD Playlist](https://aka.ms/AzureAcademy-WVD)
-- [Azure Virtual Desktop Automation](https://github.com/Azure/avdaccelerator)
-- [Required URLs for Azure Virtual Desktop | Microsoft Learn](https://learn.microsoft.com/en-us/azure/virtual-desktop/safe-url-list?tabs=azure)
-- [Terraform for AVD with NetApp](https://github.com/Azure/terraform/tree/master/quickstart/101-azure-virtual-desktop-anf)
-
 ### Focus on Virtual Machine Sizing & User Personas
 - [Session host virtual machine sizing guidelines](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/virtual-machine-recs?toc=%2Fazure%2Fvirtual-desktop%2Ftoc.json&bc=%2Fazure%2Fvirtual-desktop%2Fbreadcrumb%2Ftoc.json)
 - [Cloud Adoption Framework for Azure Virtual Desktop User Personas](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/wvd/migrate-assess#user-personas)
 
 
 ### Focus on Security
-- [Security Best Practices](https://learn.microsoft.com/en-us/azure/virtual-desktop/security-guide)
 - [Zero Trust for Azure Virtual Desktop for the Enterprise](https://learn.microsoft.com/en-us/security/zero-trust/azure-infrastructure-avd)
+- [Security Best Practices](https://learn.microsoft.com/en-us/azure/virtual-desktop/security-guide)
 - [Cloud Adoption Framework for Azure Virtual Desktop Security & Governance](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/wvd/eslz-security-governance-and-compliance)
 
 
@@ -48,9 +35,23 @@
 - [Azure Virtual Desktop (AVD) Landing Zone Accelerator:](https://github.com/Azure/avdaccelerator)
 
 
+### Additional Resources
+- [Azure Virtual Desktop for the Enterprise](https://docs.microsoft.com/en-us/azure/architecture/example-scenario/wvd/windows-virtual-desktop)
+- [FSLogix for the Enterprise](https://docs.microsoft.com/en-us/azure/architecture/example-scenario/wvd/windows-virtual-desktop-fslogix)
+- [Cloud Adoption Framework for Azure Virtual Desktop](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/wvd/enterprise-scale-landing-zone)
+- [What's new in Azure Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/whats-new)
+- [Azure Virtual Desktop Experience Estimator](https://azure.microsoft.com/en-gb/products/virtual-desktop/assessment/#estimation-tool)
+- [Cloud Adoptation Framework for Azure Virtual Desktop: Azure Virtual Desktop design considerations](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/wvd/eslz-identity-and-access-management#azure-virtual-desktop-design-considerations)
+- [Azure Academy AVD Playlist](https://aka.ms/AzureAcademy-WVD)
+- [Azure Virtual Desktop Automation](https://github.com/Azure/avdaccelerator)
+- [Required URLs for Azure Virtual Desktop | Microsoft Learn](https://learn.microsoft.com/en-us/azure/virtual-desktop/safe-url-list?tabs=azure)
+- [Terraform for AVD with NetApp](https://github.com/Azure/terraform/tree/master/quickstart/101-azure-virtual-desktop-anf)
+
+
 ## Thank you for your time today
 
 Where can you go next?
 
 - **Tell us what you think at [aka.ms/ftalive-feedback](https://aka.ms/ftalive-feedback)** - help us improve this delivery format and let us know if this has been useful.
 - **Visit [aka.ms/ftalive](https://aka.ms/ftalive) to sign up for other topics** - they are open to everyone.
+
