@@ -2,7 +2,7 @@
 
 ## Step 1: Name Resolution
 
-When you client makes a request to the service for which you have created a Private Endpoint, does the client resolve the Private Endpoint's private IP address? 
+When you client makes a request to the service for which you have created a Private Endpoint, does the client resolve the Private Endpoint's private IP address?
 
 ### **`nslookup` Example:**
 
@@ -36,7 +36,7 @@ PS /> nslookup myprivatestorageaccount.blob.core.windows.net
     Address: 10.0.21.34
 ```
 
---> **10.0.21.34 is a private IP address from my Azure address space.** This is what you should see when your DNS is correctly configured. 
+--> **10.0.21.34 is a private IP address from my Azure address space.** This is what you should see when your DNS is correctly configured.
 
 ### DNS Configuration Checklist
 
@@ -47,10 +47,10 @@ If your client is not receiving a private IP address in response to your `nslook
   - A conditional forwarder, forwarding requests for the PaaS DNS zone (ex: 'blob.core.windows.net') to a server which has an 'A' record for the service
 - If your DNS server has a conditional forwarder:
   - Is the conditional forwarder destination IP accessible from the server? (The Azure DNS IP '168.63.129.16' is NOT reachable outside of Azure)
-  - Is the conditional forwarder zone name the name _without_ '.privatelink.' included? 
+  - Is the conditional forwarder zone name the name _without_ '.privatelink.' included?
 - If you are using Private DNS Zones:
   - Does the Private DNS Zone have an 'A' record for the Private Endpoint's service?
-  - Is the Private DNS Zone linked to the VNET of the DNS server? 
+  - Is the Private DNS Zone linked to the VNET of the DNS server?
 
 ## Step 2: Connectivity
 
