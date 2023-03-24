@@ -6,6 +6,13 @@ This overview focuses on the simple scenario of a Storage Account and Private En
 
 ## Connectivity
 
+### **Connectivity Without Private Endpoints**
+
+![Storage Account with No Private Endpoints](img/storage-account-no-pe.png)
+
+### **Connectivity With Private Endpoints**
+![Storage Account with Private Endpoints](img/storage-account-with-pe.png)
+
 **From your VNET or on-prem network to the Private Endpoint:** This connectivity and routing is similar to other traffic within and between VNETs or from on-prem to your VNET. If you already have these traffic flows working, you will not need to take additional steps.
 
 **From the Private Endpoint to the PaaS service:** You associate the PaaS service with the Private Endpoint and the platform takes care of this for you.
@@ -36,5 +43,7 @@ Private Endpoints can either be created directly or through most PaaS service ne
 ## Private Link Service
 
 For most PaaS services, a Private Link Service resides in between your Private Endpoint and the PaaS service. You do not see it or manage it; you only work with the Private Endpoint.
+
+[PaaS Service with 'Managed' Private Link Service](img/pe-overview-storage-pls.png)
 
 It is possible to provide a Private Endpoint (and thereby 'tunnel') to IaaS resources. To do this, you need to build your own Private Link Service. Private Link Services are not the focus of this content and not necessary for most Private Endpoint deployments.
