@@ -6,6 +6,8 @@ This overview focuses on the simple scenario of a Storage Account and Private En
 
 ## Connectivity
 
+When thinking about the connectivity scenarios with Private Endpoints, remember that Private Endpoints are only used for inbound traffic. The following diagrams show traffic flows for an Azure Storage Account without and with Private Endpoints.
+
 ### **Connectivity Without Private Endpoints**
 
 ![Storage Account with No Private Endpoints](img/storage-account-no-pe.png)
