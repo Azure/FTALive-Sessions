@@ -59,7 +59,9 @@ If you are using a Windows Server DNS, the conditional forwarder to send the tra
 
 ### Conditional Forwarders in Windows Server
 
-If you are using an AD domain controller or a DNS server for forwarding, your conditional forwarder should look something like:
+If you are using an AD domain controller or a DNS server for forwarding, your conditional forwarder should look something below.
+
+An alternate configuration at some customers is to forward all queries which cannot be locally resolved to your Azure DNS resolver--this is not recommended as it makes all public DNS resolution depend on your hybrid connectivity to Azure and your DNS resolvers in Azure.
 
 ![Image of conditional forwarder in AD](img/conditional-forwarder.png)
 ![Image of conditional forwarder in AD](img/conditional-forwarder2.png)
