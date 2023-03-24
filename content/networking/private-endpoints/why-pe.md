@@ -7,8 +7,10 @@ Private Endpoints are a helpful tool to *provide private network/IP address for 
 Private Endpoints can be used for the following scenarios:
 
 - Keeping workload traffic within your private network.
-- Having an assigned public IP for accessing the service, instead of having to use the variable of a service endpoint.
+- Having an assigned private IP for accessing the service, instead of having to use the variable of a service endpoint.
 - Access from your on-prem network to an Azure service via private networking (With a VPN or ExpressRoute Gateway)
 - Standardizing management to NSGs and ASGs, instead of via service specific firewalls.
 
-You should note that it isn't the only tool for securing network access to Azure services, but it is a tool that is excellent for specific security postures, and for executing practices like Zero Trust.
+You should note that it isn't the only tool for securing network access to Azure services.  Azure services have their own firewalls, and identity boundaries are important for security even with private endpoints
+
+Private endpoints provide a private networking posture for Azure resources, at the cost of additional subscription billing and management.
