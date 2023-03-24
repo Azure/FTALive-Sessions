@@ -44,6 +44,6 @@ Private Endpoints can either be created directly or through most PaaS service ne
 
 For most PaaS services, a Private Link Service resides in between your Private Endpoint and the PaaS service. You do not see it or manage it; you only work with the Private Endpoint.
 
-[PaaS Service with 'Managed' Private Link Service](img/pe-overview-storage-pls.png)
+![PaaS Service with 'Managed' Private Link Service](img/pe-overview-storage-pls.png)
 
 It is possible to provide a Private Endpoint (and thereby 'tunnel') to IaaS resources. To do this, you need to build your own Private Link Service. Private Link Services are not the focus of this content and not necessary for most Private Endpoint deployments.
