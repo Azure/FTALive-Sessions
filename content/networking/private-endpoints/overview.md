@@ -8,7 +8,7 @@ This overview focuses on the simple scenario of a Storage Account and Private En
 
 **From your VNET or on-prem network to the Private Endpoint:** This connectivity and routing is similar to other traffic within and between VNETs or from on-prem to your VNET. If you already have these traffic flows working, you will not need to take additional steps.
 
-**From the Private Endpoint to the PaaS service:** This is handled for you. You associate the PaaS service with the Private Endpoint and the platform takes care of this for you.
+**From the Private Endpoint to the PaaS service:** You associate the PaaS service with the Private Endpoint and the platform takes care of this for you.
 
 ## DNS
 
