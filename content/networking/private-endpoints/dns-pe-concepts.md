@@ -38,7 +38,9 @@ This is most commonly used in a hub and spoke methodology, such as:
 
 ![An image of a hub and spoke with Private DNS Zones](https://learn.microsoft.com/azure/architecture/guide/networking/images/private-link-hub-spoke-network-basic-hub-spoke-diagram.png)
 
-You can read more about this [here](https://learn.microsoft.com/azure/architecture/guide/networking/private-link-hub-spoke-network)
+You can read more about this [here](https://learn.microsoft.com/azure/architecture/guide/networking/private-link-hub-spoke-network).
+
+In a standard ALZ approach, your DNS zones should exist in your connectivity subscription.  They are shared resource used by every spoke vnet that you deploy for resolution, and so individual groups shouldn't deploy out their own Private DNS Zones.
 
 If you are using an Azure Landing Zone, you will most likely already have these resources created!
 
@@ -50,7 +52,8 @@ This can work great for some environments, but note that creating the private en
 
 If you are testing a single vnet implementation, this can be fine.  But for most environments, it will make sense to deploy the Private Endpoint after the resource is created.
 
->!NOTE - if you are using Infrastructure as Code, you can deploy out a Private Endpoint with the resource with the specific parameters that you need.  These instructions are for Portal deployments.
+>[!NOTE]
+> If you are using Infrastructure as Code, you can deploy out a Private Endpoint with the resource with the specific parameters that you need.  These instructions are for Portal deployments.
 
 To do so, navigate to your resources networking tab, go to Private Endpoints tab, and then select **+ Private Endpoint**.
 
@@ -65,6 +68,8 @@ From this wizard you will be prompted to provide parameters.  When you get to **
 There are two main ways that the record for your private endpoints can end up in the appropriate Private DNS Zone.
 
 First, you can manually enter them.  This works well if you need to maintain multiple DNS zones for the same name space, but isn't a common scenario.  Not only do you need to have a method to add records, you also need to clean up records when Private Endpoints are retired.  The management of this can become cumbersome, meaning that you should plan to automate it.
+
+![Private DNS Zone Group Reference](img/privatednszonegroup.png)
 
 The second, and more common, method is to use Private DNS Zone Groups.  Private DNS Zone Groups are a configuration of the Private Endpoint that associate it with a specific group for registration, meaning that it handles its registration for you.  When a PE is removed, the removal of the Zone Group ensures that its record is removed from the DNS zone.
 

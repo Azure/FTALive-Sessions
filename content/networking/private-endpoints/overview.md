@@ -11,6 +11,7 @@ This overview focuses on the simple scenario of a Storage Account and Private En
 ![Storage Account with No Private Endpoints](img/storage-account-no-pe.png)
 
 ### **Connectivity With Private Endpoints**
+
 ![Storage Account with Private Endpoints](img/storage-account-with-pe.png)
 
 **From your VNET or on-prem network to the Private Endpoint:** This connectivity and routing is similar to other traffic within and between VNETs or from on-prem to your VNET. If you already have these traffic flows working, you will not need to take additional steps.
@@ -47,3 +48,13 @@ For most PaaS services, a Private Link Service resides in between your Private E
 ![PaaS Service with 'Managed' Private Link Service](img/pe-overview-storage-pls.png)
 
 It is possible to provide a Private Endpoint (and thereby 'tunnel') to IaaS resources. To do this, you need to build your own Private Link Service. Private Link Services are not the focus of this content and not necessary for most Private Endpoint deployments.
+
+Sometimes it can be confusing to navigate the relationship between the Private Link and Private Endpoint services, and so customer organizations can be unsure about what they need to set up.  To help clarify:
+
+- Private Link is a broad service that allows for private connectivity.
+- You can go to the Private Link Center to manage both Private Endpoints, Private Link Services, and Azure Arc and Azure Monitor private link scopes.
+- Private Endpoints are connections in to Private Links for resources.
+- You use a Private Endpoint to connect to a service from your virtual network.
+- You create a Private Link to enable others to connect to your service from their virtual networks via a Private Endpoint
+- Having a Private Link lets others make Private Endpoints.
+- To give access to an Azure service, like a Storage Account, you generally only need a Private Endpoint.  The "Private Link Service" is provided on the Azure management side and is backed in to the service.
