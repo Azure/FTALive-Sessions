@@ -35,7 +35,7 @@ This overview focuses on the simple scenario of a Storage Account and Private En
 1. The client sends their storage request to **10.0.20.34**
 
 >[!NOTE]
-Most PaaS services use TLS certificates to encrypt data in transit. When the client makes a request of the service, the service responds with a certificate. In order for the client to trust the certificate, the name used in the request (such as `mystorageaccount.blob.core.windows.net`) must match the name on the certificate the PaaS service provides back to the client. Azure does not have a way to add custom names to these certificates, which is why we need to override the pubic DNS name resolution, instead of being able to use an alternate name mapped to the private IP.
+>Most PaaS services use TLS certificates to encrypt data in transit. When the client makes a request of the service, the service responds with a certificate. In order for the client to trust the certificate, the name used in the request (such as `mystorageaccount.blob.core.windows.net`) must match the name on the certificate the PaaS service provides back to the client. Azure does not have a way to add custom names to these certificates, which is why we need to override the pubic DNS name resolution, instead of being able to use an alternate name mapped to the private IP.
 
 ## Creating a Private Endpoint
 
