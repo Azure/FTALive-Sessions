@@ -28,7 +28,18 @@ You *can* but management for that will become very difficult.  It involves const
 
 A common challenge is that organizations wish to use their own zone names for the resources.  While some services offer the option to set custom domain names, most need to use the existing domains.  This is because the certificates used for communication are set to expect specific CN records; if you change these, the traffic will not be permitted.
 
-## Private DNS Zone Duplication
+## DNS Options in Azure
+
+There are two primary options to consider for creating DNS records for your Private Endpoint resources:
+
+- **Private DNS Zones:** Private DNS Zones are Azure's native Private DNS offering and integrate with the default Azure-provided DNS service. Using Private DNS Zones with your Private Endpoints enables automated DNS record management for your Private Endpoints, improving scale and ease of management.
+- **Custom DNS servers:** Custom DNS servers are when you bring your own DNS servers to Azure point your DNS clients to them. Commonly, these are Windows Domain Controllers hosting an extension of your on-prem DNS services. Custom DNS servers can be combined with Private DNS zones to provide both the consistency of your extended DNS service and the flexibility of Private DNS Zones. Alternatively, you can skip Private DNS Zones altogether and create 'A' DNS records for your Private Endpoints directly in your Custom DNS server--this is usually not recommended because it scales poorly without significant automation investment.
+
+## Using Private DNS Zones with Private Endpoints
+
+When using Private DNS Zones as the DNS name registration solution for your Private Endpoints requires some upfront consideration. Determining where your Private DNS Zone resources will be located and how they will be shared should be done before brining Private Endpoints into production. 
+
+### Private DNS Zone Duplication
 
 There are many ways to deploy your Azure Private DNS Zones - you can have duplicate zones through the environment, or one zone for each namespace that is reused.
 
@@ -63,16 +74,16 @@ From this wizard you will be prompted to provide parameters.  When you get to **
 
 ![An image of the Step 4 DNS screen from creating a Private Endpoint](img/dns-make-PE-2.png)
 
-## Private DNS Zone Groups
+### Private DNS Zone Groups
 
 There are two main ways that the record for your private endpoints can end up in the appropriate Private DNS Zone.
 
-First, you can manually enter them.  This works well if you need to maintain multiple DNS zones for the same name space, but isn't a common scenario.  Not only do you need to have a method to add records, you also need to clean up records when Private Endpoints are retired.  The management of this can become cumbersome, meaning that you should plan to automate it.
-
-![Private DNS Zone Group Reference](img/privatednszonegroup.png)
-
-The second, and more common, method is to use Private DNS Zone Groups.  Private DNS Zone Groups are a configuration of the Private Endpoint that associate it with a specific group for registration, meaning that it handles its registration for you.  When a PE is removed, the removal of the Zone Group ensures that its record is removed from the DNS zone.
+The first, and more common, method is to use Private DNS Zone Groups.  Private DNS Zone Groups are a configuration of the Private Endpoint that associate it with a specific group for registration, meaning that it handles its registration for you.  When a PE is removed, the removal of the Zone Group ensures that its record is removed from the DNS zone.
 
 ![An image of the DNS configuration screen of a private endpoint](img/dns-zone-groups.png)
 
 While you can have multiple configurations for different name spaces, a private endpoint can only have one configuration for a specific namespace.  So in this scenario, the Private DNS Zone Group links to the authoritative namespace for the solution.
+
+Second, you can manually enter them.  This works well if you need to maintain multiple DNS zones for the same name space, but isn't a common scenario.  Not only do you need to have a method to add records, you also need to clean up records when Private Endpoints are retired.  The management of this can become cumbersome, meaning that you should plan to automate it.
+
+![Private DNS Zone Group Reference](img/privatednszonegroup.png)

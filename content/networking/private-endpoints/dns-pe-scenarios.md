@@ -15,7 +15,7 @@ In whatever DNS solution you are using, you add a record for your private resour
 
 ## Private DNS Zone Only
 
-This is the simplest configuration, and a great place to start when testing the flow.  In production, this would only be used for an environment where you can perform *all* of your Private IP resolution from an Azure Private DNS Zone.
+This is the simplest configuration, and a great place to start when testing the flow or for Azure-only environments.  In production, this would only be used for an environment where you can perform *all* of your Private IP resolution from an Azure Private DNS Zone.
 
 The over all flow for DNS resolution here is:
 

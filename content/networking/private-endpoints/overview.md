@@ -2,11 +2,11 @@
 
 In the simplest scenario, Private Endpoints logically create a 'tunnel' from your VNET to a PaaS service instance, eliminating the need for a pubic endpoint to access the PaaS service. In order for clients to use the Private Endpoint (private IP) when accessing the PaaS service, you override the DNS name resolution for the service, so that a name which previously resolved to a Microsoft public IP address instead resolves to the private IP address.
 
-This overview focuses on the simple scenario of a Storage Account and Private Endpoint for the blob service. More complex Private Endpoint scenarios, such as when the PaaS service does not have a unique DNS name per instance or when using a Private Link Service are much easier to grasp once you understand the basic scenario.
+This overview focuses on the simple scenario of a Storage Account and Private Endpoint for the blob service. More complex Private Endpoint scenarios, such as when the PaaS service does not have a unique DNS name per instance or when using a Private Link Service are much easier to grasp once you understand this basic scenario.
 
 ## Connectivity
 
-When thinking about the connectivity scenarios with Private Endpoints, remember that Private Endpoints are only used for inbound traffic. The following diagrams show traffic flows for an Azure Storage Account without and with Private Endpoints.
+When thinking about the connectivity with Private Endpoints, remember that Private Endpoints are only used for inbound traffic. The following diagrams show traffic flows for an Azure Storage Account without and with Private Endpoints.
 
 ### **Connectivity Without Private Endpoints**
 
@@ -32,7 +32,7 @@ When thinking about the connectivity scenarios with Private Endpoints, remember 
 **With Private Endpoints - Storage Account Example:**
 
 1. A client requests a name be resolved to an IP address by DNS - for example: `mystorageaccount.blob.core.windows.net`.
-1. Conceptually, the client's configured DNS server is configured ignore Microsoft DNS and resolve the name `mystorageaccount.blob.core.windows.net` itself.
+1. Conceptually, the client's configured DNS server is configured bypass Microsoft DNS and resolve the name `mystorageaccount.blob.core.windows.net` internally.
 1. The client's DNS server responds to the query with a private IP address corresponding to the Private Endpoint - for example: **10.0.20.34**
 1. The client sends their storage request to **10.0.20.34**
 
@@ -45,11 +45,11 @@ Private Endpoints can either be created directly or through most PaaS service ne
 
 ## Private Link Service
 
-For most PaaS services, a Private Link Service resides in between your Private Endpoint and the PaaS service. You do not see it or manage it; you only work with the Private Endpoint.
+For most PaaS services, a Private Link Service (or equivalent functionality) resides in between your Private Endpoint and the PaaS service. You do not see it or manage it; you only work with the Private Endpoint.
 
 ![PaaS Service with 'Managed' Private Link Service](img/pe-overview-storage-pls.png)
 
-It is possible to provide a Private Endpoint (and thereby 'tunnel') to IaaS resources. To do this, you need to build your own Private Link Service. Private Link Services are not the focus of this content and not necessary for most Private Endpoint deployments.
+For IaaS/non-PaaS services, it is possible to provide a Private Endpoint (and thereby 'tunnel') to access resources, usually from another disconnected VNET. To do this, you need to build your own Private Link Service. Private Link Services are not the focus of this content and not necessary for most Private Endpoint deployments.
 
 Sometimes it can be confusing to navigate the relationship between the Private Link and Private Endpoint services, and so customer organizations can be unsure about what they need to set up.  To help clarify:
 

@@ -4,7 +4,7 @@ This section reviews some common field observations for designing your network t
 
 ## Resource Firewall
 
-Just having private endpoints doesn't prevent most resources from accempting ingress from their public endpoint.  To secure, you need to deny access from the resources firewall.
+Just having private endpoints doesn't prevent most resources from accepting traffic from their public endpoint.  To take advantage of the network isolation provided by private endpoints, you must also **deny public access on the resources service firewall**.
 
 ## Network Policies
 
