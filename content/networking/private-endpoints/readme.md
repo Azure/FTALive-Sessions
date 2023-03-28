@@ -20,6 +20,6 @@
 
 ## Additional Resources
 
-[Private Endpoint DNS Configuration](https://learn.microsoft.com/azure/private-link/private-endpoint-dns)
-[Tutorial: Create and Connect to a Storage Account with Private Endpoints](https://learn.microsoft.com/azure/private-link/tutorial-private-endpoint-storage-portal)
-[Private Endpoints at Scale](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale)
+- [Private Endpoint DNS Configuration](https://learn.microsoft.com/azure/private-link/private-endpoint-dns)
+- [Tutorial: Create and Connect to a Storage Account with Private Endpoints](https://learn.microsoft.com/azure/private-link/tutorial-private-endpoint-storage-portal)
+- [Private Endpoints at Scale](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale)
