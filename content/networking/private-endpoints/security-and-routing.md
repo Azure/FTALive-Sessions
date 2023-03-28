@@ -29,7 +29,7 @@ The [Security Baseline for Azure Private Link](https://learn.microsoft.com/secur
 
 Follow these guidelines to help plan for your Vnet and Subnet design:
 
-- Place Private Endpoints in the same virtual network as the services that consume them, following spoke practices of having resources for a given workload in a single subscription or subnet.
+- Place Private Endpoints in the same virtual network as the services that consume them, following spoke practices of having resources for a given workload in a single subscription or vnet.
 - Use different resources between environments - do not try to reuse the same storage account between development and production environments, with the idea of using different private endpoints for isolation.
 - Plan to deploy only one private endpoint for a given resource for main use; plan to have a second for failover if there is a network outage in your region.
   - Plan how you will address DNS as part of your failover.

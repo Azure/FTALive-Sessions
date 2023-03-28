@@ -3,14 +3,14 @@
 Now that we have some of the main concepts for DNS and Private Endpoints matched out, lets talk about the three resolution scenarios that you can plan to adopt:
 
 - **Private DNS Zone Only** - for environments that are hosted in Azure and only need to resolve private IPs backed by Azure Private DNS Zone.
-- **Custom DNS Resolution in Azure** - for environments that are hosted in Azure and need to resolve private IPs back by Azure Private DNS Zone as well as by your DNS forwarder, such as Azure Firewall with DNS Proxy, Windows Server DNS, Infoblox, or some other solution.  Azure Private DNS Resolver can also come in to play here.
+- **Custom DNS Resolution in Azure** - for environments that are hosted in Azure and need to resolve private IPs backed by Azure Private DNS Zone as well as by your DNS forwarder or solution, such as Windows Server DNS, Infoblox, or some other solution.  Azure Private DNS Resolver can also come in to play here.
 - **Hybrid DNS Resolution** - for the environments hosted in Azure or in other data centers, that need to be able to resolve to each other.  Effectively, Azure-to-Azure, Azure-to-On-Prem, and On-prem-to-Azure are needed.
 
 Most customers will need **Hybrid DNS Resolution**, and you should be prepared to implement that.  However, discussing these different solutions helps you build up an understanding of why you need that solution, and can help you with troubleshooting later.
 
 In whatever DNS solution you are using, you add a record for your private resource, using the Public DNS zone forwarders found [here](https://learn.microsoft.com/azure/private-link/private-endpoint-dns#azure-services-dns-zone-configuration).
 
-> **Warning**
+> [!WARNING]
 > One major call out is that Private DNS Zones and Conditional Forwarders are not always 1:1.  For example, Key Vault requires forwarders for `vault.azure.net` & `vaultcore.azure.net`, but a Private DNS Zone for `privatelink.vaultcore.azure.net` only.  Implementing just one of the forwarding zones can create intermittent issues and caching of the incorrect IP address, creating issues.  Consult the table in the above article to plan your DNS needs for a service.
 
 ## Private DNS Zone Only
@@ -49,7 +49,6 @@ It should be noted that these DNS forwarders can be many different kinds of reso
 
 - Azure Private DNS Resolvers
 - Windows Server DNS Server or AD Domain Controller
-- An Azure Firewall with DNS Proxy enabled
 - A third party DNS solution
 
 When setting this up, the DNS zone should be connected to the virtual networks where the DNS forwarding mechanics are.
@@ -57,6 +56,10 @@ When setting this up, the DNS zone should be connected to the virtual networks w
 If you are using a Windows Server DNS, the conditional forwarder to send the traffic to the Azure IP would look like:
 
 ![Picture of DNS settings on Vnet](img/dns-vnet-example.png)
+
+### Azure Firewall as DNS Proxy
+
+An Azure Firewall has a DNS Proxy that enables it to receive DNS requests and forward them to another location.  This can be helpful for some resolution paths, but because it cannot send to multiple locations, it doesn't work for scenarios where you need to send some traffic to the Azure DNS resolver, and some traffic to an on-prem resource.
 
 ### Conditional Forwarders in Windows Server
 

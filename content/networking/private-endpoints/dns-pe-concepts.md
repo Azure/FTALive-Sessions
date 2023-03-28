@@ -1,24 +1,10 @@
 # DNS Private Endpoint Concepts -  what you need to know for Private Endpoints
 
-> This is not an over all guide for DNS in Azure, but rather specific guidance for Private Endpoints.  We will need to talk about some Private DNS Zone management concepts as part of this.
+> [!NOTE] This is not an over all guide for DNS in Azure, but rather specific guidance for Private Endpoints.  We will need to talk about some Private DNS Zone management concepts as part of this.
 
 Your *Domain Name System* or DNS is a critical part of your Private Endpoint configuration.  Most Private Endpoint implementations run in to challenges at this level, so having a clear plan for how you are resolving the names of the private endpoints is critical.
 
 The guide for [DNS resolution for Private Endpoints](https://learn.microsoft.com/azure/private-link/private-endpoint-dns) covers this information in detail - but this portion is to make some of the concepts in the broader document actionable.
-
-## Why does DNS matter for Private Endpoints?
-
-For public access, your services in Azure might share public IPs and use domain name routing to determine direction to the appropriate service.  This means that traffic needs to still contain the right header when accessing the service, in order for it to find the right backend.
-
-In addition, security settings also look for the header - this prevents certain kinds of attacks or misdirection, and is critical for the protection of the service.
-
-In addition, your Azure service still has its public DNS resolution.  So without a DNS change, your traffic will resolve to the public endpoint, not the private one.
-
-You need to plan to have requests to your service resolve to the IP address of the Private Endpoint.
-
-This is made easier by an alias being created for most services when you set up a Private Endpoint.  If you do a DNS Lookup on your service, you will see an alias for a corresponding `privatelink` domain.
-
-For example, if you perform an NS lookup for `mysa.blob.core.windows.net` that has a Private Endpoint enabled, you will get an alias for `mysa.privatelink.blob.core.windows.net`.  This tells the requesting machine to look up that domain name.  But providing resolution for this domain name, you can redirect towards your private endpoint.
 
 ## Why can't I just use my own DNS and manually update IP addresses?
 
@@ -35,9 +21,9 @@ There are two primary options to consider for creating DNS records for your Priv
 - **Private DNS Zones:** Private DNS Zones are Azure's native Private DNS offering and integrate with the default Azure-provided DNS service. Using Private DNS Zones with your Private Endpoints enables automated DNS record management for your Private Endpoints, improving scale and ease of management.
 - **Custom DNS servers:** Custom DNS servers are when you bring your own DNS servers to Azure point your DNS clients to them. Commonly, these are Windows Domain Controllers hosting an extension of your on-prem DNS services. Custom DNS servers can be combined with Private DNS zones to provide both the consistency of your extended DNS service and the flexibility of Private DNS Zones. Alternatively, you can skip Private DNS Zones altogether and create 'A' DNS records for your Private Endpoints directly in your Custom DNS server--this is usually not recommended because it scales poorly without significant automation investment.
 
-## Using Private DNS Zones with Private Endpoints
+## Private DNS Zone Management
 
-When using Private DNS Zones as the DNS name registration solution for your Private Endpoints requires some upfront consideration. Determining where your Private DNS Zone resources will be located and how they will be shared should be done before brining Private Endpoints into production. 
+When using Private DNS Zones as the DNS name registration solution for your Private Endpoints requires some upfront consideration. Determining where your Private DNS Zone resources will be located and how they will be shared should be done before brining Private Endpoints into production.
 
 ### Private DNS Zone Duplication
 
@@ -80,10 +66,10 @@ There are two main ways that the record for your private endpoints can end up in
 
 The first, and more common, method is to use Private DNS Zone Groups.  Private DNS Zone Groups are a configuration of the Private Endpoint that associate it with a specific group for registration, meaning that it handles its registration for you.  When a PE is removed, the removal of the Zone Group ensures that its record is removed from the DNS zone.
 
-![An image of the DNS configuration screen of a private endpoint](img/dns-zone-groups.png)
+![Private DNS Zone Group Reference](img/privatednszonegroup.png)
 
 While you can have multiple configurations for different name spaces, a private endpoint can only have one configuration for a specific namespace.  So in this scenario, the Private DNS Zone Group links to the authoritative namespace for the solution.
 
-Second, you can manually enter them.  This works well if you need to maintain multiple DNS zones for the same name space, but isn't a common scenario.  Not only do you need to have a method to add records, you also need to clean up records when Private Endpoints are retired.  The management of this can become cumbersome, meaning that you should plan to automate it.
+![An image of the DNS configuration screen of a private endpoint](img/dns-zone-groups.png)
 
-![Private DNS Zone Group Reference](img/privatednszonegroup.png)
+Second, you can manually enter them.  This works well if you need to maintain multiple DNS zones for the same name space, but isn't a common scenario.  Not only do you need to have a method to add records, you also need to clean up records when Private Endpoints are retired.  The management of this can become cumbersome, meaning that you should plan to automate it.
