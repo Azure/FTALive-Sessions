@@ -1,5 +1,7 @@
 # Special Case - Azure Monitor and Azure Monitor Private Link Scopes
 
+[home](./readme.md)
+
 Azure Monitor takes a different approach when implementing Private Endpoints than many other Azure services because all Azure Monitor customers share the same Azure Monitor DNS names when accessing the service. Because of this, the public DNS resolution for the Azure Monitor service domain names need to work for both public and Private Endpoint customers. Further, due to the service design, a new intermediary resource called an Azure Monitor Private Link Scope (AMPLS) is needed between the Private Endpoint and the backend services.
 
 ## Connectivity
@@ -38,3 +40,5 @@ For other services, creating and linking a *privatelink* Private DNS Zone to you
 [Use Azure Private Link to connect networks to Azure Monitor](https://learn.microsoft.com/azure/azure-monitor/logs/private-link-security)
 
 [How Azure Monitor's Implementation of Private Link Differs from Other Services](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/how-azure-monitor-s-implementation-of-private-link-differs-from/ba-p/3608938)
+
+[home](./readme.md)

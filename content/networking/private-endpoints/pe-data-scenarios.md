@@ -1,5 +1,7 @@
 # Special Case - Azure Data Factory, Synapse, and Purview
 
+[home](./readme.md)
+
 Azure Data Factory, it's successor Synapse, and the data governance tool Purview all have special considerations for Private Endpoint.
 
 While these services are different, they do have a shared set of commonalities
@@ -39,3 +41,5 @@ Then, from your data sources in Azure, you create Private Endpoints to enable ac
 This provides a great way to securely access your Azure PaaS services over a private endpoint, without having to manage and update your own runtime.  However, because it is occurring via a separate connection, you won't have visibility from it through your network in the same way.  This doesn't represent a significant visibility breach for most organizations, but highly regulated industries may need to determine if it is compliant with their audits.
 
 It should also be noted that this doesn't work well for access to on-prem - while solutions exist, they tend to be more difficult to manage than a self-hosted integration runtime itself.
+
+[home](./readme.md)
