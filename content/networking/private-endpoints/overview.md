@@ -1,5 +1,7 @@
 # How Private Endpoints Work
 
+[prev](./field-experience.md) | [home](./readme.md)  | [next](./dns-pe-concepts.md)
+
 In the simplest scenario, Private Endpoints logically create a 'tunnel' from your VNET to a PaaS service instance, eliminating the need for a pubic endpoint to access the PaaS service. In order for clients to use the Private Endpoint (private IP) when accessing the PaaS service, you override the DNS name resolution for the service, so that a name which previously resolved to a Microsoft public IP address instead resolves to the private IP address.
 
 This overview focuses on the simple scenario of a Storage Account and Private Endpoint for the blob service. More complex Private Endpoint scenarios, such as when the PaaS service does not have a unique DNS name per instance or when using a Private Link Service are much easier to grasp once you understand this basic scenario.
@@ -60,3 +62,5 @@ Sometimes it can be confusing to navigate the relationship between the Private L
 - You create a Private Link to enable others to connect to your service from their virtual networks via a Private Endpoint
 - Having a Private Link lets others make Private Endpoints.
 - To give access to an Azure service, like a Storage Account, you generally only need a Private Endpoint.  The "Private Link Service" is provided on the Azure management side and is backed in to the service.
+
+[prev](./field-experience.md) | [home](./readme.md)  | [next](./dns-pe-concepts.md)

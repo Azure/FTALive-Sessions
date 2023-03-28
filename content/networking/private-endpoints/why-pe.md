@@ -1,5 +1,7 @@
 # Why use Private Endpoints?
 
+[prev](./readme.md) | [home](./readme.md)  | [next](./field-experience.md)
+
 Private Endpoints are a helpful tool to *provide private network/IP address for Azure services*.  They work with Azure Private Link to project the equivalent of a NIC resources for an Azure service not running in your virtual network, like a Storage Account or SQL Database.
 
 ![Private Endpoint Example](./img/pe-example.png)
@@ -14,3 +16,5 @@ Private Endpoints can be used for the following scenarios:
 You should note that it isn't the only tool for securing network access to Azure services.  Azure services have their own firewalls, and identity boundaries are important for security even with private endpoints
 
 Private endpoints provide a private networking posture for Azure resources, at the cost of additional subscription billing and overhead.
+
+[prev](./readme.md) | [home](./readme.md)  | [next](./field-experience.md)

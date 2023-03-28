@@ -1,5 +1,7 @@
 # What we see in the field at Fast Track for Azure
 
+[prev](./why-pe.md) | [home](./readme.md)  | [next](./overview.md)
+
 When working with customers, we often see the following:
 
 - Customers who want to leverage Private Endpoints for security purposes, enable them, but fail to complete all of the required configuration.
@@ -12,3 +14,5 @@ When working with customers, we often see the following:
 These are all scenarios that can be addressed, but being forewarned about how to adopt Private Endpoints for a workload can save a lot of effort.
 
 >[!NOTE] - We aren't going to be talking about Private Link service - just focus on Private Endpoints.
+
+[prev](./why-pe.md) | [home](./readme.md)  | [next](./overview.md)

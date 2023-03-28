@@ -9,6 +9,7 @@
 - [How Private Endpoints Work](overview.md)
 - [DNS Concepts for Private Endpoints](dns-pe-concepts.md)
 - [DNS Configuration Scenarios for Private Endpoints](dns-pe-scenarios.md)
+- [Troubleshooting Private Endpoints](troubleshooting.md)
 - [Network Design for Private Endpoints](security-and-routing.md)
 
 ### Special Cases

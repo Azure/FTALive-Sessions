@@ -1,5 +1,7 @@
 # Troubleshooting Private Endpoints
 
+[prev](./dns-pe-scenarios.md) | [home](./readme.md)  | [next](./security-and-routing.md)
+
 ## Step 1: Name Resolution
 
 When you client makes a request to the service for which you have created a Private Endpoint, does the client resolve the Private Endpoint's private IP address?
@@ -63,3 +65,5 @@ If you are receiving the correct private IP address in response to DNS queries f
   - If you are connecting from on-prem, is your ExpressRoute or VPN functioning?
 - Is there a firewall between the client and Private Endpoint blocking the traffic?
   - Check on-prem firewalls for on-prem clients, central firewalls in Azure, and NSGs associated with the Private Endpoint
+
+[prev](./dns-pe-scenarios.md) | [home](./readme.md)  | [next](./security-and-routing.md)

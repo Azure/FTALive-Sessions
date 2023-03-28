@@ -1,5 +1,7 @@
 # Private Endpoint Resolution Scenarios
 
+[prev](./dns-pe-concepts.md) | [home](./readme.md)  | [next](./troubleshooting.md)
+
 Now that we have some of the main concepts for DNS and Private Endpoints matched out, lets talk about the three resolution scenarios that you can plan to adopt:
 
 - **Private DNS Zone Only** - for environments that are hosted in Azure and only need to resolve private IPs backed by Azure Private DNS Zone.
@@ -91,3 +93,5 @@ On-prem resources will operate in the following way:
 - The responses will be returned, and the Client VM can access the endpoint over the VPN or ExpressRoute.
 
 As new resources are deployed to the Private DNS Zone, no additional configuration on the internal DNS is needed.  You do need to add a new conditional forwarder for net new zones, but management afterwards is reduced.
+
+[prev](./dns-pe-concepts.md) | [home](./readme.md)  | [next](./troubleshooting.md)

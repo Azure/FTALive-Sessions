@@ -1,5 +1,7 @@
 # DNS Private Endpoint Concepts -  what you need to know for Private Endpoints
 
+[prev](./overview.md) | [home](./readme.md)  | [next](./dns-pe-scenarios.md)
+
 > [!NOTE] This is not an over all guide for DNS in Azure, but rather specific guidance for Private Endpoints.  We will need to talk about some Private DNS Zone management concepts as part of this.
 
 Your *Domain Name System* or DNS is a critical part of your Private Endpoint configuration.  Most Private Endpoint implementations run in to challenges at this level, so having a clear plan for how you are resolving the names of the private endpoints is critical.
@@ -73,3 +75,5 @@ While you can have multiple configurations for different name spaces, a private 
 ![An image of the DNS configuration screen of a private endpoint](img/dns-zone-groups.png)
 
 Second, you can manually enter them.  This works well if you need to maintain multiple DNS zones for the same name space, but isn't a common scenario.  Not only do you need to have a method to add records, you also need to clean up records when Private Endpoints are retired.  The management of this can become cumbersome, meaning that you should plan to automate it.
+
+[prev](./overview.md) | [home](./readme.md)  | [next](./dns-pe-scenarios.md)

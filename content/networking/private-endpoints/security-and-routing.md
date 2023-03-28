@@ -1,5 +1,7 @@
 # Network Design for Private Endpoints
 
+[prev](./troubleshooting.md) | [home](./readme.md)  | [next](./readme.md)
+
 This section reviews some common field observations for designing your network to use private endpoints, from a security and routing perspective.
 
 ## Resource Firewall
