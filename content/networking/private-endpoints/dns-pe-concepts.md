@@ -25,7 +25,7 @@ There are two primary options to consider for creating DNS records for your Priv
 
 ## Private DNS Zone Management
 
-When using Private DNS Zones as the DNS name registration solution for your Private Endpoints requires some upfront consideration. Determining where your Private DNS Zone resources will be located and how they will be shared should be done before brining Private Endpoints into production.
+When using Private DNS Zones as the DNS name registration solution for your Private Endpoints requires some upfront consideration. Determining where your Private DNS Zone resources will be located and how they will be shared should be done before bringing Private Endpoints into production.
 
 ### Private DNS Zone Duplication
 

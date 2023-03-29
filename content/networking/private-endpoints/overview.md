@@ -28,7 +28,7 @@ The following diagrams show traffic flows for an Azure Storage Account without a
 
 1. A client requests a name be resolved to an IP address by DNS - for example: `mystorageaccount.blob.core.windows.net`.
 1. The client's configured DNS server queries Microsoft's DNS servers (which are authoritative 'blob.core.windows.net')
-1. Microsoft's DNS servers respond with a public corresponding to the Storage cluster where the Storage Account resides - for example: **20.60.128.228**
+1. Microsoft's DNS servers respond with a public IP corresponding to the Storage cluster where the Storage Account resides - for example: **20.60.128.228**
 1. The client sends their storage request to **20.60.128.228**
 
 **With Private Endpoints - Storage Account Example:**
