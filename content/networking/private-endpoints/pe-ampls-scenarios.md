@@ -8,7 +8,9 @@ Azure Monitor takes a different approach when implementing Private Endpoints tha
 
 ### Azure Monitor Private Link Scope
 
-When you want to make your Azure Monitor resources--such as a Log Analytics Workspace--accessible only over a Private Endpoint, you need to create an Azure Monitor Private Link Scope. The topology is shown below:
+When you want to make your Azure Monitor resources--such as a Log Analytics Workspace--accessible only from your private network, you need to create an Azure Monitor Private Link Scope. Then, instead of associating a Private Endpoint to each Azure Monitor service, you associate the Private Endpoint to the AMPLS service, and proceed to lock down your Azure Monitor services by specifying on each that connections are only allowed through your AMPLS.
+
+The topology is shown below:
 
 ![Azure Monitor Private Link Scope Topology](img/ampls-basic-topology.png)
 
