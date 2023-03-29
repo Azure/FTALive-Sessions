@@ -53,6 +53,7 @@ If your client is not receiving a private IP address in response to your `nslook
 - If you are using Private DNS Zones:
   - Does the Private DNS Zone have an 'A' record for the Private Endpoint's service?
   - Is the Private DNS Zone linked to the VNET of the DNS server?
+    ![Screenshot showing Private DNS Zone linked to VNET](img/pdns-vnet-link.png)
 
 ## Step 2: Connectivity
 
@@ -61,6 +62,7 @@ If you are receiving the correct private IP address in response to DNS queries f
 ### Connectivity Troubleshooting Checklist
 
 - Is the PaaS service associated with the Private Endpoint and is the connection in an 'Approved' state?
+  ![Private Endpoint in Private Link Center showing Approved State](img/pe-approved.png)
 - Does traffic leaving the client have a route to the private IP address?
   - If you are connecting from on-prem, is your ExpressRoute or VPN functioning?
 - Is there a firewall between the client and Private Endpoint blocking the traffic?

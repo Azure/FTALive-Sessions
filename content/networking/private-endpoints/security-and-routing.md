@@ -64,3 +64,5 @@ If you enable the network policies as defined above, and then provide an overlap
 ![A /32 route advertised by a private endpoint being disabled by a route table](img/routingupdate.png)
 
 This vastly improves the ability to manage routing to Private Endpoints via NVAs.
+
+[prev](./troubleshooting.md) | [home](./readme.md)  | [next](./readme.md)
