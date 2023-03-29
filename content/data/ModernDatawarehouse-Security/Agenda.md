@@ -9,7 +9,7 @@
 
       Kathryn Varral
       Liliam Leme
-      Jose Moreno
+      Matteo T
 
 
 ## Agenda
