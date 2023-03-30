@@ -78,6 +78,8 @@ Other options for DNS forwarding will have their own options.
 
 This scenario is the most common used by organizations in the field, because it allows for you to resolve Azure private endpoints from on-prem, and also builds in the ability to resolve on-prem resources from Azure.  While it has the most complex setup, it provides the best management moving forward, and is very resilient.
 
+> [!NOTE] The Azure provided DNS service cannot be accessed directly by non-Azure resources.  This topology uses the conditional forwarders in Azure to facilitate this communication.
+
 This scenario builds upon the concepts already established in the other two scenarios.
 
 The following diagram can help us envision the scenario:
