@@ -7,10 +7,10 @@
 
 Agenda
 1. [Azure Classic Migration Overview](./overview.md)
-2. [Validate Stage](./validate.md)
-3. [Prepare Stage](./prepare.md)
-4. [Commit and Abort Stages](./migrate.md)
-5. [Pre-Migration Planning](./premigration.md)
+2. [Pre-Migration Planning](./premigration.md)
+3. [Validate Stage](./validate.md)
+4. [Prepare Stage](./prepare.md)
+5. [Commit and Abort Stages](./migrate.md)
 6. [Post-Migration Activities](./postmigration.md)
 7. [Common Blockers and FAQ](./blockers.md)
 8. [Additional Resources](./resources.md)
