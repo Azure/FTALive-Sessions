@@ -31,7 +31,7 @@ In order to be successful with Private Endpoints, there are several key concepts
 
 - [Special Case - Storage Accounts](pe-sa-scenarios.md) - An overview of some special considerations for Azure Storage Accounts.
 - [Special Case - Azure Data Factory, Synapse, and Purview](pe-data-scenarios.md) - An overview of some of the special considerations of the data pipeline services in Azure.
-- [Special Case - Azure Monitor Private Link Service](pe-ampls-scenarios.md) - An overview of the special considerations when using Private Endpoints for Azure Monitor.
+- [Special Case - Private Link Scopes](pe-pls-scenarios.md) - An overview of the special considerations when using Private Endpoints for services like Azure Monitor.
 
 ## Additional Resources
 

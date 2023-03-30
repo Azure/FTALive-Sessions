@@ -1,14 +1,14 @@
-# Special Case - Azure Monitor and Azure Monitor Private Link Scopes
+# Special Case -  Private Link Scopes
 
 [home](./readme.md)
 
-Azure Monitor takes a different approach when implementing Private Endpoints than many other Azure services because all Azure Monitor customers share the same Azure Monitor DNS names when accessing the service. Because of this, the public DNS resolution for the Azure Monitor service domain names need to work for both public and Private Endpoint customers. Further, due to the service design, a new intermediary resource called an Azure Monitor Private Link Scope (AMPLS) is needed between the Private Endpoint and the backend services.
+Some services, such as Azure Monitor, need different approach when implementing Private Endpoints because the services do not have unique per-resource or per-customer names. Because of this, the public DNS resolution for these service domain names need to work for both public and Private Endpoint customers. Further, due to the service design, a intermediary resource called an Private Link Scope (PLS) is needed between the Private Endpoint and the backend services.
 
 ## Connectivity
 
-### Azure Monitor Private Link Scope
+### Azure Monitor Private Link Scope Example
 
-When you want to make your Azure Monitor resources--such as a Log Analytics Workspace--accessible only from your private network, you need to create an Azure Monitor Private Link Scope. Then, instead of associating a Private Endpoint to each Azure Monitor service, you associate the Private Endpoint to the AMPLS service, and proceed to lock down your Azure Monitor services by specifying on each that connections are only allowed through your AMPLS.
+When you want to make your Azure Monitor resources--such as a Log Analytics Workspace--accessible only from your private network, you need to create an Azure Monitor Private Link Scope (AMPLS). Then, instead of associating a Private Endpoint to each Azure Monitor service, you associate the Private Endpoint to the AMPLS service, and proceed to lock down your Azure Monitor services by specifying on each that connections are only allowed through your AMPLS. Depending on the AMPLS settings, clients may continue be able to access public endpoint Azure Monitor services through your AMPLS for those you have not locked down.
 
 The topology is shown below:
 
@@ -39,8 +39,8 @@ For other services, creating and linking a *privatelink* Private DNS Zone to you
 
 ## More Information
 
-[Use Azure Private Link to connect networks to Azure Monitor](https://learn.microsoft.com/azure/azure-monitor/logs/private-link-security)
-
-[How Azure Monitor's Implementation of Private Link Differs from Other Services](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/how-azure-monitor-s-implementation-of-private-link-differs-from/ba-p/3608938)
+- [Use Azure Private Link to connect networks to Azure Monitor](https://learn.microsoft.com/azure/azure-monitor/logs/private-link-security)
+- [Private Link Scope impact on other traffic](https://learn.microsoft.com/azure/azure-monitor/logs/private-link-security#azure-monitor-private-links-rely-on-your-dns)
+- [How Azure Monitor's Implementation of Private Link Differs from Other Services](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/how-azure-monitor-s-implementation-of-private-link-differs-from/ba-p/3608938)
 
 [home](./readme.md)
