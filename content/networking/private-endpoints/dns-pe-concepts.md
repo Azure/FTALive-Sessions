@@ -39,7 +39,7 @@ This is most commonly used in a hub and spoke methodology, such as:
 
 You can read more about this [here](https://learn.microsoft.com/azure/architecture/guide/networking/private-link-hub-spoke-network).
 
-In a standard ALZ approach, your DNS zones should exist in your connectivity subscription.  They are shared resource used by every spoke vnet that you deploy for resolution, and so individual groups shouldn't deploy out their own Private DNS Zones.
+In a standard ALZ approach, your DNS zones should exist in your connectivity subscription.  They are shared resource used by every spoke VNET that you deploy for resolution, and so individual groups shouldn't deploy out their own Private DNS Zones.
 
 If you are using an Azure Landing Zone, you will most likely already have these resources created!
 
@@ -49,9 +49,9 @@ However, this requires some diligence to maintain.  When you are deploying an Az
 
 This can work great for some environments, but note that creating the private endpoint doesn't ask you where the Private DNS Zone is located.  Instead, if you select the private DNS integration option, it will check the resource group that you are deploying the private endpoint in to.  This means it will often create its own Private DNS Zone, leading to duplication and mixup.  It will also attach the private DNS zone to the network, which will create issues in most environments.
 
-If you are testing a single vnet implementation, this can be fine.  But for most environments, it will make sense to deploy the Private Endpoint after the resource is created.
+If you are testing a single VNET implementation, this can be fine.  But for most environments, it will make sense to deploy the Private Endpoint after the resource is created.
 
->[!NOTE]
+>**NOTE**
 > If you are using Infrastructure as Code, you can deploy out a Private Endpoint with the resource with the specific parameters that you need.  These instructions are for Portal deployments.
 
 To do so, navigate to your resources networking tab, go to Private Endpoints tab, and then select **+ Private Endpoint**.

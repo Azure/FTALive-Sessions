@@ -1,10 +1,10 @@
 # How Private Endpoints Work
 
-[prev](./field-experience.md) | [home](./readme.md)  | [next](./dns-pe-concepts.md)
+[prev](./whyfta-pe.md) | [home](./readme.md)  | [next](./dns-pe-concepts.md)
 
-In the simplest scenario, Private Endpoints logically create a 'tunnel' from your VNET to a PaaS service instance, eliminating the need for a pubic endpoint to access the PaaS service. In order for clients to use the Private Endpoint (private IP) when accessing the PaaS service, you override the DNS name resolution for the service, so that a name which previously resolved to a Microsoft public IP address instead resolves to the private IP address.
+In the simplest scenario, Private Endpoints logically create a 'tunnel' from your VNET to a PaaS service instance, eliminating the need for a public endpoint to access a PaaS service. In order for clients to use the Private Endpoint (private IP) when accessing the PaaS service, you override the DNS name resolution for the service, so that a name which previously resolved to a Microsoft public IP address instead resolves to your private IP address.
 
-This overview focuses on the simple scenario of a Storage Account and Private Endpoint for the blob service. More complex Private Endpoint scenarios, such as when the PaaS service does not have a unique DNS name per instance or when using a Private Link Service are much easier to grasp once you understand this basic scenario.
+This overview focuses on the scenario of a Storage Account and Private Endpoint for the blob service. More complex Private Endpoint scenarios, such as when the PaaS service does not have a unique DNS name per instance or when using a Private Link Service are much easier to grasp once you understand this basic scenario.
 
 ## Connectivity
 
@@ -22,7 +22,7 @@ The following diagrams show traffic flows for an Azure Storage Account without a
 
 **B: From the Private Endpoint to the PaaS service:** You associate the PaaS service with the Private Endpoint and the platform takes care of this for you.
 
-## DNS
+## DNS Name Resolution
 
 **Without Private Endpoints - Storage Account Example:**
 
@@ -38,16 +38,16 @@ The following diagrams show traffic flows for an Azure Storage Account without a
 1. The client's DNS server responds to the query with a private IP address corresponding to the Private Endpoint - for example: **10.0.20.34**
 1. The client sends their storage request to **10.0.20.34**
 
->[!NOTE]
->Most PaaS services use TLS certificates to encrypt data in transit. When the client makes a request of the service, the service responds with a certificate. In order for the client to trust the certificate, the name used in the request (such as `mystorageaccount.blob.core.windows.net`) must match the name on the certificate the PaaS service provides back to the client. Azure does not have a way to add custom names to these certificates, which is why we need to override the pubic DNS name resolution, instead of being able to use an alternate name mapped to the private IP.
+>**NOTE**
+>Most PaaS services use TLS certificates to encrypt data in transit. When the client makes a request of the service, the service responds with a certificate. In order for the client to trust the certificate, the name used in the request (such as `mystorageaccount.blob.core.windows.net`) must match the name on the certificate the PaaS service provides back to the client. Azure does not have a way to add custom names to these certificates, which is why we need to override the public DNS name resolution, instead of being able to use an alternate name mapped to the private IP.
 
 ## Creating a Private Endpoint
 
-Private Endpoints can either be created directly or through most PaaS service networking configurations. When creating the Private Endpoint, you'll have the option of either using a Private DNS Zone or no/custom DNS configuration. A Private DNS Zone is usually what we recommend. See [DNS Option for Private Endpoints](./DNS-pe.md) for more details.
+Private Endpoints can either be created directly or through most PaaS service networking configurations. We recommend creating your Private Endpoints _after_ creating your service, which gives you greater control over the Private Endpoint configuration for most services. When creating the Private Endpoint, you'll have the option of either using a Private DNS Zone or no/custom DNS configuration. A Private DNS Zone is usually what we recommend. See [DNS Option for Private Endpoints](./DNS-pe.md) for more details.
 
 ## Private Link Service
 
-For most PaaS services, a Private Link Service (or equivalent functionality) resides in between your Private Endpoint and the PaaS service. You do not see it or manage it; you only work with the Private Endpoint.
+For most PaaS services, a Private Link Service (or equivalent functionality) resides between your Private Endpoint and the PaaS service. You do not see it or manage it; you only work with the Private Endpoint.
 
 ![PaaS Service with 'Managed' Private Link Service](img/pe-overview-storage-pls.png)
 
@@ -63,4 +63,4 @@ Sometimes it can be confusing to navigate the relationship between the Private L
 - Having a Private Link lets others make Private Endpoints.
 - To give access to an Azure service, like a Storage Account, you generally only need a Private Endpoint.  The "Private Link Service" is provided on the Azure management side and is backed in to the service.
 
-[prev](./field-experience.md) | [home](./readme.md)  | [next](./dns-pe-concepts.md)
+[prev](./why-ftape.md) | [home](./readme.md)  | [next](./dns-pe-concepts.md)

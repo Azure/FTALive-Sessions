@@ -21,7 +21,7 @@ This is the simplest configuration, and a great place to start when testing the 
 
 The over all flow for DNS resolution here is:
 
-![Image of DNS resolution](https://learn.microsoft.com/azure/private-link/media/private-endpoint-dns/single-vnet-azure-dns.png)
+![Image of DNS resolution](https://learn.microsoft.com/azure/private-link/media/private-endpoint-dns/single-VNET-azure-dns.png)
 
 In this scenario...
 
@@ -57,7 +57,7 @@ When setting this up, the DNS zone should be connected to the virtual networks w
 
 If you are using a Windows Server DNS, the conditional forwarder to send the traffic to the Azure IP would look like:
 
-![Picture of DNS settings on Vnet](img/dns-vnet-example.png)
+![Picture of DNS settings on VNET](img/dns-VNET-example.png)
 
 ### Azure Firewall as DNS Proxy
 
@@ -78,7 +78,8 @@ Other options for DNS forwarding will have their own options.
 
 This scenario is the most common used by organizations in the field, because it allows for you to resolve Azure private endpoints from on-prem, and also builds in the ability to resolve on-prem resources from Azure.  While it has the most complex setup, it provides the best management moving forward, and is very resilient.
 
-> [!NOTE] The Azure provided DNS service cannot be accessed directly by non-Azure resources.  This topology uses the conditional forwarders in Azure to facilitate this communication.
+> **NOTE**
+> The Azure provided DNS service cannot be accessed directly by non-Azure resources.  This topology uses the conditional forwarders in Azure to facilitate this communication.
 
 This scenario builds upon the concepts already established in the other two scenarios.
 

@@ -1,4 +1,4 @@
-# Why do an FTA Live on Private Endpoints?
+# Why Discuss Private Endpoints?
 
 [home](./readme.md)  | [next](./overview.md)
 

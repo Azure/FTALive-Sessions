@@ -24,17 +24,17 @@ The [Security Baseline for Azure Private Link](https://learn.microsoft.com/secur
 
 - Secure like VM NICs
 - Follow core network isolation practices
-- Use NSGs and ASGs to restrict access to resources on the same Spoke Vnet
+- Use NSGs and ASGs to restrict access to resources on the same Spoke VNET
 - Use Firewalls and other appliances to secure between on-prem-to-spoke and spoke-to-spoke scenarios.
 
-## Vnet and Subnet Design
+## VNET and Subnet Design
 
-Follow these guidelines to help plan for your Vnet and Subnet design:
+Follow these guidelines to help plan for your VNET and Subnet design:
 
-- Place Private Endpoints in the same virtual network as the services that consume them, following spoke practices of having resources for a given workload in a single subscription or vnet.
+- Place Private Endpoints in the same virtual network as the services that consume them, following spoke practices of having resources for a given workload in a single subscription or VNET.
 - Use different resources between environments - do not try to reuse the same storage account between development and production environments, with the idea of using different private endpoints for isolation.
 - Plan to deploy only one private endpoint for a given resource for main use; plan to have a second for failover if there is a network outage in your region.
-  - Plan how you will address DNS as part of your failover.
+- Plan how you will address DNS as part of your failover.
 - Isolate private endpoints in to their own subnets based on your subnet isolation strategy.  For example, place SQL and Storage Account Endpoints in different subnets, and if two different Storage Accounts would be accessed by different sources, place them in their own subnets.
 - If a workload needs to access a private endpoint of another workload, leverage a Firewall or other security appliance to inspect the traffic.  You can review this guidance on [Inspecting Private Endpoints with Azure Firewall](https://learn.microsoft.com/azure/private-link/inspect-traffic-with-azure-firewall) for more information.
 
@@ -49,7 +49,7 @@ You should follow many of the same practices that you use to secure subnets hous
 - Limit inbound access to the subnet only to the resources that need access.
 - Create a low priority "Deny All" rule to deny access even from within the virtual network.
 - Place your Private Endpoints in to ASGs to apply consistent rules to the specific resources.  You can add this by going to the Application security groups tab on the Private Endpoint in the Azure portal, and selecting the ASG from the drop down there.
-- Deny outbound access to the subnet of the Private Endpoint from other NSGs in the vnet for subnets that do not need access, to prevent unneeded access.
+- Deny outbound access to the subnet of the Private Endpoint from other NSGs in the VNET for subnets that do not need access, to prevent unneeded access.
 
 You can review some general network guidance for microsegmentation [here](https://learn.microsoft.com/security/zero-trust/deploy/networks#iv-network-segmentation-fully-distributed-ingressegress-cloud-micro-perimeters-and-deeper-micro-segmentation)
 

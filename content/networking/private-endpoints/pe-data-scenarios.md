@@ -32,9 +32,9 @@ You can find out more about Runtimes in the articles at [Create and managed a se
 
 ## Managed Virtual Networks
 
-Another option is to use Managed Virtual Networks.  These are Vnets that are deployed with limited customer involvement, that the data solution can deploy its own runtimes to.
+Another option is to use Managed Virtual Networks.  These are VNETs that are deployed with limited customer involvement, that the data solution can deploy its own runtimes to.
 
-![Diagram describing Managed Virtual Networks](https://learn.microsoft.com/azure/purview/media/catalog-managed-vnet/purview-managed-vnet-architecture.png)
+![Diagram describing Managed Virtual Networks](https://learn.microsoft.com/azure/purview/media/catalog-managed-VNET/purview-managed-VNET-architecture.png)
 
 Then, from your data sources in Azure, you create Private Endpoints to enable access.
 
