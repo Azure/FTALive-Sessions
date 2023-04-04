@@ -1,0 +1,23 @@
+# <component>
+$schema: https://azuremlschemas.azureedge.net/latest/commandComponent.schema.json
+name: train_diabetes_lightgbm_model
+display_name: TrainLightGBMModel
+version: 1
+type: command
+inputs:
+  training_data: 
+    type: uri_folder
+  learning_rate:
+    type: number
+outputs:
+  model_output:
+    type: mlflow_model
+    
+code: ./src
+environment: azureml:AzureML-lightgbm-3.2-ubuntu18.04-py37-cpu@latest
+command: >-
+  python train_model.py 
+  --training_data ${{inputs.training_data}} 
+  --learning_rate ${{inputs.learning_rate}}
+  --model_output ${{outputs.model_output}}
+# </component>

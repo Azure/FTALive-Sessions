@@ -1,0 +1,16 @@
+name: Automatically trigger on PR
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  train:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Placeholder
+      run: |
+        echo "Will add code checks here in next step"
+
+

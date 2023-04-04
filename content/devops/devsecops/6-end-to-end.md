@@ -47,6 +47,7 @@ Allow time to learn:
 ### GitOps
 
 - [GitOps for Azure Kubernetes Service](https://docs.microsoft.com/azure/architecture/example-scenario/gitops-aks/gitops-blueprint-aks)
-- [Use GitOps with Flux v2 in Azure Arc-enabled Kubernetes or AKS clusters (public preview)](https://docs.microsoft.com/azure/azure-arc/kubernetes/tutorial-use-gitops-flux2)
+- [Build and deploy apps on AKS using DevOps and GitOps](https://learn.microsoft.com/azure/architecture/example-scenario/apps/devops-with-aks)
+- [GitOps Flux v2 configurations with AKS and Azure Arc-enabled Kubernetes](https://learn.microsoft.com/azure/azure-arc/kubernetes/conceptual-gitops-flux2)
 
 [< Previous](./5-operate.md) | [Home](./readme.md)

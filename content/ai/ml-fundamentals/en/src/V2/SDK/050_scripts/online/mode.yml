@@ -1,0 +1,39 @@
+name: Diabetest-LGBM-Model
+id: azureml:/subscriptions/25758354-2fe7-426a-be0e-1ad20058340d/resourceGroups/azureml-live/providers/Microsoft.MachineLearningServices/workspaces/ftaliveazureml/models/Diabetest-LGBM-Model/versions/1
+type: mlflow_model
+path: azureml://subscriptions/25758354-2fe7-426a-be0e-1ad20058340d/resourceGroups/azureml-live/workspaces/ftaliveazureml/datastores/workspaceartifactstore/paths/ExperimentRun/dcid.b5e04ea9-612e-453b-8fac-41bdc8d54c56/Diabetest-LGBM-Model
+version: '1'
+properties:
+  azureml.artifactPrefix: ExperimentRun/dcid.b5e04ea9-612e-453b-8fac-41bdc8d54c56/Diabetest-LGBM-Model
+  flavors: python_function,lightgbm
+  flavors.lightgbm: "{\n  \"lgb_version\": \"3.2.1\",\n  \"data\": \"model.lgb\",\n\
+    \  \"model_class\": \"lightgbm.basic.Booster\",\n  \"code\": null\n}"
+  flavors.python_function: "{\n  \"loader_module\": \"mlflow.lightgbm\",\n  \"python_version\"\
+    : \"3.7.13\",\n  \"data\": \"model.lgb\",\n  \"env\": \"conda.yaml\"\n}"
+  mlflow.modelSourceUri: azureml://experiments/pipeline_samples/runs/b5e04ea9-612e-453b-8fac-41bdc8d54c56/artifacts/Diabetest-LGBM-Model
+  model_json: '{"run_id": "b5e04ea9-612e-453b-8fac-41bdc8d54c56", "artifact_path":
+    "Diabetest-LGBM-Model", "utc_time_created": "2022-06-17 09:25:39.472211", "flavors":
+    {"python_function": {"loader_module": "mlflow.lightgbm", "python_version": "3.7.13",
+    "data": "model.lgb", "env": "conda.yaml"}, "lightgbm": {"lgb_version": "3.2.1",
+    "data": "model.lgb", "model_class": "lightgbm.basic.Booster", "code": null}},
+    "model_uuid": "106038612dcc4f3692ddaa58d1fe68e1", "mlflow_version": "1.26.1"}'
+tags: {}
+flavors:
+  lightgbm:
+    code: ''
+    data: model.lgb
+    lgb_version: 3.2.1
+    model_class: lightgbm.basic.Booster
+  python_function:
+    data: model.lgb
+    env: conda.yaml
+    loader_module: mlflow.lightgbm
+    python_version: 3.7.13
+creation_context:
+  created_at: '2022-06-17T09:25:44.828833+00:00'
+  created_by: Varma Gadhiraju
+  created_by_type: User
+  last_modified_at: '2022-06-21T04:26:37.952410+00:00'
+  last_modified_by: Varma Gadhiraju
+  last_modified_by_type: User
+job_name: b5e04ea9-612e-453b-8fac-41bdc8d54c56

@@ -6,6 +6,8 @@
 
 This section outlines the recommended migration steps to execute an Azure DevOps Pipeline for the deployment of servers. This is a sample pipeline deployment that can be customized to your Migration Wave cycles outlined in the exported Azure Migrate Assessments.
 
+![Migration Workflow](./src/workflow-devops-iac-milestone3.png)
+
 ## 1 Pre-Requisites
 Please refer to the [Milestone: Redeployment of Migration Waves](./devops-iac-redeployment.md) page in order to have the correct setup for this deployment.
 * Reference Migration Tasks: [Milestone: Wave Migration and Post Go-Live](https://github.com/Azure/FTALive-Sessions/blob/main/content/migration/server-migration/migration.md)
