@@ -13,7 +13,7 @@ Most customers will need **Hybrid DNS Resolution**, and you should be prepared t
 In whatever DNS solution you are using, you add a record for your private resource, using the Public DNS zone forwarders found [here](https://learn.microsoft.com/azure/private-link/private-endpoint-dns#azure-services-dns-zone-configuration).
 
 > **WARNING**
-> One major call out is that Private DNS Zones and Conditional Forwarders are not always 1:1.  For example, Key Vault requires forwarders for `vault.azure.net` & `vaultcore.azure.net`, but a Private DNS Zone for `privatelink.vaultcore.azure.net` only.  Implementing just one of the forwarding zones can create intermittent issues and caching of the incorrect IP address, creating issues.  Consult the table in the above article to plan your DNS needs for a service.
+> One notable call out is that Private DNS Zones and Conditional Forwarders are not always 1:1.  For example, Key Vault requires forwarders for `vault.azure.net` & `vaultcore.azure.net`, but a Private DNS Zone for `privatelink.vaultcore.azure.net` only.  Implementing just one of the forwarding zones can create intermittent issues and caching of the incorrect IP address, creating issues.  Consult the table in the above article to plan your DNS needs for a service.
 
 ## Private DNS Zone Only
 
@@ -57,7 +57,7 @@ When setting this up, the DNS zone should be connected to the virtual networks w
 
 If you are using a Windows Server DNS, the conditional forwarder to send the traffic to the Azure IP would look like:
 
-![Picture of DNS settings on VNET](img/dns-VNET-example.png)
+![Picture of DNS settings on VNET](img/dns-vnet-example.png)
 
 ### Azure Firewall as DNS Proxy
 

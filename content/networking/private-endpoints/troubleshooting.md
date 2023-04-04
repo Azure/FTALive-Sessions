@@ -53,7 +53,7 @@ If your client is not receiving a private IP address in response to your `nslook
 - If you are using Private DNS Zones:
   - Does the Private DNS Zone have an 'A' record for the Private Endpoint's service?
   - Is the Private DNS Zone linked to the VNET of the DNS server?
-    ![Screenshot showing Private DNS Zone linked to VNET](img/pdns-VNET-link.png)
+    ![Screenshot showing Private DNS Zone linked to VNET](img/pdns-vnet-link.png)
 
 ## Step 2: Connectivity
 
