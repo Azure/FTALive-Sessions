@@ -2,8 +2,6 @@
 
 #### [prev](./premigration.md) | [home](./readme.md)  | [next](./prepare.md)
 
-**INSERT WORKFLOW HERE**
-
 # Platform-Supported Validate
 There are three primary tools that can be used to run the Validate stage in the Platform-Supported migration process:
 1. [Azure Portal](https://learn.microsoft.com/en-us/azure/virtual-machines/migration-classic-resource-manager-overview#migration-of-storage-accounts)
