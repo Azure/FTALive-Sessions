@@ -2,9 +2,9 @@
 
 #### [prev](./overview.md) | [home](./readme.md)  | [next](./validate.md)
 
-**INSERT WORKFLOW IMAGE**
-
 Prior to migration, there are a few key steps that will lead to a smoother migration experience.
+
+![image](./png/data-control-plane.png)
 
 # Inventory your Classic Environment
 1. Classic Express Route Circuits

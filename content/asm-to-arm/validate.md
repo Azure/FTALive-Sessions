@@ -2,8 +2,6 @@
 
 #### [prev](./premigration.md) | [home](./readme.md)  | [next](./prepare.md)
 
-**INSERT WORKFLOW HERE**
-
 # Platform-Supported Validate
 There are three primary tools that can be used to run the Validate stage in the Platform-Supported migration process:
 1. [Azure Portal](https://learn.microsoft.com/en-us/azure/virtual-machines/migration-classic-resource-manager-overview#migration-of-storage-accounts)
@@ -37,5 +35,3 @@ Conflicting private IPs between stop-deallocated VMs in the same virtual network
 
 # Additional Considerations
 Again, the key outcome to the Validate stage is to refine the overall migration plan. Make note of which blockers can safely be removed ahead of time, which blockers should be removed when ready for migration, and what will need to be addressed once the migration has completed.
-
-**INSERT ADDITIONAL COMMENTS HERE**

@@ -2,7 +2,15 @@
 
 #### [prev](./readme.md) | [home](./readme.md)  | [next](./premigration.md)
 
-**Image of Session Overview**
+## The Why? Of the Migration and Important Deadlines
+- [Overview](https://learn.microsoft.com/en-us/azure/virtual-machines/classic-vm-deprecation) and Important Deadlines:
+    - [On September 1, 2023](https://azure.microsoft.com/en-us/updates/classicvmretirment/), customers will no longer be able to start IaaS VMs by using ASM. Any that are still running or allocated will be stopped and deallocated.
+    - [On 31 August 2024](https://azure.microsoft.com/en-us/updates/cloud-services-classic-retirement-announcement/), we’ll retire the Cloud Services (classic) deployment model. Beginning 1st September 2024, your Cloud Service deployments would be stopped and deallocated, and data will be permanently lost.
+        - Because [classic storage accounts](https://azure.microsoft.com/en-us/updates/classic-azure-storage-accounts-will-be-retired-on-31-august-2024/) are dependent on Azure Cloud Services (classic), they'll be retired on the same date of 31 August 2024.
+        - Because [classic Azure Virtual Network, reserved IP addresses, Azure ExpressRoute gateway, Azure Application Gateway, and Azure VPN Gateway](https://azure.microsoft.com/en-us/updates/five-azure-classic-networking-services-will-be-retired-on-31-august-2024/) are dependent on Azure Cloud Services (classic), they’ll be retired on the same date of 31 August 2024.
+
+![image](./png/workflowplaceholder.png)
+
 # Infrastructure Migration
 
 ## [Pre-Migration Steps](./premigration.md)
