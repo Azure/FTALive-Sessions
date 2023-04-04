@@ -6,11 +6,11 @@ Many customers implement private endpoints to provide private network access to 
 
 - Private connectivity from on-prem networks.
 - Private connectivity between Azure resources.
-- Application of a virtual network security posture to Azure services.
+- Keeping PaaS service traffic within their VNETs to improve their security posture.
 - Centralized management and observability for network Access Control Lists and logs.
 - Alignment with security guidelines for topics like Zero Trust or industry regulatory controls.
 
-However, in doing so, customers often miss key implementation requirements.  This creates issues with the implementation, which can result in a issues with adopting the services that private endpoints are meant to protect, project delays, and even the impression that private endpoints are not reliable.
+However, in doing so, customers often miss key implementation requirements.  This can create issues accessing the services that private endpoints are meant to protect, resulting in project delays, and even the impression that private endpoints are not reliable.
 
 In the field, we see the following common challenges, and the resulting impacts:
 

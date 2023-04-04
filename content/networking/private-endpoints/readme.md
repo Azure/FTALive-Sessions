@@ -2,8 +2,7 @@
 
 ## We will start 3-4 minutes after the scheduled time to accommodate those still connecting
 
-> This call will not be recorded due to the wide audience and to encourage
-> questions.
+> This call will not be recorded due to the wide audience and to encourage questions.
 
 **Chat History** You will lose access to the chat after the session, so save any of the links that you want to reference later!
 
@@ -15,12 +14,11 @@
 
 ## Agenda
 
-In order to be successful with Private Endpoints, there are several key concepts that you need to understand. This session is designed to cover what you need to know to get started with Private Endpoints, including foundational concepts, DNS configurations, troubleshooting, and designing for scale. We will also be discussing common scenarios we experience at customers in the field and how to work through them.
+In order to be successful with Private Endpoints there are several key concepts that you need to understand. This session is designed to cover what you need to know to get started with Private Endpoints, including: foundational concepts, DNS configurations, troubleshooting, and designing for scale. We will also be discussing common scenarios we experience at customers in the field and how to work through them.
 
 ### Overview
 
-- [Why use Private Endpoints?](why-pe.md)
-- [Field Experience from FastTrack for Azure](field-experience.md)
+- [Why use Private Endpoints?](why-ftape.md)
 - [How Private Endpoints Work](overview.md)
 - [DNS Concepts for Private Endpoints](dns-pe-concepts.md)
 - [DNS Configuration Scenarios for Private Endpoints](dns-pe-scenarios.md)
