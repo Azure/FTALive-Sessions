@@ -2,7 +2,8 @@
 
 [prev](./overview.md) | [home](./readme.md)  | [next](./dns-pe-scenarios.md)
 
-> [!NOTE] This is not an over all guide for DNS in Azure, but rather specific guidance for Private Endpoints.  We will need to talk about some Private DNS Zone management concepts as part of this.
+> **NOTE**
+> This is not an over all guide for DNS in Azure, but rather specific guidance for Private Endpoints.  We will need to talk about some Private DNS Zone management concepts as part of this.
 
 Your *Domain Name System* or DNS is a critical part of your Private Endpoint configuration.  Most Private Endpoint implementations run in to challenges at this level, so having a clear plan for how you are resolving the names of the private endpoints is critical.
 
