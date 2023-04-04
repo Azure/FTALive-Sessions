@@ -9,7 +9,8 @@
         - Because [classic storage accounts](https://azure.microsoft.com/en-us/updates/classic-azure-storage-accounts-will-be-retired-on-31-august-2024/) are dependent on Azure Cloud Services (classic), they'll be retired on the same date of 31 August 2024.
         - Because [classic Azure Virtual Network, reserved IP addresses, Azure ExpressRoute gateway, Azure Application Gateway, and Azure VPN Gateway](https://azure.microsoft.com/en-us/updates/five-azure-classic-networking-services-will-be-retired-on-31-august-2024/) are dependent on Azure Cloud Services (classic), they’ll be retired on the same date of 31 August 2024.
 
-![image](.\png\workflowplaceholder.png)
+![image](./png/workflowplaceholder.png)
+
 # Infrastructure Migration
 
 ## [Pre-Migration Steps](./premigration.md)
