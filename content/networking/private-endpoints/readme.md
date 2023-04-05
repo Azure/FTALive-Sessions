@@ -18,7 +18,7 @@ In order to be successful with Private Endpoints there are several key concepts 
 
 ### Overview
 
-- [Why use Private Endpoints?](why-ftape.md)
+- [Why Discuss Private Endpoints?](why-ftape.md)
 - [How Private Endpoints Work](overview.md)
 - [DNS Concepts for Private Endpoints](dns-pe-concepts.md)
 - [DNS Configuration Scenarios for Private Endpoints](dns-pe-scenarios.md)
