@@ -1,20 +1,18 @@
 ## Data Cleaning
 
-[<Back](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Overviewof_Defender.md)\- [Next >](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Data%20factoryandSpark.md)
+[<Back](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/Building_on_top_Datalake/Storage.md)\- [Next >](..)
 
 #### Spark
 
 
 
-*Please note: All my examples are using pyspark*
+*Please note: All examples are using pyspark*
 
  
 
 In my scenario, I am exporting multiple tables from SQLDB to a folder using a notebook and running the requests in parallel.
 
-This post here: [MSSparkUtils is the Swiss Army knife inside Synapse Spark - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/mssparkutils-is-the-swiss-army-knife-inside-synapse-spark/bc-p/3699228#M716) mentioned the logic of reusing the same session. Comments of my colleague martinB on that post will be shown in more detail in the next example to export the data from SQLDB into the Data Lake:
 
- 
 
 **Exporting the data and building the lab**
 
@@ -116,28 +114,7 @@ Ok. Data exported, now let's work on it!
 
 **Organizing the data**
 
- 
-
-If you are not familiar with Data lake, Lakehouse, Bronze, Silver, and Gold. It will be good to get to know more about it. 
-
- 
-
-Following some great references for a start:
-
-[Data landing zones - Cloud Adoption Framework | Microsoft Learn](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/data-landing-zone#data-lake-services)
-
-[adlsguidancedoc/Hitchhikers_Guide_to_the_Datalake.md at master · rukmani-msft/adlsguidancedoc (github.com)](https://github.com/rukmani-msft/adlsguidancedoc/blob/master/Hitchhikers_Guide_to_the_Datalake.md)
-
-https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/synapse-data-lake-vs-delta-lake-vs-data-lakehouse/ba-p/3673653
-
- 
-
-Considering you already read the content above or you already know about it. Let's start with how to handle the data that was exported.
-
-The data landed on the Bronze or Raw zone. While going through my Silver zone I will clean and organize the data to be fit for the purpose of my Analytics project that will connect to my Gold zone.
-
-*Please note: All my examples are using pyspark*
-
+As we discussed the data must be structure and organized. Using the approach explained here: [FTALive-Sessions_Synapse_SQL/Storage.md at main · LiliamLeme/FTALive-Sessions_Synapse_SQL (github.com)](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/Building_on_top_Datalake/Storage.md)  will help you to create a better strutucture for your solution. Following lets dicuss how to work with this concepts with Spark on our Bronze\Silver Zone.
  
 
 **Cleaning the Data**
