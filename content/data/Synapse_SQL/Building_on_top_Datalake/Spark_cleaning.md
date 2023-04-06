@@ -104,7 +104,7 @@ As you can see in Fig 1 - execution, it shows both notebooks were called and exe
 
  
 
-![image-20230327192852936](C:\Users\lilem\AppData\Roaming\Typora\typora-user-images\image-20230327192852936.png)
+<img width="471" alt="image" src="https://user-images.githubusercontent.com/62876278/230308336-5b3577fc-231e-4882-8666-e8488fddf0bc.png">
 
 Fig 1 - execution
 
@@ -260,8 +260,8 @@ Fig 2 - Dictionary, shows what I just mentioned.
 
 The dictionary will *"create an object that operates like a regular reader but maps the information in each row to a dict  whose keys are given by the optional fieldnames parameter." ref: [csv — CSV File Reading and Writing — Python 3.11.2 documentation](https://docs.python.org/3/library/csv.html#csv.DictReader)*
 
- ![image-20230327192930159](C:\Users\lilem\AppData\Roaming\Typora\typora-user-images\image-20230327192930159.png)
 
+<img width="680" alt="image" src="https://user-images.githubusercontent.com/62876278/230308500-a6074e0b-ab15-4224-a15d-9eb546c4023d.png">
 
 
 Fig 2 - Dictionary
@@ -270,10 +270,14 @@ Fig 2 - Dictionary
 
 This is the File that was just read for the dictionary creation. Refer to Fig 3 - File, for the results:
 
-![image-20230327192942364](C:\Users\lilem\AppData\Roaming\Typora\typora-user-images\image-20230327192942364.png)Fig 3 - File.
+
+
+ <img width="546" alt="image" src="https://user-images.githubusercontent.com/62876278/230308823-255b53ce-d455-4a4d-bcbe-790842ec2002.png">
 
  
 
+
+Fig 3 - File.
 Ok. Now you have the data, you can open and read it if you need. 
 
 Let's filter it and measure the time of it.
@@ -347,7 +351,8 @@ Now, let's use timeit by referencing it with %%timeit and loop it 2 times. Fig 4
 
 
 
- ![image-20230327193016054](C:\Users\lilem\AppData\Roaming\Typora\typora-user-images\image-20230327193016054.png)
+ <img width="751" alt="image" src="https://user-images.githubusercontent.com/62876278/230309128-69f5a24f-58f3-4cb7-92ac-7154db856dd8.png">
+
 
 Fig 4 - timeit
 
@@ -389,7 +394,8 @@ Fig 5 - isna, shows the results for isna execution. As you can see a boolean mas
 
  
 
-![image-20230327193028253](C:\Users\lilem\AppData\Roaming\Typora\typora-user-images\image-20230327193028253.png)
+<img width="687" alt="image" src="https://user-images.githubusercontent.com/62876278/230309305-9e9b8bf1-bd67-42ae-ac99-344543b21144.png">
+
 
 Fig 5 - isna
 
@@ -420,7 +426,8 @@ Fig 6 - fillna, shows the results. So as you can see values that were returned a
 
  
 
-![image-20230327193039881](C:\Users\lilem\AppData\Roaming\Typora\typora-user-images\image-20230327193039881.png)
+<img width="639" alt="image" src="https://user-images.githubusercontent.com/62876278/230309454-71e8607a-8962-4212-a679-6b2302556055.png">
+
 
 Fig 6 - fillna
 
@@ -449,7 +456,8 @@ ref: [pandas.DataFrame.isnull — pandas 1.5.3 documentation (pydata.org)](https
 
 Results on Fig 7 - isnull, shows a boolean mask:
 
-![image-20230327193051423](C:\Users\lilem\AppData\Roaming\Typora\typora-user-images\image-20230327193051423.png)
+<img width="678" alt="image" src="https://user-images.githubusercontent.com/62876278/230309539-40f8ac07-5256-4eda-a373-718aa69b1e66.png">
+
 
 *Fig 7 isnull*
 
@@ -604,6 +612,21 @@ My plan here was to share some tips that could be used while you are doing the d
  
 
 #### Reference
+[Essential tips for exporting and cleaning data with Spark - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/essential-tips-for-exporting-and-cleaning-data-with-spark/ba-p/3779583)
+
+[concurrent.futures — Launching parallel tasks — Python 3.11.1 documentation.](https://docs.python.org/3/library/concurrent.futures.html)
+
+[Synapse Spark pool optimization via Genie through multiple notebooks on same cluster instance (microsoft.com)](https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/improve-spark-pool-utilization-with-synapse-genie/ba-p/3690428)
+
+[Data landing zones - Cloud Adoption Framework | Microsoft Learn](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/data-landing-zone#data-lake-services)
+
+[adlsguidancedoc/Hitchhikers_Guide_to_the_Datalake.md at master · rukmani-msft/adlsguidancedoc (github.com)](https://github.com/rukmani-msft/adlsguidancedoc/blob/master/Hitchhikers_Guide_to_the_Datalake.md)
+
+https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/synapse-data-lake-vs-delta-lake-vs-data-lakehouse/ba-p/3673653
+
+[Tutorial: Use Pandas to read/write ADLS data in serverless Apache Spark pool in Synapse Analytics - ...](https://learn.microsoft.com/en-us/azure/synapse-analytics/spark/tutorial-use-pandas-spark-pool#readwrite-data-using-secondary-adls-account)
+
+ [csv — CSV File Reading and Writing — Python 3.11.2 documentation](https://docs.python.org/3/library/csv.html#csv.DictReader)
 
 
 
