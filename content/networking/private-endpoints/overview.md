@@ -43,7 +43,7 @@ The following diagrams show traffic flows for an Azure Storage Account without a
 
 ## Creating a Private Endpoint
 
-Private Endpoints can either be created directly or through most PaaS service networking configurations. We recommend creating your Private Endpoints _after_ creating your service, which gives you greater control over the Private Endpoint configuration for most services. When creating the Private Endpoint, you'll have the option of either using a Private DNS Zone or no/custom DNS configuration. A Private DNS Zone is usually what we recommend. See [DNS Option for Private Endpoints](./DNS-pe.md) for more details.
+Private Endpoints can either be created directly or through most PaaS service networking configurations. We recommend creating your Private Endpoints _after_ creating your service, which gives you greater control over the Private Endpoint configuration for most services. When creating the Private Endpoint, you'll have the option of either using a Private DNS Zone or no/custom DNS configuration. A Private DNS Zone is usually what we recommend. See [DNS Configuration Scenarios for Private Endpoints](./dns-pe-scenarios.md) for more details.
 
 ## Private Link Service
 
