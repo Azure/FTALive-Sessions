@@ -25,34 +25,76 @@ There are multiple approaches that could be used to create a Slow Change Dimensi
 - The files are not coming from the source with version, or information if the row was updated or deleted. 
 - Those files have a key value that is used to filter if they already exist or not on the destination. If you do not have a key column to compare. You will need to compare all the columns that the business considers as key values to determine if the information is new or not. 
 - The source will send the information on the file regardless if it is a new row to be inserted or updated. In other words, the process of transformation and cleansing needs to understand if the value on the file refers to an updated row or a new row. So this solution tries to understand that scenario and based on that version it accordingly. If your source can send the rows in an accurate way in which it is clear which row is updated, you can change the steps accordingly. 
+Solution:
 
-**Solution:**
-
-Consider as in the example below the folder *sourcefiles_folder* with all files in parquet format which were sent from the source to be compared to a destination. My destination is the external table: SCD_DimDepartmentGroup.
+Consider as in the example below the folder sourcefiles_folder with all files in parquet format which were sent from the source to be compared to a destination. My destination is the external table: SCD_DimDepartmentGroup.
 
  The file has the following columns:
 
-   
+      
 
-| Column                   | Datatype |          |
-| ------------------------ | -------- | -------- |
-| DepartmentGroupKey       | int      | Not Null |
-| ParentDepartmentGroupKey | int      | NULL     |
-| DepartmentGroupName      | nvarchar | Not Null |
+Column
+
+Datatype
 
  
 
- **Slow Change Dimension in 5 steps:**
+DepartmentGroupKey
 
-The implementation of the SCD is quite simple is basically filtering, persisting the data filtered, and comparing.
+int
 
- Current values on the table: 
+Not Null
 
-- ID_Valid column will show if the row was versioned or not. 1 for a new row, 0 for a versioned row.
-- ID_Delete column will show if the row is still valid or not. 0 for a new not, 1 for an invalid
-- Curr_date is the date where the row was inserted into the table, a column on the SCD will be FromDate
-- ID_Surr is a surrogate key created for this table. 
-- EndDate will manage the version per date
+ParentDepartmentGroupKey
+
+int
+
+NULL
+
+DepartmentGroupName
+
+nvarchar
+
+Not Null
+
+ 
+
+Here are the current values for this table - SCD_DimDepartmentGroup as Fig. 1, shows:
+
+The last surrogate key is of the value of 8:
+
+![image](https://user-images.githubusercontent.com/62876278/234089704-c95e4622-1f08-4d81-babf-de869fa91f57.png)
+
+
+Fig. 1
+
+ 
+
+Code - First Load and Dimension Creation:
+
+```sql
+CREATE EXTERNAL TABLE SCD_DimDepartmentGroup
+  WITH (
+    LOCATION = '/SCD_DimDepartmentGroup',
+    DATA_SOURCE = SCD_serveless_dim,
+    FILE_FORMAT = Parquet_file
+      ) 
+  AS
+  SELECT ROW_NUMBER () OVER (ORDER BY DepartmentGroupKey) ID_Surr
+         ,[DepartmentGroupKey]
+        ,[ParentDepartmentGroupKey]
+        ,[DepartmentGroupName]
+        ,1 ID_valid
+        ,0 ID_Deleted
+        ,Curr_date as From_date
+        ,Null as End_date
+    FROM
+    OPENROWSET(
+               BULK 'https://Storage.blob.core.windows.net/Container/SCD/sourcefiles_folder/',
+               FORMAT = 'PARQUET'
+               ) AS [SCD_DimDepartmentGroup]
+   
+``` 
 
  
 
@@ -84,7 +126,7 @@ First, let's create the data source that will be used across all the external ta
 
  
 
-```applescript
+```sql
   CREATE EXTERNAL DATA SOURCE SCD_serveless_dim
   WITH (
   LOCATION = 'https://Storage.blob.core.windows.net/Container/SCD/transformation_folder/',
@@ -140,7 +182,7 @@ WHERE NOT EXISTS (
 
 Results in Fig. 1 - Step 1:
 
-![Liliam_Leme_0-1682337231347.png](https://techcommunity.microsoft.com/t5/image/serverpage/image-id/463438i7F820B153C65092A/image-dimensions/935x264?v=v2)
+![image](https://user-images.githubusercontent.com/62876278/234083999-458f90be-4796-494d-8cd2-fa36b8abcaad.png)
 
 Fig. 1 - Step 1.
 
@@ -173,39 +215,41 @@ Please note for the rows to be versioned:
 
  
 
- 
+Please note I using getting the max value+1 of my surrogate key column ID_Surr of the main table SCD_DimDepartmentGroup. Following, I will add the same value for all the rows that still will have a new surrogate value to be created, and if the values repeat that is ok ( at this point), later on in the last step( Step 5) I will reuse this information with Departament Key to create a new Surrogate key, therefore, a new unique value per rows. The fact I am using max+1 is just because I want to be sure I will not mess up the surrogate that already exists. 
 
  
 
-```applescript
- CREATE EXTERNAL TABLE TableB_SCD_DimDepartmentGroup_OLD
-  WITH (
-    LOCATION = '/TableB_SCD_DimDepartmentGroup_OLD',
+```sql
+DECLARE @ID_Surr AS INT
+
+SELECT @ID_Surr = MAX (ID_Surr)+1 FROM SCD_DimDepartmentGroup
+
+CREATE EXTERNAL TABLE TableA_SCD_DimDepartmentGroup_NEW
+WITH (
+    LOCATION = '/TableA_SCD_DimDepartmentGroup_NEW',
     DATA_SOURCE = SCD_serveless_dim,
     FILE_FORMAT = Parquet_file
       ) 
   AS
-  SELECT [DepartmentGroupKey]
+  SELECT @ID_Surr as ID_Surr
+        ,[DepartmentGroupKey]
         ,[ParentDepartmentGroupKey]
         ,[DepartmentGroupName]
-        ,0 ID_valid
-        ,1 ID_Deleted
-        , From_date
-FROM [SCD_DimDepartmentGroup]
-WHERE NOT   EXISTS ( SELECT 1
-                FROM
-                    OPENROWSET(
-                        BULK 'https://Storage.blob.core.windows.net/Container/SCD/sourcefiles_folder',
-                        FORMAT = 'PARQUET'
-                    ) AS [SCD_DimDepartmentGroup_Silver]
-                 WHERE   SCD_DimDepartmentGroup_Silver.[DepartmentGroupKey] =   SCD_DimDepartmentGroup.DepartmentGroupKey
-                        AND  (ISNULL(SCD_DimDepartmentGroup_Silver.[ParentDepartmentGroupKey], 1) =   ISNULL(SCD_DimDepartmentGroup.[ParentDepartmentGroupKey], 1)
-				        AND  SCD_DimDepartmentGroup_Silver.[DepartmentGroupName] = SCD_DimDepartmentGroup.[DepartmentGroupName])
+        ,1 ID_valid
+        ,0 ID_Deleted
+        ,Getdate() as Curr_date
 
-                    )
-                  AND NOT EXISTS 
-                      (SELECT 1 FROM TableA_SCD_DimDepartmentGroup_NEW
-                      WHERE   TableA_SCD_DimDepartmentGroup_NEW.[DepartmentGroupKey] =   SCD_DimDepartmentGroup.DepartmentGroupKey)
+FROM
+    OPENROWSET(
+        BULK 'https://Storage.blob.core.windows.net/Container/SCD/sourcefiles_folder/',
+        FORMAT = 'PARQUET' ---DELTA can be used here 
+    ) AS [SCD_DimDepartmentGroup_Silver]
+
+WHERE NOT EXISTS ( 
+                SELECT 1
+                FROM SCD_DimDepartmentGroup
+                WHERE   SCD_DimDepartmentGroup_Silver.[DepartmentGroupKey] =   SCD_DimDepartmentGroup.DepartmentGroupKey        
+                   )
 ```
 
  
@@ -218,7 +262,7 @@ WHERE NOT   EXISTS ( SELECT 1
 
 Results are Fig. 2 - Step 2 :
 
-![Liliam_Leme_1-1682340981029.png](https://techcommunity.microsoft.com/t5/image/serverpage/image-id/463445iEEC597C7AEB568B2/image-dimensions/963x142?v=v2)
+![image](https://user-images.githubusercontent.com/62876278/234084693-9a576362-f7cc-43bc-9997-386511531b5e.png)
 
 Fig. 2 - Step 2
 
@@ -235,25 +279,26 @@ Fig. 2 - Step 2
 Code:
 
  
+```sql
+DECLARE @ID_Surr AS INT
 
- 
+SELECT @ID_Surr = MAX (ID_Surr)+1 FROM SCD_DimDepartmentGroup
 
- 
-
-```applescript
- CREATE EXTERNAL TABLE TableC_SCD_DimDepartmentGroup_GOLD_OLD_INS
-  WITH (
+CREATE EXTERNAL TABLE TableC_SCD_DimDepartmentGroup_GOLD_OLD_INS
+WITH (
        LOCATION = '/TableC_SCD_DimDepartmentGroup_GOLD_OLD_INS',
     DATA_SOURCE = SCD_serveless_dim,
     FILE_FORMAT = Parquet_file
       ) 
   AS
-  SELECT [DepartmentGroupKey]
+  SELECT  @ID_Surr as ID_Surr
+         ,[DepartmentGroupKey]
         ,[ParentDepartmentGroupKey]
         ,[DepartmentGroupName]
         ,1 ID_valid
         ,0 ID_Deleted
         ,getdate() Curr_date
+FROM
 FROM
     OPENROWSET(
         BULK 'https://Storage.blob.core.windows.net/Container/SCD/sourcefiles_folder/',
@@ -275,7 +320,7 @@ The results are in Fig. 3 - Step :
 
  
 
-![Liliam_Leme_0-1682339325050.png](https://techcommunity.microsoft.com/t5/image/serverpage/image-id/463441iC415A36884487DD8/image-dimensions/1000x198?v=v2)
+![image](https://user-images.githubusercontent.com/62876278/234085808-5877e731-a7c5-4dce-961d-afc6a88b0389.png)
 
 Fig. 3 - Step 3
 
@@ -295,7 +340,7 @@ Fig. 3 - Step 3
 
  
 
-```applescript
+```sql
  CREATE EXTERNAL TABLE UNION_SCD_DimDepartmentGroup
   WITH (
     LOCATION = '/UNION_SCD_DimDepartmentGroup',
@@ -303,7 +348,8 @@ Fig. 3 - Step 3
     FILE_FORMAT = Parquet_file
       ) 
   AS
-  SELECT [DepartmentGroupKey]
+  SELECT ID_Surr
+        ,[DepartmentGroupKey]
         ,[ParentDepartmentGroupKey]
         ,[DepartmentGroupName]
         ,ID_valid
@@ -312,7 +358,8 @@ Fig. 3 - Step 3
         ,Null as End_date
 FROM TableA_SCD_DimDepartmentGroup_NEW
 UNION ALL
-     SELECT [DepartmentGroupKey]
+     SELECT ID_Surr 
+        ,[DepartmentGroupKey]
         ,[ParentDepartmentGroupKey]
         ,[DepartmentGroupName]
         ,ID_valid
@@ -321,7 +368,8 @@ UNION ALL
         ,Getdate() as End_date
 FROM TableB_SCD_DimDepartmentGroup_OLD 
 UNION ALL
-     SELECT [DepartmentGroupKey]
+SELECT ID_Surr 
+        ,[DepartmentGroupKey]
         ,[ParentDepartmentGroupKey]
         ,[DepartmentGroupName]
         ,ID_valid
@@ -335,11 +383,9 @@ FROM TableC_SCD_DimDepartmentGroup_GOLD_OLD_INS
 
  
 
- 
-
 Results are - Fig. 4 - Union :
 
-![Liliam_Leme_0-1682341634595.png](https://techcommunity.microsoft.com/t5/image/serverpage/image-id/463452iC5FFF84F255349B6/image-dimensions/920x233?v=v2)
+![image](https://user-images.githubusercontent.com/62876278/234091264-52e63e50-240d-4604-a0ef-948a2f18aaa8.png)
 
 Fig. 4 Union
 
@@ -359,12 +405,8 @@ Here we have the new rows, new versioned rows consolidated on the external table
 
  
 
- 
-
- 
-
-```applescript
-SELECT ROW_NUMBER () OVER (ORDER BY DepartmentGroupKey) ID_Surr
+```sql
+SELECT ROW_NUMBER () OVER (ORDER BY ID_Surr, DepartmentGroupKey) ID_Surr
        ,[DepartmentGroupKey]
         ,[ParentDepartmentGroupKey]
         ,[DepartmentGroupName]
@@ -373,8 +415,8 @@ SELECT ROW_NUMBER () OVER (ORDER BY DepartmentGroupKey) ID_Surr
         ,From_date
         ,End_date
 FROM (
-      SELECT   
-              [DepartmentGroupKey]
+      SELECT   ID_Surr
+              ,[DepartmentGroupKey]
               ,[ParentDepartmentGroupKey]
               ,[DepartmentGroupName]
               ,ID_valid
@@ -387,7 +429,8 @@ FROM (
             WHERE SCD_DimDepartmentGroup.DepartmentGroupKey = TableB_SCD_DimDepartmentGroup_OLD.DepartmentGroupKey
               )
       UNION 
-      SELECT   [DepartmentGroupKey]
+      SELECT   ID_Surr
+               ,[DepartmentGroupKey]
               ,[ParentDepartmentGroupKey]
               ,[DepartmentGroupName]
               , ID_valid
@@ -396,8 +439,8 @@ FROM (
               ,End_date
       FROM UNION_SCD_DimDepartmentGroup
       UNION 
-      SELECT   
-              [DepartmentGroupKey]
+      SELECT   ID_Surr
+              ,[DepartmentGroupKey]
               ,[ParentDepartmentGroupKey]
               ,[DepartmentGroupName]
               ,ID_valid
@@ -409,15 +452,13 @@ FROM (
 )NEW_SCD
 ```
 
- 
-
- 
+  
 
  
 
 Results are in Fig. 5 - New Table. Please note in green there are the rows that are versioned, and in blue are the new rows:
 
-![Liliam_Leme_0-1682343336020.png](https://techcommunity.microsoft.com/t5/image/serverpage/image-id/463466iD7FAFC9E99EED1E5/image-dimensions/952x338?v=v2)
+![image](https://user-images.githubusercontent.com/62876278/234087597-34cd44dc-6b24-414f-bdf0-32df3a77c19b.png)
 
 Fig. 5 - New Table
 
