@@ -452,3 +452,6 @@ This new table should replace the current SCD_DimDepartmentGroup, by recreating 
 **Summary**:
 
 Please review the scenario considerations to understand what was relevant for this implementation as I mentioned before, those approaches may vary accordingly to how the data has been handled on the source. Here I show in examples of how to read new data, version old data that has changed, and recreate new external tables with the old information plus the new version for a Slow Change Dimension type 2. 
+
+**References**:
+[Use external tables with Synapse SQL - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/develop-tables-external-tables?tabs=hadoop)
