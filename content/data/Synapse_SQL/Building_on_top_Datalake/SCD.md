@@ -127,7 +127,11 @@ Now, let's create the external table for Step 1:
 
  
 
-```applescript
+```sql
+DECLARE @ID_Surr AS INT
+
+SELECT @ID_Surr = MAX (ID_Surr)+1 FROM SCD_DimDepartmentGroup
+
 CREATE EXTERNAL TABLE TableA_SCD_DimDepartmentGroup_NEW
 WITH (
     LOCATION = '/TableA_SCD_DimDepartmentGroup_NEW',
@@ -135,7 +139,7 @@ WITH (
     FILE_FORMAT = Parquet_file
       ) 
   AS
-  SELECT [DepartmentGroupKey]
+  SELECT @ID_Surr as ID_Surr
         ,[ParentDepartmentGroupKey]
         ,[DepartmentGroupName]
         ,1 ID_valid
@@ -201,18 +205,14 @@ Please note I using getting the max value+1 of my surrogate key column ID_Surr o
  
 
 ```sql
-DECLARE @ID_Surr AS INT
-
-SELECT @ID_Surr = MAX (ID_Surr)+1 FROM SCD_DimDepartmentGroup
-
-CREATE EXTERNAL TABLE TableA_SCD_DimDepartmentGroup_NEW
-WITH (
-    LOCATION = '/TableA_SCD_DimDepartmentGroup_NEW',
+  CREATE EXTERNAL TABLE TableB_SCD_DimDepartmentGroup_OLD
+  WITH (
+    LOCATION = '/TableB_SCD_DimDepartmentGroup_OLD',
     DATA_SOURCE = SCD_serveless_dim,
     FILE_FORMAT = Parquet_file
       ) 
   AS
-  SELECT @ID_Surr as ID_Surr
+  SELECT ID_Surr
         ,[DepartmentGroupKey]
         ,[ParentDepartmentGroupKey]
         ,[DepartmentGroupName]
