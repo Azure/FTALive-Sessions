@@ -456,3 +456,4 @@ Please review the scenario considerations to understand what was relevant for th
 #### **References**:
 
 [Use external tables with Synapse SQL - Azure Synapse Analytics | Microsoft Learn](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/develop-tables-external-tables?tabs=hadoop)
+https://en.wikipedia.org/wiki/Slowly_changing_dimension
