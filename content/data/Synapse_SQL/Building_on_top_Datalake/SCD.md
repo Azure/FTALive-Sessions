@@ -140,6 +140,7 @@ WITH (
       ) 
   AS
   SELECT @ID_Surr as ID_Surr
+        ,DepartmentGroupKey
         ,[ParentDepartmentGroupKey]
         ,[DepartmentGroupName]
         ,1 ID_valid
