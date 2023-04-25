@@ -52,9 +52,6 @@ These two disparate yet related systems run in silos, increasing development tim
 
  
 
-![thumbnail image 7 of blog post titled  	 	 	  	 	 	 				 		 			 				 						 							Synapse – Data Lake vs. Delta Lake vs. Data Lakehouse 							 						 					 			 		 	 			 	 	 	 	 	 ](https://techcommunity.microsoft.com/t5/image/serverpage/image-id/418222i9351C94C0CBD5FB8/image-size/large?v=v2&px=999)
-
- 
 
 Data Lakehouse platform architecture combines the best of both worlds in a single data platform, offering and combining capabilities from both these earlier data platform architectures into a single unified data platform – sometimes also called as medallion architecture. It means, the data lakehouse is the one platform to unify all your data, analytics, and Artificial Intelligence/Machine Learning (AI/ML) workloads.
 
