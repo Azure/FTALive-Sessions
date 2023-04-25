@@ -18,10 +18,12 @@ Working for Microsoft for around of 10 years with focus on Analytics those engin
 
 - - Workspace, Storage RBAC
 
-  - Serveless Permissions:      
 
-    - SAS key
-    - AAD and SQL user
+ **Storage** ( Liliam) --10 min
+
+- - How to organize folder:      Raw, Silver and Gold
+- - Spark Example
+
 
 **Connectivity** ( Matteo) -- 20 min
 
@@ -29,18 +31,19 @@ Working for Microsoft for around of 10 years with focus on Analytics those engin
   - User Cases
 
  
-**Storage** ( Liliam) --10 min
-
-- - How to organize folder:      Raw, Silver and Gold
 
 e[adlsguidancedoc/Hitchhikers_Guide_to_the_Datalake.md at master · rukmani-msft/adlsguidancedoc (github.com)](https://github.com/rukmani-msft/adlsguidancedoc/blob/master/Hitchhikers_Guide_to_the_Datalake.md)
 
  
-**Serveless SQL Pool** ( Luca/Liliam) --20 min
+**Serveless SQL Pool** ( Luca) --20 min
+  - Serveless Permissions:      
+
+    - SAS key
+    - AAD and SQL user
 
 - Openrowset, Views, external Tables   and partition
 -  CETAS
-- SCD type 2 ( in evaluation)
+- SCD type 2 ( LIliam)
 
 
 **Spark** ( Luca) --20 min
