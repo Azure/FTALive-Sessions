@@ -19,41 +19,24 @@ There are multiple approaches that could be used to create a Slow Change Dimensi
 
 **Considerations for this Scenario:**
 
-- This scenario is managing UPSERT and file versioning.
+- This scenario is managing UPSERT and file versioning. Please note, updates are not supported on Serveless so I am workaround this with the external tables.
 - The files are not coming from the source with version, or information if the row was updated or deleted. 
 - Those files have a key value that is used to filter if they already exist or not on the destination. If you do not have a key column to compare. You will need to compare all the columns that the business considers as key values to determine if the information is new or not. 
 - The source will send the information on the file regardless if it is a new row to be inserted or updated. In other words, the process of transformation and cleansing needs to understand if the value on the file refers to an updated row or a new row. So this solution tries to understand that scenario and based on that version it accordingly. If your source can send the rows in an accurate way in which it is clear which row is updated, you can change the steps accordingly. 
-Solution:
 
-Consider as in the example below the folder sourcefiles_folder with all files in parquet format which were sent from the source to be compared to a destination. My destination is the external table: SCD_DimDepartmentGroup.
+**Solution:**
+
+Consider as in the example below the folder *sourcefiles_folder* with all files in parquet format which were sent from the source to be compared to a destination. My destination is the external table: SCD_DimDepartmentGroup.
 
  The file has the following columns:
 
-      
+   
 
-Column
-
-Datatype
-
- 
-
-DepartmentGroupKey
-
-int
-
-Not Null
-
-ParentDepartmentGroupKey
-
-int
-
-NULL
-
-DepartmentGroupName
-
-nvarchar
-
-Not Null
+| Column                   | Datatype |          |
+| ------------------------ | -------- | -------- |
+| DepartmentGroupKey       | int      | Not Null |
+| ParentDepartmentGroupKey | int      | NULL     |
+| DepartmentGroupName      | nvarchar | Not Null |
 
  
 
