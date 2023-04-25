@@ -8,8 +8,6 @@
 
 **Scenario**: Customer wants to implement on top of the Data Lake customer wants to a Slow Change Dimension type 2. For this scenario, I will use Serverless SQL Pool for this example.
 
-Next post I will use the same approach to do this using Spark, only.
-
 
 **What is Slow Change Dimension Type 2?**
 
