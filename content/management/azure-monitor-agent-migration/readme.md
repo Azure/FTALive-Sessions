@@ -1,7 +1,7 @@
 # Azure Monitor - Migration from Legacy Agents to Azure Monitor Agent
 
 ## Overview
-In this session, learn how to plan and approach your migration from the legacy Microsoft Monitoring Agent/OMS Agent to the Azure Monitor Agent
+In this session, learn how to plan and approach your migration from the legacy Microsoft Monitoring Agent/OMS Agent to the Azure Monitor Agent, where used with Azure Monitor and other services.
 
 ## Agenda
 
@@ -12,7 +12,9 @@ In this session, learn how to plan and approach your migration from the legacy M
 ## Session Summary
 
 When planning the migration, it is important to understand your current environment, and your monitoring strategy. If you do not currently have a well defined monitoring strategy, this is a good time to revisit this.
+* [Cloud Monitoring Strategy guidance](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/monitoring-strategy)
 
+### Migration approach
 * Understand your agents
     * How many agents do you have to migrate?
     * Do you have agents residing outside of Azure??
@@ -25,10 +27,11 @@ When planning the migration, it is important to understand your current environm
     * Are you using any legacy solutions for data collection?
     * Do you have any data collections configured in the workspace(s)?
 * Understand additional dependencies
-    * Are you using Update Management?
-    * Are you using Change Tracking and Inventory
-    * Are you using Defender for Cloud?
-    * Are you using Microsoft Sentinel?
+    * Are you using any of the following:
+        * Update Management?
+        * Change Tracking and Inventory
+        * Defender for Cloud?
+        * Microsoft Sentinel?
 
 
 Tools to use:
