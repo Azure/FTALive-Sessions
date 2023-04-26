@@ -14,48 +14,39 @@ Working for Microsoft for around of 10 years with focus on Analytics those engin
 
 **Agenda**
 
-**Security** ( Liliam) --10 min
+ **Introduction** (Matteo - 5/10 min)
+ - Data Lake, Delta and Lakehouse
 
-- - Workspace, Storage RBAC
+ **Storage** ( Liliam) --10/15 min
+
+-  How to organize folder:      Raw, Silver and Gold
+-  Spark Example
+
+**Security** ( Liliam) --5 min
+
+- Workspace, Storage RBAC
 
 
- **Storage** ( Liliam) --10 min
+**Connectivity** ( Matteo) -- 15/20 min
 
-- - How to organize folder:      Raw, Silver and Gold
-- - Spark Example
-
-
-**Connectivity** ( Matteo) -- 20 min
-
-- - PE: managed, non      managed and Dep ( how it affects data lake)
+- - PE: managed, non managed and Dep ( how it affects data lake)
   - User Cases
 
- 
+  
+**Serveless SQL Pool** ( Luca) --15/20 min
 
-e[adlsguidancedoc/Hitchhikers_Guide_to_the_Datalake.md at master · rukmani-msft/adlsguidancedoc (github.com)](https://github.com/rukmani-msft/adlsguidancedoc/blob/master/Hitchhikers_Guide_to_the_Datalake.md)
-
- 
-**Serveless SQL Pool** ( Luca) --20 min
-  - Serveless Permissions:      
-
-    - SAS key
-    - AAD and SQL user
-
+- Serveless Permissions: SAS key, AAD and SQL user
 - Openrowset, Views, external Tables   and partition
--  CETAS
-- SCD type 2 ( LIliam)
+- CETAS
+- 
+**Spark** ( Luca) --15/20 min
 
-
-**Spark** ( Luca) --20 min
-
-- Delta Table \Partition
-
-- - How the partition will affect  Spark/ Serverless
-
+- Delta Table
 - Reading and transforming the data
-
 - Time travel
 
+Practical example: - 5 minutes
+- SCD type 2 ( LIliam)
  
 
 
