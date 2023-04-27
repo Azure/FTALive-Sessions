@@ -1,5 +1,5 @@
 
-[Home](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/Building_on_top_Datalake/Agenda.md)\- [>Next](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/Building_on_top_Datalake/Workspace.md)
+[Home](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/Building_on_top_Datalake/Agenda.md)\- [>Next](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/Building_on_top_Datalake/Data%20Lake%2C%20Delta%20and%20Lakehouse.md)
 
 
 # Building  on top of  Datalake
@@ -29,8 +29,8 @@ Working for Microsoft for around of 10 years with focus on Analytics those engin
 
 **Connectivity** ( Matteo) -- 15/20 min
 
-- - PE: managed, non managed and Dep ( how it affects data lake)
-  - User Cases
+ - PE: managed, non managed and Dep ( how it affects data lake)
+ - User Cases
 
   
 **Serveless SQL Pool** ( Luca) --15/20 min
@@ -38,7 +38,7 @@ Working for Microsoft for around of 10 years with focus on Analytics those engin
 - Serveless Permissions: SAS key, AAD and SQL user
 - Openrowset, Views, external Tables   and partition
 - CETAS
-- 
+ 
 **Spark** ( Luca) --15/20 min
 
 - Delta Table
