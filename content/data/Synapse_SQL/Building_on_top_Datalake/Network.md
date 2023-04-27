@@ -1,4 +1,4 @@
-## Workspace overview
+## Network Synapse overview
 
 ### Security overview
 
