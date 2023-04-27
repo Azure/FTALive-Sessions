@@ -2,7 +2,7 @@
 
 ### Security 
 
-[<Back](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Overviewof_Defender.md)\- [Next >](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Data%20factoryandSpark.md)
+[<Back](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/Building_on_top_Datalake/Network.md)\- [Next >](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/Building_on_top_Datalake/Serveless_Query_Basics.md)
 
 
 #### Serverless Security overview
