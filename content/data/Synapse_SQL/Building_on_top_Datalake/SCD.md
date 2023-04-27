@@ -206,7 +206,14 @@ Please note I using getting the max value+1 of my surrogate key column ID_Surr o
  
 
 ```sql
-  CREATE EXTERNAL TABLE TableB_SCD_DimDepartmentGroup_OLD
+CREATE EXTERNAL TABLE TableB_SCD_DimDepartmentGroup_OLD
+  WITH (
+    LOCATION = '/TableB_SCD_DimDepartmentGroup_OLD',
+    DATA_SOURCE = SCD_serveless_dim,
+    FILE_FORMAT = Parquet_file
+      ) 
+  AS
+    CREATE EXTERNAL TABLE TableB_SCD_DimDepartmentGroup_OLD
   WITH (
     LOCATION = '/TableB_SCD_DimDepartmentGroup_OLD',
     DATA_SOURCE = SCD_serveless_dim,
@@ -217,21 +224,24 @@ Please note I using getting the max value+1 of my surrogate key column ID_Surr o
         ,[DepartmentGroupKey]
         ,[ParentDepartmentGroupKey]
         ,[DepartmentGroupName]
-        ,1 ID_valid
-        ,0 ID_Deleted
-        ,Getdate() as Curr_date
+        ,0 ID_valid
+        ,1 ID_Deleted
+        ,From_date
+FROM [SCD_DimDepartmentGroup]
+WHERE NOT   EXISTS ( SELECT 1
+                FROM
+                    OPENROWSET(
+                        BULK 'https://Storage.blob.core.windows.net/Container/SCD/sourcefiles_folder',
+                        FORMAT = 'PARQUET'
+                    ) AS [SCD_DimDepartmentGroup_Silver]
+                 WHERE   SCD_DimDepartmentGroup_Silver.[DepartmentGroupKey] =   SCD_DimDepartmentGroup.DepartmentGroupKey
+                        AND  (ISNULL(SCD_DimDepartmentGroup_Silver.[ParentDepartmentGroupKey], 1) =   ISNULL(SCD_DimDepartmentGroup.[ParentDepartmentGroupKey], 1)
+				        AND  SCD_DimDepartmentGroup_Silver.[DepartmentGroupName] = SCD_DimDepartmentGroup.[DepartmentGroupName])
 
-FROM
-    OPENROWSET(
-        BULK 'https://Storage.blob.core.windows.net/Container/SCD/sourcefiles_folder/',
-        FORMAT = 'PARQUET' ---DELTA can be used here 
-    ) AS [SCD_DimDepartmentGroup_Silver]
-
-WHERE NOT EXISTS ( 
-                SELECT 1
-                FROM SCD_DimDepartmentGroup
-                WHERE   SCD_DimDepartmentGroup_Silver.[DepartmentGroupKey] =   SCD_DimDepartmentGroup.DepartmentGroupKey        
-                   )
+                    )
+                  AND NOT EXISTS 
+                      (SELECT 1 FROM TableA_SCD_DimDepartmentGroup_NEW
+                      WHERE   TableA_SCD_DimDepartmentGroup_NEW.[DepartmentGroupKey] =   SCD_DimDepartmentGroup.DepartmentGroupKey)
 ```
 
  
