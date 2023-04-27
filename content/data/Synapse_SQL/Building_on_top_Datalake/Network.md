@@ -2,7 +2,7 @@
 
 ### Security overview
 
-[<Back](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/Building_on_top_Datalake/Workspace.md) - [Next>](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/ModernDatawarehouse-Security/Workspace.md)
+[<Back](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/Building_on_top_Datalake/Workspace.md) - [Next>](https://github.com/LiliamLeme/FTALive-Sessions_Synapse_SQL/blob/main/content/data/Synapse_SQL/Building_on_top_Datalake/Serveless%20SQL%20Pool.md)
 
 The network mechanisms that can be used to increase security in Azure Synapse and Azure Data Factory depend on the characteristics of each component of those services. As an introduction, we can start with the networking options of ADF, since its architecture is much simpler than the one of Synapse.
 
