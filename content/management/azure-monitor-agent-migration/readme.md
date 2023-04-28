@@ -37,6 +37,7 @@ When planning the migration, it is important to understand your current environm
 Tools to use:
 * AMA Migration Tracker workbook
 * DCR Config Generator
+* [SCOM Management MP](https://kevinholman.com/2017/05/09/scom-management-mp-making-a-scom-admins-life-a-little-easier/)
 
 
 ## Additional Resources
