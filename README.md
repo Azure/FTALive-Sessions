@@ -82,6 +82,8 @@ Management and Governance	| Gobernanza de Azure | Únase a nosotros en vivo para
   |  |  |  |
 Management and Governance	| Azure Monitoring | In this session, you will learn about the different components of Azure Monitor and how you can utilize for end-to-end monitoring across your Cloud Solution. We will discuss Cloud Management capabilities and how to best use the Insights for gaining visibility of your environment, and much more. |
   |  |  |  |
+Management and Governance	| Migrate from legacy agents to AMA | In this session, learn how to plan and approach your migration from the legacy Microsoft Monitoring Agent/OMS Agent to the Azure Monitor Agent, where used with Azure Monitor and other services. |
+  |  |  |  |
 Management and Governance	| Azure Application Monitoring | In this session, you will learn how to use Azure Monitor Application Insights for end-to-end application monitoring. Intended audience for this session is application developers. |
  |  |  |  |
 Management and Governance	| Azure Cost Management | Learn how to use the cost optimization pillar of the Microsoft Azure Well-Architected Framework to design a cloud-based architecture that is efficient, eliminates waste, and gives you full visibility into where your money is spent on cloud resources. |
