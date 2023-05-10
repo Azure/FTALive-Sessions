@@ -3,7 +3,7 @@
 #####################################
 
 LOCATION='australiaeast'
-RG_NAME='008-internal-nginx-cluster-rg'
+RG_NAME='08-internal-nginx-cluster-rg'
 az group create -n $RG_NAME --location $LOCATION
 
 az network vnet create -g $RG_NAME -n 'internal-nginx-vnet' \

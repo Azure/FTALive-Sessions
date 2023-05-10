@@ -3,7 +3,7 @@
 #########################
 
 LOCATION='australiaeast'
-RG_NAME='010-network-policy-cluster-rg'
+RG_NAME='10-network-policy-cluster-rg'
 az group create -n $RG_NAME --location $LOCATION
 
 az aks create \

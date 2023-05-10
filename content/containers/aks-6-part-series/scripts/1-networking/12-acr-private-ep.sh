@@ -3,7 +3,7 @@
 ##############################
 
 LOCATION='australiaeast'
-RG_NAME='012-acr-cluster-rg'
+RG_NAME='12-acr-cluster-rg'
 ACR_NAME='acrcluster228f0r720'
 
 az group create -n $RG_NAME --location $LOCATION

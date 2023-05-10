@@ -3,7 +3,8 @@
 ##################################
 
 LOCATION='australiaeast'
-RG_NAME='009-app-gateway-ingress-controller-cluster-rg'
+RG_NAME='09-app-gateway-ingress-controller-cluster-rg'
+MC_RG_NAME='MC_09-app-gateway-ingress-controller-cluster-rg_agic-cluster_australiaeast'
 az group create -n $RG_NAME --location $LOCATION
 
 az aks create -n 'agic-cluster' \
@@ -17,6 +18,15 @@ az aks get-credentials -g $RG_NAME -n 'agic-cluster' --admin --context '09-agic-
 
 kubectl apply -f ./agic-app.yaml
 
-k logs ingress-appgw-deployment-7499446cb5-995cv -n kube-system
+POD_NAME=`k get po -l=app=ingress-appgw -n kube-system | tail -n +2 | awk '{print $1}'`
+k logs $POD_NAME -n kube-system
 
 kubectl get ingress
+
+GW_NAME=`az network application-gateway list -g $MC_RG_NAME --query [].name -o tsv`
+IP_ADDR_ID=`az network application-gateway frontend-ip list --gateway-name $GW_NAME --resource-group $MC_RG_NAME --query [].publicIPAddress.id --output tsv`
+IP_ADDR=`az network public-ip show --ids $IP_ADDR_ID --query ipAddress --output tsv`
+
+echo http://$IP_ADDR
+
+curl http://$IP_ADDR

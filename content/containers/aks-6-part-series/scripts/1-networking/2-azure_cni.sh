@@ -2,8 +2,9 @@
 # 2 - Azure CNI cluster
 ###############################
 
+LOCATION='australiaeast'
 SSH_KEY=$(cat ~/.ssh/id_rsa.pub)
-RG_NAME='002-cni-cluster-rg'
+RG_NAME='02-cni-cluster-rg'
 az group create -n $RG_NAME --location $LOCATION
 
 az network vnet create -g $RG_NAME \

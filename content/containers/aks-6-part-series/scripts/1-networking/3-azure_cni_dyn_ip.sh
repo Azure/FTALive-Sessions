@@ -5,7 +5,7 @@
 
 LOCATION='australiaeast'
 SSH_KEY=$(cat ~/.ssh/id_rsa.pub)
-RG_NAME='003-cni-dyn-subnet-cluster-rg'
+RG_NAME='03-cni-dyn-subnet-cluster-rg'
 
 az group create -n $RG_NAME --location $LOCATION
 
@@ -27,4 +27,4 @@ az aks create \
     --pod-subnet-id $POD_SUBNET_ID \
     --ssh-key-value "$SSH_KEY"
 
-az aks get-credentials -g $RG_NAME -n 'cni-dyn-subnet-cluster' --admin --context '03-cni-dyn-subnet-cluster'
+az aks get-credentials -g $RG_NAME -n 'cni-dyn-subnet-cluster' --admin --context '03_5-cni-dyn-subnet-cluster'

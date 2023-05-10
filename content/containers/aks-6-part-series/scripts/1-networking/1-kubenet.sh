@@ -4,7 +4,7 @@
 
 LOCATION='australiaeast'
 SSH_KEY=$(cat ~/.ssh/id_rsa.pub)
-RG_NAME='001-kubenet-cluster-rg'
+RG_NAME='01-kubenet-cluster-rg'
 
 az group create -n $RG_NAME --location $LOCATION
 

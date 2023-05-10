@@ -3,7 +3,7 @@
 #####################
 
 LOCATION='australiaeast'
-RG_NAME='013-akv-csi-cluster-rg'
+RG_NAME='13-akv-csi-cluster-rg'
 KV_NAME='akvcsi42398g398'
 UAMI='akv-csi-identity'
 serviceAccountName="workload-identity-sa"  # sample name; can be changed

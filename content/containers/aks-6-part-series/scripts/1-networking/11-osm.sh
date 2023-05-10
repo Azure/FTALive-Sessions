@@ -3,7 +3,7 @@
 #######################
 
 LOCATION='australiaeast'
-RG_NAME='011-osm-cluster-rg'
+RG_NAME='11-osm-cluster-rg'
 az group create -n $RG_NAME --location $LOCATION
 
 az aks create \

@@ -5,7 +5,7 @@
 LOCATION='australiaeast'
 SSH_KEY=$(cat ~/.ssh/id_rsa.pub)
 PREFIX="fw-egress"
-RG_NAME="005-${PREFIX}-rg"
+RG_NAME="05-${PREFIX}-rg"
 PLUGIN=azure
 AKSNAME="${PREFIX}-cluster"
 VNET_NAME="${PREFIX}-vnet"
@@ -61,10 +61,10 @@ az network route-table route create -g $RG_NAME --name $FWROUTE_NAME_INTERNET --
 az network firewall network-rule create -g $RG_NAME -f $FWNAME --collection-name 'aksfwnr' -n 'apiudp' --protocols 'UDP' --source-addresses '*' --destination-addresses "AzureCloud.$LOCATION" --destination-ports 1194 --action allow --priority 100
 az network firewall network-rule create -g $RG_NAME -f $FWNAME --collection-name 'aksfwnr' -n 'apitcp' --protocols 'TCP' --source-addresses '*' --destination-addresses "AzureCloud.$LOCATION" --destination-ports 9000
 az network firewall network-rule create -g $RG_NAME -f $FWNAME --collection-name 'aksfwnr' -n 'time' --protocols 'UDP' --source-addresses '*' --destination-fqdns 'ntp.ubuntu.com' --destination-ports 123
-az network firewall network-rule create -g $RG_NAME -f $FWNAME --collection-name 'aksfwnr' -n 'deny-the-onion' --protocols 'TCP' --source-addresses '*' --destination-fqdns '*.theonion.com' --destination-ports 443,80
 
 # Add FW Application Rules
 az network firewall application-rule create -g $RG_NAME -f $FWNAME --collection-name 'aksfwar' -n 'fqdn' --source-addresses '*' --protocols 'http=80' 'https=443' --fqdn-tags "AzureKubernetesService" --action allow --priority 100
+az network firewall application-rule create -g $RG_NAME -f $FWNAME --collection-name 'theonion-ar' -n 'deny-the-onion' --protocols 'http=80' 'https=443' --source-addresses '*' --target-fqdns '*.theonion.com' --action deny --priority 200
 
 # Associate route table with next hop to Firewall to the AKS subnet
 az network vnet subnet update -g $RG_NAME --vnet-name $VNET_NAME --name $AKSSUBNET_NAME --route-table $FWROUTE_TABLE_NAME
