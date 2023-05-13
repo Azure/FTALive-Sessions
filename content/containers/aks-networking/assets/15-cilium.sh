@@ -32,6 +32,7 @@ az aks create -n $CLUSTER \
 --network-dataplane cilium
 
 az aks get-credentials -g $RESOURCE_GROUP -n $CLUSTER --admin
+kubectl config use-context "$CLUSTER-admin"
 
 # chekc cilium status
 cilium status

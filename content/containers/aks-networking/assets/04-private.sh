@@ -33,3 +33,4 @@ az aks create \
     --enable-private-cluster
 
 az aks get-credentials -g $RG_NAME -n 'private-cluster' --admin --context '04-private-cluster'
+kubectl config use-context '04-private-cluster-admin'

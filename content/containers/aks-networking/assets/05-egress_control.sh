@@ -4,7 +4,7 @@
 
 LOCATION='australiaeast'
 SSH_KEY=$(cat ~/.ssh/id_rsa.pub)
-PREFIX="fw-egress"
+PREFIX="azfw-egress"
 RG_NAME="05-${PREFIX}-rg"
 PLUGIN=azure
 AKSNAME="${PREFIX}-cluster"
@@ -50,11 +50,11 @@ az network firewall ip-config create -g $RG_NAME -f $FWNAME -n $FWIPCONFIG_NAME 
 
 # Capture Firewall IP Address for Later Use
 FWPUBLIC_IP=$(az network public-ip show -g $RG_NAME -n $FWPUBLICIP_NAME --query "ipAddress" -o tsv)
-FWPRIVATE_IP=$(az network firewall show -g $RG_NAME -n $FWNAME --query "ipConfigurations[0].privateIpAddress" -o tsv)
+FWPRIVATE_IP=$(az network firewall show -g $RG_NAME -n $FWNAME --query "ipConfigurations[0].privateIPAddress" -o tsv)
 
 # Create UDR and add a route for Azure Firewall
 az network route-table create -g $RG_NAME -l $LOCATION --name $FWROUTE_TABLE_NAME
-az network route-table route create -g $RG_NAME --name $FWROUTE_NAME --route-table-name $FWROUTE_TABLE_NAME --address-prefix 0.0.0.0/0 --next-hop-type VirtualAppliance --next-hop-ip-address $FWPRIVATE_IP
+az network route-table route create -g $RG_NAME --name $FWROUTE_NAME --route-table-name $FWROUTE_TABLE_NAME --address-prefix '0.0.0.0/0' --next-hop-type VirtualAppliance --next-hop-ip-address $FWPRIVATE_IP
 az network route-table route create -g $RG_NAME --name $FWROUTE_NAME_INTERNET --route-table-name $FWROUTE_TABLE_NAME --address-prefix $FWPUBLIC_IP/32 --next-hop-type Internet
 
 # Add FW Network Rules
@@ -88,7 +88,8 @@ CURRENT_IP=$(dig @resolver1.opendns.com ANY myip.opendns.com +short)
 az aks update -g $RG_NAME -n $AKSNAME --api-server-authorized-ip-ranges $CURRENT_IP/32
 
 # deploy test application
-az aks get-credentials -g $RG_NAME -n $AKSNAME --admin --context '05-egress-cluster'
+az aks get-credentials -g $RG_NAME -n $AKSNAME --admin --context '05-azfw-egress-cluster'
+kubectl config use-context '05-azfw-egress-cluster-admin'
 
 kubectl apply -f ./voting-app.yaml
 

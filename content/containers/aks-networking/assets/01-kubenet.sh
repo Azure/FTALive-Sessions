@@ -31,6 +31,7 @@ az aks create \
 
 # SSH to privileged container on cluster node
 az aks get-credentials -g $RG_NAME -n 'kubenet-cluster' --admin --context '01-kubenet-cluster'
+kubectl config use-context '01-kubenet-cluster-admin'
 
 NODE_NAME=$(k get node -o json | jq .items[0].metadata.name -r)
 kubectl debug node/$NODE_NAME -it --image=mcr.microsoft.com/dotnet/runtime-deps:6.0

@@ -28,6 +28,7 @@ az aks create -n 'akv-csi-cluster' \
 
 # get kube config
 az aks get-credentials -g $RG_NAME -n 'akv-csi-cluster' --admin --context '13-akv-csi-cluster'
+kubectl config use-context '13-akv-csi-cluster-admin'
 
 kubectl get pods -n kube-system -l 'app in (secrets-store-csi-driver, secrets-store-provider-azure)'
 

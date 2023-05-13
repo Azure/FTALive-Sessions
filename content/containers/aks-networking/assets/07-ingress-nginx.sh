@@ -15,6 +15,7 @@ az aks create \
 --node-count 1
 
 az aks get-credentials -g $RG_NAME -n $CLUSTER --admin --context '07-ingress-basic'
+kubectl config use-context '07-ingress-basic-admin'
 
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
 helm repo update

@@ -28,3 +28,4 @@ az aks create \
     --ssh-key-value "$SSH_KEY"
 
 az aks get-credentials -g $RG_NAME -n 'cni-dyn-subnet-cluster' --admin --context '03_5-cni-dyn-subnet-cluster'
+kubectl config use-context '03-cni-dyn-subnet-cluster-admin'

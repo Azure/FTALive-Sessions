@@ -17,3 +17,4 @@ az aks create \
     --nat-gateway-idle-timeout 30
 
 az aks get-credentials -g $RG_NAME -n $CLUSTER --admin --context '06-nat-gwy-cluster'
+kubectl config use-context '06-nat-gwy-cluster-admin'

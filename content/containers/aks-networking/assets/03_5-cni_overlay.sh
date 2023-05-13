@@ -28,3 +28,4 @@ az aks create \
     --vnet-subnet-id $NODE_SUBNET_ID
 
 az aks get-credentials -g $RG_NAME -n $CLUSTER --admin --context '03_5-cni-overlay-cluster'
+kubectl config use-context '03_5-cni-overlay-cluster-admin'

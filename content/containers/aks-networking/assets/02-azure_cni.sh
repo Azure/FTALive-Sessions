@@ -25,3 +25,4 @@ az aks create -g $RG_NAME -n 'cni-cluster' \
     --service-cidr '10.2.0.0/24'
 
 az aks get-credentials -g $RG_NAME -n 'cni-cluster' --admin --context '02-cni-cluster'
+kubectl config use-context '02-cni-cluster-admin'

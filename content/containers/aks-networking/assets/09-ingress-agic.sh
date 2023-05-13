@@ -15,6 +15,7 @@ az aks create -n 'agic-cluster' \
   -a ingress-appgw --appgw-name 'agic-app-gwy' --appgw-subnet-cidr "10.225.0.0/16" --generate-ssh-keys
 
 az aks get-credentials -g $RG_NAME -n 'agic-cluster' --admin --context '09-agic-cluster'
+kubectl config use-context '09-agic-cluster-admin'
 
 kubectl apply -f ./agic-app.yaml
 

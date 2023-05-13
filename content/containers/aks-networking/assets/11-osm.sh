@@ -13,6 +13,7 @@ az aks create \
   --enable-addons open-service-mesh
 
 az aks get-credentials -g $RG_NAME -n 'osm-cluster' --admin --context '11-osm-cluster'
+kubectl config use-context '11-osm-cluster-admin'
 
 # install OSM CLI
 OSM_VERSION=v1.0.0

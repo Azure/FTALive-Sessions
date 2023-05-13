@@ -24,6 +24,7 @@ az aks create \
     --node-count 1
 
 az aks get-credentials -g $RG_NAME -n 'internal-nginx-cluster' --admin --context '08-internal-nginx-cluster'
+kubectl config use-context '08-internal-nginx-cluster-admin'
 
 SCOPE=$(az group show -n $RG_NAME | jq .id -r)
 ASSIGNEE=$(az aks show -g $RG_NAME -n 'internal-nginx-cluster' | jq .identityProfile.kubeletidentity.clientId -r)

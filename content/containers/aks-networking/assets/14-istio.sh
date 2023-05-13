@@ -22,7 +22,8 @@ az aks create \
 --enable-asm
 
 az aks show --resource-group $RESOURCE_GROUP --name $CLUSTER --query 'serviceMeshProfile.mode'
-az aks get-credentials --resource-group $RESOURCE_GROUP --name $CLUSTER
+az aks get-credentials --resource-group $RESOURCE_GROUP --name $CLUSTER --admin
+kubectl config use-context "$CLUSTER-admin"
 kubectl get pods -n aks-istio-system
 
 # enable sidecar injection
