@@ -2,8 +2,9 @@
 # 3.5 - Azure CNI cluster with overlay network 
 ####################################################
 
-LOCATION='westcentralus'
-RG_NAME='003_5-cni-dyn-subnet-cluster-rg'
+LOCATION='australiaeast'
+RG_NAME='03_5-cni-overlay-cluster-rg'
+CLUSTER='cni-overlay-cluster'
 
 # register preview feature
 # az feature register --namespace Microsoft.ContainerService --name AzureOverlayPreview
@@ -18,7 +19,7 @@ az network vnet subnet create -g $RG_NAME --vnet-name 'cni-overlay-vnet'  --name
 NODE_SUBNET_ID=$(az network vnet subnet show -g $RG_NAME --vnet-name 'cni-overlay-vnet' --name 'node-subnet' --query id -o tsv)
 
 az aks create \
-    -n 'cni-overlay-cluster' \
+    -n $CLUSTER \
     -g $RG_NAME \
     --location $LOCATION \
     --network-plugin azure \
@@ -26,4 +27,5 @@ az aks create \
     --pod-cidr '192.168.0.0/16' \
     --vnet-subnet-id $NODE_SUBNET_ID
 
-az aks get-credentials -g $RG_NAME -n 'cni-dyn-subnet-cluster' --admin --context '03-5-cni-overlay-cluster'
+az aks get-credentials -g $RG_NAME -n $CLUSTER --admin --context '03_5-cni-overlay-cluster'
+kubectl config use-context '03_5-cni-overlay-cluster-admin'

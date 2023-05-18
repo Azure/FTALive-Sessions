@@ -3,7 +3,7 @@
 #########################
 
 LOCATION='australiaeast'
-RG_NAME='010-network-policy-cluster-rg'
+RG_NAME='10-network-policy-cluster-rg'
 az group create -n $RG_NAME --location $LOCATION
 
 az aks create \
@@ -14,6 +14,7 @@ az aks create \
     --network-policy azure
 
 az aks get-credentials -g $RG_NAME -n 'network-policy-cluster' --admin --context '10-network-policy-cluster'
+kubectl config use-context '10-network-policy-cluster-admin'
 
 kubectl create namespace demo
 
@@ -37,7 +38,7 @@ kubectl get pod -n demo --output=wide
 # create client pod & get a shell within it
 kubectl run -it client -n demo --image=k8s.gcr.io/e2e-test-images/agnhost:2.33 --command -- bash
 
-# enter the following command in the cient shell
+# enter the following command in the client shell
 # output should be empty (successful)
 # $ /agnhost connect <server-ip>:80 --timeout=3s --protocol=tcp 
 

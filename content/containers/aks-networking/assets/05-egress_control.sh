@@ -4,8 +4,8 @@
 
 LOCATION='australiaeast'
 SSH_KEY=$(cat ~/.ssh/id_rsa.pub)
-PREFIX="fw-egress"
-RG_NAME="005-${PREFIX}-rg"
+PREFIX="azfw-egress"
+RG_NAME="05-${PREFIX}-rg"
 PLUGIN=azure
 AKSNAME="${PREFIX}-cluster"
 VNET_NAME="${PREFIX}-vnet"
@@ -50,21 +50,21 @@ az network firewall ip-config create -g $RG_NAME -f $FWNAME -n $FWIPCONFIG_NAME 
 
 # Capture Firewall IP Address for Later Use
 FWPUBLIC_IP=$(az network public-ip show -g $RG_NAME -n $FWPUBLICIP_NAME --query "ipAddress" -o tsv)
-FWPRIVATE_IP=$(az network firewall show -g $RG_NAME -n $FWNAME --query "ipConfigurations[0].privateIpAddress" -o tsv)
+FWPRIVATE_IP=$(az network firewall show -g $RG_NAME -n $FWNAME --query "ipConfigurations[0].privateIPAddress" -o tsv)
 
 # Create UDR and add a route for Azure Firewall
 az network route-table create -g $RG_NAME -l $LOCATION --name $FWROUTE_TABLE_NAME
-az network route-table route create -g $RG_NAME --name $FWROUTE_NAME --route-table-name $FWROUTE_TABLE_NAME --address-prefix 0.0.0.0/0 --next-hop-type VirtualAppliance --next-hop-ip-address $FWPRIVATE_IP
+az network route-table route create -g $RG_NAME --name $FWROUTE_NAME --route-table-name $FWROUTE_TABLE_NAME --address-prefix '0.0.0.0/0' --next-hop-type VirtualAppliance --next-hop-ip-address $FWPRIVATE_IP
 az network route-table route create -g $RG_NAME --name $FWROUTE_NAME_INTERNET --route-table-name $FWROUTE_TABLE_NAME --address-prefix $FWPUBLIC_IP/32 --next-hop-type Internet
 
 # Add FW Network Rules
 az network firewall network-rule create -g $RG_NAME -f $FWNAME --collection-name 'aksfwnr' -n 'apiudp' --protocols 'UDP' --source-addresses '*' --destination-addresses "AzureCloud.$LOCATION" --destination-ports 1194 --action allow --priority 100
 az network firewall network-rule create -g $RG_NAME -f $FWNAME --collection-name 'aksfwnr' -n 'apitcp' --protocols 'TCP' --source-addresses '*' --destination-addresses "AzureCloud.$LOCATION" --destination-ports 9000
 az network firewall network-rule create -g $RG_NAME -f $FWNAME --collection-name 'aksfwnr' -n 'time' --protocols 'UDP' --source-addresses '*' --destination-fqdns 'ntp.ubuntu.com' --destination-ports 123
-az network firewall network-rule create -g $RG_NAME -f $FWNAME --collection-name 'aksfwnr' -n 'deny-the-onion' --protocols 'TCP' --source-addresses '*' --destination-fqdns '*.theonion.com' --destination-ports 443,80
 
 # Add FW Application Rules
 az network firewall application-rule create -g $RG_NAME -f $FWNAME --collection-name 'aksfwar' -n 'fqdn' --source-addresses '*' --protocols 'http=80' 'https=443' --fqdn-tags "AzureKubernetesService" --action allow --priority 100
+az network firewall application-rule create -g $RG_NAME -f $FWNAME --collection-name 'theonion-ar' -n 'deny-the-onion' --protocols 'http=80' 'https=443' --source-addresses '*' --target-fqdns '*.theonion.com' --action deny --priority 200
 
 # Associate route table with next hop to Firewall to the AKS subnet
 az network vnet subnet update -g $RG_NAME --vnet-name $VNET_NAME --name $AKSSUBNET_NAME --route-table $FWROUTE_TABLE_NAME
@@ -88,7 +88,8 @@ CURRENT_IP=$(dig @resolver1.opendns.com ANY myip.opendns.com +short)
 az aks update -g $RG_NAME -n $AKSNAME --api-server-authorized-ip-ranges $CURRENT_IP/32
 
 # deploy test application
-az aks get-credentials -g $RG_NAME -n $AKSNAME --admin --context '05-egress-cluster'
+az aks get-credentials -g $RG_NAME -n $AKSNAME --admin --context '05-azfw-egress-cluster'
+kubectl config use-context '05-azfw-egress-cluster-admin'
 
 kubectl apply -f ./voting-app.yaml
 
