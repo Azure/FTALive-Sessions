@@ -4,7 +4,7 @@
 
 LOCATION='australiaeast'
 SSH_KEY=$(cat ~/.ssh/id_rsa.pub)
-RG_NAME='004-private-cluster-rg'
+RG_NAME='04-private-cluster-rg'
 az group create -n $RG_NAME --location $LOCATION
 
 az network vnet create \
@@ -33,3 +33,4 @@ az aks create \
     --enable-private-cluster
 
 az aks get-credentials -g $RG_NAME -n 'private-cluster' --admin --context '04-private-cluster'
+kubectl config use-context '04-private-cluster-admin'

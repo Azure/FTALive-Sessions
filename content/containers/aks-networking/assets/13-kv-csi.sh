@@ -3,7 +3,7 @@
 #####################
 
 LOCATION='australiaeast'
-RG_NAME='013-akv-csi-cluster-rg'
+RG_NAME='13-akv-csi-cluster-rg'
 KV_NAME='akvcsi42398g398'
 UAMI='akv-csi-identity'
 serviceAccountName="workload-identity-sa"  # sample name; can be changed
@@ -28,6 +28,7 @@ az aks create -n 'akv-csi-cluster' \
 
 # get kube config
 az aks get-credentials -g $RG_NAME -n 'akv-csi-cluster' --admin --context '13-akv-csi-cluster'
+kubectl config use-context '13-akv-csi-cluster-admin'
 
 kubectl get pods -n kube-system -l 'app in (secrets-store-csi-driver, secrets-store-provider-azure)'
 
