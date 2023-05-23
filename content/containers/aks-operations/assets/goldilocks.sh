@@ -51,3 +51,6 @@ EOF
 
 
 kubectl -n goldilocks port-forward svc/goldilocks-dashboard 8080:80
+
+GOLDILOCKS_CONTROLLER_NAME=`k get pod -n goldilocks -l "app.kubernetes.io/component=controller" -o=jsonpath="{.items[0].metadata.name}"`
+k logs $GOLDILOCKS_CONTROLLER_NAME -n goldilocks 

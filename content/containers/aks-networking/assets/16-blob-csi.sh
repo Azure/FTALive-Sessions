@@ -99,10 +99,6 @@ mountOptions:
   - --cache-size-mb=1000  # Default will be 80% of available memory, eviction will happen beyond that.
 EOF
 
-##########################
-# Dynamic storage volume
-##########################
-
 cat << EOF | kubectl apply -f -
 apiVersion: v1
 kind: PersistentVolume
@@ -130,26 +126,48 @@ spec:
       protocol: nfs
 EOF
 
-# create NFS Persistant volume claim (PVC)
+##########################
+# Dynamic storage volume
+##########################
+
+# create BlobFuse PVC
 cat << EOF | kubectl apply -f -
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: my-azure-blob-storage
+  name: my-blob-fuse-pvc
   annotations:
-        volume.beta.kubernetes.io/storage-class: azureblob-nfs-premium
+        volume.beta.kubernetes.io/storage-class: azureblob-fuse-premium
 spec:
   accessModes:
   - ReadWriteMany
-  storageClassName: my-azureblob-fuse-premium
+  storageClassName: azureblob-fuse-premium
   resources:
     requests:
-      storage: 5Gi
+      storage: 200Gi
 EOF
 
-kubectl get pvc azure-blob-storage
+# create Azure Files PVC
+cat << EOF | kubectl apply -f -
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: my-azure-file-pvc
+  annotations:
+        volume.beta.kubernetes.io/storage-class: azurefile-csi-premium
+spec:
+  accessModes:
+  - ReadWriteMany
+  storageClassName: azurefile-csi-premium
+  resources:
+    requests:
+      storage: 200Gi
+EOF
 
-# use NFS PVC
+kubectl get pvc my-blob-fuse-pvc
+kubectl get pvc my-azure-file-pvc
+
+# use blobFuse PVC
 cat << EOF | kubectl apply -f -
 kind: Pod
 apiVersion: v1
@@ -172,12 +190,47 @@ spec:
   volumes:
     - name: volume
       persistentVolumeClaim:
-        claimName: my-azure-blob-storage
+        claimName: my-blob-fuse-pvc
 EOF
 
+# use Azure Files PVC
+cat << EOF | kubectl apply -f -
+kind: Pod
+apiVersion: v1
+metadata:
+  name: mypod2
+spec:
+  containers:
+  - name: mypod2
+    image: mcr.microsoft.com/oss/nginx/nginx:1.17.3-alpine
+    resources:
+      requests:
+        cpu: 100m
+        memory: 128Mi
+      limits:
+        cpu: 250m
+        memory: 256Mi
+    volumeMounts:
+    - mountPath: "/mnt/file"
+      name: volume
+  volumes:
+    - name: volume
+      persistentVolumeClaim:
+        claimName: my-azure-file-pvc
+EOF
+
+k get pv
+k get pvc
+
 kubectl exec -it mypod -- touch /mnt/blob/test.txt
-kubectl exec -it mypod -- sh -c "echo 'yo yo yo yo' >> /mnt/blob/test.txt"
+kubectl exec -it mypod -- sh -c "echo $(date) >> /mnt/blob/test.txt"
 kubectl exec mypod -- cat /mnt/blob/test.txt
+kubectl exec mypod -- df -h
+
+kubectl exec -it mypod2 -- touch /mnt/file/test.txt
+kubectl exec -it mypod2 -- sh -c "echo $(date) >> /mnt/file/test.txt"
+kubectl exec mypod2 -- cat /mnt/file/test.txt
+kubectl exec mypod2 -- df -h
 
 ##################################
 # Static storage volume
@@ -330,3 +383,106 @@ k exec -it nginx-blob -- sh -c "cat /mnt/blob2/test.txt"
 
 k exec -it nginx-blob -- sh -c "ls /mnt/blob1"
 k exec -it nginx-blob -- sh -c "ls /mnt/blob2"
+
+
+#################################################################
+
+# create Azure Blob PVC
+
+cat << EOF | kubectl apply -f -
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: my-azure-blob-pvc
+  annotations:
+        volume.beta.kubernetes.io/storage-class: azureblob-fuse-premium
+spec:
+  accessModes:
+  - ReadWriteMany
+  storageClassName: azureblob-fuse-premium
+  resources:
+    requests:
+      storage: 500Gi
+EOF
+
+# create Azure File PVC
+
+cat << EOF | kubectl apply -f -
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: my-azure-file-pvc
+  annotations:
+        volume.beta.kubernetes.io/storage-class: azurefile-csi-premium
+spec:
+  accessModes:
+  - ReadWriteMany
+  storageClassName: azurefile-csi-premium
+  resources:
+    requests:
+      storage: 400Gi
+EOF
+
+# use Azure Blob PVC
+cat << EOF | kubectl apply -f -
+kind: Pod
+apiVersion: v1
+metadata:
+  name: azure-blob-csi
+spec:
+  containers:
+  - name: mypod
+    image: mcr.microsoft.com/oss/nginx/nginx:1.17.3-alpine
+    resources:
+      requests:
+        cpu: 100m
+        memory: 128Mi
+      limits:
+        cpu: 250m
+        memory: 256Mi
+    volumeMounts:
+    - mountPath: "/mnt/blob"
+      name: volume
+  volumes:
+    - name: volume
+      persistentVolumeClaim:
+        claimName: my-azure-blob-pvc
+EOF
+
+# use Azure File PVC
+cat << EOF | kubectl apply -f -
+kind: Pod
+apiVersion: v1
+metadata:
+  name: azure-file-csi
+spec:
+  containers:
+  - name: mypod
+    image: mcr.microsoft.com/oss/nginx/nginx:1.17.3-alpine
+    resources:
+      requests:
+        cpu: 100m
+        memory: 128Mi
+      limits:
+        cpu: 250m
+        memory: 256Mi
+    volumeMounts:
+    - mountPath: "/mnt/file"
+      name: volume
+  volumes:
+    - name: volume
+      persistentVolumeClaim:
+        claimName: my-azure-file-pvc
+EOF
+
+# list volume sizes inside each pod
+k exec -it azure-file-csi -- sh -c "df -h"
+k exec -it azure-blob-csi -- sh -c "df -h"
+
+# modify the PVCs.
+# increase 'resource.requests.storage' to '400Gi'
+
+# list volume sizes inside each pod.
+# notice that the volume size inside the pod using blob storage statys the same.
+k exec -it azure-file-csi -- sh -c "df -h"
+k exec -it azure-blob-csi -- sh -c "df -h"
