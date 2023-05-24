@@ -43,4 +43,4 @@ At this stage its important to understand your options but not jump to decision 
 
 An exhaustive list for Microsoft Azure Architectural Criteria can also be found [here ](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-considerations)
 
-In the next section we shall see how we Split Data based on Usage. Followed by Operations to be performed on Data
+In the next section we shall see how whether or not to split from the above options for data store based on current usage and futuristic requirement. Followed by a deeper understanding on the operations to be performed on Data for the end-to-end DataAnalytics pipeline
