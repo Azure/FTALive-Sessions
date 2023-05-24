@@ -1,4 +1,4 @@
-# Understanding Data
+# Type of Data
 There are three primary types of data that a data engineer will work with. Structured,Semi-structured & Unstructured
 
 ## Structured data
@@ -22,30 +22,25 @@ While human-readable formats for structured and semi-structured data can be usef
 *Parquet*  is another columnar data format. It was created by Cloudera and Twitter. A Parquet file contains row groups. Data for each column is stored together in the same row group. Each row group contains one or more chunks of data. A Parquet file includes metadata that describes the set of rows found in each chunk. An application can use this metadata to quickly locate the correct chunk for a given set of rows, and retrieve the data in the specified columns for these rows. Parquet specializes in storing and processing nested data types efficiently. It supports very efficient compression and encoding schemes.
 
 ## Unstructured data
-Not all data is structured or even semi-structured. For example, documents, images, audio and video data, and binary files might not have a specific structure. This kind of data is referred to as unstructured data.
-Unstructured data includes data stored as key-value pairs that don't adhere to standard relational models and Other types of unstructured data that are commonly used include portable data format (PDF), word processor documents, and images.
+Not all data is structured or even semi-structured. For example, documents, images, audio and video data, and binary files might not have a specific structure. This kind of data is referred to as unstructured data.Unstructured data includes data stored as key-value pairs that don't adhere to standard relational models and Other types of unstructured data that are commonly used include portable data format (PDF), word processor documents, and images.
 
-# Data Storage Options 
-
-There are two broad categories of data store in common use:
+## Data Storage Options
+There are two broad categories of **data store** in common use:
 1. **File Stores** 
 2. **Databases**
 
 You will find these decision trees helpful when deciding on the store
+- **[Understanding Data Store models](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview)** 
+- **[Selecting a Data Store](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-decision-tree)**
+- **[Choosing a Big Data Store](https://learn.microsoft.com/en-us/azure/architecture/data-guide/technology-choices/data-storage)**
 
-**[Understanding Data Store models](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview)** 
+> Note:
+At this stage its important to understand your options but not jump to decision on finalizing the store. Reason being that selection on the store is based on various other parameters 
+>1. Type of Data
+>1. Split of Transactional v/s Analytical v/s Historical Data
+>1. Operations to be performed on Data
+>1. Service requirement : Reliability, Scalability, Availability, Concurrency, Costing
 
-**[Selecting a Data Store](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-decision-tree)**
+An exhaustive list for Microsoft Azure Architectural Criteria can also be found [here ](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-considerations)
 
-
-## Planning Tips
-There are four stages for processing DataAnalytics solutions that are common to all architectures:
-
-1. **Ingest** - The ingestion phase identifies the technology and processes that are used to acquire the source data. This data can come from files, logs, and other types of unstructured data that must be put into the data lake. The technology that is used will vary depending on the frequency that the data is transferred. For example, for batch movement of data, pipelines in Azure Synapse Analytics or Azure Data Factory may be the most appropriate technology to use. For real-time ingestion of data, Apache Kafka for HDInsight or Stream Analytics may be an appropriate choice.
-
-2. **Store** - The store phase identifies where the ingested data should be placed. Azure Data Lake Storage Gen2 provides a secure and scalable storage solution that is compatible with commonly used big data processing technologies.
-3. **Prep and train** - The prep and train phase identifies the technologies that are used to perform data preparation and model training and scoring for machine learning solutions. Common technologies that are used in this phase are Azure Synapse Analytics, Azure Databricks, Azure HDInsight, and Azure Machine Learning.
-4. **Model and serve** - Finally, the model and serve phase involves the technologies that will present the data to users. These technologies can include visualization tools such as Microsoft Power BI, or analytical data stores such as Azure Synapse Analytics. Often, a combination of multiple technologies will be used depending on the business requirements.
-
-With this article you would not have arrived at a clear understanding of the databases stores
-In the next page you will see the various options for filestores and how to choose from them
+In the next section we shall see how we Split Data based on Usage. Followed by Operations to be performed on Data
