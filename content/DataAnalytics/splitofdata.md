@@ -2,8 +2,10 @@
 This module focusses on certain database scenarios which should help you narrow down your options for storing data. Often neglected these are few important concepts one must consider before creating pipelines
 
 ## Transactional Data
+This is the day to day data that gets generated through transactions
 
 ## Historical Data
+This is data you dont generate every day
 
 ## Analytical Data
 
