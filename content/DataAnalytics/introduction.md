@@ -18,3 +18,8 @@ Data engineers provision and set up data platform technologies that are on-premi
 * **Where**: These sessions are offered as part of 'FTA Live' and delivered virtually. To learn when this session will next be delivered and for a full catalogue of FTA Live sessions please visit [aka.ms/ftalive](https://aka.ms/ftalive).
 
 * **Why**: Did you know when to go for OLTP and when to go for OLAP engines ? Or what is the basic difference between a Data Warehouse/ Data Lakehouse and Delta Lake ? This session aims to cut through the noise and provide you with the latest advice and engineering opinions on every aspect of DataAnalytics pipleines.
+
+##Additional Information
+- [Explore data roles and services](https://learn.microsoft.com/en-us/training/modules/explore-roles-responsibilities-world-of-data/)
+- [Describe data professional roles](https://learn.microsoft.com/en-us/training/modules/understand-data-roles-services-products/4-data-professionals)
+- [Identify job roles](https://learn.microsoft.com/en-us/training/modules/data-engineering-processes/2-roles-and-responsibilities)

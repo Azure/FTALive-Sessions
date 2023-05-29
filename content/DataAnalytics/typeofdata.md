@@ -1,4 +1,6 @@
 # Type of Data
+#### [prev](./introduction.md) | [home](./introduction.md)  | [next]()
+
 There are three primary types of data that a data engineer will work with. Structured,Semi-structured & Unstructured
 
 ## Structured data
@@ -44,3 +46,9 @@ At this stage its important to understand your options but not jump to decision 
 An exhaustive list for Microsoft Azure Architectural Criteria can also be found [here ](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-considerations)
 
 In the next section we shall see how whether or not to split from the above options for data store based on current usage and futuristic requirement. Followed by a deeper understanding on the operations to be performed on Data for the end-to-end DataAnalytics pipeline
+
+## Additional Information
+- [Identify Data Formats](https://learn.microsoft.com/en-us/training/modules/explore-core-data-concepts/2-data-formats)
+- [What is Data Engineering](https://learn.microsoft.com/en-us/training/modules/introduction-to-data-engineering-azure/2-what-data-engineering)
+- [Explore relational data in Azure](https://learn.microsoft.com/en-us/training/paths/azure-data-fundamentals-explore-relational-data/)
+- [Explore non-relational data in Azure](https://learn.microsoft.com/en-us/training/paths/azure-data-fundamentals-explore-non-relational-data/)
