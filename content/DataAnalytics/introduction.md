@@ -1,7 +1,9 @@
 # Introduction
+
 Data today is available in various forms and can be stored in various relational and non-relational engines. It becomes vital how the type of data, storage or data, security, governance, access and networking play an important role in creating an end-to-end DataAnalytics Pipeline. The key stakeholders here in identifying and designing data sources and flow of data are Data Engineers and Data Analysts
 
 ## Target Audience
+
 Data analysts are responsible for profiling, cleaning, and transforming data.
 Their responsibilities also include designing and building scalable and effective data models, and enabling and implementing the advanced analytics capabilities into reports for analysis.
 
@@ -19,7 +21,8 @@ Data engineers provision and set up data platform technologies that are on-premi
 
 * **Why**: Did you know when to go for OLTP and when to go for OLAP engines ? Or what is the basic difference between a Data Warehouse/ Data Lakehouse and Delta Lake ? This session aims to cut through the noise and provide you with the latest advice and engineering opinions on every aspect of DataAnalytics pipleines.
 
-##Additional Information
-- [Explore data roles and services](https://learn.microsoft.com/en-us/training/modules/explore-roles-responsibilities-world-of-data/)
-- [Describe data professional roles](https://learn.microsoft.com/en-us/training/modules/understand-data-roles-services-products/4-data-professionals)
-- [Identify job roles](https://learn.microsoft.com/en-us/training/modules/data-engineering-processes/2-roles-and-responsibilities)
+## Additional Information
+
+* [Explore data roles and services](https://learn.microsoft.com/training/modules/explore-roles-responsibilities-world-of-data/)
+* [Describe data professional roles](https://learn.microsoft.com/training/modules/understand-data-roles-services-products/4-data-professionals)
+* [Identify job roles](https://learn.microsoft.com/training/modules/data-engineering-processes/2-roles-and-responsibilities)
