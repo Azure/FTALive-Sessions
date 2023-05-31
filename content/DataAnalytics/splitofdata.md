@@ -9,11 +9,13 @@ This is the day to day data that gets generated through transactions.Common scen
 
 ### 1) OLTP
 
-The management of transactional data using computer systems is referred to as online transaction processing (OLTP). OLTP systems record business interactions as they occur in the day-to-day operation of the organization, and support querying of this data to make inferences.These systems are optimized for dealing with discrete system or user requests immediately and responding as quickly as possible </br>
+The management of transactional data using computer systems is referred to as online transaction processing (OLTP). OLTP systems record business interactions as they occur in the day-to-day operation of the organization, and support querying of this data to make inferences.These systems are optimized for dealing with discrete system or user requests immediately and responding as quickly as possible. They can handle a few GB to 16(OSS) and 100TB(SQL) volume of data </br>
 
 #### When to use OLTP solution
 
 * Choose OLTP when you need to efficiently process and store business transactions and immediately make them available to client applications in a consistent way. Use this architecture when any tangible delay in processing would have a negative impact on the day-to-day operations of the business.
+
+![OLTP](/images/OLTP%20Databases.png)
 
 ## Historical Data
 
