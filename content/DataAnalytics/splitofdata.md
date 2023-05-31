@@ -56,7 +56,7 @@ This is a specialized subset of data warehouse, designed to handle business and 
 
 The heirarchy is summarized as follows
 
-![Data Hierarchy](/images/Data%20Heirarchy%20OLTP%20to%20OLAP.png)
+![Data Hierarchy](/images/DataHeirarchyOLTPtoOLAP.png)
 
 ## Analytical Data
 
