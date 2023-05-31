@@ -24,12 +24,8 @@ These are optimized for the analytical processing, ingesting, synthesizing, and 
 
 #### When to use OLAP solution
 
-Consider OLAP in the following scenarios:
-You need to execute complex analytical and ad hoc queries rapidly, without negatively affecting your OLTP systems.
-
-* You want to provide business users with a simple way to generate reports from your data.
-* You want to provide a number of aggregations that will allow users to get fast, consistent results.
-* OLAP is especially useful for applying aggregate calculations over large amounts of data. OLAP systems are optimized for read-heavy scenarios, such as analytics and business intelligence. OLAP allows users to segment multi-dimensional data into slices that can be viewed in two dimensions (such as a pivot table) or filter the data by specific values.
+* Consider OLAP when there is a need to execute complex analytical and ad hoc queries rapidly over large amount of data, without negatively affecting your OLTP systems over structural data
+* OLAP systems are optimized for read-heavy scenarios, such as analytics and business intelligence where users are required to segment multi-dimensional data into slices that can be viewed in two dimensions (such as a pivot table) or filter the data by specific values.
 
 ### 3) Modern Data Warehouse
 
@@ -38,7 +34,7 @@ A conventional data warehousing (OLAP systems) solution typically involves copyi
 #### When to use Data Warehouse solution
 
 * Choose a data warehouse when you need to turn massive amounts of data from operational systems into a format that is easy to understand. Data warehouses don't need to follow the same terse data structure you may be using in your OLTP databases. You can use column names that make sense to business users and analysts, restructure the schema to simplify relationships, and consolidate several tables into one.
-* Consider using a data warehouse when you need to keep historical data separate from the source transaction systems for performance reasons.Because data warehouses are optimized for read access, generating reports is faster than using the source transaction system for reporting.
+* Consider using a data warehouse when you need to keep historical data separate from the source transaction systems for performance reasons.
 
 ### 4) Data Mart
 
@@ -46,9 +42,8 @@ This is a specialized subset of data warehouse, designed to handle business and 
 
 #### When to use Data Mart solution
 
-* Choose a data mart when you need to turn moderate volume of data from operational systems into a format that is easy to understand for a particular business unit or department 
-* It works well for relational database analytics with Power BI
-* Datamarts are often preferred where auto generated datasets are viable for generating reports and minimizing orchestration and administration cost in developing dataflow and pipelines. Minimal or no-code experience is preferred over emphasis on a particular structure and schema.
+* Choose a data mart when you need to turn moderate volume of data from operational systems into a format that is easy to understand for a particular business unit or department. It works well for relational database analytics with Power BI
+* Datamarts are often preferred where auto generated datasets are viable for generating reports. No-code experience is preferred over emphasis on a particular structure and schema. Minimizing orchestration and administration cost in developing dataflow and pipelines is key advantage of such solutions
 
 ## Analytical Data
 
