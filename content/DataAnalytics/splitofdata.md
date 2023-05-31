@@ -40,7 +40,7 @@ A conventional data warehousing (OLAP systems) solution typically involves copyi
 * Preferred when you need to keep historical data separate from the source transaction systems for performance reasons.
 * Data warehouses don't need to follow the same terse data structure you may be using in your OLTP databases. You can use column names that make sense to business users and analysts, restructure the schema to simplify relationships, and consolidate several tables into one.
 
-![Data Warehouse](/images/DW.png)
+![Data Warehouse](/images/DataWarehouse.png)
 
 ### 4) Data Mart
 
@@ -52,11 +52,11 @@ This is a specialized subset of data warehouse, designed to handle business and 
 * Datamarts are good options where auto generated datasets are viable for generating reports.It works well for relational database analytics with Power BI.
 * No-code experience is preferred over emphasis on a particular structure and schema. Minimizing orchestration and administration cost in developing dataflow and pipelines is key advantage of such solution
 
-![Data Mart](/images/datamarts-overview-01.png)
+![Data Mart](/images/DataMarts.png)
 
 The heirarchy is summarized as follows
 
-![Data Hierarchy](/images/DataHeirarchy.png)
+![Data Hierarchy](/images/Data%20Heirarchy%20OLTP%20to%20OLAP.png)
 
 ## Analytical Data
 
@@ -74,7 +74,7 @@ A data lake captures anything the organization deems valuable for future use.Ess
 Typically this transformation uses an **ELT (extract-load-transform)** pipeline, where the data is ingested and transformed in place. Source data that is already relational may go directly into the data warehouse, using an ETL process, skipping the data lake.
 
 A following table will help to make your use case clearer
-![Comparison Table](/images/comparing-data-lakes-and-data-warehouses.png)
+![Comparison Table](/images/ComparisonLakevsWarehouse.png)
 
 #### When to use Data Lake solutions
 
