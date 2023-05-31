@@ -1,6 +1,6 @@
 # Type of Data
 
-[prev](./introduction.md) | [home](./introduction.md)  | [next](./splitofdata.md)
+[prev](./introduction.md) | [home](./introduction.md)  | [next](./splitofdata1.md)
 
 There are three primary types of data that a data engineer will work with. Structured,Semi-structured & Unstructured
 
