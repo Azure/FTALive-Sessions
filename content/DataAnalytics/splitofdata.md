@@ -9,7 +9,8 @@ This is the day to day data that gets generated through transactions.Common scen
 ### 1) OLTP
 
 The management of transactional data using computer systems is referred to as online transaction processing (OLTP). OLTP systems record business interactions as they occur in the day-to-day operation of the organization, and support querying of this data to make inferences.These systems are optimized for dealing with discrete system or user requests immediately and responding as quickly as possible </br>
-**When to use this solution**
+
+#### When to use OLTP solution
 
 * Choose OLTP when you need to efficiently process and store business transactions and immediately make them available to client applications in a consistent way. Use this architecture when any tangible delay in processing would have a negative impact on the day-to-day operations of the business.
 
@@ -20,7 +21,9 @@ This is data you don't generate every day. Its accumulated over a period of time
 ### 2) OLAP systems
 
 These are optimized for the analytical processing, ingesting, synthesizing, and managing large sets of historical data. The data processed by OLAP systems largely originates from OLTP systems and needs to be loaded into the OLAP systems by **ETL (Extract, Transform, and Load)** batch processes.</br>
-**When to use this solution**
+
+#### When to use OLAP solution
+
 Consider OLAP in the following scenarios:
 You need to execute complex analytical and ad hoc queries rapidly, without negatively affecting your OLTP systems.
 
@@ -30,16 +33,18 @@ You need to execute complex analytical and ad hoc queries rapidly, without negat
 
 ### 3) Modern Data Warehouse
 
-A conventional data warehousing (OLAP systems) solution typically involves copying data from transactional data stores into a relational database with a schema that's optimized for querying and building multidimensional models. A modern data warehouse also lets you ingest data from multiple sources of different types, including structured, semi-structured, unstructured and/or streaming data with capabilities like scalability and in-built dashboards. Before storing data is cleansed **(ETL- Extract, Transform, and Load)** to reduce the overhead of space and compute for processing this data when called.This can handle more than 24TB to 1PB of data.</br>
-**When to use this solution**
+A conventional data warehousing (OLAP systems) solution typically involves copying data from transactional data stores into a relational database with a schema that's optimized for querying and building multidimensional models. A modern data warehouse also lets you ingest data from multiple sources of different types, including structured, semi-structured, unstructured and/or streaming data with capabilities like scalability and in-built dashboards. Before storing data is cleansed **(ETL- Extract, Transform, and Load)** to reduce the overhead of space and compute for processing this data when called.This can handle more than 24TB to 1PB of data.
+
+#### When to use Data Warehouse solution
 
 * Choose a data warehouse when you need to turn massive amounts of data from operational systems into a format that is easy to understand. Data warehouses don't need to follow the same terse data structure you may be using in your OLTP databases. You can use column names that make sense to business users and analysts, restructure the schema to simplify relationships, and consolidate several tables into one.
 * Consider using a data warehouse when you need to keep historical data separate from the source transaction systems for performance reasons.Because data warehouses are optimized for read access, generating reports is faster than using the source transaction system for reporting.
 
 ### 4) Data Mart
 
-This is a specialized subset of data warehouse, designed to handle business and reporting needs to a specific unit or department within an organization. For example if you are in the retail industry you have a data warehouse that stores records of all your stores, inventory, sales, marketing, online transactions, etc. For specifically catering to the needs of marketing unit you may choose to have a data mart instead. Given its nature of specialization it may have fewer sources of data ingestion and likewise lesser volume of data than a data warehouse. This helps with faster aggregation on data and more structural focus on summarizing data. Majority of the time they are project-focused with limited or oriented and focussed usage.Datamarts provide a simple and optionally no-code experience to ingest data from different data sources, **extract transform and load (ETL)** the data using Power Query, then load it into an Azure SQL database that's fully managed and requires no tuning or optimization. They can handle up to 100GB of data </br>
-**When to use this solution**
+This is a specialized subset of data warehouse, designed to handle business and reporting needs to a specific unit or department within an organization. For example if you are in the retail industry you have a data warehouse that stores records of all your stores, inventory, sales, marketing, online transactions, etc. For specifically catering to the needs of marketing unit you may choose to have a data mart instead. Given its nature of specialization it may have fewer sources of data ingestion and likewise lesser volume of data than a data warehouse. This helps with faster aggregation on data and more structural focus on summarizing data. Majority of the time they are project-focused with limited or oriented and focussed usage.Datamarts provide a simple and optionally no-code experience to ingest data from different data sources, **extract transform and load (ETL)** the data using Power Query, then load it into an Azure SQL database that's fully managed and requires no tuning or optimization. They can handle up to 100GB of data 
+
+#### When to use Data Mart solution
 
 * Choose a data mart when you need to turn moderate volume of data from operational systems into a format that is easy to understand for a particular business unit or department 
 * It works well for relational database analytics with Power BI
