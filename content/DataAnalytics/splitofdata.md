@@ -55,6 +55,7 @@ This is a specialized subset of data warehouse, designed to handle business and 
 ![Data Mart](/images/datamarts-overview-01.png)
 
 The heirarchy is summarized as follows
+
 ![Data Hierarchy](/images/DataHeirarchy.png)
 
 ## Analytical Data
