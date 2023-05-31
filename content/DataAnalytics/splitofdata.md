@@ -54,6 +54,9 @@ This is a specialized subset of data warehouse, designed to handle business and 
 
 ![Data Mart](/images/datamarts-overview-01.png)
 
+The heirarchy is summarized as follows
+![Data Hierarchy](/images/DataHeirarchy.png)
+
 ## Analytical Data
 
 As more businesses move to digital processes, they increasingly recognize the value of being able to respond to opportunities by making faster and well-informed decisions. The above models present the following challenges:
