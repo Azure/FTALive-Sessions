@@ -40,7 +40,7 @@ A conventional data warehousing (OLAP systems) solution typically involves copyi
 * Preferred when you need to keep historical data separate from the source transaction systems for performance reasons.
 * Data warehouses don't need to follow the same terse data structure you may be using in your OLTP databases. You can use column names that make sense to business users and analysts, restructure the schema to simplify relationships, and consolidate several tables into one.
 
-![Data Warehouse](/images/Data%20Warehouse.png)
+![Data Warehouse](/images/DW2.png)
 
 ### 4) Data Mart
 
