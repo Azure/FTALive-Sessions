@@ -5,6 +5,7 @@ This module focusses on certain database scenarios which should help you narrow 
 ## Transactional Data
 
 This is the day to day data that gets generated through transactions.Common scenarios here are
+> Note:Sizing limit may vary or increase with time.
 
 ### 1) OLTP
 
@@ -33,8 +34,9 @@ A conventional data warehousing (OLAP systems) solution typically involves copyi
 
 #### When to use Data Warehouse solution
 
-* Choose a data warehouse when you need to turn massive amounts of data from operational systems into a format that is easy to understand. Data warehouses don't need to follow the same terse data structure you may be using in your OLTP databases. You can use column names that make sense to business users and analysts, restructure the schema to simplify relationships, and consolidate several tables into one.
-* Consider using a data warehouse when you need to keep historical data separate from the source transaction systems for performance reasons.
+* Choose a data warehouse when you need to turn massive amounts of data from operational systems into a format that is easy to understand. 
+* Preferred when you need to keep historical data separate from the source transaction systems for performance reasons.
+* Data warehouses don't need to follow the same terse data structure you may be using in your OLTP databases. You can use column names that make sense to business users and analysts, restructure the schema to simplify relationships, and consolidate several tables into one.
 
 ### 4) Data Mart
 
@@ -42,8 +44,9 @@ This is a specialized subset of data warehouse, designed to handle business and 
 
 #### When to use Data Mart solution
 
-* Choose a data mart when you need to turn moderate volume of data from operational systems into a format that is easy to understand for a particular business unit or department. It works well for relational database analytics with Power BI
-* Datamarts are often preferred where auto generated datasets are viable for generating reports. No-code experience is preferred over emphasis on a particular structure and schema. Minimizing orchestration and administration cost in developing dataflow and pipelines is key advantage of such solutions
+* Choose a data mart when you need to turn moderate volume of data from operational systems into a format that is easy to understand for a particular business unit or department.
+* Datamarts are good options where auto generated datasets are viable for generating reports.It works well for relational database analytics with Power BI.
+* No-code experience is preferred over emphasis on a particular structure and schema. Minimizing orchestration and administration cost in developing dataflow and pipelines is key advantage of such solution
 
 ## Analytical Data
 
@@ -64,4 +67,3 @@ Delta Lake is an open-source storage layer that brings ACID (atomicity, consiste
 * [Data Warehousing](https://learn.microsoft.com/azure/architecture/data-guide/relational-data/data-warehousing)
 
 
-> Note:Sizing limit may vary or increase with time. </br>
