@@ -60,7 +60,7 @@ The heirarchy is summarized as follows
 
 ![Data Hierarchy](/images/DataHeirarchyOLTPtoOLAP.png)
 
-In the next page we shall see the change in trend from ETL to ELT with advent of Big Data
+In the next page we shall see the change in trend from **ETL to ELT** with the advent of Big Data
 
 ## Additional Information
 
