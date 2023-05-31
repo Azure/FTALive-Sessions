@@ -40,7 +40,7 @@ A conventional data warehousing (OLAP systems) solution typically involves copyi
 
 ### 4) Data Mart
 
-This is a specialized subset of data warehouse, designed to handle business and reporting needs to a specific unit or department within an organization. For example if you are in the retail industry you have a data warehouse that stores records of all your stores, inventory, sales, marketing, online transactions, etc. For specifically catering to the needs of marketing unit you may choose to have a data mart instead. Given its nature of specialization it may have fewer sources of data ingestion and likewise lesser volume of data than a data warehouse. This helps with faster aggregation on data and more structural focus on summarizing data. Majority of the time they are project-focused with limited or oriented and focussed usage.Datamarts provide a simple and optionally no-code experience to ingest data from different data sources, **extract transform and load (ETL)** the data using Power Query, then load it into an Azure SQL database that's fully managed and requires no tuning or optimization. They can handle up to 100GB of data 
+This is a specialized subset of data warehouse, designed to handle business and reporting needs to a specific unit or department within an organization. For example if you are in the retail industry you have a data warehouse that stores records of all your stores, inventory, sales, marketing, online transactions, etc. For specifically catering to the needs of marketing unit you may choose to have a data mart instead. Given its nature of specialization it may have fewer sources of data ingestion and likewise lesser volume of data than a data warehouse. This helps with faster aggregation on data and more structural focus on summarizing data. Majority of the time they are project-focused with limited or oriented and focussed usage.Datamarts provide a simple and optionally no-code experience to ingest data from different data sources, **extract transform and load (ETL)** the data using Power Query, then load it into an Azure SQL database that's fully managed and requires no tuning or optimization. They can handle up to 100GB of data. 
 
 #### When to use Data Mart solution
 
@@ -50,12 +50,21 @@ This is a specialized subset of data warehouse, designed to handle business and 
 
 ## Analytical Data
 
-While historical systems give the advantage of performing basic analytics on large volumes of data. They do have the disadvantage of latency or
-This is vast volumes of historical data or transactional data. As more businesses move to digital processes, they increasingly recognize the value of being able to respond to opportunities by making faster and well-informed decisions. HTAP (Hybrid Transactional/Analytical processing) enables business to run advanced analytics in near-real-time on data stored and processed by OLTP systems
+As more businesses move to digital processes, they increasingly recognize the value of being able to respond to opportunities by making faster and well-informed decisions. The above models present the following challenges:
 
-A data lake is a centralized repository that ingests and stores large volumes of data in its original form.data lake architecture prioritizes storage volume and cost over performance. You get a much higher storage volume at a lower cost, and you can still access data at reasonable speeds.a data lake captures anything the organization deems valuable for future use
+* Ability to run advanced analytics on near-real-time data (streaming data,,social media data, IOT data, etc)
+* Need to cleanse the data before using it for aggregation
 
-Data marts and data lakes create two sides of the spectrum, where data marts are focused data, and data lakes are enormous repositories of raw data.
+With the boom of Big Data (Data arriving in varied Variety with high Velocity in large volumes) there was a transition from extracting, transforming and then loading data (ETL) to extracting,loading and then transforming data for meaningful insights. This was primarily to address 3 V's Variety,Velocity & Volume. Following patterns evolved which focussed on prioritizing storage volume and cost over performance.
+
+### 5) Data Lakes
+
+A data lake captures anything the organization deems valuable for future use.Essentially  it serves as a central repository that holds a large amount of data in its native, raw format. This approach differs from a traditional data warehouse, which transforms and processes the data at the time of ingestion.Its optimized to for scaling from gigabytes to terabytes and petabytes of data.
+
+A following table will help to make your use case clearer
+![Comparison Table](/images/comparing-data-lakes-and-data-warehouses.png)
+
+### 6) Delta Lakes
 
 Delta Lake is an open-source storage layer that brings ACID (atomicity, consistency, isolation, and durability) transactions to Apache Spark and big data workloads.
 
@@ -65,5 +74,5 @@ Delta Lake is an open-source storage layer that brings ACID (atomicity, consiste
 * [OLTP](https://learn.microsoft.com/azure/architecture/data-guide/relational-data/online-transaction-processing)
 * [OLAP](https://learn.microsoft.com/azure/architecture/data-guide/relational-data/online-analytical-processing)
 * [Data Warehousing](https://learn.microsoft.com/azure/architecture/data-guide/relational-data/data-warehousing)
-
-
+* [Data Marts](https://learn.microsoft.com/power-bi/transform-model/datamarts/datamarts-overview)
+* [Big Data Characteristics](https://www.teradata.com/Glossary/What-are-the-5-V-s-of-Big-Data#:~:text=Big%20data%20is%20a%20collection,variety%2C%20velocity%2C%20and%20veracity) 
