@@ -38,6 +38,8 @@ A conventional data warehousing (OLAP systems) solution typically involves copyi
 * Preferred when you need to keep historical data separate from the source transaction systems for performance reasons.
 * Data warehouses don't need to follow the same terse data structure you may be using in your OLTP databases. You can use column names that make sense to business users and analysts, restructure the schema to simplify relationships, and consolidate several tables into one.
 
+![Data Warehouse](/images/Data%20Warehouse.png)
+
 ### 4) Data Mart
 
 This is a specialized subset of data warehouse, designed to handle business and reporting needs to a specific unit or department within an organization. For example if you are in the retail industry you have a data warehouse that stores records of all your stores, inventory, sales, marketing, online transactions, etc. For specifically catering to the needs of marketing unit you may choose to have a data mart instead. Given its nature of specialization it may have fewer sources of data ingestion and likewise lesser volume of data than a data warehouse. This helps with faster aggregation on data and more structural focus on summarizing data. Majority of the time they are project-focused with limited or oriented and focussed usage.Datamarts provide a simple and optionally no-code experience to ingest data from different data sources, **Extract Transform and Load (ETL)** the data using Power Query, then load it into an Azure SQL database that's fully managed and requires no tuning or optimization. They can handle up to 100GB of data. 
@@ -47,6 +49,8 @@ This is a specialized subset of data warehouse, designed to handle business and 
 * Choose a data mart when you need to turn moderate volume of data from operational systems into a format that is easy to understand for a particular business unit or department.
 * Datamarts are good options where auto generated datasets are viable for generating reports.It works well for relational database analytics with Power BI.
 * No-code experience is preferred over emphasis on a particular structure and schema. Minimizing orchestration and administration cost in developing dataflow and pipelines is key advantage of such solution
+
+![Data Mart](/images/datamarts-overview-01.png)
 
 ## Analytical Data
 
@@ -59,10 +63,16 @@ With the boom of Big Data (Data arriving in varied Variety with high Velocity in
 
 ### 5) Data Lakes
 
-A data lake captures anything the organization deems valuable for future use.Essentially  it serves as a central repository that holds a large amount of data in its native, raw format. This approach differs from a traditional data warehouse, which transforms and processes the data at the time of ingestion.Its optimized to for scaling from gigabytes to terabytes and petabytes of data.
+A data lake captures anything the organization deems valuable for future use.Essentially  it serves as a central repository that holds a large amount of data in its native, raw format. This approach differs from a traditional data warehouse, which transforms and processes the data at the time of ingestion.Its optimized to for scaling from gigabytes to terabytes and petabytes of data. They are built to handle high volumes of small writes at low latency, and are optimized for massive throughput.
+
+Typically this transformation uses an **ELT (extract-load-transform)** pipeline, where the data is ingested and transformed in place. Source data that is already relational may go directly into the data warehouse, using an ETL process, skipping the data lake.
 
 A following table will help to make your use case clearer
 ![Comparison Table](/images/comparing-data-lakes-and-data-warehouses.png)
+
+#### When to use Data Lake solutions
+
+* Data lake stores are often used in event streaming or IoT scenarios, because they can persist large amounts of relational and nonrelational data without transformation or schema definition.
 
 ### 6) Delta Lakes
 
@@ -76,4 +86,4 @@ Delta Lake is an open-source storage layer that brings ACID (atomicity, consiste
 * [Data Warehousing](https://learn.microsoft.com/azure/architecture/data-guide/relational-data/data-warehousing)
 * [Data Marts](https://learn.microsoft.com/power-bi/transform-model/datamarts/datamarts-overview)
 * [Big Data Characteristics](https://www.teradata.com/Glossary/What-are-the-5-V-s-of-Big-Data#:~:text=Big%20data%20is%20a%20collection,variety%2C%20velocity%2C%20and%20veracity) 
-* [Data Lakes(https://learn.microsoft.com/azure/architecture/data-guide/scenarios/data-lake)]
+* [Data Lakes](https://learn.microsoft.com/azure/architecture/data-guide/scenarios/data-lake)
