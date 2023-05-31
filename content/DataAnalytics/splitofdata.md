@@ -31,8 +31,7 @@ You need to execute complex analytical and ad hoc queries rapidly, without negat
 ### 3) Modern Data Warehouse
 
 A conventional data warehousing (OLAP systems) solution typically involves copying data from transactional data stores into a relational database with a schema that's optimized for querying and building multidimensional models. A modern data warehouse also lets you ingest data from multiple sources of different types, including structured, semi-structured, unstructured and/or streaming data with capabilities like scalability and in-built dashboards. Before storing data is cleansed **(ETL- Extract, Transform, and Load)** to reduce the overhead of space and compute for processing this data when called.This can handle more than 24TB to 1PB of data.
-
-> Note:Sizing limit may vary or increase with time.
+> Note:Sizing limit may vary or increase with time. </br>
 **When to use this solution**
 
 * Choose a data warehouse when you need to turn massive amounts of data from operational systems into a format that is easy to understand. Data warehouses don't need to follow the same terse data structure you may be using in your OLTP databases. You can use column names that make sense to business users and analysts, restructure the schema to simplify relationships, and consolidate several tables into one.
@@ -41,8 +40,7 @@ A conventional data warehousing (OLAP systems) solution typically involves copyi
 ### 4) Data Mart
 
 This is a specialized subset of data warehouse, designed to handle business and reporting needs to a specific unit or department within an organization. For example if you are in the retail industry you have a data warehouse that stores records of all your stores, inventory, sales, marketing, online transactions, etc. For specifically catering to the needs of marketing unit you may choose to have a data mart instead. Given its nature of specialization it may have fewer sources of data ingestion and likewise lesser volume of data than a data warehouse. This helps with faster aggregation on data and more structural focus on summarizing data. Majority of the time they are project-focused with limited or oriented and focussed usage.Datamarts provide a simple and optionally no-code experience to ingest data from different data sources, **extract transform and load (ETL)** the data using Power Query, then load it into an Azure SQL database that's fully managed and requires no tuning or optimization. They can handle up to 100GB of data
-
-> Note:Sizing limit may vary or increase with time.
+> Note:Sizing limit may vary or increase with time.</br>
 **When to use this solution**
 
 * Choose a data mart when you need to turn moderate volume of data from operational systems into a format that is easy to understand for a particular business unit or department 
