@@ -6,30 +6,29 @@ This module focusses on certain database scenarios which should help you narrow 
 
 This is the day to day data that gets generated through transactions.Common scenarios here are
 
-1) **OLTP systems** :
-The management of transactional data using computer systems is referred to as online transaction processing (OLTP). OLTP systems record business interactions as they occur in the day-to-day operation of the organization, and support querying of this data to make inferences.These systems are optimized for dealing with discrete system or user requests immediately and responding as quickly as possible
+## 1) OLTP
 
-### When to use this solution
+The management of transactional data using computer systems is referred to as online transaction processing (OLTP). OLTP systems record business interactions as they occur in the day-to-day operation of the organization, and support querying of this data to make inferences.These systems are optimized for dealing with discrete system or user requests immediately and responding as quickly as possible </br>
+**When to use this solution** 
 
-Choose OLTP when you need to efficiently process and store business transactions and immediately make them available to client applications in a consistent way. Use this architecture when any tangible delay in processing would have a negative impact on the day-to-day operations of the business.
+* Choose OLTP when you need to efficiently process and store business transactions and immediately make them available to client applications in a consistent way. Use this architecture when any tangible delay in processing would have a negative impact on the day-to-day operations of the business.
 
-OLTP systems are designed to efficiently process and store transactions, as well as query transactional data. The goal of efficiently processing and storing individual transactions by an OLTP system is partly accomplished by data normalization — that is, breaking the data up into smaller chunks that are less redundant. This supports efficiency because it enables the OLTP system to process large numbers of transactions independently, and avoids extra processing needed to maintain data integrity in the presence of redundant data.
 
 ## Historical Data
 
 This is data you don't generate every day. Its accumulated over a period of time and mostly used for reports that involve aggregation of various subsets of this data for meaningful insights. Common scenarios here are
 
-1) **OLAP systems** :
-These are optimized for the analytical processing, ingesting, synthesizing, and managing large sets of historical data. The data processed by OLAP systems largely originates from OLTP systems and needs to be loaded into the OLAP systems by **ETL (Extract, Transform, and Load)** batch processes.
+## 2) OLAP systems
 
-### When to use this solution
-
+These are optimized for the analytical processing, ingesting, synthesizing, and managing large sets of historical data. The data processed by OLAP systems largely originates from OLTP systems and needs to be loaded into the OLAP systems by **ETL (Extract, Transform, and Load)** batch processes.</br>
+**When to use this solution**
 Consider OLAP in the following scenarios:
 You need to execute complex analytical and ad hoc queries rapidly, without negatively affecting your OLTP systems.
-You want to provide business users with a simple way to generate reports from your data
-You want to provide a number of aggregations that will allow users to get fast, consistent results.
-OLAP is especially useful for applying aggregate calculations over large amounts of data. OLAP systems are optimized for read-heavy scenarios, such as analytics and business intelligence. OLAP allows users to segment multi-dimensional data into slices that can be viewed in two dimensions (such as a pivot table) or filter the data by specific values. This process is sometimes called "slicing and dicing" the data, and can be done regardless of whether the data is partitioned across several data sources. This helps users to find trends, spot patterns, and explore the data without having to know the details of traditional data analysis.
-Semantic models can help business users abstract relationship complexities and make it easier to analyze data quickly.
+
+* You want to provide business users with a simple way to generate reports from your data.
+* You want to provide a number of aggregations that will allow users to get fast, consistent results.
+* OLAP is especially useful for applying aggregate calculations over large amounts of data. OLAP systems are optimized for read-heavy scenarios, such as analytics and business intelligence. OLAP allows users to segment multi-dimensional data into slices that can be viewed in two dimensions (such as a pivot table) or filter the data by specific values.
+
 
 2) **Modern Data Warehouse** :
 A conventional data warehousing (OLAP systems) solution typically involves copying data from transactional data stores into a relational database with a schema that's optimized for querying and building multidimensional models. A modern data warehouse also lets you ingest data from multiple sources of different types, including structured, semi-structured, unstructured and/or streaming data with capabilities like scalability and in-built dashboards. Before storing data is cleansed **(ETL- Extract, Transform, and Load)** to reduce the overhead of space and compute for processing this data when called.This can handle more than 24TB to 1PB of data.
