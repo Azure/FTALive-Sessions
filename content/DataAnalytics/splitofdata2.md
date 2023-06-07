@@ -20,7 +20,7 @@ A data lake captures anything the organization deems valuable for future use.Ess
 Typically this transformation uses an **ELT (extract-load-transform)** pipeline, where the data is ingested and transformed in place. Source data that is already relational may go directly into the data warehouse, using an ETL process, skipping the data lake.
 ![Data Lake Architecture](/images/DataLakeArchitecture.png)
 
-The following table will help to make your use case clearer
+[This](https://learn.microsoft.com/eazure/architecture/data-guide/scenarios/data-lake#when-to-use-a-data-lake) table will help to make your use case clearer
 
 #### When to use Data Lake solutions
 
