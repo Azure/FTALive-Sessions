@@ -21,7 +21,6 @@ Typically this transformation uses an **ELT (extract-load-transform)** pipeline,
 ![Data Lake Architecture](/images/DataLakeArchitecture.png)
 
 The following table will help to make your use case clearer
-![Comparison Table](/images/comparing-data-lakes-and-data-warehouses.png)
 
 #### When to use Data Lake solutions
 
