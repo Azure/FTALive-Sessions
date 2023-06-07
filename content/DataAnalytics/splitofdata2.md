@@ -31,7 +31,7 @@ Typically this transformation uses an **ELT (extract-load-transform)** pipeline,
 
 Data Lake does not enforce schema and there can be multiple layers of same data stored which could cause inconsistencies, orphan data or isolated data. Purging becomes an essential component which you should plan when going for a Data Lake Architecture. A data lakehouse is a new, open data management architecture that combines the flexibility, cost-efficiency, and scale of data lakes with the data management and ACID transactions of data warehouses. Data passes through multiple layers of validations and transformations before being stored in a layout optimized for efficient analytics.
 
-![LakeLakehouse](/images/DataLaketoLakehouse.png)
+![LakeToLakehouse](/images/Screenshot%202023-06-07%20151425.png)
 
 When deciding the number of storage accounts you want to create, the following considerations are helpful in deciding the number of storage accounts you want to provision.
 
