@@ -18,7 +18,7 @@ With the boom of Big Data (Data arriving in varied Variety with high Velocity in
 A data lake captures anything the organization deems valuable for future use.Essentially  it serves as a central repository that holds a large amount of data in its native, raw format. This approach differs from a traditional data warehouse, which transforms and processes the data at the time of ingestion.Its optimized to for scaling from gigabytes to terabytes and petabytes of data. They are built to handle high volumes of small writes at low latency, and are optimized for massive throughput.
 
 Typically this transformation uses an **ELT (extract-load-transform)** pipeline, where the data is ingested and transformed in place. Source data that is already relational may go directly into the data warehouse, using an ETL process, skipping the data lake.
-![Data Lake Architecture](/images/DataLakeArchitecture.png)
+![Data Lake Architecture](/images/DataLake.png)
 
 [This](https://learn.microsoft.com/eazure/architecture/data-guide/scenarios/data-lake#when-to-use-a-data-lake) table will help to make your use case clearer
 
