@@ -21,7 +21,7 @@ Typically this transformation uses an **ELT (extract-load-transform)** pipeline,
 ![Data Lake Architecture](/images/DataLakeArchitecture.png)
 
 The following table will help to make your use case clearer
-![Comparison Table](/images/ComparisonLakevsWarehouse1.png)
+![Comparison Table](/images/comparing-data-lakes-and-data-warehouses.png)
 
 #### When to use Data Lake solutions
 
@@ -39,7 +39,7 @@ When deciding the number of storage accounts you want to create, the following c
 * A single storage account gives you the ability to manage a single set of control plane management operations such as RBACs, firewall settings, data lifecycle management policies for all the data in your storage account, while allowing you to organize your data using containers, files and folders on the storage account. If you want to optimize for ease of management, specially if you adopt a centralized data lake strategy, this would be a good model to consider.
 * Multiple storage accounts provide you the ability to isolate data across different accounts so different management policies can be applied to them or manage their billing/cost logic separately. If you are considering a federated data lake strategy with each organization or business unit having their own set of manageability requirements, then this model might work best for you.
 
-![DataLakehouse](/images/Lakehouse.png)
+![DataLakehouse](/images/DataLakehouse.png)
 
 ## Additional Information
 
