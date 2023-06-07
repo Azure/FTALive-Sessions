@@ -1,6 +1,6 @@
 # Split of Data (Cont)
 
-[prev](./splitofdata1.md.md) | [home](./introduction.md)  | [next]()
+[prev](./splitofdata1.md.md) | [home](./introduction.md)  | [next](./splitofdata3.md)
 This is in continuation for database scenarios which help you narrow down your storage options
 
 ## Analytical Data
@@ -19,20 +19,24 @@ A data lake captures anything the organization deems valuable for future use.Ess
 Typically this transformation uses an **ELT (extract-load-transform)** pipeline, where the data is ingested and transformed in place. Source data that is already relational may go directly into the data warehouse, using an ETL process, skipping the data lake.
 ![Data Lake Architecture](/images/DataLakeArchitecture.png)
 
-A following table will help to make your use case clearer
+The following table will help to make your use case clearer
 ![Comparison Table](/images/ComparisonLakevsWarehouse.png)
 
 #### When to use Data Lake solutions
 
 * Data lake stores are often used in event streaming or IoT scenarios, because they can persist large amounts of relational and nonrelational data without transformation or schema definition.
+* Consider Data Lakes to be a heirarchical storage layer where ACID properties are not supported
 
-Data Lake does not enforce schema and there can be multiple layers of same data stored which could cause inconsistencies, orphan data or isolated data. Purging becomes an essential component which you should plan when going for a Data Lake Architecture. You may consider Data Lakes to be a heirarchical storage layer where ACID properties are not supported
-
-### 6) Delta Lakes
-
-Delta Lake is an open-source storage layer that brings ACID (atomicity, consistency, isolation, and durability) transactions to Apache Spark and big data workloads.
+If you have a requirement for a storage layer that can handle streaming and batch data processing along with ACID transaction support for Data Lake continue to the next page.
 
 ## Additional Information
 
-* [Big Data Characteristics](https://www.teradata.com/Glossary/What-are-the-5-V-s-of-Big-Data#:~:text=Big%20data%20is%20a%20collection,variety%2C%20velocity%2C%20and%20veracity) 
+* [Big Data Characteristics](https://www.teradata.com/Glossary/What-are-the-5-V-s-of-Big-Data#:~:text=Big%20data%20is%20a%20collection,variety%2C%20velocity%2C%20and%20veracity)
 * [Data Lakes](https://learn.microsoft.com/azure/architecture/data-guide/scenarios/data-lake)
+* [Data Lake Planning](https://www.sqlchick.com/entries/2016/7/31/data-lake-use-cases-and-planning)
+* [Data Lake Organization](https://www.sqlchick.com/entries/2019/1/20/faqs-about-organizing-a-data-lake)
+
+## GitHub Repos to Get started
+
+* [Modern Data Warehouse](https://github.com/Azure-Samples/modern-data-warehouse-dataops)
+* [Analytics Toolbox](https://github.com/Azure/AnalyticsinaBox)
