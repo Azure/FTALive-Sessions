@@ -31,6 +31,8 @@ Typically this transformation uses an **ELT (extract-load-transform)** pipeline,
 
 Data Lake does not enforce schema and there can be multiple layers of same data stored which could cause inconsistencies, orphan data or isolated data. Purging becomes an essential component which you should plan when going for a Data Lake Architecture. A data lakehouse is a new, open data management architecture that combines the flexibility, cost-efficiency, and scale of data lakes with the data management and ACID transactions of data warehouses. Data passes through multiple layers of validations and transformations before being stored in a layout optimized for efficient analytics.
 
+    ![LakeToLakehouse](/images/DataLaketoLakehouse.png)
+
 When deciding the number of storage accounts you want to create, the following considerations are helpful in deciding the number of storage accounts you want to provision.
 
 * A single storage account gives you the ability to manage a single set of control plane management operations such as RBACs, firewall settings, data lifecycle management policies for all the data in your storage account, while allowing you to organize your data using containers, files and folders on the storage account. If you want to optimize for ease of management, specially if you adopt a centralized data lake strategy, this would be a good model to consider.
