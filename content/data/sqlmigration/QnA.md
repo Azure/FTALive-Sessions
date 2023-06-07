@@ -20,7 +20,6 @@
 - [Sample Databases](https://docs.microsoft.com/sql/samples/sql-samples-where-are?view=sql-server-ver16)
 - [Public Datasets](https://docs.microsoft.com/azure/azure-sql/public-data-sets?view=azuresql)
 
-
 ### Stay Updated
 
 - [Azure Announcements](https://azure.microsoft.com/blog/topics/announcements/)
