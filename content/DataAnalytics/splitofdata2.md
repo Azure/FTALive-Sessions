@@ -33,6 +33,14 @@ Data Lake does not enforce schema and there can be multiple layers of same data 
 
 ![LakeToLakehouse](/images/DataLaketoLakehouse.png)
 
+> Note that instead of raw, enriched and curated layers, some people call the layers differently, such as:
+> Bronze, silver, gold
+> Raw, Processed, Enhanced
+> Raw, Staged, Analytics
+> Transient, raw, trusted, refined
+> Landing, Standardized, Curated
+> Essentially it is 3 layers where naming conventions may vary from organization to orgranization or business to business.
+
 When deciding the number of storage accounts you want to create, the following considerations are helpful in deciding the number of storage accounts you want to provision.
 
 * A single storage account gives you the ability to manage a single set of control plane management operations such as RBACs, firewall settings, data lifecycle management policies for all the data in your storage account, while allowing you to organize your data using containers, files and folders on the storage account. If you want to optimize for ease of management, specially if you adopt a centralized data lake strategy, this would be a good model to consider.
