@@ -35,11 +35,12 @@ Data Lake does not enforce schema and there can be multiple layers of same data 
 
 > Note-Instead of raw, enriched and curated layers, some people call the layers differently, such as:
 >
->1. Bronze, silver, gold
+>1. Bronze, Silver, Gold
 >1. Raw, Processed, Enhanced
 >1. Raw, Staged, Analytics
->1. Transient, raw, trusted, refined
+>1. Transient, Trusted, Refined
 >1. Landing, Standardized, Curated
+> 
 > Essentially it is 3 layers where naming conventions may vary from organization to organization or business to business.
 
 When deciding the number of storage accounts you want to create, the following considerations are helpful in deciding the number of storage accounts you want to provision.
