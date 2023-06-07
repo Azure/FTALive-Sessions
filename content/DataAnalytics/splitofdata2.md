@@ -1,6 +1,7 @@
 # Split of Data (Cont)
 
 [prev](./splitofdata1.md.md) | [home](./introduction.md)  | [next](./splitofdata3.md)
+
 This is in continuation for database scenarios which help you narrow down your storage options
 
 ## Analytical Data
@@ -27,7 +28,11 @@ The following table will help to make your use case clearer
 * Data lake stores are often used in event streaming or IoT scenarios, because they can persist large amounts of relational and nonrelational data without transformation or schema definition.
 * Consider Data Lakes to be a heirarchical storage layer where ACID properties are not supported
 
-If you have a requirement for a storage layer that can handle streaming and batch data processing along with ACID transaction support for Data Lake continue to the next page.
+Data Lake does not enforce schema and there can be multiple layers of same data stored which could cause inconsistencies, orphan data or isolated data. Purging becomes an essential component which you should plan when going for a Data Lake Architecture.
+
+### 6) Data Lakehouse
+
+A data lakehouse is a new, open data management architecture that combines the flexibility, cost-efficiency, and scale of data lakes with the data management and ACID transactions of data warehouses
 
 ## Additional Information
 
@@ -35,6 +40,7 @@ If you have a requirement for a storage layer that can handle streaming and batc
 * [Data Lakes](https://learn.microsoft.com/azure/architecture/data-guide/scenarios/data-lake)
 * [Data Lake Planning](https://www.sqlchick.com/entries/2016/7/31/data-lake-use-cases-and-planning)
 * [Data Lake Organization](https://www.sqlchick.com/entries/2019/1/20/faqs-about-organizing-a-data-lake)
+* [How to Organize your Data Lake](https://techcommunity.microsoft.com/t5/data-architecture-blog/how-to-organize-your-data-lake/ba-p/1182562)
 
 ## GitHub Repos to Get started
 

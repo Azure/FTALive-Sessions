@@ -1,6 +1,7 @@
 # Split of Data (Cont)
 
 [prev](./splitofdata2.md.md) | [home](./introduction.md)  | [next]()
+
 This is in continuation for database scenarios which help you narrow down your storage options
 
 ## Analytical Data
@@ -14,3 +15,4 @@ Delta Lake is an open-source storage layer that brings ACID (atomicity, consiste
 ## Additional Information
 
 * [Synapse – Data Lake vs. Delta Lake vs. Data Lakehouse](https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/synapse-data-lake-vs-delta-lake-vs-data-lakehouse/ba-p/3673653)
+* [What is a Delta Lake](https://learn.microsoft.com/azure/synapse-analytics/spark/apache-spark-what-is-delta-lake)
