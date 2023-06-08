@@ -42,6 +42,13 @@ Delta Lake offers:
 
 #### When to use Delta Lake solutions
 
+Consider Delta Lake solutions when you first have a requirement for Data Lake
+
+- Data lake stores are often used in event streaming or IoT scenarios, because they can persist large amounts of relational and nonrelational data without transformation or schema definition.
+And you need ability **to handle ACID properties within the heirarchical storage layer.**
+
+![DeltaLake](/images/DeltaLakeUsage.png)
+
 ## Additional Information
 
 - [Synapse – Data Lake vs. Delta Lake vs. Data Lakehouse](https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/synapse-data-lake-vs-delta-lake-vs-data-lakehouse/ba-p/3673653)
