@@ -21,7 +21,17 @@ This is in continuation for database scenarios which help you narrow down your s
 
 ![DeltaLakeTopOfDataLakehouse](/images/DeltaLakeTopofLakehouse.png)
 
-The transaction log is the mechanism through which Delta Lake is able to offer the guarantee of atomicity.Delta Lake provides ACID transactions, scalable metadata handling, and **unifies streaming and batch data processing** on top of existing data lakes, such as S3, ADLS, GCS, and HDFS. It eliminates the need of having additional OLTP engines due to its logging facility.Specifically, Delta Lake offers:
+The transaction log is the mechanism through which Delta Lake is able to offer the guarantee of atomicity.Delta Lake provides ACID transactions, scalable metadata handling, and **unifies streaming and batch data processing** on top of existing data lakes, such as S3, ADLS, GCS, and HDFS. It eliminates the need of having additional OLTP engines due to its logging facility.Specifically, 
+
+![DeltaTable](/images/DeltaTables.png)
+
+Delta tables consist of data stored in Parquet files and metadata stored in the transaction log.
+The Parquet files enable you to track the evolution of the data. Indexes and statistics about the files
+are maintained to increase query efficiency. The Delta Lake transaction log can be appended to by multiple writers that are mediated by optimistic concurrency control that provide serializable ACID transactions. Changes to the table are stored as ordered atomic units called commits. The log can be read in parallel by a cluster of Spark executors.
+
+![DeltaLakeQueries](/images/DeltaLakeQueries.png)
+
+Delta Lake offers:
 
 - **ACID transactions on Spark**: Serializable isolation levels ensure that readers never see inconsistent data.
 - **Scalable metadata handling**: Leverages Spark distributed processing power to handle all the metadata for petabyte-scale tables with billions of files at ease.
@@ -30,7 +40,21 @@ The transaction log is the mechanism through which Delta Lake is able to offer t
 - **Time travel**: Data versioning enables rollbacks, full historical audit trails, and reproducible machine learning experiments.
 - **Upserts and deletes**: Supports merge, update and delete operations to enable complex use cases like change-data-capture, slowly-changing-dimension (SCD) operations, streaming upserts, and so on.
 
+#### When to use Delta Lake solutions
+
 ## Additional Information
 
 - [Synapse – Data Lake vs. Delta Lake vs. Data Lakehouse](https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/synapse-data-lake-vs-delta-lake-vs-data-lakehouse/ba-p/3673653)
 - [What is a Delta Lake](https://learn.microsoft.com/azure/synapse-analytics/spark/apache-spark-what-is-delta-lake)
+- [Delta Lake Z order](https://delta.io/blog/2023-06-03-delta-lake-z-order/)
+- [Convert from Parquet to Delta](https://delta.io/blog/2022-09-23-convert-parquet-to-delta/)
+- [How to create Delta Tables](https://delta.io/blog/2022-10-25-create-delta-lake-tables/)
+- [Delta Lake Merge](https://delta.io/blog/2023-02-14-delta-lake-merge/)
+- [How to use Delta Lake generated columns](https://delta.io/blog/2023-04-12-delta-lake-generated-columns/)
+- [Delta Lake Time Travel](https://delta.io/blog/2023-02-01-delta-lake-time-travel/)
+- [Easier data model management for Power BI using Delta Live Tables](https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/easier-data-model-management-for-power-bi-using-delta-live/ba-p/3500698)
+- [Delta Lake: Keeping It Fast and Clean](https://towardsdatascience.com/delta-lake-keeping-it-fast-and-clean-3c9d4f9e2f5e)
+
+
+## Videos Glossary
+ - [Getting Started with Delta Lake](https://delta.io/blog/2020-09-16-getting-started-with-delta-lake/)
