@@ -55,6 +55,20 @@ Delta Lake offers:
 - [Easier data model management for Power BI using Delta Live Tables](https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/easier-data-model-management-for-power-bi-using-delta-live/ba-p/3500698)
 - [Delta Lake: Keeping It Fast and Clean](https://towardsdatascience.com/delta-lake-keeping-it-fast-and-clean-3c9d4f9e2f5e)
 
+## POC Repos
+
+- [Data warehousing with dedicated SQL pool in Azure Synapse Analytics](https://learn.microsoft.com/azure/synapse-analytics/guidance/proof-of-concept-playbook-dedicated-sql-pool)
+- [Data lake exploration with serverless SQL pool in Azure Synapse Analytics](https://learn.microsoft.com/azure/synapse-analytics/guidance/proof-of-concept-playbook-serverless-sql-pool)
+- [Big data analytics with Apache Spark pool in Azure Synapse Analytics](https://learn.microsoft.com/azure/synapse-analytics/guidance/proof-of-concept-playbook-spark-pool)
+- [FTA Analytics Box](https://github.com/Azure/AnalyticsinaBox/tree/main)
+
+> FTA Repo contains:</br>
+> Pattern 1: Azure Synapse Analytics workspace with a Data Lake and Serverless & Dedicated SQL Pools. </br>
+> Pattern 2: Azure Synapse Analytics workspace with a Data Lake, Serverless & Dedicated SQL Pools and Spark Pools.</br>
+> Pattern 3: Streaming solution with an Azure Function (Event Generator), Event Hubs, Synapse with Spark Pool and Streaming Notebook and a Data Lake (ADLSv2). Deployed via Azure DevOps.</br>
+> Pattern 4: Batch loading example from a source SQL database through to a Data Lake using Synapse Spark.</br>
+> Pattern 5: Metadata Driven Synapse Pipelines with Azure SQL DB Source, Data Lake/Parquet Sink and Synapse Serverless Star Schema </br>
 
 ## Videos Glossary
- - [Getting Started with Delta Lake](https://delta.io/blog/2020-09-16-getting-started-with-delta-lake/)
+
+- [Getting Started with Delta Lake](https://delta.io/blog/2020-09-16-getting-started-with-delta-lake/)
