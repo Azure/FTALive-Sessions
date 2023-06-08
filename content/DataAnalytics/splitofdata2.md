@@ -25,7 +25,7 @@ Typically this transformation uses an **ELT (extract-load-transform)** pipeline,
 #### When to use Data Lake solutions
 
 * Data lake stores are often used in event streaming or IoT scenarios, because they can persist large amounts of relational and nonrelational data without transformation or schema definition.
-* Consider Data Lakes to be a heirarchical storage layer where ACID properties are not supported
+* Consider **Data Lakes** to be a **heirarchical storage layer where ACID properties are not supported**
 
 ### 6) Data Lakehouse
 
@@ -45,8 +45,8 @@ Data Lake does not enforce schema and there can be multiple layers of same data 
 
 When deciding the number of storage accounts you want to create, the following considerations are helpful in deciding the number of storage accounts you want to provision.
 
-* A single storage account gives you the ability to manage a single set of control plane management operations such as RBACs, firewall settings, data lifecycle management policies for all the data in your storage account, while allowing you to organize your data using containers, files and folders on the storage account. If you want to optimize for ease of management, specially if you adopt a centralized data lake strategy, this would be a good model to consider.
-* Multiple storage accounts provide you the ability to isolate data across different accounts so different management policies can be applied to them or manage their billing/cost logic separately. If you are considering a federated data lake strategy with each organization or business unit having their own set of manageability requirements, then this model might work best for you.
+* **A single storage account** gives you the ability to manage a single set of control plane management operations such as RBACs, firewall settings, data lifecycle management policies for all the data in your storage account, while allowing you to organize your data using containers, files and folders on the storage account. If you want to optimize for ease of management, specially if you adopt a centralized data lake strategy, this would be a good model to consider.
+* **Multiple storage accounts** provide you the ability to isolate data across different accounts so different management policies can be applied to them or manage their billing/cost logic separately. If you are considering a federated data lake strategy with each organization or business unit having their own set of manageability requirements, then this model might work best for you.
 
 ![DataLakehouse](/images/DataLakehouse.png)
 
@@ -55,6 +55,7 @@ When deciding the number of storage accounts you want to create, the following c
 * [Big Data Characteristics](https://www.teradata.com/Glossary/What-are-the-5-V-s-of-Big-Data#:~:text=Big%20data%20is%20a%20collection,variety%2C%20velocity%2C%20and%20veracity)
 * [Data Lakes](https://learn.microsoft.com/azure/architecture/data-guide/scenarios/data-lake)
 * [Hitchhikers Guide to Data Lake](https://azure.github.io/Storage/docs/analytics/hitchhikers-guide-to-the-datalake/)
+* [Data Lake Zones](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/best-practices/data-lake-zones)
 * [Data Lake Planning](https://www.sqlchick.com/entries/2016/7/31/data-lake-use-cases-and-planning)
 * [Data Lake Organization](https://www.sqlchick.com/entries/2019/1/20/faqs-about-organizing-a-data-lake)
 * [How to Organize your Data Lake](https://techcommunity.microsoft.com/t5/data-architecture-blog/how-to-organize-your-data-lake/ba-p/1182562)
