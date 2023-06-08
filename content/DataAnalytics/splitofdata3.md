@@ -19,11 +19,7 @@ This is in continuation for database scenarios which help you narrow down your s
 
 **Delta Lake** is an open source project that **enables building a lakehouse architecture on top of data lakes**. It implements the concept of **Delta Lake Transaction Log** which is an ordered record of every transaction that has ever been performed on a Delta Lake table since its inception.</br>
 
-![DeltaLakeTopOfDataLakehouse](/images/DeltaLakeTopofLakehouse.png)
-
 The transaction log is the mechanism through which Delta Lake is able to offer the guarantee of atomicity.Delta Lake provides ACID transactions, scalable metadata handling, and **unifies streaming and batch data processing** on top of existing data lakes, such as S3, ADLS, GCS, and HDFS. It eliminates the need of having additional OLTP engines due to its logging facility.Specifically, 
-
-![DeltaTable](/images/DeltaTables.png=399*362)
 
 Delta tables consist of data stored in Parquet files and metadata stored in the transaction log.
 The Parquet files enable you to track the evolution of the data. Indexes and statistics about the files
