@@ -3,7 +3,7 @@
 ##############################
 
 LOCATION='australiaeast'
-RG_NAME='012-acr-cluster-rg'
+RG_NAME='12-acr-cluster-rg'
 ACR_NAME='acrcluster228f0r720'
 
 az group create -n $RG_NAME --location $LOCATION
@@ -127,6 +127,7 @@ az aks update -n 'acr-cluster' -g $RG_NAME --attach-acr $ACR_NAME
 
 # get kube config
 az aks get-credentials -g $RG_NAME -n 'acr-cluster' --admin --context '12-acr-cluster'
+kubectl config use-context '12-acr-cluster-admin'
 
 # import container image from Dockerhub
 az acr import -n $ACR_NAME --source docker.io/stefanprodan/podinfo:latest -t podinfo:latest

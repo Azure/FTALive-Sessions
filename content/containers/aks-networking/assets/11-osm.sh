@@ -3,7 +3,7 @@
 #######################
 
 LOCATION='australiaeast'
-RG_NAME='011-osm-cluster-rg'
+RG_NAME='11-osm-cluster-rg'
 az group create -n $RG_NAME --location $LOCATION
 
 az aks create \
@@ -13,6 +13,7 @@ az aks create \
   --enable-addons open-service-mesh
 
 az aks get-credentials -g $RG_NAME -n 'osm-cluster' --admin --context '11-osm-cluster'
+kubectl config use-context '11-osm-cluster-admin'
 
 # install OSM CLI
 OSM_VERSION=v1.0.0
