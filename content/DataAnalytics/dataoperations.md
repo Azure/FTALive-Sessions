@@ -53,3 +53,5 @@ With ELT are preferred where data in its raw form (Structured,Un-structured,Semi
 > presentation layer(consolidation and governance)</br>
 
 ## Additional Information
+
+- [Understand batch and stream processing](https://learn.microsoft.com/training/modules/explore-fundamentals-stream-processing/2-batch-stream)
