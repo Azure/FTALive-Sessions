@@ -4,14 +4,14 @@
 
 There are 2 major categories of Data Operations you need to think about when planning a Data Analytics pipeline. ETL (Extract,Transform,Load) v/s ETL (Extract, Load, Transform).
 
-**Data Extraction**: Extracting dataset from similar/different sources and bringing them to a common platform which you can operate on it collectively
-![DataExtraction](/images/ExtractionIcon.png)
+![DataExtraction](/images/ExtractionIcon.png)</br>
+**Data Extraction**: Extracting dataset from similar/different sources and bringing them to a common platform which you can operate on it collectively.
 
-**Data Loading** : Joining different datasets & moving them into a designated service / storage layer
-![DataConsolidation](/images/ConsolidationIcon.png)
+![DataConsolidation](/images/ConsolidationIcon.png)</br>
+**Data Loading** : Joining different datasets & moving them into a designated service / storage layer.
 
-- **Data Transformation**: Most of the pipelines you configure will have one or more categories of the transformations below
-![DataTransformation](/images/TransformationIcon.png)
+![DataTransformation](/images/TransformationIcon.png)</br>
+**Data Transformation**: Most of the pipelines you configure will have one or more categories of the transformations below
 
 1. Filtering : Reducing the size of the dataset (rows, columns, content, etc)
 1. Join/Merge : Combining datasets from 2 different &/or similar forms/tables/services
