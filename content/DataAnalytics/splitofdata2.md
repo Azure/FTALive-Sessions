@@ -59,8 +59,16 @@ When deciding the number of storage accounts you want to create, the following c
 * [Data Lake Planning](https://www.sqlchick.com/entries/2016/7/31/data-lake-use-cases-and-planning)
 * [Data Lake Organization](https://www.sqlchick.com/entries/2019/1/20/faqs-about-organizing-a-data-lake)
 * [How to Organize your Data Lake](https://techcommunity.microsoft.com/t5/data-architecture-blog/how-to-organize-your-data-lake/ba-p/1182562)
+* [Data warehousing with dedicated SQL pool in Azure Synapse Analytics](https://learn.microsoft.com/azure/synapse-analytics/guidance/proof-of-concept-playbook-dedicated-sql-pool)
 
 ## GitHub Repos to Get started
 
 * [Modern Data Warehouse](https://github.com/Azure-Samples/modern-data-warehouse-dataops)
-* [Analytics Toolbox](https://github.com/Azure/AnalyticsinaBox)
+* [FTA Analytics Toolbox](https://github.com/Azure/AnalyticsinaBox)
+
+> FTA Repo contains:</br>
+> Pattern 1: Azure Synapse Analytics workspace with a Data Lake and Serverless & Dedicated SQL Pools. </br>
+> Pattern 2: Azure Synapse Analytics workspace with a Data Lake, Serverless & Dedicated SQL Pools and Spark Pools.</br>
+> Pattern 3: Streaming solution with an Azure Function (Event Generator), Event Hubs, Synapse with Spark Pool and Streaming Notebook and a Data Lake (ADLSv2). Deployed via Azure DevOps.</br>
+> Pattern 4: Batch loading example from a source SQL database through to a Data Lake using Synapse Spark.</br>
+> Pattern 5: Metadata Driven Synapse Pipelines with Azure SQL DB Source, Data Lake/Parquet Sink and Synapse Serverless Star Schema </br>

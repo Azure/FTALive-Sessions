@@ -1,5 +1,7 @@
 # Introduction
 
+[home](./introduction.md)  | [next](./typeofdata.md)
+
 Data today is available in various forms and can be stored in various relational and non-relational engines. It becomes vital how the type of data, storage or data, security, governance, access and networking play an important role in creating an end-to-end DataAnalytics Pipeline. The key stakeholders here in identifying and designing data sources and flow of data are Data Engineers and Data Analysts
 
 ## Target Audience

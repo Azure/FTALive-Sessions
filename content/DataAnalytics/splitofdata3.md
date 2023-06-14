@@ -1,6 +1,6 @@
 # Split of Data (Cont)
 
-[prev](./splitofdata2.md.md) | [home](./introduction.md)  | [next](./dataoperations.md)
+[prev](./splitofdata2.md) | [home](./introduction.md)  | [next](./dataoperations.md)
 
 This is in continuation for database scenarios which help you narrow down your storage options. 
 
@@ -62,11 +62,13 @@ And you need ability **to handle ACID properties within the heirarchical storage
 - [Easier data model management for Power BI using Delta Live Tables](https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/easier-data-model-management-for-power-bi-using-delta-live/ba-p/3500698)
 - [Delta Lake: Keeping It Fast and Clean](https://towardsdatascience.com/delta-lake-keeping-it-fast-and-clean-3c9d4f9e2f5e)
 
-## POC Repos
+## Tutorials
 
-- [Data warehousing with dedicated SQL pool in Azure Synapse Analytics](https://learn.microsoft.com/azure/synapse-analytics/guidance/proof-of-concept-playbook-dedicated-sql-pool)
 - [Data lake exploration with serverless SQL pool in Azure Synapse Analytics](https://learn.microsoft.com/azure/synapse-analytics/guidance/proof-of-concept-playbook-serverless-sql-pool)
 - [Big data analytics with Apache Spark pool in Azure Synapse Analytics](https://learn.microsoft.com/azure/synapse-analytics/guidance/proof-of-concept-playbook-spark-pool)
+
+## GitHub Repos
+
 - [FTA Analytics Box](https://github.com/Azure/AnalyticsinaBox/tree/main)
 
 > FTA Repo contains:</br>
