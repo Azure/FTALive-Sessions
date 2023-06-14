@@ -29,6 +29,6 @@ A great place to understand and start configuring AMS can be found at [https://l
 - [SUSE Monitoring Capabilities](https://documentation.suse.com/sles-sap/15-SP2/html/SLES-SAP-sol-monitoring/art-sol-monitoring.html)
 - [SAP on Azure Video Podcast - Update on Azure Monitor for SAP Solutions](https://www.youtube.com/watch?v=8GkISZgiuZg)
 - [SAP on Azure Video podcast - Updates to Monitor for SAP Solutions](https://youtu.be/NmqeWAba_4I)
-
+- [Announcing General Availability for Microsoft Azure Monitor for SAP Solutions](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/announcing-general-availability-for-microsoft-azure-monitor-for/ba-p/3814833)
 
 #### [prev](./readme.md) | [home](./readme.md)  | [next](./azuremonitor.md)
