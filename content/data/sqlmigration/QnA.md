@@ -10,10 +10,18 @@
 
 ### Learning Paths
 
-- [Azure SQL for Beginners show](https://docs.microsoft.com/shows/azure-sql-for-beginners/)
-- [Migrate SQL workloads to Azure](https://docs.microsoft.com/learn/paths/migrate-sql-workloads-azure/)
-- [Plan and implement data platform resources](https://docs.microsoft.com/learn/paths/plan-implement-data-platform-resources/)
-- [Azure SQL fundamentals](https://docs.microsoft.com/learn/paths/azure-sql-fundamentals/)
+-[Get started with Microsoft Fabric](https://learn.microsoft.com/training/paths/get-started-fabric/)
+-[Data Security](https://learn.microsoft.com/training/paths/implement-secure-environment-database-service/)
+
+-[Explore data analytics in Azure](https://learn.microsoft.com/training/paths/azure-data-fundamentals-explore-data-warehouse-analytics/)
+-[Work with Data Warehouses using Azure Synapse Analytics](https://learn.microsoft.com/training/paths/work-with-data-warehouses-using-azure-synapse-analytics/)
+-[Large-Scale Data Processing with Azure Data Lake Storage Gen2](https://learn.microsoft.com/raining/paths/data-processing-with-azure-adls/)
+-[Build data analytics solutions using Azure Synapse serverless SQL pools](https://learn.microsoft.com/training/paths/build-data-analytics-solutions-using-azure-synapse-serverless-sql-pools/)
+-[Perform data engineering with Azure Synapse Apache Spark Pools](https://learn.microsoft.com/training/paths/perform-data-engineering-with-azure-synapse-apache-spark-pools/)
+-[Data engineering with Azure Databricks](https://learn.microsoft.com/training/paths/data-engineer-azure-databricks/)
+
+-[Implement a Data Streaming Solution with Azure Stream Analytics](https://learn.microsoft.com/training/paths/implement-data-streaming-with-asa/)
+-[Realize Integrated Analytical Solutions with Azure Synapse Analytics](https://learn.microsoft.com/training/paths/realize-integrated-analytical-solutions-with-azure-synapse-analytics/)
 
 ### Sample Datasets
 
