@@ -17,7 +17,7 @@ The management of transactional data using computer systems is referred to as on
 
 * Choose OLTP when you need to efficiently process and store business transactions and immediately make them available to client applications in a consistent way. Use this architecture when any tangible delay in processing would have a negative impact on the day-to-day operations of the business.
 
-![OLTP](/images/OLTP.png)
+
 
 ## Historical Data
 
