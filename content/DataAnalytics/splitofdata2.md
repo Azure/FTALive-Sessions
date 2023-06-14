@@ -59,9 +59,12 @@ When deciding the number of storage accounts you want to create, the following c
 * [Data Lake Planning](https://www.sqlchick.com/entries/2016/7/31/data-lake-use-cases-and-planning)
 * [Data Lake Organization](https://www.sqlchick.com/entries/2019/1/20/faqs-about-organizing-a-data-lake)
 * [How to Organize your Data Lake](https://techcommunity.microsoft.com/t5/data-architecture-blog/how-to-organize-your-data-lake/ba-p/1182562)
+
+## Tutorials
+
 * [Data warehousing with dedicated SQL pool in Azure Synapse Analytics](https://learn.microsoft.com/azure/synapse-analytics/guidance/proof-of-concept-playbook-dedicated-sql-pool)
 
-## GitHub Repos to Get started
+## GitHub Repos
 
 * [Modern Data Warehouse](https://github.com/Azure-Samples/modern-data-warehouse-dataops)
 * [FTA Analytics Toolbox](https://github.com/Azure/AnalyticsinaBox)
