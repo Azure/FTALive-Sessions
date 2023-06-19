@@ -39,4 +39,10 @@ In this session you will learn:
 
 Please find the most relevant resources below to continue your learning after this session.
 
+- [App Service Environment version 1 and version 2 retirement](https://azure.microsoft.com/en-us/updates/app-service-environment-v1-and-v2-retirement-announcement/#:~:text=In%20August%202021%2C%20we%20announced%20Azure%20Cloud%20Services,1%20and%20version%202%20on%20the%20same%20date.)
+- [Automated Migration to ASE v3](https://learn.microsoft.com/en-us/azure/app-service/environment/how-to-migrate)
+- [Migrate to ASE v3 via Backup and Restore](https://learn.microsoft.com/en-us/azure/app-service/environment/migration-alternatives#back-up-and-restore)
+   - [Create a Custom Backup](https://learn.microsoft.com/en-us/azure/app-service/manage-backup?tabs=portal#create-a-custom-backup)
+   - [Restore a Backup](https://learn.microsoft.com/en-us/azure/app-service/manage-backup?tabs=portal#restore-a-backup)
+- [Migrate to ASE v3 by Cloning Your App](https://learn.microsoft.com/en-us/azure/app-service/environment/migration-alternatives#clone-your-app-to-an-app-service-environment-v3)
 

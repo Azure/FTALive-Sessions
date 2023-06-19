@@ -37,3 +37,9 @@ In this session you will learn:
 ## Resources
 
 Please find the most relevant resources below to continue your learning after this session.
+
+- [ISE Retirement](https://techcommunity.microsoft.com/t5/integrations-on-azure-blog/ise-retirement-what-you-need-to-know/ba-p/3645220)
+- [Export ISE Workflows to Logic Apps Standard](https://learn.microsoft.com/en-us/azure/logic-apps/export-from-ise-to-standard-logic-app)
+- [Run, test, and debug your migrated workflows locally](https://learn.microsoft.com/en-us/azure/logic-apps/create-single-tenant-workflows-visual-studio-code#run-test-and-debug-locally)
+- [Deploy Your Migrated Workflows to Azure](https://learn.microsoft.com/en-us/azure/logic-apps/create-single-tenant-workflows-visual-studio-code#deploy-to-azure)
+- [Setup DevOps for Your Migrated Workflows](https://learn.microsoft.com/en-us/azure/logic-apps/set-up-devops-deployment-single-tenant-azure-logic-apps)
