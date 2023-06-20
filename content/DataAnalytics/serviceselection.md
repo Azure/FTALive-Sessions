@@ -25,8 +25,10 @@ Datastores (RDBMS). You can also go to the portal and under the Databases sectio
 Likewise you can also find choices for you File stores under Storage section
 
 - [Storage Account](https://azure.microsoft.com/products/category/storage/):
-- 1.  [Azure Blob Storage](https://azure.microsoft.com/products/storage/blobs/):  Azure Blob Storage is optimized for storing massive amounts of unstructured data.It helps you create data lakes for your analytics needs, and provides storage to build powerful cloud-native and mobile apps.
-- 2. [Azure Data Lake Storage Gen2](https://azure.microsoft.com/products/storage/data-lake-storage/):Blob Storage supports Azure Data Lake Storage Gen2 (heirarchical storage accounts), Microsoft's enterprise big data analytics solution for the cloud.
+- 1.  [Azure Blob Storage](https://azure.microsoft.com/products/storage/blobs/):  Azure Blob Storage is optimized for storing massive amounts of unstructured data.It helps you create data lakes for your analytics needs, and provides storage to build powerful cloud-native and mobile apps.Users or client applications can access objects in Blob Storage via HTTP/HTTPS, from anywhere in the world. Objects in Blob Storage are accessible via the Azure Storage REST API, Azure PowerShell, Azure CLI, or an Azure Storage client library.
+- 2. [Azure Data Lake Storage Gen2](https://azure.microsoft.com/products/storage/data-lake-storage/):Blob Storage supports Azure Data Lake Storage Gen2 (heirarchical storage accounts), Microsoft's enterprise big data analytics solution for the cloud. Designed from the start to service multiple petabytes of information while sustaining hundreds of gigabits of throughput. Azure Data Lake Storage Gen2 is primarily designed to work with Hadoop and all frameworks that use the Apache Hadoop Distributed File System (HDFS) as their data access layer.
+- 3. [Azure Files](https://azure.microsoft.com/products/storage/files/):Azure Files offers fully managed file shares in the cloud that are accessible via the industry standard Server Message Block (SMB) protocol, Network File System (NFS) protocol, and Azure Files REST API. Azure file shares can be mounted concurrently by cloud or on-premises deployments. Mainly used as file shares
+- 
 
 ## Compute Layer(Integration,Operation)
 
