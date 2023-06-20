@@ -13,11 +13,11 @@ By now you would have narrowed down 2 type of data:
 
 You can navigate through [this](https://learn.microsoft.com/azure/architecture/guide/technology-choices/data-store-decision-tree) tree  or go to the portal directly and find your options for either
 Datastores (RDBMS). You can also go to the portal and under the Databases section you will find choices for Database store.
-![Azure Portal Database Section](/images/PortalDatabase.png)</br>
--[Azure SQL Database](https://azure.microsoft.com/products/azure-sql/database/): A Fully managed database engine automates updates, provisioning, and backup </br>
--[Azure SQL Managed Instance](https://azure.microsoft.com/products/azure-sql/managed-instance/): SQL Managed Instance is an intelligent cloud database service combining the broadest SQL Server engine compatibility (back to SQL Server 2008) with the benefits of a fully managed, up-to-date platform as a service. </br>
--[Azure Cache for Redis](https://azure.microsoft.com/products/cache/): A quick caching layer to the application architecture. It's a secure data cache and messaging broker that provides high throughput and low-latency access to data for applications as a managed service.</br>
--[Azure Cosmos DB](https://learn.microsoft.com/azure/cosmos-db/): A fully managed, distributed NoSQL & relational database for modern app development. It provides 6 different API's NoSQL, MongoDB, Apache Cassandra, Apache Gremlin, Table & PostgreSQL</br>
+
+- [Azure SQL Database](https://azure.microsoft.com/products/azure-sql/database/): A Fully managed database engine automates updates, provisioning, and backup.
+- [Azure SQL Managed Instance](https://azure.microsoft.com/products/azure-sql/managed-instance/): SQL Managed Instance is an intelligent cloud database service combining the broadest SQL Server engine compatibility (back to SQL Server 2008) with the benefits of a fully managed, up-to-date platform as a service. 
+- [Azure Cache for Redis](https://azure.microsoft.com/products/cache/): A quick caching layer to the application architecture. It's a secure data cache and messaging broker that provides high throughput and low-latency access to data for applications as a managed service.
+- [Azure Cosmos DB](https://learn.microsoft.com/azure/cosmos-db/): A fully managed, distributed NoSQL & relational database for modern app development. It provides 6 different API's NoSQL, MongoDB, Apache Cassandra, Apache Gremlin, Table & PostgreSQL.
 Likewise you can also find choices for you File stores under Storage section
 
 
