@@ -2,14 +2,14 @@
 
 [prev](./dataoperations.md) | [home](./introduction.md)  | [next](./QnA.md)
 
-Now that we have covered type of data, type of database scenarios and types of operations. Now its easier to list the services required for various layers of your DataAnalytics Pipeline.The first layer is the storage layer (Whether you go for ETL or ELT modelling you will have to store you data at some point)
-
-## Storage Layer(Databases)
-
-By now you would have narrowed down 2 type of data:
+Now that we have covered type of data, type of database scenarios and types of operations. Now its easier to list the services required for various layers of your DataAnalytics Pipeline.By now you would have narrowed down 2 type of data:
 
 1. Data you are bringing into cloud from 1 or more sources
 2. Data you will derive after transformation.
+
+The first layer is the storage layer (Whether you go for ETL or ELT modelling you will have to store you data at some point)
+
+## Storage Layer(Databases)
 
 You can navigate through [this](https://learn.microsoft.com/azure/architecture/guide/technology-choices/data-store-decision-tree) tree  or go to the portal directly and find your options for either
 Datastores (RDBMS). You can also go to the portal and under the Databases section you will find choices for Database store.
@@ -18,6 +18,11 @@ Datastores (RDBMS). You can also go to the portal and under the Databases sectio
 - [Azure SQL Managed Instance](https://azure.microsoft.com/products/azure-sql/managed-instance/): SQL Managed Instance is an intelligent cloud database service combining the broadest SQL Server engine compatibility (back to SQL Server 2008) with the benefits of a fully managed, up-to-date platform as a service. 
 - [Azure Cache for Redis](https://azure.microsoft.com/products/cache/): A quick caching layer to the application architecture. It's a secure data cache and messaging broker that provides high throughput and low-latency access to data for applications as a managed service.
 - [Azure Cosmos DB](https://learn.microsoft.com/azure/cosmos-db/): A fully managed, distributed NoSQL & relational database for modern app development. It provides 6 different API's NoSQL, MongoDB, Apache Cassandra, Apache Gremlin, Table & PostgreSQL.
+- [Azure Database for MariaDB](https://azure.microsoft.com/products/mariadb/): A relational database service based on the open-source MariaDB Server engine. It works with popular open-source frameworks and languages and usually used for content management apps.
+- [Azure Database for MySQL](https://azure.microsoft.com/products/mysql/): A relational database service powered by the MySQL community edition. It works well with Cognitive Services, Kubernetes Service, Application services. Often used to deploy popular web apps, including Magento, Shopify, Moodle, Alfresco, Drupal, and WordPress.
+- [Azure Database for PostgreSQL](https://azure.microsoft.com/products/postgresql/): A relational database service based on the open-source Postgres database engine. It has extension such as Cron, PostGIS, and PLV8, and popular frameworks and languages like Ruby on Rails, Python with Django, Java with Spring Boot, and Node.js.
+- [Table Storage](https://azure.microsoft.com/products/storage/tables/): A NoSQL key-value store for rapid development using massive semi-structured datasets (up-to Petabytes of data). Table storage is excellent for flexible datasets—web app user data, address books, device information, and other metadata—and lets you build cloud applications without locking down the data model to particular schemas
+
 Likewise you can also find choices for you File stores under Storage section
 
 
