@@ -22,19 +22,26 @@ Datastores (RDBMS). You can also go to the portal and under the Databases sectio
 - [Azure Database for MySQL](https://azure.microsoft.com/products/mysql/): A relational database service powered by the MySQL community edition. It works well with Cognitive Services, Kubernetes Service, Application services. Often used to deploy popular web apps, including Magento, Shopify, Moodle, Alfresco, Drupal, and WordPress.
 - [Azure Database for PostgreSQL](https://azure.microsoft.com/products/postgresql/): A relational database service based on the open-source Postgres database engine. It has extension such as Cron, PostGIS, and PLV8, and popular frameworks and languages like Ruby on Rails, Python with Django, Java with Spring Boot, and Node.js.
 
+## Storage Layer(Files)
+
 Likewise you can also find choices for you File stores under Storage section
 
 - [Storage Account](https://azure.microsoft.com/products/category/storage/):
 - 1.  [Azure Blob Storage](https://azure.microsoft.com/products/storage/blobs/):  Azure Blob Storage is optimized for storing massive amounts of unstructured data.It helps you create data lakes for your analytics needs, and provides storage to build powerful cloud-native and mobile apps.Users or client applications can access objects in Blob Storage via HTTP/HTTPS, from anywhere in the world. Objects in Blob Storage are accessible via the Azure Storage REST API, Azure PowerShell, Azure CLI, or an Azure Storage client library.
 - 2. [Azure Data Lake Storage Gen2](https://azure.microsoft.com/products/storage/data-lake-storage/):Blob Storage supports Azure Data Lake Storage Gen2 (heirarchical storage accounts), Microsoft's enterprise big data analytics solution for the cloud. Designed from the start to service multiple petabytes of information while sustaining hundreds of gigabits of throughput. Azure Data Lake Storage Gen2 is primarily designed to work with Hadoop and all frameworks that use the Apache Hadoop Distributed File System (HDFS) as their data access layer.
 - 3. [Azure Files](https://azure.microsoft.com/products/storage/files/):Azure Files offers fully managed file shares in the cloud that are accessible via the industry standard Server Message Block (SMB) protocol, Network File System (NFS) protocol, and Azure Files REST API. Azure file shares can be mounted concurrently by cloud or on-premises deployments. Mainly used as file shares
-- 
+- 4. [Queue Storage](https://azure.microsoft.com/products/storage/queues/):Queue storage gives you asynchronous message queueing for communication between application components, whether they are running in the cloud, on the desktop, on-premises, or on mobile devices.
+- 5. [Table Storage](https://azure.microsoft.com/products/storage/tables/): A NoSQL store for schemaless storage of structured data.Data in Azure Storage is also accessible via the REST API, which can be called by any language that makes HTTP/HTTPS requests.It provides rich client libraries for building apps with .NET, Java, Android, C++, Node.js, PHP, Ruby, and Python. The client libraries offer advanced capabilities for Table storage, including OData support for querying and optimistic locking capabilities
+- [Azure NetApp Files](https://azure.microsoft.com/products/netapp/): Enterprise files storage, powered by NetApp: makes it easy for enterprise line-of-business (LOB) and storage professionals to migrate and run complex, file-based applications with no code change. These include migration (lift and shift) of POSIX-compliant Linux and Windows applications, SAP HANA, databases, high-performance compute (HPC) infrastructure and apps, and enterprise web applications.Azure NetApp Files is managed via NetApp accounts and can be accessed via NFS, SMB and dual-protocol volumes.
+
 
 ## Compute Layer(Integration,Operation)
 
 Some services offer a storage layer along with compute. They are as follows
--[Azure Data Explorer](https://azure.microsoft.com/products/data-explorer/): Azure Data Explorer is a fast, fully managed data analytics service for real-time analysis on large volumes of data streaming. You can use Azure Data Explorer to collect, store, and analyze diverse data
--[Azure Databricks](https://azure.microsoft.com/products/databricks/)
+
+- [Azure Data Explorer](https://azure.microsoft.com/products/data-explorer/): Azure Data Explorer is a fast, fully managed data analytics service for real-time analysis on large volumes of data streaming. You can use Azure Data Explorer to collect, store, and analyze diverse data
+- [Azure Synapse Analytics](https://azure.microsoft.com/products/synapse-analytics/): Azure Synapse is an enterprise analytics service that accelerates time to insight across data warehouses and big data systems.Gain insights from all your data, across data warehouses, data lakes, operational databases, and big data analytics systems. 
+- [Azure Databricks](https://azure.microsoft.com/products/databricks/)
 Azure Databricks has Data lakehouse foundation built on an open data lake for unified and governed data.
 Azure Databricks deploys compute clusters using cloud resources in your account to process and store data in object storage
 
@@ -45,8 +52,7 @@ HDInsight clusters can use the following storage options:
 Azure Data Lake Storage Gen2, Azure Data Lake Storage Gen1, Azure Storage General Purpose v2, Azure Storage General Purpose v1, Azure Storage Block blob (only supported as secondary storage)
 
 Service which offer only compute
--[Azure Data Factory](https://azure.microsoft.com/products/data-factory/): It is a serverless integration service which has in-built connectors to than 90 different types of sources. You can use ADF to construct ETL (extract, transform, and load) and ELT (extract, load, and transform) processes using intuitive environment or writing your own code.
--[Azure Analysis Services](https://azure.microsoft.com/products/analysis-services/)
-Services that offer
+- [Azure Data Factory](https://azure.microsoft.com/products/data-factory/): It is a serverless integration service which has in-built connectors to than 90 different types of sources. You can use ADF to construct ETL (extract, transform, and load) and ELT (extract, load, and transform) processes using intuitive environment or writing your own code.
+- [Azure Analysis Services](https://azure.microsoft.com/products/analysis-services/)
 
 ## Presentation layer(consolidation and governance)
