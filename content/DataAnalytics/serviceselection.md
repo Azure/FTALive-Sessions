@@ -2,7 +2,7 @@
 
 [prev](./dataoperations.md) | [home](./introduction.md)  | [next](./QnA.md)
 
-Now that we have covered type of data, type of database scenarios and types of operations its easier to list the services required for various layers of your DataAnalytics Pipeline. So when it comes to building the pipeline the first layer is the storage layer (Whether you go for ETL or ELT modelling you will have to store you data at some point). 
+Now that we have covered type of data, type of database scenarios and types of operations its easier to list the services required for various layers of your DataAnalytics Pipeline. So when it comes to building the pipeline the first layer is the storage layer (Whether you go for ETL or ELT modelling you will have to store you data at some point).
 > Note: You would have narrowed down 2 type of data:
 >
 >1. Data you are bringing into cloud from 1 or more sources
@@ -14,15 +14,19 @@ You can navigate through [this](https://learn.microsoft.com/azure/architecture/g
 Datastores (RDBMS). You can also go to the portal and under the Databases section you will find choices for Database store.
 
 - [Azure SQL Database](https://azure.microsoft.com/products/azure-sql/database/): A Fully managed database engine automates updates, provisioning, and backup.
-- [Azure SQL Managed Instance](https://azure.microsoft.com/products/azure-sql/managed-instance/): SQL Managed Instance is an intelligent cloud database service combining the broadest SQL Server engine compatibility (back to SQL Server 2008) with the benefits of a fully managed, up-to-date platform as a service. 
+- [Azure SQL Managed Instance](https://azure.microsoft.com/products/azure-sql/managed-instance/): SQL Managed Instance is an intelligent cloud database service combining the broadest SQL Server engine compatibility (back to SQL Server 2008) with the benefits of a fully managed, up-to-date platform as a service.
+- [SQL Server on Azure VM](https://azure.microsoft.com/products/virtual-machines/sql-server/): Simple, familiar SQL Server for versatile Linux &/or Windows virtual machines.
 - [Azure Cache for Redis](https://azure.microsoft.com/products/cache/): A quick caching layer to the application architecture. It's a secure data cache and messaging broker that provides high throughput and low-latency access to data for applications as a managed service.
-- [Azure Cosmos DB](https://learn.microsoft.com/azure/cosmos-db/): A fully managed, distributed NoSQL & relational database for modern app development. It provides 6 different API's NoSQL, MongoDB, Apache Cassandra, Apache Gremlin, Table & PostgreSQL.
+- [Azure Cosmos DB](https://learn.microsoft.com/azure/cosmos-db/): A fully managed, distributed NoSQL & relational database for modern app development. It provides 6 different API's NoSQL, MongoDB, PostgreSQL, Apache Cassandra, Apache Gremlin & Table.
 - [Azure Database for MariaDB](https://azure.microsoft.com/products/mariadb/): A relational database service based on the open-source MariaDB Server engine. It works with popular open-source frameworks and languages and usually used for content management apps.
 - [Azure Database for MySQL](https://azure.microsoft.com/products/mysql/): A relational database service powered by the MySQL community edition. It works well with Cognitive Services, Kubernetes Service, Application services. Often used to deploy popular web apps, including Magento, Shopify, Moodle, Alfresco, Drupal, and WordPress.
 - [Azure Database for PostgreSQL](https://azure.microsoft.com/products/postgresql/): A relational database service based on the open-source Postgres database engine. It has extension such as Cron, PostGIS, and PLV8, and popular frameworks and languages like Ruby on Rails, Python with Django, Java with Spring Boot, and Node.js.
 
 Likewise you can also find choices for you File stores under Storage section
 
+- [Storage Account](https://azure.microsoft.com/products/category/storage/):
+- 1.  [Azure Blob Storage](https://azure.microsoft.com/products/storage/blobs/):  Azure Blob Storage is optimized for storing massive amounts of unstructured data.It helps you create data lakes for your analytics needs, and provides storage to build powerful cloud-native and mobile apps.
+- 2. [Azure Data Lake Storage Gen2](https://azure.microsoft.com/products/storage/data-lake-storage/):Blob Storage supports Azure Data Lake Storage Gen2 (heirarchical storage accounts), Microsoft's enterprise big data analytics solution for the cloud.
 
 ## Compute Layer(Integration,Operation)
 
