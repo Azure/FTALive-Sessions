@@ -15,9 +15,13 @@ By now you would have narrowed down 2 type of data:
 
 You can navigate through [this](https://learn.microsoft.com/azure/architecture/guide/technology-choices/data-store-decision-tree) tree  or go to the portal directly and find your options for either
 Datastores (RDBMS)
-You can also go to the portal and under the Databases section you will find choices for Database store
+You can also go to the portal and under the Databases section you will find choices for Database store 
 
 ![Azure Portal Database Section](/images/PortalDatabase.png)
+
+Likewise you can also find choices for you File stores under Storage section
+
+![Azure Portal Storage](/images/PortalStorage.png)
 
 ## Compute Layer(operation)
 
