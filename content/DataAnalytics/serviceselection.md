@@ -20,7 +20,7 @@ You can also go to the portal and under the Databases section you will find choi
 ![Azure Portal Database Section](/images/PortalDatabase.png)
 
 Likewise you can also find choices for you File stores under Storage section
-![Azure Portal Storage](/images/PortalStorage.png
+![Azure Portal Storage](/images/PortalStorage.png)
 
 ## Compute Layer(operation)
 
