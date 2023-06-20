@@ -2,12 +2,11 @@
 
 [prev](./dataoperations.md) | [home](./introduction.md)  | [next](./QnA.md)
 
-Now that we have covered type of data, type of database scenarios and types of operations. Now its easier to list the services required for various layers of your DataAnalytics Pipeline.By now you would have narrowed down 2 type of data:
-
-1. Data you are bringing into cloud from 1 or more sources
-2. Data you will derive after transformation.
-
-The first layer is the storage layer (Whether you go for ETL or ELT modelling you will have to store you data at some point)
+Now that we have covered type of data, type of database scenarios and types of operations its easier to list the services required for various layers of your DataAnalytics Pipeline. So when it comes to building the pipeline the first layer is the storage layer (Whether you go for ETL or ELT modelling you will have to store you data at some point). 
+> Note: You would have narrowed down 2 type of data:
+>
+>1. Data you are bringing into cloud from 1 or more sources
+>2. Data you will derive after transformation.
 
 ## Storage Layer(Databases)
 
@@ -21,7 +20,6 @@ Datastores (RDBMS). You can also go to the portal and under the Databases sectio
 - [Azure Database for MariaDB](https://azure.microsoft.com/products/mariadb/): A relational database service based on the open-source MariaDB Server engine. It works with popular open-source frameworks and languages and usually used for content management apps.
 - [Azure Database for MySQL](https://azure.microsoft.com/products/mysql/): A relational database service powered by the MySQL community edition. It works well with Cognitive Services, Kubernetes Service, Application services. Often used to deploy popular web apps, including Magento, Shopify, Moodle, Alfresco, Drupal, and WordPress.
 - [Azure Database for PostgreSQL](https://azure.microsoft.com/products/postgresql/): A relational database service based on the open-source Postgres database engine. It has extension such as Cron, PostGIS, and PLV8, and popular frameworks and languages like Ruby on Rails, Python with Django, Java with Spring Boot, and Node.js.
-- [Table Storage](https://azure.microsoft.com/products/storage/tables/): A NoSQL key-value store for rapid development using massive semi-structured datasets (up-to Petabytes of data). Table storage is excellent for flexible datasets—web app user data, address books, device information, and other metadata—and lets you build cloud applications without locking down the data model to particular schemas
 
 Likewise you can also find choices for you File stores under Storage section
 
@@ -32,7 +30,7 @@ Some services offer a storage layer along with compute. They are as follows
 -[Azure Data Explorer](https://azure.microsoft.com/products/data-explorer/): Azure Data Explorer is a fast, fully managed data analytics service for real-time analysis on large volumes of data streaming. You can use Azure Data Explorer to collect, store, and analyze diverse data
 -[Azure Databricks](https://azure.microsoft.com/products/databricks/)
 Azure Databricks has Data lakehouse foundation built on an open data lake for unified and governed data.
-Azure Databricks deploys compute clusters using cloud resources in your account to process and store data in object storage 
+Azure Databricks deploys compute clusters using cloud resources in your account to process and store data in object storage
 
 the Azure Databricks workspace, an environment for accessing all of your Azure Databricks objects.
 load data into a lakehouse backed by Delta Lake
