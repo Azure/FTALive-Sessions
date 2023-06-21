@@ -35,9 +35,9 @@ Likewise you can also find choices for you File stores under Storage section
 
 - [Azure NetApp Files](https://azure.microsoft.com/products/netapp/): Enterprise files storage, powered by NetApp: makes it easy for enterprise line-of-business (LOB) and storage professionals to migrate and run complex, file-based applications with no code change. These include migration (lift and shift) of POSIX-compliant Linux and Windows applications, SAP HANA, databases, high-performance compute (HPC) infrastructure and apps, and enterprise web applications.Azure NetApp Files is managed via NetApp accounts and can be accessed via NFS, SMB and dual-protocol volumes.
 
-## Compute Layer(Integration,Operation)
+## Compute Layer(Operations)
 
-### Some services offer a storage layer along with compute. They are as follows
+### Some services offer a storage layer along with compute
 
 These services offer 2 way advantages of compute and storage layers which you can design as per your organizational requirements. Most of them are compatible with Big Data.
 
@@ -47,13 +47,17 @@ These services offer 2 way advantages of compute and storage layers which you ca
 - 3. [Azure Databricks](https://azure.microsoft.com/products/databricks/) :Azure Databricks has Data lakehouse foundation built on an open data lake for unified and governed data.Azure Databricks deploys compute clusters using cloud resources in your account to process and store data in object storage.Your data is stored at rest in your Azure account in the data plane
 - 4. [Azure HDInsights](https://azure.microsoft.com/products/hdinsight/): Azure HDInsights is an Analytic Services used for open-source frameworks such as, Apache Spark, Apache Hive, LLAP, Apache Kafka, Hadoop and more, in your Azure environment.It can be used for various scenarios in big data processing like historical data (data that's already collected and stored) or real-time data (data that's directly streamed from the source).A Hadoop cluster consists of several virtual machines (nodes) that are used for distributed processing of tasks.This service handles implementation details of installation and configuration of individual nodes. HDInsight clusters can use the following storage options: Azure Data Lake Storage Gen2, Azure Data Lake Storage Gen1, Azure Storage General Purpose v2, Azure Storage General Purpose v1, Azure Storage Block blob (only supported as secondary storage). The default storage endpoint you specify a blob container of an Azure Storage account or Data Lake Storage.
 
-### Service which offer only compute. They are as follows
+### Service which offer only compute
 
-If your source and destination in the DataAnalytics pipeline are definite these services are useful for creating the flow 
+If your source and destination in the DataAnalytics pipeline are definite these services are useful for creating the flow. 
 
 - 1. [Azure Data Factory](https://azure.microsoft.com/products/data-factory/): It is a serverless integration service which has in-built connectors to than 90 different types of sources. You can use ADF to construct ETL (extract, transform, and load) and ELT (extract, load, and transform) processes using intuitive environment or writing your own code.
 - 2. [Azure Stream Analytics](https://azure.microsoft.com/products/stream-analytics/): It is a fully managed (PaaS) offering on Azure that lets you create a cluster that is compatible with reading real-time streaming data and process it with sub-milliseconds latencies. An Azure Stream Analytics job consists of an input, query, and an output. Jobs are executed on the clusters. It can connect to multiple sources and sinks
 - 3. [Azure Event Hubs](https://azure.microsoft.com/products/event-hubs/): It is a modern big data streaming platform and event ingestion service. This service lets you Ingest, buffer, store, and process your stream in real time to get actionable insights.Capture your data in near-real time in an Azure Blob storage or Azure Data Lake Storage for long-term retention or micro-batch processing. Event Hubs enables you to focus on data processing rather than on data capture.It has SDKs available in various languages: .NET, Java, Python, JavaScript, you can easily start processing your streams from Event Hubs.
 - 4. [Azure Analysis Services](https://azure.microsoft.com/products/analysis-services/): Much like SQL Server Analysis Services this fully managed service is used to combine data from multiple sources into a single, trusted BI semantic model.Tabular models are relational modeling constructs (model, tables, columns), articulated in tabular metadata object definitions in Tabular Model Scripting Language (TMSL) and Tabular Object Model (TOM) code.Multidimensional models and PowerPivot for SharePoint are not supported in Azure Analysis Services.
 
-## Presentation layer(consolidation and governance)
+## Presentation layer
+
+This is the last layer of any DataAnalytics pipeline be it ETL or ELT. It can overlap with your application layer from where the data is ingested or it can be a separate layer altogether like [Power BI](https://powerbi.microsoft.com/what-is-power-bi/) service which is used to create dashboards from the transformed or gold layer of your data.
+
+Microsoft recently announced [Fabric](https://azure.microsoft.com/blog/introducing-microsoft-fabric-data-analytics-for-the-era-of-ai/) which integrates technologies like Azure Data Factory, Azure Synapse Analytics, and Power BI into a single unified product created with foundations of AI in mind. Microsoft Fabric is an end-to-end analytics solution with full-service capabilities including data movement, data lakes, data engineering, data integration, data science, real-time analytics, and business intelligence—all backed by a shared platform providing robust data security, governance, and compliance.
