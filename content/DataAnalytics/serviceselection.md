@@ -56,8 +56,17 @@ If your source and destination in the DataAnalytics pipeline are definite these 
 - 3. [Azure Event Hubs](https://azure.microsoft.com/products/event-hubs/): It is a modern big data streaming platform and event ingestion service. This service lets you Ingest, buffer, store, and process your stream in real time to get actionable insights.Capture your data in near-real time in an Azure Blob storage or Azure Data Lake Storage for long-term retention or micro-batch processing. Event Hubs enables you to focus on data processing rather than on data capture.It has SDKs available in various languages: .NET, Java, Python, JavaScript, you can easily start processing your streams from Event Hubs.
 - 4. [Azure Analysis Services](https://azure.microsoft.com/products/analysis-services/): Much like SQL Server Analysis Services this fully managed service is used to combine data from multiple sources into a single, trusted BI semantic model.Tabular models are relational modeling constructs (model, tables, columns), articulated in tabular metadata object definitions in Tabular Model Scripting Language (TMSL) and Tabular Object Model (TOM) code.Multidimensional models and PowerPivot for SharePoint are not supported in Azure Analysis Services.
 
-## Presentation layer
+## Presentation Layer(Projection)
 
 This is the last layer of any DataAnalytics pipeline be it ETL or ELT. It can overlap with your application layer from where the data is ingested or it can be a separate layer altogether like [Power BI](https://powerbi.microsoft.com/what-is-power-bi/) service which is used to create dashboards from the transformed or gold layer of your data.
 
 Microsoft recently announced [Fabric](https://azure.microsoft.com/blog/introducing-microsoft-fabric-data-analytics-for-the-era-of-ai/) which integrates technologies like Azure Data Factory, Azure Synapse Analytics, and Power BI into a single unified product created with foundations of AI in mind. Microsoft Fabric is an end-to-end analytics solution with full-service capabilities including data movement, data lakes, data engineering, data integration, data science, real-time analytics, and business intelligence—all backed by a shared platform providing robust data security, governance, and compliance.
+
+## Governance
+
+From a governance stand-point some services worth checking out are:
+
+- [Microsoft Purview](https://azure.microsoft.com/products/purview/)
+![Microsoft Purview](/images/MicrosoftPurview.png)
+
+## Additional Information
