@@ -41,12 +41,13 @@ Some services offer a storage layer along with compute. They are as follows
 - [Azure Data Explorer](https://azure.microsoft.com/products/data-explorer/): Azure Data Explorer is a fast, fully managed data analytics service for real-time analysis on large volumes of data streaming. You can use Azure Data Explorer to collect, store, and analyze diverse data. An Azure Data Explorer cluster does all the work to ingest, process, and query your data.It can hold up to 10,000 databases and each database up to 10,000 tables.Azure Data Explorer also stores the data on Azure Storage and caches some of this data on the cluster compute nodes to achieve optimal query performance.
 - [Azure Synapse Analytics](https://azure.microsoft.com/products/synapse-analytics/): Azure Synapse is an enterprise analytics service that accelerates time to insight across data warehouses and big data systems.Gain insights from all your data, across data warehouses, data lakes, operational databases, and big data analytics systems.</br>
  A workspace is deployed in a specific region and has an associated ADLS Gen2 account and file system (for storing temporary data).Tables defined on files in the data lake are seamlessly consumed by either Spark or Hive. Azure Synapse Analytics allows the different workspace computational engines to share databases and tables between Apache Spark pools and serverless SQL pool.SQL and Spark can directly explore and analyze Parquet, CSV, TSV, and JSON files stored in the data lake.
-- [Azure Databricks](https://azure.microsoft.com/products/databricks/)
-Azure Databricks has Data lakehouse foundation built on an open data lake for unified and governed data.
-Azure Databricks deploys compute clusters using cloud resources in your account to process and store data in object storage
-
-the Azure Databricks workspace, an environment for accessing all of your Azure Databricks objects.
-load data into a lakehouse backed by Delta Lake
+- [Azure Databricks](https://azure.microsoft.com/products/databricks/) :Azure Databricks has Data lakehouse foundation built on an open data lake for unified and governed data.Azure Databricks deploys compute clusters using cloud resources in your account to process and store data in object storage.Your data is stored at rest in your Azure account in the data plane
+- [Azure HDInsights](https://azure.microsoft.com/products/hdinsight/): Azure HDInsights is an Analytic Services used for open-source frameworks such as, Apache Spark, Apache Hive, LLAP, Apache Kafka, Hadoop and more, in your Azure environment.It can be used for various scenarios in big data processing like historical data (data that's already collected and stored) or real-time data (data that's directly streamed from the source).A Hadoop cluster consists of several virtual machines (nodes) that are used for distributed processing of tasks.This service handles implementation details of installation and configuration of individual nodes. HDInsight clusters can use the following storage options:
+* Azure Data Lake Storage Gen2
+* Azure Data Lake Storage Gen1
+* Azure Storage General Purpose v2
+* Azure Storage General Purpose v1
+* Azure Storage Block blob (only supported as secondary storage)
 
 HDInsight clusters can use the following storage options:
 Azure Data Lake Storage Gen2, Azure Data Lake Storage Gen1, Azure Storage General Purpose v2, Azure Storage General Purpose v1, Azure Storage Block blob (only supported as secondary storage)
