@@ -1,6 +1,6 @@
 # Split of Data (Cont)
 
-[prev](./splitofdata2.md) | [home](./introduction.md)  | [next](./dataoperations.md)
+[prev](./splitofdata2.md) | [home](./introduction.md)  | [next](./serviceselection.md)
 
 This is in continuation for database scenarios which help you narrow down your storage options. 
 

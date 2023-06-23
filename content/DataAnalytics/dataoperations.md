@@ -1,6 +1,6 @@
 # Operations performed on Data
 
-[prev](./splitofdata3.md.md) | [home](./introduction.md)  | [next](./serviceselection.md)
+[prev](./typeofdata.md) | [home](./introduction.md)  | [next](./splitofdata1.md)
 
 There are 2 major categories of Data Operations you need to think about when planning a Data Analytics pipeline. ETL (Extract,Transform,Load) v/s ETL (Extract, Load, Transform).
 

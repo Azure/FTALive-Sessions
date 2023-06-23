@@ -1,6 +1,6 @@
 # Split of Data
 
-[prev](./typeofdata.md) | [home](./introduction.md)  | [next](./splitofdata2.md)
+[prev](./dataoperations.md) | [home](./introduction.md)  | [next](./splitofdata2.md)
 
 This module focusses on certain database scenarios which should help you narrow down your options for storing data. Often neglected these are few important concepts one must consider before creating pipelines
 

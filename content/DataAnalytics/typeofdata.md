@@ -1,6 +1,6 @@
 # Type of Data
 
-[prev](./introduction.md) | [home](./introduction.md)  | [next](./splitofdata1.md)
+[prev](./introduction.md) | [home](./introduction.md)  | [next](./dataoperations.md)
 
 There are three primary types of data that a data engineer will work with. Structured,Semi-structured & Unstructured
 
@@ -48,8 +48,8 @@ You will find these decision trees helpful when deciding on the store
 At this stage its important to understand your options but not jump to decision on finalizing the store. Reason being that selection on the store is based on various other parameters
 >
 >1. Type of Data
->1. Split of Transactional v/s Analytical v/s Historical Data
 >1. Operations to be performed on Data
+>1. Split of Transactional v/s Historical v/s Analytical Data 
 >1. Service requirement : Reliability, Scalability, Availability, Concurrency, Costing
 
 An exhaustive list for Microsoft Azure Architectural Criteria can also be found [here](https://learn.microsoft.com/azure/architecture/guide/technology-choices/data-store-considerations)

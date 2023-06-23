@@ -20,7 +20,7 @@ A data lake captures anything the organization deems valuable for future use.Ess
 Typically this transformation uses an **ELT (extract-load-transform)** pipeline, where the data is ingested and transformed in place. Source data that is already relational may go directly into the data warehouse, using an ETL process, skipping the data lake.
 ![Data Lake Architecture](/images/DataLake.png)
 
-[This](https://learn.microsoft.com/eazure/architecture/data-guide/scenarios/data-lake#when-to-use-a-data-lake) table will help to make your use case clearer
+[This](https://learn.microsoft.com/azure/architecture/data-guide/scenarios/data-lake#when-to-use-a-data-lake) table will help to make your use case clearer
 
 #### When to use Data Lake solutions
 
@@ -59,6 +59,7 @@ When deciding the number of storage accounts you want to create, the following c
 * [Data Lake Planning](https://www.sqlchick.com/entries/2016/7/31/data-lake-use-cases-and-planning)
 * [Data Lake Organization](https://www.sqlchick.com/entries/2019/1/20/faqs-about-organizing-a-data-lake)
 * [How to Organize your Data Lake](https://techcommunity.microsoft.com/t5/data-architecture-blog/how-to-organize-your-data-lake/ba-p/1182562)
+* [Hybrid Transactional/Analytical Processing](https://learn.microsoft.com/training/modules/design-hybrid-transactional-analytical-processing-using-azure-synapse-analytics/2-understand-patterns)
 
 ## Tutorials
 
