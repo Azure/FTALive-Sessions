@@ -8,7 +8,7 @@ Now that we have covered type of data, type of database scenarios and types of o
 >1. Data you are bringing into cloud from 1 or more sources
 >2. Data you will derive after transformation.
 
-![DataAnalyticsHeirarchy](/images/DataAnalyticsHeirarchy.png)
+![](/images/DataAnalyticsHeirarchy.png)
 
 ## Storage Layer(Databases)
 
