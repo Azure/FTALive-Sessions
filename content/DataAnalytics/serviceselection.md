@@ -8,6 +8,8 @@ Now that we have covered type of data, type of database scenarios and types of o
 >1. Data you are bringing into cloud from 1 or more sources
 >2. Data you will derive after transformation.
 
+<img src="/images/DataAnalyticsHeirarchy.png"  width="251" height="314">
+
 ## Storage Layer(Databases)
 
 You can navigate through [this](https://learn.microsoft.com/azure/architecture/guide/technology-choices/data-store-decision-tree) tree  or go to the portal directly and find your options for either
@@ -49,7 +51,7 @@ These services offer 2 way advantages of compute and storage layers which you ca
 
 ### Service which offer only compute
 
-If your source and destination in the DataAnalytics pipeline are definite these services are useful for creating the flow. 
+If your source and destination in the DataAnalytics pipeline are definite these services are useful for creating the flow.
 
 - 1. [Azure Data Factory](https://azure.microsoft.com/products/data-factory/): It is a serverless integration service which has in-built connectors to than 90 different types of sources. You can use ADF to construct ETL (extract, transform, and load) and ELT (extract, load, and transform) processes using intuitive environment or writing your own code.
 - 2. [Azure Stream Analytics](https://azure.microsoft.com/products/stream-analytics/): It is a fully managed (PaaS) offering on Azure that lets you create a cluster that is compatible with reading real-time streaming data and process it with sub-milliseconds latencies. An Azure Stream Analytics job consists of an input, query, and an output. Jobs are executed on the clusters. It can connect to multiple sources and sinks
