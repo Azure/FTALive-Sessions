@@ -44,14 +44,6 @@ Preferred when latency is hardly acceptable and computation can be performed con
 With ETL you can remove/redacting sensitive information before storing
 With ELT are preferred where data in its raw form (Structured,Un-structured,Semi-structured) maybe required to be referenced later.
 
->Note
->
->We have covered type of data, type of database scenarios and types of operations. Now its easier to list the services required for various layers of your DataAnalytics Pipeline.
->
-> storage layer(integration) </br>
-> compute layer(operation)</br>
-> presentation layer(consolidation and governance)</br>
-
 ## Additional Information
 
 - [Understand batch and stream processing](https://learn.microsoft.com/training/modules/explore-fundamentals-stream-processing/2-batch-stream)
