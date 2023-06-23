@@ -8,7 +8,7 @@ Now that we have covered type of data, type of database scenarios and types of o
 >1. Data you are bringing into cloud from 1 or more sources
 >2. Data you will derive after transformation.
 
-<img src="/images/DataAnalyticsHeirarchy.png"  width="251" height="314">
+![DataAnalyticsHeirarchy](/images/DataAnalyticsHeirarchy.png)
 
 ## Storage Layer(Databases)
 
@@ -58,7 +58,6 @@ If your source and destination in the DataAnalytics pipeline are definite these 
 - 3. [Azure Event Hubs](https://azure.microsoft.com/products/event-hubs/): It is a modern big data streaming platform and event ingestion service. This service lets you Ingest, buffer, store, and process your stream in real time to get actionable insights.Capture your data in near-real time in an Azure Blob storage or Azure Data Lake Storage for long-term retention or micro-batch processing. Event Hubs enables you to focus on data processing rather than on data capture.It has SDKs available in various languages: .NET, Java, Python, JavaScript, you can easily start processing your streams from Event Hubs.
 - 4. [Azure Analysis Services](https://azure.microsoft.com/products/analysis-services/): Much like SQL Server Analysis Services this fully managed service is used to combine data from multiple sources into a single, trusted BI semantic model.Tabular models are relational modeling constructs (model, tables, columns), articulated in tabular metadata object definitions in Tabular Model Scripting Language (TMSL) and Tabular Object Model (TOM) code.Multidimensional models and PowerPivot for SharePoint are not supported in Azure Analysis Services.
 
-![DataAnalyticsHeirarchy](/images/DataAnalyticsHeirarchy.png)
 
 ## Presentation Layer(Projection)
 
