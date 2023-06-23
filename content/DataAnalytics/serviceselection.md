@@ -60,6 +60,8 @@ If your source and destination in the DataAnalytics pipeline are definite these 
 
 This is the last layer of any DataAnalytics pipeline be it ETL or ELT. It can overlap with your application layer from where the data is ingested or it can be a separate layer altogether like [Power BI](https://powerbi.microsoft.com/what-is-power-bi/) service which is used to create dashboards from the transformed or gold layer of your data.
 
+![EndtoEndFlow](/images/DataAnalyticsFlowChart.png)
+
 Microsoft recently announced [Fabric](https://azure.microsoft.com/blog/introducing-microsoft-fabric-data-analytics-for-the-era-of-ai/) which integrates technologies like Azure Data Factory, Azure Synapse Analytics, and Power BI into a single unified product created with foundations of AI in mind. Microsoft Fabric is an end-to-end analytics solution with full-service capabilities including data movement, data lakes, data engineering, data integration, data science, real-time analytics, and business intelligence—all backed by a shared platform providing robust data security, governance, and compliance.
 
 ## Governance
