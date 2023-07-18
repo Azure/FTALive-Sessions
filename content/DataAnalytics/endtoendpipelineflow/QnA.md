@@ -1,6 +1,6 @@
 # QnA
 
-[prev](./postmigration.md) | [home](./readme.md)  | [next](./advancedtopics.md)
+[prev](./serviceselection.md) | [home](./introduction.md)  
 
 ## I have a question which you didn't cover or answer
 
@@ -10,15 +10,10 @@
 
 ### Learning Paths
 
-- [Azure SQL for Beginners show](https://docs.microsoft.com/shows/azure-sql-for-beginners/)
-- [Migrate SQL workloads to Azure](https://docs.microsoft.com/learn/paths/migrate-sql-workloads-azure/)
-- [Plan and implement data platform resources](https://docs.microsoft.com/learn/paths/plan-implement-data-platform-resources/)
-- [Azure SQL fundamentals](https://docs.microsoft.com/learn/paths/azure-sql-fundamentals/)
-
-### Sample Datasets
-
-- [Sample Databases](https://docs.microsoft.com/sql/samples/sql-samples-where-are?view=sql-server-ver16)
-- [Public Datasets](https://docs.microsoft.com/azure/azure-sql/public-data-sets?view=azuresql)
+- [FTA Live DataAnalytics - Part 1 - Understanding Azure Data](https://learn.microsoft.com/users/krutimehta-7699/collections/yddwb7m2z6r28j)
+- [FTA Live DataAnalytics - Part 2 - Understanding Data Operations and Database Scenarios](https://learn.microsoft.com/users/krutimehta-7699/collections/g77pf5oxr47n50)
+- [FTA Live DataAnalytics - Part 3 - Implementing Database Scenarios.](https://learn.microsoft.com/users/krutimehta-7699/collections/222qb01y4d3pq7)
+- [FTA Live DataAnalytics - Part 4 - Presentation, Governance, End-to-End, POC Guidance](https://learn.microsoft.com/users/krutimehta-7699/collections/0nnjfk5x1ejpj1)
 
 ### Solution Framework
 
@@ -38,7 +33,5 @@
 
 ## Feedback
 
-Feedback: <http://aka.ms/ftalive-feedback> </br>
-Live Session : <https://fasttrack.azure.com/live/> </br>
-Github Repo : <https://aka.ms/ftalive-sqlmigrations> </br>
-Previous Recordings :[aka.ms/ftaacess](https://learn.microsoft.com/shows/learn-live/?terms=fasttrack)
+Feedback: http://aka.ms/ftalive-feedback </br>
+Live Session : https://fasttrack.azure.com/live/ </br>
