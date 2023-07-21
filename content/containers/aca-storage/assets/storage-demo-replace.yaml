@@ -1,0 +1,45 @@
+    containers:
+    - args:
+      - while true; do sleep 30; done;
+      command:
+      - /bin/bash
+      - -c
+      - --
+      image: docker.io/ubuntu
+      name: container1
+      probes: []
+      resources:
+        cpu: 0.5
+        memory: 1Gi
+      volumeMounts:
+      - mountPath: /volumes/azurefile
+        volumeName: azure-files-volume
+      - mountPath: /volumes/temp
+        volumeName: temporary-volume
+    - args:
+      - while true; do sleep 30; done;
+      command:
+      - /bin/bash
+      - -c
+      - --
+      image: docker.io/ubuntu
+      name: container2
+      probes: []
+      resources:
+        cpu: 0.5
+        memory: 1Gi
+      volumeMounts:
+      - mountPath: /volumes/azurefile
+        volumeName: azure-files-volume
+      - mountPath: /volumes/temp
+        volumeName: temporary-volume
+    revisionSuffix: ''
+    scale:
+      maxReplicas: 10
+      minReplicas: 1
+    volumes:
+    - name: azure-files-volume
+      storageName: my-azure-files
+      storageType: AzureFile
+    - name: temporary-volume
+      storageType: EmptyDir

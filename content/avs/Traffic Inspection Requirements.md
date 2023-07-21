@@ -1,0 +1,18 @@
+# What are your AVS traffic inspection requirements?
+So how do we know which Network Scenario is best for us? First, you need to figure out your AVS inspection requirements, as shown below. Knowing your inspection requirements will guide you to the correct scenario that you will deploy. 
+
+The following table uses VMware solution traffic inspection requirements to provide recommendations and considerations for the most common networking scenarios.
+
+| Scenario | Traffic inspection requirements | Recommended solution design | Considerations | Internet Breakout |
+|---|----|---|---|---|
+| 1 |  - Internet ingress <br> - Internet egress | Use a Virtual WAN secured hub with default gateway propagation. </br></br> For HTTP/S traffic, use Azure Application Gateway. For non-HTTP/S traffic, use Azure Firewall.</br></br> Deploy a secured Virtual WAN hub and enable public IP in Azure VMware Solution. | This solution doesn't work for on-premises filtering. Global Reach bypasses Virtual WAN hubs. | Azure
+| 2 |  - Internet ingress <br> - Internet egress <br> - To on-premises datacenter <br> - To Azure Virtual Network| Use third-party firewall NVA solutions in your hub virtual network with Azure Route Server. </br></br> Disable Global Reach. </br></br> For HTTP/S traffic, use Azure Application Gateway. For non-HTTP/S traffic, use a third-party firewall NVA on Azure.| Choose this option if you want to use your existing NVA and centralize all traffic inspection in your hub virtual network. | Azure
+| 3 | - Internet ingress <br> - Internet egress <br> - To on-premises datacenter <br> - To Azure Virtual Network <br> Within Azure VMware Solution <br>|   Use NSX-T or a third-party NVA firewall in Azure VMware Solution. </br></br>  Use NSX-T Advanced Load Balancer for HTTPs, or NSX-T Firewall for non-HTTPs traffic. </br></br> Public IP for Internet breakout from Azure VMware Solution, SNAT, and DNAT. | Enable Public IP down to the NSX Edge in Azure Portal. This option allows for low-latency connections to Azure, and the ability to scale the number of outbound connections. </br></br> Leverage the NSX firewall for granular rule creation, URL filtering, and TLS Inspection. </br></br> Consider using a load balancer to evenly distribute traffic to workloads. </br></br> Enable DDoS protection.  | Azure VMWare Solution
+| 4 | - Internet ingress <br> - To Azure Virtual Network| Use Virtual WAN secured hub. </br></br>  For HTTP/S traffic, use Azure Application Gateway. For non-HTTP/S traffic, use Azure Firewall.</br></br> Deploy a secured Virtual WAN hub and enable public IP in Azure VMware Solution. | Choose this option to advertise the `0.0.0.0/0` route from on-premises datacenters. | On-Premise
+| 5 | - Internet ingress <br> - Internet egress </br> - To on-premises datacenter </br> - To Azure Virtual Network   | </br>  Use third-party firewall solutions in a hub virtual network with Azure Route Server. </br></br> For HTTP/S traffic, use Azure Application Gateway. For non-HTTP/S traffic, use a third-party firewall NVA on Azure. </br></br> Use an on-premises third-party firewall NVA. </br></br> Deploy third-party firewall solutions in a hub virtual network with Azure Route Server. | Choose this option to advertise the `0.0.0.0/0` route from an NVA in your Azure hub virtual network to an Azure VMware Solution.| Azure
+
+
+**You can find more information on Traffic Inspection Requirements in the link below.**  
+https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/azure-vmware/example-architectures
+
+#### [prev](./understand-forecast.md) | [home](./readme.md)  | [next](https://github.com/jasonamedina/FTALive-Sessions/blob/main/content/avs/Scenario%201.md)

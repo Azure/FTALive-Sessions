@@ -1,0 +1,249 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "resourcePrefix": {
+            "type": "string",
+            "metadata": {
+                "description": "The prefix for the Azure Machine Learning workspace and its resources"
+            },
+            "defaultValue": "ftalive"
+        },
+        "resourceSuffix": {
+            "type": "string",
+            "metadata": {
+                "description": "The suffix for the resources that need to have unique name"
+            },
+            "defaultValue": "[substring(uniqueString(subscription().id, resourceGroup().id),0,5)]"
+        },
+        "location": {
+            "type": "string",
+            "metadata": {
+                "description": "Specifies the location for all resources."
+            },
+            "defaultValue": "[resourceGroup().location]"
+        },
+        "resourceTags": {
+            "type": "object",
+            "defaultValue": {
+                "Environment": "Demo"
+            }
+        },
+        "keyVaultCreateMode": {
+            "type": "string",
+            "metadata": {
+                "description": "The vault's create mode to indicate whether the vault need to be recovered or not."
+            },
+            "allowedValues": [
+                "default",
+                "recover"
+            ],
+            "defaultValue": "default"
+        },
+        "computeInstanceAutoShutdown": {
+            "type": "string",
+            "metadata": {
+                "description": "The CRON schedule (in UTC) to auto shutdown the compute instance"
+            },
+            "defaultValue": "0 18 * * *"
+        }
+    },
+    "variables": {
+        "tenantId": "[subscription().tenantId]",
+        "workspaceName": "[concat(parameters('resourcePrefix'),'azureml')]",
+        "computeInstanceName": "[concat(parameters('resourcePrefix'),'ci', parameters('resourceSuffix'))]",
+        "computeInstanceSize": "Standard_DS3_v2",
+        "cloneCommand": "cd /home/azureuser/cloudfiles/code && rm -rf fta-live && git clone --depth 1 --branch main https://github.com/Azure/fta-azure-machine-learning fta-live",
+        "clusterName": "cpu-cluster",
+        "clusterSize": "Standard_DS12_v2",
+        "storageAccountName": "[concat(parameters('resourcePrefix'),'stg', parameters('resourceSuffix'))]",
+        "keyVaultName": "[concat(parameters('resourcePrefix'),'kv', parameters('resourceSuffix'))]",
+        "containerRegistryName": "[concat(parameters('resourcePrefix'),'acr', parameters('resourceSuffix'))]",
+        "applicationInsightsName": "[concat(parameters('resourcePrefix'),'appins')]",
+        "workspace": "[resourceId(resourceGroup().name, 'Microsoft.MachineLearningServices/workspaces', variables('workspaceName'))]",
+        "storageAccount": "[resourceId(resourceGroup().name, 'Microsoft.Storage/storageAccounts', variables('storageAccountName'))]",
+        "keyVault": "[resourceId(resourceGroup().name, 'Microsoft.KeyVault/vaults', variables('keyVaultName'))]",
+        "containerRegistry": "[resourceId(resourceGroup().name, 'Microsoft.ContainerRegistry/registries', variables('containerRegistryName'))]",
+        "applicationInsights": "[resourceId(resourceGroup().name, 'Microsoft.Insights/components', variables('applicationInsightsName'))]"
+    },
+    "resources": [
+        {
+            "type": "Microsoft.Storage/storageAccounts",
+            "apiVersion": "2019-04-01",
+            "name": "[variables('storageAccountName')]",
+            "tags": "[parameters('resourceTags')]",
+            "location": "[parameters('location')]",
+            "sku": {
+                "name": "Standard_LRS"
+            },
+            "kind": "StorageV2",
+            "properties": {
+                "encryption": {
+                    "services": {
+                        "blob": {
+                            "enabled": true
+                        },
+                        "file": {
+                            "enabled": true
+                        }
+                    },
+                    "keySource": "Microsoft.Storage"
+                },
+                "supportsHttpsTrafficOnly": true
+            }
+        },
+        {
+            "type": "Microsoft.KeyVault/vaults",
+            "apiVersion": "2021-06-01-preview",
+            "tags": "[parameters('resourceTags')]",
+            "name": "[variables('keyVaultName')]",
+            "location": "[parameters('location')]",
+            "properties": {
+                "tenantId": "[variables('tenantId')]",
+                "sku": {
+                    "name": "standard",
+                    "family": "A"
+                },
+                "accessPolicies": [],
+                "createMode": "[parameters('keyVaultCreateMode')]",
+                "softDeleteRetentionInDays": 7
+            }
+        },
+        {
+            "type": "Microsoft.ContainerRegistry/registries",
+            "apiVersion": "2019-05-01",
+            "tags": "[parameters('resourceTags')]",
+            "name": "[variables('containerRegistryName')]",
+            "location": "[parameters('location')]",
+            "sku": {
+                "name": "Standard"
+            },
+            "properties": {
+                "adminUserEnabled": true
+            }
+        },
+        {
+            "type": "Microsoft.Insights/components",
+            "tags": "[parameters('resourceTags')]",
+            "apiVersion": "2018-05-01-preview",
+            "name": "[variables('applicationInsightsName')]",
+            "location": "[parameters('location')]",
+            "kind": "web",
+            "properties": {
+                "Application_Type": "web"
+            }
+        },
+        {
+            "type": "Microsoft.MachineLearningServices/workspaces",
+            "apiVersion": "2020-06-01",
+            "tags": "[parameters('resourceTags')]",
+            "name": "[variables('workspaceName')]",
+            "location": "[parameters('location')]",
+            "dependsOn": [
+                "[variables('storageAccount')]",
+                "[variables('keyVault')]",
+                "[variables('applicationInsights')]",
+                "[variables('containerRegistry')]"
+            ],
+            "identity": {
+                "type": "SystemAssigned"
+            },
+            "properties": {
+                "friendlyName": "[variables('workspaceName')]",
+                "storageAccount": "[variables('storageAccount')]",
+                "keyVault": "[variables('keyVault')]",
+                "applicationInsights": "[variables('applicationInsights')]",
+                "containerRegistry": "[variables('containerRegistry')]",
+                "systemDatastoresAuthMode": "accessKey"
+            }
+        },
+        {
+            "type": "Microsoft.MachineLearningServices/workspaces/computes",
+            "apiVersion": "2021-07-01",
+            "name": "[concat(variables('workspaceName'), '/', variables('computeInstanceName'))]",
+            "location": "[parameters('location')]",
+            "dependsOn": [
+                "[variables('workspace')]"
+            ],
+            "properties": {
+                "computeType": "ComputeInstance",
+                "properties": {
+                    "VMSize": "[variables('computeInstanceSize')]",
+                    "applicationSharingPolicy": "Personal",
+                    "setupScripts": {
+                        "scripts": {
+                            "creationScript": {
+                                "scriptSource": "inline",
+                                "scriptData": "[base64(variables('cloneCommand'))]"
+                            }
+                        }
+                    },
+                    "schedules": {
+                        "computeStartStop": [
+                            {
+                                "triggerType": "Cron",
+                                "cron": {
+                                    "timeZone": "UTC",
+                                    "expression": "[parameters('computeInstanceAutoShutdown')]"
+                                },
+                                "action": "Stop",
+                                "status": "Enabled"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "type": "Microsoft.MachineLearningServices/workspaces/computes",
+            "apiVersion": "2021-07-01",
+            "name": "[concat(variables('workspaceName'), '/', variables('clusterName'))]",
+            "location": "[parameters('location')]",
+            "dependsOn": [
+                "[variables('workspace')]"
+            ],
+            "properties": {
+                "computeType": "AmlCompute",
+                "properties": {
+                    "scaleSettings": {
+                        "maxNodeCount": 2,
+                        "minNodeCount": 0,
+                        "nodeIdleTimeBeforeScaleDown": "PT1800S"
+                    },
+                    "vmPriority": "Dedicated",
+                    "vmSize": "[variables('clusterSize')]"
+                }
+            }
+        }
+    ],
+    "outputs": {
+        "azureMLWorkspace": {
+            "type": "string",
+            "value": "[variables('workspaceName')]"
+        },
+        "computeInstance": {
+            "type": "string",
+            "value":"[variables('computeInstanceName')]"
+        },
+        "computeCluster": {
+            "type": "string",
+            "value":"[variables('clusterName')]"
+        },
+        "storageAccount": {
+            "type": "string",
+            "value":"[variables('storageAccountName')]"
+        },
+        "keyVault": {
+            "type": "string",
+            "value":"[variables('keyVaultName')]"
+        },
+        "applicationInsights": {
+            "type": "string",
+            "value":"[variables('applicationInsightsName')]"
+        },
+        "containerRegistry": {
+            "type": "string",
+            "value":"[variables('containerRegistryName')]"
+        }
+    }
+}

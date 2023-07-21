@@ -1,0 +1,17 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandComponent.schema.json
+name: register_model
+display_name: Register Model
+version: 1
+type: command
+inputs:
+  model_input_path:
+    type: uri_folder
+  model_name:
+    type: string
+code: ./src
+environment: azureml:AzureML-lightgbm-3.2-ubuntu18.04-py37-cpu@latest
+command: >-
+  python register_model.py
+  --model_input_path ${{inputs.model_input_path}}
+  --model_name ${{inputs.model_name}}
+  

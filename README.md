@@ -82,6 +82,8 @@ Management and Governance	| Gobernanza de Azure | Únase a nosotros en vivo para
   |  |  |  |
 Management and Governance	| Azure Monitoring | In this session, you will learn about the different components of Azure Monitor and how you can utilize for end-to-end monitoring across your Cloud Solution. We will discuss Cloud Management capabilities and how to best use the Insights for gaining visibility of your environment, and much more. |
   |  |  |  |
+Management and Governance	| Migrate from legacy agents to AMA | In this session, learn how to plan and approach your migration from the legacy Microsoft Monitoring Agent/OMS Agent to the Azure Monitor Agent, where used with Azure Monitor and other services. |
+  |  |  |  |
 Management and Governance	| Azure Application Monitoring | In this session, you will learn how to use Azure Monitor Application Insights for end-to-end application monitoring. Intended audience for this session is application developers. |
  |  |  |  |
 Management and Governance	| Azure Cost Management | Learn how to use the cost optimization pillar of the Microsoft Azure Well-Architected Framework to design a cloud-based architecture that is efficient, eliminates waste, and gives you full visibility into where your money is spent on cloud resources. |
@@ -111,6 +113,12 @@ Virtual Desktop	| Azure Virtual Desktop | Azure Virtual Desktop (AVD) empowers f
 Virtual Desktop	| FTA Live: FTA エンジニアによる AVD アーキテクチャーデザインガイドセッション | 本セッションでは、FTA にて AVD の本格展開をご支援する際に、検討すべき内容、見落としがちなポイント、よくご質問を頂く点など、本番展開に向けた設計のポイントを凝縮してお届けします | 
  |  |  |  |
 Marketplace	| Marketplace Fundamentals | Join this session to understand the value proposition of the Azure Marketplace. We will cover the fundamentals and main features to get up and running with your applications. | 
+ |  |  |  |
+Hybrid	| Azure Stack HCI - Part 1: Introduction To HCI (1 of 3) | Azure Stack HCI is a new hyperconverged infrastructure (HCI) operating system delivered as an Azure service. This is our solution in cases where latency, data sovereignity or legal restrictions require you to stay onpremise. Run your favorite workloads like virtual machines, kubernetes and run Azure services like SQL managed instances, Azure Virtual Desktop meeting the requirements of onpremise hosting. There are a lot of moving parts and decision points to get AzStack HCI running. During this session we will discuss the what, use cases, benefits and what to do to get started.| 
+ |  |  |  |
+Hybrid	| Azure Stack HCI - Part 2: Planning & Deploying Azure Stack HCI (2 of 3) | Azure Stack HCI is a new hyperconverged infrastructure (HCI) operating system delivered as an Azure service. During this session we will discuss the various deployment methods and tools, networking design and storage considerations |
+ |  |  |  |
+Hybrid	| Azure Stack HCI - Part 3: Operating Azure Stack HCI (3 of 3) | Azure Stack HCI is a new hyperconverged infrastructure (HCI) operating system delivered as an Azure service. This session is about - operation tasks (Backup, Updating, Monitoring) - your management options and shows some of the hybrid workloads (e.g. Azure Resource Bridge, AKS, AVD,...) you can run on HCI |
 
 
 

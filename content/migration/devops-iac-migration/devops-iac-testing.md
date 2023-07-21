@@ -7,6 +7,8 @@ This section outlines the steps needed in order to execute an Azure DevOps Pipel
 
 The sample pipeline takes the output of an Azure Migrate Assessment and creates an isolated test environment with new VMs that are based on the configuration from the exported assessment output. The VMs that will be created via this sample pipeline are empty Marketplace images, ready for configuration and app installation.
 
+![Migration Workflow](./src/workflow-devops-iac-milestone2.png)
+
 ## 1 Pre-Requisites
 To get started, the assumption is the following:
 * The [discovery](https://github.com/Azure/FTALive-Sessions/blob/main/content/migration/server-migration/scan.md) is completed for the scoped VMs.

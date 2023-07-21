@@ -357,3 +357,8 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+# environment files
+.env
+
+content/ai/azure-openai/en/src/call-center/python-client
