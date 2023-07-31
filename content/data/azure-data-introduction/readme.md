@@ -8,7 +8,7 @@ This call will not be recorded due to the wide audience and to encourage questio
 
 **Questions?** Feel free to type them in the chat window at any time. Note that questions you post will be public.
 
-**Slide-less**  No PowerPoint, we promise
+**Slide-less**  No PowerPoint, we promise.
 
 **Prerequisites**
 You will need:
