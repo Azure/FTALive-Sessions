@@ -35,7 +35,7 @@ When it comes to data transformation there is one more consideration you should 
 
 Preferred when latency is acceptable but compute needs to be saved for large-scale operations to be performed efficiently.
 
-2 **Stream processing**, in which a source of data is constantly monitored and processed in real time as new data events occur.This is also called as Real-Time processing where data will be acted on almost immediately, within milliseconds.
+2. **Stream processing**, in which a source of data is constantly monitored and processed in real time as new data events occur.This is also called as Real-Time processing where data will be acted on almost immediately, within milliseconds.
 
 ![StreamProcessing](/images/StreamProcessing.gif)
 
