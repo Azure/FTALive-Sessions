@@ -8,7 +8,7 @@ This call will not be recorded due to the wide audience and to encourage questio
 
 **Questions?** Feel free to type them in the chat window at any time. Note that questions you post will be public.
 
-**Slide-less**  No PowerPoint, we promise.
+**Slide-less** No PowerPoint, we promise.
 
 **Prerequisites**
 You will need:
@@ -20,7 +20,7 @@ You will need:
 
 **Agenda**
 
-There is a lot that goes in to creating, validating and implementing an end-to-end Data Analytics Pipeline. As such, this content is designed to be delivered in two or  three parts. Below is the agenda, however we intentionally will not be covering all of the content. Instead we encourage you to access this repository at your own pace. 
+There is a lot that goes in to creating, validating and implementing an end-to-end Data Analytics Pipeline. As such, this content is designed to be delivered in two or three parts. Below is the agenda, however we intentionally will not be covering all of the content. Instead we encourage you to access this repository at your own pace. 
 
 1. [Introduction](./introduction.md)
 1. [Type of Data](./typeofdata.md)

@@ -10,16 +10,17 @@ Most applications storing data into a databases expect the 'transactions' to adh
 **Durability** means that committed changes are permanent.</br>
 
 ## Analytical Data
-**Data Lakehouse** helps you **store data into various layers/zones**. However with the growing volumes of data, you might not want to have additional OLTP or OLAP stores apart from the Data Lakehouse. Without transaction log capabilities, you can see the before and after image of data through different layers but not capture the exact changes made. This brings into picture a needs to not just store the refined form of data but the ability to track delta records (transformation made) to arrive at the higher layers. This is achieved through Delta Lake architectures
+**Data Lakehouse** helps you **store data into various layers/zones**. However with the growing volumes of data, you might not want to have additional OLTP or OLAP stores apart from the Data Lakehouse. Without transaction log capabilities, you can see the before and after image of data through different layers but not capture the exact changes made. This brings into picture a needs to not just store the refined form of data but the ability to track delta records (transformations made) to arrive at the higher layers. This can be achieved through Delta Lake architectures.
 
 ### Delta Lakes
-**Delta Lake** is an open source project that **enables building a lakehouse architecture on top of data lakes**. It implements the concept of **Delta Lake Transaction Log** which is an ordered record of every transaction that has  been performed on a Delta Lake table.
+**Delta Lake** is an open source project that **enables building a lakehouse architecture on top of data lakes**. It implements the concept of **Delta Lake Transaction Log** which is an ordered record of every transaction that has been performed on a Delta Lake table.
 
 ![DeltaLake](/images/DeltaLakeTopofLakehouse.png)
 
-The transaction log is the mechanism through which Delta Lake is able to offer the guarantee of atomicity. Delta Lake provides ACID transactions, scalable metadata handling, and **unifies streaming and batch data processing** on top of existing data lakes, such as S3, ADLSv2, GCS, and HDFS. It eliminates the need of having additional OLTP engines due to its logging facility.
+The transaction log is the mechanism through which Delta Lake is able to offer the guarantee of atomicity. Delta Lake provides ACID transactions, scalable metadata handling, and **unifies streaming and batch data processing** on top of existing data lakes, such as ADLSv2, S3, GCS, and HDFS. It eliminates the need of having additional OLTP engines due to its logging facility.
 
 ![DeltaTables](/images/DeltaTables.png)
+
 Delta tables consist of data stored in Parquet files and metadata stored in the transaction log.
 The Parquet files enable you to track the evolution of the data. Indexes and statistics about the files are maintained to increase query efficiency. The Delta Lake transaction log can be appended to by multiple writers that are mediated by optimistic concurrency control that provide serializable ACID transactions. Changes to the table are stored as ordered atomic units called commits. The log can be read in parallel by a cluster of Spark executors.
 
@@ -35,10 +36,9 @@ Delta Lake offers:
 - **Upserts and deletes**: Supports merge, update and delete operations to enable complex use cases like change-data-capture, slowly-changing-dimension (SCD) operations, streaming upserts, and so on.
 
 #### When to use Delta Lake solutions
-Consider Delta Lake solutions when you first have a requirement for Data Lake
+Consider Delta Lake solutions when you first have a requirement for Data Lake.
 
-- Data lake stores are often used in event streaming or IoT scenarios, because they can persist large amounts of relational and nonrelational data without transformation or schema definition.
-And you need ability **to handle ACID properties within the heirarchical storage layer.**
+- Data lake stores are often used in event streaming or IoT scenarios, because they can persist large amounts of relational and non-relational data without transformation or schema definition. You would consider Delta Lake when you also need the ability **to handle ACID properties within the heirarchical storage layer.**
 
 ![DeltaLake](/images/DeltaLakeUsage.png)
 

@@ -14,7 +14,7 @@ Data is available in various forms and can be stored in various relational and n
 
 * **Who:** This session is meant for Data Engineers & Data Analysts. As a Data Analyst, you would work closely with a Data Engineer to ensure you can access the variety of structured and unstructured data sources relevant to optimizing data models. These data sources are are typically served from a modern data warehouse or a data lake. Data Analysts work with tools provisioned by Data Engineers, to discover and locate appropriate data sources that meet stakeholder requirements.
 
-* **What**: The session is a walk-through of different types of data, how they can be stored, what operations are performed on data, how to go about deciding on the model,  hierarchy, structure, and operations that can be completed on data.
+* **What**: The session is a walk-through of different types of data, how they can be stored, what operations are performed on data, how to go about deciding on the model,hierarchy, structure, and operations that can be completed on data.
 
 * **When**: We conduct these sessions regularly based on customer demand. 
 
