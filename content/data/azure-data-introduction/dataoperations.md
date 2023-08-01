@@ -2,47 +2,79 @@
 
 [prev](./typeofdata.md) | [home](./introduction.md)  | [next](./splitofdata1.md)
 
-There are 2 major categories of Data Operations you need to think about when planning a Data Analytics pipeline. ETL (Extract,Transform,Load) v/s ETL (Extract, Load, Transform).
+# Methodologies
 
-## Data Extraction
+There are 2 major categories of data transformation processes (methodologies) you need to consider when planning a Data Analytics platform:
+
+### **E T L** (Extract, Transform, Load)
+
+When using **E T L**, you can remove/redact sensitive information before storing the data. So you may use this method when you have sensitive data in source systems which you do not want in your Data Lake.
+
+### **E L T** (Extract, Load, Transform)
+
+When using **E L T**, you load data into your Data Lake as it is in the source system. You may use this when you have a need to reference the data in its raw form (Structured, Un-structured,Semi-structured) at a later point in time, or where the system does not provide a change feed for you to consume.
+
+## Data *Extraction*
 
 ![DataExtraction](/images/ExtractionIcon.png)</br>
-Extracting dataset from similar/different sources and bringing them to a common platform which you can operate on it collectively.
+In the Extraction phase, you gather and extract dataset(s) from similar or different sources and bring that data to a common platform, where you can (in future) manipulate and aggregate these datasets without affecting the original data.
 
-## Data Loading
+## Data *Loading*
 
 ![DataConsolidation](/images/ConsolidationIcon.png)</br>
-Joining different datasets & moving them into a designated service / storage layer.
+In the Loading phase, the extracted data is loaded into the data warehouse or the target destination. This phase focuses on efficiently transferring and organizing the data for further processing.
 
-## Data Transformation
+## Data *Transformation*
 
 ![DataTransformation](/images/TransformationIcon.png)</br>
- Most of the pipelines you configure will have one or more categories of the transformations below
+In the Transformation phase, data is processed and transformed to align with the desired structure (schema) and requirements for analysis and reporting. This phase is where most data preparation, cleansing, and enrichment tasks occur. Actions taken in the Transform phase include:
 
-1. Filtering : Reducing the size of the dataset (rows, columns, content, etc)
-1. Join/Merge : Combining datasets from 2 different &/or similar forms/tables/services
-1. Modification : Modifying values,schema of existing dataset
-1. Aggregation : Grouping values on specific conditions
-1. Looping: Running some action over a dataset in a repeated fashion
+1. Cleansing: Identify and rectify any errors, inconsistencies, or missing data values in the dataset.
+1. Filtering: Reducing the size of the dataset (rows, columns, content, etc).
+1. Join/Merge: Combining datasets from 2 different &/or similar forms/tables/services.
+1. Modification: Modifying values,schema of existing dataset.
+1. Aggregation: Grouping values on specific conditions.
+1. Validation: Validate the transformed data to ensure its accuracy and integrity.
+1. Looping: Running some action over a dataset in a repeated fashion.
 
-### Unit of Transformation
+# Unit of Transformation
 
-When it comes to data transformation there is one more consideration you should keep in mind. How are you going to transform or process data.  There are two general ways to process data:
+When it comes to data transformation you also need to consider how you are going to execute your data processing.  There are two general ways to process data:
 
-1. **Batch processing**, in which multiple data records are collected and stored before being processed together in a single operation.This technique involves grouping together transactions or data records and handling them as one rather than individually.
+1. Batch Processing
+1. Stream Processing
+
+## Batch Processing
+
+Batch processing involves processing a large volume of data in predefined, fixed-size batches. Data is collected over a period, and then the entire batch is processed at once. This approach is well-suited for scenarios where data can be collected, stored, and processed in intervals, rather than requiring real-time analysis. Key characteristics of batch processing include:
+
+* **Latency**: Batch processing introduces higher latency, as data is processed in chunks at specified intervals (e.g., hourly, daily, or weekly).
+* **Scalability**: Batch processing can be highly scalable since data can be processed in parallel across multiple nodes or systems.
+* **Complexity**: Batch processing is often easier to implement and manage compared to stream processing, as it doesn't require dealing with real-time data and potential out-of-order processing challenges.
 
 ![BatchProcessing](/images/BatchProcessing.png)
 
-Preferred when latency is acceptable but compute needs to be saved for large-scale operations to be performed efficiently.
+Batch processing is commonly used for processes which do not require real-time insights or analytics. It is preferred when some latency for data processing is acceptable, but large amounts of compute are needed to complete the transformations.
 
-2 **Stream processing**, in which a source of data is constantly monitored and processed in real time as new data events occur.This is also called as Real-Time processing where data will be acted on almost immediately, within milliseconds.
+## Stream Processing
+
+Stream processing, on the other hand, involves handling data in real-time as it arrives, because the source of data is constantly monitored and processed as new events occur. Data is processed as individual records or small chunks (micro-batch) rather than being accumulated into fixed-size batches. Stream processing is ideal for use cases that require real-time analysis and quick responses to data events. Key characteristics of stream processing include:
+
+* **Low Latency**: Stream processing provides low latency as data is processed immediately upon arrival, allowing for real-time or near-real-time analysis.
+* **Scalability**: Stream processing systems need to handle and process data in real-time, which often requires high scalability to keep up with the data volume and velocity.
+* **Complexity**: Stream processing can be more complex than batch processing, as it requires handling real-time data streams, dealing with out-of-order events, data islands and managing data windowing for time-based analysis.
 
 ![StreamProcessing](/images/StreamProcessing.gif)
 
-Preferred when latency is hardly acceptable and computation can be performed constantly to accommodate newer data
+Stream processing is used in applications like real-time monitoring, fraud detection, recommendation systems, IoT data processing, and reacting to time-sensitive events. It is preferred when near-zero latency is required for data processing. Often, stream processing can be more expensive than batch processing.
 
-With ETL you can remove/redacting sensitive information before storing
-With ELT are preferred where data in its raw form (Structured,Un-structured,Semi-structured) maybe required to be referenced later.
+## Hybrid Approaches
+
+In some cases, hybrid approaches combinine batch and stream processing are used. For example, some systems first process data in real-time streams to get immediate insights and then consolidate or summarize the processed data into batches for historical analysis. This is called a [Lambda Architecture](https://learn.microsoft.com/en-us/azure/architecture/data-guide/big-data/#lambda-architecture).
+
+## Choice
+
+Choosing between batch and stream processing depends on the specific use case, data velocity, and requirements for real-time analysis. Both approaches have their strengths and weaknesses, and understanding the nature of the data and the needs of the application is crucial in making the right decision.
 
 ## Additional Information
 
