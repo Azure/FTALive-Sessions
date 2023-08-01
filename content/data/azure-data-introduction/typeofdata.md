@@ -14,7 +14,7 @@ Semi-structured data is data that has some structure, but which allows for some 
 
 - JSON (JavaScript Object Notation)
 - XML (Extensible Markup Language)
-- CSV & TSV (Command and Tab separated values)
+- CSV & TSV (Comma and Tab separated values)
 - YAML (Yet Another Markup Language or YAML Ain't Markup Language)
 
 ### Optimized file formats
