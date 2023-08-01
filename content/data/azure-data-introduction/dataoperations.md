@@ -1,30 +1,30 @@
-# Operations performed on Data
+# Operations Performed on Data
 
 [prev](./typeofdata.md) | [home](./introduction.md)  | [next](./splitofdata1.md)
 
-# Methodologies
+## Methodologies
 
 There are 2 major categories of data transformation processes (methodologies) you need to consider when planning a Data Analytics platform:
 
 ### **E T L** (Extract, Transform, Load)
 
-When using **E T L**, you can remove/redact sensitive information before storing the data. So you may use this method when you have sensitive data in source systems which you do not want in your Data Lake.
+When using **E T L**, transformations happen inflight between the source and destination. This has several advantages, including the ability to remove/redact sensitive data before storing. Additionally, it's efficient from a storage perspective as you only store the required information.
 
 ### **E L T** (Extract, Load, Transform)
 
-When using **E L T**, you load data into your Data Lake as it is in the source system. You may use this when you have a need to reference the data in its raw form (Structured, Un-structured,Semi-structured) at a later point in time, or where the system does not provide a change feed for you to consume.
+When using **E L T**, you load data into your Data Lake as it is in the source system. You may use this when you have a need to reference the data in its raw form (Structured, Un-structured,Semi-structured) at a later point in time, or where the system does not provide a change feed for you to consume. An advantage of ELT is that by storing the data *before* transforming it, you can apply parallel compute engines (e.g. Spark) to transform large volumes of data concurrently.
 
-## Data *Extraction*
+## *Extract*
 
 ![DataExtraction](/images/ExtractionIcon.png)</br>
 In the Extraction phase, you gather and extract dataset(s) from similar or different sources and bring that data to a common platform, where you can (in future) manipulate and aggregate these datasets without affecting the original data.
 
-## Data *Loading*
+## *Load*
 
 ![DataConsolidation](/images/ConsolidationIcon.png)</br>
 In the Loading phase, the extracted data is loaded into the data warehouse or the target destination. This phase focuses on efficiently transferring and organizing the data for further processing.
 
-## Data *Transformation*
+## *Transform*
 
 ![DataTransformation](/images/TransformationIcon.png)</br>
 In the Transformation phase, data is processed and transformed to align with the desired structure (schema) and requirements for analysis and reporting. This phase is where most data preparation, cleansing, and enrichment tasks occur. Actions taken in the Transform phase include:
@@ -36,11 +36,11 @@ In the Transformation phase, data is processed and transformed to align with the
 1. Aggregation: Grouping values on specific conditions.
 1. Validation: Validate the transformed data to ensure its accuracy and integrity.
 1. Looping: Running some action over a dataset in a repeated fashion.
+</br>
+</br>
 
 # Unit of Transformation
-
-When it comes to data transformation you also need to consider how you are going to execute your data processing.  There are two general ways to process data:
-
+Data transformations are generally performed in two distinct methods:
 1. Batch Processing
 1. Stream Processing
 
@@ -58,7 +58,7 @@ Batch processing is commonly used for processes which do not require real-time i
 
 ## Stream Processing
 
-Stream processing, on the other hand, involves handling data in real-time as it arrives, because the source of data is constantly monitored and processed as new events occur. Data is processed as individual records or small chunks (micro-batch) rather than being accumulated into fixed-size batches. Stream processing is ideal for use cases that require real-time analysis and quick responses to data events. Key characteristics of stream processing include:
+Stream processing involves handling data in real-time as it arrives, because the source of data is constantly monitored and processed as new events occur. Data is processed as individual records or small chunks (micro-batch) rather than being accumulated into fixed-size batches. Stream processing is ideal for use cases that require real-time analysis and quick responses to data events. Key characteristics of stream processing include:
 
 * **Low Latency**: Stream processing provides low latency as data is processed immediately upon arrival, allowing for real-time or near-real-time analysis.
 * **Scalability**: Stream processing systems need to handle and process data in real-time, which often requires high scalability to keep up with the data volume and velocity.
@@ -70,7 +70,7 @@ Stream processing is used in applications like real-time monitoring, fraud detec
 
 ## Hybrid Approaches
 
-In some cases, hybrid approaches combinine batch and stream processing are used. For example, some systems first process data in real-time streams to get immediate insights and then consolidate or summarize the processed data into batches for historical analysis. This is called a [Lambda Architecture](https://learn.microsoft.com/en-us/azure/architecture/data-guide/big-data/#lambda-architecture).
+In some cases, a hybrid approach combining both batch and stream processing are used. For example, some systems first process data in real-time streams to get immediate insights and then consolidate or summarize the processed data into batches for historical analysis. This is called the [Lambda Architecture](https://learn.microsoft.com/en-us/azure/architecture/data-guide/big-data/#lambda-architecture).
 
 ## Choice
 
