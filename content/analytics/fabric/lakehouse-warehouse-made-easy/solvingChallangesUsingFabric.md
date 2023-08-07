@@ -58,13 +58,19 @@ OneLake tragets to maximize the utility derived from a single copy of data, elim
 
 ## [DirectLake](https://learn.microsoft.com/en-us/power-bi/enterprise/directlake-overview) - New Storage Mode in Power BI
 
+The objective of DirectLake mode is to address the limitations found in both Directquery and Import modes, while also integrating the benefits of each of these modes.
 
 Storage Mode| Pros| Cons
 ---------|----------|---------
  Direct Query | Real Time Data, No limitation in Data size, No overhead in Data Refresh | Lower in Performance, Limited DAX support, Less data source compatibility
  Import Mode | Faster in performance, Additional Data Tranformation, Offline access, no depedency with the source system once the data is loaded | Data Staleness, Very large volume of data, ETL overhead during Data Refresh, Data copy is required.
 
+![DirectLake](https://learn.microsoft.com/en-us/power-bi/enterprise/media/directlake-overview/directlake-diagram.png)
 
+- Direct Lake is a fast-path to load the data from the lake straight into the Power BI engine, ready for analysis. 
+- By directly fetching data from OneLake, Direct Lake mode removes the need for data import. 
+- Unlike DirectQuery, it doesn't involve translation to different query languages or execution on other databases, leading to performance comparable to import mode. 
+- This approach enables real-time updates from the data source without the requirement for explicit imports, blending the benefits of DirectQuery and import modes while evading their drawbacks. Direct Lake mode is well-suited for analyzing extensive datasets and data sources that undergo frequent updates.
 
 <!-- Standardise on Delta Parquet. - Done
 Accessible to all engines within Fabric - Done
