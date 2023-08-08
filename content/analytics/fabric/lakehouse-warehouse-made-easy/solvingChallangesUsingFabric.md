@@ -32,10 +32,14 @@
 
 ## OneLake, OneCopy, OneSecurity
 
-### OneLake
+### [OneLake](https://learn.microsoft.com/en-us/fabric/onelake/onelake-overview)
 OneLake is a single, unified, logical data lake for the whole organization. Like OneDrive, OneLake comes automatically with every Microsoft Fabric tenant and is designed to be the single place for all your analytics data.
 
+![OneLake](https://learn.microsoft.com/en-us/fabric/onelake/media/onelake-overview/use-same-copy-of-data.png)
+
 - Each tenant is allocated a singular Azure Data Lake known as OneLake, which is provisioned automatically upon the addition of a new Fabric tenant. Within each tenant, numerous workspaces can be established, facilitating workload separation and department-specific access control across the organization.
+- The data in OneLake is automatically indexed for discovery, MIP labels, lineage, PII scans, sharing, governance and compliance
+
 - **[Shortcuts](https://learn.microsoft.com/en-us/fabric/onelake/onelake-shortcuts)** Shortcuts allow organization to easily share data between users and applications without having to move and duplicate information unnecessarily.
 - The data of all Fabric elements such as data warehouses and lakehouses is automatically stored in OneLake using the **delta parquet** format.
 
@@ -70,13 +74,38 @@ Storage Mode| Pros| Cons
 - Direct Lake is a fast-path to load the data from the lake straight into the Power BI engine, ready for analysis. 
 - By directly fetching data from OneLake, Direct Lake mode removes the need for data import. 
 - Unlike DirectQuery, it doesn't involve translation to different query languages or execution on other databases, leading to performance comparable to import mode. 
-- This approach enables real-time updates from the data source without the requirement for explicit imports, blending the benefits of DirectQuery and import modes while evading their drawbacks. Direct Lake mode is well-suited for analyzing extensive datasets and data sources that undergo frequent updates.
+- This approach enables real-time updates from the data source without the requirement for explicit imports, blending the benefits of DirectQuery and import modes while removing their drawbacks. 
 
-<!-- Standardise on Delta Parquet. - Done
-Accessible to all engines within Fabric - Done
-Accessible by external Spark engines  - Done-->
-<!-- Power BI Direct Lake mode - 
-Connect to Azure (ADLSv2) and other cloud storage!
+
+# Demo
+
+## Data ingestion into Lakehouse
+
+### What is Lakehouse?
+
+Lakehouses are data architectures that allow organizations to store and manage structured and unstructured data in a single location, using various tools and frameworks to process and analyze that data. This can include SQL-based queries and analytics, as well as machine learning and other advanced analytics techniques.
+- **Key Capabilities**
+  - Lakehouse table provides ACID transactions, time travel and schema evolution.
+  - 
+
+### How many different ways we can upload the data into Lakehouse?
+
+ - **[Data Engineering with Spark](https://learn.microsoft.com/en-us/fabric/data-engineering/data-engineering-overview)**
+ - **[Data Pipelines](https://learn.microsoft.com/en-us/fabric/data-factory/data-factory-overview)**
+ - **[Dataflow](https://learn.microsoft.com/en-us/fabric/data-factory/create-first-dataflow-gen2)**
+
+### Which option to be used when?
+
+[Decision Guide ](https://learn.microsoft.com/en-us/fabric/get-started/decision-guide-pipeline-dataflow-spark)
+
+
+### **Data Engineering with Spark**
+![Data Engineering Home Page](https://learn.microsoft.com/en-us/fabric/data-engineering/media/data-engineering-overview/data-engineering-artifacts.png)
+- Data engineering in Microsoft Fabric enables users to design, build, and maintain infrastructures and systems that enable their organizations to collect, store, process, and analyze large volumes of data.
+- **Key Capabilities**
+  - **[Autotune](https://learn.microsoft.com/en-us/fabric/data-engineering/autotune?tabs=sparksql)** automatically tunes Apache Spark configurations to minimize workload execution time and optimizes workloads. 
+
+<!-- 
 Demo: Ingest data into Delta Tables. Present in Power BI via Direct Lake.
 
 Still need to decide on lakehouse or warehouse, but, not ‘locked in’. All engines can access the delta tables.
