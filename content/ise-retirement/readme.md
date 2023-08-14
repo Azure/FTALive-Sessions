@@ -20,6 +20,8 @@ Please give us your feedback at https://aka.ms/ftalive-feedback
 1. [Understanding the Migration Process](./migration-process.md)
 1. [Using the Logic Apps Standard Extension for Visual Studio Code](./vs-code-extension.md)
 1. [Run, test, and debug your migrated Logic App locally](./debug-local.md)
+1. [Migrate an Integration Account from ISE to another SKU](./migrate-integration-account.md)
+1. [Connect an Integration Account to a Workflow](./connect-integration-account-to-workflow.md)
 1. [Deploy your Migrated Logic App](./deploy.md)
 1. [Recap](./recap.md)
 
