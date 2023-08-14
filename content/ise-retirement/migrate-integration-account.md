@@ -1,6 +1,6 @@
 # Migrate an Integration Account from ISE to another SKU
 
-#### [home](./readme.md) | [prev](./debug-local.md) | [next](./migrate-integration-account.md)
+#### [home](./readme.md) | [prev](./debug-local.md) | [next](./connect-integration-account-to-workflow.md)
 
 When Integration Service Environments are retired on August 31, 2024 any integration accounts associated with an ISE instance will also be removed. Prior to that date you must migrate any integration account associated with an ISE instance to another integration account SKU.
 
