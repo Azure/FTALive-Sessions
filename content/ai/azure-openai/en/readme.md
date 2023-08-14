@@ -157,6 +157,16 @@ There are three main approaches for in-context learning: Few-shot, one-shot and 
 
 # <a name="3-openai_deep"></a>3. Azure OpenAI Deep Dive
 
+## Provisioned Throughput
+An Azure OpenAI Service feature that lets customers reserve model processing capacity for running high-volume or latency-sensitive workloads.
+
+* Consistent latency and throughput with consistent characteristics such as prompt size, completion size, and number of concurrent API requests.
+* Capacity defined in units called "Provisioned Throughput Units" (PTUs), that are purchased on a month-to-month term commitment.
+* Customers use PTUs to create provisioned deployments of GPT-35-turbo or GPT-4 models during the commitment term.
+* High throughput workloads will likely see cost savings vs token-based consumption.
+
+<img src='./images/ptu.png' width=500 />
+
 ## Prompt Design
 
 Most of the work in using OpenAI is in the prompt design.  The prompt is the instruction to the model on what to generate.  The prompt is also the way to control the output of the model, providing guiance to the model as to what is acceptable and what is not acceptable.  
