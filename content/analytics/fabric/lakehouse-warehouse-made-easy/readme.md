@@ -1,7 +1,5 @@
 # Welcome to FastTrack for Azure Live </br> Microsoft Fabric - Lakehouse and Warehouse made easy
 
-EVERYTHING ELSE BEYOND HERE NEEDS AN UPDATE
----
 ## We will start 1-2 minutes after the scheduled time to accommodate those still connecting
 
 This call will not be recorded due to the wide audience and to encourage questions.
@@ -9,7 +7,7 @@ This call will not be recorded due to the wide audience and to encourage questio
 **Questions?** Feel free to type them in the chat window at any time. Note that questions you post will be public.
 
 **Slideless** No PowerPoint, we promise!
-As we update this content ([aka.ms/ftalive-mdw](aka.ms/ftalive-mdw)) you will get the changes straight away.
+As we update this content ([aka.ms/ftalive/fabric](aka.ms/ftalive/fabric/lhwh)) you will get the changes straight away.
 
 **Feedback** Please give us your feedback on https://aka.ms/ftalive-feedback
 <!--**Feedback** Please give us your feedback on https://aka.ms/ftalearnlive-->
@@ -22,7 +20,7 @@ You will need:
 ## Who we are
 **FastTrack for Azure (FTA) ([aka.ms/fta](aka.ms/fta))** <br/>
 <!--Presenter: Ben Harding ([linkedin.com/in/ben-harding-fta](linkedin.com/in/ben-harding-fta)) <br/>
-Presenter: Nitin Mehta ([linkedin.com/in/nitinmht](linkedin.com/in/nitinmht)) <br/>
+Presenter: Samarendra Panda ([htlinkedin.com/in/samarendra-panda/](linkedin.com/in/samarendra-panda/)) <br/>
 Moderator: Miho Yamamoto ([linkedin.com/in/mihoyamamoto](linkedin.com/in/mihoyamamoto))<br/>
 Moderator: Osamu Hirayama ([linkedin.com/in/osamuhir](linkedin.com/in/osamuhir))<br/>
 Moderator: Ryan CrawCour ([linkedin.com/in/ryancrawcour](linkedin.com/in/ryancrawcour))<br/>-->
@@ -33,7 +31,5 @@ Link to the Collection: https://aka.ms/ftalive-mdw-collection
 
 ## Agenda
 1. [Introduction](./introduction.md)
-./currentchallenges.md
-./introductiontofabric.md
-
-One page per demo/section 
+1. [Current Challenges creating MDWs](./currentchallenges.md)
+1. [Welcome to Microsoft Fabric](./introductiontofabric.md)
