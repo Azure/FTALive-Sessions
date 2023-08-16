@@ -1,4 +1,4 @@
-# Current Challenges building a MDW
+# Current Challenges building a Modern Data Warehouse
 
 #### [prev](./introduction.md) | [home](./readme.md)  | [next](./currentchallenges.md)
 
@@ -36,7 +36,7 @@ Many considerations for choosing SQL vs Spark.
   * Engine generally supports full ACID properties *across tables* or even other databases
   * Skillset available within the market
 * Spark
-  * Transformations are written in Python, saved within notebooks.
+  * Transformations are written in Python, Spark SQL, Scala, R or Java. saved within notebooks.
   * Compute occurs inside scale-out Apache Spark engine.
   * Separation of compute and storage
   * Flexibility to still write SQL
@@ -52,11 +52,10 @@ Data Warehouses are complex and often expensive and slow to implement. Dedicated
 * They have copped some flak, but are still needed! (we just have *more* options now)
 * "Not cool". Wrong!
 * Properly designed and built DW will out perform everything
-* One does not simply build a DW..
-
 
 #### Demo: Things to consider before deploying Dedicated SQL Pool
-Sub-title: 
+</br>
+Or.... </br>
 ![OneDoesNotSimpleCreateTable](./Images/OneDoesNotSimplyCreateTable.jpg)
 <!-- Purpose of this demo is to talk through some of the knowledge a customer must have before creating their first table. 
 Prep: Have a pre-created Dedicated SQL Pool created-->

@@ -6,7 +6,7 @@ Microsoft Fabric brings together new and existing components from Power BI, Azur
 <!-- Don't ask ChatGPT as it's too new for it!-->
 </br>
 
-![Fabric Diagram](https://learn.microsoft.com/en-us/fabric/get-started/media/microsoft-fabric-overview/saas-foundation.png 'Fabric Services')
+![Fabric Diagram](https://learn.microsoft.com/en-us/fabric/get-started/media/microsoft-fabric-overview/saas-foundation.png 'Fabric Services') </br>
 (Image from: https://learn.microsoft.com/en-us/fabric/get-started/microsoft-fabric-overview)
 </br>
 

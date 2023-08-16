@@ -46,18 +46,21 @@ Specific call outs:
   - [Copy Activity, Dataflow or Spark Decision Guide](https://learn.microsoft.com/en-us/fabric/get-started/decision-guide-pipeline-dataflow-spark)
   
  
-### Blogs
+### Blogs (Not ann exhaustive list!)
+<!-- Want to highlight FTA blogs and *good* MVP blogs-->
 * Azure Databricks and Microsoft Fabric Integration: https://learn-it-all.medium.com/azure-databricks-and-microsoft-fabric-integration-1d0d6baa173e
 * Exploring streaming patterns: https://learn-it-all.medium.com/exploring-various-lakehouse-streaming-patterns-within-microsoft-fabric-c247f09f5d89
 * How to implement a Data Lake using Microsoft Fabric: https://learn-it-all.medium.com/data-lake-implementation-using-microsoft-fabric-ccea72a8d162
 * Migrating Azure Synapse Dedicated SQL to Microsoft Fabric https://debruyn.dev/2023/migrating-azure-synapse-dedicated-sql-to-microsoft-fabric/
-
+* Efficient Data Partitioning with Microsoft Fabric: Best Practices and Implementation Guide https://microsoftapc-my.sharepoint.com/:p:/g/personal/behardin_microsoft_com1/EVbNOy-6IztBj_MIHz5GogABE8PVk4Nv1No3zbV6MfOgaA?e=qoWrCj
+* Create Meta Data Driven Pipelines in Microsoft Fabric: https://techcommunity.microsoft.com/t5/fasttrack-for-azure/metadata-driven-pipelines-for-microsoft-fabric/ba-p/3891651
 
  
 ### Stay Up-to-date
 - Microsoft Fabric Blog: https://blog.fabric.microsoft.com/en-us/blog
+- YouTube Channel: https://www.youtube.com/@Tales-from-the-Field
 - YouTube Channel: https://www.youtube.com/@AzureSynapse
 - YouTube Channel: https://www.youtube.com/@AdvancingAnalytics
 - YouTube Channel: https://www.youtube.com/@GuyInACube/videos
 - YouTube Channel: https://www.youtube.com/@RADACAD
-- YouTube Channel: https://www.youtube.com/@Tales-from-the-Field
+

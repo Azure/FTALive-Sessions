@@ -33,3 +33,4 @@ Link to the Collection: https://aka.ms/ftalive-mdw-collection
 1. [Introduction](./introduction.md)
 1. [Current Challenges creating MDWs](./currentchallenges.md)
 1. [Welcome to Microsoft Fabric](./introductiontofabric.md)
+1. [How Fabric solves these challenges](./solvingChallangesUsingFabric.md)
