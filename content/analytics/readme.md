@@ -6,3 +6,4 @@ This table of contents links to the materials for the respective FTA Live sessio
 - [Azure PowerBI](./powerbi/readme.md)
 - [Azure Purview](./powerbi/readme.md)
 - [Azure Synapse](./synapse/readme.md)
+- [Microsoft Fabric](./Fabric/readme.md)
