@@ -1,6 +1,6 @@
 # Welcome to Microsoft Fabric (Public Preview)
 
-#### [prev](./currentchallenges.md) | [home](./readme.md)  | [next](./sam.md)
+#### [prev](./currentchallenges.md) | [home](./readme.md)  | [next](./solvingChallangesUsingFabric.md)
 
 Microsoft Fabric brings together new and existing components from Power BI, Azure Synapse, and Azure Data Factory into a single integrated environment. These components are then presented in various customized user experiences.
 <!-- Don't ask ChatGPT as it's too new for it!-->
@@ -21,4 +21,4 @@ Microsoft Fabric brings together new and existing components from Power BI, Azur
 </br>
 </br>
 
-**Demo:** Let's see Microsoft Fabric!
+<!--**Demo:** Let's see Microsoft Fabric! -->

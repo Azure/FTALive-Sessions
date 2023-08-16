@@ -1,6 +1,6 @@
 # Current Challenges building a Modern Data Warehouse
 
-#### [prev](./introduction.md) | [home](./readme.md)  | [next](./currentchallenges.md)
+#### [prev](./introduction.md) | [home](./readme.md)  | [next](./introductiontofabric.md)
 
 ## Current Landscape of building a MDW in Azure
 Building a MDW presents many challenges. Some of these challenges are intrinsic to ALL DWs such as Data Modelling, whereas others are technology based and can therefore be simplified, improved and/or solved. </br> </br>
@@ -54,11 +54,12 @@ Data Warehouses are complex and often expensive and slow to implement. Dedicated
 * Properly designed and built DW will out perform everything
 
 #### Demo: Things to consider before deploying Dedicated SQL Pool
-</br>
+
 Or.... </br>
 ![OneDoesNotSimpleCreateTable](./Images/OneDoesNotSimplyCreateTable.jpg)
 <!-- Purpose of this demo is to talk through some of the knowledge a customer must have before creating their first table. 
-Prep: Have a pre-created Dedicated SQL Pool created-->
+Prep: Have a pre-created Dedicated SQL Pool created--> 
+
 1. Engine choice: SQL Server, Azure SQL Hyperscale, Dedicated SQL Pool (standalone or Synapse). Many decision points ([see reference](https://learn.microsoft.com/en-us/azure/architecture/data-guide/relational-data/data-warehousing)), but let's choose Dedicated SQL Pool because that's where you build a DW, right?
 1. [Service Level / SKU choice](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/memory-concurrency-limits#service-levels) and [cost](https://azure.microsoft.com/en-us/pricing/details/synapse-analytics/)
 1. Looks & smells like SQL Server, but.. [MPP architecture](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/massively-parallel-processing-mpp-architecture#synapse-sql-architecture-components) and [Distributions](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-distribute)

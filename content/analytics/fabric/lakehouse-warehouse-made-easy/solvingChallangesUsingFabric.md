@@ -5,7 +5,6 @@
 
 - **all-in-one** analytics solution under one platform, all data services are seamlessly integrated.
   - Here are the services that Microsoft Fabric offers:
-
     - *Data Engineering*: Empowers data engineers with Spark for transformation and Lakehouse democratization. Integrates with Data Factory for scheduling.
     - *Data Factory*: Unites Power Query's simplicity with Azure's scale. 200+ connectors enable efficient data movement.
     - *Data Science*: Seamlessly deploys Azure Machine Learning models. Enriches data for predictive BI insights.
@@ -15,7 +14,7 @@
 
 - **Less management overhead**. Fabric allows creators to concentrate on producing their best work, freeing them from the need to integrate, manage, or understand the underlying infrastructure that supports the experience.
   
-- **Enterprise Capabilities are pre-provisioned as part of the teannt**
+- **Enterprise Capabilities are pre-provisioned as part of the tenant**
   - [Flexible Licensing](https://learn.microsoft.com/en-us/fabric/enterprise/licenses)
     - [Pause and Resume Capacity](https://learn.microsoft.com/en-us/fabric/enterprise/pause-resume)
     - [ability to resize the Capacities.](https://learn.microsoft.com/en-us/fabric/enterprise/scale-capacity)
@@ -56,13 +55,12 @@ OneLake targets to maximize the utility derived from a single copy of data, elim
   - workspace security (Roles: Admin, Members, Contributor, Viewer)
   - item security (Roles : Read, ReadAll, ReadData, Write)
   - object security. (Roles: GRANT/DENY on SQL objects)
-
 - [Sharing capabilities](https://learn.microsoft.com/en-us/fabric/get-started/share-items) :  We can share items to the internal user or to the external user from the same workspace.
-- Authetication (Azure AD credential pass through, Service Principal)
+- Authentication (Azure AD credential pass through, Service Principal)
 
 ## [DirectLake](https://learn.microsoft.com/en-us/power-bi/enterprise/directlake-overview) - New Storage Mode in Power BI
 
-The objective of DirectLake mode is to address the limitations found in both Directquery and Import modes, while also integrating the benefits of each of these modes.
+The objective of DirectLake mode is to address the limitations found in both Direct Query and Import modes, while also integrating the benefits of each of these modes.
 
 Storage Mode| Pros| Cons
 ---------|----------|---------
@@ -77,10 +75,8 @@ Storage Mode| Pros| Cons
 - This approach enables real-time updates from the data source without the requirement for explicit imports, blending the benefits of DirectQuery and import modes while removing their drawbacks.
 
 --------
---------
 
 ## What is Lakehouse?
-
 Lakehouse are data architectures that allow organizations to store and manage structured and unstructured data in a single location, using various tools and frameworks to process and analyze that data. This can include SQL-based queries and analytics, as well as machine learning and other advanced analytics techniques.
 
 - **Key Capabilities**
@@ -94,16 +90,13 @@ Lakehouse are data architectures that allow organizations to store and manage st
 - **[Dataflow](https://learn.microsoft.com/en-us/fabric/data-factory/create-first-dataflow-gen2)**
 
 ### Which option to be used when?
-
 [Decision Guide](https://learn.microsoft.com/en-us/fabric/get-started/decision-guide-pipeline-dataflow-spark)
 
 ### **Data Engineering with Spark**
-
 ![Data Engineering Home Page](https://learn.microsoft.com/en-us/fabric/data-engineering/media/data-engineering-overview/data-engineering-artifacts.png)
 Data engineering in Microsoft Fabric enables users to design, build, and maintain infrastructures and systems that enable their organizations to collect, store, process, and analyze large volumes of data.
 
 **Key Capabilities**
-
 - **[Autotune](https://learn.microsoft.com/en-us/fabric/data-engineering/autotune?tabs=sparksql)** automatically tunes Apache Spark configurations to minimize workload execution time and optimizes workloads. It basically uses the below property to adjust the performance.
   - *spark.sql.shuffle.partitions* - configures the number of partitions to use when shuffling data for joins or aggregations. Default is 200.
   - *spark.sql.autoBroadcastJoinThreshold* - configures the maximum size in bytes for a table that will be broadcasted to all worker nodes when performing a join. Default is 10 MB.
@@ -116,7 +109,7 @@ Data engineering in Microsoft Fabric enables users to design, build, and maintai
 
 Data Factory capabilities in Microsoft Fabric.
 
-### Demo 1.1 : Data Ingestion in Lakehouse using Data Engineering Noteebook
+### Demo 1.1 : Data Ingestion in Lakehouse using Data Engineering Notebook
 
 - Source: [TpcH data](https://www.tpc.org/TPC_Documents_Current_Versions/download_programs/tools-download-request5.asp?bm_type=TPC-H&bm_vers=3.0.1&mode=CURRENT-ONLY)
 - Destination: Lakehouse
@@ -137,21 +130,19 @@ Data Factory capabilities in Microsoft Fabric.
 
 Data warehousing workloads benefit from the rich capabilities of the ***SQL engine over an open data format***, enabling customers to focus on data preparation, analysis and reporting over a single copy of their data stored in their Microsoft OneLake.
 
-### How many different ways we can upload the data into Datawarehouse?
+### How many different ways we can upload the data into Data Warehouse?
 
 - **[COPY INTO](https://learn.microsoft.com/en-us/sql/t-sql/statements/copy-into-transact-sql?view=fabric&preserve-view=true) / [CTAS](https://learn.microsoft.com/en-us/fabric/data-warehouse/ingest-data-tsql#creating-a-new-table-with-the-result-of-a-query-by-using-create-table-as-select-ctas) T-SQL command**- Code rich data ingestion operation for the highest data ingestion throughput possible.
 - Data pipeline - Low code or no code approach for moving the data.
 - Dataflow - code free approach including some custom transformations. 
 
-
 ### Key Capabilities
-
 - Schema support.
 - [Multi-table transactions support](https://learn.microsoft.com/en-us/fabric/data-warehouse/transactions) - For example, we can commit inserts to multiples tables, or, none of the tables if an error arises.
 - [cross database queries are possible](https://learn.microsoft.com/en-us/fabric/data-warehouse/query-warehouse#write-a-cross-database-query).
 - [Clone table is supported ](https://learn.microsoft.com/en-us/fabric/data-warehouse/clone-table) - A zero-copy clone creates a replica of the table by copying the metadata, while still referencing the same data files in OneLake. 
 
-[**Limitations in Datawarehouse**](https://learn.microsoft.com/en-us/fabric/data-warehouse/tables#limitations)
+[**Limitations in Data Warehouse**](https://learn.microsoft.com/en-us/fabric/data-warehouse/tables#limitations)
 
 <!-- 
 Demo: Ingest data into Delta Tables. Present in Power BI via Direct Lake.
