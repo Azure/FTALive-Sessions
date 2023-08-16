@@ -4,7 +4,7 @@
 ## SaaS Foundation
 
 - **all-in-one** analytics solution under one platform, all data services are seamlessly integrated.
-  - Here are the services that Microsoft Fabric offers:
+  - Services within Microsoft Fabric:
     - *Data Engineering*: Empowers data engineers with Spark for transformation and Lakehouse democratization. Integrates with Data Factory for scheduling.
     - *Data Factory*: Unites Power Query's simplicity with Azure's scale. 200+ connectors enable efficient data movement.
     - *Data Science*: Seamlessly deploys Azure Machine Learning models. Enriches data for predictive BI insights.
@@ -13,22 +13,21 @@
     - *Power BI*: Leading BI platform for intuitive Fabric data access.
 
 - **Less management overhead**. Fabric allows creators to concentrate on producing their best work, freeing them from the need to integrate, manage, or understand the underlying infrastructure that supports the experience.
-  
+
 - **Enterprise Capabilities are pre-provisioned as part of the tenant**
   - [Flexible Licensing](https://learn.microsoft.com/en-us/fabric/enterprise/licenses)
     - [Pause and Resume Capacity](https://learn.microsoft.com/en-us/fabric/enterprise/pause-resume)
     - [ability to resize the Capacities.](https://learn.microsoft.com/en-us/fabric/enterprise/scale-capacity)
-  - Inbuilt Monitoring App [[Microsoft Fabric Capacity metrics app](https://learn.microsoft.com/en-us/fabric/enterprise/metrics-app-install?tabs=1st) ]
+  - Inbuilt Monitoring App [[Microsoft Fabric Capacity metrics app](https://learn.microsoft.com/en-us/fabric/enterprise/metrics-app-install?tabs=1st)]
 
-- **Data Governance**
-  Here are some inbuilt Data Governance capabilities that are provided in Microsoft Fabric.
+- **Data Governance** </br>
+ Data Governance capabilities that are provided in Microsoft Fabric:
   - [Information Protection](https://learn.microsoft.com/en-us/fabric/governance/information-protection)
   - [Item Endorsement](https://learn.microsoft.com/en-us/fabric/get-started/endorsement-promote-certify#promote-items) (Promotion, Certification)
   - [Lineage](https://learn.microsoft.com/en-us/fabric/governance/lineage)
   - [Impact Analysis](https://learn.microsoft.com/en-us/fabric/governance/impact-analysis) on the items
   
 ## OneLake, OneCopy, OneSecurity
-
 ### [OneLake](https://learn.microsoft.com/en-us/fabric/onelake/onelake-overview)
 
 OneLake is a single, unified, logical data lake for the whole organization. Like OneDrive, OneLake comes automatically with every Microsoft Fabric tenant and is designed to be the single place for all your analytics data.
@@ -74,7 +73,7 @@ Storage Mode| Pros| Cons
 - Unlike DirectQuery, it doesn't involve translation to different query languages or execution on other databases, leading to performance comparable to import mode.
 - This approach enables real-time updates from the data source without the requirement for explicit imports, blending the benefits of DirectQuery and import modes while removing their drawbacks.
 
---------
+
 
 ## What is Lakehouse?
 Lakehouse are data architectures that allow organizations to store and manage structured and unstructured data in a single location, using various tools and frameworks to process and analyze that data. This can include SQL-based queries and analytics, as well as machine learning and other advanced analytics techniques.
@@ -84,7 +83,6 @@ Lakehouse are data architectures that allow organizations to store and manage st
   - These Lakehouse tables can be interacted with via pyspark in notebooks for both reading and writing, as well as through the SQL endpoint for read-only operations.
   
 ### How many different ways we can upload the data into Lakehouse?
-
 - **[Data Engineering with Spark](https://learn.microsoft.com/en-us/fabric/data-engineering/data-engineering-overview)**
 - **[Data Pipelines](https://learn.microsoft.com/en-us/fabric/data-factory/data-factory-overview)**
 - **[Dataflow](https://learn.microsoft.com/en-us/fabric/data-factory/create-first-dataflow-gen2)**
@@ -126,7 +124,7 @@ Data Factory capabilities in Microsoft Fabric.
 
 ### Demo 1.4 : Create PBI dataset/model and PBI Report using DirectLake mode
 
-## DataWarehouse
+## Data Warehouse
 
 Data warehousing workloads benefit from the rich capabilities of the ***SQL engine over an open data format***, enabling customers to focus on data preparation, analysis and reporting over a single copy of their data stored in their Microsoft OneLake.
 

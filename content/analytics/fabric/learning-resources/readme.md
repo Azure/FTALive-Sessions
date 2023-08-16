@@ -46,7 +46,7 @@ Specific call outs:
   - [Copy Activity, Dataflow or Spark Decision Guide](https://learn.microsoft.com/en-us/fabric/get-started/decision-guide-pipeline-dataflow-spark)
   
  
-### Blogs (Not ann exhaustive list!)
+### Blogs (Not an exhaustive list!)
 <!-- Want to highlight FTA blogs and *good* MVP blogs-->
 * Azure Databricks and Microsoft Fabric Integration: https://learn-it-all.medium.com/azure-databricks-and-microsoft-fabric-integration-1d0d6baa173e
 * Exploring streaming patterns: https://learn-it-all.medium.com/exploring-various-lakehouse-streaming-patterns-within-microsoft-fabric-c247f09f5d89

@@ -20,3 +20,6 @@ This repository contains more information than can be covered within the live se
   * Consistency: Database must be consistent before and after the transaction.
   * Isolation: Multiple transactions occur independently without interference.
   * Durability: The changes of a successful transaction are persisted even if a system failure occurs.
+* MPP: Massively Parallel Processing
+* SMP: Symmetric Multi-Processing
+*  
