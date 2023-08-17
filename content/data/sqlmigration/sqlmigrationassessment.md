@@ -94,9 +94,6 @@ This session includes live demo, please refer the following links get all demo g
  [Get SKU recommendations for Azure SQL migrations](https://techcommunity.microsoft.com/t5/azure-sql-blog/get-azure-recommendation-in-azure-sql-migration-extension/ba-p/3201479)
 
 
-
-
-
 **SSMA**
 SQL Server Migration Assistant (SSMA) is a suite of five tools designed to automate database migration to SQL Server/Azure SQL platform from Microsoft Access, DB2, MySQL, Oracle, and SAP ASE.
 

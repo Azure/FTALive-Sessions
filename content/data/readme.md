@@ -9,3 +9,4 @@ This table of contents links to the materials for the respective FTA Live sessio
 - [SQL Migration](./sqlmigration/readme.md)
 - [Modern Data Warehouse](./moderndatawarehouse/readme.md)
 - [Synapse Database Templates](./database-templates/readme.md)
+- [Introduction to Azure Data](./azure-data-introduction/readme.md)

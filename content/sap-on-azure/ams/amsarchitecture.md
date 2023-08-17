@@ -1,4 +1,4 @@
-# AMS 2.0 Architecture (Public Preview)
+# Azure Monitor for SAP solutions Architecture
 
 #### [prev](./businesscase.md) | [home](./readme.md)  | [next](./features.md)
 
