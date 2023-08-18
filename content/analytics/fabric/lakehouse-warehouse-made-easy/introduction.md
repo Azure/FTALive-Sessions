@@ -22,4 +22,3 @@ This repository contains more information than can be covered within the live se
   * Durability: The changes of a successful transaction are persisted even if a system failure occurs.
 * MPP: Massively Parallel Processing
 * SMP: Symmetric Multi-Processing
-*  
