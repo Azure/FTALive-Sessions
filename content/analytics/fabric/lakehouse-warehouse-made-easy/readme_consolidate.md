@@ -126,6 +126,8 @@ OneLake targets to maximize the utility derived from a single copy of data, elim
 
 --------------------------------------------------------------------
 --------------------------------------------------------------------
+
+
 ## Challenge: Spark or SQL - which one to use?
 When building a MDW on Azure, many organisations must make a decision to choose between performing transformations in SQL or Spark. This can have flow on effects in how the data is eventually stored. </br>
 Many considerations for choosing SQL vs Spark.
@@ -209,7 +211,8 @@ Data warehousing workloads benefit from the rich capabilities of the ***SQL engi
 
 
 
-
+--------------------------------------------------------------------
+--------------------------------------------------------------------
 ## Challenge: Import Mode or DirectQuery - which one to be used?
 
 
