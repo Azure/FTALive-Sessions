@@ -1,6 +1,6 @@
 # Deploy Your Migrated Workflows to Azure
 
-#### [home](./readme.md) | [prev](./debug-local.md) | [next](./recap.md)
+#### [home](./readme.md) | [prev](./connect-integration-account-to-workflow.md) | [next](./recap.md)
 
 Once you have completed testing and debugging your migrated workflows locally you can deploy them to Azure using Visual Studio Code or a CI / CD tool such as Azure DevOps.
 
