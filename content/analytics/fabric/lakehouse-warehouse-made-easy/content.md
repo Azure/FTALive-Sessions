@@ -137,8 +137,14 @@ Some considerations:
   * Separation of compute and storage.
   * Flexibility to still write SQL.
   * Emerging skill-set within the market (but improving)
+</br>
+</br>
 
-## Solution: What if we could combine both the Spark and SQL engines together?
+Data Warehouses are complex and often expensive and slow to implement. **Dedicated SQL Pools** (formerly SQL DW) is Microsoft's MPP SQL architecture and it can do things other engines can only dream of... But.
+
+![OneDoesNotSimpleCreateTable](./Images/OneDoesNotSimplyCreateTable.jpg)
+
+## Solution: What if we could utilise both the Spark and SQL engines? What if we could share the same data formats between them? What if it was easier to create a Warehouse?
 
 ### What is Lakehouse?
 Lakehouses are data architectures that allow organisations to store and manage structured and unstructured data in a single location, using various tools and frameworks to process and analyze that data. This can include SQL-based queries and analytics, as well as machine learning and other advanced analytics techniques.

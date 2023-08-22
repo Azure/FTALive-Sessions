@@ -23,14 +23,11 @@ You will need:
 Presenter: Samarendra Panda ([htlinkedin.com/in/samarendra-panda/](linkedin.com/in/samarendra-panda/)) <br/>
 Moderator: Miho Yamamoto ([linkedin.com/in/mihoyamamoto](linkedin.com/in/mihoyamamoto))<br/>
 Moderator: Osamu Hirayama ([linkedin.com/in/osamuhir](linkedin.com/in/osamuhir))<br/>
-Moderator: Ryan CrawCour ([linkedin.com/in/ryancrawcour](linkedin.com/in/ryancrawcour))<br/>-->
+-->
 
 ## Microsoft Learn
 This content was designed in conjunction with a Microsoft Learn Collection, which you can access for self-paced learning after this session. <br/>
 Link to the Collection: https://aka.ms/ftalive-mdw-collection
 
 ## Agenda
-1. [Introduction](./introduction.md)
-1. [Current Challenges creating MDWs](./currentchallenges.md)
-1. [Welcome to Microsoft Fabric](./introductiontofabric.md)
-1. [How Fabric solves these challenges](./solvingChallangesUsingFabric.md)
+1. [Lakehouse & Warehouse made easy](./content.md)
