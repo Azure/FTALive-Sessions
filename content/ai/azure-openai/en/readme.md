@@ -37,6 +37,9 @@ In this section, we provide an introduction to the Azure OpenAI service, backgro
 
 ## Generative AI
 Generative AI is a subfield of Artificial Intelligence that focuses on creating systems that can generate new examples, such as images, text, or speech, that are similar to examples from a given dataset. The goal of generative AI is to develop algorithms that can learn the underlying probability distribution of a given dataset and use this knowledge to generate new examples that are similar to the examples in the dataset.
+
+<img src='./images/ai_evolution.png' width=900 />
+
 Generative AI models can be classified into two broad categories: generative models and discriminative models. Generative models such as GPT-3, DALL-E, Variational Autoencoders etc learns the underlying probability distribution of the dataset and can generate new examples from the learned distribution. Discriminative models, such as deep neural networks, learn to differentiate between different classes or categories, and are generally used for tasks such as image or speech recognition.
 Generative AI sits on top of other areas of AI like unsupervised learning, supervised learning and reinforcement learning. It relies on the capability of those models to extract useful features from the data and use that for learning the underlying probability distribution of the data which is used for generthe potential to be used in a wide range of applications, such as computer vision, natural language processing, speech recognition, and many more.
 
@@ -110,7 +113,7 @@ It's important to provide some information on the underlying concepts.
  Azure OpenAI provides access to different OpenAI models, which are grouped by family and capability.  Familys are associated with the intended task of the model.  Current models include:
  * GPT-3.  A series of models that can interpret and generate natural language.
  * Codex. A series of models that interpret and generate code, including translating natural language into code.
- * Embeddings.  A series of models that can use embeddedings, which are information-dense representations of the semantic meaning of a piece of text.  Embeddings are a special format of data representation that can be easily utilized by machine learning models and algorithms. 
+ * Embeddings.  A series of models that can use embeddings, which are information-dense representations of the semantic meaning of a piece of text.  Embeddings are a special format of data representation that can be easily utilized by machine learning models and algorithms. 
 
 [Detailed information on models and capability](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/models#model-summary-table-and-region-availability)
 
@@ -178,24 +181,82 @@ OpenAI GPT models are based on [InstructGPT](https://openai.com/blog/instruction
 3. two internet-based book corpora, and
 4. English-language Wikipedia.
 
-### **Instructions vs. completions***
-* Referring to work by Scott Lundberg, Marco Tulio Ribeiro
-```python
-"John Smith is married to Lucy Smith.  They have five kids, and he works as a software engineer at Microsoft.  How should I fact-check this?"
-```
-
-```python
-"John Smith is married to Lucy Smith.  They have five kids, and he works as a software engineer at Microsoft.  How should I fact-check this? <|endofprompt|>"
-```
-
 ### Guidelines
-There are three basic guidelines to creating prompts:
+There are some basic guidelines to creating prompts:
+* https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api
+
+**Use the latest model**
+For best results, we generally recommend using the latest, most capable models. As of November 2022, the best options are the “text-davinci-003” model for text generation, and the “code-davinci-002” model for code generation.
 
 **Show and tell**. Make it clear what you want either through instructions, examples, or a combination of the two. If you want the model to rank a list of items in alphabetical order or to classify a paragraph by sentiment, show it that's what you want.
+
+E.g. Put instructions at the beginning of the prompt and use ### or """ to separate the instruction and context 
+
+Less effective ❌:
+```
+Summarize the text below as a bullet point list of the most important points.
+
+{text input here}
+```
+
+Better ✅:
+```
+Summarize the text below as a bullet point list of the most important points.
+
+Text: """
+{text input here}
+"""
+```
+
+**Be specific, descriptive and as detailed as possible about the desired context, outcome, length, format, style, etc**
+
+Less effective ❌:
+```
+Write a poem about Azure OpenAI. 
+```
+
+Better ✅:
+```
+Write a short inspiring poem about Azure OpenAI, focusing on the recent DALL-E product launch (DALL-E is a text to image ML model) in the style of a {famous poet}
+```
+
+**Articulate the desired output format through examples (example 1, example 2).** 
+Less effective ❌:
+```
+Extract the entities mentioned in the text below. Extract the following 4 entity types: company names, people names, specific topics and themes.
+
+Text: {text}
+Show, and tell - the models respond better when shown specific format requirements. This also makes it easier to programmatically parse out multiple outputs reliably.
+```
+
+Better ✅:
+```
+Extract the important entities mentioned in the text below. First extract all company names, then extract all people names, then extract specific topics which fit the content and finally extract general overarching themes
+
+Desired format:
+Company names: <comma_separated_list_of_company_names>
+People names: -||-
+Specific topics: -||-
+General themes: -||-
+
+Text: {text}
+```
+
+####
+[Sample Prompt Engineering Notebook](src/prompt_engineering.ipynb)
 
 **Provide quality data**. If you're trying to build a classifier or get the model to follow a pattern, make sure that there are enough examples. Be sure to proofread your examples — the model is usually smart enough to see through basic spelling mistakes and give you a response, but it also might assume this is intentional and it can affect the response.
 
 **Check your settings.** The temperature and top_p settings control how deterministic the model is in generating a response. If you're asking it for a response where there's only one right answer, then you'd want to set these lower. If you're looking for more diverse responses, then you might want to set them higher. The number one mistake people use with these settings is assuming that they're "cleverness" or "creativity" controls.
+
+## Embeddings
+An embedding is an information dense representation of the semantic meaning of a piece of text that can be used by machine learning models and algorithms. Each embedding is a vector of floating-point numbers, such that the distance between two embeddings in the vector space is correlated with semantic similarity between two inputs in the original format. For example, if two texts are similar, then their vector representations should also be similar.
+
+### Embedding Models
+Different Azure OpenAI embedding models are specifically created to be good at a particular task. **Similarity embeddings** are good at capturing semantic similarity between two or more pieces of text. **Text search embeddings** help measure long documents are relevant to a short query. **Code search embeddings** are useful for embedding code snippets and embedding nature language search queries.
+
+####
+[Sample Embedding Notebook](src/embeddings.ipynb)
 
 
 ## Fine-tuning
@@ -219,6 +280,8 @@ Fine-tuning is currently only available for the following base models: davinci, 
 Designing your prompts and completions for fine-tuning is different from designing your prompts for use with our base models (Davinci, Curie, Babbage, Ada). In particular, while prompts for base models often consist of multiple examples ("few-shot learning"), for fine-tuning, each training example generally consists of a single input example and its associated output, without the need to give detailed instructions or include multiple examples in the same prompt.
 
 The more training examples you have, the better. **OpenAI recommends having at least a couple hundred examples.** In general, we've found that each doubling of the dataset size leads to a linear increase in model quality.
+
+### Demo of simple app/static page
 
 ### Preparing your dataset
 
@@ -258,24 +321,12 @@ The diagram below illustrates how customer data is processed. This diagram cover
 
 Microsoft charges per 1000 “tokens”. A token can be thought of as a “piece” of a word. 1000 tokens is approximately 750 words, depending on the words used.  Refer to the [pricing page](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
 
-## Demos
+## End to end
 
-### Embeddings
-An embedding is an information dense representation of the semantic meaning of a piece of text that can be used by machine learning models and algorithms. Each embedding is a vector of floating-point numbers, such that the distance between two embeddings in the vector space is correlated with semantic similarity between two inputs in the original format. For example, if two texts are similar, then their vector representations should also be similar.
 
-#### Embedding Models
-Different Azure OpenAI embedding models are specifically created to be good at a particular task. **Similarity embeddings** are good at capturing semantic similarity between two or more pieces of text. **Text search embeddings** help measure long documents are relevant to a short query. **Code search embeddings** are useful for embedding code snippets and embedding nature language search queries.
 
-####
-[Sample Embedding Notebook](src/embeddings.ipynb)
 
-#### Search
 
-#### Fine-tuning
-
-#### Completions
-
-### Fun/interesting examples 
 
 <br></br>
 ---

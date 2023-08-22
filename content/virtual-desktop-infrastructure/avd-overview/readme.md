@@ -5,7 +5,7 @@
 
 **Questions?** Feel free to type them in the chat window at any time. Note that questions you post will be public.
 
-**Slideless** No PowerPoint, we promise! As we update this content you will get the changes straight away. The majority of this session will be driven through the Azure portal and docs.
+**Slideless** Well nearly, our aim next session is to go slideless. As we update this content you will get the changes straight away. The majority of this session will be driven through the Azure portal and docs. We want to try and keep the session interactive as possible.
 
 ### Agenda
 1. [What is Azure Virtual Desktop?](https://aka.ms/WVDDocs)
@@ -19,11 +19,39 @@
 1. [Security with AVD](https://docs.microsoft.com/en-us/azure/virtual-desktop/security-guide#azure-virtual-desktop-security-best-practices)
 
 
+### Focus on Virtual Machine Sizing & User Personas
+- [Session host virtual machine sizing guidelines](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/virtual-machine-recs?toc=%2Fazure%2Fvirtual-desktop%2Ftoc.json&bc=%2Fazure%2Fvirtual-desktop%2Fbreadcrumb%2Ftoc.json)
+- [Cloud Adoption Framework for Azure Virtual Desktop User Personas](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/wvd/migrate-assess#user-personas)
+
+
+### Focus on Security
+- [Zero Trust for Azure Virtual Desktop for the Enterprise](https://learn.microsoft.com/en-us/security/zero-trust/azure-infrastructure-avd)
+- [Security Best Practices](https://learn.microsoft.com/en-us/azure/virtual-desktop/security-guide)
+- [Cloud Adoption Framework for Azure Virtual Desktop Security & Governance](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/wvd/eslz-security-governance-and-compliance)
+
+
+### Deploying AVD 
+- [Deploy Azure Virtual Desktop with the getting started feature: Small deployments & POC](https://learn.microsoft.com/en-us/azure/virtual-desktop/getting-started-feature?tabs=new-aadds)
+- [Azure Virtual Desktop (AVD) Landing Zone Accelerator:](https://github.com/Azure/avdaccelerator)
+
+
 ### Additional Resources
 - [Azure Virtual Desktop for the Enterprise](https://docs.microsoft.com/en-us/azure/architecture/example-scenario/wvd/windows-virtual-desktop)
 - [FSLogix for the Enterprise](https://docs.microsoft.com/en-us/azure/architecture/example-scenario/wvd/windows-virtual-desktop-fslogix)
 - [Cloud Adoption Framework for Azure Virtual Desktop](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/wvd/enterprise-scale-landing-zone)
 - [What's new in Azure Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/whats-new)
+- [Azure Virtual Desktop Experience Estimator](https://azure.microsoft.com/en-gb/products/virtual-desktop/assessment/#estimation-tool)
+- [Cloud Adoptation Framework for Azure Virtual Desktop: Azure Virtual Desktop design considerations](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/wvd/eslz-identity-and-access-management#azure-virtual-desktop-design-considerations)
 - [Azure Academy AVD Playlist](https://aka.ms/AzureAcademy-WVD)
 - [Azure Virtual Desktop Automation](https://github.com/Azure/avdaccelerator)
+- [Required URLs for Azure Virtual Desktop | Microsoft Learn](https://learn.microsoft.com/en-us/azure/virtual-desktop/safe-url-list?tabs=azure)
 - [Terraform for AVD with NetApp](https://github.com/Azure/terraform/tree/master/quickstart/101-azure-virtual-desktop-anf)
+
+
+## Thank you for your time today
+
+Where can you go next?
+
+- **Tell us what you think at [aka.ms/ftalive-feedback](https://aka.ms/ftalive-feedback)** - help us improve this delivery format and let us know if this has been useful.
+- **Visit [aka.ms/ftalive](https://aka.ms/ftalive) to sign up for other topics** - they are open to everyone.
+

@@ -55,7 +55,7 @@ notebook with the technical details and execution of this use case.
 ##  End to End Architecture
 
 ![Figure 1: Technical article search and summarization using GPT-3
-endpoints](https://github.com/Azure/openai-samples/blob/e5c12cdaf9a23971af5c784903b965ad33fec13a/Solution_Notebooks/Query_Based_Summarization/images/EndtoEndArchitectureSummarizerOnly.png)
+endpoints](images/EndtoEndArchitectureSummarizerOnly.png)
 <figcaption align = "center"><b>Figure 1: Technical article search and summarization using GPT-3
 endpoints</b></figcaption>
 

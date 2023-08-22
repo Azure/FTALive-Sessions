@@ -20,7 +20,7 @@ It’s possible that in order to migrate, you did so quickly and used existing v
 
 **Important:** When using tools like Azure Advisor, understand that they can only give a snapshot of usage during their discovery period. If your organization experiences large seasonal fluctuations, you can save on provisioning your base workloads, typically your line-of-business applications, by reserving virtual machine instances and capacity with a discount.
 ### Using Auto Scaling for dynamic workloads
-Azure autoscale is a service that allows you to automatically add and remove resources according to the load on your application.
+[Azure autoscale](https://learn.microsoft.com/azure/azure-monitor/autoscale/autoscale-overview) is a service that allows you to automatically add and remove resources according to the load on your application.
 
 When your application experiences higher load, autoscale adds resources to handle the increased load. When load is low, autoscale reduces the number of resources, lowering your costs. You can scale your application based on metrics like CPU usage, queue length, and available memory, or based on a schedule.
 
