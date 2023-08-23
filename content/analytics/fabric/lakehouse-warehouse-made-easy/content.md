@@ -174,17 +174,13 @@ Data Engineering in Microsoft Fabric enables users to design, build, and maintai
 - We can create our own [**custom spark pool**](https://learn.microsoft.com/en-us/fabric/data-engineering/capacity-settings-management) as well.
 - [**V-Order optimization**](https://learn.microsoft.com/en-us/fabric/data-engineering/delta-optimization-and-v-order?tabs=sparksql) is enabled by default. V-Order is a write time optimization to the parquet file format that enables lightning-fast reads under the Microsoft Fabric compute engines, such as Power BI, SQL, Spark and others.  V-Order sorting has a 15% impact on average write times but provides up to 50% more compression.
   
-### **Data Pipelines**
-
-Data Factory capabilities in Microsoft Fabric.
-
 ### Lakehouse Demos
 #### 1.1 - Data Ingestion in Lakehouse using Data Engineering Notebook
 
 - Source: [TpcH data](https://www.tpc.org/TPC_Documents_Current_Versions/download_programs/tools-download-request5.asp?bm_type=TPC-H&bm_vers=3.0.1&mode=CURRENT-ONLY)
 - Destination: Lakehouse
 - Ingestion method: Using the Data Engineering Notebook.
-- Important Links :
+- Important Links:
   - [Creating Delta Tables in Microsoft Fabric](https://learn.microsoft.com/en-us/training/modules/work-delta-lake-tables-fabric/3-create-delta-tables)
   - [Working with delta table in spark.](https://learn.microsoft.com/en-us/training/modules/work-delta-lake-tables-fabric/4-work-delta-data)
 
@@ -221,7 +217,7 @@ Storage Mode| Pros| Cons
  Direct Query | Real Time Data, No limitation in Data size, No overhead in Data Refresh | Lower in Performance, Limited DAX support, Less data source compatibility
  Import Mode | Faster in performance, Additional Data Transformation, Offline access, no dependency with the source system once the data is loaded | Data Staleness, Very large volume of data, ETL overhead during Data Refresh, Data copy is required.
 
-## Solution: DirectLake Mode.
+## Solution: DirectLake Mode
 
 The objective of DirectLake mode is to address the limitations found in both Direct Query and Import modes, while also integrating the benefits of each of these modes.
 
@@ -234,7 +230,6 @@ The objective of DirectLake mode is to address the limitations found in both Dir
 - This approach enables real-time updates from the data source without the requirement for explicit imports, blending the benefits of DirectQuery and import modes while removing their drawbacks.
 
 #### Demo : Create PBI dataset/model and PBI Report using DirectLake mode
-
 
 ## Summary
 Below is a summary of what was covered in this session.
