@@ -3,7 +3,7 @@
 #### [home](./readme.md)  | [next](./backup.md)
 
 ## Motivation
-As part of modern, cloud operations we must implement solutions to minimize interruptions and ensure rapid recovery when needed.
+As part of modern, cloud operations we must implement solutions to minimize interruptions and ensure rapid recovery when needed. Azure includes a variety of services and features to help customers achieve high availability, disaster recovery and backup for their applications and data.
 
 ### DR Events
 Operational downtime can happen anytime and to any business.
@@ -42,11 +42,11 @@ Business requirements should drive the type of solution leveraged for each prote
 | Datacenter failure | Deploy VMs across different availability zones within a single region |
 | Regional failure | Replicate VMs into another region via Azure Site Recovery |
 | Accidental data deletion or corruption | Back up the data and VM disks via Azure Backup |
-  
+
 ### Additional learning resources
 
-[Cloud Adoption Framework Management Guide - Protect & Recover](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/manage/azure-management-guide/protect-recover?tabs=AzureBackup%2Csiterecovery)
+[Azure Business Continuity Guide](https://github.com/Azure/BusinessContinuityGuide) - Comprehensive resource to help design & execute a BCDR plan for your Azure resources
 
-[Well-Architected Framework - Resiliency & Dependencies](https://docs.microsoft.com/en-us/azure/architecture/framework/resiliency/design-resiliency)
+[Checklist - Resiliency Review](https://github.com/Azure/review-checklists/raw/main/spreadsheet/macrofree/resiliency_checklist.en.xlsx) - Service-specific recommendations for resiliency
 
-[Whitepaper - Resilience in Azure](https://aka.ms/resilience-in-azure-whitepaper)
+[Whitepaper - Resilience in Azure](https://aka.ms/resilience-in-azure-whitepaper) - Detailed process & structured approach to achieving resilience in Azure
