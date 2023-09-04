@@ -4,4 +4,4 @@
 ![](./slides/5-1_Summary.JPG)
 *** 
 - [Home](./README.md)
-- [Back](./4_Ponits.md)
+- [Back](./4_Points.md)
