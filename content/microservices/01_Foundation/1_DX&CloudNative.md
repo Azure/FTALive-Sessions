@@ -1,5 +1,8 @@
+***  
 ![](./slides/1-0_DX&CloudNativeCover.JPG)
+--- 
 ![](./slides/1-1_DX.JPG)
+---  
 ![](./slides/1-2.DXEssence.JPG)
 ![](./slides/1-3.ITAdoptionModelAsIs.JPG)
 ![](./slides/1-4.ITAdoptionModelAsIs.JPG)
