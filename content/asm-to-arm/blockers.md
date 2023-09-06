@@ -67,7 +67,7 @@ Cloud services with VMs and Cloud Services are unsupported for migration
     - If you have an empty cloud service, you can delete it.
 
 ## Cannot rename/move *–Migrated resource group for naming conventions
-As of June 1st, 2021, you are unable to move the Cloud Service Extended Support resource to another Resource Group or Subscription.
+The -Migrated resource group name can be renamed after migration is completed. Also the resources in the RG can be moved following the guidance [here](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/move-limitations/cloud-services-extended-support).
 
 ## RBAC Roles​
 Post migration, the URI of the resource changes from Microsoft.ClassicCompute to Microsoft.Compute RBAC policies needs to be updated after migration.​
