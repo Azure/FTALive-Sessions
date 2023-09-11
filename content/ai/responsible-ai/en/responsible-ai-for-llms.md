@@ -50,7 +50,7 @@ Taxonomy of harms in LLMs/MMMs*
 | | Advice related to highly regulated domains, such as medical, financial, and legal. Inaccurate advice can lead to injury (e.g., if medical advice is inaccurate) or negatively impact an individual’s legal, financial, or life opportunities (e.g., if legal or financial advice is inaccurate or incomplete). |
 | | Third-party content regurgitation. Text and image generation models may be trained on data from the web and can regurgitate/replicate content verbatim or with little change.|
 | **Performance quality** | **Quality of service (QoS) disparities.** The AI system may perform better for some groups of people than others. |
-| | Potential performance disparities in non-English languages. LLMs are capable of generating text in languages other than English, but performance for non-English languages should be assessed according to your system’s intended uses. Similarly, image generation models may perform differ in performance for inputs in non-English languages.
+| | Potential performance disparities in non-English languages. LLMs are capable of generating text in languages other than English, but performance for non-English languages should be assessed according to your system’s intended uses. Similarly, image generation models may perform differ in performance for inputs in non-English languages.  On a related note, costs for non-English languages can be much higher due to increased tokenisation lengths.  See "Language Model Tokenizers Introduce Unfairness Between Languages" by Petrov et al. (2021) for more details.|
 | **Harms to trust** | Fabrication due to lack of content verification through external sources. (Does not apply to creative image generation.)  When the system generates knowledge or factual statements without referring to the information source or verifying the accuracy of the factual statement, it can fabricate information. Additionally, if the period between model training and deployment is large and the model responds from knowledge acquired during training, rather than up to date external sources, information may be outdated and incorrect. |
 | | Ungrounded content. In products where input sources are provided to the system, the model may still generate information that is neither present nor inferred from input sources (e.g., produces ungrounded results) and users may be exposed to inaccurate or misleading content. 
 | | Lack of provenance for generated content. When generated text or images are shared, its origin and any changes made to it may not be traceable|
@@ -95,6 +95,11 @@ To better-understand the capabilities and limitations of each model, you can vie
 
 <img src='./docs/images/Llama2-13b_gif.gif' width=900>
 
+This is important to highlight as some models may be more appropriate for your use case than others. For example, if you’re building a chatbot for a customer service application, you may want to use a model that has been fine-tuned for customer service conversations. Or, if you’re building a chatbot for a healthcare application, you may want to use a model that has been fine-tuned for healthcare conversations. You can also fine-tune models using your own training data to improve model performance for your use case.
+
+Futhermore, whilst there are certain capabilities that LLMs work well, including Generation, Completion, Transformation, Summarization, Conversation (Chat), Question Answering, Classification, we also know that there are certain capabilities that LLMs do not work well, including arithmetic.
+
+
 <br></br>
 # Safety System
 For most applications, it’s not enough to rely on the safety fine-tuning built into the model itself.  LLMs can make mistakes and are susceptible to attacks like jailbreaks. In many applications at Microsoft, we use an additional AI-based safety system, [Azure AI Content Safety](https://azure.microsoft.com/en-us/products/cognitive-services/ai-content-safety), to provide an independent layer of protection.
@@ -103,6 +108,12 @@ When you deploy models through the model catalog, you’ll see the default optio
 
 This safety system works by running both the prompt and completion for your model through an ensemble of classification models aimed at detecting and preventing the output of harmful content across [four categories](https://learn.microsoft.com/en-us/azure/cognitive-services/content-safety/concepts/harm-categories) (hate, sexual, violence, and self-harm) and four severity levels (safe, low, medium, and high). The default configuration is set to filter content at the medium severity threshold for all four content harm categories for both prompts and completions. This system can work for all languages, but quality may vary. It has been specifically trained and tested in the following languages: English, German, Japanese, Spanish, French, Italian, Portuguese, and Chinese. Variations in API configurations and application design may affect completions and thus filtering behavior. In all cases, customers should do their own testing to ensure it works for their application.
 
+An example of an applied Safety System is already implemented in the Azure 
+OpenAI Service.  
+
+<img src='https://learn.microsoft.com/en-us/legal/cognitive-services/openai/media/flow.png'>
+
+The diagram shows an Asynchronous Abuse monitoring service which analyses prompts, completions and images for harmful content and for patterns suggesting the use of the service in a manner that violates the Code of Conduct or other applicable product terms. 
 <br></br>
 # Metaprompt and Grounding
 
@@ -163,8 +174,9 @@ Kathy Walker, Mihaela Vorvoreanu
 
 Appropriate trust - users don’t over-trust and accept incorrect LLM outputs, and they don’t under-trust and reject correct LLM outputs.
 
-### What is RAI style guide?
-https://aka.ms/RAIstyleguide
+### What is an RAI style guide?
+"A style guide is a set of standards for writing and designing content. It’s used to ensure consistency and quality in a specific context, whether it be an organization, a publication, or a field of study. Here are some key aspects of a style guide: Writing and Grammar Rules, Formatting and Layout, Tone and Voice, Branding Elements".
+
 Creating appropriate trust in LLMs helps meet the Accountability and Transparency goals in the RAI Standard
 * Use language responsibly when describing LLMs
 
