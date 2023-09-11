@@ -1,6 +1,6 @@
 # Run, Test, and Debug Your Migrated Workflows Locally
 
-#### [home](./readme.md) | [prev](./vs-code-extension.md) | [next](./deploy.md)
+#### [home](./readme.md) | [prev](./vs-code-extension.md) | [next](./migrate-integration-account.md)
 
 To test your migrated Logic App, follow these steps to start a debugging session, and find the URL for the endpoint that's created by the Request trigger. You need this URL so that you can later send a request to that endpoint.
 

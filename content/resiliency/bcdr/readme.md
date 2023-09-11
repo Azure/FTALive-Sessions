@@ -11,7 +11,7 @@
 
 ## Overview
 
-In this session you will learn about the different ways you can plan and implement business continuity and disaster recovery solutions using Azure. The main focus of the session will be Azure Site Recovery and Azure Backup, but we will also discuss general topics to help you create a DR strategy and business continuity plans for your organization.
+In this session you will learn about the different ways you can plan and implement business continuity and disaster recovery solutions using Azure. *The main focus of the session will be Azure Site Recovery and Azure Backup*, but we will also discuss general topics to help you create a DR strategy and business continuity plans for your organization.
 
 ## Agenda
 
