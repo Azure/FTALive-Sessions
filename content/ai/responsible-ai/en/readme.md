@@ -39,7 +39,7 @@ Brad Smith, President and Chief Legal Officer, Microsoft
 
 Microsoft has been on the Responsible AI journey since 2016.
 
-<img src='./docs/images/microsoft_rai_journey.png' width=500 />
+<img src='./docs/images/microsoft_rai_journey.png' width=900 />
 
 - 2016 : Microsoft CEO Satya Nadella posts an op-ed titled [The Partnership of the Future](https://slate.com/technology/2016/06/microsoft-ceo-satya-nadella-humans-and-a-i-can-work-together-to-solve-societys-challenges.html). It mentions the transparency, efficiency, respect for privacy, and protection from bias in AI systems.
 - 2017 : Founded AETHER (AI, Ethics, and Effects in Engineering and Research). This organisation is Microsoft's strategic Responsible AI organisation and makes recommendations on a variety of Responsible AI challenges, technologies, processes, and best practices.
@@ -54,7 +54,7 @@ Microsoft has been on the Responsible AI journey since 2016.
 
 Microsoft believes that the development and deployment of AI must be guided by the creation of an ethical framework. We set out our view in The Future Computed that there are six core principles that should guide the work around AI. Four core principles of fairness, reliability & safety, privacy & security, and inclusiveness, underpinned by two foundational principles of transparency and accountability 
 
-<img src='./docs/images/microsoft_rai_principles.png' width=500 /><br/>
+<img src='./docs/images/microsoft_rai_principles.png' width=900 /><br/>
 
 
 - Fairness
@@ -84,7 +84,7 @@ Microsoft believes that the development and deployment of AI must be guided by t
 
 We put Responsible AI and our principles into practice through the development of resources and a system of governance.  
 
-<img src='./docs/images/microsoft_rai_into_practices.png' width=300 />
+<img src='./docs/images/microsoft_rai_into_practices.png' width=500 />
 
 #### Strategy
 
@@ -122,7 +122,7 @@ To further collaboration, we've open-source many tools and datasets that others 
 
 We've also democratised our tools through our managed services offered through Azure Machine Learning. 
 
-<img src='./docs/images/azureml_rai_process.png' width=300 />
+<img src='./docs/images/azureml_rai_process.png' width=600 />
 
 - Understand
     - AI systems can behave unexpectedly for a variety of reasons. Software tools can help you understand the behavior of your AI systems so that you can better tailor them to your needs.
@@ -144,7 +144,7 @@ We've also democratised our tools through our managed services offered through A
 
 Microsoft using a Hub and Spoke model for it's Responsible AI governance structure
 
-<img src='./docs/images/microsoft_rai_governance.png' width=300 />
+<img src='./docs/images/microsoft_rai_governance.png' width=500 />
 
 - Responsible AI Council
     - It is comprised of Microsoft executive members and representatives from each responsible AI group (Aether Comittee, Office of Responsible AI, RAISE) to support responsible AI efforts across the enterprise.
@@ -196,14 +196,14 @@ Assessing and debugging machine learning models is critical for model reliabilit
 2. **Diagnose**, to explore the reasons behind the identified errors by addressing: "What are the causes of these errors?", and "Where should I focus my resources to improve my model?"
 3. **Mitigation**, to use the identification and diagnosis insights from previous stages to take targeted mitigation steps and address questions such as: "How can I improve my model?" and "What social or technical solutions exist for these issues?"
 
-<img src='./docs/images/understand_ai_model.png' width=500 />
+<img src='./docs/images/understand_ai_model.png' width=900 />
 
 <br/>
 
 Here are some of the key technologies that will assist here.
 
 ### Fairlearn
-<img src='./docs/images/fairlearn.png' width=500 /><br/>
+<img src='./docs/images/fairlearn.png' width=900 /><br/>
 
 It is a library that evaluates the fairness of machine learning models and mitigates unfairness.
 
@@ -220,11 +220,11 @@ The Fairlearn tookit can assist in assessing and mitigation unfairness in Machin
 
 ### Error Analysis
 
-<img src='https://techcommunity.microsoft.com/t5/image/serverpage/image-id/255440i28671D47179C4A7D/image-size/large?v=v2&px=999' width=500 /><br/>
+<img src='https://techcommunity.microsoft.com/t5/image/serverpage/image-id/255440i28671D47179C4A7D/image-size/large?v=v2&px=999' width=900 /><br/>
 
 Error Analysis is a tool that provides a deep analysis of the error in a model. One of the biggest challenges with current model-debugging practices is using aggregate metrics to score models on a benchmark dataset. Model accuracy might not be uniform across subgroups of data, and there might be input cohorts for which the model fails more often. The direct consequences of these failures are a lack of reliability and safety, the appearance of fairness issues, and a loss of trust in machine learning altogether. 
 
-<img src='./docs/images/erroranalysis.png' width=500 /><br/>
+<img src='./docs/images/erroranalysis.png' width=900 /><br/>
 
 
 Therefore, by digging deeper into the error and identifying cohorts with large or small errors, it is possible to communicate the potential risks of the model to stakeholders, and it is expected that accuracy will be improved by improving the quality of data for cohorts with large errors.
@@ -232,7 +232,7 @@ Therefore, by digging deeper into the error and identifying cohorts with large o
 <br/>
 
 ### InterpretML
-<img src='./docs/images/interpretml.png' width=500 /><br/>
+<img src='./docs/images/interpretml.png' width=900 /><br/>
 
 [InterpretML](https://interpret.ml/) is a set of libraries that you to train interpretable glassbox models and explain blackbox systems. InterpretML helps you understand your model's global behavior, or understand the reasons behind individual predictions.  InterpretML also includes the first implementation of the Explainable Boosting Machine, a powerful, interpretable, glassbox model that can be as accurate as many blackbox models.
 
@@ -263,7 +263,7 @@ Each feature <!-- $x_i$ --> <img style="transform: translateY(0.1em); background
 
 ### Responsible AI Toolbox
 
-<img src='./docs/images/raitoolbox.png' width=500 /><br/>
+<img src='./docs/images/raitoolbox.png' width=900 /><br/>
 
 
 The Responsible AI Toolbox is a collection of some of the tools previously described (Fairlearn, Error Analysis, InterpretML) as well as other tools that can help operationalise Responsible AI in practice.  Including the Responsible AI dashboard, a single pane of glass in bringing together the areas of machine learning interpretability, unfairness assessment and mitigation, error analysis, causal inference, and counterfactual analysis for a holistic assessment and debugging of models and making informed business decisions. The dashboard addresses the tool discoverability and fragmentation issues by enabling you to:
@@ -271,7 +271,7 @@ The Responsible AI Toolbox is a collection of some of the tools previously descr
 1. [Model Debugging] Evaluate machine learning models by identifying model errors, diagnosing why those errors are happening, and mitigating them.
 2. [Responsible Decision Making] Boost your data-driven decision-making abilities
 
-<img src='https://techcommunity.microsoft.com/t5/image/serverpage/image-id/331674i5FBF69F2E05F85A3/image-size/medium?v=v2&px=400' width=300 /><br/>
+<img src='https://techcommunity.microsoft.com/t5/image/serverpage/image-id/331674i5FBF69F2E05F85A3/image-size/medium?v=v2&px=400' width=500 /><br/>
 
 
 <br/>
@@ -296,12 +296,12 @@ For example, in this scenario, the AI system will be used in loan screening and 
 
 Microsoft has published documentation on [Harms Modeling](https://docs.microsoft.com/en-us/azure/architecture/guide/responsible-innovation/harms-modeling/). Building a reliable AI system requires evaluation from the perspective of values and interests of all stakeholders, and we present the following process.
 
-<img src='https://docs.microsoft.com/en-us/azure/architecture/guide/responsible-innovation/images/stakeholder-process-table.png' width=500 />
+<img src='https://docs.microsoft.com/en-us/azure/architecture/guide/responsible-innovation/images/stakeholder-process-table.png' width=900 />
 
 
 There are many different types of such harms. Before entering the next phase, assess whether the AI system falls under each type of damage and the extent of the damage, if so.
 
-<img src='https://docs.microsoft.com/en-us/azure/architecture/guide/responsible-innovation/images/harms-model-example.png' width=500 />
+<img src='https://docs.microsoft.com/en-us/azure/architecture/guide/responsible-innovation/images/harms-model-example.png' width=900 />
 
 <br/>
 
@@ -369,7 +369,7 @@ global_explanation = explainer.explain_global(X_test)
 ExplanationDashboard(global_explanation, catboost_predictor, dataset=X_test, true_y=Y_test)
 ```
 
-<img src='./docs/images/interpretml_dashboard.png' width=500 />
+<img src='./docs/images/interpretml_dashboard.png' width=900 />
 
 
 Perform an error analysis to identify the cohort with the most error.
@@ -378,8 +378,8 @@ Perform an error analysis to identify the cohort with the most error.
 from raiwidgets import ErrorAnalysisDashboard
 ErrorAnalysisDashboard(global_explanation, catboost_predictor, dataset=X_test, true_y=Y_test)
 ```
-<img src='./docs/images/erroranalysis_dashboard_decisiontree.png' width=500 />
-<img src='./docs/images/erroranalysis_dashboard_heatmap.png' width=500 />
+<img src='./docs/images/erroranalysis_dashboard_decisiontree.png' width=600 />
+<img src='./docs/images/erroranalysis_dashboard_heatmap.png' width=600 />
 
 
 
@@ -404,7 +404,7 @@ rai_insights.compute()
 # Load the Responsible AI dashboard
 ResponsibleAIDashboard(rai_insights)
 ```
-<img src='./docs/images/raitoolbox_dashboard.gif' width=500 />
+<img src='./docs/images/raitoolbox_dashboard.gif' width=900 />
 
 
 <br/>
@@ -417,9 +417,9 @@ FairnessDashboard(sensitive_features=A_test,
                   y_true=Y_test,
                   y_pred=Y_pred)
 ```
-<img src='./docs/images/fairlearn_dashboard.png' width=500 />
+<img src='./docs/images/fairlearn_dashboard.png' width=600 />
 
-<img src='./docs/images/fairlearn_assess_selection_rate.png' width=500 />
+<img src='./docs/images/fairlearn_assess_selection_rate.png' width=600 />
 
 then use GridSearch to create multiple models with reduced unfairness
 
@@ -462,7 +462,7 @@ FairnessDashboard(
 
 The model highlighted in orange is the model before the reduction. The dashboard confirms the trade-offs between accuracy and fairness, and decides which model to adopt.
 
-<img src='./docs/images/fairlearn_mitigate_dpratio.png' width=500 />
+<img src='./docs/images/fairlearn_mitigate_dpratio.png' width=900 />
 
 
 <br/>
