@@ -169,13 +169,11 @@ The HAX Toolkit is for teams building user-facing AI products. It helps you conc
 
 3. If you’re creating a product that uses natural language processing (NLP), use the [HAX Playbook](https://www.microsoft.com/en-us/haxtoolkit/playbook/) to identify how the AI system will fail so you can plan for helping users recover from inevitable failures.
 
-## Responsible AI style guide to create appropriate trust
-Kathy Walker, Mihaela Vorvoreanu
+### HAX Example - Guideline 2: Make clear how well the system can do what it can do
 
+
+Match the level of precision in UI communication with the system performance
 Appropriate trust - users don’t over-trust and accept incorrect LLM outputs, and they don’t under-trust and reject correct LLM outputs.
-
-### What is an RAI style guide?
-"A style guide is a set of standards for writing and designing content. It’s used to ensure consistency and quality in a specific context, whether it be an organization, a publication, or a field of study. Here are some key aspects of a style guide: Writing and Grammar Rules, Formatting and Layout, Tone and Voice, Branding Elements".
 
 Creating appropriate trust in LLMs helps meet the Accountability and Transparency goals in the RAI Standard
 * Use language responsibly when describing LLMs
@@ -195,7 +193,7 @@ Creating appropriate trust in LLMs helps meet the Accountability and Transparenc
 * Use easy-to-understand language to describe AI systems
     - Avoid using technical jargon to impress.
 
-### RAI Maturity Model
+## RAI Maturity Model
 The Responsible AI Maturity Model (RAI MM) is a framework to help organizations identify their current and desired levels of RAI maturity.
 
 [Download executive summary & FAQ](https://www.microsoft.com/en-us/research/uploads/prod/2023/05/RAI-MM-Exec-Summary-for-PDF-printing-July-26.pdf)
