@@ -33,6 +33,9 @@
   - Access that attempts to bypass SAP's security mechanisms
   - Persistence to SAP, exporting large amounts of data
 
+A list of available workbooks along with it's detailed functionality can be found in the following document: [Monitoring Workbooks](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/microsoft-sentinel-sap-continuous-threat-monitoring-workbooks/ba-p/3015630)
+</br></br>
+
 **Related information**  </br>
 [Microsoft Sentinel solution for SAP® applications: security content reference](https://learn.microsoft.com/en-us/azure/sentinel/sap/sap-solution-security-content#available-watchlists)
 </br>
