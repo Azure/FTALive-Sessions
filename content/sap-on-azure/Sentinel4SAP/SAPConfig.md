@@ -47,9 +47,11 @@ All the following procedures are performed in the SAP environment.
 
 - In the Security Audit Log screen, select Parameter under Security Audit Log Configuration section in Configuration tree.
 
-- If the Static security audit active checkbox is marked, system-level auditing is turned on. If it isn't, select Display <-> Change and mark the Static security audit active checkbox.
+- If the Static security audit active checkbox is marked, system-level auditing is turned on. If it isn't, select Display <-> Change and mark the Static security audit active checkbox. *`Refer to number 1 in below image`*
 
-- By default, the SAP system logs the client name (terminal ID) rather than client IP address. If you want the system to log by client IP address instead, mark the Log peer address not terminal ID checkbox in the General Parameters section.
+- By default, the SAP system logs the client name (terminal ID) rather than client IP address. If you want the system to log by client IP address instead, mark the Log peer address not terminal ID checkbox in the General Parameters section. *`Refer to number 2 in below image`*
+
+![RSAU_CONFIG](/content/sap-on-azure/images/RSAU_CONFIG.png)
 
 - If you changed any settings in the Security Audit Log Configuration - Parameter section, select Save to save the changes. Auditing will be activated only after the server is rebooted.
 
