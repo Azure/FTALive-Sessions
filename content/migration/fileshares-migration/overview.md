@@ -2,6 +2,9 @@
 
 #### [prev](./readme.md) | [home](./readme.md)  | [next](./assess.md)
 
+### [**Cloud Storage Migration Basics**](https://learn.microsoft.com/en-us/azure/storage-mover/migration-basics): 
+The following phases outline key milestones for succesfully migrating files shares from any source to any target file share service location in Azure.
+
 ![Concept Diagram](./png/FileSharesMigration-workflow.PNG)
 
 ## [**Assess and Select Target File Share Service Milestone**](./assess.md) 
