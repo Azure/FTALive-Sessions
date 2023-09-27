@@ -1,8 +1,8 @@
-## Characteristics of SAP solution
+## Characteristics of Microsoft Sentinel solution for SAP® applications
 
 #### | [home](./introduction.md)  | [next](./SAPConfig.md)
 
-In order to detect threats, it is necessary to consider the unique characteristics of the application. For example, an SAP solution should at least know:
+In order to detect threats, it is necessary to consider the unique characteristics of the **Microsoft Sentinel solution for SAP® applications**. For example, an SAP solution should at least know:
 
 - Knowledge of SAP applications
 - What attack techniques are available against SAP applications
