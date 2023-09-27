@@ -21,10 +21,10 @@ Automated approaches encompass wizard driven tools which migrate at scale file s
 - [Manual Approach Comparison](https://docs.microsoft.com/en-us/azure/storage/common/storage-solution-periodic-data-transfer?toc=/azure/storage/blobs/toc.json#scriptedprogrammatic-network-data-transfer)
  
 ### Review if automated migration tool supports desired sources and destinations
-
-- [Storage Migration Service](https://docs.microsoft.com/en-us/windows-server/storage/storage-migration-service/overview#how-the-migration-process-works)
+- [Azure Storage Mover (Public Preview)](https://learn.microsoft.com/en-us/azure/storage-mover/service-overview#supported-sources-and-targets)
 - [File Sync Service and Third Party ISVs](https://docs.microsoft.com/en-us/azure/storage/solution-integration/validated-partners/data-management/migration-tools-comparison?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json#supported-azure-services)
     - Consider the [File Migration Program](https://techcommunity.microsoft.com/t5/azure-storage-blog/migrate-the-critical-file-data-you-need-to-power-your/ba-p/3038751) to attain free licensing for selected ISVs
+- [Storage Migration Service](https://docs.microsoft.com/en-us/windows-server/storage/storage-migration-service/overview#how-the-migration-process-works)
 - [NetApps Cloud Sync](https://docs.netapp.com/us-en/cloud-manager-sync/reference-supported-relationships.html)
 
 ## **Migrate File Shares Dependencies**
