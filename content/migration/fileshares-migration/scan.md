@@ -18,9 +18,10 @@ In the [Discovery](https://docs.microsoft.com/en-us/azure/storage/common/storage
 - [File Sync Service and Third Party ISVs](https://docs.microsoft.com/en-us/azure/storage/solution-integration/validated-partners/data-management/migration-tools-comparison?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json#supported-azure-services)
 - [NetApps Cloud Sync](https://docs.netapp.com/us-en/cloud-manager-sync/reference-supported-relationships.html)
 ### Review if automated discovery tool provides desired assessments and reporting
-- [Storage Migration Service](https://docs.microsoft.com/en-us/windows-server/storage/storage-migration-service/migrate-data#step-1-create-a-job-and-inventory-your-servers-to-figure-out-what-to-migrate)
+- [Azure Storage Mover (Public Preview)](https://learn.microsoft.com/en-us/azure/storage-mover/service-overview#supported-sources-and-targets)
 - [File Sync Service and Third Party ISVs](https://docs.microsoft.com/en-us/azure/storage/solution-integration/validated-partners/data-management/migration-tools-comparison#assessment-and-reporting)
     - Consider the [File Migration Program](https://techcommunity.microsoft.com/t5/azure-storage-blog/migrate-the-critical-file-data-you-need-to-power-your/ba-p/3038751) to attain free licensing for selected ISVs
+- [Storage Migration Service](https://docs.microsoft.com/en-us/windows-server/storage/storage-migration-service/migrate-data#step-1-create-a-job-and-inventory-your-servers-to-figure-out-what-to-migrate)
 - [NetApps Cloud Sync](https://docs.netapp.com/us-en/cloud-manager-sync/task-managing-reports.html#creating-reports)
 
 ## **Discover File Shares Dependencies**
