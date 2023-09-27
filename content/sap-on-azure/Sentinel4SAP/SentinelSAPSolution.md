@@ -23,7 +23,7 @@ The solution includes the following components:
 
 The Microsoft Sentinel for SAP data connector is an agent, installed on a VM or a physical server that collects application logs from across the entire SAP system landscape. It then sends those logs to your Log Analytics workspace in Microsoft Sentinel. You can then use the other content in the Threat Monitoring for SAP solution – the analytics rules, workbooks, and watchlists – to gain insight into your organization's SAP environment and to detect and respond to security threats.
 
-![SAP Diagram](./content/sap-on-azure/images/SAP-diagram.png)
+![SAP Diagram](/content/sap-on-azure/images/SAP-diagram.png)
 
 ### Special (SAP Solution) data connector
 
