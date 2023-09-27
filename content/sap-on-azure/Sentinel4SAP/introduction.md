@@ -1,6 +1,6 @@
 # Introduction
 
-#### [prev](./readme.md) | [home](./readme.md)  | [next](./SentinelSAPSolution.md)
+#### [prev](./readme.md) | [home](/content/sap-on-azure/ams/readme.md)  | [next](./SentinelSAPSolution.md)
 
 
 ## What is this session about
@@ -21,4 +21,4 @@ A great place to understand and start learning about Microsoft Sentinel can be f
 - [Microsoft Sentinel Documentation](https://learn.microsoft.com/en-us/azure/sentinel/)
 - [Microsoft Sentinel solution for SAP® applications](https://learn.microsoft.com/en-us/azure/sentinel/sap/deployment-overview)
 - [Deploy & Configure Container Hosting the SAP Data Connector via UI](https://www.youtube.com/watch?v=bg0vmUvcQ5Q)
-#### [prev](./readme.md) | [home](./readme.md)  | [next](./SentinelSAPSolution.md)
+#### [prev](./readme.md) | [home](/content/sap-on-azure/ams/readme.md)  | [next](./SentinelSAPSolution.md)
