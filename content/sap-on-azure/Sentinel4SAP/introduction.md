@@ -1,6 +1,6 @@
 # Introduction
 
-#### [prev](./readme.md) | [home](/content/sap-on-azure/ams/readme.md)  | [next](./SentinelSAPSolution.md)
+#### [home](./introduction.md)  | [next](./SentinelSAPSolution.md)
 
 
 ## What is this session about
