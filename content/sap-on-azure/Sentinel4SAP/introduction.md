@@ -27,4 +27,4 @@ A great place to understand and start learning about Microsoft Sentinel can be f
 - [SAP Continous Threat Monitoring workbooks](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/microsoft-sentinel-sap-continuous-threat-monitoring-workbooks/ba-p/3015630)
 - [Public case study](https://www.microsoft.com/insidetrack/blog/protecting-microsofts-sap-workload-with-microsoft-sentinel/)
 - [Sample use case](https://blogs.sap.com/2022/03/14/microsoft-sentinel-and-logic-apps-can-be-the-guardians-of-sap-security-operations-secops/)
-#### [prev](./readme.md) | [home](/content/sap-on-azure/ams/readme.md)  | [next](./SentinelSAPSolution.md)
+#### [home](./introduction.md)  | [next](./SentinelSAPSolution.md)
