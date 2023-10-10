@@ -13,9 +13,9 @@ In the [Discovery](https://docs.microsoft.com/en-us/azure/storage/common/storage
 - Manual approach: refers to building custom scripts or using native file service capabilities. 
  
 ### Review if automated discovery tool supports desired sources and destinations
-
-- [Storage Migration Service](https://learn.microsoft.com/en-us/windows-server/storage/storage-migration-service/overview#requirements)
+- [Azure Storage Mover (Public Preview)](https://learn.microsoft.com/en-us/azure/storage-mover/service-overview#supported-sources-and-targets)
 - [File Sync Service and Third Party ISVs](https://docs.microsoft.com/en-us/azure/storage/solution-integration/validated-partners/data-management/migration-tools-comparison?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json#supported-azure-services)
+- [Storage Migration Service](https://learn.microsoft.com/en-us/windows-server/storage/storage-migration-service/overview#requirements)
 - [NetApps Cloud Sync](https://docs.netapp.com/us-en/cloud-manager-sync/reference-supported-relationships.html)
 ### Review if automated discovery tool provides desired assessments and reporting
 - [Storage Migration Service](https://docs.microsoft.com/en-us/windows-server/storage/storage-migration-service/migrate-data#step-1-create-a-job-and-inventory-your-servers-to-figure-out-what-to-migrate)
