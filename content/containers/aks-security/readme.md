@@ -43,6 +43,7 @@ Also sometimes referred to as master nodes. These components are managed by prov
   > By default, the Kubernetes API server uses a public IP address and a fully qualified domain name (FQDN). You can limit access to the API server endpoint using authorized IP ranges.
  
 - [Create a private Azure Kubernetes Service cluster](https://docs.microsoft.com/en-us/azure/aks/private-clusters)
+- [Baseline architecture for an AKS secure cluster](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/containers/aks/baseline-aks)
 - [Secure access to the API server using authorized IP address ranges in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/api-server-authorized-ip-ranges)
 - [Use command invoke to access a private Azure Kubernetes Service (AKS) cluster](https://docs.microsoft.com/en-us/azure/aks/command-invoke)
 
