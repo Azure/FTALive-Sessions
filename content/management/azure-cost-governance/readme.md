@@ -5,7 +5,8 @@
 
 **Questions?** Feel free to type them in the chat window at any time. Note that questions you post will be public. 
 
-**Feedback** We would like to hear your thoughts, please provide us your feedback [https://aka.ms/ftalive-feedback](https://aka.ms/ftalive-feedback).
+**Feedback** We would like to hear your thoughts, please provide us your feedback [https://aka.ms/ftalive-feedback](https://aka.ms/ftalive-feedback).<br>
+⚠️ *IMPORTANT: For the October 31, 2023 occurrence, please enter **20921** for the Reactor Event Code on the survey*⚠️
 
 ## Overview
 
@@ -39,9 +40,12 @@ In this session you will learn to:
 
 ### Additional Learning Resources
 
+* [Azure Review Checklist - Cost Optimization](https://github.com/Azure/review-checklists/blob/main/spreadsheet/macrofree/cost_checklist.en.xlsx) ([Web View](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Freview-checklists%2Fmain%2Fspreadsheet%2Fmacrofree%2Fcost_checklist.en.xlsx&wdOrigin=BROWSELINK))
+* [Microsoft + FinOps Foundation](https://www.finops.org/members/microsoft/)
+* [Microsoft Cost Management - Blog Updates](https://aka.ms/costmgmt/blog)
 * [The Azure FinOps Guide](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/the-azure-finops-guide/ba-p/3704132#whatisfinops) ([GitHub repo for updates](https://github.com/dolevshor/azure-finops-guide))
-* [Azure Cost Optimization](https://aka.ms/costoptimization)
 * [Azure Cost Management + Billing Power BI Template](https://aka.ms/costmgmt/ACMApp)
-* [Microsoft Azure Well-Architected Framework](https://aka.ms/architecture/framework) 
-* [Microsoft Azure Well-Architected Review](https://aka.ms/architecture/review) 
+* [Microsoft Azure Well-Architected Framework - Cost Optimization Pillar](https://learn.microsoft.com/en-us/azure/well-architected/cost/) 
+* [Microsoft Assessments - Azure Well-Architected Review](https://aka.ms/architecture/review) 
+* [Microsoft Assessments - FinOps Review](https://learn.microsoft.com/en-us/assessments/ad1c0f6b-396b-44a4-924b-7a4c778a13d3/)
 
