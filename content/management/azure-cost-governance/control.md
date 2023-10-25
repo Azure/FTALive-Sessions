@@ -45,4 +45,4 @@ Azure Hybrid Benefit is a licensing benefit, and it works by letting you use Sof
 
 Walkthrough/demo: 
 
-- [AHUB Savings Calculator](https://azure.microsoft.com/en-us/pricing/hybrid-benefit)
+- [AHUB Savings Calculator](https://azure.microsoft.com/en-us/pricing/hybrid-benefit/#calculator)
