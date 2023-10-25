@@ -6,7 +6,6 @@
 **Questions?** Feel free to type them in the chat window at any time. Note that questions you post will be public. 
 
 **Feedback** We would like to hear your thoughts, please provide us your feedback [https://aka.ms/ftalive-feedback](https://aka.ms/ftalive-feedback).<br>
-⚠️ *IMPORTANT: For the October 31, 2023 occurrence, please enter **20921** for the Reactor Event Code on the survey*⚠️
 
 ## Overview
 
