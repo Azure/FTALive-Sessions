@@ -18,7 +18,6 @@ Consider using the following policy definitions to avoid unexpected, costly reso
 - [Not allowed resource types](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F6c112d4e-5bc7-47ae-a041-ea2d9dccd749)
 - [Allowed virtual machine size SKUs](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Fcccc23c7-8427-4f53-ad12-b6a63eb452b3)
 - [Allowed locations](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Fe56962a6-4747-49cd-b67b-bf8b01975c4c)
-- [Hybrid Use Benefits](https://github.com/Azure/Community-Policy/tree/master/Policies/HybridUseBenefits) (Community contributed policies)
 
 ## Reservations & Savings Plans
 
