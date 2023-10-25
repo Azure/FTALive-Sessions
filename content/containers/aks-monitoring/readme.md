@@ -2,8 +2,8 @@
 
 This section presents a common strategy that is a bottoms-up approach starting from infrastructure up through applications. Each layer has distinct monitoring requirements.
 
-These layers are illustrated in [Monitor AKS with Azure Monitor for container insight] (Update Link) (https://docs.microsoft.com/azure/aks/monitor-aks#monitor-layers-of-aks-with-container-insights)
-
+These layers are illustrated in [Monitor AKS with Azure Monitor for container insight]  (https://docs.microsoft.com/azure/aks/monitor-aks#monitor-layers-of-aks-with-container-insights)  
+(Update Link)
 - Cluster level components
 - Managed AKS components
 - Kubernetes objects and workloads
