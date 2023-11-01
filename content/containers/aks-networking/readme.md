@@ -76,7 +76,7 @@ You can bring your own route table as well.
   - Dual-stack networking is required for the Azure virtual network and the pod CIDR.
     - Single stack IPv6-only isn't supported for node or pod IP addresses. Services can be provisioned on IPv4 or IPv6.
   - The following features are not supported on dual-stack kubenet:
-    - Azure network policies
+    - Azure network policie
     - Calico network policies
     - NAT Gateway
     - Virtual nodes add-on
@@ -253,15 +253,6 @@ There are many options for ingress controllers that are maintained and supported
 - [How to create an HTTPS ingress controller and use your own TLS certificates on AKS](https://docs.microsoft.com/azure/aks/ingress-own-tls?tabs=azure-cli)
 - [How to create an ingress controller that uses Let's Encrypt to automatically generate TLS certificates with a static public IP address in AKS](https://docs.microsoft.com/azure/aks/ingress-static-ip?tabs=azure-cli)
 - [How to create an ingress controller that uses Let's Encrypt to automatically generate TLS certificates with a dynamic public IP address in AKS](https://docs.microsoft.com/azure/aks/ingress-tls?tabs=azure-cli)
-
-## HTTP application routing
-
-[HTTP application routing solution](https://docs.microsoft.com/azure/aks/http-application-routing) is an add-on available for AKS which when enabled ,creates an ingress controller along with an external DNS controller.
-
-It creates two components within a cluster:
-
- - Ingress controller: The Ingress controller is exposed to the internet by using a Kubernetes service of type LoadBalancer. The Ingress controller watches and implements Kubernetes Ingress resources, which creates routes to application endpoints.
- - External-DNS controller: Watches for Kubernetes Ingress resources and creates DNS A records in the cluster-specific DNS zone.
 
 ## Application Gateway Ingress Controller(AGIC)
 [Application Gateway Ingress Controller (AGIC)](https://docs.microsoft.com/azure/application-gateway/ingress-controller-overview) allows Azure Application Gateway to be used as the ingress for an Azure Kubernetes Service. It runs in its own pod on the customer’s AKS.
