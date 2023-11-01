@@ -92,7 +92,7 @@ For more details:
 
 - [Limitations and considerations for kubenet](https://docs.microsoft.com/azure/aks/configure-kubenet#limitations--considerations-for-kubenet)
 
-# Azure CNI (advanced)
+## Azure CNI (advanced)
 
 With [Azure CNI](https://docs.microsoft.com/azure/aks/concepts-network#azure-cni-advanced-networking) every pod gets an IP address from the cluster subnet. These IP addresses must be unique across network space.
 
