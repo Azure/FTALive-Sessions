@@ -204,7 +204,7 @@ How to [restrict egress traffic using Azure Firewall?](https://docs.microsoft.co
 
 [Using SNAT for outbound connections](https://docs.microsoft.com/azure/load-balancer/load-balancer-outbound-connections)
 
-## Managed NAT Gateway (preview)
+## Managed NAT Gateway
 
 Whilst AKS customers are able to route egress traffic through an Azure Load Balancer, there are limitations on the amount of outbound flows of traffic that is possible.
 
@@ -308,13 +308,18 @@ Most common use cases:
 ## Istio
 Istio is an open source service mesh that layers transparently onto existing distributed applications. Istio’s powerful features provide a uniform and more efficient way to secure, connect, and monitor services. Istio is the path to load balancing, service-to-service authentication, and monitoring – with few or no service code changes.
 
-
+- Secure service-to-service communication in a cluster with TLS encryption, strong identity-based authentication and authorization.
+- Automatic load balancing for HTTP, gRPC, WebSocket, and TCP traffic.
+- Fine-grained control of traffic behavior with rich routing rules, retries, failovers, and fault injection.
+- A pluggable policy layer and configuration API supporting access controls, rate limits and quotas.
+- Automatic metrics, logs, and traces for all traffic within a cluster, including cluster ingress and egress.
 
 **Kiali Dashboard:** Walk through on Kiali dashboard
 
 [**Getting Started with Istio**](https://istio.io/latest/docs/setup/getting-started/)
 
 ## Linkerd
+
 Linkerd is a service mesh. It adds observability, reliability, and security to Kubernetes applications without code changes. For example, Linkerd can monitor and report per-service success rates and latencies, can automatically retry failed requests, and can encrypt and validate connections between services, all without requiring any modification of the application itself.
 
 Linkerd is significantly lighter and simpler than Istio. Linkerd is built for security from the ground up, ranging from features like on-by-default mTLS, a data plane that is built in a Rust, memory-safe language, and regular security audits. Finally, Linkerd has publicly committed to open governance and is hosted by the CNCF.
