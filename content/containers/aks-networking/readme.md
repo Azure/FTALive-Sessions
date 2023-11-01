@@ -11,14 +11,17 @@ In this session you will learn about Azure Kubernetes Services networking and th
 - Overview about different network policies and control traffic between pods.
 - Overview about Service Mesh and different open source products.
 
-## Services
+## Different Types of Services in Kubernetes
 
-Kubernetes uses Services to logically group a set of pods together and provide network connectivity. 
+[Basic Concepts of Kubernetes Services](https://kubernetes.io/docs/concepts/services-networking/service/)
 
-- ClusterIP
-- NodePort
-- LoadBalancer
-- ExternalName
+- ClusterIP : Default Kubernetes service accessible inside the Kubernetes cluster - no external access.
+- NodePort : Most primitive way to get external traffic directly to your service. It opens a specific port on all the Nodes and any traffic sent to this port is forwarded to the service.
+- LoadBalancer : Standard way to expose a service to the internet. In Azure, this will spin up an Azure Load Balancer (L4) that gives us a single public IP address that forwards all traffic to your service.
+  - [How to create an internal LoadBalancer](https://docs.microsoft.com/azure/aks/internal-lb)
+  - [How to create a Standard LoadBalancer](https://docs.microsoft.com/azure/aks/load-balancer-standard)
+  - [Use a static public IP address and DNS label with the AKS load balancer](https://docs.microsoft.com/azure/aks/static-ip)
+- External DNS : Creates a specific DNS entry for easier application access.
 
 ## Networking Models
 
@@ -206,18 +209,6 @@ How to [restrict egress traffic using Azure Firewall?](https://docs.microsoft.co
 Whilst AKS customers are able to route egress traffic through an Azure Load Balancer, there are limitations on the amount of outbound flows of traffic that is possible.
 
 [Cluster egress with Managed NAT Gateway](https://docs.microsoft.com/en-us/azure/aks/nat-gateway)
-
-## Different Types of Services in Kubernetes
-
-[Basic Concepts of Kubernetes Services](https://kubernetes.io/docs/concepts/services-networking/service/)
-
-- ClusterIP : Default Kubernetes service accessible inside the Kubernetes cluster - no external access.
-- NodePort : Most primitive way to get external traffic directly to your service. It opens a specific port on all the Nodes and any traffic sent to this port is forwarded to the service.
-- LoadBalancer : Standard way to expose a service to the internet. In Azure, this will spin up an Azure Load Balancer (L4) that gives us a single public IP address that forwards all traffic to your service.
-  - [How to create an internal LoadBalancer](https://docs.microsoft.com/azure/aks/internal-lb)
-  - [How to create a Standard LoadBalancer](https://docs.microsoft.com/azure/aks/load-balancer-standard)
-  - [Use a static public IP address and DNS label with the AKS load balancer](https://docs.microsoft.com/azure/aks/static-ip)
-- External DNS : Creates a specific DNS entry for easier application access.
 
 ## Ingress
 
