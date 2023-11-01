@@ -4,19 +4,31 @@
 In this session you will learn about Azure Kubernetes Services networking and the core concepts that provide networking to the application in AKS. Additionally, you will also learn about service mesh and its capabilities.
 
 ## Agenda
+
 - Overview of AKS networking models, IP address planning and its limitations.
 - AKS Private cluster and Egress control.
 - Overview of services in Kubernetes and Ingress controllers.
 - Overview about different network policies and control traffic between pods.
 - Overview about Service Mesh and different open source products.
 
+## Services
+
+Kubernetes uses Services to logically group a set of pods together and provide network connectivity. 
+
+- ClusterIP
+- NodePort
+- LoadBalancer
+- ExternalName
+
 ## Networking Models
+
 AKS support two [network models](https://docs.microsoft.com/azure/aks/concepts-network#azure-virtual-networks)
 
 - Kubenet (basic) networking
 - Azure CNI (advanced) networking
 
 ## Kubenet
+
 [Kubenet](https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/#kubenet) networking is the default configuration option for AKS cluster creation.
 
 [Kubenet networking model](https://docs.microsoft.com/azure/aks/concepts-network#kubenet-basic-networking)
@@ -27,6 +39,7 @@ AKS support two [network models](https://docs.microsoft.com/azure/aks/concepts-n
 - Kubenet network supports only Linux node pools.
 
 [Use kubenet with you own IP address ranges in Azure Kubernetes Service](https://docs.microsoft.com/azure/aks/configure-kubenet)
+
 - By default, UDRs and IP configuration is created and maintained by AKS.
 - AKS supports to bring your own subnet and route table. 
 - If route table does not exist, AKS creates one and adds rules to it.
@@ -45,10 +58,36 @@ You can bring your own route table as well.
 
 - Create custom [route table](https://docs.microsoft.com/azure/virtual-network/manage-route-table)
 
+### Dual-Stack Networking
+
+[Dual-Stack Networking](https://learn.microsoft.com/azure/aks/configure-kubenet-dual-stack?tabs=azure-cli%2Ckubectl) nodes receive both an IPv4 and IPv6 address from the Azure virtual network subnet. Pods receive both an IPv4 and IPv6 address from a logically different address space to the Azure virtual network subnet of the nodes.
+
+- If using a managed virtual network, a dual-stack virtual network configuration.
+- IPv4 and IPv6 node and pod addresses.
+- Outbound rules for both IPv4 and IPv6 traffic.
+- Load balancer setup for IPv4 and IPv6 services.
+
+[Deploying a dual-stack AKS Cluster](https://learn.microsoft.com/azure/aks/configure-kubenet-dual-stack?tabs=azure-cli%2Ckubectl#deploying-a-dual-stack-cluster)
+
+- Limitations
+  - Azure route tables have a hard limit of 400 routes per table.
+    - Each node in a dual-stack cluster requires two routes, one for each IP address family, so dual-stack clusters are limited to 200 nodes.
+  - In Azure Linux node pools, service objects are only supported with externalTrafficPolicy: Local.
+  - Dual-stack networking is required for the Azure virtual network and the pod CIDR.
+    - Single stack IPv6-only isn't supported for node or pod IP addresses. Services can be provisioned on IPv4 or IPv6.
+  - The following features are not supported on dual-stack kubenet:
+    - Azure network policies
+    - Calico network policies
+    - NAT Gateway
+    - Virtual nodes add-on
+    - Windows node pools
+
 ## IP Address space
+
 With Kubenet you can use a smaller IP address range and support large clusters. 
 
 For more details:
+
 - [IP address availability for kubenet](https://docs.microsoft.com/azure/aks/configure-kubenet#ip-address-availability-and-exhaustion)
 
 - [Limitations and considerations for kubenet](https://docs.microsoft.com/azure/aks/configure-kubenet#limitations--considerations-for-kubenet)
@@ -58,24 +97,27 @@ For more details:
 With [Azure CNI](https://docs.microsoft.com/azure/aks/concepts-network#azure-cni-advanced-networking) every pod gets an IP address from the cluster subnet. These IP addresses must be unique across network space.
 
 [Configure Azure CNI in Azure Kubernetes Service](https://docs.microsoft.com/azure/aks/configure-azure-cni)
+
 - It requires additional planning while designing the IP address space.
 - IP address should be planned according to the number of node pools, nodes, and maximum number of pods per node.
 - If Internal load balancers are deployed, front IPs are allocated from the cluster subnet
 
 ## Planning IP address
-- [IP address planning](https://docs.microsoft.com/azure/aks/configure-azure-cni#plan-ip-addressing-for-your-cluster)
 
+- [IP address planning](https://docs.microsoft.com/azure/aks/configure-azure-cni#plan-ip-addressing-for-your-cluster)
 - [Maximum pods per node](https://docs.microsoft.com/azure/aks/configure-azure-cni#maximum-pods-per-node)
 - The minimum value that can be set per node is 10 - [Refer for mandatory node requirement in this case](https://docs.microsoft.com/azure/aks/configure-azure-cni#configure-maximum---new-clusters)
 
 > While planning the IP addresses, leave some additional room for upgrade operations. By default, AKS configures upgrades to surge with 1 extra node.
 
 ## Dynamic allocation of IPs and enhanced subnet support (preview)
+
 A drawback with the traditional CNI is the exhaustion of pod IP addresses as the AKS cluster grows, resulting in the need to rebuild the entire cluster in a bigger subnet.
 
 The new [dynamic IP](https://docs.microsoft.com/en-us/azure/aks/configure-azure-cni#dynamic-allocation-of-ips-and-enhanced-subnet-support-preview) allocation capability in Azure CNI solves this problem by allotting pod IPs from a subnet separate from the subnet hosting the AKS cluster.
 
 ## The IP tables in Azure Kubernetes Service
+
 - Cluster level rules for each service.
 - KUBE-MARK-MASQ, KUBE-SVC-xyz, and KUBE-SEP-xyz rules.
 
@@ -99,7 +141,7 @@ Two things to consider when setting up networking between Application gateway an
     - If deployed in different VNETs, peering between the VNETs is required to enable the communication. If CNI is used, Azure adds the route once the peering enabled between the VNETs.
 
 In either cases if Kubenet used, need to [associate route table](https://azure.github.io/application-gateway-kubernetes-ingress/how-tos/networking/#with-kubenet) created by AKS with application gateway subnet for the routing as pods don't receive routable IPs from the cluster subnet.
-        
+
 ## Private AKS cluster
 
 When creating an AKS private cluster the control plane has an internal IP address. Private cluster ensures traffic between API server and node pools remain private network.
@@ -117,79 +159,89 @@ Private endpoint allows the VNET to communicate with Private cluster. To connect
 - Different [options to connect private clusters](https://docs.microsoft.com/azure/aks/private-clusters#options-for-connecting-to-the-private-cluster)
 
 - [Private cluster limitation](https://docs.microsoft.com/azure/aks/private-clusters#limitations)
-    - Authorized IP ranges cannot be applied.
-    - No support for Azure DevOps Microsoft hosted agents.
+  - Authorized IP ranges cannot be applied.
+  - No support for Azure DevOps Microsoft hosted agents.
 
 ## Cluster Egress Control
- The cluster deployed on virtual network has outbound dependencies on services outside of virtual network. 
- - Nodes in an AKS cluster need to access services outside for management & operational purpose. 
- Communicate with the API server, or to download core Kubernetes cluster components, node security updates.
+
+The cluster deployed on virtual network has outbound dependencies on services outside of virtual network.
+
+- Nodes in an AKS cluster need to access services outside for management & operational purpose. Communicate with the API server, or to download core Kubernetes cluster components, node security updates.
 
 To know more on required network rules and IP address dependencies are [Control egress traffic for cluster nodes in Azure Kubernetes Service](https://docs.microsoft.com/azure/aks/limit-egress-traffic)
 
- ### Outbound Type
+### Outbound Type
+
  AKS cluster can be customized with a unique `outboundType` as `loadbalancer` &  `userDefinedRouting`
- 
+
 - [Cluster egress with User Defined Route](https://docs.microsoft.com/azure/aks/egress-outboundtype)
 
 By default, AKS will use `outboundType` as `loadbalancer` and provision standard SKU load balancer for egress traffic. 
+
 - [Outbound type of loadbalancer.](https://docs.microsoft.com/azure/aks/egress-outboundtype#outbound-type-of-loadbalancer)
 
 If `outboundType` is set as `userDefinedRouting`, then AKS won't perform any configuration for egress.
+
 - [Outbound type of userDefinedRouting](https://docs.microsoft.com/azure/aks/egress-outboundtype#outbound-type-of-userdefinedrouting)
 
 ## If outbound type set as userDefinedRouting and sending egress to Azure Firewall
+
 Azure Firewall provides an Azure Kubernetes Service (AzureKubernetesService) FQDN Tag to simplify this configuration.
 
 How to [restrict egress traffic using Azure Firewall?](https://docs.microsoft.com/azure/aks/limit-egress-traffic#restrict-egress-traffic-using-azure-firewall)
 
 - Minimum 20 Frontend IPs on Azure Firewall for production scenario to avoid port exhaustion.
-    -  [Create Azure Firewall with multiple public IP address](https://docs.microsoft.com/azure/firewall/quick-create-multiple-ip-template)
+  - [Create Azure Firewall with multiple public IP address](https://docs.microsoft.com/azure/firewall/quick-create-multiple-ip-template)
 - Azure Firewall provides `AzureKubernetesService` FQDN tag.
 - If `outboundType` as UDR, load balancer deployed when first services with type as `loadbalancer`. https://docs.microsoft.com/azure/aks/egress-outboundtype#load-balancer-creation-with-userdefinedrouting
 - Load blajacer with public IP is for inbound requests, rules are configured by Azure.
 - No outbound public IP address or oubtound rules
 
 ### Additional information
+
 [Using SNAT for outbound connections](https://docs.microsoft.com/azure/load-balancer/load-balancer-outbound-connections)
 
 ## Managed NAT Gateway (preview)
+
 Whilst AKS customers are able to route egress traffic through an Azure Load Balancer, there are limitations on the amount of outbound flows of traffic that is possible.
 
 [Cluster egress with Managed NAT Gateway](https://docs.microsoft.com/en-us/azure/aks/nat-gateway)
 
-# Different Types of Services in Kubernetes
+## Different Types of Services in Kubernetes
+
 [Basic Concepts of Kubernetes Services](https://kubernetes.io/docs/concepts/services-networking/service/)
 
 - ClusterIP : Default Kubernetes service accessible inside the Kubernetes cluster - no external access.
 - NodePort : Most primitive way to get external traffic directly to your service. It opens a specific port on all the Nodes and any traffic sent to this port is forwarded to the service.
 - LoadBalancer : Standard way to expose a service to the internet. In Azure, this will spin up an Azure Load Balancer (L4) that gives us a single public IP address that forwards all traffic to your service.
-    - [How to create an internal LoadBalancer](https://docs.microsoft.com/azure/aks/internal-lb)
-    - [How to create a Standard LoadBalancer](https://docs.microsoft.com/azure/aks/load-balancer-standard)
-    - [Use a static public IP address and DNS label with the AKS load balancer](https://docs.microsoft.com/azure/aks/static-ip)
+  - [How to create an internal LoadBalancer](https://docs.microsoft.com/azure/aks/internal-lb)
+  - [How to create a Standard LoadBalancer](https://docs.microsoft.com/azure/aks/load-balancer-standard)
+  - [Use a static public IP address and DNS label with the AKS load balancer](https://docs.microsoft.com/azure/aks/static-ip)
 - External DNS : Creates a specific DNS entry for easier application access.
 
-
 ## Ingress
+
 [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) is to expose HTTP and HTTPS routes from outside of the cluster to the services within the cluster.
 
- - Ingress can distribute traffic based on the URL of the application and handle TLS/SSL termination.
- - Ingress also reduces the number of IP addresses you expose and map.
+- Ingress can distribute traffic based on the URL of the application and handle TLS/SSL termination.
+- Ingress also reduces the number of IP addresses you expose and map.
 
 ![aks-ingress](https://user-images.githubusercontent.com/83619402/151653201-005f9fbb-fdff-4362-a0b0-b879b6bc6d18.png)
 
- There are two ingress components:
- - [Ingress resources](https://docs.microsoft.com/azure/aks/operator-best-practices-network#ingress-resource)
- - [Ingress Controllers](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/)
-      - [How to create an ingress controller in Azure Kubernetes Service](https://docs.microsoft.com/azure/aks/ingress-basic?tabs=azure-cli)
-      - [How to enable HTTP application routing](https://docs.microsoft.com/azure/aks/http-application-routing)
-      - [How to create an ingress controller to an internal virtual network in AKS](https://docs.microsoft.com/azure/aks/ingress-internal-ip?tabs=azure-cli)
-           - [How client source IP preservation works for loadbalancer services in AKS](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/how-client-source-ip-preservation-works-for-loadbalancer/ba-p/3033722)
-           - [How to restrict application access to AKS cluster within VNET ](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/restrict-application-access-in-aks-cluster/ba-p/3017826#)
+There are two ingress components:
+
+- [Ingress resources](https://docs.microsoft.com/azure/aks/operator-best-practices-network#ingress-resource)
+- [Ingress Controllers](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/)
+  - [How to create an ingress controller in Azure Kubernetes Service](https://docs.microsoft.com/azure/aks/ingress-basic?tabs=azure-cli)
+  - [How to enable HTTP application routing](https://docs.microsoft.com/azure/aks/http-application-routing)
+  - [How to create an ingress controller to an internal virtual network in AKS](https://docs.microsoft.com/azure/aks/ingress-internal-ip?tabs=azure-cli)
+  - [How client source IP preservation works for loadbalancer services in AKS](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/how-client-source-ip-preservation-works-for-loadbalancer/ba-p/3033722)
+  - [How to restrict application access to AKS cluster within VNET ](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/restrict-application-access-in-aks-cluster/ba-p/3017826#)
 
 Best practice is to use ingress resources and controllers to distribute HTTP or HTTPS traffic to your application as it is a layer 7 loadbalancer.
 
 ## In-cluster Ingress controllers
+
 There are many options for ingress controllers that are maintained and supported by different companies and communities such as nginx, Traefik, HaProxy, Envoy, etc. You can find the list of these controllers in the [official Kubernetes website](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/). The most common one is the nginx ingress controller.
 
 ## NGINX Ingress controllers
