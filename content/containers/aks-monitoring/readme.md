@@ -10,6 +10,37 @@ These layers are illustrated in [Monitor AKS with Azure Monitor for container in
 - Applications / hosted workloads
 - Resources external to AKS
 
+### Tools
+
+- Azure Monitor
+- Alerting
+- Querying Logs with Container Insights
+
+### Enable Azure Monitor for Containers
+```bash
+# Set subscription context
+az account set --subscription <subscriptionId>
+
+# Enable monitoring on existing cluster
+az aks enable-addons -a monitoring -n <clustername> -g <resourcegroupname>
+
+# Enable monitoring on existing cluster with existing workspace
+az aks enable-addons -a monitoring -n <clustername> -g <resourcegroupname> --workspace-resource-id "/subscriptions/<subscriptionId>/resourcegroups/<resourcegroupname>/providers/microsoft.operationalinsights/workspaces/<workspacename>"
+
+# Verify the status and the agent version
+kubectl get ds omsagent --namespace kube-system
+
+# To verify the agent version running on Windows nodepool.
+kubectl get ds omsagent-win --namespace kube-system
+
+# Check the connected workspace details for an existing cluster
+az aks show -g <resourcegroupname> -n <clustername> | grep -i "logAnalyticsWorkspaceResourceID"
+
+# To disable the addon Azure monitor for containers
+az aks disable-addons -a monitoring -g <resourcegroupname> -n <clustername>
+
+````
+
 ## References for log query examples and how to create alert out of them
 - [How to query logs from Container insights](https://docs.microsoft.com/azure/azure-monitor/containers/container-insights-log-query)
 
