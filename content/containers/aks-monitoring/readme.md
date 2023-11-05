@@ -1,6 +1,6 @@
 # AKS Monitoring 
 
-This section presents a common strategy that is a bottoms-up approach starting from infrastructure up through applications. Each layer has distinct monitoring requirements. The approach of this repository is to familarize you with the toolset available and then to discuss, what is it that you should monitor?
+The approach of this repository is to familarize you with the toolset available and then to discuss, what is it that you should monitor? This repository presents a common strategy that is a bottoms-up approach starting from infrastructure up through applications. Each layer has distinct monitoring requirements.
 
 These layers are illustrated in [Monitor AKS with Azure Monitor for container insights](https://learn.microsoft.com/en-us/azure/architecture/aws-professional/eks-to-aks/monitoring)  
 - Cluster level components
