@@ -74,7 +74,7 @@ Real-Time Analytics is a fully managed big data analytics platform optimized for
 - **Source**: API Data/ Logic App
 - **Destination**: KQLDB/ Lakehouse
 
-![Event Stream Use case](images\p1-eventstream.png)
+![Event Stream Use case](./images/p1-eventstream.png)
 
 Here is [**repo**](https://github.com/anshulsharmas/fabric-iss-demo/tree/main) for this demo.
 1) _Event Generator (Logic App)_: This can be any external application or device which is responsible for sending the streaming event data to the event stream endpoint. In this example, we have used Logic apps to send the data into EventStream custom application. Logic Apps to pull the current location of ISS (every 10 sec) from the API : http://open-notify.org/Open-Notify-API/
@@ -82,7 +82,7 @@ Here is [**repo**](https://github.com/anshulsharmas/fabric-iss-demo/tree/main) f
 
 2) _Event Stream_: Event Stream will receive events from the event generator, utilizing a custom app as the source. When creating the custom app, we will obtain a connection string that needs to be integrated into the logic app. Subsequently, the Event Stream will do transformation on the data by cleansing, and then will forward a cleansed output to the Lakehouse table and KQL table. Thus, we have a single source, sending the same data to two destinations. We can do some transformation like aggregation, column selection before storing the data into KQLDB.
 
-![Alt text](images\dataflowdaigram_eventstream.png)
+![Alt text](./images/dataflowdaigram_eventstream.png)
 3) _KQL DB_ : KQL DB stores the data from the event stream. KQL Database is really optimised for the huge amount of Real time dataset like time series data, IoT data etc.
 
 ## Demo Pattern 2:  Ingesting Events using spark structured streaming in Microsoft Fabric.
