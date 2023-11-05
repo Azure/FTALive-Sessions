@@ -52,8 +52,8 @@ Flux CD is Kubernetes-native and can manage any Kubernetes resource. It enables 
 
 ## Argo CD
 Argo CD is a declarative, Kubernetes-native continuous delivery (CD) tool which tracks a repository and detects changes, or "drift". It then applies the required changes to the Kubernetes cluster configuration.
--[Get Started with Argo CD and AKS](https://www.buchatech.com/2021/11/get-started-with-argo-cd-azure-kubernetes-service/)
--[Install ArgoCD on an AKS cluster with NGINX](https://gaunacode.com/install-argocd-on-an-aks-cluster-with-nginx)
+- [Get Started with Argo CD and AKS](https://www.buchatech.com/2021/11/get-started-with-argo-cd-azure-kubernetes-service/)
+- [Install ArgoCD on an AKS cluster with NGINX](https://gaunacode.com/install-argocd-on-an-aks-cluster-with-nginx)
 
 ## Helm
 Helm is a Kubernetes deployment tool that automates the creation, packaging, configuration, and deployment of applications and services to Kubernetes clusters. It is a package manager for Kubernetes that streamlines installing, upgrading, fetching dependencies, and configuring deployments on Kubernetes with simple CLI commands.
