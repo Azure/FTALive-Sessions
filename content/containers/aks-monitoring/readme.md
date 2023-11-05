@@ -41,7 +41,10 @@ az aks show -g <resourcegroupname> -n <clustername> | grep -i "logAnalyticsWorks
 az aks disable-addons -a monitoring -g <resourcegroupname> -n <clustername>
 
 ````
-## Recommended metric alerts and data reference
+## Metric alerts and Data reference
+Metric alerts are a way to proactively identify issues related to system resources of your Azure Kubernetes Service (AKS) clusters. There are two types of metric alerts that you can use to monitor your AKS clusters: Prometheus alert rules and metric alert rules.
+
+Prometheus alert rules use metrics stored in Azure Monitor managed service for Prometheus, which collects metrics from your Kubernetes cluster using a Prometheus agent. You can enable two sets of Prometheus alert rules: community alerts and recommended alerts. Community alerts are handpicked alert rules from the Prometheus community, while recommended alerts are the equivalent of the custom metric alert rules.
 
 - [Recommended metric alerts (preview) from Container insights](https://docs.microsoft.com/azure/azure-monitor/containers/container-insights-metric-alerts)
 
