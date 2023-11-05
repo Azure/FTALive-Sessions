@@ -41,6 +41,9 @@ In a GitOps workflow, the configuration files for your application are stored in
 
 There are several tools available for implementing GitOps on AKS, including Flux and Argo CD. These tools can help you automate the deployment of your applications to AKS and ensure that your cluster is always in the desired state.
 
+- [GitOps for AKS](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/gitops-aks/gitops-blueprint-aks)
+- [CI/CD for AKS Apps](https://learn.microsoft.com/en-us/azure/architecture/guide/aks/aks-cicd-github-actions-and-gitops)
+
 ## Helm
 Helm is a Kubernetes deployment tool that automates the creation, packaging, configuration, and deployment of applications and services to Kubernetes clusters. It is a package manager for Kubernetes that streamlines installing, upgrading, fetching dependencies, and configuring deployments on Kubernetes with simple CLI commands.
 
