@@ -67,11 +67,51 @@ Real-Time Analytics is a fully managed big data analytics platform optimized for
 
 - A [KQL database](https://learn.microsoft.com/en-us/fabric/real-time-analytics/create-database) for data storage and management. Data loaded into a KQL database can be accessed in OneLake and is exposed to other Fabric experiences.
 
-## Demo 1
-###  Ingesting Events using Eventstream.
+!! - [KQL QuerySet] << to be updated>>
 
-![Alt text](images/p1-eventstream.png)
+## Demo :: Pattern-1 - Ingesting Events using Eventstream.
 
-1) _Event Generator_: This can be any external application or device which is responsible for sending the streaming event data to the event stream endpoint. In this example, we utilized a Python application for testing purposes. Here the example dataset is being retrieved periodically from https://opensky-network.org to mock the streaming events. Full Script is here.
+- **Source**: API Data/ Logic App
+- **Destination**: KQLDB/ Lakehouse
 
-2) _Event Stream_: Event Stream will receive events from the event generator, utilizing a custom app as the source. When creating the custom app, we will obtain a connection string that needs to be integrated into the Python app. Subsequently, the Event Stream will do transformation on the data by cleansing, and then will forward a cleansed output to the Lakehouse table and KQL table. Thus, we have a single source, sending the same data to two destinations.
+![Event Stream Use case](images\p1-eventstream.png)
+
+Here is [**repo**](https://github.com/anshulsharmas/fabric-iss-demo/tree/main) for this demo.
+1) _Event Generator (Logic App)_: This can be any external application or device which is responsible for sending the streaming event data to the event stream endpoint. In this example, we have used Logic apps to send the data into EventStream custom application. Logic Apps to pull the current location of ISS (every 10 sec) from the API : http://open-notify.org/Open-Notify-API/
+
+
+2) _Event Stream_: Event Stream will receive events from the event generator, utilizing a custom app as the source. When creating the custom app, we will obtain a connection string that needs to be integrated into the logic app. Subsequently, the Event Stream will do transformation on the data by cleansing, and then will forward a cleansed output to the Lakehouse table and KQL table. Thus, we have a single source, sending the same data to two destinations. We can do some transformation like aggregation, column selection before storing the data into KQLDB.
+
+![Alt text](images\dataflowdaigram_eventstream.png)
+3) _KQL DB_ : KQL DB stores the data from the event stream. KQL Database is really optimised for the huge amount of Real time dataset like time series data, IoT data etc.
+
+## Demo Pattern 2:  Ingesting Events using spark structured streaming in Microsoft Fabric.
+- **Source**: API Data/ Python App -> Event Hub
+- **Destination**: Lakehouse
+
+![Alt text](./images/Pattern2Image.png)
+
+Unlike Pattern 1, this approach provides enhanced flexibility in transformation and the added capability to convert continuous streaming into micro-batches, thus reducing the workload on the workspace. However, it is worth noting that Pattern 1 offers a no-code experience and is better suited for use cases with minimal transformation requirements.
+
+[Structured Streaming](https://learn.microsoft.com/en-us/fabric/data-engineering/lakehouse-streaming-data) is a scalable and fault-tolerant stream processing engine built on Spark. Spark takes care of running the streaming operation incrementally and continuously as data continues to arrive.
+
+Azure Event Hubs Connector for Apache Spark ([azure-event-hubs-spark](https://github.com/Azure/azure-event-hubs-spark)) is recommended to connect Spark application to Azure Event Hubs.
+
+**Notebook Examples:** 
+
+- Event Generator (Python App): This notebook sends the data from the python app to the Event Hub.
+[aync send_flight_data_to_appplicaiton.py](https://github.com/Sam-Panda/FABRICation/blob/main/real_time_analytics/event-generator/aync%20send_flight_data_to_appplicaiton.py)
+- [Structured Streaming Notebook](https://github.com/Sam-Panda/FABRICation/blob/main/real_time_analytics/Notebook-Fabric/LH_RealtTime_Notebook_Structured_Streaming.ipynb)
+
+
+## Demo Pattern 3:  Ingesting smaller Files continuously into Lakehouse.
+- **Source**: Dummy Data/ Python App -> Blob Storage
+- **Destination**: Lakehouse
+
+![Alt text](./images/Pattern3image.png)
+
+**Notebook Examples:** 
+
+- Event Generator (Python App): This notebook create small files with the dummy data into the blob storage. [generateStreamInputFiles.py
+](https://github.com/Sam-Panda/FABRICation/blob/main/real_time_analytics/event-generator/generateStreamInputFiles.py)
+- [Structured Streaming Notebook for the CSV files](https://github.com/Sam-Panda/FABRICation/blob/main/real_time_analytics/Notebook-Fabric/LH_RealTime_Notebook_from_CSV_Structured_Streaming.ipynb)
