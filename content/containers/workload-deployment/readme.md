@@ -44,6 +44,17 @@ There are several tools available for implementing GitOps on AKS, including Flux
 - [GitOps for AKS](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/gitops-aks/gitops-blueprint-aks)
 - [CI/CD for AKS Apps](https://learn.microsoft.com/en-us/azure/architecture/guide/aks/aks-cicd-github-actions-and-gitops)
 
+## Flux CD
+
+Flux CD is a continuous delivery (CD) and GitOps tool for Kubernetes that simplifies and automates the deployment and lifecycle management of applications and infrastructure on Kubernetes. With Flux CD, developers and operators can declaratively define the desired state of their applications and configurations as code stored in a Git repository. Flux CD works by monitoring your source code repository for changes and automatically generating deployments to keep your applications up to date.
+Flux CD is Kubernetes-native and can manage any Kubernetes resource. It enables application deployment (CD) and progressive delivery (PD) through automatic reconciliation. Flux CD can even push back to Git for you with automated container image updates to Git (image scanning and patching).
+- [Git going using Flux CD](https://dev.to/azure/git-going-with-gitops-on-aks-a-step-by-step-guide-using-fluxcd-aks-extension-499m)
+
+## Argo CD
+Argo CD is a declarative, Kubernetes-native continuous delivery (CD) tool which tracks a repository and detects changes, or "drift". It then applies the required changes to the Kubernetes cluster configuration.
+-[Get Started with Argo CD and AKS](https://www.buchatech.com/2021/11/get-started-with-argo-cd-azure-kubernetes-service/)
+-[Install ArgoCD on an AKS cluster with NGINX](https://gaunacode.com/install-argocd-on-an-aks-cluster-with-nginx)
+
 ## Helm
 Helm is a Kubernetes deployment tool that automates the creation, packaging, configuration, and deployment of applications and services to Kubernetes clusters. It is a package manager for Kubernetes that streamlines installing, upgrading, fetching dependencies, and configuring deployments on Kubernetes with simple CLI commands.
 
