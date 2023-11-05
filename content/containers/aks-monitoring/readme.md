@@ -15,7 +15,9 @@ These layers are illustrated in [Monitor AKS with Azure Monitor for container in
 - Azure Monitor
 - Alerting
 - Querying Logs with Container Insights
-
+- Azure Managed Prometheus
+- Azure Managed Grafana
+  
 ### Enable Azure Monitor for Containers
 ```bash
 # Set subscription context
