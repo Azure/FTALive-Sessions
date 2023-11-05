@@ -65,6 +65,16 @@ Azure managed Prometheus is a service that allows you to collect and analyze Pro
     - [Overview of Azure Monitor Managed Service for Prometheus](https://learn.microsoft.com/en-Us/azure/azure-monitor/essentials/prometheus-metrics-overview)
     - [Introduction Blog About Azure Monitor Managed Service for Prometheus](https://techcommunity.microsoft.com/t5/azure-observability-blog/introducing-azure-monitor-managed-service-for-prometheus/ba-p/3600185)
 
+## Azure Managed Grafana
+
+Azure managed Grafana is a fully managed service for analytics and monitoring solutions. It’s supported by Grafana Enterprise, which provides extensible data visualizations. You can quickly and easily deploy Grafana dashboards with built-in high availability and control access with Azure security. Azure managed Grafana is optimized for the Azure environment. It works seamlessly with many Azure services and provides the following integration features:
+- Built-in support for Azure Monitor and Azure Data Explorer
+- User authentication and access control using Microsoft Entra identities
+-	Direct import of existing charts from the Azure portal
+-[Overview of Azure Managed Grafana](https://learn.microsoft.com/en-us/azure/managed-grafana/overview)
+-[Monitoring with Azure Managed Prometheus and Grafana](https://learn.microsoft.com/en-us/azure/hdinsight-aks/monitor-with-prometheus-grafana)
+
+
 # Now, what should be monitored in each layer?
 
 ## Monitor cluster infrastructure & Cluster level components:
