@@ -67,7 +67,7 @@ Real-Time Analytics is a fully managed big data analytics platform optimized for
 
 - A [KQL database](https://learn.microsoft.com/en-us/fabric/real-time-analytics/create-database) for data storage and management. Data loaded into a KQL database can be accessed in OneLake and is exposed to other Fabric experiences.
 
-!! - [KQL QuerySet] << to be updated>>
+
 
 ## Demo :: Pattern-1 - Ingesting Events using Eventstream.
 
