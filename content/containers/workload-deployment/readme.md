@@ -34,6 +34,13 @@ For instructions on Push Deployments using GitHub, please use following referenc
 - [Deploy to AKS using GitHub Actions](https://learn.microsoft.com/en-us/azure/aks/kubernetes-action)
 - [Push Based CI/CD](https://github.com/Azure/aks-baseline-automation/blob/main/workloads/docs/app-flask-push-dockerbuild.md)
 
+## Pull Model
+In the context of AKS deployments, a pull model refers to a deployment model where the Kubernetes cluster pulls the configuration from a Git repository. This is also known as GitOps, which is a set of principles for operating and managing a software system that uses source control as the single source of truth.
+
+In a GitOps workflow, the configuration files for your application are stored in a Git repository. When you make changes to the configuration files, you commit them to the repository. The Kubernetes cluster then pulls the changes from the repository and applies them to the cluster. This approach provides a declarative way to manage your infrastructure and applications, and it enables you to easily roll back changes if necessary.
+
+There are several tools available for implementing GitOps on AKS, including Flux and Argo CD. These tools can help you automate the deployment of your applications to AKS and ensure that your cluster is always in the desired state.
+
 ## Helm
 Helm is a Kubernetes deployment tool that automates the creation, packaging, configuration, and deployment of applications and services to Kubernetes clusters. It is a package manager for Kubernetes that streamlines installing, upgrading, fetching dependencies, and configuring deployments on Kubernetes with simple CLI commands.
 
