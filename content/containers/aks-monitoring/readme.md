@@ -50,7 +50,8 @@ Prometheus alert rules use metrics stored in Azure Monitor managed service for P
 
 - [Monitoring AKS data reference](https://docs.microsoft.com/azure/aks/monitor-aks-reference)
 
-## References for log query examples and how to create alert out of them
+## Query the Logs with Container Insights and create alert out of them
+Querying logs with Container Insights is a way to analyze and troubleshoot the performance and health of your Azure Kubernetes Service (AKS) clusters and containers. Container Insights collects various types of data from your AKS clusters, such as metrics, inventory, and events, and stores them in a Log Analytics workspace in Azure Monitor. You can use Log Analytics to run queries on this data and get insights into your cluster’s behavior and performance.
 - [How to query logs from Container insights](https://docs.microsoft.com/azure/azure-monitor/containers/container-insights-log-query)
 
 - [Create log alert rules](https://docs.microsoft.com/en-us/azure/azure-monitor/containers/container-insights-log-alerts)
