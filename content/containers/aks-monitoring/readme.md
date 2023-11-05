@@ -145,3 +145,11 @@ CPU and memory usage at controller level|	Monitor the applications CPU and memor
 
 - SNAT port utilization - The percentage of SNAT port that has been utilized
 
+## Network observability
+Network observability in AKS is a preview feature that allows you to monitor and troubleshoot the network traffic in your Kubernetes cluster. It collects and converts useful metrics into Prometheus format, which can then be visualized in Grafana. You can use either Azure managed Prometheus and Grafana or your own instances of these tools. Network observability supports both Cilium and non-Cilium data planes. For more information, you can check out the following resources:
+- [What is Azure Kubernetes Service (AKS) Network Observability? (Preview)](https://learn.microsoft.com/en-us/azure/aks/network-observability-overview)
+-	[Setup of Network Observability with Azure managed Prometheus and Grafana](https://learn.microsoft.com/en-us/azure/aks/network-observability-managed-cli?tabs=non-cilium)
+-	[Setup of Network Observability with BYO Prometheus and Grafana](https://learn.microsoft.com/en-us/azure/aks/network-observability-byo-cli?tabs=non-cilium)
+-	[Public Preview: Network Observability add-on on AKS](https://azure.microsoft.com/cs-cz/updates/network-observability-add-on/)
+
+
