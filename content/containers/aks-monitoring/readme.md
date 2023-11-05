@@ -40,17 +40,16 @@ az aks show -g <resourcegroupname> -n <clustername> | grep -i "logAnalyticsWorks
 az aks disable-addons -a monitoring -g <resourcegroupname> -n <clustername>
 
 ````
-
-## References for log query examples and how to create alert out of them
-- [How to query logs from Container insights](https://docs.microsoft.com/azure/azure-monitor/containers/container-insights-log-query)
-
-- [Create log alert rules](https://docs.microsoft.com/en-us/azure/azure-monitor/containers/container-insights-log-alerts)
-
 ## Recommended metric alerts and data reference
 
 - [Recommended metric alerts (preview) from Container insights](https://docs.microsoft.com/azure/azure-monitor/containers/container-insights-metric-alerts)
 
 - [Monitoring AKS data reference](https://docs.microsoft.com/azure/aks/monitor-aks-reference)
+
+## References for log query examples and how to create alert out of them
+- [How to query logs from Container insights](https://docs.microsoft.com/azure/azure-monitor/containers/container-insights-log-query)
+
+- [Create log alert rules](https://docs.microsoft.com/en-us/azure/azure-monitor/containers/container-insights-log-alerts)
 
 # Now, what should be monitored in each layer?
 
