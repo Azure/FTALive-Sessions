@@ -15,5 +15,5 @@
     - CSI Secret Driver
     - Managed Identity  
 - Versioning & Releases
-- Image promotion
+  - Image promotion
   
