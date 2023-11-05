@@ -53,6 +53,18 @@ az aks disable-addons -a monitoring -g <resourcegroupname> -n <clustername>
 
 - [Create log alert rules](https://docs.microsoft.com/en-us/azure/azure-monitor/containers/container-insights-log-alerts)
 
+## Azure Managed Prometheus
+
+Azure managed Prometheus is a service that allows you to collect and analyze Prometheus metrics at scale using a Prometheus-compatible monitoring solution. Prometheus is an open-source project that is widely used for monitoring containerized workloads. Azure managed Prometheus provides the following benefits:
+- It is fully managed by Azure and integrated with Azure Monitor, which means you don’t need to install, configure, or maintain the underlying infrastructure.
+- It supports both Azure Kubernetes Service (AKS) and self-managed Kubernetes clusters as data sources. You can also use Azure Arc-enabled Kubernetes to collect Prometheus metrics from any Kubernetes cluster.
+- It leverages the same platform as Azure Monitor Metrics, which offers high performance, availability, scalability, global reach, compliance, and capacity.
+-	It supports Prometheus alert rules and recording rules based on PromQL queries. You can also use Azure action groups to trigger actions or notifications when an alert is fired.
+-	It integrates with Azure Managed Grafana, which is a fully managed and secure Grafana service that allows you to visualize and analyze your Prometheus metrics using prebuilt or custom dashboards.
+- If you want to learn more about Azure managed Prometheus, you can check out the following resources:
+    - [Overview of Azure Monitor Managed Service for Prometheus](https://learn.microsoft.com/en-Us/azure/azure-monitor/essentials/prometheus-metrics-overview)
+    - [Introduction Blog About Azure Monitor Managed Service for Prometheus](https://techcommunity.microsoft.com/t5/azure-observability-blog/introducing-azure-monitor-managed-service-for-prometheus/ba-p/3600185)
+
 # Now, what should be monitored in each layer?
 
 ## Monitor cluster infrastructure & Cluster level components:
