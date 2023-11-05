@@ -5,7 +5,7 @@
 - Workload Deployments
   - Push Model
     - Azure DevOps
-    - GitHub Workflow
+    - GitHub Actions
   - Pull Model (GitOps)
     - Flux CD
     - Argo CD
@@ -25,7 +25,7 @@ In the context of AKS deployments, a push model refers to a deployment model whe
 
 You can use Azure Pipelines to automatically deploy to Azure Kubernetes Service (AKS) with continuous integration (CI) and continuous delivery (CD) using Azure DevOps 2. You can create a pipeline that continuously builds and deploys your app.
 
-Please note that the basic approach described here can be adapted for other processes, tools, and services, such as Jenkins or Docker Hub.
+Please note that the basic approach described here can be adapted for other processes, tools, and services, such as GitHub, Jenkins or Docker Hub.
 
 For insturctions on Push Deployments Using Azure DevOps, please use following references:
 - [Deploy to AKS using Azure DevOps Pipelines](https://learn.microsoft.com/en-us/azure/aks/devops-pipeline?tabs=cli&pivots=pipelines-classic)
