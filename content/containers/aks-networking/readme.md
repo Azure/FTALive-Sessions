@@ -210,6 +210,11 @@ Whilst AKS customers are able to route egress traffic through an Azure Load Bala
 
 [Cluster egress with Managed NAT Gateway](https://docs.microsoft.com/en-us/azure/aks/nat-gateway)
 
+
+
+
+
+
 # Azure CNI Overlay (advanced)
 
 With [Azure CNI Overlay](https://learn.microsoft.com/en-us/azure/aks/azure-cni-overlay) every node gets an IP address from the cluster subnet. Pods receive IPs from a private CIDR provided at the time of cluster creation. Each node is assigned a /24 address space carved out from the same CIDR. Extra nodes created when you scale out a cluster automatically receive /24 address spaces from the same CIDR.
