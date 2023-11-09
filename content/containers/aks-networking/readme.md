@@ -189,7 +189,7 @@ If `outboundType` is set as `userDefinedRouting`, then AKS won't perform any con
 
 - [Outbound type of userDefinedRouting](https://docs.microsoft.com/azure/aks/egress-outboundtype#outbound-type-of-userdefinedrouting)
 
-## If outbound type set as userDefinedRouting and sending egress to Azure Firewall
+### If outbound type set as UDR and sending egress to Azure Firewall
 
 Azure Firewall provides an Azure Kubernetes Service (AzureKubernetesService) FQDN Tag to simplify this configuration.
 
