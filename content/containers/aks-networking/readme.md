@@ -210,40 +210,42 @@ Whilst AKS customers are able to route egress traffic through an Azure Load Bala
 
 [Cluster egress with Managed NAT Gateway](https://docs.microsoft.com/en-us/azure/aks/nat-gateway)
 
-## Azure CNI Overlay (advanced)
+# Azure CNI Overlay (advanced)
 
 With [Azure CNI Overlay](https://learn.microsoft.com/en-us/azure/aks/azure-cni-overlay) every node gets an IP address from the cluster subnet. Pods receive IPs from a private CIDR provided at the time of cluster creation. Each node is assigned a /24 address space carved out from the same CIDR. Extra nodes created when you scale out a cluster automatically receive /24 address spaces from the same CIDR.
 
-### Planning IP address
-
+## Planning IP address
 - Cluster Nodes
-  - Cluster nodes gets deployed into the subnet in your VNet.
-  - A /24 subnet can fit upto 251 nodes. Leave room for scaling and upgrades.
-- Pods
-  - The Overlay solution assigns a /24 address space for pods on every node from the private CIDR that you specify during cluster creation. Ensure the private CIDR is large enough to provide /24 address spaces for new nodes to support future cluster expansion.
-  - The /24 size is fixed and can't be increased or decreased.
-  - You can run up to 250 pods on a node.
-  - Pod CIDR space must not overlap with the cluster subnet range or with the directly connected networks.
-- Kubernetes service address range
-  - It must be smaller than /12.
-  - This range shouldn't overlap with the pod CIDR range, cluster subnet range, and IP range used in peered VNets and on-premises networks.
-- Kubernetes DNS service IP address
-  - This IP address is within the Kubernetes service address range that's used by cluster service discovery.
-  - Don't use the first IP address in your address range, as this address is used for the kubernetes.default.svc.cluster.local address.
+    - Cluster nodes gets deployed into the subnet in your VNet.
+    - A /24 subnet can fit upto 251 nodes. Leave room for scaling and upgrades.
 
-### Egress Traffic
+- Pods
+    - The Overlay solution assigns a /24 address space for pods on every node from the private CIDR that you specify during cluster creation. Ensure the private CIDR is large enough to provide /24 address spaces for new nodes to support future cluster expansion.
+    - The /24 size is fixed and can't be increased or decreased.
+    - You can run up to 250 pods on a node.
+    - Pod CIDR space must not overlap with the cluster subnet range or with the directly connected networks.
+
+- Kubernetes service address range
+    - It must be smaller than /12.
+    - This range shouldn't overlap with the pod CIDR range, cluster subnet range, and IP range used in peered VNets and on-premises networks.
+ 
+- Kubernetes DNS service IP address
+    - This IP address is within the Kubernetes service address range that's used by cluster service discovery.
+    - Don't use the first IP address in your address range, as this address is used for the kubernetes.default.svc.cluster.local address.
+ 
+## Egress Traffic
 
 - Communication with endpoints outside the cluster happens through the node IP through NAT.
 - You can provide outbound (egress) connectivity to the internet for Overlay pods using a Standard SKU Load Balancer or Managed NAT Gateway.
 - It translates the source IP ( the pod IP) of the traffic to the primary address of the VM which enables Azure networking stack to route the traffic.
 - You can also control egress traffic by directing it to a firewall using User Defined Routes on the cluster subnet.
 
-### Ingress Connectivity
+## Ingress Connectivity
 
 - You can configure ingress connectivity to the cluster using an ingress controller, such as Nginx or HTTP application routing.
 - You cannot configure ingress connectivity using Azure App Gateway.
 
-### When to use Overlay?
+## When to use Overlay?
 
 - You would like to scale to a large number of pods, but have limited IP address space in your VNet.
 - Most of the pod communication is within the cluster.
@@ -257,15 +259,14 @@ With [Azure CNI Overlay](https://learn.microsoft.com/en-us/azure/aks/azure-cni-o
 - You can't use DCsv2-series virtual machines in node pools. 
 
 # Different Types of Services in Kubernetes
-
 [Basic Concepts of Kubernetes Services](https://kubernetes.io/docs/concepts/services-networking/service/)
 
 - ClusterIP : Default Kubernetes service accessible inside the Kubernetes cluster - no external access.
 - NodePort : Most primitive way to get external traffic directly to your service. It opens a specific port on all the Nodes and any traffic sent to this port is forwarded to the service.
 - LoadBalancer : Standard way to expose a service to the internet. In Azure, this will spin up an Azure Load Balancer (L4) that gives us a single public IP address that forwards all traffic to your service.
-  - [How to create an internal LoadBalancer](https://docs.microsoft.com/azure/aks/internal-lb)
-  - [How to create a Standard LoadBalancer](https://docs.microsoft.com/azure/aks/load-balancer-standard)
-  - [Use a static public IP address and DNS label with the AKS load balancer](https://docs.microsoft.com/azure/aks/static-ip)
+    - [How to create an internal LoadBalancer](https://docs.microsoft.com/azure/aks/internal-lb)
+    - [How to create a Standard LoadBalancer](https://docs.microsoft.com/azure/aks/load-balancer-standard)
+    - [Use a static public IP address and DNS label with the AKS load balancer](https://docs.microsoft.com/azure/aks/static-ip)
 - External DNS : Creates a specific DNS entry for easier application access.
 
 ## Ingress
