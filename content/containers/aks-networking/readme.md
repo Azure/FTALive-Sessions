@@ -3,7 +3,7 @@
 ## Overview
 In this session you will learn about Azure Kubernetes Services networking and the core concepts that provide networking to the application in AKS. Additionally, you will also learn about service mesh and its capabilities.
 
-## Agenda
+### Agenda
 
 - Overview of AKS networking models, IP address planning and its limitations.
 - AKS Private cluster and Egress control.
@@ -11,7 +11,7 @@ In this session you will learn about Azure Kubernetes Services networking and th
 - Overview about different network policies and control traffic between pods.
 - Overview about Service Mesh and different open source products.
 
-## Different Types of Services in Kubernetes
+### Different Types of Services in Kubernetes
 
 [Basic Concepts of Kubernetes Services](https://kubernetes.io/docs/concepts/services-networking/service/)
 
@@ -30,7 +30,7 @@ AKS support two [network models](https://docs.microsoft.com/azure/aks/concepts-n
 - Kubenet (basic) networking
 - Azure CNI (advanced) networking
 
-## Kubenet
+### Kubenet
 
 [Kubenet](https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/#kubenet) networking is the default configuration option for AKS cluster creation.
 
@@ -85,7 +85,7 @@ You can bring your own route table as well.
     - Virtual nodes add-on
     - Windows node pools
 
-## IP Address space
+### IP Address space
 
 With Kubenet you can use a smaller IP address range and support large clusters. 
 
@@ -95,7 +95,7 @@ For more details:
 
 - [Limitations and considerations for kubenet](https://docs.microsoft.com/azure/aks/configure-kubenet#limitations--considerations-for-kubenet)
 
-## Azure CNI (advanced)
+### Azure CNI (advanced)
 
 With [Azure CNI](https://docs.microsoft.com/azure/aks/concepts-network#azure-cni-advanced-networking) every pod gets an IP address from the cluster subnet. These IP addresses must be unique across network space.
 
@@ -105,7 +105,7 @@ With [Azure CNI](https://docs.microsoft.com/azure/aks/concepts-network#azure-cni
 - IP address should be planned according to the number of node pools, nodes, and maximum number of pods per node.
 - If Internal load balancers are deployed, front IPs are allocated from the cluster subnet
 
-## Planning IP address
+### Planning IP address
 
 - [IP address planning](https://docs.microsoft.com/azure/aks/configure-azure-cni#plan-ip-addressing-for-your-cluster)
 - [Maximum pods per node](https://docs.microsoft.com/azure/aks/configure-azure-cni#maximum-pods-per-node)
@@ -113,13 +113,13 @@ With [Azure CNI](https://docs.microsoft.com/azure/aks/concepts-network#azure-cni
 
 > While planning the IP addresses, leave some additional room for upgrade operations. By default, AKS configures upgrades to surge with 1 extra node.
 
-## Dynamic allocation of IPs and enhanced subnet support (preview)
+### Dynamic allocation of IPs and enhanced subnet support (preview)
 
 A drawback with the traditional CNI is the exhaustion of pod IP addresses as the AKS cluster grows, resulting in the need to rebuild the entire cluster in a bigger subnet.
 
 The new [dynamic IP](https://docs.microsoft.com/en-us/azure/aks/configure-azure-cni#dynamic-allocation-of-ips-and-enhanced-subnet-support-preview) allocation capability in Azure CNI solves this problem by allotting pod IPs from a subnet separate from the subnet hosting the AKS cluster.
 
-## The IP tables in Azure Kubernetes Service
+### The IP tables in Azure Kubernetes Service
 
 - Cluster level rules for each service.
 - KUBE-MARK-MASQ, KUBE-SVC-xyz, and KUBE-SEP-xyz rules.
@@ -131,7 +131,7 @@ The two ways that Azure provides network policies use Linux IP tables to control
 
 > Walkthrough the customer on the rules and rule chains and how the routing decision has been made.
 
-## If Azure Application Gateway is used, how the networking between Application gateway and AKS can be setup?
+### If Azure Application Gateway is used, how the networking between Application gateway and AKS can be setup?
 
 Refer [How to setup networking between Application gateway and AKS](https://azure.github.io/application-gateway-kubernetes-ingress/how-tos/networking/#with-kubenet)
 
@@ -145,7 +145,7 @@ Two things to consider when setting up networking between Application gateway an
 
 In either cases if Kubenet used, need to [associate route table](https://azure.github.io/application-gateway-kubernetes-ingress/how-tos/networking/#with-kubenet) created by AKS with application gateway subnet for the routing as pods don't receive routable IPs from the cluster subnet.
 
-## Private AKS cluster
+### Private AKS cluster
 
 When creating an AKS private cluster the control plane has an internal IP address. Private cluster ensures traffic between API server and node pools remain private network.
 
@@ -165,7 +165,7 @@ Private endpoint allows the VNET to communicate with Private cluster. To connect
   - Authorized IP ranges cannot be applied.
   - No support for Azure DevOps Microsoft hosted agents.
 
-## Cluster Egress Control
+### Cluster Egress Control
 
 The cluster deployed on virtual network has outbound dependencies on services outside of virtual network.
 
@@ -204,11 +204,69 @@ How to [restrict egress traffic using Azure Firewall?](https://docs.microsoft.co
 
 [Using SNAT for outbound connections](https://docs.microsoft.com/azure/load-balancer/load-balancer-outbound-connections)
 
-## Managed NAT Gateway
+### Managed NAT Gateway
 
 Whilst AKS customers are able to route egress traffic through an Azure Load Balancer, there are limitations on the amount of outbound flows of traffic that is possible.
 
 [Cluster egress with Managed NAT Gateway](https://docs.microsoft.com/en-us/azure/aks/nat-gateway)
+
+## Azure CNI Overlay (advanced)
+
+With [Azure CNI Overlay](https://learn.microsoft.com/en-us/azure/aks/azure-cni-overlay) every node gets an IP address from the cluster subnet. Pods receive IPs from a private CIDR provided at the time of cluster creation. Each node is assigned a /24 address space carved out from the same CIDR. Extra nodes created when you scale out a cluster automatically receive /24 address spaces from the same CIDR.
+
+### Planning IP address
+
+- Cluster Nodes
+  - Cluster nodes gets deployed into the subnet in your VNet.
+  - A /24 subnet can fit upto 251 nodes. Leave room for scaling and upgrades.
+- Pods
+  - The Overlay solution assigns a /24 address space for pods on every node from the private CIDR that you specify during cluster creation. Ensure the private CIDR is large enough to provide /24 address spaces for new nodes to support future cluster expansion.
+  - The /24 size is fixed and can't be increased or decreased.
+  - You can run up to 250 pods on a node.
+  - Pod CIDR space must not overlap with the cluster subnet range or with the directly connected networks.
+- Kubernetes service address range
+  - It must be smaller than /12.
+  - This range shouldn't overlap with the pod CIDR range, cluster subnet range, and IP range used in peered VNets and on-premises networks.
+- Kubernetes DNS service IP address
+  - This IP address is within the Kubernetes service address range that's used by cluster service discovery.
+  - Don't use the first IP address in your address range, as this address is used for the kubernetes.default.svc.cluster.local address.
+
+### Egress Traffic
+
+- Communication with endpoints outside the cluster happens through the node IP through NAT.
+- You can provide outbound (egress) connectivity to the internet for Overlay pods using a Standard SKU Load Balancer or Managed NAT Gateway.
+- It translates the source IP ( the pod IP) of the traffic to the primary address of the VM which enables Azure networking stack to route the traffic.
+- You can also control egress traffic by directing it to a firewall using User Defined Routes on the cluster subnet.
+
+### Ingress Connectivity
+
+- You can configure ingress connectivity to the cluster using an ingress controller, such as Nginx or HTTP application routing.
+- You cannot configure ingress connectivity using Azure App Gateway.
+
+### When to use Overlay?
+
+- You would like to scale to a large number of pods, but have limited IP address space in your VNet.
+- Most of the pod communication is within the cluster.
+- You don't need advanced AKS features, such as virtual nodes.
+
+## Limitations
+
+- You can't use Application Gateway as an Ingress Controller (AGIC) for an Overlay cluster.
+- Virtual Machine Availability Sets (VMAS) aren't supported for Overlay.
+- Dual stack networking isn't supported in Overlay.
+- You can't use DCsv2-series virtual machines in node pools. 
+
+# Different Types of Services in Kubernetes
+
+[Basic Concepts of Kubernetes Services](https://kubernetes.io/docs/concepts/services-networking/service/)
+
+- ClusterIP : Default Kubernetes service accessible inside the Kubernetes cluster - no external access.
+- NodePort : Most primitive way to get external traffic directly to your service. It opens a specific port on all the Nodes and any traffic sent to this port is forwarded to the service.
+- LoadBalancer : Standard way to expose a service to the internet. In Azure, this will spin up an Azure Load Balancer (L4) that gives us a single public IP address that forwards all traffic to your service.
+  - [How to create an internal LoadBalancer](https://docs.microsoft.com/azure/aks/internal-lb)
+  - [How to create a Standard LoadBalancer](https://docs.microsoft.com/azure/aks/load-balancer-standard)
+  - [Use a static public IP address and DNS label with the AKS load balancer](https://docs.microsoft.com/azure/aks/static-ip)
+- External DNS : Creates a specific DNS entry for easier application access.
 
 ## Ingress
 
@@ -263,7 +321,6 @@ AGIC leverages the AKS’ advanced networking, which allocates an IP address for
 - [Enable multiple Namespace support in an AKS cluster with Application Gateway Ingress Controller](https://docs.microsoft.com/azure/application-gateway/ingress-controller-multiple-namespace-support)
 - [What Does It Mean for the Application Gateway Ingress Controller (AGIC) to Assume “Full Ownership”?](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/what-does-it-mean-for-the-application-gateway-ingress-controller/ba-p/2839051)
 
-
 It can be deployed in two ways:
 
 Helm
@@ -285,11 +342,10 @@ Add-On
 There are two ways to implement Network Policies in AKS:
 
 - Azure Network Policies
-    - [Azure Container Networking Github Repo](https://github.com/Azure/azure-container-networking/blob/master/README.md)  
-    
+  - [Azure Container Networking Github Repo](https://github.com/Azure/azure-container-networking/blob/master/README.md)    
 - Calico Network Policies, an open source network.
-    - [Calico Network Policies with AKS](https://cloudblogs.microsoft.com/opensource/2019/10/17/tutorial-calico-network-policies-with-azure-kubernetes-service/)
-    - [Calico Open Source Github Repo](https://github.com/projectcalico/calico)  
+  - [Calico Network Policies with AKS](https://cloudblogs.microsoft.com/opensource/2019/10/17/tutorial-calico-network-policies-with-azure-kubernetes-service/)
+  - [Calico Open Source Github Repo](https://github.com/projectcalico/calico)  
 - [Difference between Azure and Calico network policies](https://docs.microsoft.com/azure/aks/use-network-policies#differences-between-azure-and-calico-policies-and-their-capabilities)
 - [How to secure traffic between pods using network policies](https://docs.microsoft.com/azure/aks/use-network-policies)
 - [Deploy AKS clusters with network policy using Infrastructure as a code(IAC)](https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.NetworkPolicy/)
