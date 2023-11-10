@@ -313,6 +313,12 @@ There are many options for ingress controllers that are maintained and supported
 
 AGIC leverages the AKS’ advanced networking, which allocates an IP address for each pod from the subnet shared with Application Gateway. Application Gateway Ingress Controller has direct access to all Kubernetes pods. This eliminates the need for data to pass through kubenet.
 
+AGIC helps eliminate the need to have another load balancer/public IP in front of the AKS cluster and avoids multiple hops in your datapath before requests reach the AKS cluster. Application Gateway talks to pods using their private IP directly and does not require NodePort or KubeProxy services. This also brings better performance to your deployments.
+
+Azure Application Gateway must be in the same Virtual Network or in a Peered Virtual Network. The communication between Azure Application Gateway and AKS will always happen using a Virtual Network connectivity.
+
+You can setup to use End-to-end TLS or TLS offloading.
+
 ![image](https://user-images.githubusercontent.com/83619402/150572133-6e213053-41b3-4d4f-b77c-60295289b14d.png)
 
 - [Benefits of Application Gateway Ingress Controller](https://docs.microsoft.com/azure/azure-monitor/containers/container-insights-log-query)
@@ -327,12 +333,25 @@ AGIC leverages the AKS’ advanced networking, which allocates an IP address for
 It can be deployed in two ways:
 
 Helm
+
 - [How to Install an Application Gateway Ingress Controller (AGIC) Using a New Application Gateway](https://docs.microsoft.com/azure/application-gateway/ingress-controller-install-new)
 - [Install an Application Gateway Ingress Controller (AGIC) using an existing Application Gateway](https://docs.microsoft.com/azure/application-gateway/ingress-controller-install-existing)
 
 Add-On
+
 - [Enable the Ingress Controller add-on for a new AKS cluster with a new Application Gateway instance](https://docs.microsoft.com/azure/application-gateway/tutorial-ingress-controller-add-on-new)
 - [Enable Application Gateway Ingress Controller add-on for an existing AKS cluster with an existing Application Gateway](https://docs.microsoft.com/azure/application-gateway/tutorial-ingress-controller-add-on-existing)
+
+**Reference:**
+
+[What is Application Gateway Ingress Controller?](https://docs.microsoft.com/azure/application-gateway/ingress-controller-overview)
+
+[Enable Application Gateway Ingress Controller add-on for an existing AKS cluster with an existing Application Gateway](https://docs.microsoft.com/azure/application-gateway/tutorial-ingress-controller-add-on-existing)
+
+[AKS Add-On Greenfield Deployment](https://docs.microsoft.com/azure/application-gateway/tutorial-ingress-controller-add-on-new)
+[AKS Add-On Brownfield Deployment](https://docs.microsoft.com/azure/application-gateway/tutorial-ingress-controller-add-on-existing)
+[Helm Greenfield Deployment](https://docs.microsoft.com/azure/application-gateway/ingress-controller-install-new)
+[Helm Brownfield Deployment](https://docs.microsoft.com/azure/application-gateway/ingress-controller-install-existing)
 
 ### HAProxy Ingress controllers
 
@@ -345,7 +364,7 @@ Add-On
 There are two ways to implement Network Policies in AKS:
 
 - Azure Network Policies
-  - [Azure Container Networking Github Repo](https://github.com/Azure/azure-container-networking/blob/master/README.md)    
+  - [Azure Container Networking Github Repo](https://github.com/Azure/azure-container-networking/blob/master/README.md)
 - Calico Network Policies, an open source network.
   - [Calico Network Policies with AKS](https://cloudblogs.microsoft.com/opensource/2019/10/17/tutorial-calico-network-policies-with-azure-kubernetes-service/)
   - [Calico Open Source Github Repo](https://github.com/projectcalico/calico)  
@@ -412,22 +431,3 @@ Accessing Azure Key-vault:
 [Use the Azure Key Vault Provider for Secrets Store CSI Driver in an AKS cluster](https://docs.microsoft.com/azure/aks/csi-secrets-store-driver)
 
 [Provide an identity to access the Azure Key Vault Provider for Secrets Store CSI Driver](https://docs.microsoft.com/azure/aks/csi-secrets-store-identity-access)
-
-### Application Gateway (AGIC)
-
-AGIC helps eliminate the need to have another load balancer/public IP in front of the AKS cluster and avoids multiple hops in your datapath before requests reach the AKS cluster. Application Gateway talks to pods using their private IP directly and does not require NodePort or KubeProxy services. This also brings better performance to your deployments.
-
-Azure Application Gateway must be in the same Virtual Network or in a Peered Virtual Network. The communication between Azure Application Gateway and AKS will always happen using a Virtual Network connectivity.
-
-You can setup to use End-to-end TLS or TLS offloading.
-
-**Reference:**
-
-[What is Application Gateway Ingress Controller?](https://docs.microsoft.com/azure/application-gateway/ingress-controller-overview)
-
-[Enable Application Gateway Ingress Controller add-on for an existing AKS cluster with an existing Application Gateway](https://docs.microsoft.com/azure/application-gateway/tutorial-ingress-controller-add-on-existing)
-
-[AKS Add-On Greenfield Deployment](https://docs.microsoft.com/azure/application-gateway/tutorial-ingress-controller-add-on-new)
-[AKS Add-On Brownfield Deployment](https://docs.microsoft.com/azure/application-gateway/tutorial-ingress-controller-add-on-existing)
-[Helm Greenfield Deployment](https://docs.microsoft.com/azure/application-gateway/ingress-controller-install-new)
-[Helm Brownfield Deployment](https://docs.microsoft.com/azure/application-gateway/ingress-controller-install-existing)
