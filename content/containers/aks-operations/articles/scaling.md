@@ -18,7 +18,7 @@ To get started with the horizontal pod autoscaler in AKS, see Autoscale pods in 
 
 To respond to changing pod demands, the Kubernetes cluster autoscaler adjusts the number of nodes based on the requested compute resources in the node pool. By default, the cluster autoscaler checks the Metrics API server every 10 seconds for any required changes in node count. If the cluster autoscaler determines that a change is required, the number of nodes in your AKS cluster is increased or decreased accordingly. The cluster autoscaler works with Kubernetes RBAC-enabled AKS clusters that run Kubernetes 1.10.x or higher.
 
-Kubernetes cluster autoscaler
+![Kubernetes cluster autoscaler](../assests/ClusterAutoscaling.png)
 
 The cluster autoscaler is typically used alongside the horizontal pod autoscaler. When combined, the horizontal pod autoscaler increases or decreases the number of pods based on application demand, and the cluster autoscaler adjusts the number of nodes to run additional pods.
 
