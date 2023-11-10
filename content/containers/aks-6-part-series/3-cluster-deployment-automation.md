@@ -6,19 +6,39 @@
 Overview
 
 - Why use AKS?
+- What do you need to decide before deployment 
+  - VM Type/Size 
+  - Network Model 
+  - Network Size 
+  - Availailiy Zone Considerations 
+      https://learn.microsoft.com/en-us/azure/aks/availability-zones
+  - Private or Public cluster 
+      https://learn.microsoft.com/en-us/azure/aks/private-clusters?tabs=azure-portal#limitations
+    
 - Why Automate Cluster Deployment?
 - AKS Cluster Configuration
-  - Portal Demo
+  - Portal Demo 
+      https://learn.microsoft.com/en-us/azure/aks/learn/quick-kubernetes-deploy-portal?tabs=azure-cli
   - Azure CLI & Shell Script
+      https://learn.microsoft.com/en-us/azure/aks/learn/quick-kubernetes-deploy-cli
+      https://learn.microsoft.com/en-us/azure/aks/learn/quick-kubernetes-deploy-powershell
+
 - Infrastructure as Code Walkthrough
   - ["Stamp"](https://docs.microsoft.com/en-us/azure/architecture/patterns/deployment-stamp) or "Cookie Cutter" Deployments
-  - Configuration Management
+
+  - Configuration Management  - What do you mean with this ? 
+
   - Key Vault Integration
-  - Ingress Controller, TLS and DNS 
+
+  - Ingress Controller, TLS and DNS  
+
 - Landing Zone Considerations
+
 - Workload Considerations
+
 - Resource Lifecycles
-- Versioning
+
+- Versioning  
  
 ## "Realistic" IaC Examples for AKS
 
