@@ -8,7 +8,7 @@ Kubernetes uses the horizontal pod autoscaler (HPA) to monitor the resource dema
 
 ![Horizontal Pod Autoscaler](../assets/HPA.png)
 
-Kubernetes horizontal pod autoscaling
+- Kubernetes horizontal pod autoscaling
 
 When you configure the HPA for a given deployment, you define the minimum and maximum number of replicas that can run. You also define the metric to monitor and base any scaling decisions on, such as CPU usage.
 
