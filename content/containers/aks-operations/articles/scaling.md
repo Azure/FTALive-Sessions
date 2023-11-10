@@ -6,6 +6,8 @@ When running applications in Azure Kubernetes Service (AKS), you may need to inc
 - Horizontal pod autoscaler
 Kubernetes uses the horizontal pod autoscaler (HPA) to monitor the resource demand and automatically scale the number of pods. By default, the HPA checks the Metrics API every 15 seconds for any required changes in replica count, and the Metrics API retrieves data from the Kubelet every 60 seconds. So, the HPA is updated every 60 seconds. When changes are required, the number of replicas is increased or decreased accordingly. The HPA works with AKS clusters that have deployed the Metrics Server for Kubernetes 1.8+.
 
+![Horizontal Pod Autoscaler](./assets/HPA.png)
+
 Kubernetes horizontal pod autoscaling
 
 When you configure the HPA for a given deployment, you define the minimum and maximum number of replicas that can run. You also define the metric to monitor and base any scaling decisions on, such as CPU usage.
