@@ -15,7 +15,7 @@ As a side note, the 3rd party open source tools that we use in the session are o
 ## Agenda
 
 - [Resource Management](./articles/resource-management.md)
-- [Sacling Options](./articles/scaling.md)
+- [Scaling Options](./articles/scaling.md)
 - [Patching and Upgrade](./articles/patching-upgrade.md)
 - [Business Continuity and Disaster Recovery](./articles/bcdr.md)
 
@@ -26,5 +26,3 @@ We'd love to know if you have any feedback regarding the content and the deliver
 ## About FastTrack for Azure
 
 FastTrack for Azure is a technical enablement program that helps with rapid and effective design and deployment of cloud solutions. It includes tailored guidance from Azure engineers to provide proven practices and architectural guidance. For more information, please see [Microsoft FastTrack for Azure](https://azure.microsoft.com/programs/azure-fasttrack/).
-
-updated  by bc
