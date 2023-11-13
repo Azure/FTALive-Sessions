@@ -314,7 +314,6 @@ The application routing add-on with nginx delivers the following:
 ### NGINX Ingress controllers
 
 - [How to create an ingress controller in Azure Kubernetes Service](https://docs.microsoft.com/azure/aks/ingress-basic?tabs=azure-cli)
-- [How to enable HTTP application routing](https://docs.microsoft.com/azure/aks/http-application-routing)
 - [How to create an ingress controller to an internal virtual network in AKS](https://docs.microsoft.com/azure/aks/ingress-internal-ip?tabs=azure-cli)
       - [How client source IP preservation works for loadbalancer services in AKS](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/how-client-source-ip-preservation-works-for-loadbalancer/ba-p/3033722)
       - [How to restrict application access to AKS cluster within VNET](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/restrict-application-access-in-aks-cluster/ba-p/3017826#)
