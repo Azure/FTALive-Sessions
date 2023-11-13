@@ -260,7 +260,8 @@ With [Azure CNI Overlay](https://learn.microsoft.com/en-us/azure/aks/azure-cni-o
 - Dual stack networking isn't supported in Overlay.
 - You can't use DCsv2-series virtual machines in node pools. 
 
-### Different Types of Services in Kubernetes
+### Different Types of Services in Kubernetes (CNI Overlay)
+
 [Basic Concepts of Kubernetes Services](https://kubernetes.io/docs/concepts/services-networking/service/)
 
 - ClusterIP : Default Kubernetes service accessible inside the Kubernetes cluster - no external access.
@@ -295,6 +296,20 @@ Best practice is to use ingress resources and controllers to distribute HTTP or 
 ### In-cluster Ingress controllers
 
 There are many options for ingress controllers that are maintained and supported by different companies and communities such as nginx, Traefik, HaProxy, Envoy, etc. You can find the list of these controllers in the [official Kubernetes website](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/). The most common one is the nginx ingress controller.
+
+### Application Routing add-on
+
+The application routing add-on with nginx delivers the following:
+
+- Easy configuration of managed nginx Ingress controllers based on Kubernetes nginx Ingress controller.
+- Integration with Azure DNS for public and private zone management
+- SSL termination with certificates stored in Azure Key Vault.
+
+[Application Routing add-on](https://learn.microsoft.com/en-us/azure/aks/app-routing?tabs=default%2Cdeploy-app-default#application-routing-add-on-with-nginx-features)
+
+[Application Routing add-on advanced configs](https://learn.microsoft.com/en-us/azure/aks/app-routing-configuration)
+
+[Migrate from HTTP Application routing to the application routing add-on](https://learn.microsoft.com/en-us/azure/aks/app-routing-migration)
 
 ### NGINX Ingress controllers
 
