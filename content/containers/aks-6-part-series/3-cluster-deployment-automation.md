@@ -15,7 +15,7 @@ Overview
   - Private or Public cluster 
       https://learn.microsoft.com/en-us/azure/aks/private-clusters?tabs=azure-portal#limitations
     
-- Why Automate Cluster Deployment?
+
 - AKS Cluster Deployment Options :
     - Azure Portal
     - Azure CLI
@@ -27,6 +27,8 @@ Overview
       https://learn.microsoft.com/en-us/azure/aks/learn/quick-kubernetes-deploy-cli
       https://learn.microsoft.com/en-us/azure/aks/learn/quick-kubernetes-deploy-powershell
  
+
+- Why Automate Cluster Deployment?
 - Landing Zone Considerations
 
  
@@ -56,8 +58,7 @@ Complete Open Source Infrastructure as Code examples for AKS
 - [Azure Architecture Center >  Reference Architecture > Secure AKS Baseline](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/containers/aks/secure-baseline-aks)
 - [AKS Landing zone accelerator](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/app-platform/aks/landing-zone-accelerator)
 - [Landing Zone checklists ](https://github.com/Azure/review-checklists/tree/main/spreadsheet/macrofree)
-
-
+- [AKS Roadmap ](https://github.com/Azure/AKS/projects/1)
 
 
 
