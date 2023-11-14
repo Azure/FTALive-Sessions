@@ -46,6 +46,9 @@ Complete Open Source Infrastructure as Code examples for AKS
 - [Infrastructure as Code (IaC) Comparison](https://github.com/Azure/FTALive-Sessions/tree/main/content/devops/cicd-infra#infrastructure-as-code-iac-comparison) - ARM, Bicep vs Terraform comparison table from the [FTA Live for Infra as Code Handout](https://github.com/Azure/FTALive-Sessions/tree/main/content/devops/cicd-infra#infrastructure-as-code-iac-comparison)
 
 
+## New Features (As of Nov 2023)
+- [Azure Container Storage in AKS](https://azure.microsoft.com/en-us/updates/preview-azure-container-storage-in-aks-cli-experience/)
+- [Disable Secure Shell (SSH) support in AKS](https://azure.microsoft.com/en-us/updates/public-preview-disable-secure-shell-ssh-support-in-aks/)
 ## Reference Links
 
 - [Azure Architecture Center >  Reference Architecture > Secure AKS Baseline](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/containers/aks/secure-baseline-aks)
@@ -53,6 +56,7 @@ Complete Open Source Infrastructure as Code examples for AKS
 - [Landing Zone checklists ](https://github.com/Azure/review-checklists/tree/main/spreadsheet/macrofree)
 - [AKS Baseline for Multi Region Clusters](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/containers/aks-multi-region/aks-multi-cluster)
 - [AKS Roadmap ](https://github.com/Azure/AKS/projects/1)
+
 
 
 
