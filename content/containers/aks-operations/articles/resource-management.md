@@ -50,4 +50,6 @@ Read further:
   > ⚠️
   > Be cautious when you use VPA in production. Due to how Kubernetes works, when you create VPA in `Auto` or `Recreate` update mode, it evicts the pod if it needs to change its resource requests, which may cause downtime. Make sure you understand its [limitations](https://github.com/kubernetes/autoscaler/tree/master/vertical-pod-autoscaler#known-limitations) before using it.
 
+- [Kubernetes Event-driven AutoScaling(KEDA)](https://learn.microsoft.com/en-us/azure/aks/keda-about) applies event-driven autoscaling to scale your application to meet demand in a sustainable and cost-efficient manner with scale-to-zero.
+
 - [Kubecost](https://www.kubecost.com/) can be used to get the insights of the cost and resource usage pattern.
