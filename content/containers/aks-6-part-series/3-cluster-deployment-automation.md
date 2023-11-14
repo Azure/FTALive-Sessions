@@ -16,29 +16,20 @@ Overview
       https://learn.microsoft.com/en-us/azure/aks/private-clusters?tabs=azure-portal#limitations
     
 - Why Automate Cluster Deployment?
-- AKS Cluster Configuration
+- AKS Cluster Deployment Options :
+    - Azure Portal
+    - Azure CLI
+    - Infrastructure as a Code (IaC)
+    - Azure Accelerator 
   - Portal Demo 
       https://learn.microsoft.com/en-us/azure/aks/learn/quick-kubernetes-deploy-portal?tabs=azure-cli
   - Azure CLI & Shell Script
       https://learn.microsoft.com/en-us/azure/aks/learn/quick-kubernetes-deploy-cli
       https://learn.microsoft.com/en-us/azure/aks/learn/quick-kubernetes-deploy-powershell
-
-- Infrastructure as Code Walkthrough
-  - ["Stamp"](https://docs.microsoft.com/en-us/azure/architecture/patterns/deployment-stamp) or "Cookie Cutter" Deployments
-
-  - Configuration Management  - What do you mean with this ? 
-
-  - Key Vault Integration
-
-  - Ingress Controller, TLS and DNS  
-
+ 
 - Landing Zone Considerations
 
-- Workload Considerations
-
-- Resource Lifecycles
-
-- Versioning  
+ 
  
 ## "Realistic" IaC Examples for AKS
 
@@ -57,45 +48,16 @@ Complete Open Source Infrastructure as Code examples for AKS
 - [Azure Docs: Use the Azure Key Vault Provider for Secrets Store CSI Driver in an AKS cluster](https://docs.microsoft.com/en-us/azure/aks/csi-secrets-store-driver) - how to enable and use as addon
 - [CSI Driver Homepage](https://azure.github.io/secrets-store-csi-driver-provider-azure/docs/) - more technical details, manual installation via Helm chart, etc.
 
-## Scenario - AKS as an Application Platform
 
-The following concepts and structure are a simplified version from **[Cloud Adoption Framework: Compare common cloud operating models](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/operating-model/compare)**
-
-### Operating Models
-
-- Decentralized Operations
-- Centralized Operations
-- Enterprise Operations
-
-#### Concerns
-
-- Workload 
-- Platform 
-- Landing Zone 
-- Cloud Foundation
-
-#### Diagram
-
-Example Implementation of above concepts with Azure Kubernetes Service (AKS) as Application Platform
-
-![CI/CD Separations of Concerns](../../../images/cicd-separation-of-concerns.png)
 
 
 ## Reference Links
 
-Important Links
-
 - [Azure Architecture Center >  Reference Architecture > Secure AKS Baseline](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/containers/aks/secure-baseline-aks)
+- [AKS Landing zone accelerator](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/app-platform/aks/landing-zone-accelerator)
+- [Landing Zone checklists ](https://github.com/Azure/review-checklists/tree/main/spreadsheet/macrofree)
 
-Miscellaneous links from 23 August 2022 session 
 
-- Ingress Controllers
-  - [Traefik (open source)](https://doc.traefik.io/traefik/providers/kubernetes-ingress/)
-  - [nginx (open source)](https://kubernetes.github.io/ingress-nginx/)
-  - [App Gateway Ingress Controller (MSFT)](https://docs.microsoft.com/en-us/azure/application-gateway/ingress-controller-overview)
-- Demo Related Terraform Files
-  - [shared infra](https://github.com/julie-ng/cloudkube-shared-infra) for Azure DNS, Role Assignments for TLS Certificates in Key Vault 
-  - [workload infrastructure.tf](https://github.com/julie-ng/cloud-architecture-review/blob/main/infrastructure.tf) meant to be run by admin (Julie) to
-    - create workload specific Azure Container Registry (ACR)
-    - give cluster kubelets pull access to our ACR
-    - create service principles for GitHub Workflows deployments to its own *namespace*
+
+
+
