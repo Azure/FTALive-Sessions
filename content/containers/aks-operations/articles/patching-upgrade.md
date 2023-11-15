@@ -9,9 +9,9 @@ The following table summarizes the details of updating each component:
 |Component name|Frequency of upgrade|Planned Maintenance supported|Supported operation methods|Documentation link|
 |--|--|--|--|--|
 |Cluster Kubernetes version (minor) upgrade|Roughly every three months|Yes| Automatic, Manual|[Upgrade an AKS cluster](https://learn.microsoft.com/en-us/azure/aks/upgrade-cluster)|
-|Cluster Kubernetes version upgrade to supported patch version|Approximately weekly. To determine the latest applicable version in your region, see the [AKS release tracker][release-tracker]|Yes|Automatic, Manual|[Upgrade an AKS cluster][upgrade-cluster]|
-|Node image version upgrade|**Linux**: weekly<br>**Windows**: monthly|Yes|Automatic, Manual|[AKS node image upgrade][node-image-upgrade]|
-|Security patches and hot fixes for node images|As-necessary|||[AKS node security patches][node-security-patches]|
+|Cluster Kubernetes version upgrade to supported patch version|Approximately weekly. To determine the latest applicable version in your region, see the [AKS release tracker](https://learn.microsoft.com/en-us/azure/aks/upgrade-cluster)|Yes|Automatic, Manual|[Upgrade an AKS cluster](https://learn.microsoft.com/en-us/azure/aks/upgrade-cluster)|
+|Node image version upgrade|**Linux**: weekly<br>**Windows**: monthly|Yes|Automatic, Manual|[AKS node image upgrade](https://learn.microsoft.com/en-us/azure/aks/node-image-upgrade)|
+|Security patches and hot fixes for node images|As-necessary|||[AKS node security patches](https://learn.microsoft.com/en-us/azure/aks/concepts-vulnerability-management#worker-nodes)|
 
 
 
