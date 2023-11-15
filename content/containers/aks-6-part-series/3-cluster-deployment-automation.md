@@ -1,7 +1,7 @@
 
 [&larr; Security Best Practices](./2-security-best-practices.md) | Part 3 of 6 | [Operations &rarr;](./4-operations.md)
 
-# Automating Cluster Deployments
+# Azure Kubernetes Service Cluster Deployment
 
 Overview
 
