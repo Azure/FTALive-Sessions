@@ -1,34 +1,38 @@
-## AKS Security Best Practices
+# AKS Security Best Practices
 
-### Goals
+## Goals
+
 - FTA Live leave-behind content 
 - High-level breakdown of all aspects of security that should be considered when running an AKS cluster. 
 - **Not covered here: specific application security for apps deployed to the cluster**
 
-### Agenda
+## Agenda
 
 Cluster Level concerns:
+
 - Master
 - Node Security
 - Authentication
 - Upgrades
 - Azure Defender for Containers
- 
+
 Network concerns:
+
 - Network Security
 - Network Policy
 - Egress Security
- 
+
 Developer/Configuration concerns:
+
 - Container Security
 - Azure Policy
 - Workload Identity
- 
-Image Management concerns:
-- Image Scanning
- 
 
-## Cluster Level concerns 
+Image Management concerns:
+
+- Image Scanning
+
+## Cluster Level concerns
 
 These concerns should be considered before setting up the cluster.
 
@@ -41,11 +45,10 @@ These concerns should be considered before setting up the cluster.
 
 Also sometimes referred to as master nodes. These components are managed by provided, managed, and maintained by Microsoft.Per Docs on [Cluster Security](https://docs.microsoft.com/en-us/azure/aks/concepts-security):
   > By default, the Kubernetes API server uses a public IP address and a fully qualified domain name (FQDN). You can limit access to the API server endpoint using authorized IP ranges.
- 
+
 - [Create a private Azure Kubernetes Service cluster](https://docs.microsoft.com/en-us/azure/aks/private-clusters)
 - [Secure access to the API server using authorized IP address ranges in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/api-server-authorized-ip-ranges)
 - [Use command invoke to access a private Azure Kubernetes Service (AKS) cluster](https://docs.microsoft.com/en-us/azure/aks/command-invoke)
-
 
 ### Azure AD Integration
 
@@ -53,7 +56,6 @@ Also sometimes referred to as master nodes. These components are managed by prov
 - [AKS-managed Azure Active Directory integration](https://docs.microsoft.com/en-us/azure/aks/managed-aad)
 - [Control access to cluster resources using Kubernetes role-based access control and Azure Active Directory identities in Azure Kubernetes Service](https://docs.microsoft.com/en-us/azure/aks/azure-ad-rbac)
 - [Use Azure RBAC for Kubernetes Authorization](https://docs.microsoft.com/en-us/azure/aks/manage-azure-rbac)
-
   
 ### Node Security
 
@@ -122,7 +124,7 @@ Not enabled by default because it requires a [Defender Pricing Plan](https://azu
 - [Bring your own keys (BYOK) with Azure disks in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/azure-disk-customer-managed-keys)
 - [Host-based encryption on Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/enable-host-encryption)
 
- ## Network concerns 
+## Network concerns
 
 - [Network concepts for applications in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/concepts-network)
 
@@ -142,7 +144,6 @@ Not enabled by default because it requires a [Defender Pricing Plan](https://azu
 
 - [Secure traffic between pods using network policies in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/use-network-policies)
   - [Differences between Azure and Calico policies and their capabilities](https://docs.microsoft.com/en-us/azure/aks/use-network-policies#differences-between-azure-and-calico-policies-and-their-capabilities)
-
 
 ### Exposing Kubernetes Services
 
@@ -169,12 +170,10 @@ Not enabled by default because it requires a [Defender Pricing Plan](https://azu
   - [Policy Definition](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F95edb821-ddaf-4404-9732-666045e056b4) - link opens in Azure Portal
 - [Limit Container Actions with App Armor](https://docs.microsoft.com/en-us/azure/aks/operator-best-practices-cluster-security#app-armor)
 
-
 ### Externalize Secrets
 
 - [Azure Key Vault Provider for Secrets Store CSI Driver](https://github.com/Azure/secrets-store-csi-driver-provider-azure)
 - [Use the Azure Key Vault Provider for Secrets Store CSI Driver in an AKS cluster](https://docs.microsoft.com/en-us/azure/aks/csi-secrets-store-driver)
-
 
 ### Workload Identity
 
@@ -184,11 +183,9 @@ Not enabled by default because it requires a [Defender Pricing Plan](https://azu
 - [Workload identity federation (preview)](https://docs.microsoft.com/en-us/azure/active-directory/develop/workload-identity-federation) 
 - [Azure Pod Identity (preview)](https://docs.microsoft.com/en-us/azure/aks/use-azure-ad-pod-identity) - this will be *replaced* and thus will never GA.
 
-
 ### Use Namespaces
 
 - [Kubernetes Documentation: Namespaces](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/) 
-
 
 ## Governance concerns / Azure Policy
 
@@ -196,7 +193,6 @@ Not enabled by default because it requires a [Defender Pricing Plan](https://azu
 - [Azure Policy built-in definitions for Azure Kubernetes Service](https://docs.microsoft.com/en-us/azure/aks/policy-reference)
 - [Azure Policy Initiatives](https://docs.microsoft.com/en-us/azure/aks/policy-reference#initiatives) represent an implementation of the [Kubernetes Pod Security Standards](https://kubernetes.io/docs/concepts/security/pod-security-standards/) specification
 - Policy extension can be auto provisioned from the [Defender for Cloud setting](https://docs.microsoft.com/en-us/azure/defender-for-cloud/kubernetes-workload-protections#configure-defender-for-containers-components)
-
 
 ## Image Management concerns
 
@@ -208,7 +204,6 @@ Protect and secure aspects of container images and the AKS cluster
 - [Overview of Microsoft Defender for Containers](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-introduction)
   - [Run-time protection for Kubernetes nodes and clusters](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-introduction?tabs=defender-for-container-arch-aks#run-time-protection-for-kubernetes-nodes-and-clusters)
 - [Identify vulnerable container images in your CI/CD workflows](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-container-registries-cicd)
-
 
 ### Container Regsitry Access
 
