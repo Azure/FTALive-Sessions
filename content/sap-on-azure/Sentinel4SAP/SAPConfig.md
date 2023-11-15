@@ -10,6 +10,7 @@
 
 - Supported SAP versions: SAP_BASIS version 731 or later recommended
 - SAP NetWeaver RFC SDK 7.50 for SAP data connector connections [Download here](https://me.sap.com/notes/2573790)
+
   ![image](https://github.com/Azure/FTALive-Sessions/assets/57655797/389344f8-63b5-4002-b194-7e97f4e53f70)
 - User on the SAP ABAP side that can be used by SAP data connector agent
 
