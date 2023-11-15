@@ -30,7 +30,7 @@ For example, let's say Kubernetes releases version 1.20.x today. Following the N
 
   - To see all supported versions in an Azure region, use `az aks get-versions --location <location> --output table`.
   - To see which version your cluster can upgrade to, use `az aks get-upgrades --resource-group <resource group> --name <cluster name>`.
-- You have 30 days from a patch/minor version removal to upgrade to a supported version. Failing to do so within this time window would lead to outside of support of the cluster.
+- You have 30 days from a patch/minor version removal to upgrade to a supported version. Failing to do so within this time window would lead to outside of support of the cluster.You can enable [Long Term Support in AKS](https://azure.microsoft.com/en-us/updates/generally-available-long-term-support-version-in-aks/) starting with Kubernetes v1.27. (GA April 18, 2023) 
 - When you upgrade the AKS cluster, patch versions can be skipped. But the minor versions of the control plane cannot be skipped, except for upgrading from an unsupported version to the minimum supported version. The minor versions of node agent may be the same as or up to two minor versions older than the minor version of the control plane. The table below summarizes the supported version skew according to the [Version Skew Policy](https://kubernetes.io/releases/version-skew-policy/).
 
     <table>
@@ -115,6 +115,17 @@ AKS takes the following process to upgrade an AKS cluster (with default max surg
   
   > ⚠️
   > Auto-upgrade channel and Planned Maintenance are preview features.
+
+- Public preview [Upgrade Scheduler](https://azure.microsoft.com/en-us/updates/public-preview-upgrade-scheduler/) -- 
+
+ // Upgrade scheduler for AKS enables you to have a flexible schedule for your auto-upgrade channel.  This helps provide more control to the set and forget model with additional cadence possibilities and a ‘Not allowed’ timeframe. 
+
+If you are currently using the planned maintenance preview feature, you are encouraged to use the upgrade scheduler feature instead. The existing planned maintenance preview will eventually be relegated only for AKS weekly releases and the new auto upgrade scheduler will become the de facto maintenance scheduler for auto-upgrades.
+// -- Check the overlap between planned maintanance vs upgrade scheduler 
+
+This is GA - [Auto-upgrade scheduled maintenance for AKS](https://azure.microsoft.com/en-us/updates/generally-available-autoupgrade-scheduled-maintenance-for-aks/) and talks about Planned Maintanance so a bit confusing. 
+
+What should we recommend to CX 
 
 - When upgrading the node pools of medium and large AKS clusters, you can consider adopting the **blue/green upgrade strategy** if possible.
 
