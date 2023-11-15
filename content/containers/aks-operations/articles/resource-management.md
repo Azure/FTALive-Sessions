@@ -52,4 +52,11 @@ Read further:
 
 - [Kubernetes Event-driven AutoScaling(KEDA)](https://learn.microsoft.com/en-us/azure/aks/keda-about) applies event-driven autoscaling to scale your application to meet demand in a sustainable and cost-efficient manner with scale-to-zero.
 
+- [Karpenter](https://azure.microsoft.com/en-us/updates/provider-for-running-karpenter-on-azure-kubernetes-service-aks/) Karpenter is an open-source node provisioning project built for Kubernetes. Karpenter improves the efficiency and cost of running workloads on Kubernetes clusters by:
+
+  - Watching for pods that the Kubernetes scheduler has marked as unschedulable
+  - Evaluating scheduling constraints (resource requests, nodeselectors, affinities, tolerations, and topology spread constraints) requested by the pods
+  - Provisioning nodes that meet the requirements of the pods
+  - Removing the nodes when the nodes are no longer needed
+
 - [Kubecost](https://www.kubecost.com/) can be used to get the insights of the cost and resource usage pattern.

@@ -39,4 +39,3 @@ It applies event-driven autoscaling to scale your application to meet demand in 
 
 https://learn.microsoft.com/en-us/azure/aks/keda-about
 https://azure.microsoft.com/en-us/updates/ga-kubernetes-eventdriven-autoscaling-keda-addon-for-aks/
-
