@@ -1,9 +1,33 @@
-# Patching and Upgrade
+# Patching and Upgrade Azure Kubernetes Service Clusters and Node Pools
+An Azure Kubernetes Service (AKS) cluster will periodically need to be updated to ensure security and compatibility with the latest features. There are two components of an AKS cluster that are necessary to maintain:
+  - Cluster Kubernetes version:  Part of the AKS cluster lifecycle involves performing upgrades to the latest Kubernetes version. 
+  - Node image version: AKS regularly provides new node images with the latest OS and runtime updates.
+
+
+The following table summarizes the details of updating each component:
+
+|Component name|Frequency of upgrade|Planned Maintenance supported|Supported operation methods|Documentation link|
+|--|--|--|--|--|
+|Cluster Kubernetes version (minor) upgrade|Roughly every three months|Yes| Automatic, Manual|[Upgrade an AKS cluster][upgrade-cluster]|
+|Cluster Kubernetes version upgrade to supported patch version|Approximately weekly. To determine the latest applicable version in your region, see the [AKS release tracker][release-tracker]|Yes|Automatic, Manual|[Upgrade an AKS cluster][upgrade-cluster]|
+|Node image version upgrade|**Linux**: weekly<br>**Windows**: monthly|Yes|Automatic, Manual|[AKS node image upgrade][node-image-upgrade]|
+|Security patches and hot fixes for node images|As-necessary|||[AKS node security patches][node-security-patches]|
+
+
+
+
+  
+
+Read further:
+- [Maintain and upgrade an AKS cluster](https://learn.microsoft.com/en-us/azure/aks/upgrade)
 
 ## Upgrade Kubernetes versions in AKS
 
 - Kubernetes versions follow the [Semantic Versioning](https://semver.org/) terminology and are expressed in the format of `major.minor.patch`. For example, in the version `1.23.3`, `1` is the major version, `23` is the minor version, and `3` is the patch version.
-- AKS supports 3 GA Kubernetes minor versions (N - 2), and supports 2 stable patch versions for each minor version.
+- AKS supports 3 GA Kubernetes minor versions (N - 2), and supports 2 stable patch versions for each minor version. Think of N as the current latest stable version that Kubernetes has released and -2 as the previous two minor versions from N.
+
+For example, let's say Kubernetes releases version 1.20.x today. Following the N-2 rule, AKS provides support for version 1.20.x, 1.19.x, and 1.18.x. Since version 1.17.x isn't within the previous two minor versions, it will be deprecated and go out of support within 30 days of the version 1.20.x release. You have 30 days from the new release to upgrade your clusters and ensure they stay in support.
+
   - To see all supported versions in an Azure region, use `az aks get-versions --location <location> --output table`.
   - To see which version your cluster can upgrade to, use `az aks get-upgrades --resource-group <resource group> --name <cluster name>`.
 - You have 30 days from a patch/minor version removal to upgrade to a supported version. Failing to do so within this time window would lead to outside of support of the cluster.
@@ -56,7 +80,7 @@ Read further:
 
 ## Upgrade node OS
 
-- The Linux nodes in AKS clusters automatically check and install updates daily. But AKS doesn't automatically reboot the nodes even if the updates requires the reboot. You have to reboot the nodes either manually or by using tools like [Kured](https://github.com/weaveworks/kured). Please be careful about the capacity impact when you reboot the node manually or with Kured.
+- For Linux nodes, node image security patches and hotfixes may be performed without your initiation as unattended updates. These updates are automatically applied, but AKS doesn't automatically reboot your Linux nodes to complete the update process. You're required to use a tool like [kured](https://github.com/weaveworks/kured) or [node image upgrade](https://learn.microsoft.com/en-us/azure/aks/node-image-upgrade) to reboot the nodes and complete the cycle. Please be careful about the capacity impact when you reboot the node manually or with Kured.
 - AKS provides a new node image with the latest OS and runtime updates weekly.
   - To check the image version of a node pool, use `az aks nodepool show --resource-group <resource group> --cluster-name <cluster name> -name <nodepool name> --query nodeImageVersion`.
   - To see the latest image version available for the node pool, use `az aks nodepool get-upgrades --resource-group <resource group> --cluster-name <cluster name> --nodepool-name <nodepool name>`.
@@ -93,6 +117,7 @@ AKS takes the following process to upgrade an AKS cluster (with default max surg
   > Auto-upgrade channel and Planned Maintenance are preview features.
 
 - When upgrading the node pools of medium and large AKS clusters, you can consider adopting the **blue/green upgrade strategy** if possible.
+
 
 Read further:
 
