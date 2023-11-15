@@ -26,7 +26,7 @@ Read further:
 - Kubernetes versions follow the [Semantic Versioning](https://semver.org/) terminology and are expressed in the format of `major.minor.patch`. For example, in the version `1.23.3`, `1` is the major version, `23` is the minor version, and `3` is the patch version.
 - AKS supports 3 GA Kubernetes minor versions (N - 2), and supports 2 stable patch versions for each minor version. Think of N as the current latest stable version that Kubernetes has released and -2 as the previous two minor versions from N.
 
-For example, let's say Kubernetes releases version 1.20.x today. Following the N-2 rule, AKS provides support for version 1.20.x, 1.19.x, and 1.18.x. Since version 1.17.x isn't within the previous two minor versions, it will be deprecated and go out of support within 30 days of the version 1.20.x release. You have 30 days from the new release to upgrade your clusters and ensure they stay in support.
+ For example, let's say Kubernetes releases version 1.20.x today. Following the N-2 rule, AKS provides support for version 1.20.x, 1.19.x, and 1.18.x. Since version 1.17.x isn't within the previous two minor versions, it will be deprecated and go out of support within 30 days of the version 1.20.x release. You have 30 days from the new release to upgrade your clusters and ensure they stay in support.
 
   - To see all supported versions in an Azure region, use `az aks get-versions --location <location> --output table`.
   - To see which version your cluster can upgrade to, use `az aks get-upgrades --resource-group <resource group> --name <cluster name>`.
@@ -115,6 +115,9 @@ AKS takes the following process to upgrade an AKS cluster (with default max surg
   
   > ⚠️
   > Auto-upgrade channel and Planned Maintenance are preview features.
+
+
+!!!! NOTE to Belgin !!!1
 
 - Public preview [Upgrade Scheduler](https://azure.microsoft.com/en-us/updates/public-preview-upgrade-scheduler/) -- 
 
