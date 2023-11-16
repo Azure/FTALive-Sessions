@@ -3,7 +3,7 @@
 ### Deploy solutions for SAP application on Microsoft Sentinel
 
 #### Deploying content hub
-  Deploy the Microsoft Sentinel solution for SAP applications® security content from the content hub to your Microsoft Sentinel workspace. Deploying this content hub deploys security content such as Data connectors, Analysis rules, watchlists, and workbooks to your Microsoft Sentinel workspace.
+  Deploy the Microsoft Sentinel solution for SAP applications® security content from the content hub to your Microsoft Sentinel workspace. Deploying this content hub deploys security content such as Data Connectors, Analysis rules, watchlists, and workbooks to your Microsoft Sentinel workspace.
 
   [Deploy the Microsoft Sentinel solution for SAP applications® from the content hub](https://learn.microsoft.com/en-us/azure/sentinel/sap/deploy-sap-security-content)
 
