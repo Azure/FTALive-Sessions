@@ -29,6 +29,7 @@
   - System parameters, Critical authorization objects
 
   [Available watchlists](https://learn.microsoft.com/en-us/azure/sentinel/sap/sap-solution-security-content#available-watchlists)
+
   [Sample of watchlists](https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/SAP/Analytics/Watchlists)
 
 #### Deploy workbooks
