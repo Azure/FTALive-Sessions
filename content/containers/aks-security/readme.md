@@ -13,12 +13,11 @@ Cluster Level Security:
 - Master
 - Node Security
 - Authentication
-- Upgrades
 - Azure Defender for Containers
 
 Network Security:
 
-- Network Security
+- Network Security Groups
 - Network Policy
 - Egress Security
 
