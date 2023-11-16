@@ -1,14 +1,14 @@
 # AKS Security Best Practices
 
-## Goals
+## Learning Objectives
 
-- FTA Live leave-behind content 
+- FTA Live leave-behind content
 - High-level breakdown of all aspects of security that should be considered when running an AKS cluster. 
 - **Not covered here: specific application security for apps deployed to the cluster**
 
 ## Agenda
 
-Cluster Level concerns:
+Cluster Level Security:
 
 - Master
 - Node Security
@@ -16,23 +16,23 @@ Cluster Level concerns:
 - Upgrades
 - Azure Defender for Containers
 
-Network concerns:
+Network Security:
 
 - Network Security
 - Network Policy
 - Egress Security
 
-Developer/Configuration concerns:
+Developer/Configuration Security:
 
 - Container Security
 - Azure Policy
 - Workload Identity
 
-Image Management concerns:
+Image Management Security:
 
 - Image Scanning
 
-## Cluster Level concerns
+## Cluster Level Security
 
 These concerns should be considered before setting up the cluster.
 
@@ -73,13 +73,6 @@ Also sometimes referred to as master nodes. These components are managed by prov
 ### Restrict access to Instance Metadata API
 
 - [Best practices for cluster security and upgrades](https://docs.microsoft.com/en-us/azure/aks/operator-best-practices-cluster-security) > [Restrict access to Instance Metadata API](https://docs.microsoft.com/en-us/azure/aks/operator-best-practices-cluster-security#restrict-access-to-instance-metadata-api)
-
-### Upgrade Kubernetes version
-
-- To qualify for support, clusters need to stay within n-2 of officially supported Kuberntes versions. See [Kubernetes version support policy](https://docs.microsoft.com/en-us/azure/aks/supported-kubernetes-versions?tabs=azure-cli#kubernetes-version-support-policy) for details.
-- [Consider auto-upgrade channels for lower environments](https://docs.microsoft.com/en-us/azure/aks/upgrade-cluster#set-auto-upgrade-channel)
-- [Subscribe to events to get notified](https://docs.microsoft.com/en-us/azure/aks/quickstart-event-grid) and automate whenever a new kubernetes version is available
-- Ensure you have headroom for both Azure resource quota and IP address for [node surges](https://docs.microsoft.com/en-us/azure/aks/upgrade-cluster#customize-node-surge-upgrade) needed when upgrading a cluster.
   
 ### Rotate Certificates Periodically
 
@@ -124,13 +117,13 @@ Not enabled by default because it requires a [Defender Pricing Plan](https://azu
 - [Bring your own keys (BYOK) with Azure disks in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/azure-disk-customer-managed-keys)
 - [Host-based encryption on Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/enable-host-encryption)
 
-## Network concerns
+## Network Security
 
 - [Network concepts for applications in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/concepts-network)
 
-### Network Security
+### Network Security Groups
 
-- Add NSGs to the NICs of the cluster nodes is not supported for AKS.   
+- Add NSGs to the NICs of the cluster nodes is not supported for AKS.
 - For subnet NSGs, ensure that management traffic is not blocked. See [Azure network security groups](https://docs.microsoft.com/en-us/azure/aks/concepts-security#azure-network-security-groups) for details.
 - [Secure traffic between pods using network policies in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/use-network-policies)
 
@@ -162,7 +155,7 @@ Not enabled by default because it requires a [Defender Pricing Plan](https://azu
   - [Outbound type of `loadBalancer`](https://docs.microsoft.com/en-us/azure/aks/egress-outboundtype#outbound-type-of-loadbalancer)
   - [Outbound type of `userDefinedRouting`](https://docs.microsoft.com/en-us/azure/aks/egress-outboundtype#outbound-type-of-userdefinedrouting)
 
-## Developer/Manifest/Configuration concerns 
+## Developer/Manifest/Configuration Security
 
 - [Best practices for pod security in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/developer-best-practices-pod-security)
 - [Configure a Security Context for a Pod or Container](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/)
@@ -187,14 +180,14 @@ Not enabled by default because it requires a [Defender Pricing Plan](https://azu
 
 - [Kubernetes Documentation: Namespaces](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/) 
 
-## Governance concerns / Azure Policy
+## Governance Security / Azure Policy
 
 - [Understand Azure Policy for Kubernetes clusters](https://docs.microsoft.com/en-us/azure/governance/policy/concepts/policy-for-kubernetes)
 - [Azure Policy built-in definitions for Azure Kubernetes Service](https://docs.microsoft.com/en-us/azure/aks/policy-reference)
 - [Azure Policy Initiatives](https://docs.microsoft.com/en-us/azure/aks/policy-reference#initiatives) represent an implementation of the [Kubernetes Pod Security Standards](https://kubernetes.io/docs/concepts/security/pod-security-standards/) specification
 - Policy extension can be auto provisioned from the [Defender for Cloud setting](https://docs.microsoft.com/en-us/azure/defender-for-cloud/kubernetes-workload-protections#configure-defender-for-containers-components)
 
-## Image Management concerns
+## Image Management Security
 
 Protect and secure aspects of container images and the AKS cluster 
 
