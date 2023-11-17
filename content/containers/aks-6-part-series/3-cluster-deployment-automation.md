@@ -5,8 +5,7 @@
 
 Overview
 
-- Why use AKS?
-- What do you need to decide before deployment 
+- AKS Cluster Deployment Considerations
   - VM Type/Size 
   - Network Model 
   - Network Size 
