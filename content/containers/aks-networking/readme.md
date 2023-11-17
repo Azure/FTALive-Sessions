@@ -34,7 +34,7 @@ AKS support two [network models](https://docs.microsoft.com/azure/aks/concepts-n
 [Use kubenet with you own IP address ranges in Azure Kubernetes Service](https://docs.microsoft.com/azure/aks/configure-kubenet)
 
 - By default, UDRs and IP configuration is created and maintained by AKS.
-- AKS supports to bring your own subnet and route table. 
+- AKS supports to bring your own subnet and route table.
 - If route table does not exist, AKS creates one and adds rules to it.
 - AKS will honor the existing route table and add/updates rules accordingly.
 - _**Rules added by AKS should not be removed or modified**_
