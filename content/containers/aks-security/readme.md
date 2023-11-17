@@ -81,7 +81,7 @@ Also sometimes referred to as master nodes. These components are managed by prov
 
 - [Virtual machine isolation in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/isolation)
 - Leverage isolated VM types if there's a concern about neighbors running on the same physical hardware. 
-- [Manage system node pools in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/use-system-pools) - Note: this is best practice for resiliency and scale reasons, but not necessarily security. 
+- [Manage system node pools in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/use-system-pools) - Note: this is best practice for resiliency and scale reasons, but not necessarily security.
 
 ### Integrate the cluster with Azure Container Registry
 
