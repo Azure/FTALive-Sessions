@@ -12,7 +12,7 @@ Kubernetes uses the horizontal pod autoscaler (HPA) to monitor the resource dema
 
 When you configure the HPA for a given deployment, you define the minimum and maximum number of replicas that can run. You also define the metric to monitor and base any scaling decisions on, such as CPU usage.
 
-To get started with the horizontal pod autoscaler in AKS, see Autoscale pods in AKS.
+To get started with the horizontal pod autoscaler in AKS, see [Autoscale pods in AKS](https://learn.microsoft.com/en-us/azure/aks/tutorial-kubernetes-scale?tabs=azure-cli#autoscale-pods).
 
 - Cluster Autoscaler 
 
@@ -22,7 +22,7 @@ To respond to changing pod demands, the Kubernetes cluster autoscaler adjusts th
 
 The cluster autoscaler is typically used alongside the horizontal pod autoscaler. When combined, the horizontal pod autoscaler increases or decreases the number of pods based on application demand, and the cluster autoscaler adjusts the number of nodes to run additional pods.
 
-To get started with the cluster autoscaler in AKS, see Cluster autoscaler on AKS.
+To get started with the cluster autoscaler in AKS, see [Cluster autoscaler on AKS](https://learn.microsoft.com/en-us/azure/aks/cluster-autoscaler?tabs=azure-cli).
 
 
 - Scale out events
