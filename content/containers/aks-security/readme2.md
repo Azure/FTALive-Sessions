@@ -12,6 +12,7 @@
 
 - Concepts - [Security concepts for applications and clusters in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/concepts-security)
 - Best Practices - [Best practices for cluster security and upgrades in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/operator-best-practices-cluster-security)
+- Cloud Adoption Framework - [Security for AKS](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/app-platform/aks/security)
 
 ## Securing Kubernetes Clusters
 
@@ -67,14 +68,6 @@ Also sometimes referred to as master nodes. These components are managed by prov
 - [Azure Policy Regulatory Complaince](https://learn.microsoft.com/en-us/azure/aks/security-controls-policy)
 - [Pod Security Admission](https://learn.microsoft.com/en-us/azure/aks/use-psa)
 
-### Enable Monitoring and Alerts
-
-- [Create new clusters](https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest#az-aks-create) with `--enable-addons monitoring` flag
-- [Container insights overview](https://docs.microsoft.com/en-us/azure/azure-monitor/containers/container-insights-overview)
-- [Configure scraping of Prometheus metrics with Container insights](https://docs.microsoft.com/en-us/azure/azure-monitor/containers/container-insights-prometheus-integration)
-- [How to view Kubernetes logs, events, and pod metrics in real-time](https://docs.microsoft.com/en-us/azure/azure-monitor/containers/container-insights-livedata-overview)
-- For recommended metrics to enable alerting, see [Recommended metric alerts (preview) from Container insights](https://docs.microsoft.com/en-us/azure/azure-monitor/containers/container-insights-metric-alerts#enable-alert-rules)
-
 ### Separate apps across node pools (optional)
 
 - [Create and manage multiple node pools for a cluster in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/use-multiple-node-pools)
@@ -86,16 +79,19 @@ Also sometimes referred to as master nodes. These components are managed by prov
 ## Node Security
 
 - [Apply security and kernel updates to Linux nodes in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/node-updates-kured)
-- [Azure Kubernetes Service (AKS) node image upgrade](https://docs.microsoft.com/en-us/azure/aks/node-image-upgrade)
-- [Update an AKS Cluster > Set auto-upgrade channel](https://docs.microsoft.com/en-us/azure/aks/upgrade-cluster#set-auto-upgrade-channel)
-- [Apply security updates to Azure Kubernetes Service (AKS) nodes automatically using GitHub Actions](https://docs.microsoft.com/en-us/azure/aks/node-upgrade-github-actions)
-- [Use Planned Maintenance to schedule maintenance windows for your Azure Kubernetes Service (AKS) cluster (preview)](https://docs.microsoft.com/en-us/azure/aks/planned-maintenance)
-- Application Availability During Upgrades
-  - [Customize node surge upgrade](https://docs.microsoft.com/en-us/azure/aks/upgrade-cluster#customize-node-surge-upgrade)
-  - [Plan for availability using pod disruption budgets](https://docs.microsoft.com/en-us/azure/aks/operator-best-practices-scheduler#plan-for-availability-using-pod-disruption-budgets)
-  - [Special considerations for node pools that span multiple Availability Zones](https://docs.microsoft.com/en-us/azure/aks/upgrade-cluster#special-considerations-for-node-pools-that-span-multiple-availability-zones)
 - [Security hardening for AKS agent node host OS](https://docs.microsoft.com/en-us/azure/aks/security-hardened-vm-host-image)
 - [Use Azure Dedicated Hosts](https://learn.microsoft.com/en-us/azure/aks/use-azure-dedicated-hosts)
+
+### Network Security Groups
+
+- Add NSGs to the NICs of the cluster nodes is not supported for AKS.
+- For subnet NSGs, ensure that management traffic is not blocked. See [Azure network security groups](https://docs.microsoft.com/en-us/azure/aks/concepts-security#azure-network-security-groups) for details.
+- [Secure traffic between pods using network policies in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/use-network-policies)
+
+### Network Policy
+
+- [Secure traffic between pods using network policies in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/use-network-policies)
+  - [Differences between Azure and Calico policies and their capabilities](https://docs.microsoft.com/en-us/azure/aks/use-network-policies#differences-between-azure-and-calico-policies-and-their-capabilities)
 
 ### Encryption
 
@@ -107,6 +103,10 @@ Also sometimes referred to as master nodes. These components are managed by prov
 - [Virtual machine isolation in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/isolation)
 - Leverage isolated VM types if there's a concern about neighbors running on the same physical hardware.
 - [Manage system node pools in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/use-system-pools) - Note: this is best practice for resiliency and scale reasons, but not necessarily security.
+
+### Secrets
+
+- [Kubernetes Secrets](https://learn.microsoft.com/en-us/azure/aks/concepts-security#kubernetes-secrets)
 
 ## Access and Identity
 
@@ -143,13 +143,12 @@ Not enabled by default because it requires a [Defender Pricing Plan](https://azu
 - [Overview of Microsoft Defender for Containers](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-introduction)
   - [Run-time protection for Kubernetes nodes and clusters](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-introduction?tabs=defender-for-container-arch-aks#run-time-protection-for-kubernetes-nodes-and-clusters)
 - Reference list [Alerts for containers - Kubernetes clusters](https://docs.microsoft.com/en-us/azure/defender-for-cloud/alerts-reference#alerts-k8scluster)
+- [Application Security](https://learn.microsoft.com/en-us/azure/aks/concepts-security#application-security)
 
 ### Scan Images
 
 - [Image Integrity to validate signed images (Preview)](https://learn.microsoft.com/en-us/azure/aks/image-integrity?tabs=azure-cli)
 - [Use Microsoft Defender for container registries to scan your images for vulnerabilities](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-container-registries-usage)
-- [Overview of Microsoft Defender for Containers](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-introduction)
-  - [Run-time protection for Kubernetes nodes and clusters](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-introduction?tabs=defender-for-container-arch-aks#run-time-protection-for-kubernetes-nodes-and-clusters)
 - [Identify vulnerable container images in your CI/CD workflows](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-container-registries-cicd)
 
 ### Policys for Confidential Containers
@@ -161,22 +160,11 @@ Not enabled by default because it requires a [Defender Pricing Plan](https://azu
 - [Network concepts for applications in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/concepts-network)
 - [API Server VNet Integration (preview)](https://learn.microsoft.com/en-us/azure/aks/api-server-vnet-integration)
 
-### Network Security Groups
-
-- Add NSGs to the NICs of the cluster nodes is not supported for AKS.
-- For subnet NSGs, ensure that management traffic is not blocked. See [Azure network security groups](https://docs.microsoft.com/en-us/azure/aks/concepts-security#azure-network-security-groups) for details.
-- [Secure traffic between pods using network policies in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/use-network-policies)
-
 ### Private Link
 
 - Use [private endpoints](https://learn.microsoft.com/en-us/azure/aks/private-clusters?tabs=azure-portal#use-a-private-endpoint-connection) wherever possible to connect Azure resources via a private IP address
 - [Private Link for Azure Contaienr Registry](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-private-link?ref=akschecklist)
 - [Private Link for Azure Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/general/private-link-service?tabs=portal)
-
-### Network Policy
-
-- [Secure traffic between pods using network policies in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/use-network-policies)
-  - [Differences between Azure and Calico policies and their capabilities](https://docs.microsoft.com/en-us/azure/aks/use-network-policies#differences-between-azure-and-calico-policies-and-their-capabilities)
 
 ### Exposing Kubernetes Services
 
