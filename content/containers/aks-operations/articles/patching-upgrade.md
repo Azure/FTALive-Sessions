@@ -116,22 +116,9 @@ AKS takes the following process to upgrade an AKS cluster (with default max surg
   > ⚠️
   > Auto-upgrade channel and Planned Maintenance are preview features.
 
-
-!!!! NOTE to Belgin !!!1
-
-- Public preview [Upgrade Scheduler](https://azure.microsoft.com/en-us/updates/public-preview-upgrade-scheduler/) -- 
-
- // Upgrade scheduler for AKS enables you to have a flexible schedule for your auto-upgrade channel.  This helps provide more control to the set and forget model with additional cadence possibilities and a ‘Not allowed’ timeframe. 
-
-If you are currently using the planned maintenance preview feature, you are encouraged to use the upgrade scheduler feature instead. The existing planned maintenance preview will eventually be relegated only for AKS weekly releases and the new auto upgrade scheduler will become the de facto maintenance scheduler for auto-upgrades.
-// -- Check the overlap between planned maintanance vs upgrade scheduler 
-
-This is GA - [Auto-upgrade scheduled maintenance for AKS](https://azure.microsoft.com/en-us/updates/generally-available-autoupgrade-scheduled-maintenance-for-aks/) and talks about Planned Maintanance so a bit confusing. 
-
-What should we recommend to CX 
+- Use [Auto-upgrade scheduled maintenance for AKS](https://azure.microsoft.com/en-us/updates/generally-available-autoupgrade-scheduled-maintenance-for-aks/).This gives you better control and scheduling capability for auto upgrade and Node OS upgrade schedule as part of planned maintenance configuration. (GA on Aug 30, 2023)
 
 - When upgrading the node pools of medium and large AKS clusters, you can consider adopting the **blue/green upgrade strategy** if possible.
-
 
 Read further:
 
