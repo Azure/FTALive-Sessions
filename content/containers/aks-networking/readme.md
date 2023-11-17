@@ -497,4 +497,4 @@ OSM can be integrated with [Azure Monitor and Azure Application insights](https:
 
 OSM can also be integrated with [Prometheus and Grafana](https://release-v0-11.docs.openservicemesh.io/docs/demos/prometheus_grafana/):
 
-[**Getting Started with Open Service Mesh**](https://docs.microsoft.com/azure/aks/open-service-mesh-about)
+[**Getting Started with Open Service Mesh**](https://learn.microsoft.com/en-us/azure/aks/open-service-mesh-about)
