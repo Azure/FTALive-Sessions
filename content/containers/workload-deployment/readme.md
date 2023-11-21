@@ -1,7 +1,6 @@
 # Automating Workload Deployments 
 
 ### Agenda
-- Pre-Requisite, Build a container sample application and tagging it
 - Workload Deployments
   - Push Model
     - Azure DevOps
