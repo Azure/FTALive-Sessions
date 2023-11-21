@@ -362,3 +362,6 @@ MigrationBackup/
 .env
 
 content/ai/azure-openai/en/src/call-center/python-client
+content/ai/responsible-ai/en/docs/images/Llama2-13b_gif.gif:Zone.Identifier
+content/ai/responsible-ai/en/docs/images/prompt-flow-lifecycle.png:Zone.Identifier
+content/ai/responsible-ai/en/docs/images/prompt-flow-view.png:Zone.Identifier

@@ -47,6 +47,8 @@ Your SAP authentication mechanism, and where you deploy your VM, will determine 
 
 [Data Connector Agent Configuration](https://learn.microsoft.com/en-us/azure/sentinel/sap/deploy-data-connector-agent-container?tabs=managed-identity#managed-identity)
 
+[Kickstart script reference](https://learn.microsoft.com/en-us/azure/sentinel/sap/reference-kickstart)
+
 [Update Microsoft Sentinel's SAP data connector agent](https://learn.microsoft.com/en-us/azure/sentinel/sap/update-sap-data-connector)
 </br>
 #### [prev](./SAPConfig.md) | [home](./introduction.md)  | [next](./SentinelConfig.md)
