@@ -67,29 +67,17 @@ Azure managed Prometheus is a service that allows you to collect and analyze Pro
 - If you want to learn more about Azure managed Prometheus, you can check out the following resources:
     - [Overview of Azure Monitor Managed Service for Prometheus](https://learn.microsoft.com/en-Us/azure/azure-monitor/essentials/prometheus-metrics-overview)
     - [Introduction Blog About Azure Monitor Managed Service for Prometheus](https://techcommunity.microsoft.com/t5/azure-observability-blog/introducing-azure-monitor-managed-service-for-prometheus/ba-p/3600185)
+- [Prometheus Alerts] (https://learn.microsoft.com/en-us/azure/aks/monitor-aks#prometheus-alerts)
 
 ## Azure Managed Grafana
 
 Azure managed Grafana is a fully managed service for analytics and monitoring solutions. It’s supported by Grafana Enterprise, which provides extensible data visualizations. You can quickly and easily deploy Grafana dashboards with built-in high availability and control access with Azure security. Azure managed Grafana is optimized for the Azure environment. It works seamlessly with many Azure services and provides the following integration features:
-- Built-in support for Azure Monitor and Azure Data Explorer
-- User authentication and access control using Microsoft Entra identities
--	Direct import of existing charts from the Azure portal
+- Built-in support for Azure Monitor and Azure Data Explorer.
+- User authentication and access control using Microsoft Entra identities.
+-	Direct import of existing charts from the Azure portal.
 -[Overview of Azure Managed Grafana](https://learn.microsoft.com/en-us/azure/managed-grafana/overview)
 -[Monitoring with Azure Managed Prometheus and Grafana](https://learn.microsoft.com/en-us/azure/hdinsight-aks/monitor-with-prometheus-grafana)
-
-
-## Monitor Azure load balancer
-
-- [Azure Standard load balancers diagnostics with metrics, alerts and resource health](https://docs.microsoft.com/azure/load-balancer/load-balancer-standard-diagnostics)
-
-- [Common and recommended alert rules for Load Balancer](https://docs.microsoft.com/azure/load-balancer/monitor-load-balancer#alerts)
-
-## Monitor Azure Firewall
-- [Monitor Firewall health state](https://docs.microsoft.com/en-us/azure/firewall/logs-and-metrics#metrics)
-
-- Possible status are "Healthy", "Degraded" & "Unhealthy"
-
-- SNAT port utilization - The percentage of SNAT port that has been utilized
+-[Create Azure Managed Grafana Instance](https://learn.microsoft.com/en-us/azure/managed-grafana/quickstart-managed-grafana-portal)
 
 ## Network observability
 Network observability in AKS is a preview feature that allows you to monitor and troubleshoot the network traffic in your Kubernetes cluster. It collects and converts useful metrics into Prometheus format, which can then be visualized in Grafana. You can use either Azure managed Prometheus and Grafana or your own instances of these tools. Network observability supports both Cilium and non-Cilium data planes. For more information, you can check out the following resources:
@@ -98,11 +86,12 @@ Network observability in AKS is a preview feature that allows you to monitor and
 -	[Setup of Network Observability with BYO Prometheus and Grafana](https://learn.microsoft.com/en-us/azure/aks/network-observability-byo-cli?tabs=non-cilium)
 -	[Public Preview: Network Observability add-on on AKS](https://azure.microsoft.com/cs-cz/updates/network-observability-add-on/)
 
+
 # Appendix 
 
-## Now, what should be monitored in each layer?
+## What should be monitored in each layer?
 
-## Monitor cluster infrastructure & Cluster level components:
+### Monitor cluster infrastructure & Cluster level components:
 - Nodes and Node pools.
 
 Kubernetes uses node pools (nodes that are identical as they use same VM SKU), and most production environments uses node pools with auto scaling, monitoring the nodes and node pools are important.
@@ -122,7 +111,7 @@ Enable alerting with right monitor and threshold to act proactively.
 | Node level memory utilization - [Memory Utilization](https://docs.microsoft.com/azure/azure-monitor/containers/container-insights-metric-alerts)	| Monitor memory utilization for individual nodes and aggregated at node pools.| Metric |
 | Active nodes and scale out %	| Monitor the scale out % of node pools	| Resource log |
 
-## Monitor Managed AKS components:
+### Monitor Managed AKS components:
 
 To assist with troubleshooting AKS cluster problems and gain deeper insights enable the collection of AKS master node logs. Enable “Diagnostic” settings for the control plane to stream logs to a log aggregation solution such as Azure Storage or Log Analytics, or to a third party via EventHubs.
 
@@ -138,7 +127,7 @@ To assist with troubleshooting AKS cluster problems and gain deeper insights ena
 | Cluster health |		| Metric |
 | Unschedulable pods | Monitor the unschedulable pods. | Metric |
 
-## Monitor the cluster availability (Kubernetes pods, replicasets, and daemonsets):
+### Monitor the cluster availability (Kubernetes pods, replicasets, and daemonsets):
 
 Kubernetes requires its system services pods to run in desired state for stable cluster operation. Monitoring the system services critical pods is a minimum requirement.
 
@@ -150,7 +139,7 @@ Kubernetes requires its system services pods to run in desired state for stable 
 
 ** *The rolling update strategy generally set the PDB as 1 as unavailable with 25% max surge. This could result in false positive during the rolling updates if the monitoring frequency and duration is too aggressive.*
 
-## Monitor workloads / hosted applications:
+### Monitor workloads / hosted applications:
 
 | Name | Objective/Description	| Metrics & Resource logs |
 |:------|:---------------------|:-------------------------|
@@ -163,10 +152,8 @@ CPU and memory usage at controller level|	Monitor the applications CPU and memor
 ** *The availability can be monitored based on pod/container status, restart counts. If replicasets, individual pod unavailability may not impact the service, having correct threshold will help monitor the availability and give enough time to address issue before it becomes completely down. Monitor the number of replicas vs desired state.*
 
 # Monitor resources additional to AKS
-## Monitor Azure Application gateway
-
+### Monitor Azure Application gateway
 - [Recommended alert rules for Application Gateway](https://docs.microsoft.com/azure/application-gateway/monitor-application-gateway#alerts)
-
 - [List of metrics that Application Gateway supports](https://docs.microsoft.com/azure/application-gateway/monitor-application-gateway-reference)
 
 | Name | Objective/Description	| Metrics & Resource logs |
@@ -178,10 +165,8 @@ CPU and memory usage at controller level|	Monitor the applications CPU and memor
 |http status 4xx, 5xx	|Monitor the http status code 4xx, and 5xx for bad gateways.|Resource logs
 
 
-## Monitor Azure load balancer
-
+### Monitor Azure load balancer
 - [Azure Standard load balancers diagnostics with metrics, alerts and resource health](https://docs.microsoft.com/azure/load-balancer/load-balancer-standard-diagnostics)
-
 - [Common and recommended alert rules for Load Balancer](https://docs.microsoft.com/azure/load-balancer/monitor-load-balancer#alerts)
 
 | Name | Objective/Description	| Metrics & Resource logs |
@@ -189,3 +174,7 @@ CPU and memory usage at controller level|	Monitor the applications CPU and memor
 | Monitor SNAT port exhaustion|This alerts when used SNAT ports is greater than the allocated number of ports (or greater the threshold).| Metric
 | Monitor failed outbound connections.|If SNAT Connection Count filtered to Connection State = Failed is greater than zero, then fire alert| Metric
 
+## Monitor Azure Firewall
+- [Monitor Firewall health state](https://docs.microsoft.com/en-us/azure/firewall/logs-and-metrics#metrics)
+- Possible status are "Healthy", "Degraded" & "Unhealthy".
+- SNAT port utilization - The percentage of SNAT port that has been utilized.
