@@ -1,22 +1,22 @@
 # AKS Monitoring 
 
-The approach of this repository is to familarize you with the toolset available and then to discuss, what is it that you should monitor? This repository presents a common strategy that is a bottoms-up approach starting from infrastructure up through applications. Each layer has distinct monitoring requirements.
+The approach of this repository is to familarize you with the toolset available to monitor the Azure Kubernetes Service. This repository presents a common strategy that is a bottoms-up approach starting from infrastructure up through applications. Each layer has distinct monitoring requirements.
 
-These layers are illustrated in [Monitor AKS with Azure Monitor for container insights](https://learn.microsoft.com/en-us/azure/architecture/aws-professional/eks-to-aks/monitoring)  
+These layers are illustrated in [Monitor Kubernetes clusters using Azure services and cloud native tools](https://learn.microsoft.com/en-us/azure/azure-monitor/containers/monitor-kubernetes)  
+- Network
 - Cluster level components
 - Managed AKS components
 - Kubernetes objects and workloads
 - Applications / hosted workloads
 - Resources external to AKS
+[Responsibility for the different layers of a Kubernetes environment and the applications that depend on it are typically addressed by multiple roles.](https://learn.microsoft.com/en-us/azure/azure-monitor/containers/monitor-kubernetes#layers-and-roles-of-kubernetes-environment)
 
 ### Tools to Monitor AKS
-
-- Azure Monitor
-- Alerting
-- Querying Logs with Container Insights
+- Container Insights
 - Azure Managed Prometheus
 - Azure Managed Grafana
-  
+- Querying Logs with Container Insights
+
 ### Enable Azure Monitor for Containers
 ```bash
 # Set subscription context
@@ -41,19 +41,20 @@ az aks show -g <resourcegroupname> -n <clustername> | grep -i "logAnalyticsWorks
 az aks disable-addons -a monitoring -g <resourcegroupname> -n <clustername>
 
 ````
+- [Best practices for monitoring Kubernetes with Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/best-practices-containers)
+- Cost Optimization [Understand Azure Monitor usage and costs](https://learn.microsoft.com/en-us/azure/azure-monitor/cost-usage)
+
 ## Metric alerts and Data reference
 Metric alerts are a way to proactively identify issues related to system resources of your Azure Kubernetes Service (AKS) clusters. There are two types of metric alerts that you can use to monitor your AKS clusters: Prometheus alert rules and metric alert rules.
 
 Prometheus alert rules use metrics stored in Azure Monitor managed service for Prometheus, which collects metrics from your Kubernetes cluster using a Prometheus agent. You can enable two sets of Prometheus alert rules: community alerts and recommended alerts. Community alerts are handpicked alert rules from the Prometheus community, while recommended alerts are the equivalent of the custom metric alert rules.
 
 - [Recommended metric alerts (preview) from Container insights](https://docs.microsoft.com/azure/azure-monitor/containers/container-insights-metric-alerts)
-
 - [Monitoring AKS data reference](https://docs.microsoft.com/azure/aks/monitor-aks-reference)
 
 ## Query the Logs with Container Insights and create alert out of them
 Querying logs with Container Insights is a way to analyze and troubleshoot the performance and health of your Azure Kubernetes Service (AKS) clusters and containers. Container Insights collects various types of data from your AKS clusters, such as metrics, inventory, and events, and stores them in a Log Analytics workspace in Azure Monitor. You can use Log Analytics to run queries on this data and get insights into your cluster’s behavior and performance.
 - [How to query logs from Container insights](https://docs.microsoft.com/azure/azure-monitor/containers/container-insights-log-query)
-
 - [Create log alert rules](https://docs.microsoft.com/en-us/azure/azure-monitor/containers/container-insights-log-alerts)
 
 ## Azure Managed Prometheus
@@ -85,7 +86,6 @@ Network observability in AKS is a preview feature that allows you to monitor and
 -	[Setup of Network Observability with Azure managed Prometheus and Grafana](https://learn.microsoft.com/en-us/azure/aks/network-observability-managed-cli?tabs=non-cilium)
 -	[Setup of Network Observability with BYO Prometheus and Grafana](https://learn.microsoft.com/en-us/azure/aks/network-observability-byo-cli?tabs=non-cilium)
 -	[Public Preview: Network Observability add-on on AKS](https://azure.microsoft.com/cs-cz/updates/network-observability-add-on/)
-
 
 # Appendix 
 
