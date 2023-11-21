@@ -1,6 +1,3 @@
-
-[&larr; Security Best Practices](./2-security-best-practices.md) | Part 3 of 6 | [Operations &rarr;](./4-operations.md)
-
 # Azure Kubernetes Service Cluster Deployment
 
 Overview
