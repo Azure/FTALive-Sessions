@@ -12,8 +12,7 @@
   - Secrets and Config Management
     - KeyVault
     - CSI Secret Driver
-- Versioning & Releases
-  - Image promotion
+
 
 ## Workload Deployment
 
