@@ -371,6 +371,19 @@ Add-On
 
 - [How to install the HAProxy Enterprise Kubernetes Ingress Controller in AKS](https://www.haproxy.com/documentation/kubernetes/latest/installation/enterprise/azure/)
 
+### Application Gateway for Containers (PREVIEW)
+
+[Application Gateway for Containers](https://learn.microsoft.com/en-us/azure/application-gateway/for-containers/overview) is the evolution of the Application Gateway Ingress Controller (AGIC). It offers an elastic and scalable ingress to AKS clusters and comprises a new data plane as well as control plane with new set of ARM APIs. The service is managed by an ALB controller component that runs inside the AKS cluster and adheres to Kubernetes Gateway APIs.
+
+Features and Benefits:
+
+  - Traffic splitting / Weighted round robin
+  - Mutual authentication to the backend target
+  - Kubernetes support for Ingress and Gateway API
+  - Flexible deployment strategies
+  - Increased performance, offering near real-time updates to add or move pods, routes, and probes
+
+
 ## Network Policies
 
 [Kubernetes Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/) are used to secure traffic only between the pods.
