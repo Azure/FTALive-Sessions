@@ -78,7 +78,29 @@ Azure managed Grafana is a fully managed service for analytics and monitoring so
 -[Monitoring with Azure Managed Prometheus and Grafana](https://learn.microsoft.com/en-us/azure/hdinsight-aks/monitor-with-prometheus-grafana)
 
 
-# Now, what should be monitored in each layer?
+## Monitor Azure load balancer
+
+- [Azure Standard load balancers diagnostics with metrics, alerts and resource health](https://docs.microsoft.com/azure/load-balancer/load-balancer-standard-diagnostics)
+
+- [Common and recommended alert rules for Load Balancer](https://docs.microsoft.com/azure/load-balancer/monitor-load-balancer#alerts)
+
+## Monitor Azure Firewall
+- [Monitor Firewall health state](https://docs.microsoft.com/en-us/azure/firewall/logs-and-metrics#metrics)
+
+- Possible status are "Healthy", "Degraded" & "Unhealthy"
+
+- SNAT port utilization - The percentage of SNAT port that has been utilized
+
+## Network observability
+Network observability in AKS is a preview feature that allows you to monitor and troubleshoot the network traffic in your Kubernetes cluster. It collects and converts useful metrics into Prometheus format, which can then be visualized in Grafana. You can use either Azure managed Prometheus and Grafana or your own instances of these tools. Network observability supports both Cilium and non-Cilium data planes. For more information, you can check out the following resources:
+- [What is Azure Kubernetes Service (AKS) Network Observability? (Preview)](https://learn.microsoft.com/en-us/azure/aks/network-observability-overview)
+-	[Setup of Network Observability with Azure managed Prometheus and Grafana](https://learn.microsoft.com/en-us/azure/aks/network-observability-managed-cli?tabs=non-cilium)
+-	[Setup of Network Observability with BYO Prometheus and Grafana](https://learn.microsoft.com/en-us/azure/aks/network-observability-byo-cli?tabs=non-cilium)
+-	[Public Preview: Network Observability add-on on AKS](https://azure.microsoft.com/cs-cz/updates/network-observability-add-on/)
+
+# Appendix 
+
+## Now, what should be monitored in each layer?
 
 ## Monitor cluster infrastructure & Cluster level components:
 - Nodes and Node pools.
@@ -90,6 +112,7 @@ If you use Azure monitor for containers, you can view node performance directly 
 [Monitor Kubernetes cluster performance with Container Insights](https://docs.microsoft.com/azure/azure-monitor/containers/container-insights-analyze)
 
 Enable alerting with right monitor and threshold to act proactively.
+
 
 | Name | Objective / Description | Metrics & Resource logs |
 |:-----|:------------------------|:------------------------|
@@ -154,6 +177,7 @@ CPU and memory usage at controller level|	Monitor the applications CPU and memor
 |Backend response time	|Monitor the backend response latency.|Metric
 |http status 4xx, 5xx	|Monitor the http status code 4xx, and 5xx for bad gateways.|Resource logs
 
+
 ## Monitor Azure load balancer
 
 - [Azure Standard load balancers diagnostics with metrics, alerts and resource health](https://docs.microsoft.com/azure/load-balancer/load-balancer-standard-diagnostics)
@@ -164,19 +188,4 @@ CPU and memory usage at controller level|	Monitor the applications CPU and memor
 |:------|:---------------------|:-------------------------|
 | Monitor SNAT port exhaustion|This alerts when used SNAT ports is greater than the allocated number of ports (or greater the threshold).| Metric
 | Monitor failed outbound connections.|If SNAT Connection Count filtered to Connection State = Failed is greater than zero, then fire alert| Metric
-
-## Monitor Azure Firewall
-- [Monitor Firewall health state](https://docs.microsoft.com/en-us/azure/firewall/logs-and-metrics#metrics)
-
-- Possible status are "Healthy", "Degraded" & "Unhealthy"
-
-- SNAT port utilization - The percentage of SNAT port that has been utilized
-
-## Network observability
-Network observability in AKS is a preview feature that allows you to monitor and troubleshoot the network traffic in your Kubernetes cluster. It collects and converts useful metrics into Prometheus format, which can then be visualized in Grafana. You can use either Azure managed Prometheus and Grafana or your own instances of these tools. Network observability supports both Cilium and non-Cilium data planes. For more information, you can check out the following resources:
-- [What is Azure Kubernetes Service (AKS) Network Observability? (Preview)](https://learn.microsoft.com/en-us/azure/aks/network-observability-overview)
--	[Setup of Network Observability with Azure managed Prometheus and Grafana](https://learn.microsoft.com/en-us/azure/aks/network-observability-managed-cli?tabs=non-cilium)
--	[Setup of Network Observability with BYO Prometheus and Grafana](https://learn.microsoft.com/en-us/azure/aks/network-observability-byo-cli?tabs=non-cilium)
--	[Public Preview: Network Observability add-on on AKS](https://azure.microsoft.com/cs-cz/updates/network-observability-add-on/)
-
 
