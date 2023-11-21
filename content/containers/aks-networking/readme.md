@@ -260,7 +260,7 @@ With [Azure CNI Overlay](https://learn.microsoft.com/en-us/azure/aks/azure-cni-o
 - Dual stack networking isn't supported in Overlay.
 - You can't use DCsv2-series virtual machines in node pools.
 
-### Different Types of Services in Kubernetes (CNI Overlay)
+### Different Types of Services in Kubernetes
 
 [Basic Concepts of Kubernetes Services](https://kubernetes.io/docs/concepts/services-networking/service/)
 
