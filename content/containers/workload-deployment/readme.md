@@ -12,7 +12,6 @@
   - Secrets and Config Management
     - KeyVault
     - CSI Secret Driver
-    - Managed Identity  
 - Versioning & Releases
   - Image promotion
 
