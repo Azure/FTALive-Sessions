@@ -18,7 +18,7 @@
 
 ### Kubernetes API Control Plane
 
-Also sometimes referred to as master nodes. These components are managed by provided, managed, and maintained by Microsoft.Per Docs on [Cluster Security](https://docs.microsoft.com/en-us/azure/aks/concepts-security):
+Also sometimes referred to as master nodes. These components are managed and maintained by Microsoft.[Cluster Security](https://docs.microsoft.com/en-us/azure/aks/concepts-security):
   > By default, the Kubernetes API server uses a public IP address and a fully qualified domain name (FQDN). You can limit access to the API server endpoint using authorized IP ranges.
 
 - [Create a private Azure Kubernetes Service cluster](https://docs.microsoft.com/en-us/azure/aks/private-clusters)
