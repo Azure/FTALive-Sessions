@@ -69,3 +69,9 @@ For detailed instruction to deploy application to AKS using Helm, please refer t
 - [Existing Application with Helm in AKS](https://learn.microsoft.com/en-us/azure/aks/kubernetes-helm)
 - [Develop on AKS with Helm](https://learn.microsoft.com/en-us/azure/aks/quickstart-helm?tabs=azure-cli)
 - [Deploy applications on AKS Hybrid with Helm](https://learn.microsoft.com/en-us/azure/aks/hybrid/helm-deploy)
+
+## Secret Management in AKS
+Secret management is the process of securely storing and accessing sensitive data, such as passwords, keys, certificates, or connection strings, that your applications need to access other resources or services. AKS provides several options and best practices for secret management, such as:
+- [Use the Azure Key Vault provider for Secrets Store CSI Driver in an Azure Kubernetes Service (AKS) cluster](https://learn.microsoft.com/en-us/azure/aks/csi-secrets-store-driver)
+
+
