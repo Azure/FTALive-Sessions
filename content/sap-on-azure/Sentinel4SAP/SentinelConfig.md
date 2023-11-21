@@ -2,6 +2,11 @@
 #### [prev](./DataConnector.md) | [home](./introduction.md)  | [next](./Scenarios.md)
 ### Deploy solutions for SAP application on Microsoft Sentinel
 
+#### Deploying content hub
+  Deploy the Microsoft Sentinel solution for SAP applications® security content from the content hub to your Microsoft Sentinel workspace. Deploying this content hub deploys security content such as Data Connectors, Analysis rules, watchlists, and workbooks to your Microsoft Sentinel workspace.
+
+  [Deploy the Microsoft Sentinel solution for SAP applications® from the content hub](https://learn.microsoft.com/en-us/azure/sentinel/sap/deploy-sap-security-content)
+
 #### Deploying analytics rules
   Analysis rules are a mechanism for finding important security incident's logs from aggregated logs and creating security alerts. Detected security alerts can also create security incidents. A security incident is a framework for assigning a person in charge and managing the lifecycle until it is closed, and has a UI for efficient investigation and a function for recording the investigation status.
   Over 50 analytics rules are provided by default according to the following groups:
@@ -24,6 +29,8 @@
   - System parameters, Critical authorization objects
 
   [Available watchlists](https://learn.microsoft.com/en-us/azure/sentinel/sap/sap-solution-security-content#available-watchlists)
+
+  [Sample of watchlists](https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/SAP/Analytics/Watchlists)
 
 #### Deploy workbooks
   Four workbooks are provided as dashboards to visualize security events related to SAP application.

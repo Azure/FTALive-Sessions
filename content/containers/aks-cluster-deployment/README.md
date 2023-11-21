@@ -1,6 +1,3 @@
-
-[&larr; Security Best Practices](./2-security-best-practices.md) | Part 3 of 6 | [Operations &rarr;](./4-operations.md)
-
 # Azure Kubernetes Service Cluster Deployment
 
 Overview
@@ -55,7 +52,4 @@ Complete Open Source Infrastructure as Code examples for AKS
 - [Landing Zone checklists ](https://github.com/Azure/review-checklists/tree/main/spreadsheet/macrofree)
 - [AKS Baseline for Multi Region Clusters](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/containers/aks-multi-region/aks-multi-cluster)
 - [AKS Roadmap ](https://github.com/Azure/AKS/projects/1)
-
-
-
 
