@@ -36,6 +36,10 @@ In the first two sessions we examined how to design an AKS cluster with networki
 - Multiple Environments - pre-production vs production clusters and workloads.
 - Deployment strategies, CI/CD pipelines, DevOps, and GitOps.
 
+[Handout for Cluster Deployment](../aks-cluster-deployment/README.md)
+
+[Handout for Workload Deployment](../)
+
 # Day 4
 ### [Operations](../aks-operations/README.md) and [Monitoring](../aks-monitoring/readme.md)
 The previous sessions covered how to design and deploy Azure Kubernetes Service (AKS) clusters. Now we'll cover how to successfully operate AKS clusters in production.
