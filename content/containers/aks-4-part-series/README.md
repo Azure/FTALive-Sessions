@@ -3,13 +3,14 @@
 This multipart series offers a structured approach to successfully designing, deploying, and operating Azure Kubernetes Service and workloads.
 This series structure aligns to any typical workload lifecycle: architecture design, deployment and operations.
 
-### Basic Kubernetes knowledge required
-- Basic understanding of Azure as a platform.
-- Basic understanding of Kubernetes fundamentals and core concepts.
+> [!IMPORTANT]
+> **Basic Kubernetes knowledge required**
+> - Basic understanding of Azure as a platform.
+> - Basic understanding of Kubernetes fundamentals and core concepts.
 
 Refer to this Microsoft learn module on [Introduction to Kubernetes](https://learn.microsoft.com/training/modules/intro-to-kubernetes/), especially [how Kubernetes works](https://learn.microsoft.com/training/modules/intro-to-kubernetes/3-how-kubernetes-works).
 
-# Part 1 - Introduction, Networking Best Practices
+## Part 1 - Introduction, Networking Best Practices
 Learn about Azure specific implementations of Kubernetes networking and best practices for your AKS cluster:
 - Choose a networking model, e.g. Kubenet, CNI, CNI Overlay, etc., 
 - Virtual Network integration, including IP address planning, private network integration.
@@ -18,7 +19,7 @@ Learn about Azure specific implementations of Kubernetes networking and best pra
 
 [Handout for Networking Best Practices](../azure-kubernetes-service/aks-networking/readme.md)
 
-# Part 2 - Security Best Practices
+## Part 2 - Security Best Practices
 Building upon the previous session on AKS networking best practices, we'll learn about securing your cluster and the underlying compute infrastructure, as well as Azure platform integrations to secure your workloads.
 
 - Securing Kubernetes, control plane vs data plane, cluster-level security vs application-level security.
@@ -29,7 +30,8 @@ Building upon the previous session on AKS networking best practices, we'll learn
 
 [Handout for Security Best Practices](../azure-kubernetes-service/aks-security/readme.md)
 
-# Part 3 - Cluster and Workload Deployment
+## Part 3 - Cluster and Workload Deployment
+
 In the first two sessions we examined how to design an AKS cluster with networking and security best practices. Now we will discuss challenges and best practices for deploying and managing one or multiple clusters.
 
 - Landing Zone considerations.
@@ -41,7 +43,8 @@ In the first two sessions we examined how to design an AKS cluster with networki
 
 [Handout for Workload Deployment](../azure-kubernetes-service/aks-workload-deployment/readme.md)
 
-# Part 4 - Operations and Monitoring
+## Part 4 - Operations and Monitoring
+
 The previous sessions covered how to design and deploy Azure Kubernetes Service (AKS) clusters. Now we'll cover how to successfully operate AKS clusters in production.
 
 - Reliability and business continuity - availability zones, uptime SLAs, backup and restore strategies, disaster recovery.
