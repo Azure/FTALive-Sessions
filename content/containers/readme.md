@@ -16,3 +16,5 @@ This table of contents links to the materials for the respective FTA Live sessio
 - [AKS Monitoring Patterns and Practices](./azure-kubernetes-service/aks-monitoring/)
 - [AKS Operations](./azure-kubernetes-service/aks-operations/)
 - [AKS Security Best Practices](./azure-kubernetes-service/aks-security/)
+- [AKS Cluster Deployment](./azure-kubernetes-service/aks-cluster-deployment/)
+- [AKS Workload Deployment](./azure-kubernetes-service/aks-workload-deployment/)
