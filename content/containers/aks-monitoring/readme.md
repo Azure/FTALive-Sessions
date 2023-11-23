@@ -1,29 +1,97 @@
 # AKS Monitoring 
 
-This section presents a common strategy that is a bottoms-up approach starting from infrastructure up through applications. Each layer has distinct monitoring requirements.
+The approach of this repository is to familarize you with the toolset available to monitor the Azure Kubernetes Service. This repository presents a common strategy that is a bottoms-up approach starting from infrastructure up through applications. Each layer has distinct monitoring requirements.
 
-These layers are illustrated in [Monitor AKS with Azure Monitor for container insight](https://docs.microsoft.com/azure/aks/monitor-aks#monitor-layers-of-aks-with-container-insights)
-
+These layers are illustrated in [Monitor Kubernetes clusters using Azure services and cloud native tools](https://learn.microsoft.com/en-us/azure/azure-monitor/containers/monitor-kubernetes)  
+- Network
 - Cluster level components
 - Managed AKS components
 - Kubernetes objects and workloads
 - Applications / hosted workloads
 - Resources external to AKS
+[Responsibility for the different layers of a Kubernetes environment and the applications that depend on it are typically addressed by multiple roles.](https://learn.microsoft.com/en-us/azure/azure-monitor/containers/monitor-kubernetes#layers-and-roles-of-kubernetes-environment)
 
-## References for log query examples and how to create alert out of them
-- [How to query logs from Container insights](https://docs.microsoft.com/azure/azure-monitor/containers/container-insights-log-query)
+### Tools to Monitor AKS
+- Container Insights
+- Azure Managed Prometheus
+- Azure Managed Grafana
+- Querying Logs with Container Insights
 
-- [Create log alert rules](https://docs.microsoft.com/en-us/azure/azure-monitor/containers/container-insights-log-alerts)
+### Enable Azure Monitor for Containers
+```bash
+# Set subscription context
+az account set --subscription <subscriptionId>
 
-## Recommended metric alerts and data reference
+# Enable monitoring on existing cluster
+az aks enable-addons -a monitoring -n <clustername> -g <resourcegroupname>
+
+# Enable monitoring on existing cluster with existing workspace
+az aks enable-addons -a monitoring -n <clustername> -g <resourcegroupname> --workspace-resource-id "/subscriptions/<subscriptionId>/resourcegroups/<resourcegroupname>/providers/microsoft.operationalinsights/workspaces/<workspacename>"
+
+# Verify the status and the agent version
+kubectl get ds omsagent --namespace kube-system
+
+# To verify the agent version running on Windows nodepool.
+kubectl get ds omsagent-win --namespace kube-system
+
+# Check the connected workspace details for an existing cluster
+az aks show -g <resourcegroupname> -n <clustername> | grep -i "logAnalyticsWorkspaceResourceID"
+
+# To disable the addon Azure monitor for containers
+az aks disable-addons -a monitoring -g <resourcegroupname> -n <clustername>
+
+````
+- [Best practices for monitoring Kubernetes with Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/best-practices-containers)
+- Cost Optimization [Understand Azure Monitor usage and costs](https://learn.microsoft.com/en-us/azure/azure-monitor/cost-usage)
+
+## Metric alerts and Data reference
+Metric alerts are a way to proactively identify issues related to system resources of your Azure Kubernetes Service (AKS) clusters. There are two types of metric alerts that you can use to monitor your AKS clusters: Prometheus alert rules and metric alert rules.
+
+Prometheus alert rules use metrics stored in Azure Monitor managed service for Prometheus, which collects metrics from your Kubernetes cluster using a Prometheus agent. You can enable two sets of Prometheus alert rules: community alerts and recommended alerts. Community alerts are handpicked alert rules from the Prometheus community, while recommended alerts are the equivalent of the custom metric alert rules.
 
 - [Recommended metric alerts (preview) from Container insights](https://docs.microsoft.com/azure/azure-monitor/containers/container-insights-metric-alerts)
-
 - [Monitoring AKS data reference](https://docs.microsoft.com/azure/aks/monitor-aks-reference)
 
-# Now, what should be monitored in each layer?
+## Query the Logs with Container Insights and create alert out of them
+Querying logs with Container Insights is a way to analyze and troubleshoot the performance and health of your Azure Kubernetes Service (AKS) clusters and containers. Container Insights collects various types of data from your AKS clusters, such as metrics, inventory, and events, and stores them in a Log Analytics workspace in Azure Monitor. You can use Log Analytics to run queries on this data and get insights into your cluster’s behavior and performance.
+- [How to query logs from Container insights](https://docs.microsoft.com/azure/azure-monitor/containers/container-insights-log-query)
+- [Create log alert rules](https://docs.microsoft.com/en-us/azure/azure-monitor/containers/container-insights-log-alerts)
 
-## Monitor cluster infrastructure & Cluster level components:
+## Azure Managed Prometheus
+
+Azure managed Prometheus is a service that allows you to collect and analyze Prometheus metrics at scale using a Prometheus-compatible monitoring solution. Prometheus is an open-source project that is widely used for monitoring containerized workloads. Azure managed Prometheus provides the following benefits:
+- It is fully managed by Azure and integrated with Azure Monitor, which means you don’t need to install, configure, or maintain the underlying infrastructure.
+- It supports both Azure Kubernetes Service (AKS) and self-managed Kubernetes clusters as data sources. You can also use Azure Arc-enabled Kubernetes to collect Prometheus metrics from any Kubernetes cluster.
+- It leverages the same platform as Azure Monitor Metrics, which offers high performance, availability, scalability, global reach, compliance, and capacity.
+-	It supports Prometheus alert rules and recording rules based on PromQL queries. You can also use Azure action groups to trigger actions or notifications when an alert is fired.
+-	It integrates with Azure Managed Grafana, which is a fully managed and secure Grafana service that allows you to visualize and analyze your Prometheus metrics using prebuilt or custom dashboards.
+- If you want to learn more about Azure managed Prometheus, you can check out the following resources:
+    - [Overview of Azure Monitor Managed Service for Prometheus](https://learn.microsoft.com/en-Us/azure/azure-monitor/essentials/prometheus-metrics-overview)
+    - [Introduction Blog About Azure Monitor Managed Service for Prometheus](https://techcommunity.microsoft.com/t5/azure-observability-blog/introducing-azure-monitor-managed-service-for-prometheus/ba-p/3600185)
+- [Prometheus Alerts] (https://learn.microsoft.com/en-us/azure/aks/monitor-aks#prometheus-alerts)
+
+## Azure Managed Grafana
+
+Azure managed Grafana is a fully managed service for analytics and monitoring solutions. It’s supported by Grafana Enterprise, which provides extensible data visualizations. You can quickly and easily deploy Grafana dashboards with built-in high availability and control access with Azure security. Azure managed Grafana is optimized for the Azure environment. It works seamlessly with many Azure services and provides the following integration features:
+- Built-in support for Azure Monitor and Azure Data Explorer.
+- User authentication and access control using Microsoft Entra identities.
+-	Direct import of existing charts from the Azure portal.
+-[Overview of Azure Managed Grafana](https://learn.microsoft.com/en-us/azure/managed-grafana/overview)
+-[Monitoring with Azure Managed Prometheus and Grafana](https://learn.microsoft.com/en-us/azure/hdinsight-aks/monitor-with-prometheus-grafana)
+-[Create Azure Managed Grafana Instance](https://learn.microsoft.com/en-us/azure/managed-grafana/quickstart-managed-grafana-portal)
+
+## Network observability
+Network observability in AKS is a preview feature that allows you to monitor and troubleshoot the network traffic in your Kubernetes cluster. It collects and converts useful metrics into Prometheus format, which can then be visualized in Grafana. You can use either Azure managed Prometheus and Grafana or your own instances of these tools. Network observability supports both Cilium and non-Cilium data planes. For more information, you can check out the following resources:
+- [What is Azure Kubernetes Service (AKS) Network Observability? (Preview)](https://learn.microsoft.com/en-us/azure/aks/network-observability-overview)
+-	[Setup of Network Observability with Azure managed Prometheus and Grafana](https://learn.microsoft.com/en-us/azure/aks/network-observability-managed-cli?tabs=non-cilium)
+-	[Setup of Network Observability with BYO Prometheus and Grafana](https://learn.microsoft.com/en-us/azure/aks/network-observability-byo-cli?tabs=non-cilium)
+-	[Public Preview: Network Observability add-on on AKS](https://azure.microsoft.com/cs-cz/updates/network-observability-add-on/)
+
+# Appendix 
+
+## What should be monitored in each layer?
+
+### Monitor cluster infrastructure & Cluster level components:
 - Nodes and Node pools.
 
 Kubernetes uses node pools (nodes that are identical as they use same VM SKU), and most production environments uses node pools with auto scaling, monitoring the nodes and node pools are important.
@@ -34,6 +102,7 @@ If you use Azure monitor for containers, you can view node performance directly 
 
 Enable alerting with right monitor and threshold to act proactively.
 
+
 | Name | Objective / Description | Metrics & Resource logs |
 |:-----|:------------------------|:------------------------|
 | Monitor Node conditions - [Not ready status](https://docs.microsoft.com/azure/azure-monitor/containers/container-insights-metric-alerts)| Monitor the node conditions for health status. Not Ready or Unknown| Metric and resource logs |
@@ -42,7 +111,7 @@ Enable alerting with right monitor and threshold to act proactively.
 | Node level memory utilization - [Memory Utilization](https://docs.microsoft.com/azure/azure-monitor/containers/container-insights-metric-alerts)	| Monitor memory utilization for individual nodes and aggregated at node pools.| Metric |
 | Active nodes and scale out %	| Monitor the scale out % of node pools	| Resource log |
 
-## Monitor Managed AKS components:
+### Monitor Managed AKS components:
 
 To assist with troubleshooting AKS cluster problems and gain deeper insights enable the collection of AKS master node logs. Enable “Diagnostic” settings for the control plane to stream logs to a log aggregation solution such as Azure Storage or Log Analytics, or to a third party via EventHubs.
 
@@ -58,7 +127,7 @@ To assist with troubleshooting AKS cluster problems and gain deeper insights ena
 | Cluster health |		| Metric |
 | Unschedulable pods | Monitor the unschedulable pods. | Metric |
 
-## Monitor the cluster availability (Kubernetes pods, replicasets, and daemonsets):
+### Monitor the cluster availability (Kubernetes pods, replicasets, and daemonsets):
 
 Kubernetes requires its system services pods to run in desired state for stable cluster operation. Monitoring the system services critical pods is a minimum requirement.
 
@@ -70,7 +139,7 @@ Kubernetes requires its system services pods to run in desired state for stable 
 
 ** *The rolling update strategy generally set the PDB as 1 as unavailable with 25% max surge. This could result in false positive during the rolling updates if the monitoring frequency and duration is too aggressive.*
 
-## Monitor workloads / hosted applications:
+### Monitor workloads / hosted applications:
 
 | Name | Objective/Description	| Metrics & Resource logs |
 |:------|:---------------------|:-------------------------|
@@ -83,10 +152,8 @@ CPU and memory usage at controller level|	Monitor the applications CPU and memor
 ** *The availability can be monitored based on pod/container status, restart counts. If replicasets, individual pod unavailability may not impact the service, having correct threshold will help monitor the availability and give enough time to address issue before it becomes completely down. Monitor the number of replicas vs desired state.*
 
 # Monitor resources additional to AKS
-## Monitor Azure Application gateway
-
+### Monitor Azure Application gateway
 - [Recommended alert rules for Application Gateway](https://docs.microsoft.com/azure/application-gateway/monitor-application-gateway#alerts)
-
 - [List of metrics that Application Gateway supports](https://docs.microsoft.com/azure/application-gateway/monitor-application-gateway-reference)
 
 | Name | Objective/Description	| Metrics & Resource logs |
@@ -97,10 +164,9 @@ CPU and memory usage at controller level|	Monitor the applications CPU and memor
 |Backend response time	|Monitor the backend response latency.|Metric
 |http status 4xx, 5xx	|Monitor the http status code 4xx, and 5xx for bad gateways.|Resource logs
 
-## Monitor Azure load balancer
 
+### Monitor Azure load balancer
 - [Azure Standard load balancers diagnostics with metrics, alerts and resource health](https://docs.microsoft.com/azure/load-balancer/load-balancer-standard-diagnostics)
-
 - [Common and recommended alert rules for Load Balancer](https://docs.microsoft.com/azure/load-balancer/monitor-load-balancer#alerts)
 
 | Name | Objective/Description	| Metrics & Resource logs |
@@ -110,8 +176,5 @@ CPU and memory usage at controller level|	Monitor the applications CPU and memor
 
 ## Monitor Azure Firewall
 - [Monitor Firewall health state](https://docs.microsoft.com/en-us/azure/firewall/logs-and-metrics#metrics)
-
-- Possible status are "Healthy", "Degraded" & "Unhealthy"
-
-- SNAT port utilization - The percentage of SNAT port that has been utilized
-
+- Possible status are "Healthy", "Degraded" & "Unhealthy".
+- SNAT port utilization - The percentage of SNAT port that has been utilized.
