@@ -1,4 +1,7 @@
-# AKS 6 Part Series
+# AKS 6 Part Series (retired)
+
+> [!CAUTION]
+> This 6 part series has been retired based on feedback. It is included here for archive purposes only. Links are NOT guaranteed to work.
 
 Please find the links below to the handouts from the 6 Part AKS Series.
 
@@ -11,15 +14,3 @@ Please find the links below to the handouts from the 6 Part AKS Series.
 | 5 | **[Monitoring](./5-monitoring.md)** | 30 August 2022 | |
 | 6 | **[Automating Workload Deployments](./6-workload-deployments-automation.md)** | 01 September 2022 | |
 
-### Feedback
-
-Please rate this session and help us improve future sessions
-
-[https://aka.ms/ftalive/6-part-aks/feedback](https://aka.ms/ftalive/6-part-aks/feedback)
-
-
-### Request a personal FastTrack Engineer Session
-
-For details on this limited time offer to attendees of the August/Sept 6 Part Series pilot, apply today
-
-[https://aka.ms/ftalive/6-part-aks/review](https://aka.ms/ftalive/6-part-aks/review)
