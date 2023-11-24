@@ -21,7 +21,7 @@ Nodes get an IP address from the Azure virtual network subnet. Pods receive IP f
 
 Assigns VNet IP address to every pod, thus requiring additional planning while designing the IP address space.
 
-- [Overivew of Azure CNI (advanced) networking](https://learn.microsoft.com/en-us/azure/aks/concepts-network#azure-cni-advanced-networking)
+- [Overview of Azure CNI (advanced) networking](https://learn.microsoft.com/en-us/azure/aks/concepts-network#azure-cni-advanced-networking)
 - [Configure Azure CNI in Azure Kubernetes Service](https://docs.microsoft.com/azure/aks/configure-azure-cni)
 - [Dynamic IP allocation for enhanced subnet support](https://learn.microsoft.com/en-us/azure/aks/configure-azure-cni-dynamic-ip-allocation) 
 
@@ -97,7 +97,7 @@ Control intra-cluster traffic with [Kubernetes Network Policies](https://kuberne
 
 #### Service Mesh
 
-Service mesh technolgoies are used for adding capabilities to communication between applications, e.g. mutual TLS. Options include:
+Service mesh technologies are used for adding capabilities to communication between applications, e.g. mutual TLS. Options include:
 
 * [Istio](https://istio.io/) - see also [managed Istio add-on for AKS](https://learn.microsoft.com/en-us/azure/aks/istio-about)
 * [Linkerd](https://linkerd.io/)
