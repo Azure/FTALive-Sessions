@@ -3,16 +3,18 @@ This table of contents links to the materials for the respective FTA Live sessio
 
 ## Azure Container Apps (ACA)
 
-- [ACA Introduction](./aca-introduction/)
-- [ACA Operations](./aca-operations/)
-- [ACA Networking](./aca-networking/)
-- [ACA Monitoring](./aca-monitoring/)
-- [ACA Storage](./aca-storage/)
-- [ACA Microservices](./aca-microservices/)
+- [ACA Introduction](./azure-container-apps/aca-introduction/)
+- [ACA Operations](./azure-container-apps/aca-operations/)
+- [ACA Networking](./azure-container-apps/aca-networking/)
+- [ACA Monitoring](./azure-container-apps/aca-monitoring/)
+- [ACA Storage](./azure-container-apps/aca-storage/)
+- [ACA Microservices](./azure-container-apps/aca-microservices/)
 
 ## Azure Kubernetes Service (AKS)
 
-- [AKS Networking](./aks-networking/)
-- [AKS Monitoring Patterns and Practices](./aks-monitoring/)
-- [AKS Operations](./aks-operations/)
-- [AKS Security Best Practices](./aks-security/)
+- [AKS Networking](./azure-kubernetes-service/aks-networking/)
+- [AKS Monitoring Patterns and Practices](./azure-kubernetes-service/aks-monitoring/)
+- [AKS Operations](./azure-kubernetes-service/aks-operations/)
+- [AKS Security Best Practices](./azure-kubernetes-service/aks-security/)
+- [AKS Cluster Deployment](./azure-kubernetes-service/aks-cluster-deployment/)
+- [AKS Workload Deployment](./azure-kubernetes-service/aks-workload-deployment/)

@@ -14,7 +14,7 @@ In this session you will learn about Azure Kubernetes Services networking and th
 
 ## Networking Models
 
-AKS support two [network models](https://docs.microsoft.com/azure/aks/concepts-network#azure-virtual-networks)
+AKS support multiple [network models](https://docs.microsoft.com/azure/aks/concepts-network#azure-virtual-networks)
 
 - Kubenet (basic) networking
 - Azure CNI (advanced) networking
