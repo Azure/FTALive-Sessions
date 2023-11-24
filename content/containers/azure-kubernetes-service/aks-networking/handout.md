@@ -97,9 +97,9 @@ Control intra-cluster traffic with [Kubernetes Network Policies](https://kuberne
 
 #### Service Mesh
 
-Service mesh technolgoies are used for adding capabilities to communication between applications, for example mutual TLS authentication. Service mesh options for AKS include:
+Service mesh technolgoies are used for adding capabilities to communication between applications, e.g. mutual TLS. Options include:
 
-* [Istio](https://istio.io/)
+* [Istio](https://istio.io/) - see also [managed Istio add-on for AKS](https://learn.microsoft.com/en-us/azure/aks/istio-about)
 * [Linkerd](https://linkerd.io/)
 
 Please note Open Service Mesh is not recommended because it was [retired by CNCF in May 2023](https://openservicemesh.io/blog/osm-project-update/).
