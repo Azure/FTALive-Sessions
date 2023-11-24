@@ -8,7 +8,7 @@
 
 See also [Networking concepts for AKS](https://docs.microsoft.com/azure/aks/concepts-network#azure-virtual-networks)
 
-### Kubenet
+#### Kubenet
 
 Nodes get an IP address from the Azure virtual network subnet. Pods receive IP from logically different space from VNet.
 
@@ -17,7 +17,7 @@ Nodes get an IP address from the Azure virtual network subnet. Pods receive IP f
 - [Limitations and considerations for kubenet](https://docs.microsoft.com/azure/aks/configure-kubenet#limitations--considerations-for-kubenet)
 - [Dual-stack kubenet networking](https://learn.microsoft.com/en-us/azure/aks/configure-kubenet-dual-stack?tabs=azure-cli%2Ckubectl)
 
-### Azure CNI
+#### Azure CNI
 
 Assigns VNet IP address to every pod, thus requiring additional planning while designing the IP address space.
 
@@ -25,7 +25,7 @@ Assigns VNet IP address to every pod, thus requiring additional planning while d
 - [Configure Azure CNI in Azure Kubernetes Service](https://docs.microsoft.com/azure/aks/configure-azure-cni)
 - [Dynamic IP allocation for enhanced subnet support](https://learn.microsoft.com/en-us/azure/aks/configure-azure-cni-dynamic-ip-allocation) 
 
-### Azure CNI Overlay
+#### Azure CNI Overlay
 
 Pods are assigned IP addresses from a private CIDR logically different from the VNet hosting the nodes allowing for larger cluster scales.
 
@@ -55,7 +55,6 @@ A private AKS cluster ensures that the control plane has a private IP address an
 - [Use SNAT for outbound connections](https://docs.microsoft.com/azure/load-balancer/load-balancer-outbound-connections)
 - [Cluster egress with Managed NAT Gateway](https://docs.microsoft.com/en-us/azure/aks/nat-gateway)
 
----
 
 ## Ingress Traffic
 
@@ -86,8 +85,9 @@ Customers can install any ingress controller of their choice and manage everythi
 - [Traefik proxy](https://doc.traefik.io/traefik/providers/kubernetes-ingress/)
 
 
+## Intra Cluster Traffic
 
-## Network Policies
+### Network Policies
 
 Control intra-cluster traffic with [Kubernetes Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/).
 
@@ -95,4 +95,11 @@ Control intra-cluster traffic with [Kubernetes Network Policies](https://kuberne
 - [Calico](https://docs.tigera.io/calico/latest/about/) - the most popular open source option 
 - [Comparison - Azure vs. Calico](https://learn.microsoft.com/en-us/azure/aks/use-network-policies#differences-between-azure-network-policy-manager-and-calico-network-policy-and-their-capabilities)
 
+## Service Mesh
 
+Service mesh technolgoies are used for adding capabilities to communication between applications, for example mutual TLS authentication. Service mesh options for AKS include:
+
+* [Istio](https://istio.io/)
+* [Linkerd](https://linkerd.io/)
+
+Please note Open Service Mesh is not recommended because it was [retired by CNCF in May 2023](https://openservicemesh.io/blog/osm-project-update/).
