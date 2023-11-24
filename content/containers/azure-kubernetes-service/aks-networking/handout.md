@@ -6,11 +6,11 @@
 
 ## Networking Models
 
-See also [Networking concepts for AKS](https://docs.microsoft.com/azure/aks/concepts-network#azure-virtual-networks)
+Please note VNet is an abbreviation for Azure virtual network. See also [Networking concepts for AKS](https://docs.microsoft.com/azure/aks/concepts-network#azure-virtual-networks). 
 
 #### Kubenet
 
-Nodes get an IP address from the Azure virtual network subnet. Pods receive IP from logically different space from VNet.
+Nodes get an IP address from the Azure virtual network subnet. Pods receive IP from logically different space from the VNet.
 
 - [Overview of Kubenet on AKS](https://learn.microsoft.com/en-us/azure/aks/configure-kubenet)
 - [IP address availability for kubenet](https://docs.microsoft.com/azure/aks/configure-kubenet#ip-address-availability-and-exhaustion)
