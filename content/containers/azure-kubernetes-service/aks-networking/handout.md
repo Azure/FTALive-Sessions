@@ -87,7 +87,7 @@ Customers can install any ingress controller of their choice and manage everythi
 
 ## Intra Cluster Traffic
 
-### Network Policies
+#### Network Policies
 
 Control intra-cluster traffic with [Kubernetes Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/).
 
@@ -95,7 +95,7 @@ Control intra-cluster traffic with [Kubernetes Network Policies](https://kuberne
 - [Calico](https://docs.tigera.io/calico/latest/about/) - the most popular open source option 
 - [Comparison - Azure vs. Calico](https://learn.microsoft.com/en-us/azure/aks/use-network-policies#differences-between-azure-network-policy-manager-and-calico-network-policy-and-their-capabilities)
 
-## Service Mesh
+#### Service Mesh
 
 Service mesh technolgoies are used for adding capabilities to communication between applications, for example mutual TLS authentication. Service mesh options for AKS include:
 
