@@ -55,16 +55,6 @@ A private AKS cluster ensures that the control plane has a private IP address an
 - [Use SNAT for outbound connections](https://docs.microsoft.com/azure/load-balancer/load-balancer-outbound-connections)
 - [Cluster egress with Managed NAT Gateway](https://docs.microsoft.com/en-us/azure/aks/nat-gateway)
 
-
-Additional resources about controlling traffic
-
-* [Create an AKS cluster with network policies](https://docs.microsoft.com/azure/aks/use-network-policies#network-policy-options-in-aks)
-* Route Tables:
-  - Bring your [own subnet with route table](https://docs.microsoft.com/azure/aks/configure-kubenet#bring-your-own-subnet-and-route-table-with-kubenet)
-  - Create custom [route table](https://docs.microsoft.com/azure/virtual-network/manage-route-table)
-
-
-
 ---
 
 ## Ingress Traffic
