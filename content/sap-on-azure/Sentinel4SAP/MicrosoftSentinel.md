@@ -20,6 +20,11 @@ Microsoft Sentinel is your bird's-eye view across the enterprise alleviating the
 
 - **Respond to incidents rapidly** with built-in orchestration and automation of common tasks.
 
-![Sentinel](/content/sap-on-azure/images/Sentinel.png)
+<br>
+<p align="center">
+<img src="/content/sap-on-azure/images/Sentinel.png" width="500" height="500">
+</p>
+<br>
+
 
 #### [prev](./introduction.md) | [home](./introduction.md)  | [next](./SentinelSAPSolution.md)
