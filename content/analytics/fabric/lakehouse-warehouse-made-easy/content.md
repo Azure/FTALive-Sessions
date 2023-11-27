@@ -187,7 +187,7 @@ Data Engineering in Microsoft Fabric enables users to design, build, and maintai
   - [Working with delta table in spark.](https://learn.microsoft.com/en-us/training/modules/work-delta-lake-tables-fabric/4-work-delta-data)
 
 
-#### Demo 1.2 - Creating Dimension and Fact tables in Lakehouse for the PBI reporting
+### Demo 1.2 - Creating Dimension and Fact tables in Lakehouse for the PBI reporting
 
 ### Data Warehouse
 Data warehousing workloads benefit from the rich capabilities of the ***SQL engine over an open data format***, enabling customers to focus on data preparation, analysis and reporting over a single copy of their data stored in their Microsoft OneLake.
@@ -212,14 +212,17 @@ Data warehousing workloads benefit from the rich capabilities of the ***SQL engi
 --------------------------------------------------------------------
 --------------------------------------------------------------------
 
-## Challenge: Power BI Import Mode or DirectQuery
+## Power BI Challenge #1: Import Mode or DirectQuery
 
 Storage Mode| Pros| Cons
 ---------|----------|---------
  Direct Query | Real Time Data, No limitation in Data size, No overhead in Data Refresh | Lower in Performance, Limited DAX support, Less data source compatibility
  Import Mode | Faster in performance, Additional Data Transformation, Offline access, no dependency with the source system once the data is loaded | Data Staleness, Very large volume of data, ETL overhead during Data Refresh, Data copy is required.
 
-## Solution: DirectLake Mode
+## Power BI Challenge #2: Semantic Models not accessible
+Data within a Semantic Model is not easily accessible from other engines.
+
+## Solution #1: DirectLake Mode
 
 The objective of DirectLake mode is to address the limitations found in both Direct Query and Import modes, while also integrating the benefits of each of these modes.
 
@@ -231,9 +234,15 @@ The objective of DirectLake mode is to address the limitations found in both Dir
 - Unlike DirectQuery, it doesn't involve translation to different query languages or execution on other databases, leading to performance comparable to import mode.
 - This approach enables real-time updates from the data source without the requirement for explicit imports, blending the benefits of DirectQuery and import modes while removing their drawbacks.
 
-#### Demo : Create PBI Semantic Model (formerly dataset) and PBI Report using DirectLake mode
+## Solution #2: Semantic Link (Preview)
+Access your Power BI Semnatic Models using a Spark Notebook via the SemPy Python Library
+https://learn.microsoft.com/en-us/fabric/data-science/semantic-link-overview
 
-## Session Summary
+### Demo : Create PBI Semantic Model (formerly dataset) and PBI Report using DirectLake mode
+
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+# Session Summary
 What we covered:
 
 1. Data format decision made: Microsoft has 'gone big' on Delta Parquet (also known as Delta Tables, V-Ordered Tables, Verti-Parquet). 
