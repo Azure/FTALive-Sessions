@@ -24,6 +24,7 @@ If you are interested in joining our preview program, please [Sign Up](https://f
 - Workbooks dedicated to SAP BTP
 
 ※ It is assumed that the **audit log acquisition API (Audit Log Management Service)** of the subaccount of the Cloud Foundry environment is used.
+
 ![image](https://github.com/Azure/FTALive-Sessions/assets/57655797/6d693b82-0a39-403d-90fe-18cd4180c74f)
 
 
