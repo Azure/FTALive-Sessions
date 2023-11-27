@@ -76,6 +76,9 @@ Refer to [Deploy Microsoft Sentinel Solution for SAP® BTP](https://learn.micros
 - Few SAP BTP services, such as SAP Data Intelligence, however is by design accessed through [a separate vnet peering](https://help.sap.com/docs/data-intelligence-cloud/sap-data-intelligence-administration/connect-using-virtual-network-peering). instead of a public endpoint typically used for BTP application.
 - See [SAP's documentation](https://help.sap.com/docs/private-link/private-link1/consume-azure-services-in-sap-btp) and a series of blog posts on the architecture of the SAP BTP Private Link Service and private connectivity methods, dealing with DNS and certificates in following SAP blog series [Getting Started with BTP Private Link Service for Azure](https://blogs.sap.com/2021/12/29/getting-started-with-btp-private-link-service-for-azure/).
 
+※Attention
+- Contact SAP to find out if Private Link Service is available for SAP RISE/ECS workloads (including BTP). Private Link Service with SAP BTP is **currently not generally available status in all regions**.
+
 #### Related information
 
 [Integrating Azure with SAP RISE managed workloads](https://learn.microsoft.com/en-us/azure/sap/workloads/rise-integration#microsoft-sentinel-with-sap-rise)
