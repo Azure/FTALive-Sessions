@@ -77,7 +77,8 @@ Refer to [Deploy Microsoft Sentinel Solution for SAP® BTP](https://learn.micros
 - See [SAP's documentation](https://help.sap.com/docs/private-link/private-link1/consume-azure-services-in-sap-btp) and a series of blog posts on the architecture of the SAP BTP Private Link Service and private connectivity methods, dealing with DNS and certificates in following SAP blog series [Getting Started with BTP Private Link Service for Azure](https://blogs.sap.com/2021/12/29/getting-started-with-btp-private-link-service-for-azure/).
 
 ※Attention
-- Contact SAP to find out if Private Link Service is available for SAP RISE/ECS workloads (including BTP). Private Link Service with SAP BTP is **currently not generally available status in all regions**.
+- Contact SAP to find out if Private Link Service is available for SAP RISE/ECS workloads (including BTP).
+  Private Link Service with SAP BTP is **currently not generally available status in all regions**.
 
 #### Related information
 
