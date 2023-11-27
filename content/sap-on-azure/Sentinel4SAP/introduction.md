@@ -1,6 +1,6 @@
 # Introduction
 
-#### [home](./introduction.md)  | [next](./SentinelSAPSolution.md)
+#### [home](./introduction.md)  | [next](./MicrosoftSentinel.md)
 
 
 ## What is this session about
@@ -28,4 +28,4 @@ Please watch Azure Learn Live sessions on [Microsoft Sentinel Fundamentals](http
 - [SAP Continous Threat Monitoring workbooks](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/microsoft-sentinel-sap-continuous-threat-monitoring-workbooks/ba-p/3015630)
 - [Public case study](https://www.microsoft.com/insidetrack/blog/protecting-microsofts-sap-workload-with-microsoft-sentinel/)
 - [Sample use case](https://blogs.sap.com/2022/03/14/microsoft-sentinel-and-logic-apps-can-be-the-guardians-of-sap-security-operations-secops/)
-#### [home](./introduction.md)  | [next](./SentinelSAPSolution.md)
+#### [home](./introduction.md)  | [next](./MicrosoftSentinel.md)
