@@ -1,6 +1,6 @@
 ## Microsoft Fabric
 
-Microsoft Fabric brings together new and existing components from Power BI, Azure Synapse, and Azure Data Factory into a single integrated environment. These components are then presented in various customized user experiences.
+Microsoft Fabric brings together new and existing components from Power BI, Azure Synapse, Azure Data Factory, and more into a single integrated environment. These components are presented in a new UI within the Power BI portal experience.
 </br>
 
 ![Fabric Diagram](https://learn.microsoft.com/en-us/fabric/get-started/media/microsoft-fabric-overview/saas-foundation.png 'Fabric Services') </br>
@@ -25,7 +25,7 @@ Additional Architecture Examples:
 
 
 **Challenges**
-* Especially for smaller organisations, the deployment of a secure end-to-end Analytics Platform is complex (and potentially overkill to requirements).
+* Especially for smaller organisations, the deployment of a 'secure' end-to-end Analytics Platform is complex (and potentially overkill to requirements).
 * Sometimes still need IaaS to glue PaaS services together.
 * Billing model.
 
@@ -40,13 +40,16 @@ Additional Architecture Examples:
     - *Data Warehouse*: High performance SQL, scalable with independent compute / storage. Utilizes Delta Lake format for data files.
     - *Real-Time Analytics*: Excels with high-volume, semi-structured observational data.
     - *Power BI*: Leading BI platform for intuitive Fabric data access.
-- **Less management overhead**. Fabric allows creators to concentrate on producing their best work, freeing them from the need to integrate, manage, or understand the underlying infrastructure that supports the experience.
+    - *Data Activator*: No-code experience to take actions on changing data
+- **Less management overhead**. Fabric allows users to concentrate on producing their best work, freeing them from the need to integrate, manage, or understand the underlying infrastructure that supports the experience.
 - **Enterprise Capabilities are pre-provisioned as part of the tenant**
   - [Flexible Licensing](https://learn.microsoft.com/en-us/fabric/enterprise/licenses)
     - [Pause and Resume Capacity](https://learn.microsoft.com/en-us/fabric/enterprise/pause-resume)
     - [Ability to resize Capacities](https://learn.microsoft.com/en-us/fabric/enterprise/scale-capacity)
+    - [Capacity Reservations](https://learn.microsoft.com/en-us/azure/cost-management-billing/reservations/fabric-capacity)
   - [Inbuilt Monitoring App](https://learn.microsoft.com/en-us/fabric/enterprise/metrics-app-install?tabs=1st)
 - **Data Governance** capabilities that are provided in Microsoft Fabric:
+  - [Purview Integration](https://learn.microsoft.com/en-us/fabric/governance/microsoft-purview-fabric)
   - [Information Protection](https://learn.microsoft.com/en-us/fabric/governance/information-protection)
   - [Item Endorsement](https://learn.microsoft.com/en-us/fabric/get-started/endorsement-promote-certify#promote-items) (Promotion, Certification)
   - [Lineage](https://learn.microsoft.com/en-us/fabric/governance/lineage)
@@ -59,7 +62,7 @@ Additional Architecture Examples:
 1. [How do I enable Fabric?](https://techcommunity.microsoft.com/t5/educator-developer-blog/step-by-step-guide-to-enable-microsoft-fabric-for-microsoft-365/ba-p/3831115)
 1. [Can I trial Fabric?](https://learn.microsoft.com/en-us/fabric/get-started/fabric-trial#start-the-fabric-preview-trial)
 1. Is it a replacement to Azure Synapse?
-1. When will it go GA?
+1. What's the roadmap? See: [aka.ms/FabricRoadmap](aka.ms/FabricRoadmap)
 </br>
 </br>
 
@@ -70,7 +73,7 @@ Additional Architecture Examples:
 
 Consider an example MDW pattern:
 1. Data is copied from source to a Raw zone within a data lake in .json format.
-1. Data is then transformed & copied into higher zones within the Data Lake in  Parquet.
+1. Data is then transformed & copied into higher zones within the Data Lake in Parquet.
 1. For the presentation layer, data is transferred to a different location & format. For this example, into a Data Mart hosted in an Azure SQL DB.
 1. Data is copied from Azure SQL DB into Power BI.
 
@@ -81,7 +84,7 @@ Challenges:
 * Decisions around preparing the data in the right format, with the right engine at the right time.
 
 Additional Challenge: </br>
-A 'Data Lake' is not a monolithic construct. It can be made up of several pieces such as Azure Storage Accounts, Azure Data Lake Gen2 (ADLSv2) accounts and even storage external to Azure such as AWS S3.</br>
+A 'Data Lake' is not a monolithic construct. It can be made up of several pieces such as Azure Storage, Azure Data Lake Gen2 (ADLSv2) and even storage external to Azure such as AWS S3.</br>
 
 Challenges:
 * How do I access & process data that is not directly within my main Data Lake storage?
@@ -97,8 +100,8 @@ OneLake is a single, unified, logical data lake for the whole organization. Like
 - The data in OneLake is automatically indexed for discovery.
 - [Microsoft Information Protection (MIP) labels](https://blog.fabric.microsoft.com/en-us/blog/microsoft-365-data-microsoft-fabric-better-together/)
 - Lineage, PII scans, sharing, governance and compliance.
-
-- **[Shortcuts](https://learn.microsoft.com/en-us/fabric/onelake/onelake-shortcuts)** Shortcuts allow organization to easily share data between users and applications without having to move and duplicate information unnecessarily.
+- Data is stored in the region where your capacity is created.
+- **[Shortcuts](https://learn.microsoft.com/en-us/fabric/onelake/onelake-shortcuts)** allow organization to easily share data between users and applications without having to move and duplicate information unnecessarily.
 - The data of all Fabric elements such as Data Warehouse and Lakehouse is automatically stored in OneLake using the **delta parquet** format.
 
 ### OneCopy
@@ -121,10 +124,9 @@ OneLake targets to maximize the utility derived from a single copy of data, elim
 --------------------------------------------------------------------
 --------------------------------------------------------------------
 
-
 ## Challenge: Lakehouse vs Warehouse / Spark or SQL?
 When building a MDW on Azure, many organisations must make a decision to choose between the storage, compute and language options of Lakehouse vs Warehouse and Spark vs SQL.  </br>
-Some considerations:
+Some challenges before Fabric:
 * Warehouse / SQL
   * Transformations are written in SQL & saved as Stored Procedures.
   * Compute occurs inside SQL SMP or MPP engine.
@@ -156,7 +158,7 @@ Lakehouses are data architectures that allow organisations to store and manage s
 #### How many different ways we can upload the data into Lakehouse?
 - **[Data Engineering with Spark](https://learn.microsoft.com/en-us/fabric/data-engineering/data-engineering-overview)**
 - **[Data Pipelines](https://learn.microsoft.com/en-us/fabric/data-factory/data-factory-overview)**
-- **[Dataflow](https://learn.microsoft.com/en-us/fabric/data-factory/create-first-dataflow-gen2)**
+- **[Dataflow Gen2](https://learn.microsoft.com/en-us/fabric/data-factory/create-first-dataflow-gen2)**
 
 #### Which option to be used when?
 [Decision Guide](https://learn.microsoft.com/en-us/fabric/get-started/decision-guide-pipeline-dataflow-spark)
@@ -229,10 +231,10 @@ The objective of DirectLake mode is to address the limitations found in both Dir
 - Unlike DirectQuery, it doesn't involve translation to different query languages or execution on other databases, leading to performance comparable to import mode.
 - This approach enables real-time updates from the data source without the requirement for explicit imports, blending the benefits of DirectQuery and import modes while removing their drawbacks.
 
-#### Demo : Create PBI dataset/model and PBI Report using DirectLake mode
+#### Demo : Create PBI Semantic Model (formerly dataset) and PBI Report using DirectLake mode
 
-## Summary
-Below is a summary of what was covered in this session.
+## Session Summary
+What we covered:
 
 1. Data format decision made: Microsoft has 'gone big' on Delta Parquet (also known as Delta Tables, V-Ordered Tables, Verti-Parquet). 
 1. Engines modified to support common data storage medium
