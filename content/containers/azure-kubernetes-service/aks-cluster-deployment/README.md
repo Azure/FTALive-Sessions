@@ -6,7 +6,7 @@ Overview
   - VM Type/Size 
   - Network Model 
   - Network Size 
-  - Availailiy Zone Considerations 
+  - Availability Zone Considerations 
       https://learn.microsoft.com/en-us/azure/aks/availability-zones
   - Private or Public cluster 
       https://learn.microsoft.com/en-us/azure/aks/private-clusters?tabs=azure-portal#limitations
