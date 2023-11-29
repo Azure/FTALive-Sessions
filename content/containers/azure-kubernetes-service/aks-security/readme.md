@@ -80,14 +80,7 @@ The following topics are referenced in the [Networking handout](../aks-networkin
 #### Defender for Containers
 
 - [Defender for Containers Architecture](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-architecture) - how it works, esp. this 🖼️ [diagram](https://learn.microsoft.com/en-us/azure/defender-for-cloud/media/defender-for-containers/architecture-aks-cluster.png)
-- [Overview of Microsoft Defender for Containers](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-introduction), including:
-  - Security posture management
-  - Vulnerability assessment
-  - Run-time threat protection
-  - Deployment & monitoring
-
-- Reference: [Defender for Cloud Alerts for containers - Kubernetes clusters](https://docs.microsoft.com/en-us/azure/defender-for-cloud/alerts-reference#alerts-k8scluster) to decode the `K8S_` and `K8S.NODE_` prefixed alerts.
-
+- [Overview of Microsoft Defender for Containers](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-introduction)
 
 ## Workload Security
 
@@ -95,17 +88,19 @@ The following topics are referenced in the [Networking handout](../aks-networkin
 
 - [Developer best practices for pod security in AKS](https://docs.microsoft.com/en-us/azure/aks/developer-best-practices-pod-security)
 - [Limit Container Actions with App Armor](https://docs.microsoft.com/en-us/azure/aks/operator-best-practices-cluster-security#app-armor)
-- [Pod Sandbox](https://learn.microsoft.com/en-us/azure/aks/use-pod-sandboxing) - preview feature
-- [Reference: Azure Built-In Policy](https://docs.microsoft.com/en-us/azure/aks/policy-reference) "Kubernetes cluster should not allow privileged containers"
-  - [Policy Definition](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F95edb821-ddaf-4404-9732-666045e056b4) (opens in Azure Portal)
+- [Pod Sandbox](https://learn.microsoft.com/en-us/azure/aks/use-pod-sandboxing) (preview)
 
 ### Image Security
 
 - [Use Image Cleaner to clean up stale images on AKS cluster](https://learn.microsoft.com/en-us/azure/aks/image-cleaner)
 
----
-
 ## Appendix
+
+### Misc. References
+
+- [Azure Policy built-in definitions for Azure Kubernetes Service](https://docs.microsoft.com/en-us/azure/aks/policy-reference)
+- [Azure Policy Regulatory Complaince](https://learn.microsoft.com/en-us/azure/aks/security-controls-policy)
+- [Defender for Cloud Alerts for containers - Kubernetes clusters](https://docs.microsoft.com/en-us/azure/defender-for-cloud/alerts-reference#alerts-k8scluster) table to decode the `K8S_` and `K8S.NODE_` prefixed alerts.
 
 ### Reference Architectures
 
@@ -114,9 +109,3 @@ The following topics are referenced in the [Networking handout](../aks-networkin
 | [Baseline Architecture for an AKS Cluster](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/containers/aks/baseline-aks) | Azure Architecture Center, Microsoft Patterns and Practices team | Minimum recommended baseline for everyone |
 | [AKS Landing Zone Accelerator](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/app-platform/aks/landing-zone-accelerator) | Cloud Adoption Framework team | Enterprise segment |
 | [AKS Security Baseline per Microsoft cloud security benchmark v1](https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/azure-kubernetes-service-aks-security-baseline) | Microsoft Security Benchmark team | Customers with compliance requirements, e.g. NIST, PCI-DSS |
-
-
-### Misc. References
-
-- [Azure Policy built-in definitions for Azure Kubernetes Service](https://docs.microsoft.com/en-us/azure/aks/policy-reference)
-- [Azure Policy Regulatory Complaince](https://learn.microsoft.com/en-us/azure/aks/security-controls-policy)
