@@ -68,6 +68,11 @@ The following topics are referenced in the [Networking handout](../aks-networkin
 - [Private Link for Azure container registry](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-private-link)
 
 
+#### Azure Key Vault
+
+- [Use the Azure Key Vault Provider for Secrets Store CSI Driver in an AKS cluster](https://docs.microsoft.com/en-us/azure/aks/csi-secrets-store-driver) - Azure managed (recommended)
+- [Azure Key Vault Provider for Secrets Store CSI Driver](https://github.com/Azure/secrets-store-csi-driver-provider-azure) - self-managed option
+
 #### Defender for Containers
 
 - [Defender for Containers Architecture](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-architecture) - how it works, esp. this 🖼️ [diagram](https://learn.microsoft.com/en-us/azure/defender-for-cloud/media/defender-for-containers/architecture-aks-cluster.png)
@@ -77,38 +82,28 @@ The following topics are referenced in the [Networking handout](../aks-networkin
   - Run-time threat protection
   - Deployment & monitoring
 
-
 - Reference: [Defender for Cloud Alerts for containers - Kubernetes clusters](https://docs.microsoft.com/en-us/azure/defender-for-cloud/alerts-reference#alerts-k8scluster) to decode the `K8S_` and `K8S.NODE_` prefixed alerts.
 
 
-#### Azure Key Vault
+## Workload Security
 
-- [Use the Azure Key Vault Provider for Secrets Store CSI Driver in an AKS cluster](https://docs.microsoft.com/en-us/azure/aks/csi-secrets-store-driver) - Azure managed (recommended)
-- [Azure Key Vault Provider for Secrets Store CSI Driver](https://github.com/Azure/secrets-store-csi-driver-provider-azure) - self-managed option
+### Pod Security
 
+- [Developer best practices for pod security in AKS](https://docs.microsoft.com/en-us/azure/aks/developer-best-practices-pod-security)
+- [Limit Container Actions with App Armor](https://docs.microsoft.com/en-us/azure/aks/operator-best-practices-cluster-security#app-armor)
+- [Pod Sandbox](https://learn.microsoft.com/en-us/azure/aks/use-pod-sandboxing) - preview feature
+- [Reference: Azure Built-In Policy](https://docs.microsoft.com/en-us/azure/aks/policy-reference) "Kubernetes cluster should not allow privileged containers"
+  - [Policy Definition](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F95edb821-ddaf-4404-9732-666045e056b4) (opens in Azure Portal)
 
+### Image Security
+
+- [Use Image Cleaner to clean up stale images on AKS cluster](https://learn.microsoft.com/en-us/azure/aks/image-cleaner)
 
 ---
 
-
-
-
-
-
-
-### Container Image Security
-
-### Scan Images
-
-- [Image Integrity to validate signed images (Preview)](https://learn.microsoft.com/en-us/azure/aks/image-integrity?tabs=azure-cli)
-- [Use Microsoft Defender for container registries to scan your images for vulnerabilities](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-container-registries-usage)
-- [Identify vulnerable container images in your CI/CD workflows](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-container-registries-cicd)
-
-
-
 ## Appendix
 
-### Docs
+### Best Practices Overview
 
 - [Best practices Overview for Azure Kubernetes Service (AKS)](https://learn.microsoft.com/en-us/azure/aks/best-practices) 
   - for cluster operators and developers 
@@ -127,25 +122,3 @@ The following topics are referenced in the [Networking handout](../aks-networkin
 
 - [Azure Policy built-in definitions for Azure Kubernetes Service](https://docs.microsoft.com/en-us/azure/aks/policy-reference)
 - [Azure Policy Regulatory Complaince](https://learn.microsoft.com/en-us/azure/aks/security-controls-policy)
-
-
-
----
-
-- [Image Cleaner](https://learn.microsoft.com/en-us/azure/aks/image-cleaner)
-
-
-
-
-
-
-
-### Pod Security
-
-- [Best practices for pod security in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/developer-best-practices-pod-security)
-- [Configure a Security Context for a Pod or Container](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/)
-- [Azure Built-In Policy](https://docs.microsoft.com/en-us/azure/aks/policy-reference) "Kubernetes cluster should not allow privileged containers"
-  - [Policy Definition](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F95edb821-ddaf-4404-9732-666045e056b4) - link opens in Azure Portal
-- [Limit Container Actions with App Armor](https://docs.microsoft.com/en-us/azure/aks/operator-best-practices-cluster-security#app-armor)
-- [Microsoft Entra pod-managed identities](https://learn.microsoft.com/en-us/azure/aks/use-azure-ad-pod-identity)
-- [Pod Sandbox](https://learn.microsoft.com/en-us/azure/aks/use-pod-sandboxing)
