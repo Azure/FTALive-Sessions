@@ -20,6 +20,8 @@
   A list of analysis rules can be found in the following document: 
   [Built-in analytics rules](https://learn.microsoft.com/en-us/azure/sentinel/sap/sap-solution-security-content#built-in-analytics-rules)
 
+  ***Note:*** *Customers should treat the Anlaytic rules that comes out-of-box as a starting point and we recommend to create rules as per their requirement.*
+
 #### Watchlist configuration
   Some analysis rules target specific systems for monitoring, and some analyze specific processes and subjects such as important programs, users, and transactions. In the SAP solution, these analysis conditions are extracted outside the rules as a Watchlist. By using these watchlists, you can maintain the analysis rule detection target and exclusion conditions without directly changing the analysis rule. 
   Maintenance of conventional analysis rules required deep knowledge of KQL, but with simple maintenance, even personnel without knowledge of KQL can easily maintain detection logic (programs). You can customize the following aspects of SAP without changing your code:
