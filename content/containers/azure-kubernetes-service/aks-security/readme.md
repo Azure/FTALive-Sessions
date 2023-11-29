@@ -39,7 +39,7 @@ The following topics are referenced in the [Networking handout](../aks-networkin
 - [Azure Kubernetes Service (AKS) considerations for multitenancy](https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/service/aks) - overview of concepts and strategies
 
 
-## Integrations
+## Identity Based Security
 
 ### Microsoft Entra Integration
 
@@ -56,43 +56,35 @@ The following topics are referenced in the [Networking handout](../aks-networkin
 
 #### Data Plane
 
-- [Workload Identity overview](https://learn.microsoft.com/en-us/azure/aks/workload-identity-overview?tabs=dotnet)
+- [Use Workload Identity](https://learn.microsoft.com/en-us/azure/aks/workload-identity-overview?tabs=dotnet)
+- ⚠️ [Pod identities](https://learn.microsoft.com/en-us/azure/aks/use-azure-ad-pod-identity) will be completely deprecated in September 2024. Customers should [migrate to workload identities](https://learn.microsoft.com/en-us/azure/aks/workload-identity-migrate-from-pod-identity).
 
 
+## Additional Azure Integrations
 
+#### Azure Container Registry
 
-
-
-> [!WARNING]
-> [Pod identities](https://learn.microsoft.com/en-us/azure/aks/use-azure-ad-pod-identity) will be completely deprecated in September 2024. Customers should [migrate to workload identities](https://learn.microsoft.com/en-us/azure/aks/workload-identity-migrate-from-pod-identity).
-
-
-
-
-
-### Additional Azure Services
-
-#### Azure Container Rgistry
-- [Authenticate with Azure Container Registry from Azure Kubernetes Service](https://docs.microsoft.com/en-us/azure/aks/cluster-container-registry-integration?tabs=azure-cli)
-
-- [Azure Built-in Policy](https://docs.microsoft.com/en-us/azure/aks/policy-reference#microsoftcontainerservice) "Kubernetes cluster containers should only use allowed images"
-  - [Policy Definition](https://github.com/Azure/azure-policy/blob/master/built-in-policies/policyDefinitions/Kubernetes/ContainerAllowedImages.json)
-- Acccess registry via [Azure Container Registry roles and permissions](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-roles?tabs=azure-cli)
-- [Connect privately to an Azure container registry using Azure Private Link](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-private-link)
+- [Integrate Azure Container Registry with Managed Identity](https://docs.microsoft.com/en-us/azure/aks/cluster-container-registry-integration?tabs=azure-cli)
+- [Private Link for Azure container registry](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-private-link)
 
 
 #### Defender for Containers
-Not enabled by default because it requires a [Defender Pricing Plan](https://azure.microsoft.com/pricing/details/defender-for-cloud/)
 
-- [Overview of Microsoft Defender for Containers](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-introduction)
-  - [Run-time protection for Kubernetes nodes and clusters](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-introduction?tabs=defender-for-container-arch-aks#run-time-protection-for-kubernetes-nodes-and-clusters)
-- Reference list [Alerts for containers - Kubernetes clusters](https://docs.microsoft.com/en-us/azure/defender-for-cloud/alerts-reference#alerts-k8scluster)
-- [Application Security](https://learn.microsoft.com/en-us/azure/aks/concepts-security#application-security)
+- [Defender for Containers Architecture](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-architecture) - how it works, esp. this 🖼️ [diagram](https://learn.microsoft.com/en-us/azure/defender-for-cloud/media/defender-for-containers/architecture-aks-cluster.png)
+- [Overview of Microsoft Defender for Containers](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-introduction), including
+  - Security posture management
+  - Vulnerability assessment
+  - Run-time threat protection
+  - Deployment & monitoring
+
+
+- Reference: [Defender for Cloud Alerts for containers - Kubernetes clusters](https://docs.microsoft.com/en-us/azure/defender-for-cloud/alerts-reference#alerts-k8scluster) to decode the `K8S_` and `K8S.NODE_` prefixed alerts.
 
 
 #### Azure Key Vault
-- [Azure Key Vault Provider for Secrets Store CSI Driver](https://github.com/Azure/secrets-store-csi-driver-provider-azure)
-- [Use the Azure Key Vault Provider for Secrets Store CSI Driver in an AKS cluster](https://docs.microsoft.com/en-us/azure/aks/csi-secrets-store-driver)
+
+- [Use the Azure Key Vault Provider for Secrets Store CSI Driver in an AKS cluster](https://docs.microsoft.com/en-us/azure/aks/csi-secrets-store-driver) - Azure managed (recommended)
+- [Azure Key Vault Provider for Secrets Store CSI Driver](https://github.com/Azure/secrets-store-csi-driver-provider-azure) - self-managed option
 
 
 
