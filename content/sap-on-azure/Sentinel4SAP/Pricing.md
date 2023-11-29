@@ -22,6 +22,6 @@ If deploying on Azure:​
 
 ### Additional Links
 
-- [Microsoft Sentinel Pricing](https://azure.microsoft.com/en-us/pricing/details/microsoft-sentinel/)
+- Sentinel Pricing - [Microsoft Sentinel Pricing](https://azure.microsoft.com/en-us/pricing/details/microsoft-sentinel/)
 
 #### [prev](./SentinelConfig.md) | [home](./introduction.md)  | [next](./Scenarios.md)
