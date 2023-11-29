@@ -1,13 +1,18 @@
 ### FastTrack for Azure Live
-# Azure Kubernetes Service (AKS) Security Best Practices
+#  AKS Security Best Practices
 
+> [!NOTE]
+> This handout was prepared in advance and intentionally generic. Actual session content may differ based on discussion. Please also refer to your own personal notes.
+
+#### Best Practices Overview
+
+See also this [Overview of best practices for Azure Kubernetes Service (AKS)](https://learn.microsoft.com/en-us/azure/aks/best-practices), which includes articlees on multi-tenancy, security, network and storage, developer best practices, etc.
 
 ## Infrastructure Security
 
 ### Networking Security
 
 The following topics are referenced in the [Networking handout](../aks-networking/networking):
-
 - Controlling egress traffic
 - Private clusters
 - Network Policies and service mesh
@@ -36,8 +41,7 @@ The following topics are referenced in the [Networking handout](../aks-networkin
 
 ### Multitenancy
 
-- [Azure Kubernetes Service (AKS) considerations for multitenancy](https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/service/aks) - overview of concepts and strategies
-
+- [Azure Kubernetes Service (AKS) considerations for multitenancy](https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/service/aks)
 
 ## Identity Based Security
 
@@ -76,7 +80,7 @@ The following topics are referenced in the [Networking handout](../aks-networkin
 #### Defender for Containers
 
 - [Defender for Containers Architecture](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-architecture) - how it works, esp. this 🖼️ [diagram](https://learn.microsoft.com/en-us/azure/defender-for-cloud/media/defender-for-containers/architecture-aks-cluster.png)
-- [Overview of Microsoft Defender for Containers](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-introduction), including
+- [Overview of Microsoft Defender for Containers](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-introduction), including:
   - Security posture management
   - Vulnerability assessment
   - Run-time threat protection
@@ -102,12 +106,6 @@ The following topics are referenced in the [Networking handout](../aks-networkin
 ---
 
 ## Appendix
-
-### Best Practices Overview
-
-- [Best practices Overview for Azure Kubernetes Service (AKS)](https://learn.microsoft.com/en-us/azure/aks/best-practices) 
-  - for cluster operators and developers 
-  - includes articlees on multi-tenancy, security, network and storage, developer best practices and more.
 
 ### Reference Architectures
 
