@@ -1,53 +1,90 @@
-# AKS Security Best Practices
+### FastTrack for Azure Live
+# Azure Kubernetes Service (AKS) Security Best Practices
 
-## Agenda
+> [!NOTE]
+> This handout was prepared in advance and intentionally generic. Actual session content may differ based on discussion. Please also refer to your own personal notes.
 
-- Securing Kubernetes
-- Node security
-- Access & Identity
-- Container security
-- Network Security
+## Infrastructure Security
 
-## General References
-
-- Concepts - [Security concepts for applications and clusters in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/concepts-security)
-- Best Practices - [Best practices for cluster security and upgrades in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/operator-best-practices-cluster-security)
-- Cloud Adoption Framework - [Security for AKS](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/app-platform/aks/security)
-
-## Securing Kubernetes Clusters
-
-### Kubernetes API Control Plane
-
-Also sometimes referred to as master nodes. These components are managed and maintained by Microsoft.[Cluster Security](https://docs.microsoft.com/en-us/azure/aks/concepts-security):
-  > By default, the Kubernetes API server uses a public IP address and a fully qualified domain name (FQDN). You can limit access to the API server endpoint using authorized IP ranges.
+### Private Clusters
 
 - [Create a private Azure Kubernetes Service cluster](https://docs.microsoft.com/en-us/azure/aks/private-clusters)
-- [Secure access to the API server using authorized IP address ranges in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/api-server-authorized-ip-ranges)
-- [Use command invoke to access a private Azure Kubernetes Service (AKS) cluster](https://docs.microsoft.com/en-us/azure/aks/command-invoke)
-- [Trusted Access (preview)](https://learn.microsoft.com/en-us/azure/aks/trusted-access-feature)
+- Connecting to a private cluster
+  - [Secure access to the API server using authorized IP address ranges in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/api-server-authorized-ip-ranges)
+  - [Use command invoke to access a private Azure Kubernetes Service (AKS) cluster](https://docs.microsoft.com/en-us/azure/aks/command-invoke)
+  - [Trusted Access (preview)](https://learn.microsoft.com/en-us/azure/aks/trusted-access-feature)
 
-### Restrict access to Instance Metadata API
 
-- [Best practices for cluster security and upgrades](https://docs.microsoft.com/en-us/azure/aks/operator-best-practices-cluster-security)
+### Network Policies
+
+Control intra-cluster traffic with [Kubernetes Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/).
+
+- [Azure Network Policies for AKS](https://learn.microsoft.com/en-us/azure/aks/use-network-policies)
+- [Calico](https://docs.tigera.io/calico/latest/about/) - the most popular open source option 
+- [Comparison - Azure vs. Calico](https://learn.microsoft.com/en-us/azure/aks/use-network-policies#differences-between-azure-network-policy-manager-and-calico-network-policy-and-their-capabilities)
+
+
+### Secure the Kubernetes Control Plane
+
+- [API Server VNet Integration (preview)](https://learn.microsoft.com/en-us/azure/aks/api-server-vnet-integration)
+- [Secure access to the API server and cluster nodes](https://learn.microsoft.com/en-us/azure/aks/operator-best-practices-cluster-security?tabs=azure-cli#secure-access-to-the-api-server-and-cluster-nodes)
 - [Restrict access to Instance Metadata API](https://docs.microsoft.com/en-us/azure/aks/operator-best-practices-cluster-security#restrict-access-to-instance-metadata-api)
 
-### Use Namespaces
+## Management
 
-- [Kubernetes Documentation: Namespaces](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)
+### Azure Policy
 
-### Rotate Certificates Periodically
+- [Understand Azure Policy for Kubernetes clusters](https://docs.microsoft.com/en-us/azure/governance/policy/concepts/policy-for-kubernetes)
+- [Kubernetes Pod Security Standards](https://kubernetes.io/docs/concepts/security/pod-security-standards/) specification:
+  - [Azure Policy Initiatives](https://docs.microsoft.com/en-us/azure/aks/policy-reference#initiatives)
+  - [Pod Security Admission](https://learn.microsoft.com/en-us/azure/aks/use-psa)
 
-- [Rotate certificates in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/certificate-rotation) - Note: there is a 30 min downtime for manually invoked certificate rotation operations.
-- [Custom certificate authority in AKS (preview)](https://learn.microsoft.com/en-us/azure/aks/custom-certificate-authority)
 
-### Externalize Secrets
+#### References
 
+- [Azure Policy built-in definitions for Azure Kubernetes Service](https://docs.microsoft.com/en-us/azure/aks/policy-reference)
+- [Azure Policy Regulatory Complaince](https://learn.microsoft.com/en-us/azure/aks/security-controls-policy)
+
+
+### Multitenancy
+
+- [Azure Kubernetes Service (AKS) considerations for multitenancy](https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/service/aks)
+
+## Integrations
+
+Azure Container Rgistry
+- [Authenticate with Azure Container Registry from Azure Kubernetes Service](https://docs.microsoft.com/en-us/azure/aks/cluster-container-registry-integration?tabs=azure-cli)
+
+
+
+Defender for Containers
+
+
+Azure Key Vault
 - [Azure Key Vault Provider for Secrets Store CSI Driver](https://github.com/Azure/secrets-store-csi-driver-provider-azure)
 - [Use the Azure Key Vault Provider for Secrets Store CSI Driver in an AKS cluster](https://docs.microsoft.com/en-us/azure/aks/csi-secrets-store-driver)
 
+
+Entra Id
+
+
+- [Access and Identity options for AKS](https://learn.microsoft.com/en-us/azure/aks/concepts-identity)
+- [Announcing Azure Active Directory (Azure AD) workload identity for Kubernetes](https://cloudblogs.microsoft.com/opensource/2022/01/18/announcing-azure-active-directory-azure-ad-workload-identity-for-kubernetes/) 
+  - Announced 18 January 2022 with Service Principal support. 
+  - Managed Identity support is on the roadmap.
+- [Workload identity federation](https://docs.microsoft.com/en-us/azure/active-directory/develop/workload-identity-federation)
+- [Azure Pod Identity (preview)](https://docs.microsoft.com/en-us/azure/aks/use-azure-ad-pod-identity) - this will be *replaced* and thus will never GA.
+
+---
+
+
+
+
+
+
 ### Integrate the cluster with Azure Container Registry
 
-- [Authenticate with Azure Container Registry from Azure Kubernetes Service](https://docs.microsoft.com/en-us/azure/aks/cluster-container-registry-integration?tabs=azure-cli)
+
 
 ### Pod Security
 
@@ -61,12 +98,6 @@ Also sometimes referred to as master nodes. These components are managed and mai
 
 ### Azure Policy
 
-- [Understand Azure Policy for Kubernetes clusters](https://docs.microsoft.com/en-us/azure/governance/policy/concepts/policy-for-kubernetes)
-- [Azure Policy built-in definitions for Azure Kubernetes Service](https://docs.microsoft.com/en-us/azure/aks/policy-reference)
-- [Azure Policy Initiatives](https://docs.microsoft.com/en-us/azure/aks/policy-reference#initiatives) represent an implementation of the [Kubernetes Pod Security Standards](https://kubernetes.io/docs/concepts/security/pod-security-standards/) specification
-- Policy extension can be auto provisioned from the [Defender for Cloud setting](https://docs.microsoft.com/en-us/azure/defender-for-cloud/kubernetes-workload-protections#configure-defender-for-containers-components)
-- [Azure Policy Regulatory Complaince](https://learn.microsoft.com/en-us/azure/aks/security-controls-policy)
-- [Pod Security Admission](https://learn.microsoft.com/en-us/azure/aks/use-psa)
 
 ### Separate apps across node pools (optional)
 
@@ -112,12 +143,6 @@ Also sometimes referred to as master nodes. These components are managed and mai
 
 ### Workload Identity
 
-- [Access and Identity options for AKS](https://learn.microsoft.com/en-us/azure/aks/concepts-identity)
-- [Announcing Azure Active Directory (Azure AD) workload identity for Kubernetes](https://cloudblogs.microsoft.com/opensource/2022/01/18/announcing-azure-active-directory-azure-ad-workload-identity-for-kubernetes/) 
-  - Announced 18 January 2022 with Service Principal support. 
-  - Managed Identity support is on the roadmap.
-- [Workload identity federation](https://docs.microsoft.com/en-us/azure/active-directory/develop/workload-identity-federation)
-- [Azure Pod Identity (preview)](https://docs.microsoft.com/en-us/azure/aks/use-azure-ad-pod-identity) - this will be *replaced* and thus will never GA.
 
 ### Microsoft Entra Integration
 
@@ -151,38 +176,23 @@ Not enabled by default because it requires a [Defender Pricing Plan](https://azu
 - [Use Microsoft Defender for container registries to scan your images for vulnerabilities](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-container-registries-usage)
 - [Identify vulnerable container images in your CI/CD workflows](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-container-registries-cicd)
 
-### Policys for Confidential Containers
 
-[Security Policy for Confidential Containers](https://github.com/MicrosoftDocs/azure-docs/commits/main/articles/confidential-computing/confidential-containers-aks-security-policy.md)
 
-## Network Security
+## Appendix
 
-- [Network concepts for applications in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/concepts-network)
-- [API Server VNet Integration (preview)](https://learn.microsoft.com/en-us/azure/aks/api-server-vnet-integration)
+### Docs
 
-### Private Link
+- [Cluster operator and developer best practices to build and manage applications on Azure Kubernetes Service (AKS)](https://learn.microsoft.com/en-us/azure/aks/best-practices) - overview of all best practice docs, including:
+  - multi-tenancy
+  - security
+  - network and storage
+  - developer best practices
+  and more.
 
-- Use [private endpoints](https://learn.microsoft.com/en-us/azure/aks/private-clusters?tabs=azure-portal#use-a-private-endpoint-connection) wherever possible to connect Azure resources via a private IP address
-- [Private Link for Azure Contaienr Registry](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-private-link?ref=akschecklist)
-- [Private Link for Azure Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/general/private-link-service?tabs=portal)
+### Reference Architectures
 
-### Exposing Kubernetes Services
-
-- Avoid using public IPs to expose load balanced pods
-- Use an ingress controller to reverse proxy and aggregate Kubernetes services. 
-  - [Create an ingress controller to an internal virtual network in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/ingress-internal-ip?tabs=azure-cli)
-- Use the _"Kubernetes clusters should use internal load balancers"_ [policy](https://docs.microsoft.com/en-us/azure/aks/policy-reference) to make a Kubernetes service accessible only to applications running in the same virtual network as the Kubernetes cluster.
-
-### Egress Security
-
-- [Control egress traffic for cluster nodes in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/limit-egress-traffic)
-- Avoid a public IP for egress with a private cluster + Standard LB
-- [Customize cluster egress with a User-Defined Route](https://docs.microsoft.com/en-us/azure/aks/egress-outboundtype)
-- [Control egress traffic for cluster nodes in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/limit-egress-traffic)
-- [Customize cluster egress with a User-Defined Route](https://docs.microsoft.com/en-us/azure/aks/egress-outboundtype)
-  - [Outbound type of `loadBalancer`](https://docs.microsoft.com/en-us/azure/aks/egress-outboundtype#outbound-type-of-loadbalancer)
-  - [Outbound type of `userDefinedRouting`](https://docs.microsoft.com/en-us/azure/aks/egress-outboundtype#outbound-type-of-userdefinedrouting)
-
-### Enable SSH (optional)
-
-- [Connect to Azure Kubernetes Service (AKS) cluster nodes for maintenance or troubleshooting](https://docs.microsoft.com/en-us/azure/aks/node-access)
+| Design | Audience | Target Audience |
+|:--|:--|:--|
+| [Baseline Architecture for an AKS Cluster](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/containers/aks/baseline-aks) | Azure Architecture Center, Microsoft Patterns and Practices team | Minimum recommended baseline for everyone |
+| [AKS Landing Zone Accelerator](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/app-platform/aks/landing-zone-accelerator) | Cloud Adoption Framework team | Enterprise segment |
+| [AKS Security Baseline per Microsoft cloud security benchmark v1](https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/azure-kubernetes-service-aks-security-baseline) | Microsoft Security Benchmark team | Customers with compliance requirements, e.g. NIST, PCI-DSS |
