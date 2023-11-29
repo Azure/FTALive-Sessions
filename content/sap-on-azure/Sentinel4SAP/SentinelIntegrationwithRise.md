@@ -20,10 +20,13 @@ If you are interested in joining our preview program, please [Sign Up](https://f
 
 #### Major features
 
-※ It is assumed that the **audit log acquisition API (Audit Log Management Service)** of the subaccount of the Cloud Foundry environment is used.
-
 - Analytics rules specific to SAP BTP
 - Workbooks dedicated to SAP BTP
+
+※ It is assumed that the **audit log acquisition API (Audit Log Management Service)** of the subaccount of the Cloud Foundry environment is used.
+
+![image](https://github.com/Azure/FTALive-Sessions/assets/57655797/6d693b82-0a39-403d-90fe-18cd4180c74f)
+
 
 #### Deploy
 
@@ -66,6 +69,16 @@ Refer to [Deploy Microsoft Sentinel Solution for SAP® BTP](https://learn.micros
 2. SAP infrastructure and operating system logs aren't available to Sentinel in RISE, including VMs running SAP, SAPControl(SAP start/stop management function) data sources, network resources placed within ECS.　　　　　　　
 
 3. SAP monitors elements of the Azure infrastructure and operation system independently.
+
+#### SAP BTP Connectivity
+
+- SAP Business Technology Platform (BTP) provides a multitude of applications that are mostly accessed by public IP/hostname via the Internet. Customer services running in their Azure subscriptions access them either directly through VM/Azure service internet connection, or through User Defined Routes forcing all Internet bound traffic to go through a centrally managed firewall or other network virtual appliances.
+- Few SAP BTP services, such as SAP Data Intelligence, however is by design accessed through [a separate vnet peering](https://help.sap.com/docs/data-intelligence-cloud/sap-data-intelligence-administration/connect-using-virtual-network-peering). instead of a public endpoint typically used for BTP application.
+- See [SAP's documentation](https://help.sap.com/docs/private-link/private-link1/consume-azure-services-in-sap-btp) and a series of blog posts on the architecture of the SAP BTP Private Link Service and private connectivity methods, dealing with DNS and certificates in following SAP blog series [Getting Started with BTP Private Link Service for Azure](https://blogs.sap.com/2021/12/29/getting-started-with-btp-private-link-service-for-azure/).
+
+※Attention
+- Contact SAP to find out if **Private Link Service** is available for SAP RISE/ECS workloads (including BTP).
+- Private Link Service with SAP BTP is **currently not generally available status in all regions**.
 
 #### Related information
 
