@@ -1,5 +1,5 @@
 ## Operating Sentinel for SAP
-#### [prev](./SentinelConfig.md) | [home](./introduction.md)  | [next](./SentinelIntegrationwithRise.md)
+#### [prev](./Pricing.md) | [home](./introduction.md)  | [next](./SentinelIntegrationwithRise.md)
 ### Incident Response
 
 Here are some examples of possible threat scenarios to SAP application and how to respond to them.
@@ -78,5 +78,5 @@ ABAP programs perform various operations, for example history operations (delete
 **Related information**  </br></br>
 [Enable and configure SAP auditing for Microsoft Sentinel](https://learn.microsoft.com/en-us/azure/sentinel/sap/configure-audit?source=recommendations)
 </br>
-#### [prev](./SentinelConfig.md) | [home](./introduction.md)  | [next](./SentinelIntegrationwithRise.md)
+#### [prev](./Pricing.md) | [home](./introduction.md)  | [next](./SentinelIntegrationwithRise.md)
 
