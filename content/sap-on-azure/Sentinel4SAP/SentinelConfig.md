@@ -1,5 +1,5 @@
 ## Configuring Microsoft Sentinel
-#### [prev](./DataConnector.md) | [home](./introduction.md)  | [next](./Scenarios.md)
+#### [prev](./DataConnector.md) | [home](./introduction.md)  | [next](./Pricing.md)
 ### Deploy solutions for SAP application on Microsoft Sentinel
 
 #### Deploying content hub
@@ -46,4 +46,4 @@ A list of available workbooks along with it's detailed functionality can be foun
 **Related information**  </br>
 [Microsoft Sentinel solution for SAP® applications: security content reference](https://learn.microsoft.com/en-us/azure/sentinel/sap/sap-solution-security-content#available-watchlists)
 </br>
-#### [prev](./DataConnector.md) | [home](./introduction.md)  | [next](./Scenarios.md)
+#### [prev](./DataConnector.md) | [home](./introduction.md)  | [next](./Pricing.md)
