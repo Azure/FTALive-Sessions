@@ -15,7 +15,10 @@
 ## Pre-requisites
 A great place to understand and start learning about Microsoft Sentinel can be found at [https://learn.microsoft.com/en-us/azure/sentinel/](https://learn.microsoft.com/en-us/azure/sentinel/)
 
-Please watch Azure Learn Live sessions on [Microsoft Sentinel Fundamentals](https://learn.microsoft.com/en-us/shows/learn-live/fasttrack-for-azure-season-2-ep15-microsoft-sentinel-fundamentals)
+Please watch Azure Learn Live sessions on 
+- [Microsoft Sentinel Fundamentals](https://learn.microsoft.com/en-us/shows/learn-live/fasttrack-for-azure-season-2-ep15-microsoft-sentinel-fundamentals)
+
+- [Introduction-to-kusto-query-language](https://learn.microsoft.com/en-us/shows/learn-live/fasttrack-for-azure-season-2-ep16-introduction-to-kusto-query-language)
 
 ### Additional Links
 
