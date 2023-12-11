@@ -1,6 +1,6 @@
 # Introduction
 
-#### [home](./introduction.md)  | [next](./SentinelSAPSolution.md)
+#### [home](./introduction.md)  | [next](./MicrosoftSentinel.md)
 
 
 ## What is this session about
@@ -15,8 +15,12 @@
 ## Pre-requisites
 A great place to understand and start learning about Microsoft Sentinel can be found at [https://learn.microsoft.com/en-us/azure/sentinel/](https://learn.microsoft.com/en-us/azure/sentinel/)
 
-Please watch Azure Learn Live sessions on [Microsoft Sentinel Fundamentals](https://learn.microsoft.com/en-us/shows/learn-live/fasttrack-for-azure-season-2-ep15-microsoft-sentinel-fundamentals)
+Please watch Azure Learn Live sessions on 
+- Microsoft Sentinel Fundamentals - [Microsoft Sentinel Fundamentals](https://learn.microsoft.com/en-us/shows/learn-live/fasttrack-for-azure-season-2-ep15-microsoft-sentinel-fundamentals)
 
+- Introduction to KQL - [Introduction-to-kusto-query-language](https://learn.microsoft.com/en-us/shows/learn-live/fasttrack-for-azure-season-2-ep16-introduction-to-kusto-query-language)
+
+- Basics of Kusto - [Basics of Kusto](https://tsubasaxzzz.github.io/fta-hackon2022/docs/basic/)
 ### Additional Links
 
 - [Microsoft Sentinel Documentation](https://learn.microsoft.com/en-us/azure/sentinel/)
@@ -28,4 +32,4 @@ Please watch Azure Learn Live sessions on [Microsoft Sentinel Fundamentals](http
 - [SAP Continous Threat Monitoring workbooks](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/microsoft-sentinel-sap-continuous-threat-monitoring-workbooks/ba-p/3015630)
 - [Public case study](https://www.microsoft.com/insidetrack/blog/protecting-microsofts-sap-workload-with-microsoft-sentinel/)
 - [Sample use case](https://blogs.sap.com/2022/03/14/microsoft-sentinel-and-logic-apps-can-be-the-guardians-of-sap-security-operations-secops/)
-#### [home](./introduction.md)  | [next](./SentinelSAPSolution.md)
+#### [home](./introduction.md)  | [next](./MicrosoftSentinel.md)

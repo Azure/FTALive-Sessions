@@ -1,5 +1,5 @@
 ## Configuring Microsoft Sentinel
-#### [prev](./DataConnector.md) | [home](./introduction.md)  | [next](./Scenarios.md)
+#### [prev](./DataConnector.md) | [home](./introduction.md)  | [next](./Pricing.md)
 ### Deploy solutions for SAP application on Microsoft Sentinel
 
 #### Deploying content hub
@@ -19,6 +19,8 @@
   
   A list of analysis rules can be found in the following document: 
   [Built-in analytics rules](https://learn.microsoft.com/en-us/azure/sentinel/sap/sap-solution-security-content#built-in-analytics-rules)
+
+  ***Note:*** *Customers should treat the Anlaytic rules that comes out-of-box as a starting point and we recommend to create rules as per their requirement.*
 
 #### Watchlist configuration
   Some analysis rules target specific systems for monitoring, and some analyze specific processes and subjects such as important programs, users, and transactions. In the SAP solution, these analysis conditions are extracted outside the rules as a Watchlist. By using these watchlists, you can maintain the analysis rule detection target and exclusion conditions without directly changing the analysis rule. 
@@ -46,4 +48,4 @@ A list of available workbooks along with it's detailed functionality can be foun
 **Related information**  </br>
 [Microsoft Sentinel solution for SAP® applications: security content reference](https://learn.microsoft.com/en-us/azure/sentinel/sap/sap-solution-security-content#available-watchlists)
 </br>
-#### [prev](./DataConnector.md) | [home](./introduction.md)  | [next](./Scenarios.md)
+#### [prev](./DataConnector.md) | [home](./introduction.md)  | [next](./Pricing.md)

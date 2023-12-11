@@ -1,6 +1,6 @@
 ## Characteristics of Microsoft Sentinel solution for SAP® applications
 
-#### [prev](./introduction.md) | [home](./introduction.md)  | [next](./SAPConfig.md)
+#### [prev](./MicrosoftSentinel.md) | [home](./introduction.md)  | [next](./SAPConfig.md)
 
 In order to detect threats, it is necessary to consider the unique characteristics of the **Microsoft Sentinel solution for SAP® applications**. For example, an SAP solution should at least know:
 
@@ -39,4 +39,4 @@ SAP applications are complex and have different analytical aspects. For example,
 
 In the SAP solution, you can customize the objects to be analyzed that change from day to day with a special table called Watchlist. It is designed so that analysts can concentrate on developing analysis rules and operators can maintain updated monitoring targets without going into complicated analysis rules.
 
-#### [prev](./introduction.md) | [home](./introduction.md)  | [next](./SAPConfig.md)
+#### [prev](./MicrosoftSentinel.md) | [home](./introduction.md)  | [next](./SAPConfig.md)
