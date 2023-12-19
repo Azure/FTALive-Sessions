@@ -28,7 +28,7 @@ It will be delivered by Microsoft FastTrack for Azure engineers. Bring your ques
   * Branching Structures
   * [Automating CI/CD using Azure DevOps Release Pipelines](https://docs.microsoft.com/en-us/azure/data-factory/continuous-integration-delivery-automate-azure-pipelines)  
   * [Custom Parameters](https://docs.microsoft.com/en-us/azure/data-factory/continuous-integration-delivery-resource-manager-custom-parameters)
-* Best Practices and Limitations
+* [Best Practices and Limitations](https://learn.microsoft.com/en-us/azure/data-factory/continuous-integration-delivery#best-practices-for-cicd)
 * Important content, docs and reference material you should review. 
 * FAQs
 * QA
