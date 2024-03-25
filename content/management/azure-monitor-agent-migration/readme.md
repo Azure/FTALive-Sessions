@@ -42,7 +42,7 @@ When planning the migration, it is important to understand your current environm
         * Change Tracking and Inventory
             * Start evaluating the new Change Tracking and Inventory solution
         * Defender for Cloud?
-            * Change your agent deployments in Defender for Cloud to the AMA-based deployments
+            * Change your agent deployments in Defender for Cloud to the AMA-based or agentless scanning approach, depending on your needs
         * Microsoft Sentinel?
             * Change to the AMA-based data collections in Sentinel
 
@@ -50,6 +50,7 @@ When planning the migration, it is important to understand your current environm
 **Tools to use**:
 * [AMA Migration Tracker workbook](https://portal.azure.com/#view/Microsoft_Azure_Monitoring/AzureMonitoringBrowseBlade/~/workbooks)
 * [DCR Config Generator](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/azure-monitor-agent-migration-tools?tabs=portal-1#installing-and-using-dcr-config-generator)
+* [MMA Discovery and Removal Utility](https://learn.microsoft.com/en-gb/azure/azure-monitor/agents/azure-monitor-agent-mma-removal-tool?tabs=single-tenant%2Cdiscovery)
 * [Workspace Audit Workbook](https://github.com/microsoft/AzureMonitorCommunity/tree/master/Azure%20Services/Log%20Analytics%20workspaces/Workbooks)
 * [SCOM Management MP](https://kevinholman.com/2017/05/09/scom-management-mp-making-a-scom-admins-life-a-little-easier/)
 
@@ -63,4 +64,5 @@ When planning the migration, it is important to understand your current environm
 * [About Update management center (preview)](https://learn.microsoft.com/en-us/azure/update-center/overview)
 * [Enable Change Tracking and Inventory using Azure Monitoring Agent (Preview)](https://learn.microsoft.com/en-us/azure/automation/change-tracking/enable-vms-monitoring-agent?tabs=singlevm)
 * [AMA migration for Microsoft Sentinel](https://learn.microsoft.com/en-us/azure/sentinel/ama-migrate)
+* [Plan agents, extensions and Azure Arc for Defender for Servers](https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-defender-for-servers-agents)
 * [Create, Edit, and Monitor Data Collection Rules with the Data Collection Rule Toolkit](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/create-edit-and-monitor-data-collection-rules-with-the-data/ba-p/3810987)
