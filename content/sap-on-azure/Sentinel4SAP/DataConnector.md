@@ -32,7 +32,7 @@ Your SAP authentication mechanism, and where you deploy your VM, will determine 
 #### Plaintext configuration file
 
 - If your SAP authentication is done using SNC and X.509 certificates, your only option is to use a configuration file.
-- Deploy the agent connector container using configuration file by following the [link](https://learn.microsoft.com/en-us/azure/sentinel/sap/deploy-data-connector-agent-container-other-methods?tabs=config-file#deploy-the-data-connector-agent-container)
+- Deploy the agent connector container using configuration file by following the [link](https://learn.microsoft.com/en-us/azure/sentinel/sap/deploy-data-connector-agent-container?tabs=config-file%2Cazure-portal)
 
 ### Deploy data connector agent
 
