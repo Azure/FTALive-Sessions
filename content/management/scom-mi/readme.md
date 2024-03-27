@@ -15,14 +15,23 @@ In this session you will learn more about SCOM MI. The engineering team will cov
 
 ## Agenda
 
-#### [Setup](setup.md) 
-Let's start with the business requirements and the setup process.
+### [Introduction to SCOM Managed Insance](intro.md)
 
-#### [Migration](migration.md) 
-Migrating to SCOM MI.
-  
-#### [New features](newfeatures.md) 
+What is SCOM MI and how does it differ from SCOM?
+
+### [Setup](setup.md)
+
+Let's start with the business requirements and the setup process.
+ 
+### [New features](newfeatures.md) 
+
 What are the new features and how to leverage them?
+
+What are the features that are not available in SCOM MI?
+
+### [Migration](migration.md) 
+
+Migrating to SCOM MI.
 
 ### Audience
 
@@ -39,3 +48,10 @@ In this session you will learn how to:
 ### Additional learning resources
 
 [SCOM MI](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/scom-mi-overview)
+
+[About Operations Manager](https://learn.microsoft.com/en-us/system-center/scom/welcome?view=sc-om-2022)
+
+[SCOM MI FAQ](https://learn.microsoft.com/en-us/system-center/scom/faq?view=sc-om-2022)
+
+[SCOM MI Pricing](https://azure.microsoft.com/en-us/pricing/details/monitor/)
+
