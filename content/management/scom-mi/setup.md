@@ -13,3 +13,6 @@ Simpler diagram
 
 https://learn.microsoft.com/en-us/system-center/scom/tutorial-create-scom-managed-instance?view=sc-om-2022
 
+
+[Previous: Intro](intro.md)
+[Next: New Features](newfeatures.md) 

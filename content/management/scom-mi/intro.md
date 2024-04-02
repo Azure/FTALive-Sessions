@@ -8,3 +8,7 @@ SCOM MI is a new deployment option for System Center Operations Manager (SCOM) t
 
 ## Diagram
 
+![alt text](image.png)
+
+[Next: Setup](setup.md)
+[Previous: Welcome](readme.md)

@@ -8,3 +8,5 @@ It consists of the following steps:
 
 ## Migrate to Operations Manager managed instance
 https://learn.microsoft.com/en-us/system-center/scom/migrate-to-operations-manager-managed-instance?view=sc-om-2022&tabs=mp-overrides
+
+[Previous: New Features](newfeatures.md)
