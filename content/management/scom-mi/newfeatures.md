@@ -5,3 +5,6 @@ https://learn.microsoft.com/en-us/system-center/scom/configure-log-analytics-for
 
 ## Power BI
 https://learn.microsoft.com/en-us/system-center/scom/configure
+
+[Next: Migration](migration.md)
+[Previous: Setup](setup.md)
