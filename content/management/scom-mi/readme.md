@@ -39,11 +39,11 @@ This session is most useful for IT administrators and architects responsible for
 
 ### Goals
 
-In this session you will learn how to:
+In this session you will review the following topics:
 
-- Set up SCOM MI
-- Migrate to SCOM MI
-- Leverage the new features of SCOM MI
+- SCOM MI Setup
+- Migrating to SCOM MI
+- Leveraging the new features of SCOM MI
 
 ### Additional learning resources
 
