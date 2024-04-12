@@ -1,9 +1,10 @@
 # Welcome to the FastTrack for Azure SCOM Managed Instance call
+
 ## We will start 3-4 minutes after the scheduled time to accommodate those still connecting
 
 > This call will not be recorded due to the wide audience and to encourage questions.
 
-**Questions?** Feel free to type them in the chat window at any time. Note that questions you post will be public. 
+**Questions?** Feel free to type them in the chat window at any time. Note that questions you post will be public.
 
 **Slideless** No PowerPoint, we promise! As we update this content you will get the changes straight away.
 
@@ -15,21 +16,21 @@ In this session you will learn more about SCOM MI. The engineering team will cov
 
 ## Agenda
 
-### [Introduction to SCOM Managed Insance](intro.md)
+### [Introduction to SCOM Managed Instance](intro.md)
 
 What is SCOM MI and how does it differ from SCOM?
 
 ### [Setup](setup.md)
 
 Let's start with the business requirements and the setup process.
- 
-### [New features](newfeatures.md) 
+
+### [New features](newfeatures.md)
 
 What are the new features and how to leverage them?
 
 What are the features that are not available in SCOM MI?
 
-### [Migration](migration.md) 
+### [Migration](migration.md)
 
 Migrating to SCOM MI.
 
