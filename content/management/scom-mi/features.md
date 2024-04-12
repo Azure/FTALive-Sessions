@@ -41,7 +41,9 @@ Connect to your SCOM Managed Instance using the System Center Operations Manager
 
 Note: Grafana is still in preview
 
-#
+### Whats New?
+
+Update versions can be found [here](https://learn.microsoft.com/en-us/system-center/scom/whats-new-scom-managed-instance?view=sc-om-2022)
 
 [Next: Migration](migration.md)
 
