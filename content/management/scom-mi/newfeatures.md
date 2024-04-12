@@ -1,5 +1,13 @@
 # New Features
 
+## Agent Configuration
+
+- Agents can report to multiple management groups
+
+![alt text](image-2.png)
+
+## Grafana Integration
+
 ## Log Analytics
 https://learn.microsoft.com/en-us/system-center/scom/configure-log-analytics-for-scom-managed-instance?view=sc-om-2022
 
