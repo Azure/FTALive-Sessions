@@ -1,5 +1,7 @@
 # Introduction to SCOM Managed Instance
 
+### [Previous](readme.md) | [Home](readme.md) | [Next](setup.md)
+
 In this module, you will learn about SCOM Managed Instance (SCOM MI) and how it differs from SCOM.
 
 ## What is SCOM MI?
@@ -10,5 +12,4 @@ SCOM MI is a new deployment option for System Center Operations Manager (SCOM) t
 
 ![alt text](image.png)
 
-[Next: Setup](setup.md)
-[Previous: Welcome](readme.md)
+### [Previous](readme.md) | [Home](readme.md) | [Next](setup.md)
