@@ -2,10 +2,9 @@
 
 ### [Previous](setup.md) | [Home](readme.md) | [Next](migration.md)
 
-## Agent Configuration
+## Management
 
 - Infrastructure
-- Add agents from the portal
 - Gateway servers
 
 ![alt text](image-2.png)

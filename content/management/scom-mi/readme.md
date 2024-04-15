@@ -16,7 +16,7 @@ In this session you will learn more about SCOM MI. The engineering team will cov
 
 ## Agenda
 
-### [Introduction to SCOM Managed Instance](intro.md)
+### [Introduction to SCOM Managed Insance](intro.md)
 
 What is SCOM MI and how does it differ from SCOM?
 
@@ -24,11 +24,18 @@ What is SCOM MI and how does it differ from SCOM?
 
 Let's start with the business requirements and the setup process.
 
-### [New features](newfeatures.md)
+### [Features](Features.md)
 
-What are the new features and how to leverage them?
+What features does SCOM MI offer and how to leverage them?
 
 What are the features that are not available in SCOM MI?
+
+### [Agents](agents.md)
+
+How to deploy agents via SCOM MI
+
+- Automatically
+- Manually
 
 ### [Migration](migration.md)
 
