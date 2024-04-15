@@ -11,15 +11,23 @@ Azure Monitor SCOM Managed Instance provides a cloud-based alternative for Opera
 The following are the supported monitoring scenarios:
 
 - Azure Windows VMs that have Line of sight connectivity to the Management Server
-- Azure Windows VMs with no Line of sight connectivity (must use managed Gateway)
-- On-premise Arc-enabled VM's that have Line of sight connectivity to Management Server.
+- Azure VMs with no Line of sight connectivity (must use managed Gateway)
+- On-premise Arc-enabled VMs that have Line of sight connectivity to Management Server.
 - On-premises agents with no Line of sight connectivity (must use managed Gateway) to Azure
 
 Note:
 
-- Linux VMs in Azure are not currently supported.
-- Agent multi-homing isn't supported to multiple SCOM Managed Instances.
+- Linux VMs in Azure and Arc-enabled Linux VMs are not currently supported. However, they can be managed via the Arc-enabled gateway servers.
+- Agent multi-homing isn't supported to multiple SCOM Managed Instances. However, it can have a multi-home configuration for on-premises System Center Operations Manager and a SCOM Managed Instance.
+- Agents that are directly connected to the SCOM MI need to be able to reach westus.workloadnexus.azure.com on port 443.
+- .NET 4.7.2 and TLS 1.2 IS required for agent install.
 
 ## Managed Gateways
 
-Managed Gateways need to be Arc-enabled and then the Gateway extension needs to be installed, it can be installed via the Managed Gateways page in SCOM MI.
+Managed Gateways need to be Arc-enabled with the Gateway extension installed, it can be installed via the Managed Gateways page in SCOM MI.
+
+Note:
+
+- Currently, multi-homing for gateway servers isn't supported.
+- Arc-enabled Gateways require line of sight to westus.workloadnexus.azure.com on port 443.
+- Initial authentication is performed by a managed identity, then certificates are used to manage Managed Gateways by Microsoft.
