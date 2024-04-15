@@ -1,5 +1,7 @@
 # Introduction to SCOM Managed Instance
 
+### [Previous](readme.md) | [Home](readme.md) | [Next](setup.md)
+
 In this module, you will learn about SCOM Managed Instance (SCOM MI) and how it differs from SCOM.
 
 ## What is SCOM MI?
@@ -26,6 +28,4 @@ The following table highlights the key differences between System Center Operati
 
 #
 
-[Next: Setup](setup.md)
-
-[Previous: Welcome](readme.md)
+### [Previous](readme.md) | [Home](readme.md) | [Next](setup.md)
