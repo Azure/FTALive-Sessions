@@ -16,9 +16,9 @@ SCOM MI is a new deployment option for System Center Operations Manager (SCOM) t
 
 SCOM Managed Instance has all the capabilities of System Center Operations Manager on-premises in a cloud-native way.
 
-The following table highlights the key differences between System Center Operations Manager on-premises and SCOM Managed Instance:
+Comparison of SCOM on-premises with SCOM Managed Instance:
 
-![alt text](ComparisonTable.png)
+<https://learn.microsoft.com/en-us/system-center/scom/operations-manager-managed-instance-overview?view=sc-om-2022#comparison-of-system-center-operations-manager-on-premises-with-scom-managed-instance>
 
 ## Pricing and Benefits
 

@@ -14,6 +14,10 @@
 
 In this session you will learn more about SCOM MI. The engineering team will cover details of the setup steps, the migration process and how to leverage the improvements made to SCOM when running as a managed instance in Azure.
 
+### Audience
+
+This session is most useful for IT administrators and architects responsible for managing SCOM or considering moving to SCOM MI.
+
 ## Agenda
 
 ### [Introduction to SCOM Managed Insance](intro.md)
@@ -41,21 +45,9 @@ What are the features that are not available in SCOM MI?
 
 Migrating to SCOM MI.
 
-### Audience
-
-This session is most useful for IT administrators and architects responsible for managing SCOM. While this session does introduce technical concepts, no special knowledge is required other than a general familiarity with the Azure Portal.
-
-### Goals
-
-In this session you will review the following topics:
-
-- SCOM MI Setup
-- Migrating to SCOM MI
-- Leveraging the new features of SCOM MI
-
 ### Additional learning resources
 
-[SCOM MI](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/scom-mi-overview)
+[SCOM MI](https://learn.microsoft.com/en-us/azure/azure-monitor/vm/scom-managed-instance-overview)
 
 [About Operations Manager](https://learn.microsoft.com/en-us/system-center/scom/welcome?view=sc-om-2022)
 
