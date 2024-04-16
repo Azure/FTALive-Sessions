@@ -20,7 +20,7 @@ Note:
 - Linux VMs in Azure and Arc-enabled Linux VMs are not currently supported. However, they can be managed via the Arc-enabled gateway servers.
 - Agent multi-homing isn't supported to multiple SCOM Managed Instances. However, it can have a multi-home configuration for on-premises System Center Operations Manager and a SCOM Managed Instance.
 - Agents that are directly connected to the SCOM MI need to be able to reach westus.workloadnexus.azure.com on port 443.
-- .NET 4.7.2 and TLS 1.2 IS required for agent install.
+- .NET 4.7.2 and TLS 1.2 is required for agent install.
 
 ## Managed Gateways
 
