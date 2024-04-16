@@ -37,4 +37,4 @@ Step 12. Create a SCOM Managed Instance
 
 [Setup Docs](https://learn.microsoft.com/en-us/system-center/scom/tutorial-create-scom-managed-instance?view=sc-om-2022)
 
-#### [Previous](intro.md) | [Home](readme.md) | [Next](newfeatures.md)
+#### [Previous](intro.md) | [Home](readme.md) | [Next](agents.md)

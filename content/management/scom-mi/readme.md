@@ -24,18 +24,18 @@ What is SCOM MI and how does it differ from SCOM?
 
 Let's start with the business requirements and the setup process.
 
-### [Features](Features.md)
-
-What features does SCOM MI offer and how to leverage them?
-
-What are the features that are not available in SCOM MI?
-
 ### [Agents](agents.md)
 
 How to deploy agents via SCOM MI
 
 - Automatically
 - Manually
+
+### [Features](Features.md)
+
+What features does SCOM MI offer and how to leverage them?
+
+What are the features that are not available in SCOM MI?
 
 ### [Migration](migration.md)
 
