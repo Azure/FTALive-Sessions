@@ -35,7 +35,7 @@ How to deploy agents via SCOM MI
 - Automatically
 - Manually
 
-### [Features](Features.md)
+### [Features](newfeatures.md)
 
 What features does SCOM MI offer and how to leverage them?
 
@@ -54,4 +54,3 @@ Migrating to SCOM MI.
 [SCOM MI FAQ](https://learn.microsoft.com/en-us/system-center/scom/faq?view=sc-om-2022)
 
 [SCOM MI Pricing](https://azure.microsoft.com/en-us/pricing/details/monitor/)
-
