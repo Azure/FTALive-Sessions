@@ -31,6 +31,8 @@ Connect to your SCOM Managed Instance using the System Center Operations Manager
 
 - [Logs (preview)](https://learn.microsoft.com/en-us/system-center/scom/configure-log-analytics-for-scom-managed-instance?view=sc-om-2022#view-logs)
 
+![alt text](image-2.png)
+
 - [Workbooks (preview)]()
 
 ### Dashboards and Reporting
@@ -44,41 +46,5 @@ Connect to your SCOM Managed Instance using the System Center Operations Manager
 - [Query SCOM MI from Grafana Dashboards](https://learn.microsoft.com/en-us/system-center/scom/query-scom-managed-instance-data-on-grafana?view=sc-om-2022)
 
 Note: Grafana is still in preview
-
-### Whats New?
-
-Update versions can be found [here](https://learn.microsoft.com/en-us/system-center/scom/whats-new-scom-managed-instance?view=sc-om-2022)
-
-[Next: Migration](migration.md)
-
-[Previous: Setup](setup.md)
-
-
-## Management
-
-- Infrastructure
-- Gateway servers
-
-![alt text](image-2.png)
-
-## Workbooks
-
-- Alerts
-
-## Grafana Integration
-
-
-
-## Log Analytics
-
-![alt text](image-3.png)
-
-![alt text](image-2.png)
-
-https://learn.microsoft.com/en-us/system-center/scom/configure-log-analytics-for-scom-managed-instance?view=sc-om-2022
-
-## Power BI
-
-https://learn.microsoft.com/en-us/system-center/scom/configure
 
 ### [Previous](setup.md) | [Home](readme.md) | [Next](migration.md)

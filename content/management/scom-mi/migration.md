@@ -2,7 +2,7 @@
 
 ### [Previous](newfeatures.md) | [Home](readme.md)
 
-The process is technically simple, but it requires planning and testing. The migration process is a multi-step process and can be gradually implemented.
+The process is technically simple, but it requires planning and testing. It is a multi-step process and can be gradually implemented.
 
 It consists of the following steps:
 
@@ -14,3 +14,5 @@ It consists of the following steps:
 <https://learn.microsoft.com/en-us/system-center/scom/migrate-to-operations-manager-managed-instance?view=sc-om-2022&tabs=mp-overrides>
 
 ### [Previous](newfeatures.md) | [Home](readme.md)
+
+[Kevin Holman's SCOM Management MP](https://kevinholman.com/2017/05/09/scom-management-mp-making-a-scom-admins-life-a-little-easier/)
