@@ -1,6 +1,6 @@
 # New Features
 
-### [Previous](setup.md) | [Home](readme.md) | [Next](migration.md)
+### [Previous](agents.md) | [Home](readme.md) | [Next](migration.md)
 
 # Features
 
@@ -55,4 +55,4 @@ Note: Grafana is still in preview
 - Network devices monitoring
 - Reporting Services (SSRS)
 
-### [Previous](setup.md) | [Home](readme.md) | [Next](migration.md)
+### [Previous](agents.md) | [Home](readme.md) | [Next](migration.md)
