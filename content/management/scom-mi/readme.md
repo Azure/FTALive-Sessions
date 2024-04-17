@@ -20,7 +20,7 @@ This session is most useful for IT administrators and architects responsible for
 
 ## Agenda
 
-### [Introduction to SCOM Managed Insance](intro.md)
+### [Introduction to SCOM Managed Instance](intro.md)
 
 What is SCOM MI and how does it differ from SCOM?
 
@@ -35,7 +35,7 @@ How to deploy agents via SCOM MI
 - Automatically
 - Manually
 
-### [Features](newfeatures.md)
+### [New Features](newfeatures.md)
 
 What features does SCOM MI offer and how to leverage them?
 
