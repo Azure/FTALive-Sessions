@@ -1,6 +1,6 @@
 # Setup
 
-#### [Previous](intro.md) | [Home](readme.md) | [Next](newfeatures.md)
+#### [Previous](intro.md) | [Home](readme.md) | [Next](agents.md)
 
 ## Pre-requisites
 
