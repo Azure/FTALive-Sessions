@@ -39,12 +39,6 @@ How to deploy agents via SCOM MI
 - Automatically
 - Manually
 
-### [New Features](newfeatures.md)
-
-What features does SCOM MI offer and how to leverage them?
-
-What are the features that are not available in SCOM MI?
-
 ### [Migration](migration.md)
 
 Migrating to SCOM MI.
