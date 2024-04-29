@@ -1,7 +1,7 @@
 # SCOM MI Agents
 
 
-#### [Previous](setup.md) | [Home](readme.md) | [Next](newfeatures.md)
+#### [Previous](setup.md) | [Home](readme.md) | [Next](migration.md)
 
 Azure Monitor SCOM Managed Instance provides a cloud-based alternative for Operations Manager users providing monitoring continuity for cloud and on-premises environments across the cloud adoption journey.
 
@@ -39,4 +39,4 @@ Note:
 - Arc-enabled Gateways require line of sight to region.workloadnexus.azure.com on port 443.
 - Initial authentication is performed by a managed identity, then certificates are used to manage Managed Gateways by Microsoft.
 
-#### [Previous](setup.md) | [Home](readme.md) | [Next](newfeatures.md)
+#### [Previous](setup.md) | [Home](readme.md) | [Next](migration.md)

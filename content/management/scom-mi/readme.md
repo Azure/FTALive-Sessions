@@ -24,6 +24,10 @@ This session is most useful for IT administrators and architects responsible for
 
 What is SCOM MI and how does it differ from SCOM?
 
+What features does SCOM MI offer and how to leverage them?
+
+What are the features that are not available in SCOM MI?
+
 ### [Setup](setup.md)
 
 Let's start with the business requirements and the setup process.
@@ -34,12 +38,6 @@ How to deploy agents via SCOM MI
 
 - Automatically
 - Manually
-
-### [New Features](newfeatures.md)
-
-What features does SCOM MI offer and how to leverage them?
-
-What are the features that are not available in SCOM MI?
 
 ### [Migration](migration.md)
 
