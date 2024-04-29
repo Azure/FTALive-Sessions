@@ -38,11 +38,12 @@ When planning the migration, it is important to understand your current environm
 * **Understand additional dependencies**
     * Are you using any of the following:
         * Update Management
-            * Start evaluating Update Management Center
+            * Migrate to Azure Update Manager
         * Change Tracking and Inventory
-            * Start evaluating the new Change Tracking and Inventory solution
-        * Defender for Cloud?
-            * Change your agent deployments in Defender for Cloud to the AMA-based or agentless scanning approach, depending on your needs
+            * Migrate to the AMA-based Change Tracking and Inventory solution
+        * Defender for Cloud - Plan 2?
+            * Change your agent deployments in Defender for Cloud to the agentless scanning approach
+            * If you are using Defender for Cloud to collect Security Events, create a custom DCR to collect with AMA
         * Microsoft Sentinel?
             * Change to the AMA-based data collections in Sentinel
 
@@ -65,4 +66,5 @@ When planning the migration, it is important to understand your current environm
 * [Enable Change Tracking and Inventory using Azure Monitoring Agent (Preview)](https://learn.microsoft.com/en-us/azure/automation/change-tracking/enable-vms-monitoring-agent?tabs=singlevm)
 * [AMA migration for Microsoft Sentinel](https://learn.microsoft.com/en-us/azure/sentinel/ama-migrate)
 * [Plan agents, extensions and Azure Arc for Defender for Servers](https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-defender-for-servers-agents)
+* [Defender for Cloud - Prepare for retirement of the Log Analytics agent](https://learn.microsoft.com/en-us/azure/defender-for-cloud/prepare-deprecation-log-analytics-mma-agent)
 * [Create, Edit, and Monitor Data Collection Rules with the Data Collection Rule Toolkit](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/create-edit-and-monitor-data-collection-rules-with-the-data/ba-p/3810987)
