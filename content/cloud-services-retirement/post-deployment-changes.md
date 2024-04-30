@@ -1,0 +1,25 @@
+# Post Migration Changes
+
+#### [home](./readme.md) | [prev](./redeploy.md) | [next](./recap.md)
+
+The automated migration feature will make minor changes to the .csdef and .cscfg files to make the deployment files conform to the Azure Resource Manager and Cloud Services Extended Support requirements. Use the Get API to retrieve the latest copy of the deployment files and update your source code.
+
+- Get the .csdef file using [PowerShell](https://learn.microsoft.com/en-us/powershell/module/az.cloudservice/?preserve-view=true&view=azps-5.4.0#cloudservice) or [REST API](https://learn.microsoft.com/en-us/rest/api/compute/cloudservices/rest-get-package)
+- Get the .cscfg file using [PowerShell](https://learn.microsoft.com/en-us/powershell/module/az.cloudservice/?preserve-view=true&view=azps-5.4.0#cloudservice) or [REST API](https://learn.microsoft.com/en-us/rest/api/compute/cloudservices/rest-get-package)
+
+## Azure DevOps Pipeline Updates
+- The build tasks used to build your classic Cloud Service solution and .ccproj files will continue to work as expected for your migrated Cloud Services Extended Support instance
+- The Azure Cloud Service Deployment task used in Azure DevOps to deploy your services to your classic Cloud Service ***cannot*** be used to deploy your services to your Cloud Services Extended Support instance. You will need to modify your release process to use the new PowerShell or CLI commands to deploy your services. Documentation on the Update-AzCloudService PowerShell command can be found [here](https://learn.microsoft.com/en-us/azure/cloud-services-extended-support/sample-update-cloud-service)
+- A sample PowerShell script, classic Release pipeline, and a YAML pipeline for deploying an updated package to a Cloud Services Extended Support Instance can be found [here](https://github.com/nimccoll/CloudServicesExtendedSupportDeployment)
+
+## Staged Deployment
+As mentioned earlier the concept of deployment slots has been replaced with paired cloud services. When you deploy a cloud service you specify that it is "swappable" with another Cloud Services Extended Support instance. To perform a staged deployment, follow these steps.
+
+1. Deploy your updated solution package to a new Cloud Services Extended Support instance and indicate that this new cloud service is "swappable" with the existing cloud service hosting your production deployment. You will have to create the new cloud service via an ARM template so you can specify the "SwappableCloudService" property on the "networkProfile" object in the template. Sample ARM templates can be found [here](https://github.com/Azure-Samples/cloud-services-extended-support/tree/main/VIP%20Swap%20via%20ARM%20template%20deployment)
+1. Once the deployment is complete, you can swap the new deployment with your current production deployment via the [Azure Portal](https://learn.microsoft.com/en-us/azure/cloud-services-extended-support/swap-cloud-service#azure-portal), [REST API](https://learn.microsoft.com/en-us/azure/cloud-services-extended-support/swap-cloud-service#rest-api), or [PowerShell](https://learn.microsoft.com/en-us/powershell/module/az.cloudservice/switch-azcloudservice?view=azps-11.5.0&viewFallbackFrom=azps-11.3.0)
+
+## Staged Deployment Considerations
+Unlike classic Cloud Services, Cloud Services Extended Support does ***not*** support a "Stopped (Deallocated)" state. Instances in the "Stopped" state are still being billed to your Azure subscription. Therefore, when performing staged deployments, keep in mind that even if you place the "staging" cloud service in the "Stopped" state following a deploy and swap operation you will still be billed for the role instances associated with that cloud service. The only way to avoid these charges is to delete the "staging" cloud service entirely following a deploy and swap operation. This also means you will need to recreate a "staging" CSES instance each time you perform a new deployment. This can lead to increased deployment time due to the length of time it can take to create a new CSES instance. So when performing staged deployments with CSES you really have two options to consider.
+
+1. Create a new "staging" cloud service on each deployment and delete that "staging" cloud service following a deploy and swap operation. The drawback with this option is the length of time it may take for your deployment to complete.
+1. Create your "staging" cloud service once on your first deployment and leave it running. Deployment times will be much faster, but you will be charged for the role instances associated with this cloud service. To reduce these costs you can scale down the number of role instances to a minimum between deployments. A sample classic Release pipeline and a YAML pipeline for performing a staged deployment using this approach can be found [here](https://github.com/nimccoll/CSESStagedDeployment)
