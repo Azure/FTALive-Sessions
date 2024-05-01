@@ -64,7 +64,7 @@
 
 ## Provider type: OS Linux
 
-1. Install [node exporter version 1.3.0](https://prometheus.io/download/#node_exporter) in each SAP host that you want to monitor.
+1. Install [node exporter version 1.8.0](https://prometheus.io/download/#node_exporter) in each SAP host that you want to monitor.
 2. Configure Linux Provider in AMS service as described in [MS Docs](https://learn.microsoft.com/en-us/azure/virtual-machines/workloads/sap/configure-linux-os-azure-monitor-sap-solutions#create-linux-provider)
 
 ## Provider type: IBM Db2
