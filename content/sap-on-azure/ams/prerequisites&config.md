@@ -13,7 +13,7 @@
 
 * Download the custom role [Z_AMS_NETWEAVER_MONITORING.zip](https://github.com/Azure/Azure-Monitor-for-SAP-solutions-preview/files/8710130/Z_AMS_NETWEAVER_MONITORING.zip) and upload into working client using PFCG.
 * Create a dedicated system user and assign the role uploaded in previous step. This is used for AMS to connect with SAP Application.
-* Ensure ST-PI is atleast on 740 SP05 level or above.
+* Ensure ST-PI is at least on 740 SP05 level or above.
 * Enable SMON to monitor system performance as per SAP NOTE: [2651881](https://userapps.support.sap.com/sap/support/knowledge/en/2651881)
 * Ensure ICM port is enabled via Profile parameter or via SMICM.
 * Activate following SICF services **(wsdl, wsdl11 and RFC)** under the path /default_host/sap/bc/soap/.
