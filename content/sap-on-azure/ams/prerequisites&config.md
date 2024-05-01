@@ -17,7 +17,7 @@
 * Enable SMON to monitor system performance as per SAP NOTE: [2651881](https://userapps.support.sap.com/sap/support/knowledge/en/2651881)
 * Ensure ICM port is enabled via Profile parameter or via SMICM.
 * Activate following SICF services **(wsdl, wsdl11 and RFC)** under the path /default_host/sap/bc/soap/.
-* Activate follwing SICF services /sap/public/ping and /sap/bc/ping as well. Test the ping service to ensure ICM port is reachable from web client.
+* Activate following SICF services /sap/public/ping and /sap/bc/ping as well. Test the ping service to ensure ICM port is reachable from web client.
 
 3. Configure the NetWeaver provider as per the [MS docs](https://learn.microsoft.com/en-us/azure/virtual-machines/workloads/sap/configure-netweaver-azure-monitor-sap-solutions#add-netweaver-provider)
 
