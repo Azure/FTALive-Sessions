@@ -63,10 +63,10 @@ metadata:
   name: voting-storage-secret
 type: Opaque
 data:
-  MYSQL_USER: ZGJ1c2Vy
-  MYSQL_PASSWORD: UGFzc3dvcmQxMg==
-  MYSQL_DATABASE: YXp1cmV2b3Rl
-  MYSQL_ROOT_PASSWORD: UGFzc3dvcmQxMg==
+  MYSQL_USER: <redacted>
+  MYSQL_PASSWORD: <redacted>
+  MYSQL_DATABASE: <redacted>
+  MYSQL_ROOT_PASSWORD: <redacted>
 ---
 # voting-storage-pv-claim.yaml
 apiVersion: v1
