@@ -20,7 +20,7 @@ This session is most useful for IT administrators and architects responsible for
 
 ## Agenda
 
-### [Introduction to SCOM Managed Insance](intro.md)
+### [Introduction to SCOM Managed Instance](intro.md)
 
 What is SCOM MI and how does it differ from SCOM?
 

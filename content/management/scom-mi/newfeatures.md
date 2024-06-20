@@ -47,4 +47,12 @@ Connect to your SCOM Managed Instance using the System Center Operations Manager
 
 Note: Grafana is still in preview
 
+## What is not available in SCOM MI
+
+- Web Console
+- Linux Azure VMs support
+- Deployment of SCOM agents from the Console
+- Network devices monitoring
+- Reporting Services (SSRS)
+
 ### [Previous](setup.md) | [Home](readme.md) | [Next](migration.md)

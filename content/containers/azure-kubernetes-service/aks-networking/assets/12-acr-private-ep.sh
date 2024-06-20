@@ -4,7 +4,7 @@
 
 LOCATION='australiaeast'
 RG_NAME='12-acr-cluster-rg'
-ACR_NAME='acrcluster228f0r720'
+ACR_NAME=<redacted>
 
 az group create -n $RG_NAME --location $LOCATION
 
@@ -133,7 +133,7 @@ kubectl config use-context '12-acr-cluster-admin'
 az acr import -n $ACR_NAME --source docker.io/stefanprodan/podinfo:latest -t podinfo:latest
 
 # start container
-kubectl run podinfo --image=$ACR_NAME.azurecr.io/podinfo:latest
+kubectl run podinfo <redacted>
 
 az aks show --resource-group $RG_NAME \
     --name 'acr-cluster' \
