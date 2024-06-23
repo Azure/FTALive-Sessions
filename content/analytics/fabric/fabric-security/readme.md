@@ -9,33 +9,33 @@ Fabric security is:
 
 
 
-## Authenticate: 
+## 1. Authenticate: 
 Microsoft Fabric is a SaaS platform, like many other Microsoft services such as Azure, Microsoft Office, OneDrive, and Dynamics. All these Microsoft SaaS services including Fabric, use Microsoft Entra ID as their cloud-based identity provider.
 
-## Data Encryption
+## 2. Data Encryption
 
-### Data at rest
+### 2.1. Data at rest
 
 All Fabric data stores are encrypted at rest by using Microsoft-managed keys. Fabric data includes customer data as well as system data and metadata. While data can be processed in memory in an unencrypted state, it's never persisted to permanent storage while in an unencrypted state
 
-### Data at Transit
+### 2.2. Data at Transit
 
 Data in transit across the public internet between Microsoft services is always encrypted with at least TLS 1.2. Fabric negotiates to TLS 1.3 whenever possible.
 
-## Data Security
+## 3. Data Security
 
 Fabric offers a multi-layer security model that provides both simplicity and flexibility in managing data access. Security can be set for an entire workspace, for individual items, or through granular permissions in each Fabric engine
 
 ![alt text](./images/image-5.png)
 
-**Fabric Workspace Permission:**
+**3.1. Fabric Workspace Permission:**
 
 * Viewer - Can view all content in the workspace, but can't modify it.
 * Contributor - Can view and modify all content in the workspace.
 * Member - Can view, modify, and share all content in the workspace.
 * Admin - Can view, modify, share, and manage all content in the 
 
-**Fabric Item Permission:**
+**3.2. Fabric Item Permission:**
 
 Item permissions are used to control access to individual Fabric items within a workspace. Different Fabric items have different permissions. Item permissions are confined to a specific item and don't apply to other items.
 
@@ -45,7 +45,7 @@ Item permissions are used to control access to individual Fabric items within a 
 * [Data science](https://learn.microsoft.com/en-us/fabric/data-science/models-experiments-rbac)
 * [Real-Time Analytics](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/management/security-roles)
 
-**Granular Engine Permissions:**
+**3.3. Granular Engine Permissions:**
 
 Many Fabric engines allow fine-grained access control such as table, column, and row-level security to be defined
 
@@ -59,7 +59,7 @@ Many Fabric engines allow fine-grained access control such as table, column, and
 * [OneLake Data Access Security](https://learn.microsoft.com/en-us/fabric/onelake/security/get-started-data-access-roles)
 
 
-## Network Security
+## 4. Network Security
 
 Fabric's default security settings include:
 
@@ -67,7 +67,7 @@ Fabric's default security settings include:
 * Internal traffic between experiences in Fabric is routed over the Microsoft backbone.
 * Traffic between clients and Fabric is encrypted using at least the Transport Layer Security (TLS) 1.2 protocol
 
-### Inbound Security ( traffic coming into Fabric from the internet)
+### 4.1. Inbound Security ( traffic coming into Fabric from the internet)
 
 Here are the 2 options that we have for securing inbound traffic to Fabric:
 
@@ -78,7 +78,7 @@ Here are the 2 options that we have for securing inbound traffic to Fabric:
 
 
 
-### Outbound Security ( different ways to import and connect to data from a secure network into fabric)
+### 4.2. Outbound Security ( different ways to import and connect to data from a secure network into fabric)
 
 1. **Trusted workspace access:**
 
@@ -105,11 +105,12 @@ Here are the 2 options that we have for securing inbound traffic to Fabric:
     ![alt text](./images/image-3.png)
 
     2.[ Virtual network (VNet) data gateway ](https://learn.microsoft.com/en-us/data-integration/vnet/overview)- The VNet gateway allows you to connect from Microsoft Cloud services to your Azure data services within a VNet, without the need of an on-premises data gateway.
+    
      **Applicable to** : Dataflow Gen2, Power BI Service directly connection to the datasource, 
  
     ![alt text](./images/image-4.png)
 
-## Common Security Scenarios:
+### 4.3 Common Network Security Scenarios:
 
 | **Scenario** 	| **Tools** 	| **Direction** 	|
 |--------------	|-----------	|---------------	|
