@@ -50,13 +50,19 @@ Item permissions are used to control access to individual Fabric items within a 
 Many Fabric engines allow fine-grained access control such as table, column, and row-level security to be defined
 
 * [Data warehouse Security and SQL Endpoint Security in Lakehouse](https://learn.microsoft.com/en-us/fabric/data-warehouse/security) 
-    - object-level security
+    - [object-level security](https://learn.microsoft.com/en-us/fabric/security/service-admin-object-level-security)
     - Column-level security
-    - Row-level security
+    - [Row-level security](https://learn.microsoft.com/en-us/fabric/data-warehouse/row-level-security)
     - Dynamic Data Masking
 * [Power BI security](https://learn.microsoft.com/en-us/fabric/data-factory/connector-lakehouse-overview)
+    - [Row Level Security in Power BI](https://learn.microsoft.com/en-us/fabric/security/service-admin-row-level-security)
 * [Real Time Analytics Row Level Security](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/management/row-level-security-policy)
 * [OneLake Data Access Security](https://learn.microsoft.com/en-us/fabric/onelake/security/get-started-data-access-roles)
+
+**3.4. External Tenant data sharing in Microsoft Fabric**
+* This is a [tenant level feature that needs to be enabled](https://learn.microsoft.com/en-us/fabric/governance/external-data-sharing-enable). 
+* Supported Fabric Items are: Lakehouse and KQL databases.
+
 
 
 ## 4. Network Security
@@ -71,7 +77,7 @@ Fabric's default security settings include:
 
 Here are the 2 options that we have for securing inbound traffic to Fabric:
 
-1. Entra Conditional Access - When a user authenticates access is determined based on a set of policies that might include IP address, location, and managed devices.
+1. [Entra Conditional Access](https://learn.microsoft.com/en-us/fabric/security/security-conditional-access) - When a user authenticates access is determined based on a set of policies that might include IP address, location, and managed devices.
 2. Private links - Fabric uses a private IP address from your virtual network. The endpoint allows users in your network to communicate with Fabric over the private IP address using private links.
 
     ![alt text](./images/image.png)
@@ -82,31 +88,41 @@ Here are the 2 options that we have for securing inbound traffic to Fabric:
 
 1. **Trusted workspace access:**
 
-    **Applicable to:** Fabric connecting to Azure Data lake Storage (ADLS) Gen2
-
+    **Applicable to:** - spark compute in Data Engineering experience, OneLake, Data Pipeline, Fabric Data warehouse COPY command, dataflows v2, spark,
+    
+    **Licensing Requirement:** -  Fabric workspace identity can only be created in workspaces associated with a Fabric capacity (F64 or higher).
+    
     ![alt text](./images/image-1.png)
 
-2. **Managed Virtual Network and Managed Private Endpoints**
+2. [**Managed Virtual Network and Managed Private Endpoints**](https://learn.microsoft.com/en-us/fabric/security/security-managed-private-endpoints-overview)
 
     **Applicable to:** - spark compute in Data Engineering experience.
+    
+    **Licensing Requirement:** - F64 or above and Trial capacity.
 
     ![alt text](./images/image-2.png)
 
-    * With a managed virtual network you get complete network isolation for the Spark clusters running your Spark jobs (which allow users to run arbitrary user code) while offloading the burden of managing the virtual network to Microsoft Fabric.
+    * Managed virtual networks are virtual networks that are created and managed by Microsoft Fabric for each Fabric workspace. Managed virtual networks provide network isolation for Fabric Spark workloads, meaning that the compute clusters are deployed in a dedicated network and are no longer part of the shared virtual network.
     * You don't need to create a subnet for the Spark clusters based on peak load, as this is managed for you by Microsoft Fabric.
     * A managed virtual network for your workspace, along with managed private endpoints, allows you to access data sources that are behind firewalls or otherwise blocked from public access.
+    * Managed private endpoints are not supported in all the regions. Here is the [list](https://learn.microsoft.com/en-us/fabric/security/security-managed-private-endpoints-overview#limitations-and-considerations) of regions where managed Private endpoint is not supported.
+
 
 3. **Data Gateway**
 
     1. [On-premises data gateway](https://learn.microsoft.com/en-us/power-bi/connect-data/service-gateway-onprem) - The gateway acts as a bridge between your on-premises data sources and Fabric. The gateway is installed on a server within your network, and it allows Fabric to connect to your data sources through a secure channel without the need to open ports or make changes to your network.
 
-    **Applicable to** : Dataflow Gen2, Data Pipeline, Power BI Service directly connection to the datasource, 
+    **Applicable to** : Dataflow Gen2, Data Pipeline, Power BI Service directly connection to the datasource
+
+    **Licensing Requirement:** - any F SKU.
 
     ![alt text](./images/image-3.png)
 
     2.[ Virtual network (VNet) data gateway ](https://learn.microsoft.com/en-us/data-integration/vnet/overview)- The VNet gateway allows you to connect from Microsoft Cloud services to your Azure data services within a VNet, without the need of an on-premises data gateway.
     
-     **Applicable to** : Dataflow Gen2, Power BI Service directly connection to the datasource, 
+     **Applicable to** : Dataflow Gen2, Power BI Service directly connection to the datasource.
+
+     **Licensing Requirement:** - recommend to use capacity > F8.
  
     ![alt text](./images/image-4.png)
 
