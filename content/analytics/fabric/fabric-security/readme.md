@@ -45,17 +45,18 @@ Item permissions are used to control access to individual Fabric items within a 
 * [Data science](https://learn.microsoft.com/en-us/fabric/data-science/models-experiments-rbac)
 * [Real-Time Analytics](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/management/security-roles)
 
-**3.3. Granular Engine Permissions:**
+**3.3. Granular Engine Permissions/ Compute Permissions:**
 
 Many Fabric engines allow fine-grained access control such as table, column, and row-level security to be defined
 
 * [Data warehouse Security and SQL Endpoint Security in Lakehouse](https://learn.microsoft.com/en-us/fabric/data-warehouse/security) 
-    - [object-level security](https://learn.microsoft.com/en-us/fabric/security/service-admin-object-level-security)
-    - Column-level security
+    - [object-level security](https://learn.microsoft.com/en-us/fabric/data-warehouse/sql-granular-permissions)
+    - [Column-level security](https://learn.microsoft.com/en-us/fabric/data-warehouse/column-level-security)
     - [Row-level security](https://learn.microsoft.com/en-us/fabric/data-warehouse/row-level-security)
-    - Dynamic Data Masking
-* [Power BI security](https://learn.microsoft.com/en-us/fabric/data-factory/connector-lakehouse-overview)
+    - [Dynamic Data Masking](https://learn.microsoft.com/en-us/fabric/data-warehouse/dynamic-data-masking)
+* [Power BI security](https://learn.microsoft.com/en-us/power-bi/enterprise/service-admin-power-bi-security)
     - [Row Level Security in Power BI](https://learn.microsoft.com/en-us/fabric/security/service-admin-row-level-security)
+    - [Object Level Security in Power BI](https://learn.microsoft.com/en-us/fabric/security/service-admin-object-level-security?tabs=table)
 * [Real Time Analytics Row Level Security](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/management/row-level-security-policy)
 * [OneLake Data Access Security](https://learn.microsoft.com/en-us/fabric/onelake/security/get-started-data-access-roles)
 
@@ -63,7 +64,12 @@ Many Fabric engines allow fine-grained access control such as table, column, and
 * This is a [tenant level feature that needs to be enabled](https://learn.microsoft.com/en-us/fabric/governance/external-data-sharing-enable). 
 * Supported Fabric Items are: Lakehouse and KQL databases.
 
+###  Common Data Access Security Scenarios:
 
+| **Scenario** 	| **Role and Responsibilities** 	| **Direction** 	|
+|---------------|---------------|-------------------|
+| Wingtip Toys is structured with a single tenant for the entire organization and divided into three capacities, </br> each representing a different region: the United States, Europe, and Asia. </br> Each capacity includes a workspace for every department within the organization, including the sales department. </br> In the sales department, there is a manager, a sales team lead, and sales team members. <br> Additionally, Wingtip Toys employs one analyst for the entire organization|**Manager**:		View and modify all content in the sales department in the entire organization <br> **Team lead**:		View and modify all content in the sales department in a specific region <br> **Sales team member**:	View stats of other sale members in the region and View and modify his own sales report <br> **Analyst**:		View all content in the sales department in the entire organization| **Manager**:		A member role for all the sales workspaces in the organization </br> **Team lead**:		A member role for the sales workspace in the region </br> **Sales team member**:	No roles for any of the sales workspaces and Access to a specific report that lists the member's sale figures . <br> **Analyst**:		A viewer role for all the sale workspaces in the organization. <br><br>  Using **row-level security**, the report is set up so that each sales member can only see their own sale figures. Team leads can see the sales figures of all the sale members in their region, and the sales manager can see sale figures of all the sale members in the organization.
+|Veronica and Marta work together. Veronica is the owner of a report she want's to share with Marta. <br> If Veronica shares the report with Marta, Marta will be able to access it regardless of the workspace role she has.||Marta should have viewer permission on the report, no permission is needed in the workspace level|
 
 ## 4. Network Security
 
@@ -78,7 +84,7 @@ Fabric's default security settings include:
 Here are the 2 options that we have for securing inbound traffic to Fabric:
 
 1. [Entra Conditional Access](https://learn.microsoft.com/en-us/fabric/security/security-conditional-access) - When a user authenticates access is determined based on a set of policies that might include IP address, location, and managed devices.
-2. Private links - Fabric uses a private IP address from your virtual network. The endpoint allows users in your network to communicate with Fabric over the private IP address using private links.
+2. [Private links](https://learn.microsoft.com/en-us/fabric/security/security-private-links-overview) - Fabric uses a private IP address from your virtual network. The endpoint allows users in your network to communicate with Fabric over the private IP address using private links.
 
     ![alt text](./images/image.png)
 
@@ -86,7 +92,7 @@ Here are the 2 options that we have for securing inbound traffic to Fabric:
 
 ### 4.2. Outbound Security ( different ways to import and connect to data from a secure network into fabric)
 
-1. **Trusted workspace access:**
+1. **[Trusted workspace access:](https://learn.microsoft.com/en-us/fabric/security/security-trusted-workspace-access)**
 
     **Applicable to:** - spark compute in Data Engineering experience, OneLake, Data Pipeline, Fabric Data warehouse COPY command, dataflows v2, spark,
     
