@@ -1,0 +1,5 @@
+## Overview
+
+I spent some time thinking about the data security stuff. One conclusion I came to that I think we need to articulate and make clear with customers is the differentiation between data security and security of data. 
+
+My thought process there was thinking about the responsibility of a DBA versus the responsibility of someone in the security team versus thinking about the responsibility of an application developer or application Dev DBA. The security team are responsible for the underlying platform security and security of the identities, etc. The dbas are responsible for security of the data platform itself and implementing our role-based access control correctly and not doing silly things like giving someone sysadmin because the business team approved it. And the responsibility of the Dev DBA is to understand the business context of the data and the database and then provide guided advice and feedback on what should and should not be being done, ensuring the application handles logins correctly & securely, etc
