@@ -8,8 +8,10 @@
 * Example(s):
   * Question: Can you think of any major data breaches?
   * September 2022, 9.8 million customers had their names, DOB, phone numbers, passport, drivers license, medical records and government IDs exposed through large Telco hack. ~40% of Australian population.
+  * October 2022, 9.7 million customers had their personal details (name, DOB, phone numbers, medicare numbers, claim numbers) and details on their medical records (where customers received medical services, codes relating to their diagnosis and procedures) lost. Another ~40% of Australian population.
   * At least 141 hospitals victim of **reported** ransomware attacks in 2023.
   * Large password manager breach in 2022, result of stolen *credentials* from a DevOps engineer on their Home PC, because they had another service installed that had unpatched vulnerability.
+  * In 2024, a large Medical script provider in Australia was hacked, then 3 weeks later the company went into administration. 12.9 million customers details stolen (6.5TB). Company said it was "*unable to identify the specific impacted individuals despite making all reasonable efforts to do so due to the complexity of the data set*”. Also said "*the time needed to analyse and reorganise the data to identify specific individuals and their impacted information would have been a “substantial cost”, which it could not afford*".
   * Midnight Blizzard (group with links to a state sponser) attack against Microsoft, exposing executives emails.
     * [Expanding Microsoft's Secure Future Initiative](https://www.microsoft.com/en-us/security/blog/2024/05/03/security-above-all-else-expanding-microsofts-secure-future-initiative/?msockid=193cd5d95af6667200d7c1b35b1b67ee) - Even *we* are doubling down on security. This demonstrates how we as large corproate are still working on security, and we are all individually and collectively responsible for security.
     * ![Secure Future Initiative Design pillars](./images/sfi-security.png)
