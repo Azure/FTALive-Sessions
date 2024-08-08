@@ -10,6 +10,8 @@ Fabric security is:
 ## Authentication
 Microsoft Fabric is a Software as a Service (SaaS) platform like many other Microsoft services such Microsoft Office and OneDrive. All Microsoft SaaS services including Fabric, use Microsoft Entra ID as their cloud-based identity provider. Fabric does not support basic authentication (username/password), keys, credentials or other forms of authentication.
 
+Here is one of the article that explains the authentication and authorization in Fabric: [Learn article](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/securing-microsoft-fabric-user-authentication-amp-authorization/ba-p/4210273)
+
 ## Data Encryption
 ### Data at rest
 All Fabric data stores are encrypted at rest by using Microsoft-managed keys. Fabric data includes customer data as well as system data and metadata. While data can be processed in memory in an unencrypted state, it's never persisted to permanent storage while in an unencrypted state.
@@ -88,9 +90,15 @@ There are 2 options for securing inbound traffic to Fabric:
     This option utilises the [Workspace Identity](https://learn.microsoft.com/en-us/fabric/security/workspace-identity) to allow connections to ADLSv2 accounts.</br> </br>
     **Applicable to:** Spark compute in Data Engineering experience, OneLake, Data Pipeline, Fabric Data warehouse COPY command and Dataflows v2
     
-    **Licensing Requirement:** Fabric workspace identity can only be created in workspaces associated with a Fabric capacity (F64 or higher).
+    **Licensing Requirement:** Fabric workspace identity can only be created in workspaces associated with a Fabric capacity (any F capacity).
     
     ![alt text](./images/image-1.png)
+
+    **Use cases**:
+    1) Create a OneLake shortcut to storage account with trusted workspace access 
+    2) Create a data pipeline to a storage account with trusted workspace access
+    3) Use the T-SQL COPY statement to ingest data into a warehouse
+
 
 2. [**Managed Virtual Network and Managed Private Endpoints**](https://learn.microsoft.com/en-us/fabric/security/security-managed-private-endpoints-overview)
 
@@ -105,6 +113,7 @@ There are 2 options for securing inbound traffic to Fabric:
     * You don't need to create a subnet for the Spark clusters based on peak load, as this is managed for you by Microsoft Fabric.
     * Managed private endpoints are not supported in all the regions. See [list](https://learn.microsoft.com/en-us/fabric/security/security-managed-private-endpoints-overview#limitations-and-considerations).
 
+3. [**Service Tags**](https://learn.microsoft.com/en-us/fabric/security/security-service-tags)
 
 ### Data Gateway
 
