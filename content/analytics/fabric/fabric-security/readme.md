@@ -104,7 +104,7 @@ There are 2 options for securing inbound traffic to Fabric:
 
     **Applicable to:** Spark compute in Data Engineering experience.
     
-    **Licensing Requirement:** F64 or above and Trial capacity.
+    **Licensing Requirement:** Any F SKU.
 
     ![alt text](./images/image-2.png)
 
