@@ -44,6 +44,6 @@
     * Consider implications around People vs Process vs Technology
 * How and where to do your development, including how do you manage "dev" datasets
 * How do you want to handle data source registration & lifecycle management, including PII management/obfuscation
-* Understanding the chain of control (NFI if that is the right idea) of who has direct / indirect access. Who can elevate their privileges.
+* Understanding the chain of control of who has direct and indirect access. Who can elevate their privileges to gain control.
 
 #### [Previous (Network)](./03-network.md) | [Home](./readme.md)  | [Next (Summary)](./05-summary.md)
