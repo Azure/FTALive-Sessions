@@ -49,7 +49,7 @@ In this scenario...
 
 It should be noted that these DNS forwarders can be many different kinds of resources, such as:
 
-- Azure Private DNS Resolvers
+- Azure Private DNS Resolvers : It is a fully managed service that enables you to query Azure Private DNS Zones from an on-premises environment and vice versa without deploying custom DNS servers in Azure. Azure DNS Private Resolver requires an Azure Virtual Network.
 - Windows Server DNS Server or AD Domain Controller
 - A third party DNS solution
 
