@@ -22,7 +22,10 @@ When planning the migration, it is important to understand your current environm
     * Are you using System Center Operations Manager (SCOM)?
         * Start evaluating SCOM Managed Instance
     * How are you deploying agents today?
-
+    * How are the agents reaching the Log Analytics endpoints?
+        * Are you using a proxy?
+        * Are you using a firewall?
+        * Are you using a gateway?
 
 * **Understand your workspaces**
     * Are all your workspaces in use?
@@ -65,6 +68,7 @@ When planning the migration, it is important to understand your current environm
 * [Migrate to Azure Monitor Agent from Log Analytics agent](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/azure-monitor-agent-migration)
 * [Tools for migrating from Log Analytics Agent to Azure Monitor Agent](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/azure-monitor-agent-migration-tools)
 * [Azure Monitor Agent - Supported Services and Features](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/agents-overview#supported-services-and-features)
+* [Azure Monitor agent network configuration](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/azure-monitor-agent-network-configuration?tabs=PowerShellWindows)
 
 ### Data Collection
 * [Data collection rules (DCRs) in Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/data-collection-rule-overview)
