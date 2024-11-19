@@ -60,7 +60,7 @@ tokenizers==0.13.2
 tornado @ file:///opt/conda/conda-bld/tornado_1662061693373/work
 tqdm==4.64.1
 traitlets==5.5.0
-transformers==4.25.1
+transformers==4.30.0
 types-pytz==2022.6.0.1
 typing_extensions==4.4.0
 urllib3==1.26.12
