@@ -1,5 +1,7 @@
 # Warning
-**As of December 31st, 2024, the FastTrack for Azure (FTA) program will be retired.** FTA will support any projects currently in progress to ensure successful completion by December 31st, 2024, but will no longer accept new nominations. For assistance after December 31st, we recommend you contact the Microsoft Account Executive aligned to your customer account or get in touch with a trusted Microsoft partner to find up-to-date services for your business needs.  Visit [Partner Marketplace](https://appsource.microsoft.com/en-us/marketplace/partner-dir?filter=sort%3D0%3BpageSize%3D18%3BonlyThisCountry%3Dtrue%3Bcountry%3Dus%3Bradius%3D100%3Blocname%3DUnited%2520States%3BlocationNotRequired%3Dtrue) to learn more. 
+**As of December 31st, 2024, the FastTrack for Azure (FTA) program will be retired.** FTA will support any projects currently in progress to ensure successful completion by December 31st, 2024, but will no longer accept new nominations.
+
+For assistance after December 31st, we recommend you contact the Microsoft Account Executive aligned to your customer account or get in touch with a trusted Microsoft partner to find up-to-date services for your business needs.  Visit [Partner Marketplace](https://appsource.microsoft.com/en-us/marketplace/partner-dir?filter=sort%3D0%3BpageSize%3D18%3BonlyThisCountry%3Dtrue%3Bcountry%3Dus%3Bradius%3D100%3Blocname%3DUnited%2520States%3BlocationNotRequired%3Dtrue) to learn more. 
 
 # Overview
 
