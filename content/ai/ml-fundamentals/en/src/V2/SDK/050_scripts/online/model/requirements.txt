@@ -1,6 +1,6 @@
 mlflow
 configparser==3.7.4
-distributed==2021.6.2
+distributed==2021.10.0
 ipython==7.34.0
 lightgbm==3.2.1
 matplotlib==3.3.4
