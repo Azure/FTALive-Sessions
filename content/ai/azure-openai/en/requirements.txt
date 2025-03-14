@@ -76,7 +76,7 @@ psutil==5.9.4
 ptyprocess @ file:///tmp/build/80754af9/ptyprocess_1609355006118/work/dist/ptyprocess-0.7.0-py2.py3-none-any.whl
 pure-eval @ file:///opt/conda/conda-bld/pure_eval_1646925070566/work
 pycparser==2.21
-Pygments==2.13.0
+Pygments==2.15.0
 pyparsing @ file:///opt/conda/conda-bld/pyparsing_1661452539315/work
 pyrsistent==0.19.3
 python-dateutil @ file:///tmp/build/80754af9/python-dateutil_1626374649649/work
